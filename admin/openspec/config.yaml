@@ -1,0 +1,30 @@
+schema: spec-driven
+
+# Project context
+context: |
+  Current Control Center work is limited to UI, business logic, and agreed business APIs.
+  Do not add authentication, sessions, login/logout, session recovery, auth redirects,
+  RBAC, permissions, or user-based UI restrictions before the auth model/API is separately
+  agreed and a new spec change is created. Removing existing auth dependencies is allowed.
+  This boundary does not waive security, business validation, error handling, accessibility,
+  or the prohibition on E2E/browser tests without explicit user permission. Auth-shaped
+  fields belonging to business entities remain valid domain data.
+
+# Per-artifact rules
+rules:
+  proposal:
+    - Keep the current scope limited to UI, business logic, and agreed business APIs.
+    - Do not propose new authentication, sessions, RBAC, permissions, auth redirects, or user-based UI restrictions without a separate agreement and spec change.
+    - Preserve security, validation, error handling, accessibility, and the E2E/browser-test prohibition.
+  design:
+    - Design only UI, business logic, and agreed business API behavior for this stage.
+    - Do not introduce auth/session/RBAC/permissions or user-based UI restrictions; removing existing auth dependencies is allowed.
+    - Preserve security, validation, error handling, accessibility, and the E2E/browser-test prohibition.
+  specs:
+    - Specify UI, business logic, and agreed business API behavior only.
+    - Do not require authentication, sessions, RBAC, permissions, auth redirects, or user-based UI restrictions before a separate agreement and spec change.
+    - Preserve security, validation, error handling, accessibility, and the E2E/browser-test prohibition.
+  tasks:
+    - Keep implementation tasks within UI, business logic, and agreed business APIs.
+    - Do not add auth/session/RBAC/permissions work without a separate agreement and spec change; removing existing auth dependencies is allowed.
+    - Keep security, validation, error handling, accessibility, and the E2E/browser-test prohibition intact.
