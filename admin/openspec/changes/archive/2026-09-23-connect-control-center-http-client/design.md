@@ -9,11 +9,13 @@ Vite использует React Router plugin и `base: '/tsam-panel/'`, но н
 ## Goals / Non-Goals
 
 **Goals:**
+
 - Один сетевой путь для dev и backend; смена окружения не переключает entity clients на локальные данные.
 - Самостоятельный Express HTTP listener с корректным lifecycle Vite, воспроизводимыми fixtures и проверками против OpenAPI.
 - Разделить wire DTO и модели представления, не поддерживать параллельно старый mock-протокол.
 
 **Non-Goals:**
+
 - Полная SSO-сессия, refresh/login/logout и RBAC не могут быть выведены из одного `/me`.
 - Не строить новые страницы CRUD, универсальный SDK runtime, БД, автоматическую генерацию business logic из OpenAPI или поддержку несуществующих API.
 - Не переносить встроенную справку, UI-константы и test doubles на dev-only сервер.
@@ -60,18 +62,18 @@ Query string, методы, body, Bearer и Idempotency-Key сохраняютс
 
 ### 5. Миграция UI без поддельных полей
 
-| Сейчас | Новый источник / поведение |
-| --- | --- |
-| SkillRegistry локальный массив, `status:asc`, slug доменов | `GET /skills/v1/skills`, `domain_id`/`team_id`, `limit`/`offset`, default `-updated_at`; убрать неподдержанный status filter/sort |
-| Фиксированный список доменов | `GET /skills/v1/domains`, UUID и серверные названия; корректно загрузить все страницы справочника, не ограничить варианты первой страницей |
-| Карточка ищет навык в полном реестре | Прямой `GET /skills/v1/skills/{skill_id}`; 404 отдельно от транспортной ошибки |
-| `description`/`identifier`/строковая version списка | `purpose`, nullable `service_id`, integer `version`; описание карточки не подменяет purpose |
-| Skill статусы, готовность, диалоги, conflicts, review, intents, checks, history, tokens | В контракте отсутствуют: убрать фиктивные значения, неподдержанные действия/фильтры; блоки карточки показывают «Не поддерживается текущим API» |
-| Skill connection/workArea/contact | `connection.endpoint`, `contract_version`, `auth_required`/`auth_type`/parameters, `zones`, `contact`; учитывать nullable данные, не выдавать отсутствие за успешную настройку |
-| Surface `checking`, `mobile_app` | Канонические `review`, `mobile_application`; русские подписи остаются UI-константами |
-| Surface camelCase и `field:desc` | DTO `configuration_name`, `channel_id`, `stats.dialogs_30d`, `updated_at`; API sort `-updated_at` и остальные значения `SurfaceListSort` |
-| Page/pageSize | На запросе `offset=(page-1)*pageSize`, `limit=pageSize`; ответ через `pagination.total_items/current_page/total_pages` |
-| Имя/роль в шапке | `/auth/v1/me`, `display_name`, `full_name`, `roles`/`scope`; без константной роли «Администратор платформы» |
+| Сейчас                                                                                  | Новый источник / поведение                                                                                                                                                     |
+| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| SkillRegistry локальный массив, `status:asc`, slug доменов                              | `GET /skills/v1/skills`, `domain_id`/`team_id`, `limit`/`offset`, default `-updated_at`; убрать неподдержанный status filter/sort                                              |
+| Фиксированный список доменов                                                            | `GET /skills/v1/domains`, UUID и серверные названия; корректно загрузить все страницы справочника, не ограничить варианты первой страницей                                     |
+| Карточка ищет навык в полном реестре                                                    | Прямой `GET /skills/v1/skills/{skill_id}`; 404 отдельно от транспортной ошибки                                                                                                 |
+| `description`/`identifier`/строковая version списка                                     | `purpose`, nullable `service_id`, integer `version`; описание карточки не подменяет purpose                                                                                    |
+| Skill статусы, готовность, диалоги, conflicts, review, intents, checks, history, tokens | В контракте отсутствуют: убрать фиктивные значения, неподдержанные действия/фильтры; блоки карточки показывают «Не поддерживается текущим API»                                 |
+| Skill connection/workArea/contact                                                       | `connection.endpoint`, `contract_version`, `auth_required`/`auth_type`/parameters, `zones`, `contact`; учитывать nullable данные, не выдавать отсутствие за успешную настройку |
+| Surface `checking`, `mobile_app`                                                        | Канонические `review`, `mobile_application`; русские подписи остаются UI-константами                                                                                           |
+| Surface camelCase и `field:desc`                                                        | DTO `configuration_name`, `channel_id`, `stats.dialogs_30d`, `updated_at`; API sort `-updated_at` и остальные значения `SurfaceListSort`                                       |
+| Page/pageSize                                                                           | На запросе `offset=(page-1)*pageSize`, `limit=pageSize`; ответ через `pagination.total_items/current_page/total_pages`                                                         |
+| Имя/роль в шапке                                                                        | `/auth/v1/me`, `display_name`, `full_name`, `roles`/`scope`; без константной роли «Администратор платформы»                                                                    |
 
 Сохранять простые adapters, если это сокращает изменения существующих компонентов, но DTO не содержат старые поля. Не подменять неизвестные enum значениями по умолчанию. Для отсутствующих значений различать «нет данных» и реальный ноль.
 
