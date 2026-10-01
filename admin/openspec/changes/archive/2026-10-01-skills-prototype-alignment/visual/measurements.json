@@ -1,0 +1,4212 @@
+{
+  "browser": "151.0.7922.34",
+  "viewportHeight": 1000,
+  "deviceScaleFactor": 1,
+  "metrics": [
+    {
+      "kind": "reference",
+      "width": 1440,
+      "name": "catalog",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 280,
+        "y": 128.6993408203125,
+        "width": 96.40625,
+        "height": 26.25,
+        "top": 128.6993408203125,
+        "right": 376.40625,
+        "bottom": 154.9493408203125,
+        "left": 280
+      },
+      "tables": [
+        {
+          "label": null,
+          "width": 1136,
+          "container": 1136,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "\n    Перейти к содержимомуЦентр управленияЦифровой ассистентНавыкиПоверхностиПес",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1440,
+      "name": "domains",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 280,
+        "y": 128.5,
+        "width": 96.40625,
+        "height": 26.25,
+        "top": 128.5,
+        "right": 376.40625,
+        "bottom": 154.75,
+        "left": 280
+      },
+      "tables": [
+        {
+          "label": null,
+          "width": 1136,
+          "container": 1136,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "\n    Перейти к содержимомуЦентр управленияЦифровой ассистентНавыкиПоверхностиПес",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1440,
+      "name": "domain-dialog",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 280,
+        "y": 128.5,
+        "width": 96.40625,
+        "height": 26.25,
+        "top": 128.5,
+        "right": 376.40625,
+        "bottom": 154.75,
+        "left": 280
+      },
+      "tables": [
+        {
+          "label": null,
+          "width": 1136,
+          "container": 1136,
+          "overflow": "auto"
+        }
+      ],
+      "dialog": {
+        "x": 464,
+        "y": 237.75,
+        "width": 512,
+        "height": 524.5,
+        "top": 237.75,
+        "right": 976,
+        "bottom": 762.25,
+        "left": 464
+      },
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.21 -0.000784401 -0.00896575 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1440,
+      "name": "wizard-1",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 280,
+        "y": 128.92965698242188,
+        "width": 140,
+        "height": 26.25,
+        "top": 128.92965698242188,
+        "right": 420,
+        "bottom": 155.17965698242188,
+        "left": 280
+      },
+      "tables": [],
+      "focus": {
+        "tag": "TEXTAREA",
+        "text": "Пользователь записан на приём в МФЦ",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.21 -0.000784401 -0.00896575 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1440,
+      "name": "wizard-2",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 280,
+        "y": 128.5,
+        "width": 140,
+        "height": 26.25,
+        "top": 128.5,
+        "right": 420,
+        "bottom": 154.75,
+        "left": 280
+      },
+      "tables": [],
+      "focus": {
+        "tag": "TEXTAREA",
+        "text": "Первая фраза, вторая фраза\nТретья фраза",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.21 -0.000784401 -0.00896575 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1440,
+      "name": "wizard-3",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 280,
+        "y": 128.5,
+        "width": 140,
+        "height": 26.25,
+        "top": 128.5,
+        "right": 420,
+        "bottom": 154.75,
+        "left": 280
+      },
+      "tables": [],
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.21 -0.000784401 -0.00896575 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1440,
+      "name": "wizard-4",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 280,
+        "y": 128.5,
+        "width": 140,
+        "height": 26.25,
+        "top": 128.5,
+        "right": 420,
+        "bottom": 154.75,
+        "left": 280
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "\n    Перейти к содержимомуЦентр управленияЦифровой ассистентНавыкиПоверхностиПес",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1440,
+      "name": "catalog-long",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 280,
+        "y": 128.92953491210938,
+        "width": 96.40625,
+        "height": 26.25,
+        "top": 128.92953491210938,
+        "right": 376.40625,
+        "bottom": 155.17953491210938,
+        "left": 280
+      },
+      "tables": [
+        {
+          "label": null,
+          "width": 1136,
+          "container": 1136,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "\n    Перейти к содержимомуЦентр управленияЦифровой ассистентНавыкиПоверхностиПес",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "catalog",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр навыков",
+          "width": 1118,
+          "container": 1120,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "domains",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 1118,
+          "container": 1120,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "domain-dialog",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 1118,
+          "container": 1120,
+          "overflow": "auto"
+        }
+      ],
+      "dialog": {
+        "x": 464,
+        "y": 190.25,
+        "width": 512,
+        "height": 619.5,
+        "top": 190.25,
+        "right": 976,
+        "bottom": 809.75,
+        "left": 464
+      },
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "domain-validation",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 1118,
+          "container": 1120,
+          "overflow": "auto"
+        }
+      ],
+      "dialog": {
+        "x": 464,
+        "y": 180.875,
+        "width": 512,
+        "height": 638.25,
+        "top": 180.875,
+        "right": 976,
+        "bottom": 819.125,
+        "left": 464
+      },
+      "focus": {
+        "tag": "SELECT",
+        "text": "Выберите командуПлатформенная команда ЦАМКоманда ЖКХКоманда МЭШКоманда Транспорт",
+        "name": null,
+        "outline": "auto",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "domain-server-error",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 1118,
+          "container": 1120,
+          "overflow": "auto"
+        }
+      ],
+      "dialog": {
+        "x": 464,
+        "y": 146.7890625,
+        "width": 512,
+        "height": 706.421875,
+        "top": 146.7890625,
+        "right": 976,
+        "bottom": 853.2109375,
+        "left": 464
+      },
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "domain-focus",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 1118,
+          "container": 1120,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Создать домен",
+        "name": "Создать домен",
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "wizard-validation",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.577 0.217662 0.112464 / 0.2) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "wizard-1",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "wizard-2",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "TEXTAREA",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "wizard-3",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "wizard-4",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "wizard-long",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "TEXTAREA",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "wizard-leave",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "dialog": {
+        "x": 528,
+        "y": 420.75,
+        "width": 384,
+        "height": 158.5,
+        "top": 420.75,
+        "right": 912,
+        "bottom": 579.25,
+        "left": 528
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Остаться",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "catalog-long",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр навыков",
+          "width": 1118,
+          "container": 1120,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "domains-long",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 1118,
+          "container": 1120,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "empty",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "no-results",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "error",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "domains-empty",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "domains-error",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1440,
+      "name": "lifecycle-unavailable",
+      "scrollWidth": 1440,
+      "bodyWidth": 1440,
+      "h1": {
+        "x": 296,
+        "y": 155.421875,
+        "width": 357.65625,
+        "height": 36,
+        "top": 155.421875,
+        "right": 653.65625,
+        "bottom": 191.421875,
+        "left": 296
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1280,
+      "name": "catalog",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 280,
+        "y": 128.8006591796875,
+        "width": 96.40625,
+        "height": 26.25,
+        "top": 128.8006591796875,
+        "right": 376.40625,
+        "bottom": 155.0506591796875,
+        "left": 280
+      },
+      "tables": [
+        {
+          "label": null,
+          "width": 976,
+          "container": 976,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "\n    Перейти к содержимомуЦентр управленияЦифровой ассистентНавыкиПоверхностиПес",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1280,
+      "name": "domains",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 280,
+        "y": 128.5,
+        "width": 96.40625,
+        "height": 26.25,
+        "top": 128.5,
+        "right": 376.40625,
+        "bottom": 154.75,
+        "left": 280
+      },
+      "tables": [
+        {
+          "label": null,
+          "width": 976,
+          "container": 976,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "\n    Перейти к содержимомуЦентр управленияЦифровой ассистентНавыкиПоверхностиПес",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1280,
+      "name": "domain-dialog",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 280,
+        "y": 128.5,
+        "width": 96.40625,
+        "height": 26.25,
+        "top": 128.5,
+        "right": 376.40625,
+        "bottom": 154.75,
+        "left": 280
+      },
+      "tables": [
+        {
+          "label": null,
+          "width": 976,
+          "container": 976,
+          "overflow": "auto"
+        }
+      ],
+      "dialog": {
+        "x": 384,
+        "y": 237.75,
+        "width": 512,
+        "height": 524.5,
+        "top": 237.75,
+        "right": 896,
+        "bottom": 762.25,
+        "left": 384
+      },
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.21 -0.000784401 -0.00896575 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1280,
+      "name": "wizard-1",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 280,
+        "y": 129.83328247070312,
+        "width": 140,
+        "height": 26.25,
+        "top": 129.83328247070312,
+        "right": 420,
+        "bottom": 156.08328247070312,
+        "left": 280
+      },
+      "tables": [],
+      "focus": {
+        "tag": "TEXTAREA",
+        "text": "Пользователь записан на приём в МФЦ",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.21 -0.000784401 -0.00896575 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1280,
+      "name": "wizard-2",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 280,
+        "y": 128.5,
+        "width": 140,
+        "height": 26.25,
+        "top": 128.5,
+        "right": 420,
+        "bottom": 154.75,
+        "left": 280
+      },
+      "tables": [],
+      "focus": {
+        "tag": "TEXTAREA",
+        "text": "Первая фраза, вторая фраза\nТретья фраза",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.21 -0.000784401 -0.00896575 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1280,
+      "name": "wizard-3",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 280,
+        "y": 128.5,
+        "width": 140,
+        "height": 26.25,
+        "top": 128.5,
+        "right": 420,
+        "bottom": 154.75,
+        "left": 280
+      },
+      "tables": [],
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.21 -0.000784401 -0.00896575 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1280,
+      "name": "wizard-4",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 280,
+        "y": 128.5,
+        "width": 140,
+        "height": 26.25,
+        "top": 128.5,
+        "right": 420,
+        "bottom": 154.75,
+        "left": 280
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "\n    Перейти к содержимомуЦентр управленияЦифровой ассистентНавыкиПоверхностиПес",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 1280,
+      "name": "catalog-long",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 280,
+        "y": 128.9298095703125,
+        "width": 96.40625,
+        "height": 26.25,
+        "top": 128.9298095703125,
+        "right": 376.40625,
+        "bottom": 155.1798095703125,
+        "left": 280
+      },
+      "tables": [
+        {
+          "label": null,
+          "width": 976,
+          "container": 976,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "\n    Перейти к содержимомуЦентр управленияЦифровой ассистентНавыкиПоверхностиПес",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "catalog",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр навыков",
+          "width": 958,
+          "container": 960,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "domains",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 958,
+          "container": 960,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "domain-dialog",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 958,
+          "container": 960,
+          "overflow": "auto"
+        }
+      ],
+      "dialog": {
+        "x": 384,
+        "y": 190.25,
+        "width": 512,
+        "height": 619.5,
+        "top": 190.25,
+        "right": 896,
+        "bottom": 809.75,
+        "left": 384
+      },
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "domain-validation",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 958,
+          "container": 960,
+          "overflow": "auto"
+        }
+      ],
+      "dialog": {
+        "x": 384,
+        "y": 180.875,
+        "width": 512,
+        "height": 638.25,
+        "top": 180.875,
+        "right": 896,
+        "bottom": 819.125,
+        "left": 384
+      },
+      "focus": {
+        "tag": "SELECT",
+        "text": "Выберите командуПлатформенная команда ЦАМКоманда ЖКХКоманда МЭШКоманда Транспорт",
+        "name": null,
+        "outline": "auto",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "domain-server-error",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 958,
+          "container": 960,
+          "overflow": "auto"
+        }
+      ],
+      "dialog": {
+        "x": 384,
+        "y": 146.7890625,
+        "width": 512,
+        "height": 706.421875,
+        "top": 146.7890625,
+        "right": 896,
+        "bottom": 853.2109375,
+        "left": 384
+      },
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "domain-focus",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 958,
+          "container": 960,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Создать домен",
+        "name": "Создать домен",
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "wizard-validation",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.577 0.217662 0.112464 / 0.2) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "wizard-1",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "wizard-2",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "TEXTAREA",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "wizard-3",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "wizard-4",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "wizard-long",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "TEXTAREA",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "wizard-leave",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 430,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "dialog": {
+        "x": 448,
+        "y": 420.75,
+        "width": 384,
+        "height": 158.5,
+        "top": 420.75,
+        "right": 832,
+        "bottom": 579.25,
+        "left": 448
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Остаться",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "catalog-long",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр навыков",
+          "width": 958,
+          "container": 960,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "domains-long",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 958,
+          "container": 960,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "empty",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "no-results",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "error",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "domains-empty",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "domains-error",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 288,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 390.125,
+        "bottom": 179.671875,
+        "left": 288
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 1280,
+      "name": "lifecycle-unavailable",
+      "scrollWidth": 1280,
+      "bodyWidth": 1280,
+      "h1": {
+        "x": 296,
+        "y": 155.421875,
+        "width": 357.65625,
+        "height": 36,
+        "top": 155.421875,
+        "right": 653.65625,
+        "bottom": 191.421875,
+        "left": 296
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 390,
+      "name": "catalog",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 280,
+        "y": 128.928955078125,
+        "width": 54,
+        "height": 26.25,
+        "top": 128.928955078125,
+        "right": 334,
+        "bottom": 155.178955078125,
+        "left": 280
+      },
+      "tables": [
+        {
+          "label": null,
+          "width": 86,
+          "container": 86,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "\n    Перейти к содержимомуЦентр управленияЦифровой ассистентНавыкиПоверхностиПес",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 390,
+      "name": "domains",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 280,
+        "y": 128.5,
+        "width": 54,
+        "height": 26.25,
+        "top": 128.5,
+        "right": 334,
+        "bottom": 154.75,
+        "left": 280
+      },
+      "tables": [
+        {
+          "label": null,
+          "width": 86,
+          "container": 86,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "\n    Перейти к содержимомуЦентр управленияЦифровой ассистентНавыкиПоверхностиПес",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 390,
+      "name": "domain-dialog",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 280,
+        "y": 128.5,
+        "width": 54,
+        "height": 26.25,
+        "top": 128.5,
+        "right": 334,
+        "bottom": 154.75,
+        "left": 280
+      },
+      "tables": [
+        {
+          "label": null,
+          "width": 86,
+          "container": 86,
+          "overflow": "auto"
+        }
+      ],
+      "dialog": {
+        "x": 16,
+        "y": 208.375,
+        "width": 358,
+        "height": 583.25,
+        "top": 208.375,
+        "right": 374,
+        "bottom": 791.625,
+        "left": 16
+      },
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.21 -0.000784401 -0.00896575 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 390,
+      "name": "wizard-1",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 280,
+        "y": 153.55075073242188,
+        "width": 22,
+        "height": 26.25,
+        "top": 153.55075073242188,
+        "right": 302,
+        "bottom": 179.80075073242188,
+        "left": 280
+      },
+      "tables": [],
+      "focus": {
+        "tag": "TEXTAREA",
+        "text": "Пользователь записан на приём в МФЦ",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.21 -0.000784401 -0.00896575 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 390,
+      "name": "wizard-2",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 280,
+        "y": 153.25,
+        "width": 22,
+        "height": 26.25,
+        "top": 153.25,
+        "right": 302,
+        "bottom": 179.5,
+        "left": 280
+      },
+      "tables": [],
+      "focus": {
+        "tag": "TEXTAREA",
+        "text": "Первая фраза, вторая фраза\nТретья фраза",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.21 -0.000784401 -0.00896575 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 390,
+      "name": "wizard-3",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 280,
+        "y": 153.25,
+        "width": 22,
+        "height": 26.25,
+        "top": 153.25,
+        "right": 302,
+        "bottom": 179.5,
+        "left": 280
+      },
+      "tables": [],
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.21 -0.000784401 -0.00896575 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 390,
+      "name": "wizard-4",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 280,
+        "y": 153.25,
+        "width": 22,
+        "height": 26.25,
+        "top": 153.25,
+        "right": 302,
+        "bottom": 179.5,
+        "left": 280
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "\n    Перейти к содержимомуЦентр управленияЦифровой ассистентНавыкиПоверхностиПес",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "reference",
+      "width": 390,
+      "name": "catalog-long",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 280,
+        "y": 128.9298095703125,
+        "width": 54,
+        "height": 26.25,
+        "top": 128.9298095703125,
+        "right": 334,
+        "bottom": 155.1798095703125,
+        "left": 280
+      },
+      "tables": [
+        {
+          "label": null,
+          "width": 86,
+          "container": 86,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "\n    Перейти к содержимомуЦентр управленияЦифровой ассистентНавыкиПоверхностиПес",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "catalog",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [
+        {
+          "label": "Реестр навыков",
+          "width": 850,
+          "container": 358,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "domains",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 850,
+          "container": 358,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "domain-dialog",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 850,
+          "container": 358,
+          "overflow": "auto"
+        }
+      ],
+      "dialog": {
+        "x": 16,
+        "y": 190.25,
+        "width": 358,
+        "height": 619.5,
+        "top": 190.25,
+        "right": 374,
+        "bottom": 809.75,
+        "left": 16
+      },
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "domain-validation",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 850,
+          "container": 358,
+          "overflow": "auto"
+        }
+      ],
+      "dialog": {
+        "x": 16,
+        "y": 180.875,
+        "width": 358,
+        "height": 638.25,
+        "top": 180.875,
+        "right": 374,
+        "bottom": 819.125,
+        "left": 16
+      },
+      "focus": {
+        "tag": "SELECT",
+        "text": "Выберите командуПлатформенная команда ЦАМКоманда ЖКХКоманда МЭШКоманда Транспорт",
+        "name": null,
+        "outline": "auto",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "domain-server-error",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 850,
+          "container": 358,
+          "overflow": "auto"
+        }
+      ],
+      "dialog": {
+        "x": 16,
+        "y": 137.4140625,
+        "width": 358,
+        "height": 725.171875,
+        "top": 137.4140625,
+        "right": 374,
+        "bottom": 862.5859375,
+        "left": 16
+      },
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "domain-focus",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 850,
+          "container": 358,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Создать домен",
+        "name": "Создать домен",
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "wizard-validation",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 126.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 126.421875,
+        "right": 158,
+        "bottom": 152.671875,
+        "left": 16
+      },
+      "tables": [],
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.577 0.217662 0.112464 / 0.2) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "wizard-1",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 158,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "wizard-2",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 158,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [],
+      "focus": {
+        "tag": "TEXTAREA",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "wizard-3",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 158,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [],
+      "focus": {
+        "tag": "INPUT",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "wizard-4",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 158,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "wizard-long",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 73.421875,
+        "width": 142,
+        "height": 26.25,
+        "top": 73.421875,
+        "right": 158,
+        "bottom": 99.671875,
+        "left": 16
+      },
+      "tables": [],
+      "focus": {
+        "tag": "TEXTAREA",
+        "text": "",
+        "name": null,
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "wizard-leave",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": -451.578125,
+        "width": 142,
+        "height": 26.25,
+        "top": -451.578125,
+        "right": 158,
+        "bottom": -425.328125,
+        "left": 16
+      },
+      "tables": [],
+      "dialog": {
+        "x": 16,
+        "y": 400.75,
+        "width": 358,
+        "height": 198.5,
+        "top": 400.75,
+        "right": 374,
+        "bottom": 599.25,
+        "left": 16
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Остаться",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "catalog-long",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [
+        {
+          "label": "Реестр навыков",
+          "width": 850,
+          "container": 358,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "domains-long",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [
+        {
+          "label": "Реестр доменов",
+          "width": 850,
+          "container": 358,
+          "overflow": "auto"
+        }
+      ],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "empty",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "no-results",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "error",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "domains-empty",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "domains-error",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 153.421875,
+        "width": 102.125,
+        "height": 26.25,
+        "top": 153.421875,
+        "right": 118.125,
+        "bottom": 179.671875,
+        "left": 16
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    },
+    {
+      "kind": "app",
+      "width": 390,
+      "name": "lifecycle-unavailable",
+      "scrollWidth": 390,
+      "bodyWidth": 390,
+      "h1": {
+        "x": 16,
+        "y": 155.421875,
+        "width": 357.65625,
+        "height": 36,
+        "top": 155.421875,
+        "right": 373.65625,
+        "bottom": 191.421875,
+        "left": 16
+      },
+      "tables": [],
+      "focus": {
+        "tag": "BODY",
+        "text": "window.__reactRouterContext.streamController.enqueue(\"[{\\\"_1\\\":2,\\\"_3\\\":-5,\\\"_4\\",
+        "name": null,
+        "outline": "none",
+        "shadow": "none"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "width": 1440,
+      "name": "catalog",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "domains",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "domain-dialog",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "check": "dialog keyboard focus stays inside",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "domain-validation",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "domain-server-error",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "check": "Escape returns focus to domain trigger",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "domain-focus",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "wizard-validation",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "wizard-1",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "wizard-2",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "wizard-3",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "wizard-4",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "wizard-long",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "wizard-leave",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "check": "wizard commands unavailable and dirty navigation guarded",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "catalog-long",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "domains-long",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "empty",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "no-results",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "error",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "check": "error retry recovered",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "domains-empty",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "domains-error",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "check": "domains-error retry recovered",
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "name": "lifecycle-unavailable",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "catalog",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "domains",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "domain-dialog",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "check": "dialog keyboard focus stays inside",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "domain-validation",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "domain-server-error",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "check": "Escape returns focus to domain trigger",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "domain-focus",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "wizard-validation",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "wizard-1",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "wizard-2",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "wizard-3",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "wizard-4",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "wizard-long",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "wizard-leave",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "check": "wizard commands unavailable and dirty navigation guarded",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "catalog-long",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "domains-long",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "empty",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "no-results",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "error",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "check": "error retry recovered",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "domains-empty",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "domains-error",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "check": "domains-error retry recovered",
+      "pass": true
+    },
+    {
+      "width": 1280,
+      "name": "lifecycle-unavailable",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "catalog",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "domains",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "domain-dialog",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "check": "dialog keyboard focus stays inside",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "domain-validation",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "domain-server-error",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "check": "Escape returns focus to domain trigger",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "domain-focus",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "wizard-validation",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "wizard-1",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "wizard-2",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "wizard-3",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "wizard-4",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "wizard-long",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "wizard-leave",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "check": "wizard commands unavailable and dirty navigation guarded",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "catalog-long",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "domains-long",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "empty",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "no-results",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "error",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "check": "error retry recovered",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "domains-empty",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "domains-error",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "check": "domains-error retry recovered",
+      "pass": true
+    },
+    {
+      "width": 390,
+      "name": "lifecycle-unavailable",
+      "check": "root has no horizontal overflow",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "POST"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "long",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "long",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "empty",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "empty",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "empty",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "empty",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "empty",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "empty",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "no-results",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "no-results",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "no-results",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "no-results",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "no-results",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "no-results",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "error",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "error",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "domains-empty",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "domains-empty",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "domains-error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "domains-error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "domains-error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills/018f0000-0000-7000-8000-000000000064",
+      "method": "GET"
+    },
+    {
+      "width": 1440,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills/018f0000-0000-7000-8000-000000000064",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "POST"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "long",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "long",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "empty",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "empty",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "empty",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "empty",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "empty",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "empty",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "no-results",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "no-results",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "no-results",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "no-results",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "no-results",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "no-results",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "error",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "error",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "domains-empty",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "domains-empty",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "domains-error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "domains-error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "domains-error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills/018f0000-0000-7000-8000-000000000064",
+      "method": "GET"
+    },
+    {
+      "width": 1280,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills/018f0000-0000-7000-8000-000000000064",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "POST"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "long",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "long",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "long",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "empty",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "empty",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "empty",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "empty",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "empty",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "empty",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "no-results",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "no-results",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "no-results",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "no-results",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "no-results",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "no-results",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "error",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "error",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "error",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/teams/v1/teams",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "domains-empty",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "domains-empty",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "domains-error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "domains-error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "domains-error",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/domains",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills/018f0000-0000-7000-8000-000000000064",
+      "method": "GET"
+    },
+    {
+      "width": 390,
+      "mode": "normal",
+      "path": "/api/control/api/skills/v1/skills/018f0000-0000-7000-8000-000000000064",
+      "method": "GET"
+    }
+  ]
+}
