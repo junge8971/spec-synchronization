@@ -18,10 +18,10 @@ MOS-1020: существующая вкладка «Ревью» пока заг
 
 ### Modified Capabilities
 
-- `control-center-shell`: заменить обязательную заглушку ревью рабочим содержимым при наличии согласованного review API, сохранив остальные незавершённые точки входа.
+- `control-center-shell`: сохранить условное подключение ревью при наличии согласованного review API и актуализировать delta относительно основного spec, не возвращая заглушки вместо реализованных мастера регистрации и доменов.
 
 ## Impact
 
 - `app/pages/skills/ui/skills-page.tsx`, новый widget очереди, features решения, `app/entities/skill/`.
-- **BLOCKED API:** `docs/api/contracts/openapi.json` не содержит review queue, решения, критериев, причин возврата и version guard.
+- **BLOCKED API:** `docs/api/contracts/openapi.json` уже содержит серверный GET skills со status=review, пагинацию, version и POST status с expected_version/Idempotency-Key. Это список навыков в статусе review, а не согласованный снимок материалов ревью. Нет контракта решений, критериев, причин возврата и согласованности версий материалов; POST status не заменяет решение ревью. Отдельный read-only этап в этот change пока не добавляется.
 - MOS-945/MOS-1019 определяют данные фраз и проверок; их версии должны совпадать с предметом ревью. Отдельная приёмка без ожидания MOS-1021.
