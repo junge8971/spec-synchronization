@@ -31,7 +31,7 @@
 
 ### Requirement: Independent connection save
 
-Сохранение SHALL использовать PATCH навыка с полным connection, expected_version и Idempotency-Key, не перезаписывая поля анкеты. Объект connection SHALL заменяться целиком, а не merge-иться. Удаление всего подключения через connection=null MUST NOT предлагаться в этой форме. Успех SHALL отображать серверный результат; отмена MUST NOT отправлять мутацию; ошибка SHALL сохранять ввод. Конфликт версии MUST NOT автоматически перезаписывать чужое изменение.
+Сохранение SHALL использовать PUT навыка с полным connection, expected_version и Idempotency-Key, не перезаписывая поля анкеты. Объект connection SHALL заменяться целиком, а не merge-иться. Удаление всего подключения через connection=null MUST NOT предлагаться в этой форме. Успех SHALL отображать серверный результат; отмена MUST NOT отправлять мутацию; ошибка SHALL сохранять ввод. Конфликт версии MUST NOT автоматически перезаписывать чужое изменение.
 
 #### Scenario: Connection save
 
@@ -45,7 +45,7 @@
 
 #### Scenario: Save fails
 
-- **WHEN** сервер отклоняет PATCH
+- **WHEN** сервер отклоняет PUT
 - **THEN** настройка остаётся в форме с доступным сообщением об ошибке без фиктивного успеха
 
 ### Requirement: Parameter documentation

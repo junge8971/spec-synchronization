@@ -22,7 +22,7 @@
 #### Scenario: Save questionnaire
 
 - **WHEN** пользователь сохраняет валидные изменения
-- **THEN** отправляется PATCH навыка с expected_version и Idempotency-Key, а после подтверждённого успеха карточка, крошки и реестр отражают серверный результат
+- **THEN** отправляется PUT навыка с expected_version и Idempotency-Key, а после подтверждённого успеха карточка, крошки и реестр отражают серверный результат
 
 #### Scenario: Cancel editing
 
@@ -41,7 +41,7 @@
 #### Scenario: Concurrent update
 
 - **WHEN** сервер сообщает конфликт исходной версии
-- **THEN** пользователь видит необходимость обновить данные, draft сохранён и PATCH с новой expected_version автоматически не выполняется
+- **THEN** пользователь видит необходимость обновить данные, draft сохранён и PUT с новой expected_version автоматически не выполняется
 
 #### Scenario: Keyboard editing
 
