@@ -5,7 +5,7 @@
 
 ## 2. Приёмка подзадачи
 
-- [ ] 2.1 Проверить FSD/public APIs, размещение declarations, доступность клавиатуры/ошибок/фокуса в затронутом UI и отсутствие небезопасного HTML/production mocks. Проверка: diff review и целевые unit/component-тесты, без browser/E2E.
+- [ ] 2.1 Проверить владение реализации и тестов в `app/optional/feedback`, адресные границы/public index.ts, application composition и отдельные route entrypoints, отсутствие новых UI-policy/permission mappings, размещение declarations, доступность клавиатуры/ошибок/фокуса в затронутом UI и отсутствие небезопасного HTML/production mocks. Проверка: diff review и целевые unit/component-тесты, без browser/E2E.
 - [ ] 2.2 Выполнить `yarn typecheck`, `yarn lint`, `yarn test`, `yarn format:check`; при изменении API-типов — `yarn api:check`, при изменении сборки — `yarn build`. Проверка: записать реальные результаты; environment failures не считать успехом.
-- [ ] 2.3 Перед выпуском проверить оба CSV, export permission, CORS Content-Disposition и реальный лимит. Проверка: конкретные результаты согласованных HTTP-проверок либо подтверждение владельца стенда без секретов. При отсутствии evidence gate оставить открытым.
+- [ ] 2.3 Перед выпуском проверить оба CSV, фактические серверные ошибки авторизации, CORS Content-Disposition и реальный лимит. Проверка: конкретные результаты согласованных HTTP-проверок либо подтверждение владельца стенда без секретов. При отсутствии evidence gate оставить открытым.
 - [ ] 2.4 Проверить интеграцию двух экспортов с applied search реестра и сохранённой карточкой после указанных зависимостей. Проверка: component/mock HTTP сценарии общего отбора и dirty detail, `yarn api:check` при изменении типов и `yarn build`; закрытие остальных FE-changes сверх зависимостей экспорта не требуется, реальные CSV gates пункта 2.3 остаются открытыми до проверки.

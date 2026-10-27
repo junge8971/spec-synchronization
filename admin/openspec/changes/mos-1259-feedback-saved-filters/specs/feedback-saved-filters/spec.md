@@ -4,6 +4,15 @@
 
 ## ADDED Requirements
 
+### Requirement: Isolated feedback integration
+
+Возможности этой задачи SHALL поставляться внутри обособленного модуля раздела «Обратная связь», с общим foundation MOS-1249 и ограниченными точками подключения приложения по образцу базы знаний. Внешние потребители SHALL обращаться через публичный API модуля; framework route entrypoints SHALL подключаться отдельно. Бизнес-слои приложения MUST NOT зависеть от внутренних модулей feedback. Существующие transport, обработка ошибок и механизмы сессии SHALL сохраняться. Новая UI-policy, mappings permissions и новые ограничения интерфейса по пользователю MUST NOT добавляться в текущую поставку.
+
+#### Scenario: Integrate the task without expanding module boundaries
+
+- **WHEN** реализация задачи подключается к приложению и общей модели feedback
+- **THEN** предметная логика и тесты остаются у владельца раздела, composition использует публичный API и отдельные route entrypoints; действующие защитные механизмы сохраняются без новых permission mappings
+
 ### Requirement: Personal saved searches
 
 Фильтры SHALL храниться сервером через /saved-filters с resource=feedback-surveys и полным search. Имя SHALL иметь 1–150 символов и не состоять из пробелов. UI SHALL предоставлять создание, постраничный список, применение, явное обновление выбранного по ID и удаление. Одинаковые имена SHALL допускаться и MUST NOT вызывать автоматическую перезапись. PUT search SHALL заменять объект целиком; resource MUST NOT изменяться. При применении SHALL восстанавливаться query, обычные фильтры, conditions, sort, limit с offset=0. Недоступный фильтр SHALL обрабатываться как 404; устаревший search SHALL показывать ошибку без молчаливого частичного применения/localStorage fallback.

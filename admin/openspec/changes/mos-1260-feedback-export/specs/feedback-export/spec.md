@@ -4,6 +4,15 @@
 
 ## ADDED Requirements
 
+### Requirement: Isolated feedback integration
+
+Возможности этой задачи SHALL поставляться внутри обособленного модуля раздела «Обратная связь», с общим foundation MOS-1249 и ограниченными точками подключения приложения по образцу базы знаний. Внешние потребители SHALL обращаться через публичный API модуля; framework route entrypoints SHALL подключаться отдельно. Бизнес-слои приложения MUST NOT зависеть от внутренних модулей feedback. Существующие transport, обработка ошибок и механизмы сессии SHALL сохраняться. Новая UI-policy, mappings permissions и новые ограничения интерфейса по пользователю MUST NOT добавляться в текущую поставку.
+
+#### Scenario: Integrate the task without expanding module boundaries
+
+- **WHEN** реализация задачи подключается к приложению и общей модели feedback
+- **THEN** предметная логика и тесты остаются у владельца раздела, composition использует публичный API и отдельные route entrypoints; действующие защитные механизмы сохраняются без новых permission mappings
+
 ### Requirement: Server CSV export
 
 Список SHALL экспортироваться POST /feedback/surveys/export с fields и текущим применённым search целиком, независимо от страницы. Карточка SHALL экспортироваться POST /feedback/surveys/{id}/export только с fields и только из сохранённых данных. Колонки/порядок SHALL выбираться по metadata export_fields, сейчас name/code/type_code/audience_type/status; минимум одно уникальное поле обязательно. Вложенные данные и пользовательские ответы MUST NOT обещаться в файле. Для новой несохранённой карточки export SHALL быть недоступен; для dirty существующей SHALL поясняться источник сохранённых данных.

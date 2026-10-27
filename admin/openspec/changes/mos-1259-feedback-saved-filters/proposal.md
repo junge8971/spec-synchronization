@@ -8,6 +8,7 @@
 
 - Персональные серверные фильтры: создать, список, применить, явно обновить выбранный ID, удалить; resource=feedback-surveys.
 - Сохранить ограничения API, ввод при ошибках, доступность и действующую безопасность.
+- Реализовать область задачи внутри `app/optional/feedback` по границе MOS-1249 и примеру базы знаний; новая UI-policy, mappings permissions и новые ограничения интерфейса по пользователю не входят.
 
 ### Deferred scope
 
@@ -21,12 +22,14 @@
 
 ### Modified Capabilities
 
-Нет. Общие capabilities HTTP, permissions и MPMM сохраняются; scope соседних FE-подзадач сюда не переносится.
+Нет. Общие capabilities HTTP, действующих защитных механизмов и MPMM сохраняются; scope соседних FE-подзадач сюда не переносится.
 
 ## Impact
 
+Владелец реализации и тестов — `app/optional/feedback`. Внешние подключения идут через публичный `index.ts` и отдельные framework route entrypoints; composition находится в application, нижние FSD-слои не зависят от optional.
+
 Клиенты saved-filters, персональные отборы реестра и mock handlers.
 
-Зависимости: [MOS-1250](../mos-1250-feedback-registry/proposal.md); [MOS-1258](../mos-1258-feedback-conditions/proposal.md)
+Зависимости: [MOS-1250](../archive/2026-10-20-mos-1250-feedback-registry/proposal.md); [MOS-1258](../mos-1258-feedback-conditions/proposal.md)
 
 Граница: UI по прототипу, операции по API, неподдержанное отложено. Исполнение правил и сбор реальных ответов пользователей не входят. Новые зависимости не требуются без отдельного обоснования. Это planning change: код приложения и Jira при разделении не меняются.

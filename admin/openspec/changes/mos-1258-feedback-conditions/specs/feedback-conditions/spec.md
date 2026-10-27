@@ -4,6 +4,15 @@
 
 ## ADDED Requirements
 
+### Requirement: Isolated feedback integration
+
+Возможности этой задачи SHALL поставляться внутри обособленного модуля раздела «Обратная связь», с общим foundation MOS-1249 и ограниченными точками подключения приложения по образцу базы знаний. Внешние потребители SHALL обращаться через публичный API модуля; framework route entrypoints SHALL подключаться отдельно. Бизнес-слои приложения MUST NOT зависеть от внутренних модулей feedback. Существующие transport, обработка ошибок и механизмы сессии SHALL сохраняться. Новая UI-policy, mappings permissions и новые ограничения интерфейса по пользователю MUST NOT добавляться в текущую поставку.
+
+#### Scenario: Integrate the task without expanding module boundaries
+
+- **WHEN** реализация задачи подключается к приложению и общей модели feedback
+- **THEN** предметная логика и тесты остаются у владельца раздела, composition использует публичный API и отдельные route entrypoints; действующие защитные механизмы сохраняются без новых permission mappings
+
 ### Requirement: Advanced conditions and reproducible selection
 
 Условия SHALL строиться по metadata condition_fields: одна плоская группа and/or, максимум 50 условий. Поля — name/code/description/type_code/status/audience_type/owner; операторы только разрешённые для поля. Справочные in/not_in SHALL использовать 1–100 уникальных кодов; is_empty/is_not_empty SHALL не требовать значения. Обычные фильтры и query SHALL объединяться с группой через AND. В первом этапе аудитория SHALL выбираться только внутри конструктора; независимый мультиселект аудитории и условие tags MUST NOT предлагаться.

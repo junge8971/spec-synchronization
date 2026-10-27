@@ -4,6 +4,15 @@
 
 ## ADDED Requirements
 
+### Requirement: Isolated feedback integration
+
+Возможности этой задачи SHALL поставляться внутри обособленного модуля раздела «Обратная связь», с общим foundation MOS-1249 и ограниченными точками подключения приложения по образцу базы знаний. Внешние потребители SHALL обращаться через публичный API модуля; framework route entrypoints SHALL подключаться отдельно. Бизнес-слои приложения MUST NOT зависеть от внутренних модулей feedback. Существующие transport, обработка ошибок и механизмы сессии SHALL сохраняться. Новая UI-policy, mappings permissions и новые ограничения интерфейса по пользователю MUST NOT добавляться в текущую поставку.
+
+#### Scenario: Integrate the task without expanding module boundaries
+
+- **WHEN** реализация задачи подключается к приложению и общей модели feedback
+- **THEN** предметная логика и тесты остаются у владельца раздела, composition использует публичный API и отдельные route entrypoints; действующие защитные механизмы сохраняются без новых permission mappings
+
 ### Requirement: Status changes and deletion
 
 Статус SHALL меняться PUT полем status с кодами draft/active/paused/disabled из lookup. Выключение SHALL использовать disabled, не archived. Выключенная запись SHALL оставаться доступной в CRUD. Выключение и удаление SHALL требовать подтверждения; dirty draft SHALL до отдельной операции быть явно сохранён либо операция отменена. Успех SHALL обновлять detail, реестр и счётчики по серверному результату. DELETE SHALL трактоваться как soft-delete без восстановления в данном API; код остаётся занят. 404 повторного удаления MUST NOT скрываться как подтверждённый успех текущего запроса.

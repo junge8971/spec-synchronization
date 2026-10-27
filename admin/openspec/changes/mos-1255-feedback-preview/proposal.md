@@ -8,6 +8,7 @@
 
 - Живой preview семи типов, отдельные пробные ответы, required и сброс несовместимых ответов. Сетевого сбора ответов нет.
 - Сохранить ограничения API, ввод при ошибках, доступность и действующую безопасность.
+- Реализовать область задачи внутри `app/optional/feedback` по границе MOS-1249 и примеру базы знаний; новая UI-policy, mappings permissions и новые ограничения интерфейса по пользователю не входят.
 
 ### Deferred scope
 
@@ -21,13 +22,15 @@
 
 ### Modified Capabilities
 
-Нет. Общие capabilities HTTP, permissions и MPMM сохраняются; scope соседних FE-подзадач сюда не переносится.
+Нет. Общие capabilities HTTP, действующих защитных механизмов и MPMM сохраняются; scope соседних FE-подзадач сюда не переносится.
 
 ## Impact
 
+Владелец реализации и тестов — `app/optional/feedback`. Внешние подключения идут через публичный `index.ts` и отдельные framework route entrypoints; composition находится в application, нижние FSD-слои не зависят от optional.
+
 Приватный preview редактора и локальное состояние пробных ответов.
 
-Зависимости: [MOS-1254](../mos-1254-feedback-questions/proposal.md); [MOS-1251](../mos-1251-feedback-editor/proposal.md)
+Зависимости: [MOS-1254](../archive/2026-10-27-mos-1254-feedback-questions/proposal.md); [MOS-1251](../archive/2026-10-23-mos-1251-feedback-editor/proposal.md)
 
 Нужны готовые вопросы MOS-1254 и foundation draft MOS-1251; финальная композиция MOS-1251 не блокирует preview.
 

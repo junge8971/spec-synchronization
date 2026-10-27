@@ -8,6 +8,7 @@
 
 - CSV всего применённого отбора и сохранённой карточки, выбор/порядок полей, binary download и ошибки. Вложенные данные не экспортируются.
 - Сохранить ограничения API, ввод при ошибках, доступность и действующую безопасность.
+- Реализовать область задачи внутри `app/optional/feedback` по границе MOS-1249 и примеру базы знаний; новая UI-policy, mappings permissions и новые ограничения интерфейса по пользователю не входят.
 
 ### Deferred scope
 
@@ -23,12 +24,14 @@
 
 ### Modified Capabilities
 
-Нет. Общие capabilities HTTP, permissions и MPMM сохраняются; scope соседних FE-подзадач сюда не переносится.
+Нет. Общие capabilities HTTP, действующих защитных механизмов и MPMM сохраняются; scope соседних FE-подзадач сюда не переносится.
 
 ## Impact
 
+Владелец реализации и тестов — `app/optional/feedback`. Внешние подключения идут через публичный `index.ts` и отдельные framework route entrypoints; composition находится в application, нижние FSD-слои не зависят от optional.
+
 Два binary клиента, выбор колонок, действия реестра/карточки и моки CSV.
 
-Зависимости: [MOS-1249](../mos-1249-feedback-api/proposal.md); [MOS-1250](../mos-1250-feedback-registry/proposal.md); [MOS-1251](../mos-1251-feedback-editor/proposal.md); [MOS-1258](../mos-1258-feedback-conditions/proposal.md)
+Зависимости: [MOS-1249](../archive/2026-10-16-mos-1249-feedback-api/proposal.md); [MOS-1250](../archive/2026-10-20-mos-1250-feedback-registry/proposal.md); [MOS-1251](../archive/2026-10-23-mos-1251-feedback-editor/proposal.md); [MOS-1258](../mos-1258-feedback-conditions/proposal.md)
 
 Граница: UI по прототипу, операции по API, неподдержанное отложено. Исполнение правил и сбор реальных ответов пользователей не входят. Новые зависимости не требуются без отдельного обоснования. Это planning change: код приложения и Jira при разделении не меняются.

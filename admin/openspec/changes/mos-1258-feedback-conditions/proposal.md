@@ -8,6 +8,7 @@
 
 - Редактор одной плоской группы И/ИЛИ по metadata, draft/applied, badge/reset, интеграция в общую модель URL/search. Базовые фильтры остаются в MOS-1250.
 - Сохранить ограничения API, ввод при ошибках, доступность и действующую безопасность.
+- Реализовать область задачи внутри `app/optional/feedback` по границе MOS-1249 и примеру базы знаний; новая UI-policy, mappings permissions и новые ограничения интерфейса по пользователю не входят.
 
 - Валидировать строки условий длиной 1–1000 без trim; удалять условие при очистке последнего значения in/not_in.
 
@@ -23,12 +24,14 @@
 
 ### Modified Capabilities
 
-Нет. Общие capabilities HTTP, permissions и MPMM сохраняются; scope соседних FE-подзадач сюда не переносится.
+Нет. Общие capabilities HTTP, действующих защитных механизмов и MPMM сохраняются; scope соседних FE-подзадач сюда не переносится.
 
 ## Impact
 
+Владелец реализации и тестов — `app/optional/feedback`. Внешние подключения идут через публичный `index.ts` и отдельные framework route entrypoints; composition находится в application, нижние FSD-слои не зависят от optional.
+
 Редактор условий, metadata validation и расширение общего search реестра.
 
-Зависимости: [MOS-1249](../mos-1249-feedback-api/proposal.md); [MOS-1250](../mos-1250-feedback-registry/proposal.md)
+Зависимости: [MOS-1249](../mos-1249-feedback-api/proposal.md); [MOS-1250](../archive/2026-10-20-mos-1250-feedback-registry/proposal.md)
 
 Граница: UI по прототипу, операции по API, неподдержанное отложено. Исполнение правил и сбор реальных ответов пользователей не входят. Новые зависимости не требуются без отдельного обоснования. Это planning change: код приложения и Jira при разделении не меняются.
