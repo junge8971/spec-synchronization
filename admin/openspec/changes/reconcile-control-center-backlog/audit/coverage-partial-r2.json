@@ -1,0 +1,24 @@
+{
+  "revision": 2,
+  "supplements": "coverage-partial-r1.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "scope": "Additional reviewed documentary chains only; not global requirements, implementation, runtime or delivery coverage. Original reports require named reviews and decisions.",
+  "chains": [
+    {"issue": "MOS-960", "report": "reports/SCENARIO-MOS-960.md", "review": "reviews/R-SCENARIO-MOS-960.md", "disposition": "D-012"},
+    {"issue": "MOS-961", "report": "reports/SCENARIO-MOS-961.md", "review": "reviews/R-SCENARIO-MOS-961.md", "disposition": "D-012"},
+    {"issue": "MOS-962", "report": "reports/SCENARIO-MOS-962.md", "review": "reviews/R-SCENARIO-MOS-962.md", "disposition": "D-012"},
+    {"issue": "MOS-916", "report": "reports/SCENARIO-MOS-916.md", "review": "reviews/R-SCENARIO-MOS-916.md", "disposition": "D-013"},
+    {"issue": "MOS-919", "report": "reports/SCENARIO-MOS-919.md", "review": "reviews/R-SCENARIO-MOS-919.md", "disposition": "D-013"},
+    {"issue": "MOS-1015", "report": "reports/SCENARIO-MOS-1015.md", "review": "reviews/R-SCENARIO-MOS-1015.md", "disposition": "D-013", "indexStatus": "unverified", "mandatoryCorrections": ["Reject original noStagedFiles:true", "Agreed builder specification is not inspected implementation", "Preserve published CSV missing-value convention and preview null example"]},
+    {"issue": "MOS-1016", "report": "reports/SCENARIO-MOS-1016.md", "review": "reviews/R-SCENARIO-MOS-1016.md", "disposition": "D-013"}
+  ],
+  "sourceAdditions": [
+    "sources/jira-sandbox-details/r1/metadata.json",
+    "sources/jira-reports-details/r1/metadata.json",
+    "sources/wiki-241085838/r1/metadata.json",
+    "sources/wiki-241085439/r1/metadata.json"
+  ],
+  "pendingSources": ["sources/jira-monitoring-details/r1/metadata.json"],
+  "limitations": ["Not a source-manifest replacement", "No product planning edits authorized by these dispositions", "No code or runtime audit in these waves", "Source collection and global atomic requirement coverage remain incomplete"]
+}

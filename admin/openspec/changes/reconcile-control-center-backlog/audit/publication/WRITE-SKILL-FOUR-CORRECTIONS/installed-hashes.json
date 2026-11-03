@@ -1,0 +1,30 @@
+{
+  "fix-skill-registry-count-label": {
+    "proposal.md": "6d001bd188bd989f9b3195d774cf41edb6843a4e2cef2fba5148384b0cfbdc8e",
+    "design.md": "33a98bdd044951b5d7c8820d6979d0cd435e11f2387e7211b45b12cb7d6f809e",
+    "specs/skill-catalog-experience/spec.md": "51d01aacacea31d136bd6e0c37cbc603c3f38dd2373ee4d68bd2929bba557fe4",
+    "tasks.md": "7ad92695c9fe50e6127da9e6683dc5f5f3a5ac8983288ac668f554c2c7c0e18c",
+    ".openspec.yaml": "ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b"
+  },
+  "add-skill-domain-sorting": {
+    "proposal.md": "2288c0caae397e7f7b0b64ace87b72e94e4cd7842c73c66a369d24891ce641b1",
+    "design.md": "c259ea7ac8ba88d366e50891fb43e5eb30cfef7e3a7991e1e411efdf142b3bdb",
+    "specs/skill-catalog-experience/spec.md": "593c21cd75b8c1b08b9925179638de7c36502b77fffeca60c9cba9607ba53e74",
+    "tasks.md": "d14835e4277720aacfbe8fa64a077b0c91fd959999324150eb14f1a641a3b96d",
+    ".openspec.yaml": "ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b"
+  },
+  "fix-skill-phrase-application-notice": {
+    "proposal.md": "36b7986f55f36d4f682957b1c8c72dff7a9c92fc1037eb621c761c1315434685",
+    "design.md": "33712a3025e094cfbf4e90025f95d76f5680b5ce5b2e631ad0a50a1760a1a4bb",
+    "specs/skill-training-phrases/spec.md": "ba89406cbd6191cea2f17498695d16880a2c22574800be7c6b176a5df5975cf8",
+    "tasks.md": "09aa698007bd4969679e70cb3d062d5e742cf464466618fa83f84e236f52455a",
+    ".openspec.yaml": "ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b"
+  },
+  "add-skill-readiness-results": {
+    "proposal.md": "25d583fcab03148674bd88874a72a08826a4b6dce5708d8c601ea57f70cda1cd",
+    "design.md": "7ddc9dfd5562bbda2175a0bdd675571b192522a212daf5908c282c4c5864c28a",
+    "specs/skill-checks-training/spec.md": "4582f520d94a9fcab184ea575e5b2dbd94e31194885d75b11c27345c719c7176",
+    "tasks.md": "2d9759ae4c48529bd2a34e41c0696360c39a4743562efbc95fda669d0934128e",
+    ".openspec.yaml": "ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b"
+  }
+}

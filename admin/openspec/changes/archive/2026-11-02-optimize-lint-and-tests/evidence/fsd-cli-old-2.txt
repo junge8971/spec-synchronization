@@ -1,0 +1,11 @@
+✔ FSD boundaries accept public and local imports (3236.504105ms)
+✔ FSD boundaries reject upper layers, sibling slices, private imports, and re-exports (13021.938358ms)
+✔ new FSD slices inherit sibling restrictions automatically (1619.141951ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17946.232543

@@ -1,0 +1,28 @@
+{
+  "id": "245678373",
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/245678373/%D0%A0%D0%BE%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F+%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C+%D0%9C%D0%9F%D0%9C%D0%9C",
+  "retrievedAt": "2026-10-19T09:37:20.568Z",
+  "status": 200,
+  "title": "Ролевая модель МПММ",
+  "version": {
+    "number": 1,
+    "when": "2026-09-25T15:37:42.484+08:00"
+  },
+  "bodyView": "<h1 id=\"id-РолеваямодельМПММ-Описание:\">Описание:</h1><p>Есть Пользователь, ему присваиваются:</p><ul><li data-uuid=\"9dcf3d5d-28d6-4884-ad3d-2646705e913f\">Роли (множество ролей)</li><li data-uuid=\"3eaf7816-8400-46bd-833b-a261335eaf8a\">Области видимости (Множество областей)</li></ul><p>Каждая роль содержит в себе список строк - пермиссий. Пермиссия роли отвечает за определенное действие пользователя в ЦАМ панели.</p><p>Пермисии хранятся в виде справочника в коде, определяются Бизнесом. Например: Создание Навыка, Просмотр Списка Навыков, Удаление Навыка, Редактирование Навыка, Управление Статусом Навыка... </p><p>Каждая область видимости содержит в себе список строк - пермиссий. Пермиссия области видимости отвечает за логирческое разграничения доступа к данным по атрибутивной зависимости.</p><p>То есть можно заложить сравнение атрибутов ID создателя навыка == ID пользователя, но нельзя заложить логику на значения атрибутов: Показывать навыки с ID = [1, 2, 3, 5, 9]/</p><p>Пример пермиссий области видимости: Смотреть Мои Навыки, Смотреть Навыки Моей Команды, Смотреть Все навыки.</p><p>Область видимости отвечает только за доступ к просмотру данных, не регулирует функциональные действия. Не может быть пермиссии области: Редактировать Навыки Моей команды. Для такого нужно в роли иметь пермиссию &quot;Редактирование навыка&quot; и в области видимости иметь перммиссию &quot;Смотреть навыки моей команды&quot;.</p><p><span class=\"confluence-embedded-file-wrapper confluence-embedded-manual-size\"><img class=\"confluence-embedded-image\" draggable=\"false\" width=\"600\" src=\"/download/attachments/245678373/deepseek_mermaid_20260925_e80c91.png?version=1&amp;modificationDate=1790321862548&amp;api=v2\" data-image-src=\"/download/attachments/245678373/deepseek_mermaid_20260925_e80c91.png?version=1&amp;modificationDate=1790321862548&amp;api=v2\" data-unresolved-comment-count=\"0\" data-linked-resource-id=\"245678191\" data-linked-resource-version=\"1\" data-linked-resource-type=\"attachment\" data-linked-resource-default-alias=\"deepseek_mermaid_20260925_e80c91.png\" data-base-url=\"https://wiki.mos-team.ru\" data-linked-resource-content-type=\"image/png\" data-linked-resource-container-id=\"245678373\" data-linked-resource-container-version=\"1\" tabindex=\"0\" alt=\"\"></span> </p>",
+  "redactions": 0,
+  "attachments": {
+    "status": 200,
+    "start": 0,
+    "limit": 100,
+    "size": 1,
+    "next": null,
+    "results": [
+      {
+        "id": "245678191",
+        "title": "deepseek_mermaid_20260925_e80c91.png",
+        "mediaType": "image/png",
+        "download": "/download/attachments/245678373/deepseek_mermaid_20260925_e80c91.png?version=1&modificationDate=1790321862548&api=v2"
+      }
+    ]
+  }
+}

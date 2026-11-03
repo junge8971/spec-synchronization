@@ -1,0 +1,22 @@
+{
+  "pointer": "#/components/schemas/UpdateTeamMemberRequest",
+  "value": {
+    "properties": {
+      "membership_role": {
+        "$ref": "#/components/schemas/TeamMemberRole"
+      },
+      "reason": {
+        "type": "string",
+        "maxLength": 1000,
+        "minLength": 1,
+        "title": "Reason"
+      }
+    },
+    "type": "object",
+    "required": [
+      "membership_role",
+      "reason"
+    ],
+    "title": "UpdateTeamMemberRequest"
+  }
+}

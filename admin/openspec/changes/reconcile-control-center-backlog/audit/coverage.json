@@ -1,0 +1,653 @@
+{
+  "schema": "coverage-linked-populations-v1",
+  "status": "resumed-partial-analysis",
+  "complete": false,
+  "referenceBase": "openspec/changes/reconcile-control-center-backlog/audit",
+  "acceptedEvidenceThrough": "D-095",
+  "resumeEvidence": [
+    {
+      "decision": "D-095",
+      "members": [
+        "MOS-707",
+        "MOS-708",
+        "MOS-709",
+        "MOS-712",
+        "MOS-901",
+        "MOS-910",
+        "MOS-911",
+        "MOS-913",
+        "MOS-914",
+        "MOS-958"
+      ],
+      "review": "reviews/R-D095-TEN.md",
+      "correctionOverlay": "reports/JOIN-MOS-913.review-overlay.md",
+      "disposition": "Nine ACCEPT plus MOS913 accepted with additive correction C1-C3. Ten exact U-to-P partial joins, no delivery/global checklist completion. Four bounded UI/publication correction candidates and consolidated contract questions queued only. Missing registry main spec retained; archived evidence not substituted as current authority."
+    },
+    {
+      "decision": "D-094",
+      "members": [
+        "MOS-717",
+        "MOS-754",
+        "MOS-922",
+        "MOS-1146",
+        "MOS-1397",
+        "MOS-1398",
+        "MOS-1145",
+        "MOS-1027"
+      ],
+      "review": "reviews/R-D094-EIGHT.md",
+      "disposition": "Eight bounded reports accepted without mandatory corrections. All members already P; zero population transitions. Consolidated existing-candidate evidence queued only. MOS1397 is skill-scoped, not a global editor. Mock fidelity observations do not establish backend defects or authorize remediation; read-order deviations retained."
+    },
+    {
+      "decision": "D-093",
+      "members": [
+        "MOS-672",
+        "MOS-673",
+        "MOS-674",
+        "MOS-960",
+        "MOS-961",
+        "MOS-962",
+        "MOS-920",
+        "MOS-923"
+      ],
+      "review": "reviews/R-D093-EIGHT.md",
+      "disposition": "Eight static reports independently accepted. Three shell U-to-P joins only; five implementation reports deepen existing P. Evidence-only candidates queued, no publication or delivery acceptance. MOS-962 item retrieval is 2026-10-16T13:18:06.194Z; .195Z is collection cutoff."
+    },
+    {
+      "decision": "D-092",
+      "members": ["MOS-1322", "MOS-1323"],
+      "review": "reviews/R-D092-OPTIONAL.md",
+      "correctionOverlay": "reports/API-MOS-1322-1323-r2.review-overlay.md",
+      "disposition": "Eight lane reports accepted with mandatory C1-C3 API correction overlay; two exact-body U-to-P joins, planning no-op. Existing security AND and supplementary CRUD semantics preserved. Backend execution remains unknown."
+    },
+    {
+      "decision": "D-091",
+      "members": [
+        "MOS-1166",
+        "MOS-1167",
+        "MOS-1053",
+        "MOS-1150",
+        "MOS-1054",
+        "MOS-1322",
+        "MOS-1323"
+      ],
+      "review": "reviews/R-D091-RECOVERY.md",
+      "disposition": "Seven saved reports independently accepted, six failed runtime statuses retained. Five bounded U-to-P joins; 1322/1323 remain U pending new-body follow-up. New exact source bodies collected after review, not yet analyzed or accepted."
+    },
+    {
+      "decision": "D-090",
+      "members": [
+        "MOS-1411",
+        "MOS-1412",
+        "MOS-1414",
+        "MOS-1419",
+        "MOS-1422",
+        "MOS-1110",
+        "MOS-1164",
+        "MOS-1165"
+      ],
+      "review": "reviews/R-D090-EIGHT.md",
+      "disposition": "Eight independently accepted bounded joins; four dialog correction candidates consolidated under one unpublished owner, sorting no-op, three surface geometry/target questions. No delivery or global gate completion. Second-wave analysts not accepted."
+    },
+    {
+      "decision": "D-089",
+      "members": ["MOS-1051", "MOS-1052", "MOS-945", "MOS-1019"],
+      "review": "publication/WRITE-SKILL-FOUR-CORRECTIONS/review.md",
+      "receipt": "publication/WRITE-SKILL-FOUR-CORRECTIONS/acceptance.md",
+      "disposition": "Four corrective planning owners published, twenty reviewed files and twenty-one unchecked tasks; no population transition or implementation. Future count/sort full-block sync requires no-loss rebase; sort semantic confirmation remains prerequisite."
+    },
+    {
+      "decision": "D-088",
+      "members": [
+        "MOS-675",
+        "MOS-676",
+        "MOS-677",
+        "MOS-1050",
+        "MOS-1051",
+        "MOS-1052",
+        "MOS-701",
+        "MOS-945",
+        "MOS-1022",
+        "MOS-1019",
+        "MOS-1020",
+        "MOS-1021"
+      ],
+      "review": "reviews/R-SKILL-REMAINING-SEVEN.md",
+      "disposition": "Seven reports accepted after exact additive-only publication wording corrections; nine U-to-P and three B-to-P substantive partial joins, not delivery. Originals preserved for three REVISE reports; no historical ledger edits. Corrective planning candidates and unresolved contract/product questions retained."
+    },
+    {
+      "decision": "D-087",
+      "members": [],
+      "review": "publication/WRITE-OPTIONAL-DOMAIN-CORRECTIONS/review.md",
+      "receipt": "publication/WRITE-OPTIONAL-DOMAIN-CORRECTIONS/acceptance.md",
+      "disposition": "D086 seven bounded optional/domain reports accepted; four no-ops, three corrective planning changes independently reviewed and published; fourteen tasks unchecked; capability-level evidence, no Jira population transition"
+    },
+    {
+      "decision": "D-085",
+      "members": ["MOS-1409"],
+      "targetChange": "add-skill-csv-export",
+      "review": "publication/WRITE-SKILL-CSV-EXPORT/review.md",
+      "disposition": "D084 approved frontend scope; native new change independently accepted with twelve unchecked tasks and explicit API prerequisites; no feature completion or population transition"
+    },
+    {
+      "decision": "D-083",
+      "members": ["MOS-1409"],
+      "reports": [
+        "reports/REQ-MOS-1409.md",
+        "reports/API-MOS-1409.md",
+        "reports/SPEC-MOS-1409.md",
+        "reports/SPEC-MOS-1409.recovery.md",
+        "reports/IMPL-MOS-1409.md"
+      ],
+      "review": "reviews/R-MOS-1409.md",
+      "disposition": "nineteen backend requirements mapped to saved-contract absence, bounded ownership/code findings; keep local plans, question frontend scope; U-to-P partial evidence, not delivery"
+    },
+    {
+      "decision": "D-082",
+      "members": ["MOS-1025", "MOS-1026", "MOS-1030"],
+      "reports": [
+        "reports/IMPL-SKILL-MONITORING.md",
+        "reports/IMPL-SKILL-OPERATIONS-INFO.md",
+        "reports/IMPL-SKILL-RESULT-ANALYTICS.md"
+      ],
+      "review": "reviews/R-SKILL-OBSERVABILITY-BATCH.md",
+      "receipt": "publication/WRITE-SKILL-OPERATIONS/acceptance.md",
+      "disposition": "three implementation reports accepted; 1025/1030 planning no-op, 1026 three-file correction published; MOS1030 boundary-only becomes substantive partial implementation evidence, not full coverage or feature acceptance"
+    },
+    {
+      "decision": "D-081",
+      "members": ["MOS-1018", "MOS-1023", "MOS-1031"],
+      "reports": [
+        "reports/IMPL-SKILL-PHRASE-CONFLICTS.md",
+        "reports/IMPL-SKILL-ENVIRONMENT-TOKENS.md",
+        "reports/IMPL-SKILL-AUDIT-HISTORY.md"
+      ],
+      "review": "reviews/R-SKILL-IMPLEMENTATION-BATCH.md",
+      "receipt": "publication/WRITE-SKILL-TOKEN-HISTORY/acceptance.md",
+      "disposition": "D-080 accepted three bounded implementation reports; 1018 planning no-op, 1023/1031 five-file documentary refinement published after exact patch review; no feature acceptance or population transition"
+    },
+    {
+      "decision": "D-079",
+      "members": ["MOS-1015", "MOS-919"],
+      "receipt": "publication/WRITE-REPORTS-PLANS/acceptance.md",
+      "review": "publication/WRITE-REPORTS-PLANS/review.md",
+      "disposition": "six owner planning files updated with exact independently reviewed corrections; wiki versions unchanged; all feature tasks remain open; no population transition"
+    },
+    {
+      "decision": "D-078",
+      "members": ["MOS-1015", "MOS-919", "MOS-1016"],
+      "reports": [
+        "reports/IMPL-REPORT-CONSTRUCTOR.md",
+        "reports/IMPL-REPORT-CSV.md",
+        "reports/IMPL-REPORT-SCHEDULING.md"
+      ],
+      "review": "reviews/R-REPORTS-IMPLEMENTATION-BATCH.md",
+      "disposition": "bounded static implementation evidence accepted after exact CSV evidence correction; existing tasks stay open; MOS1015/919 documentary corrections pending, MOS1016 planning no-op; no runtime acceptance or population transition"
+    },
+    {
+      "decision": "D-077",
+      "members": ["MOS-1251", "MOS-1256", "MOS-1258", "MOS-1260"],
+      "reports": [
+        "reports/API-FEEDBACK-READ-EXPORT.md",
+        "reports/IMPL-FEEDBACK-READ-EXPORT.md",
+        "reports/IMPL-FEEDBACK-EDITOR-LIFECYCLE.md"
+      ],
+      "review": "reviews/R-FEEDBACK-REMAINING-EVIDENCE.md",
+      "disposition": "existing plans cover gaps; no further planning changes; static mock/test evidence and saved-contract comparison, not deployment"
+    }
+  ],
+  "consolidation": "reports/FINAL-COVERAGE.md",
+  "exactPopulationSourceMap": "reports/FINAL-COVERAGE.md#key-code--compact-machine-readable-coverage-candidate",
+  "populationResolution": "The JSON source map in FINAL-COVERAGE defines exact hashed table rows, columns, all item identities, evidence dictionaries and additive overlays. This linked index does not duplicate or rewrite those historical rows.",
+  "members": {
+    "source": "reports/G2-JIRA-MEMBER-JOINS.md",
+    "sha256": "dc9b199c2a9500b2ff1857de1feaec9282e8130fa1b78720f551913907618b44",
+    "directLines": [130, 286],
+    "nestedLines": [296, 311],
+    "directCount": 157,
+    "nestedCount": 16,
+    "total": 173,
+    "historicalCounts": { "P": 47, "B": 7, "U": 119 },
+    "overlays": [
+      {
+        "id": "MOS-707",
+        "from": "U",
+        "to": "P",
+        "decision": "D-095",
+        "report": "reports/JOIN-MOS-707.md",
+        "review": "reviews/R-D095-TEN.md"
+      },
+      {
+        "id": "MOS-708",
+        "from": "U",
+        "to": "P",
+        "decision": "D-095",
+        "report": "reports/JOIN-MOS-708.md",
+        "review": "reviews/R-D095-TEN.md"
+      },
+      {
+        "id": "MOS-709",
+        "from": "U",
+        "to": "P",
+        "decision": "D-095",
+        "report": "reports/JOIN-MOS-709.md",
+        "review": "reviews/R-D095-TEN.md"
+      },
+      {
+        "id": "MOS-712",
+        "from": "U",
+        "to": "P",
+        "decision": "D-095",
+        "report": "reports/API-MOS-712.md",
+        "review": "reviews/R-D095-TEN.md"
+      },
+      {
+        "id": "MOS-901",
+        "from": "U",
+        "to": "P",
+        "decision": "D-095",
+        "report": "reports/JOIN-MOS-901.md",
+        "review": "reviews/R-D095-TEN.md"
+      },
+      {
+        "id": "MOS-910",
+        "from": "U",
+        "to": "P",
+        "decision": "D-095",
+        "report": "reports/JOIN-MOS-910.md",
+        "review": "reviews/R-D095-TEN.md"
+      },
+      {
+        "id": "MOS-911",
+        "from": "U",
+        "to": "P",
+        "decision": "D-095",
+        "report": "reports/JOIN-MOS-911.md",
+        "review": "reviews/R-D095-TEN.md"
+      },
+      {
+        "id": "MOS-913",
+        "from": "U",
+        "to": "P",
+        "decision": "D-095",
+        "report": "reports/JOIN-MOS-913.md",
+        "review": "reviews/R-D095-TEN.md",
+        "correctionOverlay": "reports/JOIN-MOS-913.review-overlay.md"
+      },
+      {
+        "id": "MOS-914",
+        "from": "U",
+        "to": "P",
+        "decision": "D-095",
+        "report": "reports/JOIN-MOS-914.md",
+        "review": "reviews/R-D095-TEN.md"
+      },
+      {
+        "id": "MOS-958",
+        "from": "U",
+        "to": "P",
+        "decision": "D-095",
+        "report": "reports/JOIN-MOS-958.md",
+        "review": "reviews/R-D095-TEN.md"
+      },
+      {
+        "id": "MOS-672",
+        "from": "U",
+        "to": "P",
+        "decision": "D-093",
+        "report": "reports/JOIN-MOS-672.md",
+        "review": "reviews/R-D093-EIGHT.md"
+      },
+      {
+        "id": "MOS-673",
+        "from": "U",
+        "to": "P",
+        "decision": "D-093",
+        "report": "reports/JOIN-MOS-673.md",
+        "review": "reviews/R-D093-EIGHT.md"
+      },
+      {
+        "id": "MOS-674",
+        "from": "U",
+        "to": "P",
+        "decision": "D-093",
+        "report": "reports/JOIN-MOS-674.md",
+        "review": "reviews/R-D093-EIGHT.md"
+      },
+      {
+        "id": "MOS-1322",
+        "from": "U",
+        "to": "P",
+        "decision": "D-092",
+        "report": "reports/REQ-MOS-1322-r2.md",
+        "review": "reviews/R-D092-OPTIONAL.md",
+        "correctionOverlay": "reports/API-MOS-1322-1323-r2.review-overlay.md"
+      },
+      {
+        "id": "MOS-1323",
+        "from": "U",
+        "to": "P",
+        "decision": "D-092",
+        "report": "reports/REQ-MOS-1323-r2.md",
+        "review": "reviews/R-D092-OPTIONAL.md",
+        "correctionOverlay": "reports/API-MOS-1322-1323-r2.review-overlay.md"
+      },
+      {
+        "id": "MOS-1166",
+        "from": "U",
+        "to": "P",
+        "decision": "D-091",
+        "report": "reports/JOIN-MOS-1166.md",
+        "review": "reviews/R-D091-RECOVERY.md"
+      },
+      {
+        "id": "MOS-1167",
+        "from": "U",
+        "to": "P",
+        "decision": "D-091",
+        "report": "reports/JOIN-MOS-1167.md",
+        "review": "reviews/R-D091-RECOVERY.md"
+      },
+      {
+        "id": "MOS-1053",
+        "from": "U",
+        "to": "P",
+        "decision": "D-091",
+        "report": "reports/JOIN-MOS-1053.md",
+        "review": "reviews/R-D091-RECOVERY.md"
+      },
+      {
+        "id": "MOS-1150",
+        "from": "U",
+        "to": "P",
+        "decision": "D-091",
+        "report": "reports/JOIN-MOS-1150.md",
+        "review": "reviews/R-D091-RECOVERY.md"
+      },
+      {
+        "id": "MOS-1054",
+        "from": "U",
+        "to": "P",
+        "decision": "D-091",
+        "report": "reports/JOIN-MOS-1054.md",
+        "review": "reviews/R-D091-RECOVERY.md"
+      },
+      {
+        "id": "MOS-1411",
+        "from": "U",
+        "to": "P",
+        "decision": "D-090",
+        "report": "reports/JOIN-MOS-1411.md",
+        "review": "reviews/R-D090-EIGHT.md"
+      },
+      {
+        "id": "MOS-1412",
+        "from": "U",
+        "to": "P",
+        "decision": "D-090",
+        "report": "reports/JOIN-MOS-1412.md",
+        "review": "reviews/R-D090-EIGHT.md"
+      },
+      {
+        "id": "MOS-1414",
+        "from": "U",
+        "to": "P",
+        "decision": "D-090",
+        "report": "reports/JOIN-MOS-1414.md",
+        "review": "reviews/R-D090-EIGHT.md"
+      },
+      {
+        "id": "MOS-1419",
+        "from": "U",
+        "to": "P",
+        "decision": "D-090",
+        "report": "reports/JOIN-MOS-1419.md",
+        "review": "reviews/R-D090-EIGHT.md"
+      },
+      {
+        "id": "MOS-1422",
+        "from": "U",
+        "to": "P",
+        "decision": "D-090",
+        "report": "reports/JOIN-MOS-1422.md",
+        "review": "reviews/R-D090-EIGHT.md"
+      },
+      {
+        "id": "MOS-1110",
+        "from": "U",
+        "to": "P",
+        "decision": "D-090",
+        "report": "reports/JOIN-MOS-1110.md",
+        "review": "reviews/R-D090-EIGHT.md"
+      },
+      {
+        "id": "MOS-1164",
+        "from": "U",
+        "to": "P",
+        "decision": "D-090",
+        "report": "reports/JOIN-MOS-1164.md",
+        "review": "reviews/R-D090-EIGHT.md"
+      },
+      {
+        "id": "MOS-1165",
+        "from": "U",
+        "to": "P",
+        "decision": "D-090",
+        "report": "reports/JOIN-MOS-1165.md",
+        "review": "reviews/R-D090-EIGHT.md"
+      },
+      {
+        "id": "MOS-675",
+        "from": "U",
+        "to": "P",
+        "decision": "D-088",
+        "report": "reports/JOIN-SKILL-REGISTRY.md",
+        "review": "reviews/R-SKILL-REMAINING-SEVEN.md"
+      },
+      {
+        "id": "MOS-676",
+        "from": "U",
+        "to": "P",
+        "decision": "D-088",
+        "report": "reports/JOIN-SKILL-REGISTRY.md",
+        "review": "reviews/R-SKILL-REMAINING-SEVEN.md"
+      },
+      {
+        "id": "MOS-677",
+        "from": "U",
+        "to": "P",
+        "decision": "D-088",
+        "report": "reports/JOIN-SKILL-REGISTRY.md",
+        "review": "reviews/R-SKILL-REMAINING-SEVEN.md"
+      },
+      {
+        "id": "MOS-1050",
+        "from": "U",
+        "to": "P",
+        "decision": "D-088",
+        "report": "reports/JOIN-SKILL-REGISTRY.md",
+        "review": "reviews/R-SKILL-REMAINING-SEVEN.md",
+        "scope": "independent description and static comparison; geometry unresolved"
+      },
+      {
+        "id": "MOS-1051",
+        "from": "U",
+        "to": "P",
+        "decision": "D-088",
+        "report": "reports/JOIN-SKILL-REGISTRY.md",
+        "review": "reviews/R-SKILL-REMAINING-SEVEN.md"
+      },
+      {
+        "id": "MOS-1052",
+        "from": "U",
+        "to": "P",
+        "decision": "D-088",
+        "report": "reports/JOIN-SKILL-REGISTRY.md",
+        "review": "reviews/R-SKILL-REMAINING-SEVEN.md"
+      },
+      {
+        "id": "MOS-701",
+        "from": "U",
+        "to": "P",
+        "decision": "D-088",
+        "report": "reports/JOIN-SKILL-CONTRACTS.md",
+        "review": "reviews/R-SKILL-REMAINING-SEVEN.md"
+      },
+      {
+        "id": "MOS-945",
+        "from": "U",
+        "to": "P",
+        "decision": "D-088",
+        "report": "reports/JOIN-SKILL-PHRASES.md",
+        "review": "reviews/R-SKILL-REMAINING-SEVEN.md"
+      },
+      {
+        "id": "MOS-1022",
+        "from": "U",
+        "to": "P",
+        "decision": "D-088",
+        "report": "reports/JOIN-SKILL-IMPLEMENTATION.md",
+        "review": "reviews/R-SKILL-REMAINING-SEVEN.md"
+      },
+      {
+        "id": "MOS-1019",
+        "from": "B",
+        "to": "P",
+        "decision": "D-088",
+        "report": "reports/JOIN-SKILL-CHECKS.md",
+        "review": "reviews/R-SKILL-REMAINING-SEVEN.md"
+      },
+      {
+        "id": "MOS-1020",
+        "from": "B",
+        "to": "P",
+        "decision": "D-088",
+        "report": "reports/JOIN-SKILL-REVIEW.md",
+        "review": "reviews/R-SKILL-REMAINING-SEVEN.md"
+      },
+      {
+        "id": "MOS-1021",
+        "from": "B",
+        "to": "P",
+        "decision": "D-088",
+        "report": "reports/JOIN-SKILL-ROLLOUT.md",
+        "review": "reviews/R-SKILL-REMAINING-SEVEN.md"
+      },
+      {
+        "id": "MOS-1409",
+        "from": "U",
+        "to": "P",
+        "decision": "D-083",
+        "report": "reports/REQ-MOS-1409.md",
+        "review": "reviews/R-MOS-1409.md",
+        "scope": "bounded four-lane reconciliation; frontend ownership remains question"
+      },
+      {
+        "id": "MOS-1030",
+        "from": "B",
+        "to": "P",
+        "decision": "D-082",
+        "report": "reports/IMPL-SKILL-RESULT-ANALYTICS.md",
+        "review": "reviews/R-SKILL-OBSERVABILITY-BATCH.md",
+        "scope": "bounded implementation/code/test/task evidence; requirement/API completeness not certified"
+      },
+      { "id": "MOS-906", "from": "U", "to": "P", "decision": "D-063" },
+      { "id": "MOS-1044", "from": "B", "to": "P", "decision": "D-063" },
+      { "id": "MOS-1254", "from": "U", "to": "P", "decision": "D-064" },
+      { "id": "MOS-1255", "from": "U", "to": "P", "decision": "D-064" },
+      { "id": "MOS-1257", "from": "U", "to": "P", "decision": "D-064" },
+      { "id": "MOS-1259", "from": "U", "to": "P", "decision": "D-064" },
+      {
+        "id": "MOS-1256",
+        "from": "U",
+        "to": "P",
+        "decision": "D-071",
+        "report": "reports/REQ-G2-MOS-1256.md",
+        "review": "reviews/R-G2-FEEDBACK-REQUIREMENTS-RESUME.md",
+        "scope": "requirements only"
+      },
+      {
+        "id": "MOS-1260",
+        "from": "U",
+        "to": "P",
+        "decision": "D-071",
+        "report": "reports/REQ-G2-MOS-1260.md",
+        "review": "reviews/R-G2-FEEDBACK-REQUIREMENTS-RESUME.md",
+        "scope": "requirements only"
+      },
+      {
+        "id": "MOS-1251",
+        "from": "U",
+        "to": "P",
+        "decision": "D-074",
+        "report": "reports/REQ-G2-MOS-1251.md",
+        "review": "reviews/R-G2-FEEDBACK-EDITOR-CONDITIONS.md",
+        "scope": "requirements only"
+      },
+      {
+        "id": "MOS-1258",
+        "from": "B",
+        "to": "P",
+        "decision": "D-074",
+        "report": "reports/REQ-G2-MOS-1258.md",
+        "review": "reviews/R-G2-FEEDBACK-EDITOR-CONDITIONS.md",
+        "scope": "requirements only"
+      }
+    ],
+    "currentCounts": { "P": 99, "B": 1, "U": 73 },
+    "stateMeaning": {
+      "P": "bounded substantive partial evidence",
+      "B": "boundary-only partial evidence, NOT blocked",
+      "U": "unexamined or unresolved analytical joins, NOT absent implementation or approved deferral"
+    },
+    "additionalEvidence": "coverage-partial-r46.json#/additionalEvidence",
+    "publicationOverlay": "publication/WRITE-G2-FEEDBACK/acceptance.json"
+  },
+  "modules": {
+    "source": "inventory-acceptance.json#/accepted",
+    "count": 26,
+    "disposition": "membership accepted; full semantic analysis not certified"
+  },
+  "capabilities": {
+    "source": "reports/G2-MAIN-CAPABILITY-JOINS.md:87-126",
+    "count": 40,
+    "sha256": "58912cbe79aeaa7b72273215dc84f26c9a1fcd86366de04b189893ec87f036b0",
+    "ownershipOverlays": ["code-quality-gates", "documentation-search", "dialog-category-addition"],
+    "overlayDecision": "D-063",
+    "completeLaneSetsCertified": false
+  },
+  "activeChanges": {
+    "baselineSource": "inventory.json#/local",
+    "baselineCount": 21,
+    "acceptedAddition": "mos-909-restore-approved-lifecycle-actions",
+    "additionDecision": "D-021",
+    "acceptedEventCount": 30,
+    "additionalAcceptedChanges": [
+      { "name": "fix-skill-registry-count-label", "decision": "D-089", "authority": "D-088" },
+      { "name": "add-skill-domain-sorting", "decision": "D-089", "authority": "D-088" },
+      { "name": "fix-skill-phrase-application-notice", "decision": "D-089", "authority": "D-088" },
+      { "name": "add-skill-readiness-results", "decision": "D-089", "authority": "D-088" },
+      { "name": "add-skill-csv-export", "decision": "D-085", "authority": "D-084" },
+      {
+        "name": "fix-knowledge-base-export-limit-feedback",
+        "decision": "D-087",
+        "authority": "D-086"
+      },
+      { "name": "clarify-ab-testing-sample-size", "decision": "D-087", "authority": "D-086" },
+      {
+        "name": "fix-skill-domain-zone-read-compatibility",
+        "decision": "D-087",
+        "authority": "D-086"
+      }
+    ],
+    "identityAndEvidenceRows": "reports/FINAL-COVERAGE.md JSON activeChangePopulation.rows",
+    "currentFilesystemRecensus": false
+  },
+  "limits": [
+    "Not a globally normalized requirement-to-API-to-spec-to-code/test-to-task graph",
+    "No global G2-G5 completion",
+    "External freshness unverified; source cutoff packet-specific",
+    "Source availability limits and original REVISE/failure provenance retained",
+    "No deployment or feature completion certified"
+  ]
+}

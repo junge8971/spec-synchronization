@@ -1,0 +1,51 @@
+{
+  "pointer": "#/components/schemas/ErrorItem",
+  "value": {
+    "properties": {
+      "field": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Field"
+      },
+      "code": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Code"
+      },
+      "message": {
+        "type": "string",
+        "title": "Message"
+      },
+      "details": {
+        "anyOf": [
+          {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Details"
+      }
+    },
+    "type": "object",
+    "required": [
+      "message"
+    ],
+    "title": "ErrorItem",
+    "description": "Одна ошибка в поле errors."
+  }
+}

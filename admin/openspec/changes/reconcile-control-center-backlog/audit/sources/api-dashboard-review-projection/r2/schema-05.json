@@ -1,0 +1,13 @@
+{
+  "pointer": "#/components/schemas/DeltaUnit",
+  "value": {
+    "type": "string",
+    "enum": [
+      "percent",
+      "percentage_points",
+      "seconds",
+      "score"
+    ],
+    "title": "DeltaUnit"
+  }
+}

@@ -1,0 +1,13 @@
+✔ accepts public APIs, local imports, and type-only imports in an isolated graph (676.322044ms)
+✔ whole-project analysis ignores only the original generated roots (661.104314ms)
+✔ rejects runtime imports of unresolved generated router types (1332.267884ms)
+✔ rechecks an unchanged consumer when a target moves behind its public API (663.490053ms)
+✔ rejects FSD violations through aliases, relative paths and type-only re-exports (686.422414ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4078.535575

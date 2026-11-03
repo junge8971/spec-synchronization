@@ -22,6 +22,6 @@ MOS-1031: история карточки должна читаться из а�
 ## Impact
 
 - `app/widgets/skill-details/ui/tabs/history-tab.tsx`, предметный API чтения аудита с публичным интерфейсом.
-- **BLOCKED API:** в `docs/api/contracts/openapi.json` нет Query API аудита; `docs/api/contracts/audit.md` подтверждает отсутствие контракта.
+- **BLOCKED API/integration:** в сохранённом `docs/api/contracts/openapi.json` нет Query API аудита, а подключённого frontend-reader пока нет. Отдельный документальный контракт сервиса аудита зафиксирован в `../reconcile-control-center-backlog/audit/reports/DELTA-AUDIT-SERVICE-CONTRACT.md` и принят решением D-050; это не согласование его браузерной интеграции. Ранее указанный `docs/api/contracts/audit.md` отсутствует и не является доказательством отсутствия сервиса.
 - Требуются wire-значение типа навыка, фильтры, порядок, пагинация и правила чувствительных подробностей. Не требовать завершения всех мутаций для запуска чтения истории.
 - Самостоятельная приёмка MOS-1031 на одноимённых и переименованных сущностях.

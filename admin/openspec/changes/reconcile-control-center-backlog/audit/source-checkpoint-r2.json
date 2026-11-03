@@ -1,0 +1,166 @@
+{
+  "revision": 2,
+  "kind": "supplemental-saved-source-checkpoint",
+  "prior": "source-checkpoint-r1.json",
+  "entries": [
+    {
+      "source": "wiki-241082009/r2",
+      "content": "sources/wiki-241082009/r2/content.json",
+      "metadata": "sources/wiki-241082009/r2/metadata.json",
+      "sha256": "13ff11a35b27fe17db263039ba4c9a2b5c335728bad7615d06aed3d94ab2d86b",
+      "bytes": 56040,
+      "retrievedAt": "2026-10-16T12:28:15.837Z",
+      "hashVerified": true,
+      "attachments": {
+        "file": "attachments.json",
+        "sha256": "70590629831676a0bfde3fc46438aaeb623b3915746bbab62c1221b13e3fb960",
+        "count": 0,
+        "next": null
+      },
+      "comments": null
+    },
+    {
+      "source": "wiki-241097511/r2",
+      "content": "sources/wiki-241097511/r2/content.json",
+      "metadata": "sources/wiki-241097511/r2/metadata.json",
+      "sha256": "710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47",
+      "bytes": 73058,
+      "retrievedAt": "2026-10-16T12:37:03.295Z",
+      "hashVerified": true,
+      "attachments": {
+        "file": "attachments.json",
+        "sha256": "dce4311f74a29968dec10bca60a9caa34892ddc093647a099efe9a893d121812",
+        "count": 0,
+        "next": null
+      },
+      "comments": null
+    },
+    {
+      "source": "jira-shell-details/r1",
+      "content": "sources/jira-shell-details/r1/content.json",
+      "metadata": "sources/jira-shell-details/r1/metadata.json",
+      "sha256": "30caeb33afa1ae7f9be6c55b9157687174e3bd786dd73a54693e78979b4deef4",
+      "bytes": 14311,
+      "retrievedAt": "2026-10-16T12:45:22.199Z",
+      "hashVerified": true,
+      "attachments": null,
+      "comments": [
+        {
+          "key": "MOS-624",
+          "count": 0,
+          "total": 0,
+          "complete": true
+        },
+        {
+          "key": "MOS-672",
+          "count": 1,
+          "total": 1,
+          "complete": true
+        },
+        {
+          "key": "MOS-673",
+          "count": 1,
+          "total": 1,
+          "complete": true
+        },
+        {
+          "key": "MOS-674",
+          "count": 1,
+          "total": 1,
+          "complete": true
+        },
+        {
+          "key": "MOS-904",
+          "count": 2,
+          "total": 2,
+          "complete": true
+        },
+        {
+          "key": "MOS-905",
+          "count": 2,
+          "total": 2,
+          "complete": true
+        }
+      ]
+    },
+    {
+      "source": "jira-operations-details/r1",
+      "content": "sources/jira-operations-details/r1/content.json",
+      "metadata": "sources/jira-operations-details/r1/metadata.json",
+      "sha256": "ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f",
+      "bytes": 9933,
+      "retrievedAt": "2026-10-16T13:02:57.872Z",
+      "hashVerified": true,
+      "attachments": null,
+      "comments": [
+        {
+          "key": "MOS-717",
+          "count": 2,
+          "total": 2
+        },
+        {
+          "key": "MOS-754",
+          "count": 0,
+          "total": 0
+        },
+        {
+          "key": "MOS-920",
+          "count": 0,
+          "total": 0
+        },
+        {
+          "key": "MOS-922",
+          "count": 0,
+          "total": 0
+        },
+        {
+          "key": "MOS-923",
+          "count": 0,
+          "total": 0
+        }
+      ]
+    },
+    {
+      "source": "wiki-241088180/r1",
+      "content": "sources/wiki-241088180/r1/content.json",
+      "metadata": "sources/wiki-241088180/r1/metadata.json",
+      "sha256": "e1d5f5320e05d1e65354f2523341cab788adfacac8ac5acf6aaabf31003c18fc",
+      "bytes": 36471,
+      "retrievedAt": "2026-10-16T13:03:14.658Z",
+      "hashVerified": true,
+      "attachments": {
+        "status": 200,
+        "count": 0,
+        "next": null
+      },
+      "comments": null
+    },
+    {
+      "source": "wiki-241092242/r1",
+      "content": "sources/wiki-241092242/r1/content.json",
+      "metadata": "sources/wiki-241092242/r1/metadata.json",
+      "sha256": "e7b78965be979f2bd450b25881574cf7e8b94cf424be5d052bb2be9df1995158",
+      "bytes": 68316,
+      "retrievedAt": "2026-10-16T13:03:14.883Z",
+      "hashVerified": true,
+      "attachments": {
+        "status": 200,
+        "count": 0,
+        "next": null
+      },
+      "comments": null
+    }
+  ],
+  "limitations": [
+    "Not global source completeness or G1 acceptance",
+    "Historical failed access results preserved; later successes do not explain all previous failures",
+    "External origin not independently reverified by local hash check",
+    "Attachment bodies/custom fields and most remaining issue detail sources still incomplete"
+  ],
+  "progress": {
+    "completed": 6,
+    "total": 28
+  },
+  "publicationReceipt": "publication/WRITE-MOS-1018/acceptance.json",
+  "decisions": "decisions.md"
+}

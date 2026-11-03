@@ -1,0 +1,21 @@
+# Reports remaining implementation evidence — three scenario owners
+
+Status: assigned. Three independent Astra low read-only analysts; parent owns all project writes/acceptance. One final independent batch review, no per-finding micro-waves. HEAD bc0d9800f25a90989b9c73c76f91996f8300f1d3. D-076 simplified workflow, D-077 Feedback batch complete. No code/API changes or execution authorized. Outputs runtime-bound impl-constructor.md, impl-report-csv.md, impl-scheduling.md; eventual reports/IMPL-REPORT-CONSTRUCTOR.md, IMPL-REPORT-CSV.md, IMPL-REPORT-SCHEDULING.md.
+
+Common evidence A=openspec/changes/reconcile-control-center-backlog/audit. Reuse accepted reports/SCENARIO-MOS-{1015,919,1016}.md and corresponding reviews/R-SCENARIO-MOS-*.md for respective unit; shared DELTA-REPORTS-ROOT-DOCS.md only relevant clauses; accepted IMPL-G2-MOS-916.md and its review for mounted report/template boundary. Do not re-extract Jira/wiki, repeat template audit, or reclassify approved blocked continuation as current implementation. Each unit reads its complete current owner proposal/design/spec/tasks and maps only own scenario to actual connected code/tests. No audit-wide history/inventory. Exact missing paths require bounded discovery, not assumptions.
+
+## IMPL-REPORT-CONSTRUCTOR
+
+Scope MOS-1015 constructor: current selected report/parameters/draft/launch/result behavior, not template catalog or CSV/scheduler ownership. Owner openspec/changes/mos-1015-report-constructor/. Start app/routes/reports.tsx, app/routes.ts and application route descriptors; follow only mounted report consumers/related entity helpers/test assertions. Reuse known placeholder boundary after narrow ref check. Distinguish actual mounted UI, disconnected helpers, mock/transport and test-source assertions. Preserve richer parameter/API/activation gates from accepted corrected SCENARIO-MOS-1015; do not invent supported report types or execute launches. Output impl-constructor.md.
+
+## IMPL-REPORT-CSV
+
+Scope MOS-919 report CSV only, not Feedback/dialog exports. Owner openspec/changes/mos-919-report-csv-export/. Read accepted SCENARIO-MOS-919/review and full owner plan. Inspect exact report export wiring, any shared download helpers actually used, mocks and written tests. Start mounted reports route; bounded search report/export/reporting in app,mocks and tests. Do not count generic helper availability or Feedback CSV as delivered report export. Separate published contract/retained documentary evidence from absent code/unverified runtime, preserve agreed endpoint/header/parameter gates. Output impl-report-csv.md.
+
+## IMPL-REPORT-SCHEDULING
+
+Scope MOS-1016 scheduling only. Owner openspec/changes/mos-1016-report-template-scheduling/. Read accepted SCENARIO-MOS-1016/review and full owner plan. Inspect mounted scheduling UI/model/persistence/tests only, distinguishing stored config/draft from real scheduler execution. Start report routes and bounded schedule/template references; do not confuse maintenance windows, assistant module schedules or optional experiments with report scheduling. Reuse known template boundary without re-audit. Preserve missing scheduler/API/activation constraints; do not infer release from mocks. Output impl-scheduling.md.
+
+## Acceptance and stops
+
+Compact evidence table: requirement/scenario→actual connected code or bounded absence→existing assertions→existing task/gate; exact file/line/ref and search limits, actual read scope. Conclude keep/update/question only where supported. Missing implementation already planned is not a reason for duplicate backlog. No frontend/API ownership or deferred scope changes without explicit product decision. No network/browser/business calls, source execution, tests/build/E2E, credentials, code/config/contracts edits, project writes or nested agents. Read/search and read-only hashes/diff permitted; parent-attributed hashes acceptable when tool unavailable. Stop affected conclusion on material missing input or scope conflict, ask parent; complete supported parts. Nonempty final response and configured report. Review source correctness once for whole batch; parent decides integration, no feature/global checkbox closure by static audit.

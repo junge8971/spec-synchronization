@@ -1,0 +1,11 @@
+{
+  "sourceId": "jira-feedback",
+  "revision": 1,
+  "retrievedAt": "2026-10-16T11:17:16.813Z",
+  "url": "https://task.mos-team.ru/browse/MOS-1246",
+  "locator": "same-origin GET /rest/api/2/issue/{key}?fields=summary,description,issuetype,status,subtasks,parent,updated; exact keys in content",
+  "sha256": "890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685",
+  "format": "selected-field-extraction",
+  "capture": "Parsed the exact JSON payload of the authorized browser tool response from the current parent session; no other session content copied.",
+  "limitations": "Does not include comments, attachments or custom acceptance fields; no membership inferred from empty standard parent field; membership from saved hierarchy."
+}

@@ -1,0 +1,75 @@
+{
+  "source": "openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241079770/r1/content.json",
+  "sourceSha256": "f6f79334c9db061dade15aba84f0cb0257127775d67f34c28a270c4f4eb209ca",
+  "attribution": "Parent parsed canonical envelope; fields preserve complete original values at /<field>; equality checked by parent, not independent reviewer. bodyView omitted; read all ordered chunks instead.",
+  "fields": {
+    "id": "241079770",
+    "title": "API-контракт входа и управления сессией",
+    "url": "https://wiki.mos-team.ru/spaces/KR/pages/241079770/API-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82+%D0%B2%D1%85%D0%BE%D0%B4%D0%B0+%D0%B8+%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D1%81%D0%B5%D1%81%D1%81%D0%B8%D0%B5%D0%B9",
+    "endpoint": "/rest/api/content/241079770?expand=body.view,version",
+    "status": 200,
+    "retrievedAt": "2026-10-19T14:43:53.276Z",
+    "version": 2,
+    "versionWhen": "2026-09-07T22:22:07.811+08:00",
+    "redactions": 0,
+    "attachments": {
+      "status": 200,
+      "start": 0,
+      "limit": 100,
+      "size": 4,
+      "next": null,
+      "results": [
+        {
+          "id": "241079265",
+          "title": "image-2026-9-7_16-29-13-1.png",
+          "mediaType": "image/png",
+          "links": {
+            "download": "/download/attachments/241079770/image-2026-9-7_16-29-13-1.png?version=1&modificationDate=1788790742037&api=v2",
+            "thumbnail": "/download/thumbnails/241079770/image-2026-9-7_16-29-13-1.png?api=v2",
+            "webui": "/spaces/KR/pages/241079770/API-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82+%D0%B2%D1%85%D0%BE%D0%B4%D0%B0+%D0%B8+%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D1%81%D0%B5%D1%81%D1%81%D0%B8%D0%B5%D0%B9?preview=%2F241079770%2F241079265%2Fimage-2026-9-7_16-29-13-1.png",
+            "self": "https://wiki.mos-team.ru/rest/api/content/241079265"
+          }
+        },
+        {
+          "id": "241079264",
+          "title": "image-2026-9-7_16-29-13.png",
+          "mediaType": "image/png",
+          "links": {
+            "download": "/download/attachments/241079770/image-2026-9-7_16-29-13.png?version=1&modificationDate=1788790742122&api=v2",
+            "thumbnail": "/download/thumbnails/241079770/image-2026-9-7_16-29-13.png?api=v2",
+            "webui": "/spaces/KR/pages/241079770/API-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82+%D0%B2%D1%85%D0%BE%D0%B4%D0%B0+%D0%B8+%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D1%81%D0%B5%D1%81%D1%81%D0%B8%D0%B5%D0%B9?preview=%2F241079770%2F241079264%2Fimage-2026-9-7_16-29-13.png",
+            "self": "https://wiki.mos-team.ru/rest/api/content/241079264"
+          }
+        },
+        {
+          "id": "241078912",
+          "title": "image-2026-9-7_16-9-47-1.png",
+          "mediaType": "image/png",
+          "links": {
+            "download": "/download/attachments/241079770/image-2026-9-7_16-9-47-1.png?version=1&modificationDate=1788790742162&api=v2",
+            "thumbnail": "/download/thumbnails/241079770/image-2026-9-7_16-9-47-1.png?api=v2",
+            "webui": "/spaces/KR/pages/241079770/API-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82+%D0%B2%D1%85%D0%BE%D0%B4%D0%B0+%D0%B8+%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D1%81%D0%B5%D1%81%D1%81%D0%B8%D0%B5%D0%B9?preview=%2F241079770%2F241078912%2Fimage-2026-9-7_16-9-47-1.png",
+            "self": "https://wiki.mos-team.ru/rest/api/content/241078912"
+          }
+        },
+        {
+          "id": "241078911",
+          "title": "image-2026-9-7_16-9-47.png",
+          "mediaType": "image/png",
+          "links": {
+            "download": "/download/attachments/241079770/image-2026-9-7_16-9-47.png?version=1&modificationDate=1788790742198&api=v2",
+            "thumbnail": "/download/thumbnails/241079770/image-2026-9-7_16-9-47.png?api=v2",
+            "webui": "/spaces/KR/pages/241079770/API-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82+%D0%B2%D1%85%D0%BE%D0%B4%D0%B0+%D0%B8+%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D1%81%D0%B5%D1%81%D1%81%D0%B8%D0%B5%D0%B9?preview=%2F241079770%2F241078911%2Fimage-2026-9-7_16-9-47.png",
+            "self": "https://wiki.mos-team.ru/rest/api/content/241078911"
+          }
+        }
+      ]
+    },
+    "provenance": {
+      "root": "https://wiki.mos-team.ru/spaces/KR/pages/238324523/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0",
+      "source": "jira-shell-details/r1/content.json#/items/4/description",
+      "authority": "D-055 explicit user approval: historical requirements/applicability and ownership/provenance",
+      "scope": "Off-root documentation body/metadata/separate index only; no recursion/attachment bodies/source execution/business/auth calls or policy reopening"
+    }
+  }
+}

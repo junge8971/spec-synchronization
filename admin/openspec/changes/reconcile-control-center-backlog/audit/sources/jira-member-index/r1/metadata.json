@@ -1,0 +1,16 @@
+{
+  "sourceId": "jira-member-index",
+  "revision": 1,
+  "retrievedAt": "2026-10-16T11:20:38.570Z",
+  "sha256": "dba6cffa66e0aef23e9ef34c4a52215a5c02d31e7da1dca87888e821198b8043",
+  "method": "Parent browser read-only same-origin Jira REST GET for exact hierarchy member allowlist; JSON tool payload extracted from current parent transcript",
+  "fields": [
+    "summary",
+    "issuetype",
+    "status",
+    "subtasks",
+    "parent",
+    "updated"
+  ],
+  "limitations": "No descriptions/comments/attachments/custom acceptance fields in this packet; nested subtask details pending."
+}

@@ -1,0 +1,8 @@
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 71ms on 1556 files using 12 threads.
+
+✔ no dependency violations found (1629 modules, 6423 dependencies cruised)
+
+72,357

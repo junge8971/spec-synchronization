@@ -1,0 +1,43 @@
+{
+  "sourceId": "jira-monitoring-details",
+  "revision": 1,
+  "retrievedAt": "2026-10-16T13:48:06.559Z",
+  "sha256": "6dc8925cbbb1cfcd3a4179db720d38a72d9436926f7df3b73e612eb528c84c73",
+  "bytes": 44254,
+  "collection": "Parent verified-origin Jira GET, selected issue fields; exact returned payload extracted from matching MCP result only. No external mutation.",
+  "keys": [
+    "MOS-775",
+    "MOS-1146",
+    "MOS-1397",
+    "MOS-1398"
+  ],
+  "fields": "summary,description,issuetype,status,subtasks,parent,updated,attachment,comment",
+  "comments": [
+    {
+      "key": "MOS-775",
+      "captured": 0,
+      "total": 0
+    },
+    {
+      "key": "MOS-1146",
+      "captured": 1,
+      "total": 1
+    },
+    {
+      "key": "MOS-1397",
+      "captured": 0,
+      "total": 0
+    },
+    {
+      "key": "MOS-1398",
+      "captured": 0,
+      "total": 0
+    }
+  ],
+  "limitations": [
+    "Custom fields not collected.",
+    "No attachments returned for these four issues.",
+    "Status and linked MR comment are not delivery/runtime evidence; MR not followed.",
+    "Publication snapshot only; operations in descriptions not executed."
+  ]
+}

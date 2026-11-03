@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /home/user/my/work/codesrc/projects/CAM/tsam-admin-front
+
+
+ Test Files  159 passed (159)
+      Tests  1491 passed (1491)
+   Start at  17:15:12
+   Duration  38.72s (transform 12.75s, setup 83.87s, import 25.72s, tests 15.03s, environment 247.41s)
+

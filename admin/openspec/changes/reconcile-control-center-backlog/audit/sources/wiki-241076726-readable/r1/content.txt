@@ -1,0 +1,516 @@
+Оглавление
+ERD Административного интерфейса
+Список сущностей
+| Сущность | Описание
+| User | Пользователь системы (учётная запись)
+| Role | Роль (справочник фиксированных ролей)
+| Permission | Право доступа (справочник)
+| UserRole | Назначение ролей пользователям
+| RolePermission | Матрица прав (какие права у роли)
+| Team | Команда разработчиков/владельцев
+| SecurityAudit | Журнал событий безопасности (вход/выход, изменения ролей)
+| ActionAudit | Журнал действий над объектами (CRUD, смена статусов)
+| Module | Модуль платформы (рубильник)
+ERD Центр управления
+Список сущностей
+| Сущность | Описание
+| Skill | Навык цифрового ассистента
+| SkillIntent | Интент навыка с тренировочными фразами
+| SkillConflict | Конфликт фраз между навыками
+| SkillMonitoring | Мониторинговые показатели навыка (пороги и факты)
+| MonitoringDependency | Внешняя система, от которой зависит навык
+| Incident | Инцидент навыка
+| SkillDisable | Информация об отключении навыка
+| SkillMetric | Агрегированные метрики навыка за 30 дней
+| Dialog | Диалог пользователя с ассистентом
+| Message | Сообщение в диалоге
+| MessageRating | Бинарная оценка ответа
+| RouteStep | Шаг обработки обращения (таймлайн)
+| OperatorAction | Действие оператора в диалоге
+| Participant | Связь «диалог – участник»
+| Category | Категория диалога
+| Operator | Учётная запись оператора
+| Channel | Канал коммуникации (справочник)
+| Surface | Поверхность (виджет/канал интеграции)
+| SurfaceConfig | Конфигурация поверхности
+| ReportTemplate | Шаблон отчёта
+| Report | Сформированный экземпляр отчёта
+| Export | Выгрузка диалогов в CSV
+| DocumentationArticle | Статья документации
+Подробное описание сущностей
+Административная панель
+User (Пользователь)
+Назначение – учётная запись пользователя административной панели.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| sudir_uuid | string | да | Уникальный идентификатор в СУДИР
+| full_name | string | да | ФИО
+| email | string | нет | Электронная почта
+| team_id | string | нет | Логическая ссылка на Team (без FK) – указывает, в какой команде состоит пользователь
+| is_active | boolean | да | Активен / не заблокирован
+| last_login_at | datetime | нет | Дата последнего входа
+| created_at | datetime | да | Дата создания
+Связи
+Один User.id ко многим UserRole.userId
+Один User.id ко многим SecurityAudit.userId
+Один User.id ко многим ActionAudit.userId
+Логические ссылки на другие БД
+Поле team_id ссылается на Team.id (в этой же БД, так как Team здесь).
+User.id используются как disabled_by, created_by, exported_by в сущностях центра управления (логические ссылки, без FK).
+Role (Роль)
+Назначение – справочник фиксированных ролей.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| name | string | да | Уникальный код: superadmin, platform, reviewer, team, surface, analyst
+| display_name | string | да | Отображаемое название
+| description | string | нет | Описание
+Связи
+Один Role.id ко многим UserRole.roleId
+Один Role.id ко многим RolePermission.roleId
+Permission (Право)
+Назначение – справочник прав доступа.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| name | string | да | Уникальный код права
+| description | string | нет | Описание
+Связи
+Один Permission.id ко многим RolePermission.permissionId
+UserRole (Связь пользователя и роли)
+Назначение – назначение ролей пользователям (многие ко многим).
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| user_id | string | да | Внешний ключ к User
+| role_id | string | да | Внешний ключ к Role
+| assigned_by | string | да | Кто назначил (user_id)
+| assigned_at | datetime | да | Время назначения
+| revoked_at | datetime | нет | Время отзыва (null – активна)
+Связи
+Один UserRole.userId к одному User.id
+Один UserRole.roleId к одному Role.id
+RolePermission (Матрица прав)
+Назначение – определяет, какие права есть у каждой роли.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| role_id | string | да | Внешний ключ к Role
+| permission_id | string | да | Внешний ключ к Permission
+Связи
+Один RolePermission.roleId к одному Role.id
+Один RolePermission.permissionId к одному Permission.id
+Team (Команда)
+Назначение – команда разработчиков/владельцев навыков и поверхностей.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| name | string | да | Уникальное название команды
+| org | string | нет | Организация / подразделение
+| created_at | datetime | да | Дата создания
+Связи
+(нет прямых FK, но логически Team.id используется в User.team_id)
+Логические ссылки на другие БД
+Поле Team.id используется как team_id в сущностях Skill и Surface центра управления (логические ссылки, без FK).
+SecurityAudit (Журнал событий безопасности)
+Назначение – аудит событий аутентификации и авторизации.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| user_id | string | нет | Внешний ключ к User (null для неудачных входов)
+| event_type | string | да | login, logout, login_failed, role_changed, user_created, user_blocked
+| ip_address | string | да | IP-адрес
+| user_agent | string | да | User-Agent
+| details | object | нет | Дополнительные детали (JSON)
+| created_at | datetime | да | Время события
+Связи
+Один SecurityAudit.userId к одному User.id
+ActionAudit (Журнал действий над объектами)
+Назначение – аудит изменений объектов (CRUD, смена статуса) во всей системе. Может ссылаться на объекты центра управления по их ID.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| user_id | string | да | Внешний ключ к User
+| action | string | да | Текстовое описание действия
+| object_type | string | да | Тип объекта: skill, surface, module, domain, dialog, report, export
+| object_id | string | нет | Идентификатор объекта (логическая ссылка на объект в любой системе)
+| details | object | нет | JSON с деталями изменений
+| created_at | datetime | да | Время действия
+Связи
+Один ActionAudit.userId к одному User.id
+Логические ссылки на другие БД
+Поле object_id может ссылаться на объекты центра управления (Skill, Surface, Dialog, Report, Export и др.) – связь реализуется на уровне приложения.
+Module (Модуль платформы)
+Назначение – модуль-рубильник, который можно включать/отключать.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| name | string | да | Название: ядро, этика, пре-роутер, болтлака, операторы
+| description | string | нет | Описание
+| is_enabled | boolean | да | Включён ли модуль
+| lockable | boolean | да | Можно ли отключить
+| fallback_text | string | нет | Текст, видимый пользователю при отключении
+| updated_at | datetime | да | Дата последнего изменения
+| updated_by | string | да | Кто изменил (user_id)
+Связи
+Один Module.updatedBy к одному User.id
+Центр управления
+Skill (Навык)
+Назначение – регистрационная запись навыка цифрового ассистента.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| service_id | string | да | Служебный идентификатор в платформе
+| name | string | да | Короткое название
+| purpose | string | да | Назначение (одна строка)
+| description | string | нет | Развёрнутое описание
+| result | string | нет | Ожидаемый результат
+| type | string | да | Информационный, Транзакционный, смешанный
+| auth_zone | string | да | Только авторизованная / только неавторизованная / любая
+| contact_person | string | да | Контактное лицо от команды
+| endpoint | string | нет | Адрес сервиса навыка
+| restrictions | string | нет | Ограничения использования
+| comments | string | нет | Комментарии
+| version | string | да | Текущая версия
+| domain_id | string | да | Домен (например, ЖКХ)
+| team_id | string | да | Логическая ссылка на Team (без FK) – команда-владелец навыка
+| status | string | да | draft, checking, training, autotest, sandbox, review, approved, whitelist, prod, disabled
+| rejection_note | string | нет | Комментарий при отклонении на ревью
+| created_at | datetime | да | Дата создания
+| updated_at | datetime | да | Дата обновления
+Связи
+Один Skill.id ко многим SkillIntent.skillId
+Один Skill.id ко многим SkillConflict.skillId (и conflicting_skill_id)
+Один Skill.id к одному SkillMonitoring.skillId
+Один Skill.id ко многим MonitoringDependency.skillId
+Один Skill.id ко многим Incident.skillId
+Один Skill.id к одному SkillDisable.skillId
+Один Skill.id к одному SkillMetric.skillId
+Один Skill.id ко многим Message.skillId
+Один Skill.id ко многим Participant.skillId
+Логические ссылки на другие БД
+Поле team_id ссылается на Team.id из БД админки.
+SkillIntent (Интент навыка)
+Назначение – интент с тренировочными фразами.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| skill_id | string | да | Внешний ключ к Skill
+| name | string | да | Название интента
+| phrases | string[] | да | Массив тренировочных фраз
+| entities | object | нет | JSON: сущности с синонимами
+| created_at | datetime | да | Дата создания
+| updated_at | datetime | да | Дата обновления
+Связи
+Один SkillIntent.skillId к одному Skill.id
+SkillConflict (Конфликт фраз)
+Назначение – фиксирует точное или смысловое пересечение фраз между навыками.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| skill_id | string | да | Внешний ключ к Skill (владелец фразы)
+| conflicting_skill_id | string | да | Внешний ключ к Skill (с кем конфликт)
+| phrase | string | да | Конфликтная фраза
+| conflict_type | string | да | exact или semantic
+| score | number | нет | Степень схожести (для semantic)
+| resolved_at | datetime | нет | Дата устранения
+Связи
+Один SkillConflict.skillId к одному Skill.id
+Один SkillConflict.conflicting_skill_id к одному Skill.id
+SkillMonitoring (Мониторинг навыка)
+Назначение – пороговые и фактические показатели мониторинга.
+| Поле | Тип | Обязательность | Описание
+| skill_id | string | да | Внешний ключ к Skill (PK)
+| threshold_availability | number | да | Порог доступности (%)
+| threshold_response_sec | number | да | Порог времени ответа (сек)
+| threshold_rating | number | да | Порог оценки жителей
+| actual_availability | number | нет | Фактическая доступность (%)
+| actual_response_sec | number | нет | Фактическое время ответа (сек)
+| actual_rating | number | нет | Фактическая оценка
+| data_updated_at | datetime | нет | Дата обновления данных
+| last_call_at | datetime | нет | Дата последнего вызова
+| fallback_text | string | нет | Текст заглушки
+Связи
+Один SkillMonitoring.skillId к одному Skill.id
+MonitoringDependency (Зависимость навыка)
+Назначение – внешняя система, от которой зависит навык.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| skill_id | string | да | Внешний ключ к Skill
+| name | string | да | Название внешней системы
+| owner | string | да | Владелец
+| status | string | да | ok, degraded, down
+| checked_at | datetime | да | Дата проверки
+Связи
+Один MonitoringDependency.skillId к одному Skill.id
+Incident (Инцидент навыка)
+Назначение – фиксирует сбой или отклонение в работе навыка.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| skill_id | string | да | Внешний ключ к Skill
+| level | string | да | P0, P1, P2, P3
+| title | string | да | Заголовок
+| cause | string | нет | Причина
+| side | string | да | platform или team
+| message | string | да | Описание
+| detected_at | datetime | да | Время обнаружения
+| ack_at | datetime | нет | Время подтверждения
+| resolved_at | datetime | нет | Время устранения
+| affected_percent | number | нет | Процент затронутых запросов
+| postmortem_done | boolean | да | Постмортем выполнен
+| postmortem_due_at | datetime | нет | Дедлайн постмортема
+| is_active | boolean | да | Актуальный ли инцидент
+| status | string | да | Статус
+Связи
+Один Incident.skillId к одному Skill.id
+SkillDisable (Отключение навыка)
+Назначение – информация об отключении навыка.
+| Поле | Тип | Обязательность | Описание
+| skill_id | string | да | Внешний ключ к Skill (PK)
+| disabled_at | datetime | да | Дата отключения
+| disabled_by | string | да | Логическая ссылка на User (без FK) – кто отключил
+| reason | string | да | incident, maintenance, sla_violation
+| fallback_text | string | да | Текст для пользователя
+| enabled_at | datetime | нет | Дата включения обратно
+Связи
+Один SkillDisable.skillId к одному Skill.id
+Логические ссылки на другие БД
+Поле disabled_by ссылается на User.id из БД админки.
+SkillMetric (Метрики мониторинга за 30 дней)
+Назначение – агрегированные показатели работы навыка за период.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| skill_id | string | да | Внешний ключ к Skill
+| period_days | number | да | Период (обычно 30)
+| calculated_at | datetime | да | Момент расчёта
+| dialogs_count | number | да | Число диалогов
+| good_rating_count | number | да | Оценок «хорошо»
+| bad_rating_count | number | да | Оценок «плохо»
+| total_ratings | number | да | Всего оценок
+| good_rating_share | number | да | Доля хороших
+| evaluation_coverage | number | да | Охват оценивания
+| has_sufficient_data | boolean | да | >= 30 оценок
+| goal_steps_count | number | нет | Целевое число шагов
+| actual_steps_median | number | нет | Медиана фактических шагов
+| steps_deviation_percent | number | нет | Отклонение от цели (%)
+| dialogs_longer_than_target | number | нет | Доля диалогов длиннее цели
+| dialogs_not_reaching_result | number | нет | Доля не дошедших до результата
+| threshold_duration_ms | number | нет | Порог длительности шага (мс)
+Связи
+Один SkillMetric.skillId к одному Skill.id
+Dialog (Диалог)
+Назначение – сессия общения пользователя с ассистентом.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| chat_id | string | нет | Идентификатор чата во внешней системе
+| session_id | string | нет | Идентификатор сессии
+| user_id | string | нет | Логическая ссылка на User (без FK) – если пользователь авторизован
+| authorized | boolean | да | Авторизован ли пользователь
+| ssold | string | нет | Идентификатор СУДИР
+| channel | string | да | Внешний ключ к Channel
+| surface_id | string | нет | Внешний ключ к Surface
+| started_at | datetime | да | Время начала
+| ended_at | datetime | нет | Время завершения
+| duration_sec | number | нет | Длительность (сек)
+| end_reason | string | нет | Причина завершения
+| ended_by | string | нет | user, operator, system
+| operator_rating | number | нет | Оценка оператору (1–5)
+| operator_rating_comment | string | нет | Комментарий к оценке
+| device_info | string | нет | Информация об устройстве
+| url | string | нет | URL обращения
+Связи
+Один Dialog.id ко многим Message.dialogId
+Один Dialog.id ко многим RouteStep.dialogId
+Один Dialog.id ко многим OperatorAction.dialogId
+Один Dialog.id ко многим Participant.dialogId
+Один Dialog.id ко многим Category.dialogId
+Один Dialog.channel к одному Channel.id
+Один Dialog.surfaceId к одному Surface.id
+Логические ссылки на другие БД
+Поле user_id ссылается на User.id из БД админки (если пользователь авторизован).
+Message (Сообщение)
+Назначение – одно сообщение в диалоге.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| dialog_id | string | да | Внешний ключ к Dialog
+| author | string | да | user, assistant, operator
+| operator_id | string | нет | Внешний ключ к Operator
+| skill_id | string | нет | Внешний ключ к Skill
+| text | string | да | Текст сообщения
+| source | string | да | Идентификатор источника (serviceId)
+| source_type | string | да | skill, module, system
+| posted_at | datetime | да | Время отправки
+| rating_id | string | нет | Внешний ключ к MessageRating
+Связи
+Один Message.dialogId к одному Dialog.id
+Один Message.skillId к одному Skill.id
+Один Message.operatorId к одному Operator.id
+Один Message.ratingId к одному MessageRating.id
+MessageRating (Оценка ответа)
+Назначение – бинарная оценка ответа ассистента.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| message_id | string | да | Внешний ключ к Message
+| dialog_id | string | да | Внешний ключ к Dialog
+| skill_id | string | да | Внешний ключ к Skill
+| rating | string | да | good или bad
+| reason | string | нет | Причина «плохо»
+| comment | string | нет | Комментарий
+| rated_at | datetime | да | Время оценки
+Связи
+Один MessageRating.messageId к одному Message.id
+Один MessageRating.skillId к одному Skill.id
+Один MessageRating.dialogId к одному Dialog.id
+RouteStep (Шаг маршрута)
+Назначение – один шаг обработки обращения (таймлайн).
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| dialog_id | string | да | Внешний ключ к Dialog
+| type | string | да | reception, classification, routing, external_call, response, ethics, operator_transfer, completion
+| started_at | datetime | да | Время начала
+| duration_ms | number | да | Длительность (мс)
+| transition_ms | number | да | Время перехода к следующему шагу
+| details | object | нет | Детали (зависят от типа)
+| is_threshold_exceeded | boolean | да | Превышен ли порог
+| is_error | boolean | да | Был ли сбой
+| order | number | да | Порядковый номер
+Связи
+Один RouteStep.dialogId к одному Dialog.id
+OperatorAction (Действие оператора)
+Назначение – действие, совершённое оператором в интерфейсе.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| dialog_id | string | да | Внешний ключ к Dialog
+| operator_id | string | да | Внешний ключ к Operator
+| action | string | да | accept, open_profile, apply_template, set_topic, set_category, request_rating, close
+| object | string | нет | Объект действия
+| result | string | нет | Результат
+| performed_at | datetime | да | Время действия
+Связи
+Один OperatorAction.dialogId к одному Dialog.id
+Один OperatorAction.operatorId к одному Operator.id
+Participant (Участник диалога)
+Назначение – связь «диалог – участник» со статистикой.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| dialog_id | string | да | Внешний ключ к Dialog
+| participant_type | string | да | skill или operator
+| skill_id | string | нет | Внешний ключ к Skill
+| operator_id | string | нет | Внешний ключ к Operator
+| messages_count | number | да | Число сообщений от участника
+| messages_share | number | да | Доля от всех сообщений
+| good_ratings_count | number | да | Оценок «хорошо»
+| bad_ratings_count | number | да | Оценок «плохо»
+Связи
+Один Participant.dialogId к одному Dialog.id
+Один Participant.skillId к одному Skill.id (если тип skill)
+Один Participant.operatorId к одному Operator.id (если тип operator)
+Category (Категория диалога)
+Назначение – категория, назначенная диалогу.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| dialog_id | string | да | Внешний ключ к Dialog
+| name | string | да | Название категории
+| assigned_by | string | да | operator или system
+| assigned_at | datetime | да | Время назначения
+Связи
+Один Category.dialogId к одному Dialog.id
+Operator (Оператор)
+Назначение – сведения об операторе
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| name | string | да | ФИО
+| team | string | нет | Команда оператора
+Связи
+Один Operator.id ко многим Message.operatorId
+Один Operator.id ко многим OperatorAction.operatorId
+Один Operator.id ко многим Participant.operatorId
+Channel (Канал коммуникации)
+Назначение – справочник каналов.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| name | string | да | Название канала
+Связи
+Один Channel.id ко многим Dialog.channel
+Один Channel.id к одному Surface.channelId
+Surface (Поверхность)
+Назначение – поверхность (виджет/канал интеграции).
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| name | string | да | Название поверхности
+| config_name | string | нет | Имя конфигурации
+| type | string | да | портал, раздел_портала, мобильное_приложение
+| domains | string[] | да | Список доменов
+| channel_id | string | да | Внешний ключ к Channel (уникальный)
+| team_id | string | да | Логическая ссылка на Team (без FK) – команда-владелец поверхности
+| status | string | да | draft, checking, sandbox, prod, disabled, archived
+| owner | string | нет | Владелец
+| responsible_product | string | нет | Ответственный за продукт
+| responsible_tech | string | нет | Ответственный за подключение
+| purpose | string | нет | Назначение
+| context | string | нет | Контекст
+| created_at | datetime | да | Дата создания
+| updated_at | datetime | да | Дата обновления
+Связи
+Один Surface.id к одному SurfaceConfig.surfaceId
+Один Surface.id ко многим Dialog.surfaceId
+Один Surface.channelId к одному Channel.id
+Логические ссылки на другие БД
+Поле team_id ссылается на Team.id из БД админки.
+SurfaceConfig (Конфигурация поверхности)
+Назначение – конфигурация внешнего вида и сценариев поверхности.
+| Поле | Тип | Обязательность | Описание
+| surface_id | string | да | Внешний ключ к Surface (PK)
+| config | object | да | JSON: palette, greeting, greeting_fallback, enabled_skills, suggests, cards, shape, font, skill_params
+| updated_at | datetime | да | Дата обновления
+Связи
+Один SurfaceConfig.surfaceId к одному Surface.id
+ReportTemplate (Шаблон отчёта)
+Назначение – сохранённая конфигурация отчёта.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| name | string | да | Название шаблона
+| description | string | нет | Описание
+| schedule | string | да | manual, daily, weekly, monthly
+| period_preset | string | да | today, last7days, last30days, lastMonth, custom
+| period_from | date | нет | Начало (если custom)
+| period_to | date | нет | Конец (если custom)
+| channel | string | да | all или ID канала (логическая ссылка на Channel.id)
+| fields | string[] | да | Список полей
+| filters | object | нет | Дополнительные фильтры
+| created_by | string | да | Логическая ссылка на User (без FK) – кто создал шаблон
+| created_at | datetime | да | Время создания
+| updated_at | datetime | да | Время изменения
+| last_run_at | datetime | нет | Время последнего запуска
+Связи
+Один ReportTemplate.id ко многим Report.templateId
+Логические ссылки на другие БД
+Поле created_by ссылается на User.id из БД админки.
+Поле channel – это логическая ссылка на Channel.id (внутри ЦУ) – здесь всё в одной БД, так что это нормальная связь.
+Report (Сформированный отчёт)
+Назначение – экземпляр отчёта, сформированный по шаблону.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| template_id | string | да | Внешний ключ к ReportTemplate
+| status | string | да | pending, running, ready, failed
+| requested_at | datetime | да | Время запроса
+| completed_at | datetime | нет | Время завершения
+| file_url | string | нет | Ссылка на файл
+| file_size_bytes | number | нет | Размер файла
+Связи
+Один Report.templateId к одному ReportTemplate.id
+Export (Выгрузка диалогов)
+Назначение – запись о выгрузке диалогов в CSV.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| exported_by | string | да | Логическая ссылка на User (без FK) – кто выполнил выгрузку
+| period_from | date | да | Начало периода
+| period_to | date | да | Конец периода
+| conditions | object | нет | Условия отбора (JSON)
+| dialog_ids | string[] | нет | Список ID выгруженных диалогов (логические ссылки на Dialog.id)
+| exported_at | datetime | да | Время выгрузки
+| file_name | string | да | Имя файла
+Связи
+нет
+Логические ссылки на другие БД
+Поле exported_by ссылается на User.id из БД админки.
+Поле dialog_ids содержит идентификаторы Dialog из этой же БД.
+DocumentationArticle (Статья документации)
+Назначение – статья встроенной документации.
+| Поле | Тип | Обязательность | Описание
+| id | string | да | Уникальный идентификатор
+| title | string | да | Заголовок
+| summary | string | нет | Краткое резюме
+| group | string | да | Группа/раздел
+| content | object | да | Блоки содержимого (текст, списки, примечания)
+| created_at | datetime | да | Дата создания
+| updated_at | datetime | да | Дата обновления

@@ -1,0 +1,18 @@
+{
+  "pointer": "#/components/schemas/RemoveTeamMemberRequest",
+  "value": {
+    "properties": {
+      "reason": {
+        "type": "string",
+        "maxLength": 1000,
+        "minLength": 1,
+        "title": "Reason"
+      }
+    },
+    "type": "object",
+    "required": [
+      "reason"
+    ],
+    "title": "RemoveTeamMemberRequest"
+  }
+}

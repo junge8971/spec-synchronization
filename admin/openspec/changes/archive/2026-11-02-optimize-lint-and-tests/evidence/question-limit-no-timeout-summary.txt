@@ -1,0 +1,20 @@
+[
+  {
+    "run": 1,
+    "exit": 0,
+    "wall_seconds": 9.365,
+    "log": "openspec/changes/optimize-lint-and-tests/evidence/question-limit-no-timeout-1.txt"
+  },
+  {
+    "run": 2,
+    "exit": 0,
+    "wall_seconds": 7.131,
+    "log": "openspec/changes/optimize-lint-and-tests/evidence/question-limit-no-timeout-2.txt"
+  },
+  {
+    "run": 3,
+    "exit": 0,
+    "wall_seconds": 7.267,
+    "log": "openspec/changes/optimize-lint-and-tests/evidence/question-limit-no-timeout-3.txt"
+  }
+]

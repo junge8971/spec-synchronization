@@ -1,0 +1,175 @@
+Это пример запроса списка навыков.
+Для вывода в на экране каталога навыков.
+| POST: /api/esk/skills
+| Description | Запрос получения списка навыков
+|
+parameters
+|
+| name | in | required | Description
+|
+query
+|
+query
+|
+false
+|
+Поиск по названию, назначению и serviceId
+|
+status
+|
+query
+|
+false
+|
+Фильтр по статусу навыка
+|
+domain
+|
+query
+|
+false
+|
+Фильтр по домену
+|
+offset
+|
+query
+|
+false
+| Смещение выборки
+|
+limit
+|
+query
+|
+false
+| Лимит на одной странице страницы
+|
+Request Body
+|
+{
+sudir_id, //обязательное - идентификатор пользователя sudir , если аноним - null
+access_token, //обязательно - токен пользователя sudir, если аноним - null
+}
+|
+Responses
+|
+| Code | Description
+|
+200
+|
+{
+"skills": [
+{
+"id": "c6688cb3-6c75-4225-a2bd-61be81a73473",
+"name": "Социальные выплаты",
+"description": "Информировать о городских выплатах и пособиях",
+"serviceId": "base.benefits",
+"version": "0.3",
+"domain": "Базовые навыки",
+"team": "Платформенная команда ЦАМ",
+"status": "rejected",
+"dialogsCount30d": 0,
+"conflictsCount": 1,
+"createdAt": "2026-07-01T00:00:00+03:00",
+"updatedAt": "2026-08-06T00:00:00+03:00",
+"allerts": [
+"P1: Отклонение от порогов регламента",
+"P3: нет обращений"
+]
+},
+{
+"id": "50c1b7ee-8f0e-4d6d-bdaa-d512126dd045",
+"name": "Отопление",
+"description": "Отвечать на вопросы о подаче отопления и температуре в квартире",
+"serviceId": "gkh.heat",
+"version": "0.1",
+"domain": "ЖКХ",
+"team": "Команда ЖКХ",
+"status": "checking",
+"dialogsCount30d": 0,
+"conflictsCount": 2,
+"createdAt": "2026-08-05T00:00:00+03:00",
+"updatedAt": "2026-08-12T00:00:00+03:00",
+"allerts": []
+},
+{
+"id": "f3a179df-adc3-4455-8006-14b6aef94b48",
+"name": "Вывоз вещей",
+"description": "Оформлять заказ на вывоз крупногабаритных вещей",
+"serviceId": "gkh.bulky",
+"version": "1.0",
+"domain": "ЖКХ",
+"team": "Команда ЖКХ",
+"status": "in_review",
+"dialogsCount30d": 0,
+"conflictsCount": 0,
+"createdAt": "2026-07-22T00:00:00+03:00",
+"updatedAt": "2026-08-11T00:00:00+03:00",
+"allerts": [
+"Отклонение от порогов регламента"
+]
+}
+],
+"pagination": {
+"total": 15,
+"offset": 0,
+"limit": 15
+}
+}
+|
+422
+|
+{
+"error_type": "Validation error",
+"error_message": "Validation error message"
+}
+|
+500
+|
+{
+"error_type": "Internal Server Error",
+"error_message": "Internal server error message"
+}
+Где каждый экземпляр skills содержит:
+| Поле | Описание
+|
+id
+| Идентификатор навыка
+|
+name
+| Наименование навыка
+|
+description
+| Описание навыка
+|
+serviceId
+| id навыка
+|
+version
+| Версия навыка
+|
+domain
+| Домен владельца навыка
+|
+team
+| Команда владельца навыка
+|
+status
+| Статус навыка
+|
+dialogsCount30d
+| Количество диалогов за 30 дней
+|
+conflictsCount
+| Количество аллармов
+|
+createdAt
+| Дата и время создания
+|
+updatedAt
+| Дата время изменения
+|
+allerts
+| Массив аллармов, по навыкам
+pagination нужен для обработки порционной выдачи скилов и доп запросов при нажатии на "Показать ещё"

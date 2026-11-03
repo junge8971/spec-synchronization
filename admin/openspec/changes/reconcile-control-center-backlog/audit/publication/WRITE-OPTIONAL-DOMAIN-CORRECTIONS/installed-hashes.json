@@ -1,0 +1,23 @@
+{
+  "fix-knowledge-base-export-limit-feedback": {
+    ".openspec.yaml": "ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b",
+    "design.md": "7fc0c3ce641d76d24006590749d95ff458f236b33abc4b9bede66eebe9e5f7d4",
+    "proposal.md": "8aac481ba21906ae1df106d3d4a65c0740d090ff4be503724edc99a068d998c8",
+    "specs/knowledge-base-export/spec.md": "d811d2612b24415e32074c60397cf3d73b7669c6e1499f6f9e010fa170baded3",
+    "tasks.md": "0e3cf32ae03d54915f15618663ad4bbece0f7dbecbf159d35a80287efa26e95b"
+  },
+  "clarify-ab-testing-sample-size": {
+    ".openspec.yaml": "ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b",
+    "design.md": "7cfeb9eb60671afa465c6a29024c35b259f3595d6654aaa191e1e6da86a6e360",
+    "proposal.md": "954782185e03b5e6395f149c295a539a3157262d3ff2cebd8bb8441760945ec1",
+    "specs/ab-testing-editor/spec.md": "b1741fd5bde9283f4cdccf85078f8f09e0b4d223c145b5b217fac0980e2508fe",
+    "tasks.md": "cbf39a5ca1a4a2067cae448e9b68d762e342484377a8bdeb5146894a80a9ed27"
+  },
+  "fix-skill-domain-zone-read-compatibility": {
+    ".openspec.yaml": "ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b",
+    "design.md": "8b62c36d86fb8c4fd86f6d8aa886d6067660349f8c68f796ae4287ac7b8e0d91",
+    "proposal.md": "d3f3e440314acbdf5e0871b0431422b790886e2db77b354de190d928218c970c",
+    "specs/skill-domain-management/spec.md": "9cd7ec1d67bbd106d851f5cfd1bce5b4c6baf5af64c319622e32b181a8dd9f95",
+    "tasks.md": "5d00d6e69c1d754139b1e12bec759dede78c034c643f129f8a4bc12138f93404"
+  }
+}

@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests
+
+
+ Test Files  142 passed (142)
+      Tests  1365 passed (1365)
+   Start at  17:53:20
+   Duration  32.53s (transform 10.29s, setup 69.94s, import 20.94s, tests 12.36s, environment 208.77s)
+

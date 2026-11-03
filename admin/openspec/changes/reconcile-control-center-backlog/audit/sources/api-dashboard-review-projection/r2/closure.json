@@ -1,0 +1,327 @@
+{
+  "schemaCount": 34,
+  "schemas": [
+    {
+      "pointer": "#/components/schemas/BoardResponse",
+      "file": "schema-01.json"
+    },
+    {
+      "pointer": "#/components/schemas/DashboardFilterRequest",
+      "file": "schema-02.json"
+    },
+    {
+      "pointer": "#/components/schemas/DashboardResponse",
+      "file": "schema-03.json"
+    },
+    {
+      "pointer": "#/components/schemas/DeltaResponse",
+      "file": "schema-04.json"
+    },
+    {
+      "pointer": "#/components/schemas/DeltaUnit",
+      "file": "schema-05.json"
+    },
+    {
+      "pointer": "#/components/schemas/DistributionItemResponse",
+      "file": "schema-06.json"
+    },
+    {
+      "pointer": "#/components/schemas/DistributionWidgetResponse",
+      "file": "schema-07.json"
+    },
+    {
+      "pointer": "#/components/schemas/ErrorItem",
+      "file": "schema-08.json"
+    },
+    {
+      "pointer": "#/components/schemas/FailedWidgetResponse",
+      "file": "schema-09.json"
+    },
+    {
+      "pointer": "#/components/schemas/HTTPValidationError",
+      "file": "schema-10.json"
+    },
+    {
+      "pointer": "#/components/schemas/Measure",
+      "file": "schema-11.json"
+    },
+    {
+      "pointer": "#/components/schemas/MetricUnit",
+      "file": "schema-12.json"
+    },
+    {
+      "pointer": "#/components/schemas/MetricWidgetResponse",
+      "file": "schema-13.json"
+    },
+    {
+      "pointer": "#/components/schemas/PeriodResponse",
+      "file": "schema-14.json"
+    },
+    {
+      "pointer": "#/components/schemas/RefreshDashboardResponse",
+      "file": "schema-15.json"
+    },
+    {
+      "pointer": "#/components/schemas/ResponseCode",
+      "file": "schema-16.json"
+    },
+    {
+      "pointer": "#/components/schemas/SampleResponse",
+      "file": "schema-17.json"
+    },
+    {
+      "pointer": "#/components/schemas/SaveBoardRequest",
+      "file": "schema-18.json"
+    },
+    {
+      "pointer": "#/components/schemas/ScopeKind",
+      "file": "schema-19.json"
+    },
+    {
+      "pointer": "#/components/schemas/ScopeResponse",
+      "file": "schema-20.json"
+    },
+    {
+      "pointer": "#/components/schemas/SeriesGranularity",
+      "file": "schema-21.json"
+    },
+    {
+      "pointer": "#/components/schemas/SeriesPointResponse",
+      "file": "schema-22.json"
+    },
+    {
+      "pointer": "#/components/schemas/TsamResponseSchema_BoardResponse_",
+      "file": "schema-23.json"
+    },
+    {
+      "pointer": "#/components/schemas/TsamResponseSchema_DashboardResponse_",
+      "file": "schema-24.json"
+    },
+    {
+      "pointer": "#/components/schemas/TsamResponseSchema_RefreshDashboardResponse_",
+      "file": "schema-25.json"
+    },
+    {
+      "pointer": "#/components/schemas/TsamResponseSchema_WidgetCatalogResponse_",
+      "file": "schema-26.json"
+    },
+    {
+      "pointer": "#/components/schemas/UnavailableReasonCode",
+      "file": "schema-27.json"
+    },
+    {
+      "pointer": "#/components/schemas/ValidationError",
+      "file": "schema-28.json"
+    },
+    {
+      "pointer": "#/components/schemas/WidgetCatalogItemResponse",
+      "file": "schema-29.json"
+    },
+    {
+      "pointer": "#/components/schemas/WidgetCatalogResponse",
+      "file": "schema-30.json"
+    },
+    {
+      "pointer": "#/components/schemas/WidgetErrorResponse",
+      "file": "schema-31.json"
+    },
+    {
+      "pointer": "#/components/schemas/WidgetGroup",
+      "file": "schema-32.json"
+    },
+    {
+      "pointer": "#/components/schemas/WidgetResponse",
+      "file": "schema-33.json"
+    },
+    {
+      "pointer": "#/components/schemas/WidgetType",
+      "file": "schema-34.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "#/paths/~1api~1control~1api~1analytics~1v1~1dashboard/get/responses/200/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_DashboardResponse_"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1analytics~1v1~1dashboard/get/responses/422/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/HTTPValidationError"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1analytics~1v1~1dashboard~1refresh/post/requestBody/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/DashboardFilterRequest"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1analytics~1v1~1dashboard~1refresh/post/responses/200/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_RefreshDashboardResponse_"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1analytics~1v1~1dashboard~1refresh/post/responses/422/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/HTTPValidationError"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1analytics~1v1~1widgets/get/responses/200/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_WidgetCatalogResponse_"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1analytics~1v1~1board/get/responses/200/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_BoardResponse_"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1analytics~1v1~1board/put/requestBody/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/SaveBoardRequest"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1analytics~1v1~1board/put/responses/200/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_BoardResponse_"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1analytics~1v1~1board/put/responses/422/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/HTTPValidationError"
+    },
+    {
+      "from": "#/components/schemas/HTTPValidationError/properties/detail/items/$ref",
+      "to": "#/components/schemas/ValidationError"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_BoardResponse_/properties/code/$ref",
+      "to": "#/components/schemas/ResponseCode"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_BoardResponse_/properties/data/$ref",
+      "to": "#/components/schemas/BoardResponse"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_BoardResponse_/properties/errors/items/$ref",
+      "to": "#/components/schemas/ErrorItem"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_DashboardResponse_/properties/code/$ref",
+      "to": "#/components/schemas/ResponseCode"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_DashboardResponse_/properties/data/$ref",
+      "to": "#/components/schemas/DashboardResponse"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_DashboardResponse_/properties/errors/items/$ref",
+      "to": "#/components/schemas/ErrorItem"
+    },
+    {
+      "from": "#/components/schemas/DashboardResponse/properties/period/$ref",
+      "to": "#/components/schemas/PeriodResponse"
+    },
+    {
+      "from": "#/components/schemas/DashboardResponse/properties/sample/$ref",
+      "to": "#/components/schemas/SampleResponse"
+    },
+    {
+      "from": "#/components/schemas/DashboardResponse/properties/scope/$ref",
+      "to": "#/components/schemas/ScopeResponse"
+    },
+    {
+      "from": "#/components/schemas/DashboardResponse/properties/series_granularity/$ref",
+      "to": "#/components/schemas/SeriesGranularity"
+    },
+    {
+      "from": "#/components/schemas/DashboardResponse/properties/widgets/items/$ref",
+      "to": "#/components/schemas/WidgetResponse"
+    },
+    {
+      "from": "#/components/schemas/ScopeResponse/properties/kind/$ref",
+      "to": "#/components/schemas/ScopeKind"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_RefreshDashboardResponse_/properties/code/$ref",
+      "to": "#/components/schemas/ResponseCode"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_RefreshDashboardResponse_/properties/data/$ref",
+      "to": "#/components/schemas/RefreshDashboardResponse"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_RefreshDashboardResponse_/properties/errors/items/$ref",
+      "to": "#/components/schemas/ErrorItem"
+    },
+    {
+      "from": "#/components/schemas/RefreshDashboardResponse/properties/sample/$ref",
+      "to": "#/components/schemas/SampleResponse"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_WidgetCatalogResponse_/properties/code/$ref",
+      "to": "#/components/schemas/ResponseCode"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_WidgetCatalogResponse_/properties/data/$ref",
+      "to": "#/components/schemas/WidgetCatalogResponse"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_WidgetCatalogResponse_/properties/errors/items/$ref",
+      "to": "#/components/schemas/ErrorItem"
+    },
+    {
+      "from": "#/components/schemas/WidgetCatalogResponse/properties/items/items/$ref",
+      "to": "#/components/schemas/WidgetCatalogItemResponse"
+    },
+    {
+      "from": "#/components/schemas/WidgetCatalogItemResponse/properties/group/$ref",
+      "to": "#/components/schemas/WidgetGroup"
+    },
+    {
+      "from": "#/components/schemas/WidgetCatalogItemResponse/properties/type/$ref",
+      "to": "#/components/schemas/WidgetType"
+    },
+    {
+      "from": "#/components/schemas/WidgetCatalogItemResponse/properties/unavailable_reason_code/anyOf/0/$ref",
+      "to": "#/components/schemas/UnavailableReasonCode"
+    },
+    {
+      "from": "#/components/schemas/WidgetResponse/anyOf/0/$ref",
+      "to": "#/components/schemas/MetricWidgetResponse"
+    },
+    {
+      "from": "#/components/schemas/WidgetResponse/anyOf/1/$ref",
+      "to": "#/components/schemas/DistributionWidgetResponse"
+    },
+    {
+      "from": "#/components/schemas/WidgetResponse/anyOf/2/$ref",
+      "to": "#/components/schemas/FailedWidgetResponse"
+    },
+    {
+      "from": "#/components/schemas/DistributionWidgetResponse/properties/unit/anyOf/0/$ref",
+      "to": "#/components/schemas/MetricUnit"
+    },
+    {
+      "from": "#/components/schemas/DistributionWidgetResponse/properties/measure/$ref",
+      "to": "#/components/schemas/Measure"
+    },
+    {
+      "from": "#/components/schemas/DistributionWidgetResponse/properties/items/items/$ref",
+      "to": "#/components/schemas/DistributionItemResponse"
+    },
+    {
+      "from": "#/components/schemas/FailedWidgetResponse/properties/type/$ref",
+      "to": "#/components/schemas/WidgetType"
+    },
+    {
+      "from": "#/components/schemas/FailedWidgetResponse/properties/error/$ref",
+      "to": "#/components/schemas/WidgetErrorResponse"
+    },
+    {
+      "from": "#/components/schemas/MetricWidgetResponse/properties/unit/$ref",
+      "to": "#/components/schemas/MetricUnit"
+    },
+    {
+      "from": "#/components/schemas/MetricWidgetResponse/properties/delta/anyOf/0/$ref",
+      "to": "#/components/schemas/DeltaResponse"
+    },
+    {
+      "from": "#/components/schemas/MetricWidgetResponse/properties/series/items/$ref",
+      "to": "#/components/schemas/SeriesPointResponse"
+    },
+    {
+      "from": "#/components/schemas/DeltaResponse/properties/unit/$ref",
+      "to": "#/components/schemas/DeltaUnit"
+    }
+  ]
+}

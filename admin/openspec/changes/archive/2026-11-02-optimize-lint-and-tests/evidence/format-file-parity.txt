@@ -1,0 +1,68 @@
+[
+  {
+    "name": "example.js",
+    "prettierExit": 0,
+    "oxfmtExit": 0,
+    "sameContents": true
+  },
+  {
+    "name": "example.ts",
+    "prettierExit": 0,
+    "oxfmtExit": 0,
+    "sameContents": true
+  },
+  {
+    "name": "example.tsx",
+    "prettierExit": 0,
+    "oxfmtExit": 0,
+    "sameContents": true
+  },
+  {
+    "name": "data.json",
+    "prettierExit": 0,
+    "oxfmtExit": 0,
+    "sameContents": true
+  },
+  {
+    "name": "style.css",
+    "prettierExit": 0,
+    "oxfmtExit": 0,
+    "sameContents": true
+  },
+  {
+    "name": "style.scss",
+    "prettierExit": 0,
+    "oxfmtExit": 0,
+    "sameContents": true
+  },
+  {
+    "name": "config.yaml",
+    "prettierExit": 0,
+    "oxfmtExit": 0,
+    "sameContents": true
+  },
+  {
+    "name": "readme.md",
+    "prettierExit": 0,
+    "oxfmtExit": 0,
+    "sameContents": true
+  },
+  {
+    "name": "page.html",
+    "prettierExit": 0,
+    "oxfmtExit": 0,
+    "sameContents": true
+  },
+  {
+    "name": "page.mdx",
+    "prettierExit": 0,
+    "oxfmtExit": 0,
+    "sameContents": true
+  },
+  {
+    "name": "icon.svg",
+    "prettierExit": 2,
+    "oxfmtExit": 2,
+    "sameContents": true
+  }
+]

@@ -1,0 +1,6 @@
+# R-DOMAIN-ZONES — independent decision review
+
+Status: queued. Repository: /home/user/my/work/codesrc/projects/CAM/tsam-admin-front. Audit base (repository-relative): openspec/changes/reconcile-control-center-backlog/audit.
+Read audit reports/SCENARIO-DOMAIN-ZONES.md and independently inspect cited actual sources: sources/api-live/r1/content.json, sources/jira-api-delta-scenarios/r1/content.json (MOS-1306 only), historical docs/api/contracts/openapi-2026-10-15.raw and openspec/specs/skill-domain-management/spec.md. reports/ and sources/ paths relative to audit base; docs/openspec paths repository-relative.
+Scope domain zones only. Verify string widening versus business eligibility, directory evidence limitations, inactive linked-code read/update ambiguity, baseline fixed-code semantics and claimed absent active plan (bounded targeted discovery). Challenge unnecessary product blockers as well as premature approvals. Return accept/revise/reject per finding and candidate delta; distinguish evidence correction from scope activation. Exact pointers/quotes/sections required. No application implementation or all-domain audit.
+Read-only local access; no network/MCP/browser/tests/generation/nested agents or source/spec edits. Only bound reviews/R-DOMAIN-ZONES.md output. Ask supervisor on blockers; do not infer deployment or mutate main specs.

@@ -1,0 +1,27 @@
+[
+  {
+    "path": "openspec/changes/mos-1023-skill-environment-tokens/design.md",
+    "beforeSha256": "d2944e6cf270a88f90ddfb57d0d69669e28620942ee86fceff681bda0e9c04c8",
+    "afterSha256": "ad50028837f45edfac891ed598f90f1b6d92f35183580f0ce4abac140856e13e"
+  },
+  {
+    "path": "openspec/changes/mos-1023-skill-environment-tokens/tasks.md",
+    "beforeSha256": "8da3635da6e0aa46ea45b20f321b44ecce816c6dcaeec568856b011df1492c75",
+    "afterSha256": "aeab5150dd4c94fbaab8f83777ddbe26d7a7b09b9b94373976d00b45e3883342"
+  },
+  {
+    "path": "openspec/changes/mos-1031-skill-audit-history/proposal.md",
+    "beforeSha256": "59785c7c1d12d1619322c6e1af8451fa1b983193bd7ad1ff1ef9b92384fe3a8e",
+    "afterSha256": "0f822acf6dd188cd9dc21e75e1b16cd2e3e78c6cc14d781223de63982d9c8f9d"
+  },
+  {
+    "path": "openspec/changes/mos-1031-skill-audit-history/design.md",
+    "beforeSha256": "3e5b5e3f5130035ea501bbce273388fbd9ac3990cba5d82c2244b6088ffd53db",
+    "afterSha256": "45e25fe0fe9264ae5d7368d43f8387ff9232440dc53044d2f23e4e5a64303863"
+  },
+  {
+    "path": "openspec/changes/mos-1023-skill-environment-tokens/specs/skill-environment-tokens/spec.md",
+    "beforeSha256": "130aa7f19daa88428808af5ccd717482308318029a30764ecedc7985ac760ace",
+    "afterSha256": "7bf408fb93f75fb5ce4381c58feca5fdc50f697170aaacbb08b9423ed5eeaf1f"
+  }
+]

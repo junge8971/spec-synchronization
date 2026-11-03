@@ -1,0 +1,14 @@
+{
+  "revision": 5,
+  "supplements": "coverage-partial-r4.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "chains": [
+    {"issue": "MOS-1119", "report": "reports/DELTA-MOS-1119.md", "review": "reviews/R-DELTA-MOS-1119.md", "disposition": "D-016", "scope": "Six supplemental storage candidates; no implementation/runtime acceptance"},
+    {"issue": "MOS-1119", "report": "reports/DELTA-MOS-1119-TESTPLAN.md", "review": "reviews/R-DELTA-MOS-1119-TESTPLAN.md", "disposition": "D-017", "scope": "Eight test-plan documentary candidates, including unresolved updated_at source disagreement; no tests executed"}
+  ],
+  "sourceAdditions": ["sources/jira-lifecycle-details/r2/metadata.json", "sources/jira-attachment-833803/r1/metadata.json"],
+  "derivedEvidence": ["sources/api-live-status-readable/r1/metadata.json"],
+  "historicalFailedCollection": "sources/jira-lifecycle-details/r1/access-result.json",
+  "limitations": ["MOS1119 selected normalized description now collected; not a complete issue export", "Attachment833803 read but not executed", "Attachment835759 body unread", "Disabled restoration and dictionary version questions remain", "Product plans unchanged", "No index or runtime attestation", "Global coverage incomplete"]
+}

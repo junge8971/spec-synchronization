@@ -1,0 +1,17 @@
+{
+  "revision": 27,
+  "supplements": "coverage-partial-r26.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [{"report": "reports/G1-API-COLLECTION-DELTA.md", "review": "reviews/R-G1-API-COLLECTION-DELTA.md", "verdict": "ACCEPT", "decision": "D-045"}],
+  "sourceAdditions": [],
+  "dispositions": {
+    "originalApiR1Discovery": "independently unverified; separate r2 discovery evidenced",
+    "staticSwaggerTargets": "resolved within saved HTML; no additional business-document link",
+    "apiContainer241085256": "captured/classified; six named children already captured/documentarily covered",
+    "task2_4": "open; broader explanatory sufficiency separate from accepted incremental report"
+  },
+  "acceptedRootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "nextBoundedTask": "work-items/G1-JIRA-DETAIL-DOCUMENT-EDGES.md",
+  "limits": ["No duplicate collection, new attachment authority or semantic rerun", "No all-root-semantic/all-code prerequisite invented for task2.4", "Historical acquisition/hash claims remain attributed", "Global gates and historical formatting issue unresolved"]
+}

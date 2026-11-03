@@ -1,0 +1,13 @@
+{
+  "sourceId": "wiki-241082009",
+  "membershipEvidence": "sources/jira-api-delta-scenarios/r1/content.json /items/3/description (MOS-959 direct contract link)",
+  "requestedPath": "/rest/api/content/241082009?expand=body.view,version",
+  "method": "GET",
+  "collector": "parent browser page 25",
+  "result": "collection-failed",
+  "toolError": "Error: Error: Failed to fetch",
+  "httpStatus": null,
+  "retrievedAt": null,
+  "bodyCaptured": false,
+  "limitation": "Transport/tool failure; no HTTP response or content obtained. Does not establish deletion, permission denial, API absence, or source contents. No automatic retry or alternate collection performed."
+}

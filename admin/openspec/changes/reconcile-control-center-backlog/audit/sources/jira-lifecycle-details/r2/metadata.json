@@ -1,0 +1,16 @@
+{
+  "sourceId": "jira-lifecycle-details",
+  "revision": "r2",
+  "retrievedAt": "2026-10-19T07:06:01.008Z",
+  "url": "https://task.mos-team.ru/browse/MOS-1119",
+  "externalUpdatedAt": "2026-10-16T19:22:39.728+0800",
+  "contentPath": "content.md",
+  "sha256": "633abdc28221704babdf91d5cacfd7be46e1197d6fe8f3175e20e0af22caeb95",
+  "format": "selected-normalized-extraction",
+  "hashScope": "Saved UTF-8 Markdown extraction, not original response or page",
+  "provenance": "Parent browser MCP list_pages, then origin-guarded read-only same-origin Jira REST GET on page 5; inline result persisted locally. No credentials extracted.",
+  "membershipEvidence": "../../../reports/JIRA-MOS-782.md: H/children/17 and I#/items/108",
+  "completeness": "Description tables normalized; both returned comments read but only non-personal excerpts saved. Attachment metadata saved, body unread. Custom fields/changelog/MR uninspected. Other keys from failed r1 not collected in r2.",
+  "priorAttempt": "../r1/access-result.json",
+  "limitations": "No deployment, implementation or executed-test evidence. This supplements but does not replace D-015 inputs."
+}

@@ -1,0 +1,66 @@
+import type { components } from '~/shared/api/schema';
+
+export type SurfaceStats = components['schemas']['SurfaceStatsResponse'];
+export type Surface = Omit<components['schemas']['SurfaceListItemResponse'], 'stats'> & {
+  stats: SurfaceStats | null;
+};
+export type SurfaceConfigurationDetails = Pick<
+  components['schemas']['SurfaceConfigurationResponse'],
+  'greeting'
+> &
+  Partial<Omit<components['schemas']['SurfaceConfigurationResponse'], 'greeting'>>;
+export type SurfaceDetails = Pick<
+  components['schemas']['SurfaceDetailResponse'],
+  | 'id'
+  | 'name'
+  | 'configuration_name'
+  | 'type'
+  | 'domains'
+  | 'purpose'
+  | 'product_context'
+  | 'owner'
+  | 'responsible'
+  | 'channel_id'
+  | 'status'
+  | 'connection'
+  | 'stats'
+  | 'created_at'
+  | 'updated_at'
+> & {
+  configuration: SurfaceConfigurationDetails;
+  enabled_skills: SurfaceEnabledSkill[];
+};
+export type SurfaceEnabledSkill = components['schemas']['SurfaceSkillResponse'];
+export type UpdateSurfaceEnabledSkillsRequest =
+  components['schemas']['UpdateSurfaceEnabledSkillsRequest'];
+export type UpdateSurfaceEnabledSkillsResponse =
+  components['schemas']['UpdateSurfaceEnabledSkillsResponse'];
+export type SurfaceStatusResponse = components['schemas']['SurfaceStatusResponse'];
+export type UpdateSurfaceConfigurationRequest =
+  components['schemas']['UpdateSurfaceConfigurationRequest'];
+export type UpdateSurfaceConfigurationResponse =
+  components['schemas']['UpdateSurfaceConfigurationResponse'];
+export type CreateSurfaceRequest = components['schemas']['CreateSurfaceRequest'];
+export type CreateSurfaceResponse = components['schemas']['CreateSurfaceResponse'];
+// Supported UI choices; the wire contract now accepts catalog-defined strings.
+export type SurfaceStatusKey = components['schemas']['SurfaceStatusResponse']['status'];
+export type SurfaceType = 'portal' | 'portal_section' | 'mobile_application';
+export type SurfaceRegistrySort = components['schemas']['SurfaceListSort'];
+export type SurfaceLifecycleAction =
+  'sandbox' | 'publish' | 'disable' | 'enable' | 'archive' | 'restore';
+
+export type SurfaceRegistryRequest = {
+  query?: string;
+  status?: SurfaceStatusKey;
+  type?: SurfaceType;
+  sort: SurfaceRegistrySort;
+  page: number;
+  pageSize: number;
+};
+
+export type SurfaceRegistryResponse = {
+  items: Surface[];
+  total: number;
+  page: number;
+  pageSize: number;
+};

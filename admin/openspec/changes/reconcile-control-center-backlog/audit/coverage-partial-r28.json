@@ -1,0 +1,13 @@
+{
+  "revision": 28,
+  "supplements": "coverage-partial-r27.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [{"report": "reports/G1-JIRA-DETAIL-DOCUMENT-EDGES.md", "review": "reviews/R-G1-JIRA-DETAIL-DOCUMENT-EDGES.md", "verdict": "ACCEPT", "decision": "D-046"}],
+  "sourceAdditions": [],
+  "acceptedFiniteJiraSubset": {"bundles": 9, "revisions": 10, "issueRecords": 50, "wikiIds": 13, "wikiOccurrences": 40, "retainedWikiPackets": 6, "wikiCanonicalGaps": 7, "indexedJiraAttachments": 23, "savedPlanBodies": 2, "indexOnlyAttachments": 21},
+  "teamContract241080659": {"disposition": "Relevant document from independently verified allowed carrying issues; existing design source authority applies", "attempt": "chrome-devtools_list_pages timed out before page guard or GET", "pageAccessOutcome": "unknown", "newPacket": false},
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "nextBoundedTask": "work-items/G1-JIRA-SPECIAL-DOCUMENT-EDGES.md",
+  "limits": ["Jira subset not global totals or additions to root attachment counts", "No new capture, alternate transport, attachment-body or graph authority", "Two unnamed shell references remain ambiguous/unvisited", "Global source/semantic/owner/runtime gates and historical formatting issue unresolved"]
+}

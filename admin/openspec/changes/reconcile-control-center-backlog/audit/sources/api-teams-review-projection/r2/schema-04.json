@@ -1,0 +1,32 @@
+{
+  "pointer": "#/components/schemas/FullName",
+  "value": {
+    "properties": {
+      "family_name": {
+        "type": "string",
+        "title": "Family Name"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name"
+      },
+      "middle_name": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Middle Name"
+      }
+    },
+    "type": "object",
+    "required": [
+      "family_name",
+      "name"
+    ],
+    "title": "FullName"
+  }
+}

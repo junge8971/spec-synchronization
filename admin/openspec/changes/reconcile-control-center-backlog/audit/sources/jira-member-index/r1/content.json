@@ -1,0 +1,1262 @@
+{
+  "sourceId": "jira-member-index",
+  "retrievedAt": "2026-10-16T11:20:38.570Z",
+  "scope": "Observed member keys from 26 MOS-623 module parents; excludes feedback members already captured in jira-feedback",
+  "items": [
+    {
+      "key": "MOS-668",
+      "summary": "[A]. Админка. Бизнес анализ",
+      "type": "Development task",
+      "status": "Ready for review",
+      "updated": "2026-10-09T15:03:44.887+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-659",
+      "summary": "[B] Проработать контракт входа и управления сессией",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-17T15:04:02.420+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-660",
+      "summary": "[B] Описать контракт управления сотрудниками",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-17T15:17:20.428+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-661",
+      "summary": "[B] Описать контракты сервиса аудита",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-09T15:03:30.348+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-664",
+      "summary": "[FE] Подключение библиотек",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-17T23:08:13.111+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-666",
+      "summary": "[FE] настроить maki",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-09T15:06:51.629+0800",
+      "subtasks": [
+        {
+          "key": "MOS-1053",
+          "summary": "Ошибка 404 при открытии разделов админки по прямой ссылке",
+          "status": "CLOSED"
+        }
+      ]
+    },
+    {
+      "key": "MOS-665",
+      "summary": "[FE] Настроить pre-commit hooks",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-10T13:55:20.628+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-663",
+      "summary": "[FE] Старт шаблона фронтенд проекта",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-10T13:55:32.794+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-646",
+      "summary": "[B] Проанализировать методы интеграции с внутренним СУДИР",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-03T20:20:07.101+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-669",
+      "summary": "[A]. Центр управления. Подготовка json для навыков, диалогов и отчётов для интегарции с ЕСК",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-09T15:05:39.908+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-672",
+      "summary": "[FE] Создание шапки админки",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-22T21:33:47.993+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-673",
+      "summary": "[FE] Создание навигации админки",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-23T17:21:47.836+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-674",
+      "summary": "[FE] Создания механизма хлебных крошер",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-22T21:44:47.949+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-685",
+      "summary": "[B] Описать контракт управления командами",
+      "type": "Development task",
+      "status": "Review",
+      "updated": "2026-10-09T15:05:05.177+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-699",
+      "summary": "[A] Центр управления. Подготовка модели источников и потребителей данных ",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-09T15:04:23.208+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-717",
+      "summary": "[B] Подготовить контракты управления глобальными модулями ассистента",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-15T15:13:58.701+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-754",
+      "summary": "[B] Подготовить контракты заглушек, баннеров и технических работ",
+      "type": "Development task",
+      "status": "Review",
+      "updated": "2026-10-09T15:06:44.968+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-755",
+      "summary": "[B] Подготовить каркас репозитория системы управления цам",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-13T14:16:29.221+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-767",
+      "summary": "[An] Создать Q key results  ",
+      "type": "System Analytics",
+      "status": "Draft is Ready",
+      "updated": "2026-10-09T15:03:48.868+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-904",
+      "summary": "[FE][Общая оболочка] Доработать шапку и навигацию под Центр управления",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:04:05.422+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-905",
+      "summary": "[FE][Общая оболочка] Доработать маршруты, вкладки и хлебные крошки",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:04:08.569+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-923",
+      "summary": "[FE][Эксплуатация] Реализовать окна технических работ",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-15T14:46:40.107+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-961",
+      "summary": "[FE][Песочница] Реализовать чат, трассировку и историю проверок песочницы",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-15T14:47:13.597+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-922",
+      "summary": "[FE][Эксплуатация] Реализовать библиотеку заглушек и редактирование текстов",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-15T14:46:44.693+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-962",
+      "summary": "[FE][Песочница] Подключить синхронизацию и перевыпуск токена песочницы",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-15T14:46:47.097+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-960",
+      "summary": "[FE][Песочница] Создать контекст песочницы навыка и поверхности",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-15T14:46:55.374+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-920",
+      "summary": "[FE][Эксплуатация] Реализовать управление глобальными модулями ассистента",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-15T14:46:59.601+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1049",
+      "summary": "[FE] Добавить моки и обновить контракты в проекте ",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-09T15:03:56.427+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1142",
+      "summary": "[B] Реализовать generic решение для отображения контентных разделов админ-панели",
+      "type": "Development task",
+      "status": "Hold",
+      "updated": "2026-10-13T14:28:14.573+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-927",
+      "summary": "[FE][Авторизация и моки] Подключить MPMM-сессию и доступность UI по permissions",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-12T20:34:21.131+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1009",
+      "summary": "[B] Реализовать API проверки разрешения в МПММ",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:03:27.160+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1024",
+      "summary": "[B] Использование API проверки разрешений и профиля МПММ в ЦАМ",
+      "type": "Development task",
+      "status": "Testing",
+      "updated": "2026-10-16T14:17:13.637+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1029",
+      "summary": "[B] Реализовать API получения профиля в МПММ",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-15T15:11:14.790+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1034",
+      "summary": "[B] Реализовать API получения информации о текущем пользователе в ЦАМ",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:05:31.528+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-756",
+      "summary": "Тестовая задача",
+      "type": "System Analytics",
+      "status": "Cancel",
+      "updated": "2026-10-01T21:22:05.784+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-670",
+      "summary": "[B] Описать модель ролей и каталог разрешений",
+      "type": "Development task",
+      "status": "Ready for review",
+      "updated": "2026-10-09T15:03:51.653+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-671",
+      "summary": "[B] Описать внутренний контракт проверки доступа",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-13T14:20:07.145+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-912",
+      "summary": "[B] Расширить ролевую модель в МПММ",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:04:11.205+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-836",
+      "summary": "[B] Реализовать модуль \"Команды\"",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:07:10.322+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-931",
+      "summary": "[B] Реализовать получение списка пользователей ЦАМ ",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:05:35.272+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1032",
+      "summary": "[FE][Команды] Создать список и обзор команд",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:05:45.747+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1033",
+      "summary": "[FE][Команды] Создать команду и управлять её составом",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:05:23.793+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-903",
+      "summary": "[B] Реализовать API приема событий в МПММ",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:04:02.033+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-908",
+      "summary": "[B] Реализовать отправку событий аудита из ЦАМ в МПММ",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:03:52.967+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-816",
+      "summary": "[B] Реализовать модуль управления состоянием модулей платформы",
+      "type": "Development task",
+      "status": "Ready for retest",
+      "updated": "2026-10-14T15:09:34.720+0800",
+      "subtasks": [
+        {
+          "key": "MOS-1150",
+          "summary": "data.items возвращает данные только по одному модулю при запросе реестра модулей",
+          "status": "Ready for test"
+        }
+      ]
+    },
+    {
+      "key": "MOS-703",
+      "summary": "[B] Описать контракты поиска диалогов и просмотра карточки диалога",
+      "type": "Development task",
+      "status": "Review",
+      "updated": "2026-10-09T15:04:01.076+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-889",
+      "summary": "[B] Реализовать модуль \"Диалоги\"",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:08:46.969+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1037",
+      "summary": "[FE][Диалоги] Реализовать реестр диалогов нового прототипа",
+      "type": "Development task",
+      "status": "Testing",
+      "updated": "2026-10-16T18:15:19.254+0800",
+      "subtasks": [
+        {
+          "key": "MOS-1411",
+          "summary": "Отображение кнопки \"Сбросить\" по дефолту",
+          "status": "Backlog"
+        },
+        {
+          "key": "MOS-1412",
+          "summary": "Отсутствует красная точка перед обращением со сбоем обработки",
+          "status": "Backlog"
+        },
+        {
+          "key": "MOS-1414",
+          "summary": "Отсутствует текст \"и идёт\" при незавершенном диалоге в столбце \"Время\" ",
+          "status": "Backlog"
+        },
+        {
+          "key": "MOS-1419",
+          "summary": "Текст \"Нет оценки\" при отсутствии оценки работы оператора",
+          "status": "Backlog"
+        },
+        {
+          "key": "MOS-1422",
+          "summary": "Отсутствуют кнопки сортировки по завершению, поверхности, оценки, времени",
+          "status": "Backlog"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1038",
+      "summary": "[FE][Диалоги] Создать конструктор условий отбора диалогов",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:06:43.227+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1040",
+      "summary": "[FE][Диалоги] Добавить сохранённые фильтры и ссылку на отбор",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:06:48.818+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1041",
+      "summary": "[FE][Диалоги] Создать карточку диалога и переписку с вложениями",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:06:14.020+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1042",
+      "summary": "[FE][Диалоги] Добавить оценки ответов и объяснение источников в диалоге",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:06:21.500+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1043",
+      "summary": "[FE][Диалоги] Реализовать маршрут обращения и действия операторов",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:06:23.498+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1044",
+      "summary": "[FE][Диалоги] Добавить изменение категорий диалога",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:07:03.053+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1045",
+      "summary": "[FE][Диалоги] Реализовать выгрузку диалогов, сообщений и выбранных записей",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:07:08.524+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1211",
+      "summary": "Реализовать выгрузку диалогов",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-15T15:49:54.949+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-675",
+      "summary": "[FE][Навыки] Создание шапки страницы",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-22T21:54:23.623+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-676",
+      "summary": "[FE][Навыки] Создать уведомление и фильтры",
+      "type": "Development task",
+      "status": "Require improvement",
+      "updated": "2026-10-09T15:04:19.424+0800",
+      "subtasks": [
+        {
+          "key": "MOS-1050",
+          "summary": "Выпадающий список фильтра навыков смещается относительно поля фильтра при раскрытии",
+          "status": "Backlog"
+        },
+        {
+          "key": "MOS-1051",
+          "summary": "Неверное склонение количества отфильтрованных навыков",
+          "status": "Backlog"
+        }
+      ]
+    },
+    {
+      "key": "MOS-677",
+      "summary": "[FE][Навыки] Создать таблицу отображения навыков",
+      "type": "Development task",
+      "status": "Require improvement",
+      "updated": "2026-10-09T15:04:14.473+0800",
+      "subtasks": [
+        {
+          "key": "MOS-1052",
+          "summary": "Нет сортировки реестра навыков по названию, домену, количеству и дате",
+          "status": "Backlog"
+        }
+      ]
+    },
+    {
+      "key": "MOS-701",
+      "summary": "[B] Подготовить контракты реестра доменов и каталога навыков",
+      "type": "Development task",
+      "status": "Review",
+      "updated": "2026-10-09T15:07:29.990+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-944",
+      "summary": "[FE][Навыки] Доработать обзор и редактирование карточки навыка",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-16T19:20:14.349+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-945",
+      "summary": "[FE][Навыки] Доработать вкладку обучающих фраз навыка",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:05:32.196+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1018",
+      "summary": "[FE][Навыки] Подключить проверку конфликтов обучающих фраз",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-16T19:20:13.428+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1019",
+      "summary": "[FE][Навыки] Доработать проверки, обучение модели и автотесты навыка",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:04:22.458+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1020",
+      "summary": "[FE][Навыки] Реализовать очередь ревью и решение по навыку",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:04:25.679+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1021",
+      "summary": "[FE][Навыки] Добавить массовый выкат навыков из реестра",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:04:32.582+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1022",
+      "summary": "[FE][Навыки] Подключить параметры реализации навыка",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:04:53.104+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1023",
+      "summary": "[FE][Навыки] Подключить токены навыка по контурам",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-16T19:20:12.745+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1025",
+      "summary": "[FE][Навыки] Реализовать мониторинг показателей и свежести навыка",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-16T19:20:14.618+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1026",
+      "summary": "[FE][Навыки] Показать ответственных, внешние зависимости и инциденты навыка",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-16T19:20:13.648+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1027",
+      "summary": "[FE][Навыки] Добавить глобальное отключение и включение навыка",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-13T19:04:55.072+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1030",
+      "summary": "[FE][Навыки] Добавить аналитику результата в обзор навыка",
+      "type": "Development task",
+      "status": "Hold",
+      "updated": "2026-10-09T15:05:17.041+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1031",
+      "summary": "[FE][Навыки] Подключить историю изменений карточек к аудиту",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-16T19:20:12.957+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1409",
+      "summary": "[B] CSV-экспорт списка навыков",
+      "type": "Development task",
+      "status": "Development",
+      "updated": "2026-10-16T17:33:09.886+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1146",
+      "summary": "[B] Добавить хранение и отображение инцидентов навыка",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-12T14:56:06.450+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1397",
+      "summary": "[B] Мониторинг навыка",
+      "type": "Development task",
+      "status": "Development",
+      "updated": "2026-10-16T19:20:13.916+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1398",
+      "summary": "[B] Ответственные по навыку",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-15T17:04:57.918+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1145",
+      "summary": "[B] Реализовать отключение и повторное включение навыка",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T17:28:57.640+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-885",
+      "summary": "[B] Реализовать модуль \"Отчеты\"",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-16T19:20:12.520+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-916",
+      "summary": "[FE][Отчёты] Показать шаблоны отчётов и запуск в конструкторе",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-15T14:16:19.727+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-919",
+      "summary": "[FE][Отчёты] Подключить CSV-выгрузку из конструктора отчётов",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-15T14:16:14.331+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1015",
+      "summary": "[FE][Отчёты] Создать конструктор отчёта с расширенным отбором",
+      "type": "Development task",
+      "status": "Hold",
+      "updated": "2026-10-09T15:04:04.263+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1016",
+      "summary": "[FE][Отчёты] Сохранить отчёт как шаблон с расписанием",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:04:07.048+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-734",
+      "summary": "[B] Описать контракт страницы \"Дашборд\"",
+      "type": "Development task",
+      "status": "Review",
+      "updated": "2026-10-09T15:04:35.974+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-818",
+      "summary": "[B] Реализовать модуль \"Дашборды\"",
+      "type": "Development task",
+      "status": "Testing",
+      "updated": "2026-10-09T15:03:46.554+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-915",
+      "summary": "[FE][Дашборд] Показать недоступные виджеты и причины отсутствия данных",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-15T14:47:06.054+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1011",
+      "summary": "[FE][Дашборд] Создать дашборд с периодом, каналом и обновлением данных",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:03:37.175+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1012",
+      "summary": "[FE][Дашборд] Реализовать настройку личной доски дашборда",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:03:41.168+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1013",
+      "summary": "[FE][Дашборд] Расширить метрики дашборда под оценки нового прототипа",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:03:44.322+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-713",
+      "summary": "[B] Подготовить контракты шаблонов отчётов, конструктора, выгрузок и расписания",
+      "type": "Development task",
+      "status": "Review",
+      "updated": "2026-10-09T15:06:30.638+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-890",
+      "summary": "[B] Реализовать модуль \"Технические работы\"",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-13T14:18:08.905+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-802",
+      "summary": "[B] Модель навыка",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-16T18:08:11.814+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-803",
+      "summary": "[B] Модель интентов",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-16T18:08:14.028+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-804",
+      "summary": "[B] Модель конфликтов",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-16T18:08:20.184+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-805",
+      "summary": "[B] Реестр навыков",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-16T18:08:26.665+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-806",
+      "summary": "[B] Карточка навыка",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-16T18:08:31.129+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-811",
+      "summary": "[B] История изменения навыков",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:08:19.171+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-809",
+      "summary": "[B] Управление интентами",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:08:35.352+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-808",
+      "summary": "[B] Изменение статуса навыка",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-16T14:16:08.544+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-807",
+      "summary": "[B] Редактирование навыка",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-15T14:38:33.569+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-810",
+      "summary": "[B] Статистика навыка",
+      "type": "Development task",
+      "status": "Hold",
+      "updated": "2026-10-09T15:08:24.131+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-859",
+      "summary": "[B] Реализовать модуль \"Домены и навыки\"",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-13T21:35:28.306+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-907",
+      "summary": "[FE][Навыки] Доработать шапку каталога и реальные вкладки навыков",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:03:47.700+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-909",
+      "summary": "[FE][Навыки] Подключить жизненный цикл и одиночный выкат навыка",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:03:58.003+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-935",
+      "summary": "[FE][Навыки] Реализовать реестр, создание и редактирование доменов",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:05:45.382+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-942",
+      "summary": "[FE][Навыки] Создать мастер регистрации навыка",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:05:48.352+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-929",
+      "summary": "[FE][Навыки] Подключить реестр навыков к API и расширить таблицу",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:05:22.114+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-933",
+      "summary": "[FE][Навыки] Доработать фильтры и уведомления каталога навыков",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:05:40.689+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1119",
+      "summary": "[B] Хранение статусов и истории переходов навыка",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:04:31.809+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1120",
+      "summary": "[B] Хранение статусов и истории переходов навыка",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-09T15:04:35.341+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1141",
+      "summary": "[B] Реализовать эндпоинт для проверки конфликтов обучающих фраз по реестру навыков",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-12T20:10:06.627+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1153",
+      "summary": "[B] Добавить автоматический выпуск токенов навыка по контурам",
+      "type": "Development task",
+      "status": "Review",
+      "updated": "2026-10-12T16:03:02.851+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1157",
+      "summary": "[B] Привести модель навыка к целевой модели данных",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-13T18:05:35.223+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1245",
+      "summary": "[B] Реализовать хранение и автоматическую актуализацию проверок навыка",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-16T15:32:20.848+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1306",
+      "summary": "[B] Перенести зоны домена из domains.zones в skill_domain_zones",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-16T17:06:48.457+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1381",
+      "summary": "[B] Ревью навыков",
+      "type": "Development task",
+      "status": "Development",
+      "updated": "2026-10-16T19:20:14.172+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-707",
+      "summary": "[FE][Поверхности] Создание страницы",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-24T17:18:32.529+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-708",
+      "summary": "[FE][Поверхности] фильтры и пагинация",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-09T15:05:07.714+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-709",
+      "summary": "[FE][Поверхности] Добавление поверхности",
+      "type": "Development task",
+      "status": "Require improvement",
+      "updated": "2026-10-09T15:05:22.838+0800",
+      "subtasks": [
+        {
+          "key": "MOS-1110",
+          "summary": "Выпадающий список типа поверхности смещается относительно поля фильтра при раскрытии",
+          "status": "Backlog"
+        },
+        {
+          "key": "MOS-1164",
+          "summary": "Не обрезается длинный идентификатор поверхности в разделе добавления поверхности",
+          "status": "Backlog"
+        },
+        {
+          "key": "MOS-1165",
+          "summary": "Выпадающий список выбора владельца поверхности смещается относительно поля  при раскрытии",
+          "status": "Backlog"
+        },
+        {
+          "key": "MOS-1166",
+          "summary": "Не обрезается длинное описание навыка в разделе добавления поверхности",
+          "status": "Backlog"
+        },
+        {
+          "key": "MOS-1167",
+          "summary": "Не появляются адреса канала при вводе домена в разделе добавления поверхности",
+          "status": "Backlog"
+        }
+      ]
+    },
+    {
+      "key": "MOS-712",
+      "summary": "[B] Подготовить контракты регистрации и конфигурирования поверхностей",
+      "type": "Development task",
+      "status": "Review",
+      "updated": "2026-10-09T15:06:54.796+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-901",
+      "summary": "[B] Реализовать модуль \"Поверхности\"",
+      "type": "Development task",
+      "status": "Require improvement",
+      "updated": "2026-10-16T19:20:13.190+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-910",
+      "summary": "[FE][Поверхности] Доработать список поверхностей и подключить серверные фильтры",
+      "type": "Development task",
+      "status": "Testing",
+      "updated": "2026-10-09T15:04:29.281+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-911",
+      "summary": "[FE][Поверхности] Реализовать выбор сценариев и параметры навыков поверхности",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:04:32.758+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-913",
+      "summary": "[FE][Поверхности] Создать обзор и подключение поверхности",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:04:13.786+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-914",
+      "summary": "[FE][Поверхности] Подключить переходы состояния поверхности",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-14T20:38:47.150+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-958",
+      "summary": "[FE][Поверхности] Доработать мастер поверхности и подключить регистрацию",
+      "type": "Development task",
+      "status": "Hold",
+      "updated": "2026-10-14T20:44:01.006+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-959",
+      "summary": "[FE][Поверхности] Реализовать конфигуратор оформления и контента поверхности",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-16T19:20:11.528+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-976",
+      "summary": "[B] Добавить валидацию навыков при создании/изменении поверхности",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:08:10.713+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1130",
+      "summary": "[B] Реализовать эндпоинт для получения плейсхолдеров в приветствии",
+      "type": "Development task",
+      "status": "Backlog",
+      "updated": "2026-10-16T19:20:15.049+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1178",
+      "summary": "[B] Перенести справочники конфигурации поверхности в БД",
+      "type": "Development task",
+      "status": "Review",
+      "updated": "2026-10-16T15:00:48.479+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1237",
+      "summary": "[B] Добавить валидацию значений параметров в запросе обновления конфигурации поверхности",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-16T15:31:51.977+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1308",
+      "summary": "[B] Перенести типы и статусы поверхности в справочники БД",
+      "type": "Development task",
+      "status": "Review",
+      "updated": "2026-10-16T17:28:19.004+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1336",
+      "summary": "[B] Актуализировать создание поверхности",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-15T20:50:28.715+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1407",
+      "summary": "[B] CSV-экспорт списка поверхностей",
+      "type": "Development task",
+      "status": "Development",
+      "updated": "2026-10-16T17:33:09.299+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-704",
+      "summary": "[FA][Докс] Создать раздел в навигации и страницу документации",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-14T13:51:02.451+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-705",
+      "summary": "[FE][Докс] Сверстать разделы документации ",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-10-14T14:31:18.164+0800",
+      "subtasks": [
+        {
+          "key": "MOS-1054",
+          "summary": "Нет автоскролла к статье после ее выбора из списка в разделе документации на мобильном разрешении",
+          "status": "CLOSED"
+        }
+      ]
+    },
+    {
+      "key": "MOS-706",
+      "summary": "[FE][Докс] Реализовать поиск по документации",
+      "type": "Development task",
+      "status": "CLOSED",
+      "updated": "2026-09-24T14:50:23.637+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-906",
+      "summary": "[FE][Документация] Завершить поиск по документации и сохранить результат в URL",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-13T21:33:56.235+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1321",
+      "summary": "[B] Реализовать раздел \"Справочники\"",
+      "type": "Development task",
+      "status": "Hold",
+      "updated": "2026-10-14T14:03:49.652+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1399",
+      "summary": "[B] Актуализировать справочники для справочников",
+      "type": "Development task",
+      "status": "Hold",
+      "updated": "2026-10-15T19:28:04.537+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1322",
+      "summary": "[B] Реализовать раздел \"База знаний\"",
+      "type": "Development task",
+      "status": "Hold",
+      "updated": "2026-10-14T14:03:51.688+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1362",
+      "summary": "[FE][База знаний] Реализовать раздел управления материалами как отключаемый модуль",
+      "type": "Development task",
+      "status": "Ready for test",
+      "updated": "2026-10-14T18:14:20.314+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1323",
+      "summary": "[B] Реализовать раздел \"A/B Эксперименты\"",
+      "type": "Development task",
+      "status": "Hold",
+      "updated": "2026-10-14T14:03:53.543+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1384",
+      "summary": "[FE][A/B тестирование] Реализовать раздел управления экспериментами",
+      "type": "Development task",
+      "status": "Review",
+      "updated": "2026-10-15T18:18:14.860+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1387",
+      "summary": "[B] Реализовать раздел \"Шаблоны ответов\"",
+      "type": "Development task",
+      "status": "Hold",
+      "updated": "2026-10-16T19:20:12.207+0800",
+      "subtasks": []
+    },
+    {
+      "key": "MOS-1386",
+      "summary": "[B] Реализовать раздел \"API\"",
+      "type": "Development task",
+      "status": "Hold",
+      "updated": "2026-10-15T18:08:32.599+0800",
+      "subtasks": []
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "sourceId": "jira-sandbox-details",
+  "retrievedAt": "2026-10-16T13:18:06.195Z",
+  "allowlist": [
+    "MOS-960",
+    "MOS-961",
+    "MOS-962"
+  ],
+  "items": [
+    {
+      "key": "MOS-960",
+      "retrievedAt": "2026-10-16T13:18:06.051Z",
+      "summary": "[FE][Песочница] Создать контекст песочницы навыка и поверхности",
+      "description": "Реализовать страницу стенда для выбранного навыка или поверхности.\r\nПоказать endpoint, доступный контур, состав сценариев, приветствие и состояние синхронизации.\r\nНужна серверная модель тестовой сессии и привязка к проверяемой версии. Переход поверхности в status=sandbox не описывает запуск чата.\r\n\r\nВозможные проблемы:\r\nв API не определены: сессия песочницы, контекст навыка/поверхности, версия конфигурации и состояние стенда\r\n\r\nКонтракты: \r\nhttps://wiki.mos-team.ru/spaces/KR/pages/241097511/API-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82+%D1%80%D0%B5%D0%B5%D1%81%D1%82%D1%80%D0%B0+%D0%B4%D0%BE%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2+%D0%B8+%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D0%B0+%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%BE%D0%B2\r\nhttps://wiki.mos-team.ru/spaces/KR/pages/241082009/API-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82+%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%85%D0%BD%D0%BE%D1%81%D1%82%D1%8F%D0%BC%D0%B8",
+      "issuetype": "Development task",
+      "status": "Backlog",
+      "parent": null,
+      "updated": "2026-10-15T14:46:55.374+0800",
+      "subtasks": [],
+      "attachments": [],
+      "comments": {
+        "startAt": 0,
+        "maxResults": 0,
+        "total": 0,
+        "items": []
+      }
+    },
+    {
+      "key": "MOS-961",
+      "retrievedAt": "2026-10-16T13:18:06.118Z",
+      "summary": "[FE][Песочница] Реализовать чат, трассировку и историю проверок песочницы",
+      "description": "Создать чат с вводом и примерами запросов, состояниями отправки и ответа. \r\nПоказать определённую группу/интент, домен, навык, confidence, этику и время этапов.\r\nИстория проверки хранит время, автора, результат и версию.\r\nСогласовать transport и формат событий; HTTP/WebSocket/SSE заранее не навязывать.\r\nОтветы не выбирать локально из трёх строк, как в HTML.",
+      "issuetype": "Development task",
+      "status": "Backlog",
+      "parent": null,
+      "updated": "2026-10-15T14:47:13.597+0800",
+      "subtasks": [],
+      "attachments": [],
+      "comments": {
+        "startAt": 0,
+        "maxResults": 0,
+        "total": 0,
+        "items": []
+      }
+    },
+    {
+      "key": "MOS-962",
+      "retrievedAt": "2026-10-16T13:18:06.194Z",
+      "summary": "[FE][Песочница] Подключить синхронизацию и перевыпуск токена песочницы",
+      "description": "Подключить реальную команду синхронизации с версией, временем и результатом.\r\nДо подтверждения не показывать постоянное «Синхронизирован».\r\nПеревыпуск должен получать новый токен и подтверждённый отзыв старого.\r\nОтключённые модули и навыки влияют на тестовый стенд; UI показывает актуальное предупреждение.\r\nСогласовать доступ к этой операции по ролям.\r\n\r\nВозможные проблемы:\r\nв API не определены: синхронизация стенда с продом, её прогресс и перевыпуск с отзывом прежнего sandbox-токена",
+      "issuetype": "Development task",
+      "status": "Backlog",
+      "parent": null,
+      "updated": "2026-10-15T14:46:47.097+0800",
+      "subtasks": [],
+      "attachments": [],
+      "comments": {
+        "startAt": 0,
+        "maxResults": 0,
+        "total": 0,
+        "items": []
+      }
+    }
+  ],
+  "limitations": [
+    "custom fields not collected",
+    "attachment bodies not collected",
+    "comments pagination as reported"
+  ]
+}

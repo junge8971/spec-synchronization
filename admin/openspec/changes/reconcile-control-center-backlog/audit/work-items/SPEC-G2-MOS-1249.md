@@ -1,0 +1,11 @@
+# SPEC-G2-MOS-1249
+
+Status: assigned. Owner: fresh Astra medium OpenSpec analyst. Output reports/SPEC-G2-MOS-1249.md. Independent reviewer: fresh planning reviewer, reviews/R-SPEC-G2-MOS-1249.md. Parent owns acceptance. HEAD bc0d9800f25a90989b9c73c76f91996f8300f1d3. Dependencies existing change/D002/D060; independent of parallel API/implementation lanes.
+
+Read complete governing reconcile-control-center-backlog proposal/design/spec/tasks. Read complete mos-1249-feedback-api proposal/design/tasks and every delta spec (enumerate this change); related main control-center-api-integration/control-center-http/control-center-permissions specs. Audit inputs: reviews/R-MOS-1250.md, reports/JIRA-MOS-1246.md and sources/jira-feedback/r1/content.json item2 with metadata. Follow only relevant archive decisions identified by this change. Before interpreting auth/demo read complete proposal/design/specs of archive/2026-10-09-integrate-mpmm-auth-permissions and archive/2026-10-09-add-local-session-demo; preserve approved policy.
+
+Parent verified current files. Hashes within mos-1249-feedback-api: proposal 5cc397bd1aab8722961df260fbc16216069816d3fe02d2a82eab09b9e41506ac; design 0b15bcebfea15e35aca35a90c835a00efd892bb9a962fc16401892ca6017d91d; tasks 21dbfcf3e2d71406070ee374fbb77c76955928326297ec0ca97af4690a2354dd; specs/feedback-api/spec.md a783836ee1f191457d5331e87e2befaf809740fe39125ab302457645b9a591a3. Record additional actual input hashes.
+
+Acceptance: requirement→scenario/task/owner mapping for this single change, actual contradictions versus temporal/dependency qualifications, correction/no-op candidates with exact locators. Specifically inspect export supplementation versus unavailable-handler wording without predetermined finding. Pending ManagedResource mapping already exists: do not invent wildcard-vs-ManagedResource approval blocker. No full feedback analysis, schema recensus, implementation analysis or repeated MOS1250 review.
+
+Local read-only, configured report output only. No project/source edits, network/browser/credentials/execution/tests/build/nested delegation. Missing or changed inputs and material product-approval questions stop affected finding for parent decision. No feature closure, main-spec sync or policy changes. Return actual read boundaries and unresolved questions.

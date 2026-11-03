@@ -1,0 +1,47 @@
+{
+  "revision": 23,
+  "supplements": "coverage-partial-r22.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [
+    {"report": "reports/DELTA-KNOWLEDGE-BASE-ROOT-DOC.md", "review": "reviews/R-DELTA-KNOWLEDGE-BASE-ROOT-DOC.md", "candidates": "KBROOT01–07", "verdict": "ACCEPT", "decision": "D-041"},
+    {"report": "reports/DELTA-AB-TESTING-ROOT-DOC.md", "review": "reviews/R-DELTA-AB-TESTING-ROOT-DOC.md", "candidates": "ABROOT01–08", "verdict": "ACCEPT", "decision": "D-041"}
+  ],
+  "sourceAdditions": [
+    "sources/wiki-241102892/r1/metadata.json",
+    "sources/wiki-238329164/r1/metadata.json",
+    "sources/wiki-238333356/r1/metadata.json",
+    "sources/wiki-241080100/r1/metadata.json"
+  ],
+  "capture": {
+    "authority": "Existing root auth/access batch; D-041; approved auth prerequisites reread before collection",
+    "transport": "Fresh browser discovery/root href/origin/absent-packet checks",
+    "versions": [7, 13, 7, 1],
+    "httpStatuses": [200, 200, 200, 200],
+    "bodyFormat": "Full bodyView plus separately returned attachment indexes",
+    "attachmentCounts": [0, 0, 0, 0],
+    "nextPointers": [null, null, null, null],
+    "redactions": [0, 0, 0, 0],
+    "integrity": "Parent canonical/derived SHA256 and exact chunk roundtrip",
+    "semanticAcceptance": "pending",
+    "safety": "Documentation only; no token/storage access, auth/business request or source execution"
+  },
+  "parentComputedRootCounts": {
+    "capturedBodyOrExtraction": 42,
+    "withoutCanonicalPacket": 0,
+    "returnedIndexes": 41,
+    "knownIndexedAttachments": 34,
+    "knownIndexedUnreadBodies": 30,
+    "note": "Includes three containers, image-only overview and flattened feedback; feedback index absent.42 packets is not full substantive source/attachment/semantic completeness.Independent final incremental ledger review still needed."
+  },
+  "pendingAnalysis": [
+    "work-items/DELTA-AUTH-SESSION-ROOT-DOC.md",
+    "work-items/DELTA-ACCESS-ROLES-ROOT-DOCS.md"
+  ],
+  "limits": [
+    "No new auth approval/model/grants, source precedence or current enforcement/runtime verification",
+    "Root child captures do not settle related Jira bodies/attachments/explanatory-document coverage",
+    "Feedback index, unread attachments and other structural/semantic/owner/implementation gaps remain",
+    "Historical formatting failure and global tasks2.3/2.4/2.6 unresolved"
+  ]
+}

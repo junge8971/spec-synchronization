@@ -1,0 +1,44 @@
+{
+  "pointer": "#/components/schemas/TeamMutationResponse",
+  "value": {
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid",
+        "title": "Id"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name"
+      },
+      "department_name": {
+        "type": "string",
+        "title": "Department Name"
+      },
+      "member_count": {
+        "type": "integer",
+        "title": "Member Count"
+      },
+      "created_at": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Created At"
+      },
+      "updated_at": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Updated At"
+      }
+    },
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "department_name",
+      "member_count",
+      "created_at",
+      "updated_at"
+    ],
+    "title": "TeamMutationResponse"
+  }
+}

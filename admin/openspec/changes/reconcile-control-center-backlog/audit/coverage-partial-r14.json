@@ -1,0 +1,45 @@
+{
+  "revision": 14,
+  "supplements": "coverage-partial-r13.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "chains": [
+    {
+      "report": "reports/G1-ROOT-REGISTRY-DELTA.md",
+      "review": "reviews/R-G1-ROOT-REGISTRY-DELTA.md",
+      "disposition": "D-033",
+      "scope": "Accepted historical snapshot18/42 captured,24 missing; incremental accounting only, not semantic/global closure"
+    }
+  ],
+  "sourceAdditions": [
+    "sources/wiki-238347066/r1/metadata.json",
+    "sources/wiki-238352321/r1/metadata.json",
+    "sources/wiki-241074633/r1/metadata.json"
+  ],
+  "derivedEvidence": [
+    "sources/wiki-238347066-readable/r1/metadata.json",
+    "sources/wiki-238352321-readable/r1/metadata.json",
+    "sources/wiki-241074633-readable/r1/metadata.json"
+  ],
+  "postReviewCaptureDelta": {
+    "parentComputed": true,
+    "rootPagesWithBodyOrExtraction": 21,
+    "rootPagesWithoutCanonicalPacket": 21,
+    "returnedIndexes": 20,
+    "knownIndexedAttachments": 25,
+    "knownIndexedUnreadBodies": 21,
+    "feedbackIndex": "still missing",
+    "note": "Three new empty-index skills packets appended after accepted ledger review; not retroactive change to its cutoff"
+  },
+  "transport": "Browser rediscovery recovered; exact root hrefs/origin guarded, no alternate transport",
+  "pendingAnalysis": [
+    "work-items/DELTA-SKILL-LIST-CARD-EXAMPLES.md",
+    "work-items/DELTA-SKILL-MONITORING-EXAMPLE.md"
+  ],
+  "limitations": [
+    "Example POST/api/esk paths and auth-body fields are documentation, not approved current contracts or requests",
+    "No source execution, runtime/API compatibility or auth policy verification",
+    "Other source/attachment/explanatory-document gaps and formatting failure unresolved",
+    "No product/main-spec/archive changes or global closure"
+  ]
+}

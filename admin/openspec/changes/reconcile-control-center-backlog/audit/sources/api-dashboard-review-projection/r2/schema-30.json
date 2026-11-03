@@ -1,0 +1,19 @@
+{
+  "pointer": "#/components/schemas/WidgetCatalogResponse",
+  "value": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/components/schemas/WidgetCatalogItemResponse"
+        },
+        "type": "array",
+        "title": "Items"
+      }
+    },
+    "type": "object",
+    "required": [
+      "items"
+    ],
+    "title": "WidgetCatalogResponse"
+  }
+}

@@ -1,0 +1,14 @@
+# Remaining skill joins — seven read-only lanes
+
+Continue audit after D087; user explicitly requests further work, retains seven Astra-low parallel lanes. Parent sole project writer. Each lane produces one bounded requirements/API/spec/code/test/task join, not implementation. Read own exact member description in sources/jira-details-MOS-774/r1/content.json. Reuse accepted reports/reviews and saved wiki/API bodies; do not redo completed optional/domain/token/history/monitoring/export audits. Inspect actual assertion bodies where claiming test coverage. Main specs and archives are read-only, historical task states preserved. Current-local hashes, not git-show baselines for ignored OpenSpec.
+
+Exclusive scenario ownership:
+1. registry: MOS675/676/677; header/notification/filter/table/sorting. 1050/1051/1052 only if independently attributable saved descriptions; no infer screenshot content from filename. Record missing attachment bytes as limits, not absent implementation.
+2. contracts: MOS701; exact backend contract DoD versus saved schemas and current frontend consumption; reuse domain read correction D087, never duplicate it. Contract completeness is not frontend implementation/deployment acceptance.
+3. phrases: MOS945 group/line/comma editing, save/cancel, published retraining indication; separate MOS1018 conflict owner and model gates.
+4. implementation: MOS1022 connection fields, select options, documentation navigation, no hardcoded kb_section; separate session and transport-token gates, no new parameter types.
+5. checks: MOS1019 run/status/error/retry/current-input correlation; reuse SCENARIO-SKILL-CHECKS and lifecycle evidence, do not repeat MOS909 approved lifecycle correction.
+6. review: MOS1020 queue, five criteria, return reason/text, actor/date/status; distinguish actual backend support from mocks and visible placeholder actions.
+7. rollout: MOS1021 shown-row selection, eligible transitions, batch versus explicitly permitted bounded single commands, partial results; do not authorize fallback or infer missing batch policy.
+
+Deliver per-requirement source locator -> saved API -> main spec/archive or active owner -> actual code -> written test assertions -> disposition. Cite exact paths/lines/JSON pointers. Propose minimal warranted planning corrections (exact wording when existing owner, scoped new corrective owner only if none), distinguish no-op/unresolved owner decision. Suggest attributable U/B->P transitions only with concrete member evidence, never feature closure. Include input SHA256, actual reads/limits, HEAD, nonempty final. No edits except configured output artifact, no commits/network/browser/E2E/runtime tests/build/typegen/credentials or nested agents. No external freshness claims. One subsequent independent package review; do not launch your own review or write proposals. If source unavailable report limitation, do not fabricate requirements.

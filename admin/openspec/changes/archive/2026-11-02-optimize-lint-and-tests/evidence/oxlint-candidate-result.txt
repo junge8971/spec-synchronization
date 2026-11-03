@@ -1,0 +1,514 @@
+{
+  "plugins": [
+    "react",
+    "typescript",
+    "import",
+    "jsx-a11y"
+  ],
+  "categories": {
+    "correctness": "allow"
+  },
+  "rules": {
+    "class-methods-use-this": [
+      "deny",
+      [
+        {
+          "enforceForClassFields": true,
+          "exceptMethods": [
+            "render",
+            "componentDidMount",
+            "componentDidUpdate",
+            "componentWillUnmount",
+            "componentDidCatch",
+            "shouldComponentUpdate",
+            "getSnapshotBeforeUpdate"
+          ],
+          "ignoreOverrideMethods": false
+        }
+      ]
+    ],
+    "complexity": [
+      "warn",
+      [
+        10
+      ]
+    ],
+    "for-direction": "deny",
+    "no-array-constructor": "deny",
+    "no-async-promise-executor": "deny",
+    "no-case-declarations": "deny",
+    "no-compare-neg-zero": "deny",
+    "no-cond-assign": [
+      "deny",
+      [
+        "except-parens"
+      ]
+    ],
+    "no-constant-binary-expression": "deny",
+    "no-constant-condition": [
+      "deny",
+      [
+        {
+          "checkLoops": "allExceptWhileTrue"
+        }
+      ]
+    ],
+    "no-control-regex": "deny",
+    "no-debugger": "deny",
+    "no-delete-var": "deny",
+    "no-dupe-else-if": "deny",
+    "no-duplicate-case": "deny",
+    "no-empty": [
+      "deny",
+      [
+        {
+          "allowEmptyCatch": false
+        }
+      ]
+    ],
+    "no-empty-character-class": "deny",
+    "no-empty-function": [
+      "deny",
+      [
+        {
+          "allow": []
+        }
+      ]
+    ],
+    "no-empty-pattern": [
+      "deny",
+      [
+        {
+          "allowObjectPatternsAsParameters": false
+        }
+      ]
+    ],
+    "no-empty-static-block": "deny",
+    "no-ex-assign": "deny",
+    "no-extra-boolean-cast": [
+      "deny",
+      [
+        {}
+      ]
+    ],
+    "no-fallthrough": [
+      "deny",
+      [
+        {
+          "allowEmptyCase": false,
+          "reportUnusedFallthroughComment": false
+        }
+      ]
+    ],
+    "no-global-assign": [
+      "deny",
+      [
+        {
+          "exceptions": []
+        }
+      ]
+    ],
+    "no-invalid-regexp": [
+      "deny",
+      [
+        {}
+      ]
+    ],
+    "no-irregular-whitespace": [
+      "deny",
+      [
+        {
+          "skipComments": false,
+          "skipJSXText": false,
+          "skipRegExps": false,
+          "skipStrings": true,
+          "skipTemplates": false
+        }
+      ]
+    ],
+    "no-loss-of-precision": "deny",
+    "no-misleading-character-class": [
+      "deny",
+      [
+        {
+          "allowEscape": false
+        }
+      ]
+    ],
+    "no-nonoctal-decimal-escape": "deny",
+    "no-param-reassign": [
+      "deny",
+      [
+        {
+          "props": true,
+          "ignorePropertyModificationsFor": [
+            "state"
+          ]
+        }
+      ]
+    ],
+    "no-prototype-builtins": "deny",
+    "no-regex-spaces": "deny",
+    "no-self-assign": [
+      "deny",
+      [
+        {
+          "props": true
+        }
+      ]
+    ],
+    "no-shadow-restricted-names": [
+      "deny",
+      [
+        {
+          "reportGlobalThis": false
+        }
+      ]
+    ],
+    "no-sparse-arrays": "deny",
+    "no-unsafe-finally": "deny",
+    "no-unsafe-optional-chaining": [
+      "deny",
+      [
+        {
+          "disallowArithmeticOperators": false
+        }
+      ]
+    ],
+    "no-unused-expressions": [
+      "deny",
+      [
+        {
+          "allowShortCircuit": false,
+          "allowTaggedTemplates": false,
+          "allowTernary": false
+        }
+      ]
+    ],
+    "no-unused-labels": "deny",
+    "no-unused-private-class-members": "deny",
+    "no-unused-vars": "deny",
+    "no-useless-backreference": "deny",
+    "no-useless-catch": "deny",
+    "no-useless-constructor": "deny",
+    "no-useless-escape": [
+      "deny",
+      [
+        {
+          "allowRegexCharacters": []
+        }
+      ]
+    ],
+    "no-var": "deny",
+    "prefer-const": [
+      "deny",
+      [
+        {
+          "destructuring": "any",
+          "ignoreReadBeforeAssign": false
+        }
+      ]
+    ],
+    "prefer-rest-params": "deny",
+    "prefer-spread": "deny",
+    "require-yield": "deny",
+    "use-isnan": [
+      "deny",
+      [
+        {
+          "enforceForIndexOf": false,
+          "enforceForSwitchCase": true
+        }
+      ]
+    ],
+    "valid-typeof": [
+      "deny",
+      [
+        {
+          "requireStringLiterals": false
+        }
+      ]
+    ],
+    "import/default": "deny",
+    "import/export": "deny",
+    "import/namespace": "deny",
+    "import/no-duplicates": "warn",
+    "import/no-named-as-default": "warn",
+    "import/no-named-as-default-member": "warn",
+    "jsx_a11y/alt-text": "deny",
+    "jsx_a11y/anchor-has-content": "deny",
+    "jsx_a11y/anchor-is-valid": "deny",
+    "jsx_a11y/aria-activedescendant-has-tabindex": "deny",
+    "jsx_a11y/aria-props": "deny",
+    "jsx_a11y/aria-proptypes": "deny",
+    "jsx_a11y/aria-role": "deny",
+    "jsx_a11y/aria-unsupported-elements": "deny",
+    "jsx_a11y/autocomplete-valid": "deny",
+    "jsx_a11y/click-events-have-key-events": "deny",
+    "jsx_a11y/heading-has-content": "deny",
+    "jsx_a11y/html-has-lang": "deny",
+    "jsx_a11y/iframe-has-title": "deny",
+    "jsx_a11y/img-redundant-alt": "deny",
+    "jsx_a11y/interactive-supports-focus": [
+      "deny",
+      [
+        {
+          "tabbable": [
+            "button",
+            "checkbox",
+            "link",
+            "searchbox",
+            "spinbutton",
+            "switch",
+            "textbox"
+          ]
+        }
+      ]
+    ],
+    "jsx_a11y/label-has-associated-control": "deny",
+    "jsx_a11y/media-has-caption": "deny",
+    "jsx_a11y/mouse-events-have-key-events": "deny",
+    "jsx_a11y/no-access-key": "deny",
+    "jsx_a11y/no-autofocus": "deny",
+    "jsx_a11y/no-distracting-elements": "deny",
+    "jsx_a11y/no-interactive-element-to-noninteractive-role": [
+      "deny",
+      [
+        {
+          "tr": [
+            "none",
+            "presentation"
+          ],
+          "canvas": [
+            "img"
+          ]
+        }
+      ]
+    ],
+    "jsx_a11y/no-noninteractive-element-interactions": [
+      "deny",
+      [
+        {
+          "handlers": [
+            "onClick",
+            "onError",
+            "onLoad",
+            "onMouseDown",
+            "onMouseUp",
+            "onKeyPress",
+            "onKeyDown",
+            "onKeyUp"
+          ],
+          "alert": [
+            "onKeyUp",
+            "onKeyDown",
+            "onKeyPress"
+          ],
+          "body": [
+            "onError",
+            "onLoad"
+          ],
+          "dialog": [
+            "onKeyUp",
+            "onKeyDown",
+            "onKeyPress"
+          ],
+          "iframe": [
+            "onError",
+            "onLoad"
+          ],
+          "img": [
+            "onError",
+            "onLoad"
+          ]
+        }
+      ]
+    ],
+    "jsx_a11y/no-noninteractive-element-to-interactive-role": [
+      "deny",
+      [
+        {
+          "ul": [
+            "listbox",
+            "menu",
+            "menubar",
+            "radiogroup",
+            "tablist",
+            "tree",
+            "treegrid"
+          ],
+          "ol": [
+            "listbox",
+            "menu",
+            "menubar",
+            "radiogroup",
+            "tablist",
+            "tree",
+            "treegrid"
+          ],
+          "li": [
+            "menuitem",
+            "menuitemradio",
+            "menuitemcheckbox",
+            "option",
+            "row",
+            "tab",
+            "treeitem"
+          ],
+          "table": [
+            "grid"
+          ],
+          "td": [
+            "gridcell"
+          ],
+          "fieldset": [
+            "radiogroup",
+            "presentation"
+          ]
+        }
+      ]
+    ],
+    "jsx_a11y/no-noninteractive-tabindex": [
+      "deny",
+      [
+        {
+          "tags": [],
+          "roles": [
+            "tabpanel"
+          ],
+          "allowExpressionValues": true
+        }
+      ]
+    ],
+    "jsx_a11y/no-redundant-roles": "deny",
+    "jsx_a11y/no-static-element-interactions": [
+      "deny",
+      [
+        {
+          "allowExpressionValues": true,
+          "handlers": [
+            "onClick",
+            "onMouseDown",
+            "onMouseUp",
+            "onKeyPress",
+            "onKeyDown",
+            "onKeyUp"
+          ]
+        }
+      ]
+    ],
+    "jsx_a11y/role-has-required-aria-props": "deny",
+    "jsx_a11y/role-supports-aria-props": "deny",
+    "jsx_a11y/scope": "deny",
+    "jsx_a11y/tabindex-no-positive": "deny",
+    "react/display-name": "deny",
+    "react/error-boundaries": "deny",
+    "react/exhaustive-deps": "warn",
+    "react/globals": "deny",
+    "react/immutability": "deny",
+    "react/incompatible-library": "warn",
+    "react/jsx-key": "deny",
+    "react/jsx-no-comment-textnodes": "deny",
+    "react/jsx-no-duplicate-props": "deny",
+    "react/jsx-no-target-blank": "deny",
+    "react/jsx-no-undef": "deny",
+    "react/no-children-prop": "deny",
+    "react/no-danger-with-children": "deny",
+    "react/no-direct-mutation-state": "deny",
+    "react/no-find-dom-node": "deny",
+    "react/no-is-mounted": "deny",
+    "react/no-render-return-value": "deny",
+    "react/no-string-refs": "deny",
+    "react/no-unescaped-entities": "deny",
+    "react/no-unknown-property": "deny",
+    "react/preserve-manual-memoization": "deny",
+    "react/purity": "deny",
+    "react/refs": "deny",
+    "react/require-render-return": "deny",
+    "react/rules-of-hooks": "deny",
+    "react/set-state-in-effect": "deny",
+    "react/set-state-in-render": "deny",
+    "react/static-components": "deny",
+    "react/unsupported-syntax": "warn",
+    "react/use-memo": "deny",
+    "typescript/adjacent-overload-signatures": "deny",
+    "typescript/array-type": "deny",
+    "typescript/ban-ts-comment": [
+      "deny",
+      [
+        {
+          "minimumDescriptionLength": 10
+        }
+      ]
+    ],
+    "typescript/ban-tslint-comment": "deny",
+    "typescript/class-literal-property-style": "deny",
+    "typescript/consistent-generic-constructors": "deny",
+    "typescript/consistent-indexed-object-style": "deny",
+    "typescript/consistent-type-assertions": "deny",
+    "typescript/no-confusing-non-null-assertion": "deny",
+    "typescript/no-duplicate-enum-values": "deny",
+    "typescript/no-dynamic-delete": "deny",
+    "typescript/no-empty-object-type": "deny",
+    "typescript/no-explicit-any": "deny",
+    "typescript/no-extra-non-null-assertion": "deny",
+    "typescript/no-extraneous-class": "deny",
+    "typescript/no-inferrable-types": "deny",
+    "typescript/no-invalid-void-type": "deny",
+    "typescript/no-misused-new": "deny",
+    "typescript/no-namespace": "deny",
+    "typescript/no-non-null-asserted-nullish-coalescing": "deny",
+    "typescript/no-non-null-asserted-optional-chain": "deny",
+    "typescript/no-non-null-assertion": "deny",
+    "typescript/no-require-imports": "deny",
+    "typescript/no-this-alias": "deny",
+    "typescript/no-unnecessary-type-constraint": "deny",
+    "typescript/no-unsafe-declaration-merging": "deny",
+    "typescript/no-unsafe-function-type": "deny",
+    "typescript/no-wrapper-object-types": "deny",
+    "typescript/prefer-as-const": "deny",
+    "typescript/prefer-for-of": "deny",
+    "typescript/prefer-function-type": "deny",
+    "typescript/prefer-literal-enum-member": "deny",
+    "typescript/prefer-namespace-keyword": "deny",
+    "typescript/triple-slash-reference": "deny",
+    "typescript/unified-signatures": "deny"
+  },
+  "settings": {
+    "jsx-a11y": {
+      "polymorphicPropName": null,
+      "components": {},
+      "attributes": {}
+    },
+    "next": {
+      "rootDir": []
+    },
+    "react": {
+      "formComponents": [],
+      "linkComponents": [],
+      "version": null,
+      "componentWrapperFunctions": []
+    },
+    "jsdoc": {
+      "ignorePrivate": false,
+      "ignoreInternal": false,
+      "ignoreReplacesDocs": true,
+      "overrideReplacesDocs": true,
+      "augmentsExtendsReplacesDocs": false,
+      "implementsReplacesDocs": false,
+      "exemptDestructuredRootsFromChecks": false,
+      "tagNamePreference": {}
+    },
+    "vitest": {
+      "typecheck": false
+    },
+    "jest": {
+      "version": null
+    }
+  },
+  "env": {
+    "builtin": true
+  },
+  "globals": {},
+  "ignorePatterns": []
+}

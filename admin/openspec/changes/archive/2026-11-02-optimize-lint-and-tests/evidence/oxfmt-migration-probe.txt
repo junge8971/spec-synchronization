@@ -1,0 +1,9 @@
+Found Prettier config at: /home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/.formatter-probe.hHVdhv/.prettierrc.ts
+  - Migrated ignore patterns from `.prettierignore`
+Created `.oxfmtrc.json`.
+It may not be formatted yet, run `oxfmt` to format it.
+
+Please review:
+  - "insertPragma" is not supported, skipping...
+  - `.prettierrc.ts` was evaluated and migrated as static values, any logic in it is not preserved,
+    port it to `oxfmt.config.ts` manually if needed

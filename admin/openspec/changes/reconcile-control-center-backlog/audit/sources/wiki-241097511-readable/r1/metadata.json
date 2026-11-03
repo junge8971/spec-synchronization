@@ -1,0 +1,79 @@
+{
+  "sourceId": "wiki-241097511-readable",
+  "revision": "r1",
+  "derivedAt": "2026-10-19T07:28:01.905729+00:00",
+  "originalPath": "../../wiki-241097511/r2/content.json",
+  "originalMetadataPath": "../../wiki-241097511/r2/metadata.json",
+  "originalSha256": "710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47",
+  "version": {
+    "number": 6,
+    "when": "2026-10-13T17:56:19.256+08:00",
+    "message": "",
+    "minorEdit": false,
+    "hidden": false
+  },
+  "versionWhen": null,
+  "retrievedAt": "2026-10-16T12:37:03.295Z",
+  "bodyViewPointer": "/bodyView",
+  "bodyViewSha256Utf8": "90c2328f5dc03e3c99153fc33ec10570f8865b96791519eef0035db5d9810931",
+  "exactBodyChunks": [
+    {
+      "path": "bodyView-001.txt",
+      "sha256": "51ea529ff6c674fc56dd14f2edb2046f2203efe267c4693d763b3b90012b66c3",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-002.txt",
+      "sha256": "61dc1b562e2b7a3500bcc75ef87c010a798df53db869c2e5085cf9cb14db6903",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-003.txt",
+      "sha256": "6a36c4e485bafaf73eb55bfda592e6941fb364e29ed3bbf0069b2a6412d71069",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-004.txt",
+      "sha256": "000dd84bca730d6a33aa1c1939022b6b124449e3a9f9eb90bbe771f152908fd2",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-005.txt",
+      "sha256": "714860791794a5a967dfb2c94df715e0275cf91e13ef8bdca67340f7a5dd1aa7",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-006.txt",
+      "sha256": "9f2ace765ed42e7268c4470ea6dae4f6d01e2ee4d946ac4001d5b9198b654b9c",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-007.txt",
+      "sha256": "9b505d1265c14fd32caf7a604c29639ad8c59aff296b2532cf05983c4038c566",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-008.txt",
+      "sha256": "d9ca2a1327049556c32715394c3370a9d52b5016c116850a733ba8ca8880b85b",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-009.txt",
+      "sha256": "992ed41b772485108ec167df680b7f125366328f820aeefea1fe4f973d500b84",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-010.txt",
+      "sha256": "33fe9f5851f635af55c954d7fe232bf220560b2ac1e0bb01c7b2ef94832b7c5d",
+      "characters": 1468
+    }
+  ],
+  "readableText": {
+    "path": "readable-text.txt",
+    "sha256": "c6dd8857060fa4e87a7170fb604486d12d03a8e74d1ac24c4704554eba67b2df",
+    "lines": 668,
+    "bytes": 35247
+  },
+  "provenance": "Parent parsed existing local JSON. Exact bodyView chunks concatenate without separators to the original decoded string; equality verified. Readable text derived with Python HTMLParser, decoded entities, table cell separators and block line breaks; blank lines removed. No rendering, script execution, endpoints or network.",
+  "limitations": "Readable text is a convenience extraction, not exact HTML/visual rendering; consult exact chunks for markup/links. Full body retained; no section selection or content summarization. Version scalar retained exactly for skills; catalog version metadata excludes author personal fields and links. Parent-computed digests, not reviewer attestations. Original snapshots unchanged; derivation does not prove freshness."
+}

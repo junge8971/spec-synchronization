@@ -1,0 +1,339 @@
+{
+  "schemaCount": 29,
+  "schemas": [
+    {
+      "pointer": "#/components/schemas/AddTeamMemberRequest",
+      "file": "schema-01.json"
+    },
+    {
+      "pointer": "#/components/schemas/CreateTeamRequest",
+      "file": "schema-02.json"
+    },
+    {
+      "pointer": "#/components/schemas/ErrorItem",
+      "file": "schema-03.json"
+    },
+    {
+      "pointer": "#/components/schemas/FullName",
+      "file": "schema-04.json"
+    },
+    {
+      "pointer": "#/components/schemas/HTTPValidationError",
+      "file": "schema-05.json"
+    },
+    {
+      "pointer": "#/components/schemas/PaginatedResponseSchema_list_TeamMemberResponse__",
+      "file": "schema-06.json"
+    },
+    {
+      "pointer": "#/components/schemas/PaginatedResponseSchema_list_TeamResponse__",
+      "file": "schema-07.json"
+    },
+    {
+      "pointer": "#/components/schemas/PaginationDto",
+      "file": "schema-08.json"
+    },
+    {
+      "pointer": "#/components/schemas/RemoveTeamMemberRequest",
+      "file": "schema-09.json"
+    },
+    {
+      "pointer": "#/components/schemas/RemoveTeamMemberResponse",
+      "file": "schema-10.json"
+    },
+    {
+      "pointer": "#/components/schemas/ResponseCode",
+      "file": "schema-11.json"
+    },
+    {
+      "pointer": "#/components/schemas/SurfaceStatus",
+      "file": "schema-12.json"
+    },
+    {
+      "pointer": "#/components/schemas/TeamDomainResponse",
+      "file": "schema-13.json"
+    },
+    {
+      "pointer": "#/components/schemas/TeamMemberMutationResponse",
+      "file": "schema-14.json"
+    },
+    {
+      "pointer": "#/components/schemas/TeamMemberResponse",
+      "file": "schema-15.json"
+    },
+    {
+      "pointer": "#/components/schemas/TeamMemberRole",
+      "file": "schema-16.json"
+    },
+    {
+      "pointer": "#/components/schemas/TeamMutationResponse",
+      "file": "schema-17.json"
+    },
+    {
+      "pointer": "#/components/schemas/TeamResponse",
+      "file": "schema-18.json"
+    },
+    {
+      "pointer": "#/components/schemas/TeamSkillResponse",
+      "file": "schema-19.json"
+    },
+    {
+      "pointer": "#/components/schemas/TeamSurfaceResponse",
+      "file": "schema-20.json"
+    },
+    {
+      "pointer": "#/components/schemas/TsamResponseSchema_PaginatedResponseSchema_list_TeamMemberResponse___",
+      "file": "schema-21.json"
+    },
+    {
+      "pointer": "#/components/schemas/TsamResponseSchema_PaginatedResponseSchema_list_TeamResponse___",
+      "file": "schema-22.json"
+    },
+    {
+      "pointer": "#/components/schemas/TsamResponseSchema_RemoveTeamMemberResponse_",
+      "file": "schema-23.json"
+    },
+    {
+      "pointer": "#/components/schemas/TsamResponseSchema_TeamMemberMutationResponse_",
+      "file": "schema-24.json"
+    },
+    {
+      "pointer": "#/components/schemas/TsamResponseSchema_TeamMutationResponse_",
+      "file": "schema-25.json"
+    },
+    {
+      "pointer": "#/components/schemas/TsamResponseSchema_TeamResponse_",
+      "file": "schema-26.json"
+    },
+    {
+      "pointer": "#/components/schemas/UpdateTeamMemberRequest",
+      "file": "schema-27.json"
+    },
+    {
+      "pointer": "#/components/schemas/UpdateTeamRequest",
+      "file": "schema-28.json"
+    },
+    {
+      "pointer": "#/components/schemas/ValidationError",
+      "file": "schema-29.json"
+    }
+  ],
+  "edges": [
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams/get/responses/200/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_PaginatedResponseSchema_list_TeamResponse___"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams/get/responses/422/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/HTTPValidationError"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}/get/responses/200/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_TeamResponse_"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}/get/responses/422/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/HTTPValidationError"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members/get/responses/200/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_PaginatedResponseSchema_list_TeamMemberResponse___"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members/get/responses/422/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/HTTPValidationError"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams/post/requestBody/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/CreateTeamRequest"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams/post/responses/201/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_TeamMutationResponse_"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams/post/responses/422/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/HTTPValidationError"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}/patch/requestBody/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/UpdateTeamRequest"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}/patch/responses/200/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_TeamMutationResponse_"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}/patch/responses/422/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/HTTPValidationError"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members/post/requestBody/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/AddTeamMemberRequest"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members/post/responses/201/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_TeamMemberMutationResponse_"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members/post/responses/422/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/HTTPValidationError"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members~1{user_id}/patch/requestBody/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/UpdateTeamMemberRequest"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members~1{user_id}/patch/responses/200/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_TeamMemberMutationResponse_"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members~1{user_id}/patch/responses/422/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/HTTPValidationError"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members~1{user_id}~1actions~1remove/post/requestBody/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/RemoveTeamMemberRequest"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members~1{user_id}~1actions~1remove/post/responses/200/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/TsamResponseSchema_RemoveTeamMemberResponse_"
+    },
+    {
+      "from": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members~1{user_id}~1actions~1remove/post/responses/422/content/application~1json/schema/$ref",
+      "to": "#/components/schemas/HTTPValidationError"
+    },
+    {
+      "from": "#/components/schemas/AddTeamMemberRequest/properties/membership_role/$ref",
+      "to": "#/components/schemas/TeamMemberRole"
+    },
+    {
+      "from": "#/components/schemas/HTTPValidationError/properties/detail/items/$ref",
+      "to": "#/components/schemas/ValidationError"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_PaginatedResponseSchema_list_TeamMemberResponse___/properties/code/$ref",
+      "to": "#/components/schemas/ResponseCode"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_PaginatedResponseSchema_list_TeamMemberResponse___/properties/data/$ref",
+      "to": "#/components/schemas/PaginatedResponseSchema_list_TeamMemberResponse__"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_PaginatedResponseSchema_list_TeamMemberResponse___/properties/errors/items/$ref",
+      "to": "#/components/schemas/ErrorItem"
+    },
+    {
+      "from": "#/components/schemas/PaginatedResponseSchema_list_TeamMemberResponse__/properties/items/items/$ref",
+      "to": "#/components/schemas/TeamMemberResponse"
+    },
+    {
+      "from": "#/components/schemas/PaginatedResponseSchema_list_TeamMemberResponse__/properties/pagination/$ref",
+      "to": "#/components/schemas/PaginationDto"
+    },
+    {
+      "from": "#/components/schemas/TeamMemberResponse/properties/full_name/$ref",
+      "to": "#/components/schemas/FullName"
+    },
+    {
+      "from": "#/components/schemas/TeamMemberResponse/properties/membership_role/$ref",
+      "to": "#/components/schemas/TeamMemberRole"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_PaginatedResponseSchema_list_TeamResponse___/properties/code/$ref",
+      "to": "#/components/schemas/ResponseCode"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_PaginatedResponseSchema_list_TeamResponse___/properties/data/$ref",
+      "to": "#/components/schemas/PaginatedResponseSchema_list_TeamResponse__"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_PaginatedResponseSchema_list_TeamResponse___/properties/errors/items/$ref",
+      "to": "#/components/schemas/ErrorItem"
+    },
+    {
+      "from": "#/components/schemas/PaginatedResponseSchema_list_TeamResponse__/properties/items/items/$ref",
+      "to": "#/components/schemas/TeamResponse"
+    },
+    {
+      "from": "#/components/schemas/PaginatedResponseSchema_list_TeamResponse__/properties/pagination/$ref",
+      "to": "#/components/schemas/PaginationDto"
+    },
+    {
+      "from": "#/components/schemas/TeamResponse/properties/members/items/$ref",
+      "to": "#/components/schemas/TeamMemberResponse"
+    },
+    {
+      "from": "#/components/schemas/TeamResponse/properties/surfaces/items/$ref",
+      "to": "#/components/schemas/TeamSurfaceResponse"
+    },
+    {
+      "from": "#/components/schemas/TeamResponse/properties/domains/items/$ref",
+      "to": "#/components/schemas/TeamDomainResponse"
+    },
+    {
+      "from": "#/components/schemas/TeamResponse/properties/skills/items/$ref",
+      "to": "#/components/schemas/TeamSkillResponse"
+    },
+    {
+      "from": "#/components/schemas/TeamSurfaceResponse/properties/status/$ref",
+      "to": "#/components/schemas/SurfaceStatus"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_RemoveTeamMemberResponse_/properties/code/$ref",
+      "to": "#/components/schemas/ResponseCode"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_RemoveTeamMemberResponse_/properties/data/$ref",
+      "to": "#/components/schemas/RemoveTeamMemberResponse"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_RemoveTeamMemberResponse_/properties/errors/items/$ref",
+      "to": "#/components/schemas/ErrorItem"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_TeamMemberMutationResponse_/properties/code/$ref",
+      "to": "#/components/schemas/ResponseCode"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_TeamMemberMutationResponse_/properties/data/$ref",
+      "to": "#/components/schemas/TeamMemberMutationResponse"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_TeamMemberMutationResponse_/properties/errors/items/$ref",
+      "to": "#/components/schemas/ErrorItem"
+    },
+    {
+      "from": "#/components/schemas/TeamMemberMutationResponse/properties/membership_role/$ref",
+      "to": "#/components/schemas/TeamMemberRole"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_TeamMutationResponse_/properties/code/$ref",
+      "to": "#/components/schemas/ResponseCode"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_TeamMutationResponse_/properties/data/$ref",
+      "to": "#/components/schemas/TeamMutationResponse"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_TeamMutationResponse_/properties/errors/items/$ref",
+      "to": "#/components/schemas/ErrorItem"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_TeamResponse_/properties/code/$ref",
+      "to": "#/components/schemas/ResponseCode"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_TeamResponse_/properties/data/$ref",
+      "to": "#/components/schemas/TeamResponse"
+    },
+    {
+      "from": "#/components/schemas/TsamResponseSchema_TeamResponse_/properties/errors/items/$ref",
+      "to": "#/components/schemas/ErrorItem"
+    },
+    {
+      "from": "#/components/schemas/UpdateTeamMemberRequest/properties/membership_role/$ref",
+      "to": "#/components/schemas/TeamMemberRole"
+    }
+  ]
+}

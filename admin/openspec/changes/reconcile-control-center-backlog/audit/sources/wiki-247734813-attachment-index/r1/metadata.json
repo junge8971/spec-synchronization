@@ -1,0 +1,16 @@
+{
+  "sourceId": "wiki-247734813-attachment-index",
+  "parentPageId": "247734813",
+  "retrievedAt": "2026-10-19T12:13:31.104Z",
+  "authority": "D-043 / accepted separate feedback index repair; no attachment-body authority",
+  "method": "Parent browser documentation GET only, freshly rediscovered wiki root page8; exact origin/root path/root href checked in DOM before request. Local r1 packet inspected: no index and no separate packet before collection.",
+  "url": "https://wiki.mos-team.ru/rest/api/content/247734813/child/attachment?limit=100",
+  "httpStatus": 200,
+  "contentFile": "content.json",
+  "sha256": "6b5222a7edd42c7c6cc32169e22ebd1b1d5fc320382ee21ba0fc92a5e47ae275",
+  "format": "Selected fields from returned index; all5 entries retained, download/webui links omitted; not raw response or wire bytes",
+  "index": {"start": 0, "limit": 100, "size": 5, "next": null},
+  "version": null,
+  "limits": "No attachment versions expanded, no bytes downloaded/rendered/executed, no source/body refresh, no external freshness or exhaustive linked-asset guarantee. Filenames do not establish relevance or precedence. Existing flattened page r1 unchanged; this timestamp does not backdate its index coverage.",
+  "localCheck": "Five IDs have no wiki-attachment-ID/*/content.* in scoped canonical namespace; not whole-repository absence or global semantic coverage. Selected projection hash computed by parent."
+}

@@ -1,0 +1,21 @@
+{
+  "pointer": "#/components/schemas/SampleResponse",
+  "value": {
+    "properties": {
+      "dialog_count": {
+        "type": "integer",
+        "title": "Dialog Count"
+      },
+      "source": {
+        "type": "string",
+        "title": "Source"
+      }
+    },
+    "type": "object",
+    "required": [
+      "dialog_count",
+      "source"
+    ],
+    "title": "SampleResponse"
+  }
+}

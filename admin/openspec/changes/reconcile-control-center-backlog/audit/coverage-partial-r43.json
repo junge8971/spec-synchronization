@@ -1,0 +1,12 @@
+{
+  "revision": 43,
+  "supplements": "coverage-partial-r42.json",
+  "complete": false,
+  "globalProgress": "9/28",
+  "sourceAdditions": [],
+  "acceptedChains": [{"report": "reports/G1-SAVED-BODY-DISCOVERY-BOUNDARY.md", "review": "reviews/R-G1-SAVED-BODY-DISCOVERY-BOUNDARY.md", "originalVerdict": "ACCEPT", "decision": "D-060", "parentDisposition": "E13 accepted; G1 accepted for bounded analysis with explicit incomplete discovery and source limitations"}],
+  "completedTasks": ["2.3", "2.4", "2.6"],
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "nextWorkItem": "work-items/G2-SCENARIO-LANE-GAPS.md",
+  "limits": ["Not complete source, semantic, implementation or runtime coverage", "E01–E11 remain explicit availability/identity/authority limitations, not relevance exclusions", "Scenario-specific missing explanations reopen bounded source work before publication", "Original provenance, extraction, attribution and formatting limits retained", "G2–G5 remain open; no feature tasks closed"]
+}

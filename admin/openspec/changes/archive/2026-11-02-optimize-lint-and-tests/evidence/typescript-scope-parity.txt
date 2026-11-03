@@ -1,0 +1,8 @@
+{"rule":"no-var","extension":"js","count":0}
+{"rule":"no-var","extension":"ts","count":1}
+{"rule":"prefer-const","extension":"js","count":0}
+{"rule":"prefer-const","extension":"ts","count":1}
+{"rule":"prefer-rest-params","extension":"js","count":0}
+{"rule":"prefer-rest-params","extension":"ts","count":1}
+{"rule":"prefer-spread","extension":"js","count":0}
+{"rule":"prefer-spread","extension":"ts","count":1}

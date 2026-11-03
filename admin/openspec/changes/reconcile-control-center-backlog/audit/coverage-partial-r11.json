@@ -1,0 +1,34 @@
+{
+  "revision": 11,
+  "supplements": "coverage-partial-r10.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "chains": [
+    {
+      "issue": "dictionary-prototype-attachments",
+      "report": "reports/ATTACH-DICTIONARY-PROTOTYPES.md",
+      "review": "reviews/R-ATTACH-DICTIONARY-PROTOTYPES.md",
+      "disposition": "D-029",
+      "scope": "Ten selected static findings accepted; generation/completion branches not delivery proof; whole attachments and runtime not accepted"
+    },
+    {
+      "issue": "API-prototype-attachments",
+      "report": "reports/ATTACH-API-PROTOTYPES.md",
+      "review": "reviews/R-ATTACH-API-PROTOTYPES.md",
+      "disposition": "D-029",
+      "scope": "Eleven selected static API findings accepted; unrelated modules excluded; completion text not export generation or runtime evidence"
+    }
+  ],
+  "sourceAdditions": ["sources/jira-attachment-835759/r1/metadata.json"],
+  "priorCoverageDisposition": {
+    "fourPrototypeAttachments": "Selected connected prototype-source evidence independently reviewed; historical wholly unread limitations now qualified, not full semantic/runtime closure",
+    "MOS1145Attachment835759": "Body now collected as documentation only; testplan scenarios and deployment-success claims remain unexecuted/unverified"
+  },
+  "pendingAnalysis": ["work-items/DELTA-MOS-1145-TESTPLAN.md"],
+  "limitations": [
+    "No code/product/main-spec/archive changes or global task closure",
+    "No source execution, business requests, database/pipeline checks or browser/E2E tests",
+    "Historical API-absence and readiness claims are not current publication verification",
+    "Wider source collection, ambiguous-page relevance and formatting failure remain unresolved"
+  ]
+}

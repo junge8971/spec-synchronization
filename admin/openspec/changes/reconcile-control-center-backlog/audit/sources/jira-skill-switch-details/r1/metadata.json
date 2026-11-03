@@ -1,0 +1,31 @@
+{
+  "sourceId": "jira-skill-switch-details",
+  "revision": 1,
+  "retrievedAt": "2026-10-16T13:58:59.883Z",
+  "sha256": "2f2bd86c7a59b0e8232d0e5eb4f3dd6829f3860619374835a79f287b0e2a50be",
+  "bytes": 20499,
+  "collection": "Parent verified-origin GET, exact corresponding MCP result extracted without unrelated transcript.",
+  "keys": [
+    "MOS-776",
+    "MOS-1145"
+  ],
+  "fields": "summary,description,issuetype,status,subtasks,parent,updated,attachment,comment",
+  "comments": [
+    {
+      "key": "MOS-776",
+      "captured": 0,
+      "total": 0
+    },
+    {
+      "key": "MOS-1145",
+      "captured": 2,
+      "total": 2
+    }
+  ],
+  "limitations": [
+    "Custom fields uncollected.",
+    "MOS1145 attachment835759 TEST_PLAN_MOS_1145.md metadata captured; body unread.",
+    "MR mention not followed; test-plan link and Ready-for-test not executed tests or delivery evidence.",
+    "No business endpoint or embedded example executed."
+  ]
+}

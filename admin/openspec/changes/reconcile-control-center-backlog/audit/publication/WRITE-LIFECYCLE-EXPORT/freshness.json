@@ -1,0 +1,33 @@
+{
+  "scope": "Only MOS-1256/MOS-1260 descriptions and supporting wiki page version; no global freshness certification",
+  "collector": "parent browser MCP, read-only GETs after fresh page discovery and origin guards",
+  "jiraRetrievedAt": "2026-10-20T11:19:01.812Z",
+  "jira": [
+    {
+      "key": "MOS-1256",
+      "url": "https://task.mos-team.ru/rest/api/2/issue/MOS-1256?fields=updated,description",
+      "updated": "2026-10-12T21:13:38.503+0800",
+      "descriptionSha256": "752e76cc3aee164e21db07e89371eae4fcc069d86b83559783db91e104d5c403",
+      "savedPointer": "sources/jira-feedback/r1/content.json#/items/7",
+      "savedUpdatedAndDescriptionHashMatch": true
+    },
+    {
+      "key": "MOS-1260",
+      "url": "https://task.mos-team.ru/rest/api/2/issue/MOS-1260?fields=updated,description",
+      "updated": "2026-10-12T20:50:27.969+0800",
+      "descriptionSha256": "3e6493879365d4646516529f1e9d85f4c34f51af7392b3a208cdee1656e39c22",
+      "savedPointer": "sources/jira-feedback/r1/content.json#/items/11",
+      "savedUpdatedAndDescriptionHashMatch": true
+    }
+  ],
+  "wiki": {
+    "url": "https://wiki.mos-team.ru/rest/api/content/247734813?expand=version",
+    "retrievedAt": "2026-10-20T11:19:09.697Z",
+    "id": "247734813",
+    "version": 11,
+    "versionWhen": "2026-10-12T17:21:31.204+08:00",
+    "savedVersionMatch": true,
+    "bodyRecollected": false
+  },
+  "verification": "Browser Web Crypto SHA-256 of UTF-8 Jira description compared with parent hashlib SHA-256 of saved description; exact matches. Wiki version metadata matches retained r1. No credentials, external writes or application tests."
+}

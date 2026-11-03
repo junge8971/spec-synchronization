@@ -1,0 +1,2 @@
+Baseline Prettier: 529 violating paths. Integrated Oxfmt: 529 violating paths. Missing: 0. New: 0.
+Compared baseline-format-1.txt with yarn-format-integrated-1.txt.

@@ -1,0 +1,12 @@
+/bin/bash: строка 6: /usr/bin/time: Нет такого файла или каталога
+
+Actual measurement: yarn lint
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 54ms on 1556 files using 12 threads.
+
+✔ no dependency violations found (1629 modules, 6423 dependencies cruised)
+
+
+Measurement: exit status 0; wall time 56.730 seconds

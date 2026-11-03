@@ -1,0 +1,14 @@
+{
+  "revision": 6,
+  "supplements": "coverage-partial-r5.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "chains": [
+    {"issue": "MOS-909", "report": "reports/SCENARIO-MOS-909.md", "review": "reviews/R-SCENARIO-MOS-909.md", "disposition": "D-018", "scope": "Eight documentary candidates accepted with qualifications"},
+    {"issue": "MOS-909", "report": "reports/IMPL-MOS-909.md", "review": "reviews/R-IMPL-MOS-909.md", "disposition": "D-019", "scope": "Ten static evidence IDs; mandatory07 correction applied by parent; command scope remedy escalated"}
+  ],
+  "sourceAdditions": ["sources/jira-MOS-909/r1/metadata.json"],
+  "derivedEvidence": ["sources/wiki-241080062-readable/r1/metadata.json", "sources/wiki-241097511-readable/r1/metadata.json"],
+  "blockers": [{"id": "MOS909-command-scope", "reason": "Mounted generic matrix and tests expose seven commands while current local requirements approve three; no superseding approval found in bounded search", "affectedStage": "MOS909 planning/publication disposition", "owner": "user/product owner", "prerequisite": "Explicit scope decision or source of superseding approval", "releaseCondition": "Record approved direction before planning a correction; code remediation remains separate scope"}],
+  "limitations": ["No runtime or test execution", "Auth/session/Express/mock deployment not audited", "Corrected07 does not establish missing GET on published409 readiness refusal", "No product/main-spec/archive changes", "Global inventory and coverage remain incomplete"]
+}

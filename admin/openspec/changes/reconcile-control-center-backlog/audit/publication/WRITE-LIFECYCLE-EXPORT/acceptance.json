@@ -1,0 +1,48 @@
+{
+  "decision": "D-073",
+  "authorization": "D-072",
+  "review": "reviews/R-WRITE-LIFECYCLE-EXPORT-MINIMAL.md",
+  "reviewRun": "99a0d984-5f6b-4389-aeef-83ef14d2f7a7",
+  "freshness": "publication/WRITE-LIFECYCLE-EXPORT/freshness.json",
+  "files": [
+    {
+      "path": "openspec/changes/mos-1256-feedback-lifecycle/tasks.md",
+      "before": "b5c7255ec9131d9326dba7b9d5e58d7b15f72f4bce953469d53a7ee3be2bdd5e",
+      "after": "5a204315937186f4facfa966c10098c1756f52c5058868489086f875fed27ccf",
+      "candidate": "pending-candidate.md",
+      "baseline": "baseline-1256-tasks.md"
+    },
+    {
+      "path": "openspec/changes/mos-1260-feedback-export/specs/feedback-export/spec.md",
+      "before": "a490622da85bbfd7dc20bc4f1714896427541bfeadb639c6de4b5af01994ea2b",
+      "after": "e1acbb32f7502d1bde6152c39a4121e3ee06eb240ae484ab847a3c418018c543",
+      "candidate": "labels-candidate.md",
+      "baseline": "baseline-1260-spec.md"
+    }
+  ],
+  "exactReviewedDiffVerified": true,
+  "uncheckedFeatureTasks": 11,
+  "checkedFeatureTasks": 0,
+  "checks": {
+    "strict1256": 0,
+    "strict1260": 0,
+    "validateAllStrict": 0,
+    "doctor": 0,
+    "formatCheck": 1,
+    "formatWarningFiles": 399
+  },
+  "logs": [
+    "validate-1256.log",
+    "validate-1260.log",
+    "validate-all.log",
+    "doctor.log",
+    "format.log"
+  ],
+  "limitations": [
+    "Earlier format failure listed389 files; current399 not attributed entirely to baseline",
+    "No global G2-G5 acceptance",
+    "No code/API/build changes; typecheck/lint/test/api:check/build/typegen not run",
+    "Browser documentation GET only; no browser/E2E tests",
+    "Global progress11/28; member coverage55P/6B/112U"
+  ]
+}

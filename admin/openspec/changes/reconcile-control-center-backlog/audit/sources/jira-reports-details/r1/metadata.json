@@ -1,0 +1,47 @@
+{
+  "sourceId": "jira-reports-details",
+  "retrievedAt": "2026-10-16T13:31:43.125Z",
+  "sha256": "c69d3aeaef6121d67440c61f06a0c8cb6b3c8ad605c7cfcec0653e7f7e5f234c",
+  "bytes": 12996,
+  "redactions": {
+    "bearerExamples": 0
+  },
+  "collection": "parent verified-origin GET; inert evidence; no business calls",
+  "membership": "jira-hierarchy/r1 results12 MOS777 children",
+  "limitations": [
+    "custom fields/attachment bodies uncollected",
+    "publication not runtime/approval"
+  ],
+  "comments": [
+    {
+      "key": "MOS-777",
+      "count": 0,
+      "total": 0
+    },
+    {
+      "key": "MOS-885",
+      "count": 0,
+      "total": 0
+    },
+    {
+      "key": "MOS-916",
+      "count": 0,
+      "total": 0
+    },
+    {
+      "key": "MOS-919",
+      "count": 0,
+      "total": 0
+    },
+    {
+      "key": "MOS-1015",
+      "count": 1,
+      "total": 1
+    },
+    {
+      "key": "MOS-1016",
+      "count": 0,
+      "total": 0
+    }
+  ]
+}

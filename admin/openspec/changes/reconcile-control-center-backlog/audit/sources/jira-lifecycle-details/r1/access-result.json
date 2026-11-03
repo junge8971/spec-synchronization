@@ -1,0 +1,18 @@
+{
+  "sourceId": "jira-lifecycle-details",
+  "revision": 1,
+  "result": "collection-failed",
+  "tool": "chrome-devtools_evaluate_script",
+  "pageId": 18,
+  "requestedKeys": ["MOS-782", "MOS-909", "MOS-1119", "MOS-1120"],
+  "method": "GET",
+  "originGuard": "https://task.mos-team.ru",
+  "error": "Failed to call tool: Request timed out",
+  "contentSaved": false,
+  "limitations": [
+    "No returned payload; individual request completion unknown",
+    "No HTTP status or remote content inferred from MCP timeout",
+    "No retries, alternate execution or external mutations performed",
+    "MOS1119 detailed body remains uncollected; prior accepted MOS1145 evidence unchanged"
+  ]
+}

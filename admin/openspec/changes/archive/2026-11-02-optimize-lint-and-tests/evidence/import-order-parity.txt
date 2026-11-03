@@ -1,0 +1,115 @@
+[
+  {
+    "name": "ordered",
+    "oldPass": true,
+    "newPass": true,
+    "oldFixPass": true,
+    "newFixPass": true,
+    "sameFix": true,
+    "oldMessages": [],
+    "newMessages": "",
+    "oldOutput": "import { readFile } from 'node:fs';\n\nimport { createElement } from 'react';\n\nimport type { Skill } from '~/entities/skill';\n\nimport { parent } from '../parent';\n\nimport { sibling } from './sibling';\n\nimport { index } from './index';\n",
+    "newOutput": "import { readFile } from 'node:fs';\n\nimport { createElement } from 'react';\n\nimport type { Skill } from '~/entities/skill';\n\nimport { parent } from '../parent';\n\nimport { sibling } from './sibling';\n\nimport { index } from './index';\n"
+  },
+  {
+    "name": "inverted",
+    "oldPass": false,
+    "newPass": false,
+    "oldFixPass": true,
+    "newFixPass": true,
+    "sameFix": true,
+    "oldMessages": [
+      "There should be at least one empty line between import groups",
+      "`react` import should occur before import of `./local`"
+    ],
+    "newMessages": "fixture.ts:2:1: error imports(order): Import 'react' should occur before './local'.",
+    "oldOutput": "import { createElement } from 'react';\n\nimport { local } from './local';\n",
+    "newOutput": "import { createElement } from 'react';\n\nimport { local } from './local';\n"
+  },
+  {
+    "name": "same-group-order",
+    "oldPass": true,
+    "newPass": true,
+    "oldFixPass": true,
+    "newFixPass": true,
+    "sameFix": true,
+    "oldMessages": [],
+    "newMessages": "",
+    "oldOutput": "import { z } from 'z-package';\nimport { a } from 'a-package';\n",
+    "newOutput": "import { z } from 'z-package';\nimport { a } from 'a-package';\n"
+  },
+  {
+    "name": "same-group-gap",
+    "oldPass": false,
+    "newPass": false,
+    "oldFixPass": true,
+    "newFixPass": true,
+    "sameFix": true,
+    "oldMessages": [
+      "There should be no empty line within import group"
+    ],
+    "newMessages": "fixture.ts:1:1: error imports(order): There should be no empty line within an import group.",
+    "oldOutput": "import { first } from 'first';\nimport { second } from 'second';\n",
+    "newOutput": "import { first } from 'first';\nimport { second } from 'second';\n"
+  },
+  {
+    "name": "side-effect",
+    "oldPass": false,
+    "newPass": false,
+    "oldFixPass": false,
+    "newFixPass": false,
+    "sameFix": false,
+    "oldMessages": [
+      "There should be at least one empty line between import groups",
+      "`react` import should occur before import of `./local`"
+    ],
+    "newMessages": "fixture.ts:3:1: error imports(order): Import 'react' should occur before './local'.",
+    "oldOutput": "import { local } from './local';\n\nimport './setup';\nimport { createElement } from 'react';\n",
+    "newOutput": "import { local } from './local';\nimport './setup';\nimport { createElement } from 'react';\n"
+  },
+  {
+    "name": "comments",
+    "oldPass": false,
+    "newPass": false,
+    "oldFixPass": true,
+    "newFixPass": false,
+    "sameFix": false,
+    "oldMessages": [
+      "There should be at least one empty line between import groups",
+      "`react` import should occur before import of `./local`"
+    ],
+    "newMessages": "fixture.ts:2:1: error imports(order): Import 'react' should occur before './local'.",
+    "oldOutput": "import { createElement } from 'react'; // external\n\nimport { local } from './local'; // local\n",
+    "newOutput": "import { local } from './local'; // local\nimport { createElement } from 'react'; // external\n"
+  },
+  {
+    "name": "require",
+    "oldPass": false,
+    "newPass": false,
+    "oldFixPass": true,
+    "newFixPass": false,
+    "sameFix": false,
+    "oldMessages": [
+      "There should be at least one empty line between import groups",
+      "`node:fs` import should occur before import of `package`"
+    ],
+    "newMessages": "fixture.ts:2:1: error imports(order): Import 'node:fs' should occur before 'package'.",
+    "oldOutput": "const builtin = require('node:fs');\n\nconst external = require('package');\n",
+    "newOutput": "const external = require('package');\nconst builtin = require('node:fs');\n"
+  },
+  {
+    "name": "index-vs-sibling",
+    "oldPass": false,
+    "newPass": false,
+    "oldFixPass": true,
+    "newFixPass": true,
+    "sameFix": true,
+    "oldMessages": [
+      "There should be at least one empty line between import groups",
+      "`./sibling` import should occur before import of `./index`"
+    ],
+    "newMessages": "fixture.ts:2:1: error imports(order): Import './sibling' should occur before './index'.",
+    "oldOutput": "import { s } from './sibling';\n\nimport { i } from './index';\n",
+    "newOutput": "import { s } from './sibling';\n\nimport { i } from './index';\n"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "decision": "D-061",
+  "status": "integrated-with-open-global-format-gate",
+  "writerRun": "eb3c05f5-a58b-42f2-a6b6-da72f26774fa",
+  "reviewRun": "1a20ffb7-aa08-4854-8135-dde54115ce85",
+  "review": "../../reviews/R-WRITE-G2-MOS-1249.md",
+  "reviewVerdict": "ACCEPT",
+  "changedPath": "openspec/changes/mos-1249-feedback-api/tasks.md",
+  "beforeSha256": "21dbfcf3e2d71406070ee374fbb77c76955928326297ec0ca97af4690a2354dd",
+  "afterSha256": "c0b8d2a4337d3c92ec0998b958b7148ad9a0da295f496290c80a03b95160daa3",
+  "parentChecks": ["All active files matched isolated baseline before integration", "Integrated tasks bytes equal independently reviewed candidate", "Actual diff inspected: only lines 3,6,14 changed", "Seven feature checkboxes remain unchecked; no runtime edits"],
+  "validation": {"command": "openspec validate mos-1249-feedback-api --type change --strict --json", "passed": true, "issues": []},
+  "format": {"command": "yarn format:check", "exitCode": 1, "warningFiles": 337, "log": "format-check.log", "note": "Historical formatting failure existed; current 337-file failure is not attributed wholly to baseline. No broad formatting edits or suppression performed."},
+  "notRun": {"typecheck/lint/test/api:check/build": "Planning-only change; no runtime/API/build edits", "browser/E2E": "Forbidden by audit scope", "global validation/doctor": "Final audit gate pending"},
+  "globalProgress": "9/28",
+  "limits": ["G2–G5 not globally complete", "API1250 and capability-index infrastructure recovery await explicit authorization", "Runtime/deployment not verified"]
+}

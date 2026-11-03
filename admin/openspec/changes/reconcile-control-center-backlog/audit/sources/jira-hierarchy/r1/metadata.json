@@ -1,0 +1,11 @@
+{
+  "sourceId": "jira-hierarchy",
+  "revision": 1,
+  "url": "https://task.mos-team.ru/browse/MOS-623",
+  "retrievedAt": "2026-10-16T11:08:08.629Z",
+  "format": "sanitized-extraction",
+  "sha256": "4d1881959ecbe13e4c2d4c27903b63a4ba71e1cba38e349dc33855a7e605fb77",
+  "content": "content.json",
+  "version": null,
+  "limitations": "See content pagination and classification limitations."
+}

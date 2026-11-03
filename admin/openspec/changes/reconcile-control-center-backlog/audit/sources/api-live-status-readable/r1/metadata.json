@@ -1,0 +1,15 @@
+{
+  "sourceId": "api-live-status-readable",
+  "revision": "r1",
+  "derivedAt": "2026-10-19T07:19:09.474723+00:00",
+  "format": "local-lossless-json-subset-pretty-printed",
+  "originalPath": "../../api-live/r1/content.json",
+  "originalMetadataPath": "../../api-live/r1/metadata.json",
+  "originalSha256": "549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06",
+  "contentPath": "content.json",
+  "sha256": "1346f28284551b1b7924132525730e76023fc9ffea7c2a92a60a51c53fb474ef",
+  "operationPointer": "/paths/~1api~1control~1api~1skills~1v1~1skills~1{skill_id}~1status/post",
+  "referenceCount": 24,
+  "provenance": "Parent parsed existing saved JSON and recursively resolved every local $ref reachable from status POST. No network or endpoint execution. Original packet unchanged. References object keys preserve original JSON pointers.",
+  "limitations": "Not a complete OpenAPI document. Root security definitions and unrelated operations are not included. Original metadata governs retrieval/version; derivation is not a fresh publication snapshot. Hashes recomputed by parent, not reviewer."
+}

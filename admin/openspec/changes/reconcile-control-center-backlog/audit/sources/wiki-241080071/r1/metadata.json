@@ -1,0 +1,21 @@
+{
+  "sourceId": "wiki-241080071",
+  "revision": 1,
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/241080071/%D0%90%D0%B4%D0%BC%D0%B8%D0%BD%D0%BA%D0%B0.+%D0%94%D0%B8%D0%B0%D0%BB%D0%BE%D0%B3%D0%B8",
+  "retrievedAt": "2026-10-19T10:35:02.088Z",
+  "status": 200,
+  "version": {
+    "number": 2,
+    "when": "2026-09-08T17:45:41.881+08:00"
+  },
+  "content": "content.json",
+  "sha256": "bb8bc6555f05eafa1db53396a2f4a8f1dd2abd317c1eee71b4ba3e0d43f247d8",
+  "method": "Parent same-origin exact authorized root-linked documentation GET plus attachment indexes; no recursive traversal or source execution",
+  "discovery": "sources/wiki-238324523/r2/links.txt lines2,8,9,31; exact href reconfirmed in root DOM",
+  "redactions": 0,
+  "limitations": [
+    "Full bodyView and separate returned attachment index, not complete Confluence export",
+    "No child links/assets/attachments visited; no examples executed",
+    "No source precedence, current API/runtime or implementation claims"
+  ]
+}

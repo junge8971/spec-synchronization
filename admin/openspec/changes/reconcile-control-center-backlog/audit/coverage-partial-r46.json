@@ -1,0 +1,17 @@
+{
+  "revision": 46,
+  "supplements": "coverage-partial-r45.json",
+  "complete": false,
+  "globalProgress": "9/28",
+  "decisions": ["D-065", "D-066", "D-067"],
+  "currentBoundedMemberCounts": {"P": 53, "B": 6, "U": 114, "total": 173},
+  "additionalEvidence": {
+    "MOS-1254": ["reports/SPEC-G2-MOS-1254.md", "reports/API-G2-FEEDBACK-SURVEY-MUTATIONS.md", "reports/IMPL-G2-FEEDBACK-UI-ENTRY.md", "reports/IMPL-G2-FEEDBACK-SURVEY-MOCK.md"],
+    "MOS-1255": ["reports/SPEC-G2-MOS-1255.md", "reports/IMPL-G2-FEEDBACK-UI-ENTRY.md"],
+    "MOS-1257": ["reports/SPEC-G2-MOS-1257.md", "reports/API-G2-FEEDBACK-SURVEY-MUTATIONS.md", "reports/IMPL-G2-FEEDBACK-UI-ENTRY.md", "reports/IMPL-G2-FEEDBACK-SURVEY-MOCK.md"],
+    "MOS-1259": ["reports/SPEC-G2-MOS-1259.md", "reports/API-G2-FEEDBACK-SAVED-FILTERS.md", "reports/IMPL-G2-FEEDBACK-UI-ENTRY.md", "reports/IMPL-G2-FEEDBACK-SAVED-FILTER-MOCK.md"]
+  },
+  "reviewResolution": "Matching reviews/R-<report basename> retained; D065 accepts parent-corrected SPEC reports with original REVISE provenance, D066 API ACCEPT with locator-only corrections, D067 IMPL ACCEPT unchanged",
+  "nextWork": "work-items/WRITE-G2-FEEDBACK-MINIMAL-PLANS.md",
+  "limits": ["Partial static evidence, not delivery or full global lane coverage", "UI missing composed entry, not mounted placeholder", "Mocks are generic scaffolds with accepted bounded business-fidelity gaps", "Q1 unknown-type options remains unselected; continuation is not policy approval", "No runtime checks; original source limitations and formatting failure retained"]
+}

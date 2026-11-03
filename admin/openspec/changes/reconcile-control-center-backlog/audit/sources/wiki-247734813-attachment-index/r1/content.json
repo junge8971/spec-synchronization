@@ -1,0 +1,24 @@
+{
+  "pageId": "247734813",
+  "root": "https://wiki.mos-team.ru/spaces/KR/pages/238324523/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0",
+  "rootHref": "https://wiki.mos-team.ru/spaces/KR/pages/247734813/Раздел+Обратная+связь",
+  "endpoint": "/rest/api/content/247734813/child/attachment?limit=100",
+  "responseUrl": "https://wiki.mos-team.ru/rest/api/content/247734813/child/attachment?limit=100",
+  "status": 200,
+  "retrievedAt": "2026-10-19T12:13:31.104Z",
+  "format": "Selected index projection, not raw HTTP response. All five returned entry IDs/titles/mediaTypes/self links retained; download/webui links omitted. No version object returned by this unexpanded query; URL version parameters are not independently verified versions.",
+  "scope": "Separate attachment index only; no page body or attachment bytes",
+  "attachments": {
+    "start": 0,
+    "limit": 100,
+    "size": 5,
+    "next": null,
+    "results": [
+      {"id": "250790182", "title": "ПротоОбратнаяСвязь.html", "mediaType": "text/html", "self": "https://wiki.mos-team.ru/rest/api/content/250790182"},
+      {"id": "247746709", "title": "Прототипчик.html", "mediaType": "text/html", "self": "https://wiki.mos-team.ru/rest/api/content/247746709"},
+      {"id": "247739129", "title": "База знаний.html", "mediaType": "text/html", "self": "https://wiki.mos-team.ru/rest/api/content/247739129"},
+      {"id": "247737143", "title": "Прототип обратной связи.html", "mediaType": "text/html", "self": "https://wiki.mos-team.ru/rest/api/content/247737143"},
+      {"id": "247734812", "title": "новый 5.html", "mediaType": "text/html", "self": "https://wiki.mos-team.ru/rest/api/content/247734812"}
+    ]
+  }
+}

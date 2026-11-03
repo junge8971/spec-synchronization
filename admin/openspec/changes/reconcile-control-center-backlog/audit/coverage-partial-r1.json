@@ -1,0 +1,23 @@
+{
+  "revision": 1,
+  "kind": "partial-reviewed-scenario-index",
+  "complete": false,
+  "doesNotSatisfyGlobalG2": true,
+  "basis": "Parent-read reports and independent reviews with mandatory corrections in decisions.md; no feature acceptance or task closure",
+  "scenarios": [
+    {"id":"MOS-904","candidateIds":"REQ-MOS-904-001..014","requirements":"reports/REQ-MOS-904.md","reconciliation":"reviews/RECON-MOS-904.md","implementation":"reports/IMPL-MOS-904.md","implementationReview":"reviews/R-IMPL-MOS-904.md","decisions":["D-008","D-010"],"disposition":"bounded static evidence accepted with qualifications; exit wording unresolved; tests not run"},
+    {"id":"MOS-905","candidateIds":"REQ-MOS-905-001..018","requirements":"reports/REQ-MOS-905.md","reconciliation":"reviews/RECON-MOS-905.md","implementation":"reports/IMPL-MOS-905.md","implementationReview":"reviews/R-IMPL-MOS-905.md","decisions":["D-008","D-009"],"disposition":"bounded static mapping accepted with harness correction; existing fallback policy not reopened; tests not run"},
+    {"id":"MOS-920","candidateIds":"MOS920-C01..C12","report":"reports/SCENARIO-MOS-920.md","review":"reviews/R-SCENARIO-MOS-920.md","decisions":["D-011"],"disposition":"requirements/publication/spec evidence accepted with schema-versus-business and index corrections; draft gate unresolved; no code audit"},
+    {"id":"MOS-922","candidateIds":"MOS922-C01..C14","report":"reports/SCENARIO-MOS-922.md","review":"reviews/R-SCENARIO-MOS-922.md","decisions":["D-011"],"disposition":"evidence accepted with request-requiredness/query corrections; no approved product deferral inferred; no code audit"},
+    {"id":"MOS-923","candidateIds":"MOS923-C01..C18","report":"reports/SCENARIO-MOS-923.md","review":"reviews/R-SCENARIO-MOS-923.md","decisions":["D-011"],"disposition":"evidence accepted with historical approval and overlap-scope corrections; no code audit"},
+    {"id":"MOS-1018","report":"reports/DELTA-MOS-1018-LINKED-CONTRACT.md","review":"reviews/R-DELTA-MOS-1018-LINKED-CONTRACT.md","publication":"publication/WRITE-MOS-1018/acceptance.json","decisions":["D-003","D-006"],"disposition":"four-artifact publication accepted; linked catalog adds no material delta; integration still gated"},
+    {"id":"MOS-959","report":"reports/REQ-MOS-959.md","reviews":["reviews/RECON-MOS-959.md","reviews/RECON-MOS-959-CONTRACT.md"],"decisions":["D-004","D-005"],"disposition":"combined evidence accepted with qualifications; linked contract reveals versioned disagreements; existing explicit configurator deferral retained"},
+    {"id":"DOMAIN-ZONES","report":"reports/DELTA-DOMAIN-ZONES-LINKED-CONTRACT.md","review":"reviews/R-DELTA-DOMAIN-ZONES-LINKED-CONTRACT.md","decisions":["D-002","D-007"],"disposition":"delta accepted with index/locator corrections; directory discovery and unchanged-inactive update unresolved"}
+  ],
+  "limitations": [
+    "This index covers only the listed iterations; earlier reviewed packets remain indexed by D-002 and their own reports, not omitted as absent",
+    "Not a full atomic requirements/Jira/spec/change union; 157 members/16 subtasks inventory is distinct from semantic coverage",
+    "No source-completeness, runtime, deployment, test-pass, repository-wide integrity or index-state claim",
+    "Schema omissions, bounded plan discovery and audit no-action must not imply backend permission, absent owner or approved product deferral"
+  ]
+}

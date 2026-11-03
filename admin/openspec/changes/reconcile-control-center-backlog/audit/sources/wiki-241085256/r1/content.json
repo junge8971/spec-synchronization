@@ -1,0 +1,21 @@
+{
+  "id": "241085256",
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/241085256/API",
+  "retrievedAt": "2026-10-19T09:36:52.261Z",
+  "status": 200,
+  "title": "API",
+  "version": {
+    "number": 2,
+    "when": "2026-09-09T12:45:48.652+08:00"
+  },
+  "bodyView": "<p><ul class=\"childpages-macro conf-macro output-block\" data-hasbody=\"false\" data-macro-name=\"children\" data-host-id=\"5dd70249-3d20-390f-98f9-39c36c403964\" data-macro-id=\"8a7bb9ac-513f-4d64-81f8-9b3ffb31b1dd\" data-content-id=\"241085256\" data-content-version=\"2\"><li><a href=\"/spaces/KR/pages/238347066/skills+-+%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3+%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%BE%D0%B2\">/skills - Каталог навыков</a></li><li><a href=\"/spaces/KR/pages/238352321/skills+id+-+%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0+%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%B0+%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5\">/skills/{id} - Карточка навыка, описание</a></li><li><a href=\"/spaces/KR/pages/241074633/skills+id+monitoring+-+%D0%9C%D0%BE%D0%BD%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3+%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%B0\">/skills/{id}/monitoring - Мониторинг навыка</a></li><li><a href=\"/spaces/KR/pages/241080643/dialogs+-+%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA+%D0%B4%D0%B8%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%B2\">/dialogs - Список диалогов</a></li><li><a href=\"/spaces/KR/pages/241083649/dialogs+id+-+%D0%9A%D0%B0%D1%80%D1%82%D0%BE%D1%87%D0%BA%D0%B0+%D0%B4%D0%B8%D0%B0%D0%BB%D0%BE%D0%B3%D0%B0+%D0%BE%D0%B1%D1%89%D0%B0%D1%8F+%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F+%D1%82%D0%B0%D0%B9%D0%BC%D0%BB%D0%B0%D0%B9%D0%BD+%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B\">/dialogs/{id} - Карточка диалога (общая информация, таймлайн, ответы)</a></li><li><a href=\"/spaces/KR/pages/238350232/reports+%D0%B8+reports+tab+builder+-+%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD+%D0%B8+%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80+%D0%BE%D1%82%D1%87%D1%91%D1%82%D0%BE%D0%B2\">/reports и /reports?tab=builder - Шаблон и конструктор отчётов</a></li></ul></p>",
+  "redactions": 0,
+  "attachments": {
+    "status": 200,
+    "start": 0,
+    "limit": 100,
+    "size": 0,
+    "next": null,
+    "results": []
+  }
+}

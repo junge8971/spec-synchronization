@@ -1,0 +1,183 @@
+{
+  "sourceId": "jira-skill-switch-details",
+  "revision": 1,
+  "retrievedAt": "2026-10-16T13:58:59.883Z",
+  "origin": "https://task.mos-team.ru",
+  "fields": "summary,description,issuetype,status,subtasks,parent,updated,attachment,comment",
+  "items": [
+    {
+      "key": "MOS-776",
+      "summary": "[KR] Модуль \"Отключение навыка\"",
+      "issuetype": {
+        "self": "https://task.mos-team.ru/rest/api/2/issuetype/16622",
+        "id": "16622",
+        "description": "",
+        "iconUrl": "https://task.mos-team.ru/secure/viewavatar?size=xsmall&avatarId=23735&avatarType=issuetype",
+        "name": "Q key result",
+        "subtask": false,
+        "avatarId": 23735
+      },
+      "attachment": [],
+      "subtasks": [],
+      "description": "|*Что будет сделано*|Рубильник, основание, текст для жителя, переадресация в консьерж, согласование|\r\n|*Результат для пользователя*|Возможность отключить навык|\r\n|*Заказчики (Стейкхолдеры)*|Катков Д.\r\nПопова Л.|\r\n|*Проблема*|Пользователи центра управления могут принять решение об отключении навыка по показателям его работы, и должны иметь возможность отключить навык.|\r\n|*Решение (Acceptance criteria)* |Цикл разработки задачи:\r\n * продуктовая постановка\r\n * системный анализ\r\n * разработка\r\n * тестирование\r\n * релиз|\r\n|*Целевая аудитория*|-|\r\n|*Сценарий использования (для разработчиков)*|-|\r\n|*Предпосылки*|-|\r\n|*Гипотеза*|-|\r\n|*Документация*|-|\r\n|*SEO*|-|\r\n|*Макеты*|-|",
+      "comment": {
+        "comments": [],
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "updated": "2026-10-09T15:04:16.327+0800",
+      "status": {
+        "self": "https://task.mos-team.ru/rest/api/2/status/16813",
+        "description": "",
+        "iconUrl": "https://task.mos-team.ru/",
+        "name": "Backlog",
+        "id": "16813",
+        "statusCategory": {
+          "self": "https://task.mos-team.ru/rest/api/2/statuscategory/2",
+          "id": 2,
+          "key": "new",
+          "colorName": "default",
+          "name": "К выполнению"
+        }
+      }
+    },
+    {
+      "key": "MOS-1145",
+      "summary": "[B] Реализовать отключение и повторное включение навыка",
+      "issuetype": {
+        "self": "https://task.mos-team.ru/rest/api/2/issuetype/16617",
+        "id": "16617",
+        "description": "",
+        "iconUrl": "https://task.mos-team.ru/secure/viewavatar?size=xsmall&avatarId=23731&avatarType=issuetype",
+        "name": "Development task",
+        "subtask": false,
+        "avatarId": 23731
+      },
+      "attachment": [
+        {
+          "self": "https://task.mos-team.ru/rest/api/2/attachment/835759",
+          "id": "835759",
+          "filename": "TEST_PLAN_MOS_1145.md",
+          "author": {
+            "self": "https://task.mos-team.ru/rest/api/2/user?username=mayakin",
+            "name": "mayakin",
+            "key": "JIRAUSER32142",
+            "emailAddress": "mayakin@codesrc.ru",
+            "avatarUrls": {
+              "48x48": "https://task.mos-team.ru/secure/useravatar?ownerId=JIRAUSER32142&avatarId=24007",
+              "24x24": "https://task.mos-team.ru/secure/useravatar?size=small&ownerId=JIRAUSER32142&avatarId=24007",
+              "16x16": "https://task.mos-team.ru/secure/useravatar?size=xsmall&ownerId=JIRAUSER32142&avatarId=24007",
+              "32x32": "https://task.mos-team.ru/secure/useravatar?size=medium&ownerId=JIRAUSER32142&avatarId=24007"
+            },
+            "displayName": "Максим Маякин",
+            "active": true,
+            "timeZone": "Europe/Moscow"
+          },
+          "created": "2026-10-09T17:28:26.648+0800",
+          "size": 16435,
+          "mimeType": "text/markdown",
+          "content": "https://task.mos-team.ru/secure/attachment/835759/TEST_PLAN_MOS_1145.md"
+        }
+      ],
+      "subtasks": [],
+      "description": "h3. Цель\r\n\r\nДобавить возможность оперативно отключать навык без выпуска нового релиза и повторно включать его.\r\n\r\nКаждое отключение и включение должно фиксироваться в истории с указанием действия, основания, инициатора и времени выполнения.\r\n\r\nОснование:\r\n * ОТК-1 — навык отключается из карточки без релиза;\r\n * ОТК-4 — при отключении указывается основание;\r\n * ОТК-5 — задаётся текст для пользователя;\r\n * ОТК-9 — навык можно включить обратно с указанием основания;\r\n * ОТК-10 — действие доступно продуктовой команде и эксплуатации;\r\n * ОТК-11 — действие сохраняется в истории навыка и журнале аудита.\r\n\r\nh3. Изменение статусов навыка\r\n\r\nДобавить в enum статусов {{SkillStatus}} новое значение:\r\n{code:java}\r\nDISABLED = \"disabled\"\r\n{code}\r\nСтатус означает, что навык временно отключён и не может обрабатывать запросы ни на одной поверхности.\r\n\r\nОтключение и включение являются отдельными операциями и не должны выполняться через общий метод произвольного изменения статуса навыка.\r\nh3. Действия отключения\r\n\r\nДобавить доменный enum:\r\n{code:java}\r\nclass SkillDisablingAction(StrEnum):\r\n    DISABLE = \"disable\"\r\n    ENABLE = \"enable\"\r\n{code}\r\nДействия являются фиксированными бизнес-операциями и не хранятся в отдельной таблице-справочнике.\r\n\r\nКлиент не передаёт действие в теле запроса. Оно определяется вызываемым API-методом:\r\n * метод отключения всегда создаёт действие {{{}disable{}}};\r\n * метод включения всегда создаёт действие {{{}enable{}}}.\r\n\r\nh3. Справочник оснований\r\n\r\nСоздать таблицу-справочник {{{}disabling_reasons{}}}:\r\n||Поле||Тип||Ограничения||Описание||\r\n|{{code}}|varchar(32)|PK, NOT NULL|Стабильный системный код|\r\n|{{display_name}}|varchar(100)|NOT NULL|Отображаемое название|\r\n|{{sort_order}}|smallint|NOT NULL|Порядок отображения|\r\n|{{is_active}}|boolean|NOT NULL|Доступность основания для новых действий|\r\n\r\nНачальные значения:\r\n||Код||Отображаемое название||\r\n|{{incident}}|Инцидент|\r\n|{{planned_maintenance}}|Плановые работы|\r\n|{{team_obligation_violation}}|Нарушение обязательств команды|\r\n\r\nНеактивное основание сохраняется в существующей истории, но не может быть использовано для нового отключения или включения.\r\nh3. Таблица истории действий\r\n\r\nСоздать таблицу {{{}skill_disabling{}}}:\r\n||Поле||Тип||Ограничения||Описание||\r\n|{{id}}|UUID|PK, NOT NULL|Идентификатор действия|\r\n|{{skill_id}}|UUID|FK -> {{{}skills.id{}}}, NOT NULL|Навык|\r\n|{{action}}|varchar(32)|NOT NULL, CHECK|Выполненное действие|\r\n|{{reason}}|varchar(32)|FK -> {{{}disabling_reasons.code{}}}, NOT NULL|Основание действия|\r\n|{{fallback_text}}|text|NULL|Сообщение, отображаемое пользователю при отключении|\r\n|{{actor_id}}|UUID|NOT NULL|Пользователь, выполнивший действие|\r\n|{{created_at}}|datetime|NOT NULL|Дата и время выполнения действия|\r\n\r\nНеобходимо добавить:\r\n * индекс по {{{}skill_id{}}};\r\n * внешний ключ {{skill_id}} на {{{}skills.id{}}};\r\n * внешний ключ {{reason}} на {{{}disabling_reasons.code{}}};\r\n\r\nh3. Сценарий отключения\r\n\r\nОперация отключения должна:\r\n # Проверить существование навыка.\r\n # Проверить права пользователя.\r\n # Проверить, что навык ещё не отключён.\r\n # Проверить, что переданное основание существует и активно.\r\n # Проверить наличие непустого {{{}fallback_text{}}}.\r\n # Сохранить статус, в котором навык находился до отключения.\r\n # Перевести навык в статус {{{}disabled{}}}.\r\n # Создать запись в {{{}skill_disabling{}}}:\r\n ** {{{}action = disable{}}};\r\n ** выбранное основание;\r\n ** пользовательский текст;\r\n ** идентификатор актора;\r\n ** время выполнения.\r\n # Добавить действие в журнал аудита.\r\n\r\nИзменение статуса и создание записи истории должны выполняться в одной транзакции.\r\n\r\nПовторное отключение уже отключённого навыка не должно создавать новую запись истории.\r\nh3. Сценарий включения\r\n\r\nОперация включения должна:\r\n # Проверить существование навыка.\r\n # Проверить права пользователя.\r\n # Проверить, что навык находится в статусе {{{}disabled{}}}.\r\n # Проверить, что переданное основание существует и активно.\r\n # Восстановить статус, который был у навыка непосредственно перед отключением.\r\n # Создать запись в {{{}skill_disabling{}}}:\r\n ** {{{}action = enable{}}};\r\n ** выбранное основание;\r\n ** {{{}fallback_text = NULL{}}};\r\n ** идентификатор актора;\r\n ** время выполнения.\r\n # Добавить действие в журнал аудита.\r\n # Возобновить обработку запросов навыком в соответствии с восстановленным статусом.\r\n\r\nИзменение статуса и создание записи истории должны выполняться в одной транзакции.\r\nh3. Хранение предыдущего статуса\r\n\r\nХранение и восстановление предыдущего статуса реализуются в рамках задачи MOS-1119.\r\n\r\nТекущая задача должна использовать предоставленный этой задачей механизм и не дублировать хранение предыдущего статуса в {{{}skill_disabling{}}}.\r\nh3. API\r\n\r\nДобавить отдельные операции:\r\n{code:java}\r\nPOST /api/v1/skills/{skill_id}/disable\r\n{code}\r\nТело запроса:\r\n{code:java}\r\n{\r\n  \"reason\": \"incident\",\r\n  \"fallback_text\": \"Навык временно недоступен. Попробуйте позже.\"\r\n}\r\n{code}\r\nИ:\r\n{code:java}\r\nPOST /api/v1/skills/{skill_id}/enable\r\n{code}\r\nТело запроса:\r\n{code:java}\r\n{\r\n  \"reason\": \"incident\"\r\n}\r\n{code}\r\nДействие {{action}} не передаётся клиентом и определяется endpoint-ом.\r\n\r\nОтвет должен содержать актуальный статус навыка и информацию о выполненном действии:\r\n{code:java}\r\n{\r\n  \"skill_id\": \"uuid\",\r\n  \"status\": \"disabled\",\r\n  \"action\": {\r\n    \"id\": \"uuid\",\r\n    \"action\": \"disable\",\r\n    \"reason\": \"incident\",\r\n    \"fallback_text\": \"Навык временно недоступен. Попробуйте позже.\",\r\n    \"actor_id\": \"uuid\",\r\n    \"created_at\": \"2026-10-05T12:00:00Z\"\r\n  }\r\n}\r\n{code}\r\nh3. Критерии приёмки\r\n * В {{SkillStatus}} добавлено значение {{{}disabled{}}}.\r\n * Добавлен доменный enum {{SkillDisablingAction}} со значениями {{disable}} и {{{}enable{}}}.\r\n * Таблица-справочник действий не создаётся.\r\n * Миграция создаёт и заполняет справочник {{{}disabling_reasons{}}}.\r\n * Миграция создаёт таблицу {{{}skill_disabling{}}}.\r\n * {{skill_disabling.reason}} ссылается на {{{}disabling_reasons.code{}}}.\r\n * При отключении статус навыка меняется на {{{}disabled{}}}.\r\n * Отключение без активного основания или непустого пользовательского текста отклоняется.\r\n * Повторное отключение не создаёт новую запись истории.\r\n * Отключённый навык можно включить обратно.\r\n * При включении восстанавливается статус, предшествовавший отключению.\r\n * Включение без активного основания отклоняется.\r\n * Для каждого успешного отключения и включения создаётся отдельная запись истории.\r\n * В истории сохраняются действие, инициатор, основание и время выполнения.\r\n * При включении {{fallback_text}} сохраняется как {{{}NULL{}}}.\r\n * Переход статуса и создание записи истории выполняются атомарно.",
+      "comment": {
+        "comments": [
+          {
+            "self": "https://task.mos-team.ru/rest/api/2/issue/530973/comment/1125431",
+            "id": "1125431",
+            "author": {
+              "self": "https://task.mos-team.ru/rest/api/2/user?username=gitlab",
+              "name": "gitlab",
+              "key": "gitlab",
+              "emailAddress": "gitlab@mos-team.ru",
+              "avatarUrls": {
+                "48x48": "https://task.mos-team.ru/secure/useravatar?ownerId=gitlab&avatarId=16714",
+                "24x24": "https://task.mos-team.ru/secure/useravatar?size=small&ownerId=gitlab&avatarId=16714",
+                "16x16": "https://task.mos-team.ru/secure/useravatar?size=xsmall&ownerId=gitlab&avatarId=16714",
+                "32x32": "https://task.mos-team.ru/secure/useravatar?size=medium&ownerId=gitlab&avatarId=16714"
+              },
+              "displayName": "Gitlab",
+              "active": true,
+              "timeZone": "Europe/Moscow"
+            },
+            "body": "[Максим Маякин|https://gitlab.mos-team.ru/mayakin] mentioned this issue in [a merge request|https://gitlab.mos-team.ru/tsam/back/tsam-assistant-management-service-back/-/merge_requests/18] of [tsam / back / tsam-assistant-management-service-back|https://gitlab.mos-team.ru/tsam/back/tsam-assistant-management-service-back] on branch [MOS-1145-disable|https://gitlab.mos-team.ru/tsam/back/tsam-assistant-management-service-back/-/tree/MOS-1145-disable]:{quote}Draft: feat: MOS-1145 реализовать временное отключение навыка{quote}",
+            "updateAuthor": {
+              "self": "https://task.mos-team.ru/rest/api/2/user?username=gitlab",
+              "name": "gitlab",
+              "key": "gitlab",
+              "emailAddress": "gitlab@mos-team.ru",
+              "avatarUrls": {
+                "48x48": "https://task.mos-team.ru/secure/useravatar?ownerId=gitlab&avatarId=16714",
+                "24x24": "https://task.mos-team.ru/secure/useravatar?size=small&ownerId=gitlab&avatarId=16714",
+                "16x16": "https://task.mos-team.ru/secure/useravatar?size=xsmall&ownerId=gitlab&avatarId=16714",
+                "32x32": "https://task.mos-team.ru/secure/useravatar?size=medium&ownerId=gitlab&avatarId=16714"
+              },
+              "displayName": "Gitlab",
+              "active": true,
+              "timeZone": "Europe/Moscow"
+            },
+            "created": "2026-10-06T21:26:25.224+0800",
+            "updated": "2026-10-06T21:26:25.224+0800"
+          },
+          {
+            "self": "https://task.mos-team.ru/rest/api/2/issue/530973/comment/1127708",
+            "id": "1127708",
+            "author": {
+              "self": "https://task.mos-team.ru/rest/api/2/user?username=mayakin",
+              "name": "mayakin",
+              "key": "JIRAUSER32142",
+              "emailAddress": "mayakin@codesrc.ru",
+              "avatarUrls": {
+                "48x48": "https://task.mos-team.ru/secure/useravatar?ownerId=JIRAUSER32142&avatarId=24007",
+                "24x24": "https://task.mos-team.ru/secure/useravatar?size=small&ownerId=JIRAUSER32142&avatarId=24007",
+                "16x16": "https://task.mos-team.ru/secure/useravatar?size=xsmall&ownerId=JIRAUSER32142&avatarId=24007",
+                "32x32": "https://task.mos-team.ru/secure/useravatar?size=medium&ownerId=JIRAUSER32142&avatarId=24007"
+              },
+              "displayName": "Максим Маякин",
+              "active": true,
+              "timeZone": "Europe/Moscow"
+            },
+            "body": "Тестирование:  [^TEST_PLAN_MOS_1145.md] ",
+            "updateAuthor": {
+              "self": "https://task.mos-team.ru/rest/api/2/user?username=mayakin",
+              "name": "mayakin",
+              "key": "JIRAUSER32142",
+              "emailAddress": "mayakin@codesrc.ru",
+              "avatarUrls": {
+                "48x48": "https://task.mos-team.ru/secure/useravatar?ownerId=JIRAUSER32142&avatarId=24007",
+                "24x24": "https://task.mos-team.ru/secure/useravatar?size=small&ownerId=JIRAUSER32142&avatarId=24007",
+                "16x16": "https://task.mos-team.ru/secure/useravatar?size=xsmall&ownerId=JIRAUSER32142&avatarId=24007",
+                "32x32": "https://task.mos-team.ru/secure/useravatar?size=medium&ownerId=JIRAUSER32142&avatarId=24007"
+              },
+              "displayName": "Максим Маякин",
+              "active": true,
+              "timeZone": "Europe/Moscow"
+            },
+            "created": "2026-10-09T17:28:39.199+0800",
+            "updated": "2026-10-09T17:28:39.199+0800"
+          }
+        ],
+        "maxResults": 2,
+        "total": 2,
+        "startAt": 0
+      },
+      "updated": "2026-10-16T19:22:39.198+0800",
+      "status": {
+        "self": "https://task.mos-team.ru/rest/api/2/status/14115",
+        "description": "",
+        "iconUrl": "https://task.mos-team.ru/images/icons/statuses/generic.png",
+        "name": "Ready for test",
+        "id": "14115",
+        "statusCategory": {
+          "self": "https://task.mos-team.ru/rest/api/2/statuscategory/2",
+          "id": 2,
+          "key": "new",
+          "colorName": "default",
+          "name": "К выполнению"
+        }
+      }
+    }
+  ]
+}

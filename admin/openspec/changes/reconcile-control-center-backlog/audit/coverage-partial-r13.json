@@ -1,0 +1,41 @@
+{
+  "revision": 13,
+  "supplements": "coverage-partial-r12.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "chains": [
+    {
+      "report": "reports/REL-D031-PLANNING-API.md",
+      "review": "reviews/R-REL-D031-PLANNING-DATA.md",
+      "disposition": "D-032",
+      "scope": "Three body-backed classifications; original REVISE for collection-status wording preserved, parent corrected and verified against capture receipt"
+    },
+    {
+      "report": "reports/REL-D031-DATA-DRAFTS.md",
+      "review": "reviews/R-REL-D031-PLANNING-DATA.md",
+      "disposition": "D-032",
+      "scope": "Three relevance classifications accepted, no graphical ERD/full model or wire-contract acceptance"
+    },
+    {
+      "report": "reports/REL-D031-MPMM-ASSESSMENT.md",
+      "review": "reviews/R-REL-D031-MPMM-ASSESSMENT.md",
+      "disposition": "D-032",
+      "scope": "Four historical/direct/mixed relevance classifications accepted; consult existing approved contracts first, no new auth/product scope"
+    }
+  ],
+  "sourceReceipt": "collection-D031-held-pages.json",
+  "priorScopeDisposition": "D-031 authorized ten named reads; all captured and classified under D-032. Old holds retained historically, not current permission blockers.",
+  "collectionBlocker": {
+    "tool": "chrome-devtools_list_pages",
+    "result": "Request timed out twice before next skill-page collection",
+    "affectedPages": ["238347066", "238352321", "241074633"],
+    "interpretation": "No per-page request/access result; no stale page IDs or alternate transport used"
+  },
+  "pendingLocalWork": "work-items/G1-ROOT-REGISTRY-DELTA.md",
+  "limitations": [
+    "Eighteen D031 attachment bodies remain unread",
+    "Relevance classification is not full requirements reconciliation or global G1 closure",
+    "Broader source collection and formatting failure unresolved;6/28 unchanged",
+    "No code/spec/archive changes, tests or runtime verification"
+  ]
+}

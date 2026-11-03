@@ -1,0 +1,20 @@
+{
+  "schema": "dependencies-linked-ledger-v1",
+  "status": "partial-final-delivery",
+  "complete": false,
+  "referenceBase": "openspec/changes/reconcile-control-center-backlog/audit",
+  "ledgerSource": "reports/FINAL-DEPENDENCIES.md",
+  "ledgerSelector": "First fenced JSON object: edges, cycles, cycleAssessment and excludedFalseBlockers",
+  "edgeCount": 17,
+  "edgeIds": ["DEP-01","DEP-02","DEP-03","DEP-04","DEP-05","DEP-06","DEP-07","DEP-08","DEP-09","DEP-10","DEP-11","DEP-12","DEP-13","DEP-14","DEP-15","DEP-16","DEP-17"],
+  "edgeFields": ["id","prerequisite","dependent","scope","kind","status","owner","removalCondition","evidence"],
+  "resolution": "Each edge is stored once in the referenced machine-readable ledger with all fields and exact evidence references; this index does not turn conditional gates into whole-feature blockers.",
+  "userQuestions": [
+    {"edge":"DEP-01","question":"Existing unknown question type with nonempty options: preserve, omit or block save?","status":"unresolved; continuation is not policy approval"},
+    {"edge":"DEP-02","question":"How does the manual-tagging exclusion apply to already approved MOS-1044 category addition?","status":"unresolved applicability; existing local approval preserved"}
+  ],
+  "cycles": [],
+  "cycleAssessment": "No actual cycle established in accepted evidence; unexamined graph not certified acyclic",
+  "coverageCountsAreNotBlockerCounts": true,
+  "limits": ["Not exhaustive technical dependencies for114unexamined members","No new implementation authority","Formatting/freshness/deployment gates remain distinct","Original source and decision history retained"]
+}

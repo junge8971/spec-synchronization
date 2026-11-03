@@ -1,0 +1,11 @@
+{
+  "pointer": "#/components/schemas/WidgetGroup",
+  "value": {
+    "type": "string",
+    "enum": [
+      "kpi",
+      "diagnostic"
+    ],
+    "title": "WidgetGroup"
+  }
+}

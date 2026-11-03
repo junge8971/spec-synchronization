@@ -1,0 +1,50 @@
+
+ RUN  v4.1.11 /home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests
+
+
+ Test Files  252 passed (252)
+      Tests  2574 passed (2574)
+   Start at  16:24:03
+   Duration  345.97s (transform 7.53s, setup 70.13s, import 60.01s, tests 334.02s, environment 188.52s)
+
+✔ generated API types match the contract (1067.510711ms)
+✔ assistant modules section matches the source and resolves every local reference (13.592412ms)
+✔ business contract preserves the complete published T snapshot from 2026-10-26 (36.195639ms)
+✔ every Control API operation requires both raw token headers (2.25236ms)
+✔ principal requires permissions and scoped assignments but no legacy scope or display name (68.674764ms)
+✔ repository MPMM refresh contract resolves its closure and separates result from data (0.764062ms)
+✔ assistant-modules standalone contract matches the merged source and resolves every reference (2.994691ms)
+✔ skills-domains standalone contract matches the merged source and resolves every reference (5.573819ms)
+✔ assistant-operations standalone contract matches the merged source and resolves every reference (2.949917ms)
+✔ users standalone contract matches the merged source and resolves every reference (0.567761ms)
+✔ skill-incidents-internal standalone contract matches the merged source and resolves every reference (0.407349ms)
+✔ analytics-dashboard standalone contract matches the merged source and resolves every reference (1.044542ms)
+✔ surfaces standalone contract matches the merged source and resolves every reference (1.990497ms)
+✔ teams standalone contract matches the merged source and resolves every reference (1.157855ms)
+✔ access-session standalone contract matches the merged source and resolves every reference (0.41312ms)
+✔ dialogs standalone contract matches the merged source and resolves every reference (2.083562ms)
+✔ managed-resources standalone contract matches the merged source and resolves every reference (8.00641ms)
+✔ skill-metrics-internal standalone contract matches the merged source and resolves every reference (0.849864ms)
+✔ dialog operations and DTOs retain the accepted backend contract from the published snapshot (4.644064ms)
+✔ MOS-1119 status reason is optional and nullable without relaxing required fields (62.001089ms)
+✔ merged contract retains required intents alongside status and Analytics (4.548615ms)
+✔ live skill contract replaces legacy classification and keeps PUT aliases alongside PATCH (0.328439ms)
+✔ managed-resource updates use PUT with partial nullable bodies and strict extra fields (49.403314ms)
+✔ published PUT aliases preserve parameters and distinct operation IDs; security keeps both tokens (0.596626ms)
+✔ raw provenance is intact and aggregate differs only by security AND (12.67444ms)
+✔ published exports replace supplement DTOs and retain both operation bindings (0.359689ms)
+✔ installed PDF.js parses and renders both fixture pages without executing document JavaScript (149.390813ms)
+✔ enables only the development mock proxy and keeps client config token-free (615.609798ms)
+✔ disables mock server and rewrite for production, preview, and explicit opt-out (517.863079ms)
+failed to load config from /home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/vite.config.ts
+✔ rejects external API override only with mocks enabled (180.734825ms)
+✔ serves built assets and deep links without turning missing API/assets into HTML (74.836513ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2700.714457
+WALL_SECONDS=349,569

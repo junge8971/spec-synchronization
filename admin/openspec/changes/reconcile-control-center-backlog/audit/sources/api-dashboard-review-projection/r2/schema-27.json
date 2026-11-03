@@ -1,0 +1,11 @@
+{
+  "pointer": "#/components/schemas/UnavailableReasonCode",
+  "value": {
+    "type": "string",
+    "enum": [
+      "markup_required",
+      "writer_data_required"
+    ],
+    "title": "UnavailableReasonCode"
+  }
+}

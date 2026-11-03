@@ -1,0 +1,20 @@
+{"name":"undefined","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role={undefined} />;\n","oldCount":1,"newCount":1,"match":true}
+{"name":"null","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role={null} />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"false","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role={false} />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"true","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role={true} />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"dynamic","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role={condition} />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"ternary","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role={condition ? \"button\" : \"link\"} />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"literal-expression","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role={\"button\"} />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"void","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role={void 0} />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"missing","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} />;\n","oldCount":1,"newCount":1,"match":true}
+{"name":"hidden","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role={undefined} aria-hidden />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"button","source":"// префикс 😀\nexport const element = <button onClick={() => void 0} role={undefined} />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"heading","source":"// префикс 😀\nexport const element = <h2 onClick={() => void 0} role={undefined} />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"no-value","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role />;\n","oldCount":1,"newCount":1,"match":true}
+{"name":"empty-string","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role=\"\" />;\n","oldCount":1,"newCount":1,"match":true}
+{"name":"invalid-string","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role=\"bad\" />;\n","oldCount":1,"newCount":1,"match":true}
+{"name":"valid-literal","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role=\"button\" />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"custom-element","source":"// префикс 😀\nexport const element = <custom-widget onClick={() => void 0} role={condition} />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"undefined-first","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role={undefined} role={condition} />;\n","oldCount":1,"newCount":1,"match":true}
+{"name":"dynamic-first","source":"// префикс 😀\nexport const element = <div onClick={() => void 0} role={condition} role={undefined} />;\n","oldCount":0,"newCount":0,"match":true}
+{"name":"nested","source":"// префикс 😀\nexport const element = <section><div onClick={() => void 0} role={condition} /></section>;\n","oldCount":0,"newCount":0,"match":true}

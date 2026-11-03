@@ -1,0 +1,12 @@
+{
+  "sourceId": "jira-subtasks",
+  "revision": 1,
+  "retrievedAt": "2026-10-16T11:23:01.951Z",
+  "sha256": "c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e",
+  "format": "selected-field-redacted-extraction",
+  "method": "Parent browser same-origin GET Jira issue for 16 observed subtasks; exact JSON result parsed from parent session",
+  "redactions": [
+    "Authorization bearer value in an issue example replaced before persistence"
+  ],
+  "limitations": "Attachments enumerated, not downloaded; no comments/custom acceptance fields; no reproduction/browser tests or business requests executed."
+}

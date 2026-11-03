@@ -1,0 +1,76 @@
+{
+  "pointer": "#/components/schemas/TeamResponse",
+  "value": {
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid",
+        "title": "Id"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name"
+      },
+      "department_name": {
+        "type": "string",
+        "title": "Department Name"
+      },
+      "member_count": {
+        "type": "integer",
+        "title": "Member Count"
+      },
+      "members": {
+        "items": {
+          "$ref": "#/components/schemas/TeamMemberResponse"
+        },
+        "type": "array",
+        "title": "Members"
+      },
+      "surfaces": {
+        "items": {
+          "$ref": "#/components/schemas/TeamSurfaceResponse"
+        },
+        "type": "array",
+        "title": "Surfaces"
+      },
+      "domains": {
+        "items": {
+          "$ref": "#/components/schemas/TeamDomainResponse"
+        },
+        "type": "array",
+        "title": "Domains"
+      },
+      "skills": {
+        "items": {
+          "$ref": "#/components/schemas/TeamSkillResponse"
+        },
+        "type": "array",
+        "title": "Skills"
+      },
+      "created_at": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Created At"
+      },
+      "updated_at": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Updated At"
+      }
+    },
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "department_name",
+      "member_count",
+      "members",
+      "surfaces",
+      "domains",
+      "skills",
+      "created_at",
+      "updated_at"
+    ],
+    "title": "TeamResponse"
+  }
+}

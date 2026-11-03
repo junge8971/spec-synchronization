@@ -1,0 +1,35 @@
+{
+  "pointer": "#/components/schemas/PeriodResponse",
+  "value": {
+    "properties": {
+      "started_from": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Started From"
+      },
+      "started_to": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Started To"
+      },
+      "comparison_from": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Comparison From"
+      },
+      "comparison_to": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Comparison To"
+      }
+    },
+    "type": "object",
+    "required": [
+      "started_from",
+      "started_to",
+      "comparison_from",
+      "comparison_to"
+    ],
+    "title": "PeriodResponse"
+  }
+}

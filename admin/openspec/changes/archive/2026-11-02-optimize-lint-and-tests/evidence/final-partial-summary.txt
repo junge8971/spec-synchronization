@@ -1,0 +1,5 @@
+Started 2026-10-29T18:20:38+03:00
+typecheck 0 26
+lint 0 119
+test 1 390
+format:check 1 5

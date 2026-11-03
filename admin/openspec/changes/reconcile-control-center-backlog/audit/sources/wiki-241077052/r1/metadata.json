@@ -1,0 +1,15 @@
+{
+  "sourceId": "wiki-241077052",
+  "revision": 1,
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/241077052/Бизнес-анализ+Админка",
+  "retrievedAt": "2026-10-19T08:24:09.633Z",
+  "version": {
+    "number": 3,
+    "when": "2026-09-09T16:25:30.592+08:00"
+  },
+  "content": "content.md",
+  "sha256": "2a7f4d1bc30d12adf59d654f4658c5e0e1fbb027506c48812ea757ca9832f2ef",
+  "format": "selected-body-structure-and-attachment-index-extraction",
+  "discovery": "../../wiki-238324523/r2/links.txt line15",
+  "limitations": "Body is image-only; two attachment metadata entries saved, both image bodies unread. No substantive requirement absence inferred. Hash saved extraction only; original HTML not persisted."
+}

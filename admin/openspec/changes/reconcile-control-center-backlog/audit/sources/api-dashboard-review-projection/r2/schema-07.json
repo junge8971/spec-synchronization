@@ -1,0 +1,92 @@
+{
+  "pointer": "#/components/schemas/DistributionWidgetResponse",
+  "value": {
+    "properties": {
+      "widget_id": {
+        "type": "string",
+        "title": "Widget Id"
+      },
+      "type": {
+        "type": "string",
+        "const": "distribution",
+        "title": "Type",
+        "default": "distribution"
+      },
+      "title": {
+        "type": "string",
+        "title": "Title"
+      },
+      "subtitle": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Subtitle"
+      },
+      "status": {
+        "type": "string",
+        "const": "ok",
+        "title": "Status",
+        "default": "ok"
+      },
+      "error": {
+        "type": "null",
+        "title": "Error"
+      },
+      "value": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Value"
+      },
+      "unit": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/MetricUnit"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "measure": {
+        "$ref": "#/components/schemas/Measure"
+      },
+      "truncated": {
+        "type": "boolean",
+        "title": "Truncated"
+      },
+      "items": {
+        "items": {
+          "$ref": "#/components/schemas/DistributionItemResponse"
+        },
+        "type": "array",
+        "title": "Items"
+      }
+    },
+    "type": "object",
+    "required": [
+      "widget_id",
+      "title",
+      "subtitle",
+      "value",
+      "unit",
+      "measure",
+      "truncated",
+      "items"
+    ],
+    "title": "DistributionWidgetResponse"
+  }
+}

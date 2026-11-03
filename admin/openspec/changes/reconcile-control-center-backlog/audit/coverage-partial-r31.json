@@ -1,0 +1,12 @@
+{
+  "revision": 31,
+  "supplements": "coverage-partial-r30.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [{"report": "reports/DELTA-TEAMS-API-CONTRACT.md", "review": "reviews/R-DELTA-TEAMS-API-CONTRACT.md", "candidates": "TEAMAPI01–08", "verdict": "ACCEPT", "decision": "D-048"}],
+  "sourceAdditions": [],
+  "localDerivedEvidence": {"directory": "sources/api-teams-review-projection/r2", "operations": 8, "schemas": 29, "referenceEdges": 54, "limits": "Original-to-projection equality and hash parent-attributed; reviewer independently inspected all projected contents. Not a new API acquisition."},
+  "nextSource": {"id": "241095761", "kind": "Dashboard explanatory contract", "carryingIssues": ["MOS-1025", "MOS-1030"], "authority": "D-048 relevant exact documentary source within existing design scope", "attempt": "Fresh list_pages timed out before origin/href/absence guards or GET", "pageAccessOutcome": "unknown", "newPacket": false},
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "limits": ["No auth/reader/token/product/runtime approval", "Team canonical capture gap resolved; detailed owner acceptance remains bounded unknown", "No stale-tab request or alternate transport", "Global tasks2.3/2.4/2.6 and historical formatting issue remain open"]
+}

@@ -1,0 +1,33 @@
+{
+  "pointer": "#/components/schemas/DistributionItemResponse",
+  "value": {
+    "properties": {
+      "code": {
+        "type": "string",
+        "title": "Code"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name"
+      },
+      "value": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "number"
+          }
+        ],
+        "title": "Value"
+      }
+    },
+    "type": "object",
+    "required": [
+      "code",
+      "name",
+      "value"
+    ],
+    "title": "DistributionItemResponse"
+  }
+}

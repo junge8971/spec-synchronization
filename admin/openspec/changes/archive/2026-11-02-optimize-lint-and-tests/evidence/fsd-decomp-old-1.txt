@@ -1,0 +1,10 @@
+✔ declaration and component placement rules accept the intended files (9847.772594ms)
+✔ declaration and component placement rules reject misplaced declarations and compound files (8375.640314ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 18294.318687

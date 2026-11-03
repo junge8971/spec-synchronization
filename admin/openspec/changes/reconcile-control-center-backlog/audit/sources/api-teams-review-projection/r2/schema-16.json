@@ -1,0 +1,11 @@
+{
+  "pointer": "#/components/schemas/TeamMemberRole",
+  "value": {
+    "type": "string",
+    "enum": [
+      "lead",
+      "member"
+    ],
+    "title": "TeamMemberRole"
+  }
+}

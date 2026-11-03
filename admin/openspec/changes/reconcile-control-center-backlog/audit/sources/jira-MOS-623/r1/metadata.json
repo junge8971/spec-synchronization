@@ -1,0 +1,11 @@
+{
+  "sourceId": "jira-MOS-623",
+  "revision": 1,
+  "url": "https://task.mos-team.ru/browse/MOS-623",
+  "retrievedAt": null,
+  "format": "sanitized-extraction",
+  "sha256": "0e2d0a5696eb1e237533b6efc7cdcf1e94ef024908ea065c211a471845e6b363",
+  "content": "content.md",
+  "version": null,
+  "limitations": "Snapshot/extraction, not raw response; no server revision. Initial root time not captured."
+}

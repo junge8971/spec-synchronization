@@ -1,0 +1,27 @@
+{
+  "pointer": "#/components/schemas/TeamDomainResponse",
+  "value": {
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid",
+        "title": "Id"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name"
+      },
+      "skills_count": {
+        "type": "integer",
+        "title": "Skills Count"
+      }
+    },
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "skills_count"
+    ],
+    "title": "TeamDomainResponse"
+  }
+}

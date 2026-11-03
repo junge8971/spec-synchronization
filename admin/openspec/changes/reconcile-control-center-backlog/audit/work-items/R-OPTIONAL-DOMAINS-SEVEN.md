@@ -1,0 +1,9 @@
+# R-OPTIONAL-DOMAINS-SEVEN — single bounded package review
+
+Queued, fresh Astra low; parent sole project writer. Inputs reports/IMPL-{KB-REGISTRY,KB-EDITOR,KB-EXPORT,AB-REGISTRY,AB-EDITOR,AB-EXPORT,SKILL-DOMAINS}.md from seven independent lanes, and G2-OPTIONAL-DOMAINS-SEVEN.md common authority. Root/HEAD unchanged. Full seven reports read, source-backed review focused on their concrete recommendations; do not repeat broad source extraction or global implementation census.
+
+Acceptance: per-report ACCEPT/REVISE, current input/report hashes, precise mandatory corrections only. Independently verify three candidates against original accepted sources and relevant current main spec/code/tests: KB export actual 422 EXPORT_LIMIT_EXCEEDED lacks narrowing advice while component test supplies it; A/B sample label omits per-group qualifier (not numeric algorithm bug); domain enum read and binary display disagree with accepted wider read boundary, separate fixed selection and unresolved inactive-update/directory policy. For four no-op reports check existing owner mapping and material claims; do not turn limited static coverage into blanket conformance. Preserve task/archive history, later contract-migration ownership, mock-versus-real distinction and optional isolation.
+
+Return whether each candidate warrants an active corrective planning delta within already approved scope or still needs a specific product decision. Do not create/modify any project file or infer implementation authorization. Do not launch agents, tests/build/browser/network or inspect credentials. Use current-local hashes for Git-ignored OpenSpec; no git-show baseline fiction. Nonempty final pointing to configured review output, later installed under reviews/R-OPTIONAL-DOMAINS-SEVEN.md.
+
+Parent then accepts/reconciles and publishes only warranted planning changes; no global audit checkbox closes from seven report counts.

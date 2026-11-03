@@ -1,0 +1,32 @@
+{
+  "revision": 25,
+  "supplements": "coverage-partial-r24.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [{"report": "reports/G1-ROOT-REGISTRY-FINAL-INCREMENT.md", "review": "reviews/R-G1-ROOT-REGISTRY-FINAL-INCREMENT.md", "verdict": "ACCEPT", "decision": "D-043", "limits": "Three legacy parses and four byte measurements parent-attributed; historical42/41/34 snapshot remains unchanged"}],
+  "sourceAdditions": ["sources/wiki-247734813-attachment-index/r1/content.json", "sources/wiki-247734813-attachment-index/r1/metadata.json"],
+  "repair": {
+    "pageId": "247734813",
+    "retrievedAt": "2026-10-19T12:13:31.104Z",
+    "status": 200,
+    "kind": "Separate selected attachment-index projection; no body refresh",
+    "indexCount": 5,
+    "next": null,
+    "ids": ["250790182", "247746709", "247739129", "247737143", "247734812"],
+    "downloadedAttachmentBodies": 0,
+    "review": "pending R-FEEDBACK-INDEX-REPAIR"
+  },
+  "parentComputedCountsAfterRepairPendingReview": {
+    "rootBodyOrExtractionPackets": 42,
+    "rootPagesWithReturnedIndexes": 42,
+    "knownIndexedEntries": 39,
+    "savedPrototypeTexts": 4,
+    "unreadIndexedBodies": 35
+  },
+  "limits": [
+    "Separate index capture does not backdate page r1 or accepted D043 snapshot",
+    "Five attachment titles do not establish relevance, precedence, versions or permission to download",
+    "Feedback body remains flattened; no structural repair without table-sensitive owner need",
+    "No global source/semantic/owner/runtime closure; historical formatting issue unresolved"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "sourceId": "api-live",
+  "revision": 2,
+  "discoveredFrom": "https://nchat-a-tech.mos.ru/api/control/docs",
+  "discoveryReceipt": "../../api-docs/r1/content.html",
+  "url": "https://nchat-a-tech.mos.ru/api/control/openapi.json",
+  "retrievedAt": "2026-10-19T08:11:44.238Z",
+  "sha256": "ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993",
+  "bytes": 420099,
+  "openapi": "3.1.0",
+  "info": {
+    "title": "TSAM Assistant Management Service",
+    "version": "0.1.0"
+  },
+  "paths": 96,
+  "operations": 130,
+  "schemas": 388,
+  "content": "content.json",
+  "format": "full-decoded-response-text",
+  "provenance": "Parent origin-guarded browser MCP documentation GET, credentials omitted, using URL from saved Swagger HTML. Inline full result persisted from MCP output spool without executing source. SHA256 checked against prior browser digest.",
+  "limitations": "New dated publication, not historical discovery proof or deployment validation. No business operations/Try it out executed. Previous r1 preserved. Newly observed change requires impact review before reusing older reports for current publication."
+}

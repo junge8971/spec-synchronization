@@ -1,0 +1,15 @@
+{
+  "sourceId": "wiki-238324523",
+  "revision": 2,
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/238324523/Аналитика",
+  "retrievedAt": "2026-10-19T08:12:59.945Z",
+  "version": {"number": 3, "when": "2026-09-09T13:08:00.124+08:00"},
+  "content": "links.txt",
+  "sha256": "e4cabbb617dc0044ba4d7a2bf68dccc6e37c9801604525156e3bb7c10db2131c",
+  "format": "selected-link-extraction-decodeURI-normalized",
+  "linkCount": 42,
+  "priorSetComparison": "Same42 ordered page IDs as r1, no additions/deletions. Titles not asserted equal; hrefs now saved.",
+  "attachments": {"size": 0, "limit": 100, "start": 0, "next": null, "results": []},
+  "provenance": "Parent origin/page-guarded main-content DOM link extraction; version and attachment index fetched separately via same-origin Confluence REST GET for authorized root page. No child navigation or executable-content evaluation.",
+  "limitations": "Loaded DOM and separately fetched version may not represent same revision. This is not fresh full-body capture or complete Confluence tree. Original r1 metadata gap preserved; no backdating. Child bodies remain uncollected. Ambiguous broad MPMM/assessment/container pages remain held pending relevance decision."
+}

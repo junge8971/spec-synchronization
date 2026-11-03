@@ -1,0 +1,141 @@
+| POST: /api/esk/skills/{id}
+| Description | Запрос получения карточки навыка
+|
+parameters
+|
+| name | in | required | Description | Пример
+|
+id
+|
+path
+|
+true
+|
+Идентификатор навыка
+| s-water
+|
+Request Body
+|
+{
+sudir_id, //обязательное - идентификатор пользователя sudir , если аноним - null
+access_token, //обязательно - токен пользователя sudir, если аноним - null
+}
+|
+Responses
+|
+| Code | Description
+|
+200
+|
+{
+"skill": {
+"id": "s-water",
+"serviceId": "gkh.water",
+"name": "Вода",
+"description": "Отвечать на вопросы о водоснабжении и счётчиках воды",
+"fullDescription": "Навык отвечает на вопросы о водоснабжении, показывает график отключений по адресу и принимает показания счётчиков. Данные берутся из систем ЖКХ.",
+"expectedResult": "Пользователь узнал график отключения и передал показания",
+"type": "Информационный и транзакционный",
+"zone": "Только авторизованная зона",
+"contactPerson": "Марина Соколова",
+"restrictions": "Только для авторизованных пользователей с привязанным адресом",
+"comments": "После сезонных отключений растёт доля вопросов про сроки: следим за формулировками ответов.",
+"relatedMaterials": [
+{ "title": "Регламент информирования об отключениях", "note": "Контракт навыка, версия 2" }
+],
+"version": "2.4",
+"createdAt": "2025-11-04T12:20:00+03:00",
+"updatedAt": "2026-07-30T16:40:00+03:00",
+"domain": "ЖКХ",
+"team": "Команда ЖКХ",
+"status": "Прод"
+},
+"metrics30d": {
+"periodDays": 30,
+"calculatedAt": "2026-08-14T07:45:00+03:00",
+"dialogsCount": 18420,
+"successScenarioShare": 0.86,
+"ratings": {
+"goodRatingShare": 0.88,
+"totalRatings": 1240,
+"goodRatingCount": 1091,
+"badRatingCount": 149,
+"thresholdGoodShare": 0.85,
+"evaluationCoverageShare": 0.057,
+"evaluatedOfDialogs": 21600,
+"note": "Считаются только оценки ответов этого навыка. Оценки диалогов с оператором в расчёт не входят."
+},
+"stepsToResult": {
+"goalStepsCount": 4,
+"actualAverage": 5.8,
+"deviationPercent": 45,
+"actualStepsMedian": 5,
+"dialogsLongerThanTargetShare": 0.462,
+"dialogsNotReachingResultShare": 0.124,
+"note": "Шаг это пара «вопрос пользователя и ответ навыка». В среднее берутся диалоги, где пользователь дошёл до результата."
+}
+}
+}
+|
+422
+|
+{
+"error_type": "Validation error",
+"error_message": "Validation error message"
+}
+|
+500
+|
+{
+"error_type": "Internal Server Error",
+"error_message": "Internal server error message"
+}
+Тело ответа:
+skill - Блок описания навыков
+| # | Поле | Тип | Пример | Описание
+| 1 | id | string | s-water | Идентификатор навыка
+| 2 | serviceId | string | gkh.water | Системный идентификатор
+| 3 | name | string | Вода | Название
+| 4 | description | string | Отвечать на вопросы о водоснабжении и счётчиках воды | Назначение (краткое)
+| 5 | fullDescription | string | Навык отвечает на вопросы о водоснабжении, показывает график отключений по адресу и принимает показания счётчиков. Данные берутся из систем ЖКХ. | Расширенное описание (опционально)
+| 6 | expectedResult | string | Пользователь узнал график отключения и передал показания | Ожидаемый результат
+| 7 | type | string | Информационный и транзакционный | Тип навыка
+| 8 | zone | string | Только авторизованная зона | Рабочая зона
+| 9 | contactPerson | string | Марина Соколова | Контактное лицо
+| 10 | restrictions | string | Только для авторизованных пользователей с привязанным адресом | Ограничения использования (опционально)
+| 11 | comments | string | После сезонных отключений растёт доля вопросов про сроки: следим за формулировками ответов. | Комментарии (опционально)
+| 12 | relatedMaterials | array |
+"Регламент информирования об отключениях",
+"Контракт навыка, версия 2"
+| Связанные материалы
+| 13 | version | string | 2.4 | Версия
+| 14 | createdAt | string | 2025-11-04T12:20:00+03:00 | Дата создания
+| 15 | updatedAt | string | 2026-07-30T16:40:00+03:00 | Дата изменения
+| 16 | domain | string | ЖКХ | Домен
+| 17 | team | string | Команда ЖКХ | Команда
+| 18 | status | string | Прод | Статус (локализованный)
+metrics30d - Блок за 30 дней
+| # | Поле | Тип | Пример | Описание
+| 1 | periodDays | integer | 30 | Период метрик в днях
+| 2 | calculatedAt | string | 2026-08-14T07:45:00+03:00 | Дата расчёта
+| 3 | dialogsCount | integer | 18420 | Число диалогов за период
+| 4 | successScenarioShare | float | 0.86 | Доля успешных сценариев (0..1)
+ratings - Блок оценки ответов
+| # | Поле | Тип | Описание | Пример
+| 1 | goodRatingShare | float | Доля хороших оценок (0..1) | 0.88
+| 2 | totalRatings | integer | Всего собрано оценок | 1240
+| 3 | goodRatingCount | integer | Хороших оценок | 1091
+| 4 | badRatingCount | integer | Плохих оценок | 149
+| 5 | thresholdGoodShare | float | Порог хороших оценок (0..1, null если не задан) | 0.85
+| 6 | evaluationCoverageShare | float | Покрытие оценками (0..1) | 0.057
+| 7 | evaluatedOfDialogs | integer | Из скольки диалогов выборка | 21600
+| 8 | note | string | Примечание | Считаются только оценки ответов этого навыка.
+stepsToResult - Блок шаги до результата
+| # | Поле | Тип | Пример | Описание
+| 1 | goalStepsCount | integer | 4 | Целевое число шагов
+| 2 | actualAverage | float | 5.8 | Фактическое среднее число шагов
+| 3 | deviationPercent | integer | 45 | Отклонение в процентах
+| 4 | actualStepsMedian | integer | 5 | Медиана шагов
+| 5 | dialogsLongerThanTargetShare | float | 0.462 | Доля диалогов длиннее целевого (0..1)
+| 6 | dialogsNotReachingResultShare | float | 0.124 | Доля незавершённых диалогов (0..1)
+| 7 | note | string | Шаг это пара «вопрос пользователя и ответ навыка». | Примечание

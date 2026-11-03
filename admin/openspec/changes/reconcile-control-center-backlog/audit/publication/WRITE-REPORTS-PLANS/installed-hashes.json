@@ -1,0 +1,32 @@
+[
+  {
+    "path": "openspec/changes/mos-1015-report-constructor/proposal.md",
+    "beforeSha256": "861fbf568514355c6b5bb251bef2697e4197533f0b3f10b72204d5454fad2c09",
+    "afterSha256": "d2c80f1e32cfed8bad76ab76afd07c750ba1159fefe66582951b09fdad630412"
+  },
+  {
+    "path": "openspec/changes/mos-1015-report-constructor/design.md",
+    "beforeSha256": "7b45547f74f69aeac21f5357628ce94f373c4e61a737c7b47fe43fb292bd9d4f",
+    "afterSha256": "e0fd86c55c84965b616a4d3b919fb74fb060deb2e23095d4321d50233f3db9e3"
+  },
+  {
+    "path": "openspec/changes/mos-1015-report-constructor/tasks.md",
+    "beforeSha256": "119a9e51350cebc6dd1b3417389d07b3e92be65262b2de26940d9687916a98e9",
+    "afterSha256": "4a7c338d49d6de208d4759e481269adfb0d5ff9ad22e13118a0368bb78c86a77"
+  },
+  {
+    "path": "openspec/changes/mos-1015-report-constructor/specs/report-constructor-draft/spec.md",
+    "beforeSha256": "07f81f1887a214bb005e85061a813de573484196c7faf3eb9a0bbb87ab92b132",
+    "afterSha256": "da6bcc2bd7f7df591cb3e69f9e620fd4365739c511da51a1c15da308808d4b31"
+  },
+  {
+    "path": "openspec/changes/mos-919-report-csv-export/proposal.md",
+    "beforeSha256": "261e54647980a4e36846da478e758ef3dfed5ec408f1532a591e4ab185ee3c80",
+    "afterSha256": "b46264b00735f2fdd2b29e89779087a759aa9a4ec2fe517e887bcec8d9d8acf9"
+  },
+  {
+    "path": "openspec/changes/mos-919-report-csv-export/design.md",
+    "beforeSha256": "78b1d7657f6bd8e4a8146deadf77ad88dec8cefcaff3a45f977a3961f14d578c",
+    "afterSha256": "e245786e81429c341304234920562c8ed15c280c1a249f5c8fb7bf3ba4afddb5"
+  }
+]

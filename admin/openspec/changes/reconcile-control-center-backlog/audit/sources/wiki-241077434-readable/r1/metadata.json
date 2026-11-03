@@ -1,0 +1,12 @@
+{
+  "source": "wiki-241077434/r1/content.json",
+  "version": 2,
+  "format": "Inert HTMLParser text plus exact ordered4000-character chunks",
+  "lines": 480,
+  "chunks": 15,
+  "files": {
+    "content.txt": "0ec8881c582231ef07e566b51e4120e6602876c090e353177265775fec583a83",
+    "body-view-chunks.json": "2d0cf312cd6555d9dc5c5881f5658e390e09a72eeb5d9481d6b89581471a5d76"
+  },
+  "limits": "Text loses markup/table structure; all exact chunks needed for structural claims. Parent verified roundtrip; no execution/rendering or semantic acceptance."
+}

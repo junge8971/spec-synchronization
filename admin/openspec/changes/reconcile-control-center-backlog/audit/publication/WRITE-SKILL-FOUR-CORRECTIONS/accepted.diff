@@ -1,0 +1,517 @@
+--- /dev/null
++++ openspec/changes/fix-skill-registry-count-label/proposal.md
+@@ -0,0 +1,23 @@
++## Why
++
++MOS-1051 reports incorrect Russian count inflection after the training-status filter. The registry still renders a fixed `навыков` suffix, and existing assertions encode incorrect `1 навыков` and `2 навыков` labels; the accepted JOIN-SKILL-REGISTRY and R-SKILL-REMAINING-SEVEN evidence supports a narrow correction.
++
++## What Changes
++
++- Inflect the server-total label as `навык`, `навыка`, or `навыков` using existing/platform plural facilities.
++- Preserve server filtering, URL/history, pagination, and the numeric total.
++- Correct erroneous assertions and plan regression coverage for 0, 1, 2–5, 11–14, 21–24 and `status=training`.
++
++## Capabilities
++
++### New Capabilities
++
++None.
++
++### Modified Capabilities
++
++- `skill-catalog-experience`: require Russian inflection of the existing server-total count label.
++
++## Impact
++
++Limited to the count presentation in `app/widgets/skills-registry/ui/skills-registry.tsx`, its small formatting helper if needed, and nearby unit/component assertions. No new dependency, API/schema change, local counting, registry redesign, sorting change, notification work, or auth/permission change. This package is planning only; parent review and separate implementation authorization remain required.
+--- /dev/null
++++ openspec/changes/fix-skill-registry-count-label/design.md
+@@ -0,0 +1,26 @@
++## Context
++
++See proposal.md for motivation. `skills-registry.tsx:101` displays `registry.data.total` with a fixed suffix and passes the same total to pagination. Nearby component assertions expect incorrect singular/few labels. The accepted registry join and independent remaining-seven review establish the defect; bounded source inspection confirms this presentation seam. A search of `app` for `PluralRules`, `pluralize`, and `plural` found no existing helper.
++
++## Goals / Non-Goals
++
++**Goals:** isolate Russian word-form selection from data retrieval and preserve the existing count location and accessible text.
++
++**Non-Goals:** changing numeric formatting, DTO validation, query normalization, filters, pagination, sorting, permissions, or unavailable features. No new dependency or cross-registry redesign.
++
++## Decisions
++
++- Use the platform `Intl.PluralRules('ru')` cardinal selection, mapping `one` to `навык`, `few` to `навыка`, and `many`/`other` to `навыков` for the existing integer server total. A small pure formatter in the registry area can keep this independently testable. A new dependency or hand-coded modulo rules adds unnecessary maintenance; an existing equivalent project facility can be reused if found during implementation.
++- Keep `registry.data.total` as the sole numeric input, not `items.length`. Do not change request construction or pagination. Formatting the loaded page length would misrepresent filtered server results.
++- Replace the erroneous 1/2 expectations and plan table-driven cases for 0, 1, 2, 3, 4, 5, 11, 12, 13, 14, 21, 22, 23, 24. Add a component regression selecting `status=training`, checking the server request and label, including a server total larger than the loaded page. Retain URL/history, reset and offset assertions rather than substituting local filtering.
++
++## Risks / Trade-offs
++
++- Platform locale support → verify Russian plural selection with focused unit checks during separately authorized implementation; do not add a dependency speculatively.
++- Existing incorrect expectations can mask the defect → explicitly replace them and cover teen exceptions and 21–24.
++- Count and sort packages may modify the same full requirement → parent must reconcile deltas without dropping preserved scenarios; sorting remains outside this package.
++- Static/component evidence does not prove backend behavior or visual geometry → make no runtime or visual acceptance claim; browser/E2E remains separately permission-gated.
++
++## Migration Plan
++
++No data or API migration. After review and separate apply authorization, ship the label and focused assertions together; rollback only the presentation change if necessary. Preserve security, validation, error states, and accessibility. This writer executes no implementation or runtime checks.
+--- /dev/null
++++ openspec/changes/fix-skill-registry-count-label/specs/skill-catalog-experience/spec.md
+@@ -0,0 +1,50 @@
++## MODIFIED Requirements
++
++### Requirement: Contract-backed registry columns and filters
++
++Таблица SHALL показывать название и назначение, служебный ID и integer version в ячейке навыка, домен и команду, серверный статус, дату изменения и вторичную дату создания. Статус SHALL отображаться текстовой подписью из опубликованного SkillStatus: draft, checking, training, autotest, sandbox, review, whitelist, prod. Колонки готовности и числа диалогов SHALL отсутствовать до согласования и подключения соответствующих источников, включая заглушки «Нет данных API». Значения и поддерживаемые сортировки SHALL поступать из серверного контракта; фильтрация или сортировка только загруженной страницы MUST NOT заменять серверную операцию. Поиск SHALL иметь подпись, соответствующую подтверждённой семантике. Status-фильтр SHALL использовать серверный query-параметр status, сочетаться с поиском, domain/team и сохраняться в URL/истории. Неизвестное строковое значение status в ответе списка SHALL сохраняться в read-model и отображаться в соответствующей строке как «Неизвестный статус», без удаления строк, подмены draft/prod или отказа загрузки всего списка. Остальные поля, ссылки, серверные total и пагинация SHALL сохраняться. Отсутствующий или нестроковый status SHALL оставаться ошибкой чтения контракта. Status-фильтр SHALL предлагать только опубликованные значения SkillStatus; неизвестные значения ответа MUST NOT добавляться в варианты фильтра. Это правило совместимости чтения списка MUST NOT расширять OpenAPI, запросы или строгую валидацию SkillResponse карточки. Наличие status MUST NOT включать неподтверждённые lifecycle-команды. Подпись счётчика SHALL использовать серверный total и правильную русскую форму «навык», «навыка» или «навыков», не заменяя total числом строк загруженной страницы и не изменяя серверный отбор или пагинацию.
++
++#### Scenario: Current list response
++
++- **WHEN** сервер возвращает текущий DTO со status без готовности и статистики
++- **THEN** отображаются поддерживаемые колонки, включая серверный статус и его фильтр; готовность и статистика отсутствуют без заглушек и фиктивного «Готово» или числа 0
++
++#### Scenario: Filter and page change
++
++- **WHEN** пользователь меняет поисковый запрос, статус, домен, команду или поддерживаемую сортировку
++- **THEN** отбор отражается в URL, страница сбрасывается на первую, сервер получает status, контрактные ID и limit/offset, а счётчик показывает серверный total
++
++#### Scenario: Unsupported sort in a link
++
++- **WHEN** в URL указан неподдерживаемый статусный или метрический sort
++- **THEN** значение нормализуется к поддерживаемому без отправки произвольной строки и без сортировки текущей страницы
++
++#### Scenario: Status history and pagination
++
++- **WHEN** пользователь выбирает статус, открывает вторую страницу и возвращается назад/вперёд
++- **THEN** URL, выбранный статус и страница восстанавливаются, каждый запрос использует серверную фильтрацию и правильный offset, остальные query-параметры сохраняются
++
++#### Scenario: Unknown status in a link
++
++- **WHEN** status в URL не входит в опубликованный enum либо пользователь сбрасывает фильтр
++- **THEN** неизвестный или пустой status удаляется, не отправляется backend и не превращается в локальную фильтрацию
++
++#### Scenario: Unknown response status in a mixed list
++
++- **WHEN** сервер возвращает список с известными и неизвестными строковыми значениями status
++- **THEN** все строки остаются видимыми; известные статусы имеют обычные подписи, неизвестные — «Неизвестный статус» в своей строке, ссылки, серверные total и пагинация сохраняются, а фильтр содержит только опубликованные значения
++
++#### Scenario: Missing or non-string response status
++
++- **WHEN** ответ списка не содержит обязательный status либо возвращает null, число, boolean, объект или массив вместо строки
++- **THEN** загрузка сообщает об ошибке контракта, не подменяет статус draft/prod или «Неизвестным статусом» и не пропускает повреждённую строку
++
++#### Scenario: Russian server-total forms
++
++- **WHEN** серверный total равен 0, 1, 2, 3, 4, 5, 11, 12, 13, 14, 21, 22, 23 или 24
++- **THEN** подпись соответственно показывает «0 навыков», «1 навык», «2 навыка», «3 навыка», «4 навыка», «5 навыков», «11 навыков», «12 навыков», «13 навыков», «14 навыков», «21 навык», «22 навыка», «23 навыка» или «24 навыка»
++
++#### Scenario: Training filter count across pages
++
++- **WHEN** пользователь выбирает status=training и сервер возвращает отфильтрованный total, в том числе превышающий число строк страницы
++- **THEN** запрос использует status=training, URL и сброс страницы сохраняют существующее поведение, счётчик склоняет серверный total по русским правилам, а переходы страниц сохраняют отбор и серверную пагинацию без локального пересчёта
+--- /dev/null
++++ openspec/changes/fix-skill-registry-count-label/tasks.md
+@@ -0,0 +1,10 @@
++## 1. Correct count presentation after separate implementation authorization
++
++- [ ] 1.1 Add Russian count-word selection using platform plural facilities (or an existing equivalent helper), without dependencies; verify focused unit cases for 0, 1, 2, 3, 4, 5, 11, 12, 13, 14, 21, 22, 23 and 24 match the delta scenario.
++- [ ] 1.2 Apply the formatter to `registry.data.total` in the existing registry count label; verify by diff review and a component assertion that a server total larger than the loaded page remains the displayed number and pagination input, with no request/URL/permission changes.
++
++## 2. Regression verification
++
++- [ ] 2.1 Replace `1 навыков` and `2 навыков` expectations in `skills-registry.test.tsx` with correct forms; verify the focused registry component suite passes while retaining existing 0/11 and unknown-status coverage.
++- [ ] 2.2 Add a training-status component regression covering the filtered server-total label, server `status=training` request, first-page reset, URL/history and page offsets; verify it preserves server filtering and pagination rather than counting or filtering the loaded page.
++- [ ] 2.3 Record focused unit/component results and review the final diff for preserved error handling, validation, accessible count text and unchanged API/security boundaries; explicitly record that mocks do not certify backend integration and that browser/E2E and visual acceptance remain unauthorized and unperformed.
+--- /dev/null
++++ openspec/changes/fix-skill-registry-count-label/.openspec.yaml
+@@ -0,0 +1,2 @@
++schema: spec-driven
++created: 2026-10-20
+--- /dev/null
++++ openspec/changes/add-skill-domain-sorting/proposal.md
+@@ -0,0 +1,23 @@
++## Why
++
++MOS-1052 independently requests domain sorting, but the registry exposes only name and modification-date sorting. The accepted registry join and review establish saved documentary support for `domain_name` and `-domain_name`, not deployed backend behavior.
++
++## What Changes
++
++- Add a domain-specific header sort action and both directions to the URL allowlist, preserving page reset, filters, history and server requests.
++- Require authoritative semantic/backend confirmation before implementation and acceptance; unrestricted schema strings alone are not proof of support.
++- Preserve server ordering; do not add local-page, status, dialog-count or creation-date sorting. Count-label correction remains a separate change.
++
++## Capabilities
++
++### New Capabilities
++
++None.
++
++### Modified Capabilities
++
++- `skill-catalog-experience`: extend the existing contract-backed registry requirement with gated server-backed domain sorting.
++
++## Impact
++
++Registry table/handler, registry sort types and URL allowlist, and focused URL/component/client assertions. Reuse the existing list endpoint and query transport without new dependencies or schema generation. No auth, lifecycle, warning, archive or main-spec edits in this planning package. Preserve accessibility, validation, error handling and security; browser/E2E requires separate permission.
+--- /dev/null
++++ openspec/changes/add-skill-domain-sorting/design.md
+@@ -0,0 +1,28 @@
++## Context
++
++See proposal.md for motivation. Reuse source audit `reports/JOIN-SKILL-REGISTRY.md` and `reviews/R-SKILL-REMAINING-SEVEN.md` under `openspec/changes/reconcile-control-center-backlog/audit/`. Saved wiki §2.5 explicitly lists ±domain_name. The review reconciles saved r1, r2 and local `docs/api/contracts/openapi.json`: sort is an unrestricted string, default `-updated_at`, with no enum or conflicting allowed-values list. There is no schema contradiction, but neither schemas nor this plan certify runtime support.
++
++Read-only code inspection confirms a plain “Домен и команда” header, a handler restricted to name/updated_at, and the same four-value URL allowlist. The existing search-param updater resets page on sort changes and preserves other parameters; the client forwards sort and computes offset, returning server order/total unchanged.
++
++## Goals / Non-Goals
++
++**Goals:** Extend that existing URL-to-request path for domain-name sorting without duplicating state or altering pagination semantics. Make the action clearly sort domain, not team.
++
++**Non-Goals:** Status/dialog sorts, local sorting, count inflection, registry redesign, created-date UI sort, new backend policies, auth/lifecycle changes or generated API/schema changes.
++
++## Decisions
++
++1. **Explicit prerequisite:** Before implementation and acceptance, obtain and record authoritative semantic/backend confirmation of both sort tokens and domain-name ordering on the full filtered result set. The saved wiki is positive documentary evidence; permissive schema typing is not an executable guarantee. If confirmation contradicts this plan or requires new product ordering policy, stop and escalate rather than guessing collation, tie-breaking or fallback. No runtime investigation is authorized by this planning task.
++2. **Extend existing plumbing:** After the gate, extend the registry sort type, handler field union and allowlist together; reuse the header button pattern with a domain-specific accessible name. First activation selects `domain_name`; repeat selects `-domain_name`. Reuse the current updater for page reset and query preservation. Reject a separate local sort state or unrestricted-string allowlist because either breaks URL/server consistency.
++3. **Server remains authoritative:** Continue passing the selected token to the list endpoint and render returned order unchanged. Preserve default `-updated_at`, existing supported sorts, invalid-sort normalization, filter reset behavior, history and error/retry handling. Do not invent a client comparator, team sort or secondary tie-break.
++4. **Focused future verification:** Extend existing search-param, registry component and client tests for both tokens, header toggling, page reset, back/forward restoration, filters and request offsets. Use intentionally non-alphabetic fixture order to prove the UI does not reorder server rows. Mock assertions establish transport/UI behavior only, not deployed backend semantics. Browser/E2E remains separately permissioned.
++
++## Risks / Trade-offs
++
++- [Backend semantics remain unconfirmed] → Keep prerequisite unchecked; no implementation or acceptance from schema permissiveness alone.
++- [Combined domain/team header suggests team sorting] → Explicit domain-specific accessible action; team data stays unchanged.
++- [Count lane touches the same requirement] → Preserve the complete original block here; parent reconciles future integration without dropping either delta or existing scenarios.
++
++## Migration Plan
++
++No data migration or new dependency. After separate authorization and confirmation, implement the bounded frontend extension; rollback removes only the added domain-sort exposure/type/allowlist entries and retains existing normalization/default behavior. Parent reviews and integrates this isolated planning directory; no runtime apply in this run.
+--- /dev/null
++++ openspec/changes/add-skill-domain-sorting/specs/skill-catalog-experience/spec.md
+@@ -0,0 +1,57 @@
++## MODIFIED Requirements
++
++### Requirement: Contract-backed registry columns and filters
++
++Таблица SHALL показывать название и назначение, служебный ID и integer version в ячейке навыка, домен и команду, серверный статус, дату изменения и вторичную дату создания. Статус SHALL отображаться текстовой подписью из опубликованного SkillStatus: draft, checking, training, autotest, sandbox, review, whitelist, prod. Колонки готовности и числа диалогов SHALL отсутствовать до согласования и подключения соответствующих источников, включая заглушки «Нет данных API». Значения и поддерживаемые сортировки SHALL поступать из серверного контракта; фильтрация или сортировка только загруженной страницы MUST NOT заменять серверную операцию. Поиск SHALL иметь подпись, соответствующую подтверждённой семантике. Status-фильтр SHALL использовать серверный query-параметр status, сочетаться с поиском, domain/team и сохраняться в URL/истории. Неизвестное строковое значение status в ответе списка SHALL сохраняться в read-model и отображаться в соответствующей строке как «Неизвестный статус», без удаления строк, подмены draft/prod или отказа загрузки всего списка. Остальные поля, ссылки, серверные total и пагинация SHALL сохраняться. Отсутствующий или нестроковый status SHALL оставаться ошибкой чтения контракта. Status-фильтр SHALL предлагать только опубликованные значения SkillStatus; неизвестные значения ответа MUST NOT добавляться в варианты фильтра. Это правило совместимости чтения списка MUST NOT расширять OpenAPI, запросы или строгую валидацию SkillResponse карточки. Наличие status MUST NOT включать неподтверждённые lifecycle-команды.
++
++Сортировка по имени домена SHALL быть реализована и принята только после авторитетного подтверждения семантики и backend-поддержки `domain_name` и `-domain_name` для полной серверной выборки; свободный string в схеме сам по себе MUST NOT считаться таким подтверждением. После подтверждения доступное действие в заголовке домена SHALL переключать эти направления, сохранять отбор в URL и сбрасывать страницу на первую; порядок строк SHALL оставаться серверным. Сортировка команды, статуса и числа диалогов MUST NOT добавляться этим изменением.
++
++#### Scenario: Current list response
++
++- **WHEN** сервер возвращает текущий DTO со status без готовности и статистики
++- **THEN** отображаются поддерживаемые колонки, включая серверный статус и его фильтр; готовность и статистика отсутствуют без заглушек и фиктивного «Готово» или числа 0
++
++#### Scenario: Filter and page change
++
++- **WHEN** пользователь меняет поисковый запрос, статус, домен, команду или поддерживаемую сортировку
++- **THEN** отбор отражается в URL, страница сбрасывается на первую, сервер получает status, контрактные ID и limit/offset, а счётчик показывает серверный total
++
++#### Scenario: Unsupported sort in a link
++
++- **WHEN** в URL указан неподдерживаемый статусный или метрический sort
++- **THEN** значение нормализуется к поддерживаемому без отправки произвольной строки и без сортировки текущей страницы
++
++#### Scenario: Status history and pagination
++
++- **WHEN** пользователь выбирает статус, открывает вторую страницу и возвращается назад/вперёд
++- **THEN** URL, выбранный статус и страница восстанавливаются, каждый запрос использует серверную фильтрацию и правильный offset, остальные query-параметры сохраняются
++
++#### Scenario: Unknown status in a link
++
++- **WHEN** status в URL не входит в опубликованный enum либо пользователь сбрасывает фильтр
++- **THEN** неизвестный или пустой status удаляется, не отправляется backend и не превращается в локальную фильтрацию
++
++#### Scenario: Unknown response status in a mixed list
++
++- **WHEN** сервер возвращает список с известными и неизвестными строковыми значениями status
++- **THEN** все строки остаются видимыми; известные статусы имеют обычные подписи, неизвестные — «Неизвестный статус» в своей строке, ссылки, серверные total и пагинация сохраняются, а фильтр содержит только опубликованные значения
++
++#### Scenario: Missing or non-string response status
++
++- **WHEN** ответ списка не содержит обязательный status либо возвращает null, число, boolean, объект или массив вместо строки
++- **THEN** загрузка сообщает об ошибке контракта, не подменяет статус draft/prod или «Неизвестным статусом» и не пропускает повреждённую строку
++
++#### Scenario: Domain sort confirmation gate
++
++- **WHEN** имеются сохранённое описание ±domain_name и схемы с sort типа string, но нет авторитетного подтверждения семантики и backend-поддержки
++- **THEN** реализация и приёмка сортировки домена остаются заблокированными; локальная сортировка не подменяет подтверждение
++
++#### Scenario: Domain header toggles server sort
++
++- **WHEN** поддержка подтверждена и пользователь активирует сортировку домена из другой сортировки, затем активирует её повторно
++- **THEN** URL и серверные запросы последовательно используют `domain_name` и `-domain_name`, каждое изменение сбрасывает страницу на первую и offset на 0, сохраняя query, status, domain_id и team_id; действие явно относится к домену, а строки сохраняют серверный порядок и total
++
++#### Scenario: Domain sort URL and history
++
++- **WHEN** пользователь открывает ссылку с `domain_name` или `-domain_name`, меняет страницу и возвращается назад/вперёд
++- **THEN** поддерживаемый sort сохраняется в URL и запросах вместе с фильтрами, страница и соответствующий offset восстанавливаются; неподдерживаемые сортировки по-прежнему нормализуются, а сортировка только загруженной страницы не выполняется
+--- /dev/null
++++ openspec/changes/add-skill-domain-sorting/tasks.md
+@@ -0,0 +1,14 @@
++## 1. Required confirmation before implementation
++
++- [ ] 1.1 Record authoritative semantic/backend confirmation for `domain_name` and `-domain_name` over the full filtered list, explicitly reconciling saved wiki support with unrestricted-string r1/r2/local schemas; verify the evidence covers both directions before any implementation or acceptance. Stop and escalate contradictory semantics or new product-policy choices; do not infer runtime support from schemas or mocks.
++
++## 2. Bounded frontend extension after confirmation and authorization
++
++- [ ] 2.1 Extend the registry sort type, header handler field union and URL allowlist for both domain tokens; verify focused search-param assertions cover parsing, normalization, page reset, filter preservation, default `-updated_at` and continued rejection of status/dialog sorts.
++- [ ] 2.2 Add a keyboard-accessible domain-specific header action using the existing sort path, without implying team sorting; verify component assertions cover ascending/descending toggles, offset 0 after changes, filters and back/forward page/sort restoration.
++- [ ] 2.3 Verify the existing client transports both domain tokens with limit/offset and preserves server total and row order; extend client/component assertions with deliberately non-alphabetic server fixtures to reject local-page sorting and retain existing name/date behavior.
++
++## 3. Bounded acceptance
++
++- [ ] 3.1 Run the authorized focused unit/component checks for the changed URL, header and client seams and record exact results alongside the authoritative confirmation from 1.1; distinguish mocked transport/UI evidence from backend acceptance. Preserve security, error/retry and accessibility, and do not create or run browser/E2E without separate permission.
++- [ ] 3.2 Review the final delta for domain-sort-only scope and full preservation of the original requirement/scenarios; verify no status/dialog sort, local comparator, count correction, schema widening, lifecycle/auth changes or historical rewrites entered the package. Parent reconciles any shared-requirement conflict with the separate count change before integration.
+--- /dev/null
++++ openspec/changes/add-skill-domain-sorting/.openspec.yaml
+@@ -0,0 +1,2 @@
++schema: spec-driven
++created: 2026-10-20
+--- /dev/null
++++ openspec/changes/fix-skill-phrase-application-notice/proposal.md
+@@ -0,0 +1,23 @@
++## Why
++
++MOS945 reconciliation confirms that the phrase editor lacks the existing required distinction between saved skill version and unavailable application/retraining data. A save confirmation, including one followed by a failed detail read, must not be mistaken for model application.
++
++## What Changes
++
++- Make the existing application-data-unavailable notice explicit on the training phrases tab in viewing and editing states.
++- Clarify confirmed-save and failed-follow-up-GET behavior while preserving the confirmed saved version and groups.
++- Retain the deferred applied-model indicator; do not infer training started, completed, or a version became active.
++
++## Capabilities
++
++### New Capabilities
++
++None.
++
++### Modified Capabilities
++
++- `skill-training-phrases`: clarify placement and persistence of the saved-version/application-unavailable disclosure.
++
++## Impact
++
++Bounded UI change in `app/features/skill-training-phrases/ui/skill-training-phrases.tsx` and assertions in `app/widgets/skill-details/ui/skill-details.test.tsx`. No API, dependency, permissions, or save-protocol changes. MOS1018 preflight and persisted readiness results remain separate. This package is planning only; parent review and integration precede separately authorized implementation.
+--- /dev/null
++++ openspec/changes/fix-skill-phrase-application-notice/design.md
+@@ -0,0 +1,25 @@
++## Context
++
++See proposal.md for motivation. Accepted `JOIN-SKILL-PHRASES.md` and `R-SKILL-REMAINING-SEVEN.md` identify this narrow MOS945 correction. Direct inspection of the complete phrase editor confirms save/error/version-mismatch messages but no application-unavailable disclosure. Existing detail tests at lines 696–789 cover confirmed PUT and failed follow-up GET, not this disclosure. These are static observations, not executed tests.
++
++## Goals / Non-Goals
++
++**Goals:** Resolve notice placement and save/read-error interpretation without introducing new state semantics.
++
++**Non-Goals:** Actual applied-model version, training progress/start/completion, timelines, new API fields or requests, MOS1018 preflight, persisted readiness display, wizard changes, authentication or permission changes. Full application indicator remains deferred until an agreed model and semantics are separately approved.
++
++## Decisions
++
++- Render a persistent explanatory paragraph within the existing phrase section, outside its view/edit branch. Use existing typography/accessibility patterns rather than a transient toast or a checks-tab-only disclaimer, so the information remains available while editing and after a save.
++- Keep the existing API-confirmed saved-version source and save/recovery flow. The notice explains unavailable data; it does not derive state from skill status, version changes, readiness checks, or GET success/failure. Retain separate save confirmation and refresh-error messages. A read failure cannot turn a confirmed PUT into a failed save.
++- Extend existing detail component assertions with an explicitly published-skill fixture, notice presence in both modes, confirmed version after save, and confirmed groups/version plus notice after follow-up GET failure. Assert no active-version or training-start/completion claim. Do not replace save-protocol, metadata, cancel, dirty-input, or failure regressions.
++
++## Risks / Trade-offs
++
++- Static text can be mistaken for a dynamic training indicator → explicitly name unavailable applied-version and retraining data; no status badge or inferred state.
++- Refresh errors can obscure save confirmation → assert both the retained confirmed snapshot and independent refresh error alongside the notice.
++- Mock assertions cannot certify deployed training behavior → retain the deferred contract gate and make no runtime acceptance claim.
++
++## Migration Plan
++
++No data/API migration. After review and separate implementation authorization, deliver the bounded UI/assertion change through the existing release process. Rollback is a UI-only revert; no data rollback or command replay. Preserve current security, validation, permissions, and accessibility. Browser/E2E testing requires separate permission.
+--- /dev/null
++++ openspec/changes/fix-skill-phrase-application-notice/specs/skill-training-phrases/spec.md
+@@ -0,0 +1,25 @@
++## MODIFIED Requirements
++
++### Requirement: Saved version without invented application status
++
++UI SHALL показывать сохранённую версию навыка из ответа API и сообщать, что применённая версия и состояние дообучения не предоставляются текущим API. Сохранение MUST NOT объявлять новую версию активной или обещать вымышленный срок. Полный индикатор применения отложен по решению пользователя. Сообщение об отсутствии данных SHALL быть доступно непосредственно на вкладке «Обучающие фразы» в режимах просмотра и редактирования, в том числе после подтверждённого сохранения опубликованного навыка. Ошибка последующего GET карточки MUST NOT отменять подтверждённое сохранение или скрывать это сообщение; UI SHALL сохранять подтверждённые группы и сохранённую версию, отдельно сообщая об ошибке обновления карточки.
++
++#### Scenario: Saved version only
++
++- **WHEN** сервер подтвердил сохранение новой версии
++- **THEN** интерфейс показывает эту сохранённую версию и отсутствие данных о применении, не объявляя дообучение начавшимся или завершённым
++
++#### Scenario: Notice in phrase viewing and editing
++
++- **WHEN** пользователь открывает вкладку «Обучающие фразы» и переходит между просмотром и редактированием
++- **THEN** на этой вкладке доступно сообщение, что применённая версия и состояние дообучения не предоставляются текущим API, без необходимости перехода на вкладку проверок
++
++#### Scenario: Published skill confirmed save
++
++- **WHEN** API подтверждает сохранение фраз опубликованного навыка
++- **THEN** UI показывает подтверждённую сохранённую версию и сообщение об отсутствии данных о применённой версии и дообучении, не утверждая, что фразы уже применены или обучение началось
++
++#### Scenario: Confirmed save followed by read failure
++
++- **WHEN** API подтвердил сохранение фраз и последующий GET карточки завершился ошибкой
++- **THEN** подтверждённые группы и сохранённая версия остаются доступными вместе с сообщением об отсутствии данных о применении и дообучении; ошибка обновления карточки показана отдельно и не выдаётся за ошибку сохранения или состояние обучения
+--- /dev/null
++++ openspec/changes/fix-skill-phrase-application-notice/tasks.md
+@@ -0,0 +1,9 @@
++## 1. Phrase application disclosure
++
++- [ ] 1.1 Add the persistent application-version/retraining-data-unavailable notice to the phrase section without changing save, permission, validation, or error flows; verify it is accessible in both viewing and editing states and contains no inferred training state or timeline.
++- [ ] 1.2 Extend detail component assertions for a published skill's confirmed PUT: verify the confirmed saved version and groups coexist with the notice, and no active-version or training-start/completion claim appears.
++- [ ] 1.3 Extend failed-follow-up-GET assertions: verify confirmed groups/version and notice remain visible alongside the separate refresh error, without reclassifying the PUT as failed or triggering another write.
++
++## 2. Bounded regression verification
++
++- [ ] 2.1 After separate implementation authorization, run the targeted phrase/detail component assertions and existing save/cancel/error/metadata regressions; record results and verify the diff adds no model indicator, readiness display, MOS1018 preflight, new API/dependency, or permission behavior. Do not run browser/E2E checks without separate permission; mock results do not establish deployed application or retraining behavior.
+--- /dev/null
++++ openspec/changes/fix-skill-phrase-application-notice/.openspec.yaml
+@@ -0,0 +1,2 @@
++schema: spec-driven
++created: 2026-10-20
+--- /dev/null
++++ openspec/changes/add-skill-readiness-results/proposal.md
+@@ -0,0 +1,23 @@
++## Why
++
++Published persisted readiness results are not yet typed or displayed in the checks tab. This change assigns the single accepted display follow-up from SCENARIO-SKILL-CHECKS, R-SKILL-CHECKS and JOIN-SKILL-CHECKS; it does not reopen historical MOS-1019 delivery or MOS-909 lifecycle work.
++
++## What Changes
++
++- Read and render persisted check type, status, blocking, corrective message and checked_at, including empty/uncomputed and failed/nonblocking results.
++- Reconcile fresh results even when record version is unchanged; preserve stale-read labeling, GET-only recovery and unsaved input.
++- Preserve current conditional polling, identity isolation, security and process/sandbox deferrals. No check execution, new lifecycle command, review-MVP expansion or preflight ownership transfer.
++
++## Capabilities
++
++### New Capabilities
++
++None.
++
++### Modified Capabilities
++
++- `skill-checks-training`: extend status observation with truthful persisted-check display and read reconciliation.
++
++## Impact
++
++Future implementation touches skill detail types/decoder, checks-tab props/rendering and existing detail-query/component assertions. Reuse the published detail API and existing UI facilities; no new dependency, backend calculation or permission policy. Saved contract evidence is not deployed runtime acceptance. Run identifiers, processed-input binding, technical process errors, rerun permissions and sandbox availability remain unresolved and outside this change.
+--- /dev/null
++++ openspec/changes/add-skill-readiness-results/design.md
+@@ -0,0 +1,27 @@
++## Context
++
++See proposal.md for motivation. `skill-details-client.ts` uses a loose detail schema without a declared checks decoder (unknown checks need not be stripped); `checks-tab.tsx` accepts only status. `use-skill-details-query.ts` already owns processing-only polling and pauses on read failure. Reuse the complete accepted SCENARIO-SKILL-CHECKS / R-SKILL-CHECKS and JOIN-SKILL-CHECKS evidence, bounded by R-SKILL-REMAINING-SEVEN §4.
++
++## Goals / Non-Goals
++
++**Goals:** Typed persisted results integrated into the existing observation path, preserving record identity, drafts and truthful last-read semantics.
++
++**Non-Goals:** Backend computation/backfill, new mutation/retry flows, lifecycle MOS-909 changes, review results expansion, MOS1018 preflight, token/security changes, or claims about applied phrase versions. Run IDs, input correlation, technical process-error interpretation, rerun permissions and sandbox availability require separate agreement.
++
++## Decisions
++
++- Extend existing detail types and decoder with the published required checks array and required `check_type`, `status`, `blocking`, nullable `message`, date-time `checked_at`. Actual enums: types `anketa`, `phrases`, `exact_conflicts`, `semantic_conflicts`, `endpoint`; statuses `passed`, `failed`, `warning`, `blocked`. Use existing contract-error handling for malformed responses rather than synthesizing success. Do not treat an absent field as the documented empty array.
++- Render in published type declaration/display order, not severity/rank order. Show textual status, blocking indication, corrective message and timestamp using existing UI formatting; never HTML-interpret server messages. Published invariants are passed/false/null, only blocked/true, and failed/warning nonblocking with corrective messages. Do not map technical failures to failed or implement client calculation. An aggregate readiness score would invent semantics and is rejected.
++- Use the existing detail query and shared response path, not a second polling loop. Accept changed checks/checked_at from a successful read even with unchanged version/updated_at; neither field is a checks freshness token. Keep data keyed to skill ID and cancellation behavior. Update observation without resetting dirty fields or their expected_version. Preserve existing polling interval, visible processing-only activation and manual reads for other statuses.
++- A failed read retains last-loaded results with a stale/read-error indication and pauses polling. Recovery retries GET only; it neither recalculates checks nor repeats a mutation. No event feed or real-time freshness promise is introduced. Existing mutation/lifecycle recovery ownership remains unchanged.
++
++## Risks / Trade-offs
++
++- Saved publication is not runtime or backfill proof → retain empty/uncomputed display and distinguish contract/read failure; future authorized integration acceptance must verify the agreed response without inventing compatibility fallbacks.
++- Peer recalculation can change results silently → accept every fresh detail response; label last-read data without expanding polling.
++- Check completeness could be confused with process success → retain explicit current-input/training/sandbox disclaimer, including endpoint completeness not service health.
++- Questionnaire zones, threshold configuration and normalization remain source-owner issues → display server results only; no local policies or payload expansion.
++
++## Migration Plan
++
++No data migration or new dependency. After separate implementation authorization, update decoder/types, props/rendering and bounded assertions together; include valid persisted-check fixtures. Rollback is the display/decoder change, not backend checks or historical specifications. Parent review and integration precede any apply; no runtime work is authorized here.
+--- /dev/null
++++ openspec/changes/add-skill-readiness-results/specs/skill-checks-training/spec.md
+@@ -0,0 +1,72 @@
++## MODIFIED Requirements
++
++### Requirement: Server-owned current processing status
++
++UI SHALL показывать текущий этап из опубликованного SkillResponse.status и возвращённые сохранённые результаты checks отдельно от этапа процесса. Статусы checking/training/autotest SHALL отображаться как проверка, обучение и автотесты с теми же подписями, что в существующей карточке. Этап SHALL различаться текстом, а не только цветом. Локальное время MUST NOT менять статус, объявлять предыдущие этапы успешными или создавать проценты, ETA, run ID, логи и ошибки процесса.
++
++UI SHALL показывать check_type, status, blocking, message и checked_at для возвращённых проверок в опубликованном порядке anketa, phrases, exact_conflicts, semantic_conflicts, endpoint. Статусы passed, failed, warning, blocked и признак блокировки SHALL различаться текстом, не только цветом. passed имеет blocking=false и message=null; только blocked имеет blocking=true; failed и warning SHALL отображаться как неблокирующие результаты с серверным корректирующим сообщением, а не как техническая ошибка процесса. UI MUST NOT вычислять результаты, вводить ранги статусов или подменять отсутствующие результаты успешными. Пустой checks SHALL обозначать отсутствие вычисленных результатов.
++
++Успешное чтение SHALL обновлять сохранённые результаты даже при неизменных version и updated_at. Результаты SHALL относиться к последнему успешному чтению данного skill ID, а не гарантировать актуальность всех открытых карточек в реальном времени. Обновление результатов MUST NOT сбрасывать несохранённый ввод или менять версию, относительно которой пользователь начал редактирование.
++
++#### Scenario: Server changes processing stage
++
++- **WHEN** очередное чтение возвращает training вместо checking
++- **THEN** карточка показывает обучение без объявления проверки успешной и без выдуманных результатов пропущенных этапов
++
++#### Scenario: Server status does not change
++
++- **WHEN** повторные чтения продолжают возвращать training
++- **THEN** UI сохраняет этот этап без локального завершения, процентов, ETA или ошибки по истечении времени
++
++#### Scenario: Persisted results are displayed
++
++- **WHEN** чтение возвращает пять сохранённых проверок
++- **THEN** UI показывает их в порядке anketa, phrases, exact_conflicts, semantic_conflicts, endpoint с текстовыми статусами, блокировкой, серверными сообщениями и checked_at, не выводя успех из текущего этапа
++
++#### Scenario: Empty uncomputed results
++
++- **WHEN** сервер возвращает checks=[]
++- **THEN** UI сообщает, что результаты не вычислены, и не показывает пять успешных проверок
++
++#### Scenario: Failed and warning are nonblocking
++
++- **WHEN** возвращены failed или warning с blocking=false и корректирующим message, а также blocked с blocking=true
++- **THEN** UI показывает первые результаты как неблокирующие, последний как блокирующий, сохраняет сообщения и не объявляет технический сбой обучения или право запуска команды
++
++#### Scenario: Fresh checks with unchanged record version
++
++- **WHEN** успешное чтение того же навыка возвращает изменённые checks или checked_at при прежних version и updated_at во время редактирования
++- **THEN** UI обновляет результаты, сохраняет несохранённый ввод и исходную версию редактора, не объявляя текущий ввод проверенным
++
++### Requirement: Read failure is not process failure
++
++Ошибка получения обновлений SHALL отображаться как ошибка чтения, а не обучения или автотестов. При наличии ранее загруженной карточки UI SHALL помечать показанный этап и сохранённые результаты проверок как последние загруженные данные, приостанавливать периодическое чтение и предоставлять ручной повтор. Успешное чтение SHALL возобновлять наблюдение только при checking/training/autotest. Без ранее полученных данных SHALL сохраняться штатное состояние ошибки загрузки. Повтор SHALL выполнять только GET, без запуска проверок или повторной отправки мутации; ошибка чтения MUST NOT заменять сохранённые результаты на passed или failed.
++
++#### Scenario: Update request failure
++
++- **WHEN** чтение очередного обновления завершается ошибкой после ранее полученного training
++- **THEN** UI показывает последние данные с ошибкой обновления и повтором, не объявляет обучение проваленным и приостанавливает polling
++
++#### Scenario: Successful retry
++
++- **WHEN** ручной повтор успешно возвращает training либо sandbox
++- **THEN** ошибка чтения снимается; для training автообновление возобновляется, для sandbox остаётся выключенным
++
++#### Scenario: Stale results and read-only recovery
++
++- **WHEN** очередное чтение не удаётся после успешной загрузки checks и пользователь повторяет чтение
++- **THEN** до успеха сохраняются последние результаты с признаком устаревших данных и ошибкой чтения; повтор отправляет только GET, не пересчитывает проверки, не повторяет запись и не сбрасывает несохранённый ввод
++
++### Requirement: Status observation does not establish readiness
++
++UI SHALL ограничиваться наблюдением за status и возвращёнными сохранёнными checks. UI MUST NOT считать status подтверждением результатов отдельных проверок, а status или checks — подтверждением обработки текущей версии фраз или доступности песочницы. Идентификаторы запусков, привязка к обработанному вводу, полноценные результаты и технические ошибки процесса, повторный запуск с правилами состояния и прав и готовность песочницы SHALL оставаться недоступными до отдельного согласования API и области работ; существующие команды MOS-909 сохраняются без расширения. GET и восстановление чтения MUST NOT описываться как запуск или повтор проверки. Сохранённые checks MUST NOT подменяться результатом однократного preflight фразы.
++
++#### Scenario: Sandbox status without readiness API
++
++- **WHEN** сервер возвращает sandbox без данных о проверках и обработанной версии
++- **THEN** UI показывает этот текущий статус и прекращает polling, но не объявляет все проверки успешными, не разрешает песочницу на основании одного status и не создаёт токен
++
++#### Scenario: Passed checks do not prove applied input or sandbox readiness
++
++- **WHEN** все возвращённые проверки имеют passed, включая endpoint
++- **THEN** UI показывает сохранённые результаты, но не объявляет текущие редактируемые фразы обученными, сервис доступным или песочницу готовой и не предлагает новый повторный запуск
+--- /dev/null
++++ openspec/changes/add-skill-readiness-results/tasks.md
+@@ -0,0 +1,14 @@
++## 1. Typed persisted results
++
++- [ ] 1.1 Extend skill detail types and decoder with published check fields and exact type/status enums; verify decoder assertions for all five types, four statuses, nullable message, checked_at, empty array and malformed/missing fields without synthetic success.
++- [ ] 1.2 Pass typed checks through existing detail/checks-tab props and render ordered textual status, blocking, corrective message and timestamp; verify component cases for passed/null, blocked, failed/nonblocking, warning/nonblocking and empty/uncomputed results, with safe text rendering and no aggregate rank.
++
++## 2. Observation and recovery
++
++- [ ] 2.1 Reconcile successful detail reads even when version/updated_at are unchanged; verify changed checks/checked_at render while dirty input and editor expected_version remain intact and another skill ID cannot replace current results.
++- [ ] 2.2 Extend last-loaded/read-error presentation to checks using existing GET recovery; verify retained stale results, polling pause, GET-only retry and no mutation replay or inferred process failure.
++- [ ] 2.3 Preserve existing polling and identity behavior; verify bounded unit/component assertions for visible processing-only intervals, hidden/unmount cancellation, one observer, stop at sandbox, manual non-processing read and skill-ID isolation.
++
++## 3. Boundary regression review
++
++- [ ] 3.1 Update affected detail fixtures and status-only assertions to include persisted results and retain current-input/training/sandbox disclaimers; verify no new run/recheck controls, lifecycle transitions, review-MVP results, preflight ownership, security policy or dependencies are introduced. Run only separately authorized focused non-browser checks during implementation; document that mock assertions do not certify backend integration.
+--- /dev/null
++++ openspec/changes/add-skill-readiness-results/.openspec.yaml
+@@ -0,0 +1,2 @@
++schema: spec-driven
++created: 2026-10-20

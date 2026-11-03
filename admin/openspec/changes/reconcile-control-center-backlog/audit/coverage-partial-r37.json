@@ -1,0 +1,13 @@
+{
+  "revision": 37,
+  "supplements": "coverage-partial-r36.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "sourceAdditions": [],
+  "acceptedChains": [{"report": "reports/REL-MOS624-SHELL-REFERENCES.md", "review": "reviews/R-REL-MOS624-SHELL-REFERENCES.md", "verdict": "ACCEPT", "decision": "D-053", "limits": "Identity/relevance only, no admin-shell requirement adoption"}],
+  "scopedJiraWikiAccounting": {"attribution": "Parent additive accounting from accepted D051 and two D052 captures/D053 relevance dispositions; no new graph census", "targets": 13, "occurrences": 41, "retained": 11, "canonicalGaps": 2},
+  "remainingCanonicalIds": ["238347672", "241079770"],
+  "nextWorkItem": "work-items/REL-REMAINING-USER-SESSION-CONTRACTS.md",
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "limits": ["Historical snapshots unchanged", "Child/backend/Maki links unvisited and not implicitly authorized", "Auth/demo comparison omitted in accepted MOS624 classification", "Remaining candidate assessment local only, no collection or policy authority", "Global source/owner/runtime/formatting gates remain"]
+}

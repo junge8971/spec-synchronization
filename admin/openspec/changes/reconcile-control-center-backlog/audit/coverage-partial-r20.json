@@ -1,0 +1,50 @@
+{
+  "revision": 20,
+  "supplements": "coverage-partial-r19.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [
+    {
+      "report": "reports/DELTA-TEMPLATES-STUBS-ROOT-DOCS.md",
+      "candidates": "TSROOT-01–12",
+      "review": "reviews/R-DELTA-TEMPLATES-STUBS-ROOT-DOCS.md",
+      "historicalReviewVerdict": "REVISE: sole citation correction",
+      "parentDisposition": "Accepted after direct source220–230 verification and correction; original REVISE retained, no new reviewer ACCEPT",
+      "decision": "D-038"
+    }
+  ],
+  "sourceAdditions": [
+    "sources/wiki-247728705/r1/metadata.json",
+    "sources/wiki-241080065/r1/metadata.json"
+  ],
+  "capture": {
+    "authority": "Existing root teams/surfaces batch; D-038 continuation",
+    "transport": "Fresh browser discovery and exact root href/origin/absent-packet checks",
+    "versions": [9, 1],
+    "httpStatuses": [200, 200],
+    "bodyFormat": "Full bodyView plus separately returned attachment indexes",
+    "attachmentCounts": [0, 0],
+    "nextPointers": [null, null],
+    "redactions": [0, 0],
+    "integrity": "Parent canonical/derived SHA256 and exact chunk roundtrip",
+    "semanticAcceptance": "pending"
+  },
+  "parentComputedRootCounts": {
+    "capturedBodyOrExtraction": 33,
+    "withoutCanonicalPacket": 9,
+    "returnedIndexes": 32,
+    "knownIndexedAttachments": 29,
+    "knownIndexedUnreadBodies": 25,
+    "note": "Two new empty-index pages; feedback index missing; body captures not full semantic reconciliation"
+  },
+  "pendingAnalysis": [
+    "work-items/DELTA-TEAMS-ROOT-DOC.md",
+    "work-items/DELTA-SURFACES-ROOT-BRIEF.md"
+  ],
+  "limits": [
+    "No auth or source-precedence expansion, new frontend ownership, product/API/runtime claims",
+    "No recursive/attachment-body traversal, source execution or business requests",
+    "Remaining source/attachment/explanatory-document, owner and implementation gates unresolved",
+    "Historical formatting failure unresolved; global tasks not closed"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "sourceId": "jira-api-delta-scenarios",
+  "retrievedAt": "2026-10-16T11:23:51.742Z",
+  "sha256": "b1ac1c3a087a6ebed2e5d2b3bef6a2e92c9a71676e3be4fbaf8dd802423d6aed",
+  "format": "selected-field-extraction",
+  "method": "Parent browser same-origin Jira issue GET for four previously inventoried keys",
+  "limitations": "Descriptions and attachment metadata only; no attachment body, comments or custom fields. Issue updated timestamps may be newer than member-index snapshot; use this revision for content analysis."
+}

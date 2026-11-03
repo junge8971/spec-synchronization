@@ -1,0 +1,10 @@
+{"name":"props-js-missing","rule":"react/prop-types","count":1,"messages":["'name' is missing in props validation"]}
+{"name":"props-js-declared","rule":"react/prop-types","count":0,"messages":[]}
+{"name":"props-js-nested","rule":"react/prop-types","count":2,"messages":["'person' is missing in props validation","'person.name' is missing in props validation"]}
+{"name":"props-ts-typed","rule":"react/prop-types","count":0,"messages":[]}
+{"name":"props-ts-untyped","rule":"react/prop-types","count":1,"messages":["'name' is missing in props validation"]}
+{"name":"deprecated-dom-render","rule":"react/no-deprecated","count":1,"messages":["ReactDOM.render is deprecated since React 18.0.0, use createRoot instead, see https://reactjs.org/link/switch-to-createroot"]}
+{"name":"deprecated-dom-unmount","rule":"react/no-deprecated","count":1,"messages":["ReactDOM.unmountComponentAtNode is deprecated since React 18.0.0, use root.unmount instead, see https://reactjs.org/link/switch-to-createroot"]}
+{"name":"deprecated-react-proptypes","rule":"react/no-deprecated","count":1,"messages":["React.PropTypes is deprecated since React 15.5.0, use the npm module prop-types instead"]}
+{"name":"deprecated-old-lifecycle","rule":"react/no-deprecated","count":1,"messages":["componentWillMount is deprecated since React 16.9.0, use UNSAFE_componentWillMount instead, see https://reactjs.org/docs/react-component.html#unsafe_componentwillmount. Use https://github.com/reactjs/react-codemod#rename-unsafe-lifecycles to automatically update your components."]}
+{"name":"not-deprecated-createelement","rule":"react/no-deprecated","count":0,"messages":[]}

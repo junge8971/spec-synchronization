@@ -1,0 +1,136 @@
+| POST: /api/esk/skills/{id}/monitoring
+| Description | Запрос состояния мониторинга навыка
+|
+parameters
+|
+| name | in | required | Description | Пример
+|
+id
+|
+path
+|
+true
+|
+Идентификатор навыка
+| s-water
+|
+Request Body
+|
+{
+sudir_id, //обязательное - идентификатор пользователя sudir , если аноним - null
+access_token, //обязательно - токен пользователя sudir, если аноним - null
+}
+|
+Responses
+|
+| Code | Description
+|
+200
+|
+{
+"status": "normal",
+"statusDescription": "Показатели не выходят за пороги, внешние системы отвечают, данные обновлены вовремя.",
+"dailyMetrics": {
+"availabilityValue": 0.996,
+"availabilityThreshold": 0.995,
+"responseTimeValue": 1.1,
+"responseTimeThreshold": 3,
+"goodRatingValue": 0.88,
+"goodRatingThreshold": 0.85
+},
+"serviceInfo": {
+"dataUpdatedAt": "2026-08-14T07:45:00+03:00",
+"dataAgeDays": 24,
+"updateReglament": "ежедневно до 08:00",
+"lastCallAt": "2026-08-14T09:52:00+03:00",
+"failureMessage": "По этому вопросу ведутся технические работы. Обратитесь по телефону горячей линии или через форму на mos.ru"
+},
+"responsiblePersons": {
+"owner": "Феофан Терентьев",
+"techRepresentative": "Герасим Кочетов",
+"deputy": "Епифаний Ефимов"
+},
+"dependencies": [
+{
+"name": "ЕИРЦ, показания счётчиков",
+"team": "Команда ЖКХ",
+"status": "Доступна",
+"checkedAt": "2026-08-14T09:40:00+03:00"
+},
+{
+"name": "Реестр отключений МОЭК",
+"team": "Команда ЖКХ",
+"status": "Доступна",
+"checkedAt": "2026-08-14T09:40:00+03:00"
+}
+],
+"incidents": [
+{
+"level": "P1",
+"description": "Задержки ответов после обновления реестра отключений",
+"impact": 0.06,
+"occurredAt": "2026-07-29T11:20:00+03:00",
+"cause": "Ошибка конфигурации навыка",
+"side": "Команда платформы",
+"status": "Устранён",
+"resolvedAt": "2026-07-29T12:40:00+03:00",
+"postmortem": "готов"
+}
+]
+}
+|
+422
+|
+{
+"error_type": "Validation error",
+"error_message": "Validation error message"
+}
+|
+500
+|
+{
+"error_type": "Internal Server Error",
+"error_message": "Internal server error message"
+}
+Тело ответа:
+monitoringStatus - Статус мониторинга
+| # | Поле | Тип | Пример | Описание
+| 1 | status | string | normal | Статус навыка
+| 2 | statusDescription | string | Показатели не выходят за пороги, внешние системы отвечают, данные обновлены вовремя. | Текстовое описание статуса
+dailyMetrics - Показатели за сутки
+| # | Поле | Тип | Пример | Описание
+| 1 | availabilityValue | float | 0.996 | Доступность навыка (0..1)
+| 2 | availabilityThreshold | float | 0.995 | Порог доступности (0..1)
+| 3 | responseTimeValue | float | 1.1 | Среднее время ответа в секундах
+| 4 | responseTimeThreshold | float | 3 | Порог времени ответа в секундах
+| 5 | goodRatingValue | float | 0.88 | Доля хороших оценок ответов (0..1)
+| 6 | goodRatingThreshold | float | 0.85 | Порог доли хороших оценок (0..1)
+serviceInfo - Информация о работе сервиса
+| # | Поле | Тип | Пример | Описание
+| 1 | dataUpdatedAt | string | 2026-08-14T07:45:00+03:00 | Дата последнего обновления данных
+| 2 | dataAgeDays | integer | 24 | Дней с момента обновления
+| 3 | updateReglament | string | ежедневно до 08:00 | Регламент обновления данных
+| 4 | lastCallAt | string | 2026-08-14T09:52:00+03:00 | Дата последнего вызова навыка
+| 5 | failureMessage | string | По этому вопросу ведутся технические работы. Обратитесь по телефону горячей линии или через форму на mos.ru | Сообщение жителю при сбое
+responsiblePersons - Ответственные лица
+| # | Поле | Тип | Пример | Описание
+| 1 | owner | string | Феофан Терентьев | Владелец навыка
+| 2 | techRepresentative | string | Герасим Кочетов | Технический представитель
+| 3 | deputy | string | Епифаний Ефимов | Дублирующий
+dependencies - Зависимости навыка
+| # | Поле | Тип | Пример | Описание
+| 1 | name | string | ЕИРЦ, показания счётчиков | Название внешней системы
+| 2 | team | string | Команда ЖКХ | Ответственная команда
+| 3 | status | string | Доступна | Состояние системы
+| 4 | checkedAt | string | 2026-08-14T09:40:00+03:00 | Дата последней проверки
+incidents - Инциденты
+| # | Поле | Тип | Пример | Описание
+| 1 | level | string | P1 | Уровень инцидента
+| 2 | description | string | Задержки ответов после обновления реестра отключений | Что произошло
+| 3 | impact | float | 0.06 | Доля масштаба влияния (0..1)
+| 4 | occurredAt | string | 2026-07-29T11:20:00+03:00 | Дата и время возникновения
+| 5 | cause | string | Ошибка конфигурации навыка | Причина
+| 6 | side | string | Команда платформы | Сторона
+| 7 | status | string | Устранён | Статус
+| 8 | resolvedAt | string | 2026-07-29T12:40:00+03:00 | Дата устранения
+| 9 | condition | string | разбор: готов | Состояние

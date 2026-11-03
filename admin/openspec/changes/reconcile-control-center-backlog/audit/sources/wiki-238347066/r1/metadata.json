@@ -1,0 +1,21 @@
+{
+  "sourceId": "wiki-238347066",
+  "revision": 1,
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/238347066/skills+-+%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3+%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%BE%D0%B2",
+  "retrievedAt": "2026-10-19T10:18:27.973Z",
+  "status": 200,
+  "version": {
+    "number": 8,
+    "when": "2026-09-08T17:40:36.272+08:00"
+  },
+  "content": "content.json",
+  "sha256": "086f9407af8741f7785f3b635901c8ae930e5e5a6a8941f7a28cce6ed0f259a2",
+  "method": "Parent same-origin exact previously authorized root-linked documentation GET plus attachment indexes; no recursive traversal or source execution",
+  "discovery": "sources/wiki-238324523/r2/links.txt lines5–7; exact href reconfirmed in root DOM",
+  "redactions": 0,
+  "limitations": [
+    "Full bodyView and separate returned attachment index, not complete Confluence export",
+    "No child links/assets/attachments visited; no examples executed",
+    "No source precedence, current API/runtime or implementation claims"
+  ]
+}

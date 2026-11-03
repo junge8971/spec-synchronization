@@ -1,0 +1,31 @@
+{
+  "pointer": "#/components/schemas/TsamResponseSchema_WidgetCatalogResponse_",
+  "value": {
+    "properties": {
+      "code": {
+        "$ref": "#/components/schemas/ResponseCode"
+      },
+      "data": {
+        "$ref": "#/components/schemas/WidgetCatalogResponse"
+      },
+      "message": {
+        "type": "string",
+        "title": "Message"
+      },
+      "errors": {
+        "items": {
+          "$ref": "#/components/schemas/ErrorItem"
+        },
+        "type": "array",
+        "title": "Errors"
+      }
+    },
+    "type": "object",
+    "required": [
+      "code",
+      "data",
+      "message"
+    ],
+    "title": "TsamResponseSchema[WidgetCatalogResponse]"
+  }
+}

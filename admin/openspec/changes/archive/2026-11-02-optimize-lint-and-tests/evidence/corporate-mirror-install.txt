@@ -1,0 +1,14 @@
+➤ YN0000: · Yarn 4.18.0
+➤ YN0000: ┌ Resolution step
+➤ YN0000: └ Completed in 0s 213ms
+➤ YN0000: ┌ Post-resolution validation
+➤ YN0060: │ ajv-formats is listed by your project with version 3.0.1 (p50add2), which doesn't satisfy what @hookform/resolvers requests (^2.1.1).
+➤ YN0086: │ Some peer dependencies are incorrectly met by your project; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code.
+➤ YN0086: │ Some peer dependencies are incorrectly met by dependencies; run yarn explain peer-requirements for details.
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Fetch step
+➤ YN0013: │ 805 packages were added to the project (+ 122.47 MiB).
+➤ YN0000: └ Completed in 0s 410ms
+➤ YN0000: ┌ Link step
+➤ YN0000: └ Completed in 6s 30ms
+➤ YN0000: · Done with warnings in 6s 842ms

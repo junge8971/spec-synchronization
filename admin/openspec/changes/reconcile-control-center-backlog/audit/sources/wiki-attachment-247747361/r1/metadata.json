@@ -1,0 +1,24 @@
+{
+  "id": "247747361",
+  "parent": "247747363",
+  "title": "Прототипчик.html",
+  "version": 1,
+  "url": "https://wiki.mos-team.ru/download/attachments/247747363/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF%D1%87%D0%B8%D0%BA.html?version=1&modificationDate=1790942489236&api=v2",
+  "status": 200,
+  "retrievedAt": "2026-10-19T09:15:22.071Z",
+  "contentType": "text/html;charset=UTF-8",
+  "redactions": 0,
+  "sourceId": "wiki-attachment-247747361",
+  "revision": 1,
+  "content": "content.txt",
+  "sha256": "86bfa9b88d4a416d77a5d5b2e81c0624ad8c32ed098ba11952a42576daed4f99",
+  "method": "Parent same-origin GET exact indexed attachment version paths; fetched as inert text only, no DOM insertion or source execution; redirects refused",
+  "discovery": "sources/wiki-247747363/r1/content.json#/attachments/results",
+  "format": "HTML source saved with inert .txt extension; browser-decoded UTF-8 text, not rendered or executed",
+  "limitations": [
+    "Version-qualified selected attachment only; filename/version/chronology is not precedence",
+    "Bearer-shaped values replaced before tool output if present; hash covers saved text, not original download bytes",
+    "No DOM insertion, JS evaluation, external assets, UI interaction or browser/E2E tests",
+    "Static source analysis pending; HTTP200 is not implementation or product acceptance"
+  ]
+}

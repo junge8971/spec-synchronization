@@ -1,0 +1,14 @@
+{
+  "source": "../../wiki-247744768/r1/content.json",
+  "sourceSha256": "df98d0a4eaa1c71d3ba3ec8b37a917b648ebb306833b634536f640191e2a733a",
+  "derivation": "Inert HTMLParser text with block/table separators plus exact ordered4000-character bodyView chunks",
+  "files": {
+    "content.txt": "ce15603b184c4a038a05bc1eb9100a6107218e87e03a74b12dbfa7ca6a163574",
+    "body-view-chunks.json": "fdb92f6b6d810039bb554fde851b3facf13419b7cc5420bace20fda91865172c"
+  },
+  "roundtrip": "Parent verified concatenation equals decoded original bodyView",
+  "limitations": [
+    "Text loses markup; no rendering/source execution",
+    "No semantic acceptance or linked-resource coverage"
+  ]
+}

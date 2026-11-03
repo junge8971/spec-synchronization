@@ -1,0 +1,29 @@
+{
+  "pointer": "#/components/schemas/BoardResponse",
+  "value": {
+    "properties": {
+      "version": {
+        "type": "integer",
+        "title": "Version"
+      },
+      "is_default": {
+        "type": "boolean",
+        "title": "Is Default"
+      },
+      "widgets": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array",
+        "title": "Widgets"
+      }
+    },
+    "type": "object",
+    "required": [
+      "version",
+      "is_default",
+      "widgets"
+    ],
+    "title": "BoardResponse"
+  }
+}

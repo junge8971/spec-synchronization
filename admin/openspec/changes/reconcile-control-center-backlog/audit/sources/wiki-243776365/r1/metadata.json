@@ -1,0 +1,14 @@
+{
+  "sourceId": "wiki-243776365",
+  "revision": 1,
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/243776365/",
+  "retrievedAt": "2026-10-16T11:51:52.439Z",
+  "version": 13,
+  "versionWhen": "2026-09-29T20:52:32.537+08:00",
+  "sha256": "2f659b5423fa7203dcd4f70743e59aabfb571452144394621091ff2cd58cab55",
+  "bytes": 286570,
+  "method": "Parent browser same-origin Confluence GET body.view/version and attachment enumeration; gzip transfer decoded locally, bytes/hash verified",
+  "inclusionReason": "Direct analytics-root link Business analysis: Dialogs; MOS-773 scope",
+  "limitations": "Attachment metadata only; next link retained; HTML stored inert, not executed. No tests or business requests; links not followed automatically.",
+  "redactionPolicy": "Matching Authorization Bearer examples replaced before transfer; no credentials requested"
+}

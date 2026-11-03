@@ -1,0 +1,14 @@
+{
+  "sourceId": "wiki-245673187",
+  "revision": 1,
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/245673187/",
+  "retrievedAt": "2026-10-16T11:45:08.223Z",
+  "version": 18,
+  "versionWhen": "2026-10-09T23:34:11.543+08:00",
+  "sha256": "d539752b3e0f424d0a251426a490319b07d03f4ff8dfdcf3074a62ee53d34eaa",
+  "bytes": 319614,
+  "method": "Parent browser same-origin Confluence content GET body.view/version and attachment enumeration GET; gzip transfer decoded locally with size/hash verification",
+  "inclusionReason": "Direct analytics-root link labelled Business analysis: Surfaces; scope matches MOS-783",
+  "limitations": "Attachment metadata only, bodies not downloaded; attachments next link retained if present; HTML saved as inert evidence, not executed; no business calls or browser tests",
+  "redactionPolicy": "Authorization Bearer example values replaced before transfer if matching; no credentials requested"
+}

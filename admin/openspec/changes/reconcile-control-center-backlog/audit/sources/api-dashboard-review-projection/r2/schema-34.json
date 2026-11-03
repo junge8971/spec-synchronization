@@ -1,0 +1,11 @@
+{
+  "pointer": "#/components/schemas/WidgetType",
+  "value": {
+    "type": "string",
+    "enum": [
+      "metric",
+      "distribution"
+    ],
+    "title": "WidgetType"
+  }
+}

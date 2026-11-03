@@ -1,0 +1,15 @@
+{
+  "revision": 33,
+  "supplements": "coverage-partial-r32.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [
+    {"report": "reports/DELTA-DASHBOARD-METRICS-CONTRACT.md", "review": "reviews/R-DELTA-DASHBOARD-METRICS-CONTRACT.md", "candidates": "DMC01–12", "reviewVerdict": "REVISE", "parentDisposition": "accepted after eight directly verified locator corrections; original REVISE retained", "decision": "D-049"},
+    {"report": "reports/DELTA-DASHBOARD-BOARD-CONTRACT.md", "review": "reviews/R-DELTA-DASHBOARD-BOARD-CONTRACT.md", "candidates": "BOARD01–08", "reviewVerdict": "ACCEPT", "parentDisposition": "accepted without fixes", "decision": "D-049"}
+  ],
+  "sourceAdditions": ["sources/wiki-241077434/r1/content.json", "sources/wiki-241077434/r1/metadata.json", "sources/wiki-241077434-readable/r1/content.txt", "sources/wiki-241077434-readable/r1/body-view-chunks.json", "sources/wiki-241077434-readable/r1/metadata.json"],
+  "capture": {"id": "241077434", "version": 2, "retrievedAt": "2026-10-19T14:00:29.066Z", "httpStatus": 200, "indexStatus": 200, "indexSize": 0, "next": null, "bearerRedactions": 0, "readableLines": 480, "exactChunks": 15, "sha256": "9da3666a70bffffe00dcc0f93a2f98e8be33724c84b091ea0bf036c3418511e2", "authority": "D-049; fresh root8 discovery/origin, exact saved MOS1031 href and canonical absence checked"},
+  "pendingAnalysis": "work-items/DELTA-AUDIT-SERVICE-CONTRACT.md",
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "limits": ["Off-root source adds no root member", "Selected envelope/full bodyView not raw HTTP; no attachment/child/service/business requests", "Audit document does not close MOS1031 reader gate or grant frontend service credentials", "Global source/owner/runtime gates and formatting issue unresolved"]
+}

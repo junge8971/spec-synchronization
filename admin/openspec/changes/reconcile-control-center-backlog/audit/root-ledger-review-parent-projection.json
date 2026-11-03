@@ -1,0 +1,43 @@
+{
+  "purpose": "Bounded parent projection for reviewer request bee313c4-4216-41d9-bae9-9640af57ebff",
+  "provenance": "Parent locally parsed existing JSON with Python json.loads; measured content.txt bytes with len(Path.read_bytes()). No network or source execution. Reviewer may inspect this projection but must attribute underlying parsing/measurement to parent.",
+  "limits": "Not wire-byte identity, hashes, freshness, structural HTML review or staging inspection. Initial overly broad projection output truncated; subsequent compact exact attachments-field projection supplied complete values below. Original captures unchanged.",
+  "basePath": "openspec/changes/reconcile-control-center-backlog/audit/sources/",
+  "packets": [
+    {
+      "path": "wiki-243776365/r1/content.json",
+      "bodyViewPresent": true,
+      "attachments": {"results": [], "size": 0, "limit": 100, "next": null}
+    },
+    {
+      "path": "wiki-241080062/r1/content.json",
+      "bodyViewPresent": true,
+      "attachments": {
+        "results": [{
+          "id": "245672060",
+          "title": "БД-Навыки.svg",
+          "mediaType": "image/svg+xml",
+          "links": {
+            "download": "/download/attachments/241080062/%D0%91%D0%94-%D0%9D%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8.svg?version=1&modificationDate=1790176151257&api=v2",
+            "webui": "/spaces/KR/pages/241080062/%D0%90%D0%B4%D0%BC%D0%B8%D0%BD%D0%BA%D0%B0.+%D0%9D%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8?preview=%2F241080062%2F245672060%2F%D0%91%D0%94-%D0%9D%D0%B0%D0%B2%D1%8B%D0%BA%D0%B8.svg",
+            "self": "https://wiki.mos-team.ru/rest/api/content/245672060"
+          }
+        }],
+        "size": 1,
+        "limit": 100,
+        "next": null
+      }
+    },
+    {
+      "path": "wiki-245673187/r1/content.json",
+      "bodyViewPresent": true,
+      "attachments": {"results": [], "size": 0, "limit": 100, "next": null}
+    }
+  ],
+  "savedDecodedTextBytes": [
+    {"path": "wiki-attachment-250805153/r1/content.txt", "bytes": 121187},
+    {"path": "wiki-attachment-247751845/r1/content.txt", "bytes": 77132},
+    {"path": "wiki-attachment-250800526/r1/content.txt", "bytes": 106202},
+    {"path": "wiki-attachment-247747361/r1/content.txt", "bytes": 249285}
+  ]
+}

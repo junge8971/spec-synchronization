@@ -1,0 +1,43 @@
+➤ YN0000: · Yarn 4.18.0
+➤ YN0000: ┌ Resolution step
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Post-resolution validation
+➤ YN0060: │ ajv-formats is listed by your project with version 3.0.1 (p50add2), which doesn't satisfy what @hookform/resolvers requests (^2.1.1).
+➤ YN0086: │ Some peer dependencies are incorrectly met by your project; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code.
+➤ YN0086: │ Some peer dependencies are incorrectly met by dependencies; run yarn explain peer-requirements for details.
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Fetch step
+➤ YN0035: │ @oxfmt/binding-linux-x64-gnu@npm:0.75.0: The remote server failed to provide the requested resource
+➤ YN0035: │   Response Code: 403 (Forbidden)
+➤ YN0035: │   Request Method: GET
+➤ YN0035: │   Request URL: https://yarnpkg.mos-team.ru/@oxfmt/binding-linux-x64-gnu/-/binding-linux-x64-gnu-0.75.0.tgz
+➤ YN0035: │ @oxlint/binding-linux-x64-gnu@npm:1.90.0: The remote server failed to provide the requested resource
+➤ YN0035: │   Response Code: 403 (Forbidden)
+➤ YN0035: │   Request Method: GET
+➤ YN0035: │   Request URL: https://yarnpkg.mos-team.ru/@oxlint/binding-linux-x64-gnu/-/binding-linux-x64-gnu-1.90.0.tgz
+➤ YN0035: │ acorn-jsx-walk@npm:2.0.0: Package not found
+➤ YN0035: │   Response Code: 404 (Not Found)
+➤ YN0035: │   Request Method: GET
+➤ YN0035: │   Request URL: https://yarnpkg.mos-team.ru/acorn-jsx-walk/-/acorn-jsx-walk-2.0.0.tgz
+➤ YN0035: │ acorn-loose@npm:8.5.2: Package not found
+➤ YN0035: │   Response Code: 404 (Not Found)
+➤ YN0035: │   Request Method: GET
+➤ YN0035: │   Request URL: https://yarnpkg.mos-team.ru/acorn-loose/-/acorn-loose-8.5.2.tgz
+➤ YN0035: │ commander@npm:15.0.0: Package not found
+➤ YN0035: │   Response Code: 404 (Not Found)
+➤ YN0035: │   Request Method: GET
+➤ YN0035: │   Request URL: https://yarnpkg.mos-team.ru/commander/-/commander-15.0.0.tgz
+➤ YN0035: │ dependency-cruiser@npm:18.7.0: Package not found
+➤ YN0035: │   Response Code: 404 (Not Found)
+➤ YN0035: │   Request Method: GET
+➤ YN0035: │   Request URL: https://yarnpkg.mos-team.ru/dependency-cruiser/-/dependency-cruiser-18.7.0.tgz
+➤ YN0035: │ is-installed-globally@npm:1.0.1: Package not found
+➤ YN0035: │   Response Code: 404 (Not Found)
+➤ YN0035: │   Request Method: GET
+➤ YN0035: │   Request URL: https://yarnpkg.mos-team.ru/is-installed-globally/-/is-installed-globally-1.0.1.tgz
+➤ YN0035: │ watskeburt@npm:6.0.0: Package not found
+➤ YN0035: │   Response Code: 404 (Not Found)
+➤ YN0035: │   Request Method: GET
+➤ YN0035: │   Request URL: https://yarnpkg.mos-team.ru/watskeburt/-/watskeburt-6.0.0.tgz
+➤ YN0000: └ Completed in 15s 925ms
+➤ YN0000: · Failed with errors in 16s 109ms

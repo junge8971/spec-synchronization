@@ -1,0 +1,20 @@
+⚠ Skipping backup because there’s no initial commit yet. This might result in data loss.
+
+⋯ Preparing lint-staged…
+✔ Done preparing lint-staged!
+⋯ Running tasks for staged files…
+    *.{js,jsx,mjs,cjs,ts,mts,cts,tsx} — 1 file
+      ⋯ sh -c 'for i in 1 2 3 4 5 6 7 8 9 10; do oxlint --fix --deny-warnings --no-error-on-unmatched-pattern "$@" && oxlint --deny-warnings --no-error-on-unmatched-pattern "$@" && exit 0; done; exit 1' --
+      ⋯ oxfmt --write --no-error-on-unmatched-pattern --ignore-path .oxfmtignore
+      ⋯ sh -c 'find -P app \( -name .git -o -name node_modules \) -prune -o -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.mjs" -o -name "*.cjs" -o -name "*.ts" -o -name "*.mts" -o -name "*.cts" -o -name "*.tsx" \) -exec oxlint --deny-warnings --no-error-on-unmatched-pattern {} + && find -P app \( -name .git -o -name node_modules \) -prune -o -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.mjs" -o -name "*.cjs" -o -name "*.ts" -o -name "*.mts" -o -name "*.cts" -o -name "*.tsx" \) -exec oxfmt --check --no-error-on-unmatched-pattern --ignore-path .oxfmtignore {} +' --
+
+✔ sh -c 'for i in 1 2 3 4 5 6 7 8 9 10; do oxlint --fix --deny-warnings --no-error-on-unmatched-pattern "$@" && oxlint --deny-warnings --no-error-on-unmatched-pattern "$@" && exit 0; done; exit 1' --
+✔ oxfmt --write --no-error-on-unmatched-pattern --ignore-path .oxfmtignore
+✖ sh -c 'find -P app \( -name .git -o -name node_modules \) -prune -o -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.mjs" -o -name "*.cjs" -o -name "*.ts" -o -name "*.mts" -o -name "*.cts" -o -name "*.tsx" \) -exec oxlint --deny-warnings --no-error-on-unmatched-pattern {} + && find -P app \( -name .git -o -name node_modules \) -prune -o -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.mjs" -o -name "*.cjs" -o -name "*.ts" -o -name "*.mts" -o -name "*.cts" -o -name "*.tsx" \) -exec oxfmt --check --no-error-on-unmatched-pattern --ignore-path .oxfmtignore {} +' --
+
+✖ Failed to run tasks for staged files!
+⋯ Staging changes from tasks…
+✔ Done staging changes from tasks!
+
+✖ sh -c 'find -P app \( -name .git -o -name node_modules \) -prune -o -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.mjs" -o -name "*.cjs" -o -name "*.ts" -o -name "*.mts" -o -name "*.cts" -o -name "*.tsx" \) -exec oxlint --deny-warnings --no-error-on-unmatched-pattern {} + && find -P app \( -name .git -o -name node_modules \) -prune -o -type f \( -name "*.js" -o -name "*.jsx" -o -name "*.mjs" -o -name "*.cjs" -o -name "*.ts" -o -name "*.mts" -o -name "*.cts" -o -name "*.tsx" \) -exec oxfmt --check --no-error-on-unmatched-pattern --ignore-path .oxfmtignore {} +' --:
+app/features/consumer/consumer.ts:1:24: error boundaries(dependencies): Cannot resolve dependency.

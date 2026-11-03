@@ -1,0 +1,32 @@
+{
+  "pointer": "#/components/schemas/UpdateTeamRequest",
+  "value": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "maxLength": 200,
+        "minLength": 1,
+        "title": "Name"
+      },
+      "department_name": {
+        "type": "string",
+        "maxLength": 200,
+        "minLength": 1,
+        "title": "Department Name"
+      },
+      "reason": {
+        "type": "string",
+        "maxLength": 1000,
+        "minLength": 1,
+        "title": "Reason"
+      }
+    },
+    "type": "object",
+    "required": [
+      "name",
+      "department_name",
+      "reason"
+    ],
+    "title": "UpdateTeamRequest"
+  }
+}

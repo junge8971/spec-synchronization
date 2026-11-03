@@ -1,0 +1,9 @@
+➤ YN0000: · Yarn 4.18.0
+➤ YN0000: ┌ Resolution step
+➤ YN0085: │ + aria-query@npm:5.3.2, axobject-query@npm:4.1.0, dependency-cruiser@npm:18.7.0, fast-glob@npm:3.3.3, ignore@npm:7.0.12, jsx-ast-utils@npm:3.3.5, and 200 more.
+➤ YN0000: └ Completed in 1s 509ms
+➤ YN0000: ┌ Fetch step
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Link step
+➤ YN0000: └ Completed in 0s 729ms
+➤ YN0000: · Done in 2s 378ms

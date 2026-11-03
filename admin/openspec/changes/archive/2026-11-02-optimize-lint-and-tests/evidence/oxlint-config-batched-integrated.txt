@@ -1,0 +1,30 @@
+✔ blocks warnings above the complexity limit but accepts the boundary (1639.333147ms)
+✔ rejects parameter mutations except the approved state property (1616.319547ms)
+✔ enforces TypeScript array types and directive descriptions (2267.712539ms)
+✔ checks duplicate enum values including unary numbers and static templates (2408.119026ms)
+✔ rejects unused underscore names and values referenced only as types (2222.044323ms)
+✔ checks undefined identifiers in JavaScript without changing TypeScript scope (2008.4955ms)
+✔ uses configured globals and preserves readonly assignments (48.570445ms)
+✔ keeps TypeScript-only style rules out of JavaScript files (2373.651421ms)
+✔ checks raw control characters in regular expressions only (2461.479896ms)
+✔ checks raw control characters with a shadowed RegExp (1888.838991ms)
+✔ checks setter returns and super ordering in JavaScript (2000.561471ms)
+✔ rejects duplicate parameters and legacy octal literals in CommonJS (2037.079107ms)
+✔ recognizes JSX component references when checking unused variables (2113.867932ms)
+✔ checks keys in JSX arrays and iterators without flagging conditional tuple values (2499.434729ms)
+✔ checks image accessibility and hook ordering (2408.822067ms)
+✔ requires ARIA attributes for DOM elements while preserving semantic roles (2639.705511ms)
+✔ enforces the original React compiler rules for global writes and impure renders (2313.322757ms)
+✔ checks hook dependencies and blocks the warning-only case (2239.019096ms)
+✔ enforces named type ownership and the two specific context aliases (6306.447685ms)
+✔ enforces one component except in the approved shadcn files (2945.759163ms)
+✔ uses Oxlint plugin aliases for inline suppression (2115.153158ms)
+✔ enforces published React prop-types and deprecated APIs in JavaScript and TSX (2334.187529ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 50957.651716

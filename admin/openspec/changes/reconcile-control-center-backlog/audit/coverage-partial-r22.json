@@ -1,0 +1,49 @@
+{
+  "revision": 22,
+  "supplements": "coverage-partial-r21.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [
+    {
+      "report": "reports/DELTA-ADMIN-TOOLS-ROOT-BRIEFS.md",
+      "review": "reviews/R-DELTA-ADMIN-TOOLS-ROOT-BRIEFS.md",
+      "historicalVerdict": "REVISE: sole locator",
+      "parentDisposition": "D-040: direct source48–53 verification and correction; all11 accepted, original REVISE retained",
+      "structuralCoverage": "Reviewer independently read all12 HTML chunks; analyst's markup gap remains historically disclosed"
+    }
+  ],
+  "sourceAdditions": [
+    "sources/wiki-247737907/r1/metadata.json",
+    "sources/wiki-247742436/r1/metadata.json"
+  ],
+  "capture": {
+    "authority": "Existing root optional batch; D-040 continuation, not module activation",
+    "transport": "Fresh browser discovery and root href/origin/absent-packet checks",
+    "versions": [8, 4],
+    "httpStatuses": [200, 200],
+    "bodyFormat": "Full bodyView plus separate returned attachment indexes",
+    "attachmentCounts": [3, 2],
+    "nextPointers": [null, null],
+    "redactions": [0, 0],
+    "integrity": "Parent canonical/derived SHA256 and exact chunk roundtrip",
+    "semanticAcceptance": "pending",
+    "attachmentBodies": "Five new entries indexed only, not downloaded/inspected"
+  },
+  "parentComputedRootCounts": {
+    "capturedBodyOrExtraction": 38,
+    "withoutCanonicalPacket": 4,
+    "returnedIndexes": 37,
+    "knownIndexedAttachments": 34,
+    "knownIndexedUnreadBodies": 30,
+    "note": "Four previously saved prototype texts; five new unread entries; feedback index missing; captures not full semantic reconciliation"
+  },
+  "pendingAnalysis": [
+    "work-items/DELTA-KNOWLEDGE-BASE-ROOT-DOC.md",
+    "work-items/DELTA-AB-TESTING-ROOT-DOC.md"
+  ],
+  "limits": [
+    "No optional activation, experiment/indexing request, source execution or attachment download",
+    "No auth/source-precedence/API/runtime acceptance",
+    "Remaining collection/attachments/explanatory-document/owner/implementation gates and formatting failure unresolved"
+  ]
+}

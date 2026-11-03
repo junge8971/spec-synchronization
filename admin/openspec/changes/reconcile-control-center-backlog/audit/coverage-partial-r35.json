@@ -1,0 +1,17 @@
+{
+  "revision": 35,
+  "supplements": "coverage-partial-r34.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [{"report": "reports/G1-JIRA-CONTRACT-COLLECTION-DELTA.md", "review": "reviews/R-G1-JIRA-CONTRACT-COLLECTION-DELTA.md", "verdict": "ACCEPT", "decision": "D-051"}],
+  "sourceAdditions": [],
+  "acceptedScopedJiraWikiLedger": {"targets": 13, "occurrences": 41, "retained": 9, "canonicalGaps": 4},
+  "remainingDispositions": {
+    "238347672": "Named user-management contract from MOS944; bounded relevance/approved-auth comparison pending, no new policy",
+    "241079770": "Named session contract from MOS904; bounded relevance/approved-auth comparison pending, no auth requests",
+    "223087110": "Unnamed MOS624 reference; user clarification requested for body/metadata/index relevance classification only; unvisited",
+    "222659162": "Separate unnamed MOS624 reference; same bounded clarification requested; unvisited"
+  },
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "limits": ["No recursion/attachment-body/source execution/business/auth authority inferred", "Audit original REVISE remains; no report edit/fresh reviewer ACCEPT", "Scoped ledger not global explanatory sufficiency", "Historical formatting and global source/owner/runtime gates unresolved"]
+}

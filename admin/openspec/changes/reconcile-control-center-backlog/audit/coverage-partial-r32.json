@@ -1,0 +1,12 @@
+{
+  "revision": 32,
+  "supplements": "coverage-partial-r31.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "sourceAdditions": ["sources/wiki-241095761/r1/content.json", "sources/wiki-241095761/r1/metadata.json", "sources/wiki-241095761-readable/r1/content.txt", "sources/wiki-241095761-readable/r1/body-view-chunks.json", "sources/wiki-241095761-readable/r1/metadata.json"],
+  "capture": {"id": "241095761", "version": 8, "retrievedAt": "2026-10-19T13:42:47.528Z", "httpStatus": 200, "indexStatus": 200, "indexSize": 0, "next": null, "bearerRedactions": 0, "readableLines": 854, "exactChunks": 34, "sha256": "4eca84545833f7a10795bc9579d769f2a9081fc81c3a11829f30a37ef8664009", "authority": "D-048; exact saved MOS1025/1030 href and canonical absence checked; fresh wiki root7 origin guard", "limits": "Full decoded bodyView in selected envelope, not raw HTTP response; no linked resources/attachment bytes or business requests"},
+  "localDerivedEvidence": {"directory": "sources/api-dashboard-review-projection/r2", "operations": 5, "schemas": 34, "referenceEdges": 46, "limits": "Parent parsed existing r2, checked pointer equality and source hash; not new API acquisition"},
+  "pendingAnalysis": ["work-items/DELTA-DASHBOARD-METRICS-CONTRACT.md", "work-items/DELTA-DASHBOARD-BOARD-CONTRACT.md"],
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "limits": ["Off-root source adds no root member", "Prior discovery timeout historical; successful capture not runtime/semantic acceptance", "No new metric/board/auth/permission or attachment authority", "Global tasks and historical formatting issue unresolved"]
+}

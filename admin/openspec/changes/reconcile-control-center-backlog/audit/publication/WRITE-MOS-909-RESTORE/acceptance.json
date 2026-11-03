@@ -1,0 +1,29 @@
+{
+  "change": "mos-909-restore-approved-lifecycle-actions",
+  "decision": "D-020",
+  "acceptanceDecision": "D-021",
+  "baseline": "Target absent before native scaffold",
+  "writerRun": "1f0af7e5-f53f-4039-8765-33887e3121b1",
+  "reviewerRun": "953acf26-8428-461c-a5b4-3cf73238a14e",
+  "writerReport": "../../reports/WRITE-MOS-909-RESTORE.md",
+  "review": "../../reviews/R-WRITE-MOS-909-RESTORE.md",
+  "verdict": "ACCEPT planning only, no mandatory corrections",
+  "artifacts": {
+    ".openspec.yaml": "b552ab6519df8f66b705724100f565c5cd842bc9389aeaa177da9cec3d02a685",
+    "proposal.md": "03df2244a11422a244b860bf0d29d424174603b4f0669c012e14f12d6043f30d",
+    "design.md": "ce5c459eee2c491e70c773e24f5ef5530734faf26730bf0c6ca2e2413224e49b",
+    "specs/skill-lifecycle/spec.md": "d75265e70aef97dce00dd6b044bcf13011f508d134830b1e927f0ac526a95ed0",
+    "tasks.md": "d64b2c25d0aef7d7a9b7f48717a4bf2ba5a1a49dc08eb4d1ae3f1a9f0b6f6172"
+  },
+  "verification": {
+    "strictValidation": "Passed independently by parent, 1/1 no issues",
+    "finalStatus": "4/4 planning artifacts complete; six implementation tasks unchecked",
+    "sourceAndArtifactHashes": "Recomputed by parent after review; unchanged from writer report",
+    "gitDiffCheck": "Passed; clean tracked status does not inventory ignored OpenSpec",
+    "formatCheck": "Failed:149 audit-file warnings, including new audit files; no corrective-change artifact warning. Baseline separation not established for all149.",
+    "notRun": "typecheck/lint/test/api:check/build: planning-only, no runtime/API/build changes; browser/E2E prohibited"
+  },
+  "implementationAuthorized": false,
+  "globalAuditComplete": false,
+  "globalProgress": "6/28"
+}

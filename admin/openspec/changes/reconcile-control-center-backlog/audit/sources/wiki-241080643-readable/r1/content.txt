@@ -1,0 +1,224 @@
+Шаг 1 - запрос передачи фильтров/создания выборки по условиям отбора
+| POST: /api/dialogs/conditions
+| Description | Создать выборку диалогов по условиям отбора. Нужен, когда условий много и они не влезают в URL. Возвращает ID выборки для дальнейшего запроса.
+|
+parameters
+|
+-
+|
+Request Body
+|
+{
+"sudir_id": "id", //обязательное - идентификатор пользователя sudir , если аноним - null
+"access_token": "токен", //обязательно - токен пользователя sudir, если аноним - null
+//Условия отбора
+"match": "and", //and — все условия, or — любое условие
+"conditions": [
+{
+"field": "phrase", //имя атрибута
+"operator": "contains", //встречается, не встречается
+"value": null, //значение для сравнения
+"searchMode": "words", //words — слова в любом порядке, exact — точно как написано
+"scope": "all" //all — весь диалог, user — только пользователь, assistant — только ассистент, skill / operator - если надо выбирать
+"skillId": "id" //если scope = skill
+"operatorId": "id" //если scope = operator
+}
+]
+}
+|
+Responses
+|
+| Code | Description
+|
+200
+|
+{
+"selectionId": "sel-abc12345"
+}
+|
+422
+|
+{
+"error_type": "Validation error",
+"error_message": "Validation error message"
+}
+|
+500
+|
+{
+"error_type": "Internal Server Error",
+"error_message": "Internal server error message"
+}
+Шаг 2 - запрос списка диалогов по полученному ID, по переданным ранее условиям отбора
+| POST: /api/dialogs/
+| Description | Запрос выборки диалогов с учётом фильтров
+|
+parameters
+|
+| name | in | required | description | Пример
+| selectionId | query | false | ID ранее созданной выборки (если передан, условия из неё применяются к выдаче) | sel-abc12345
+| periodPreset | query | false | Пресет периода: today, last7days, last30days, lastMonth, custom | last30days
+| periodFrom | query | false | Начало кастомного периода (ISO 8601), при periodPreset=custom | 2026-07-14
+| periodTo | query | false | Конец кастомного периода (ISO 8601), при periodPreset=custom | 2026-08-12
+| channel | query | false | ID канала (all — все каналы) | all
+| skill | query | false | ID навыка (all — все навыки) | all
+| query | query | false | Полнотекстовый поиск по тексту диалога, ID и атрибутам | null
+| offset | query | false | Смещение для пагинации (min: 0) | 0
+| limit | query | false | Размер страницы (min: 1, max: 100) | 25
+|
+Request Body
+|
+{
+"sudir_id": "id", //обязательное - идентификатор пользователя sudir , если аноним - null
+"access_token": "токен", //обязательно - токен пользователя sudir, если аноним - null
+}
+|
+Responses
+|
+| Code | Description
+|
+200
+|
+{
+"summary": {
+"total": 52,
+"shown": 25
+},
+"items": [
+{
+"id": "dlg-8",
+"firstUserMessage": "Здравствуйте, мы переехали..."
+"participants": [
+{
+"type": "skill",
+"id": "s-water",
+"name": "Вода"
+},
+{
+"type": "skill",
+"id": "s-light",
+"name": "Свет"
+},
+{
+"type": "skill",
+"id": "s-epd",
+"name": "Просмотр ЕПД"
+},
+{
+"type": "skill",
+"id": "s-dju",
+"name": "ДЖУ"
+},
+{
+"type": "skill",
+"id": "s-concierge",
+"name": "Консьерж"
+},
+{
+"type": "operator",
+"id": "op-anna",
+"name": "Анна С."
+}
+],
+"hasOperator": true,
+"authorized": true,
+"startedAt": "2026-08-12T15:02:10+03:00",
+"endedAt": "2026-08-12T15:23:34+03:00",
+"durationSec": 1284,
+"channel": "Портал mos.ru",
+"operatorRating": 3,
+"hasIncidentMark": false
+},
+{
+"id": "dlg-7",
+"firstUserMessage": "Как поменять права, срок кончается",
+"participants": [
+{
+"type": "skill",
+"id": "s-concierge",
+"name": "Консьерж"
+},
+{
+"type": "operator",
+"id": "op-anna",
+"name": "Анна С."
+}
+],
+"hasOperator": false,
+"authorized": false,
+"startedAt": "2026-08-12T13:40:00+03:00",
+"endedAt": null,
+"durationSec": 208,
+"channel": "Портал mos.ru",
+"operatorRating": null,
+"hasIncidentMark": false
+}
+],
+"pagination": {
+"total": 52,
+"shown": 25,
+"offset": 0,
+"limit": 25,
+"hasMore": true
+},
+"selectionBuilder": {
+"selectionId": "sel-abc12345",
+"match": "and",
+"conditions": [
+{
+"field": "phrase",
+"operator": "contains",
+"value": null,
+"searchMode": "words",
+"scope": "all"
+}
+],
+"foundCount": 56
+}
+}
+|
+422
+|
+{
+"error_type": "Validation error",
+"error_message": "Validation error message"
+}
+|
+500
+|
+{
+"error_type": "Internal Server Error",
+"error_message": "Internal server error message"
+}
+Тело ответа (шаг 2):
+items[] - Массив диалогов
+| # | Поле | Тип | Пример | Описание
+| 1 | id | string | dlg-8 | Идентификатор диалога
+| 2 | firstUserMessage | string | Здравствуйте, мы переехали в новую квартиру на прошлой неделе... | Первое сообщение пользователя (тема диалога)
+| 3 | participants | array[object] | [{ "type": "skill", "id": "s-water", "name": "Вода" }, ...] | Участники диалога. type: skill / operator, id: идентификатор, name: название/ФИО
+| 5 | hasOperator | boolean | true | Участвовал ли оператор в диалоге
+| 6 | authorized | boolean | true | Был ли пользователь авторизован на старте диалога
+| 7 | startedAt | string (ISO 8601) | 2026-08-12T15:02:10+03:00 | Дата и время начала диалога
+| 8 | endedAt | string (ISO 8601) или null | 2026-08-12T15:23:34+03:00 | Дата завершения диалога, null если активен
+| 9 | durationSec | integer | 1284 | Длительность диалога в секундах
+| 10 | channel | string | Портал mos.ru | Канал связи (локализованное название)
+| 11 | operatorRating | integer (1–5) или null | 3 | Оценка оператора, null если нет
+| 12 | hasIncidentMark | boolean | false | Есть ли отметка об инциденте
+| 13 | incidentMarkText | string или null | В диалоге был сбой | Текст инцидента (только при hasIncidentMark=true)
+summary - Блок сводки
+| # | Поле | Тип | Пример | Описание
+| 1 | total | integer | 52 | Всего диалогов по текущим фильтрам
+| 2 | shown | integer | 25 | Отображено на текущей странице (≤ total)
+pagination - Блок пагинации
+| # | Поле | Тип | Пример | Описание
+| 1 | total | integer | 52 | Всего записей по фильтрам
+| 2 | shown | integer | 25 | Отображено на текущей странице
+| 3 | offset | integer | 0 | Текущее смещение
+| 4 | limit | integer | 25 | Размер страницы
+| 5 | hasMore | boolean | true | Есть ли ещё записи для подгрузки
+selectionBuilder - Блок конструктора отбора (опционально)
+| # | Поле | Тип | Пример | Описание
+| 1 | selectionId | string | sel-abc12345 | ID выборки
+| 2 | match | string | and | Логический оператор: and (все условия), or (любое)
+| 3 | conditions | array | [{ "field": "phrase", ... }] | Массив условий отбора
+| 4 | foundCount | integer | 56 | Найдено диалогов по условиям конструктора

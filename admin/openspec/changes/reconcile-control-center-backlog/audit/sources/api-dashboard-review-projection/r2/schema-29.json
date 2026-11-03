@@ -1,0 +1,74 @@
+{
+  "pointer": "#/components/schemas/WidgetCatalogItemResponse",
+  "value": {
+    "properties": {
+      "widget_id": {
+        "type": "string",
+        "title": "Widget Id"
+      },
+      "group": {
+        "$ref": "#/components/schemas/WidgetGroup"
+      },
+      "title": {
+        "type": "string",
+        "title": "Title"
+      },
+      "subtitle": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Subtitle"
+      },
+      "type": {
+        "$ref": "#/components/schemas/WidgetType"
+      },
+      "available": {
+        "type": "boolean",
+        "title": "Available"
+      },
+      "unavailable_reason_code": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/UnavailableReasonCode"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "unavailable_reason": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Unavailable Reason"
+      },
+      "on_board": {
+        "type": "boolean",
+        "title": "On Board"
+      }
+    },
+    "type": "object",
+    "required": [
+      "widget_id",
+      "group",
+      "title",
+      "subtitle",
+      "type",
+      "available",
+      "unavailable_reason_code",
+      "unavailable_reason",
+      "on_board"
+    ],
+    "title": "WidgetCatalogItemResponse"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "runId": "backlog-20261016-105642",
+  "root": "/home/user/my/work/codesrc/projects/CAM/tsam-admin-front",
+  "startedAt": "2026-10-16T10:56:42Z",
+  "git": {
+    "head": "bc0d9800f25a90989b9c73c76f91996f8300f1d3",
+    "porcelain": "",
+    "ignoredOpenSpec": true,
+    "note": "Git clean state does not cover ignored OpenSpec files; baseline hashes are mandatory."
+  },
+  "baseline": {
+    "fileCount": 647,
+    "inventorySha256": "77c9c2fd7b911a59d96411a17a35a023c1741edd91c5406a7129f1823c1e399c",
+    "fileHashesPath": "baseline-files.json",
+    "algorithm": "SHA-256 of JSON with sorted keys over path-sorted objects {path,sha256}; Python json.dumps defaults; all openspec files excluding /audit/."
+  },
+  "scope": {
+    "jiraRoot": "MOS-623",
+    "jiraTraversal": "All directly linked epics, their member tasks and subtasks only; no arbitrary issue links or neighbouring departments.",
+    "confluenceRoot": "https://wiki.mos-team.ru/spaces/KR/pages/238324523/",
+    "confluenceTraversal": "Relevant admin requirements and attachments; clarify ambiguous scope before reading.",
+    "apiDocs": "https://nchat-a-tech.mos.ru/api/control/docs",
+    "localRead": ["openspec", "docs/api/contracts", "app", "mocks", "scripts", "project configuration and tests"],
+    "localWrite": ["openspec/changes/reconcile-control-center-backlog/audit", "assigned active OpenSpec change artifacts", "new product changes through OpenSpec scaffold"],
+    "forbidden": ["application code edits", "external writes without separate explicit action approval", "main-spec sync", "archive edits or automatic archive", "arbitrary Jira traversal", "business endpoint calls", "browser/E2E tests", "credential extraction", "workflow configuration edits"]
+  },
+  "workers": {"model": "openai-codex/gpt-6-astra", "thinking": "medium", "registryVerified": true, "runtimeVerified": true},
+  "concurrency": {"analysts": 4, "browserOwners": 1},
+  "browser": {"preflight": "parent list_pages succeeded", "owner": "parent-session", "parentAccessAfterHandoff": true},
+  "sourceCutoff": null,
+  "status": "iterative-scenario-audit-in-progress",
+  "blocker": {
+    "workItem": "PREFLIGHT-001",
+    "runId": "bf4112c0-5af0-4767-945a-3f082b8b72d1",
+    "error": "Agent researcher requested unavailable child tools: web_search, fetch_content, get_search_content, source_check. Child also had no MCP browser tools.",
+    "receipt": "readiness-child.md",
+    "nextAction": "Resolved by user-approved D-001: parent browser collector and local Astra readers; failed attempts preserved.",
+    "baselineCheck": "HEAD unchanged; only tasks.md changed among baseline files (task 1.1 checkbox)."
+  },
+  "sourceCheckpoint": "source-checkpoint-r2.json",
+  "inventoryAcceptance": "inventory-acceptance.json",
+  "reviewDecisions": "decisions.md",
+  "publicationAcceptance": "publication/WRITE-MOS-1018/acceptance.json",
+  "reviewCheckpoint": "review-checkpoint.md",
+  "revision": 5
+}

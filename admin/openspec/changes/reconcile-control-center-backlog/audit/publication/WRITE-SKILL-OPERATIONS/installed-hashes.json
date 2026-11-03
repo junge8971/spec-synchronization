@@ -1,0 +1,17 @@
+[
+  {
+    "path": "openspec/changes/mos-1026-skill-operations-info/proposal.md",
+    "beforeSha256": "a2177d7a3dee5836dda19c259612f61019cbf3eabee7a510fbfb86485be2da67",
+    "afterSha256": "424da30a249ec345f8f088e817c0afc277ca5913287fa35de64d35fd1eec0fab"
+  },
+  {
+    "path": "openspec/changes/mos-1026-skill-operations-info/design.md",
+    "beforeSha256": "6b3877218cf8a9d3e0ccd63e0eb5a40d623bac80654d41a71bf505c49491cf91",
+    "afterSha256": "ba53d8986784adeb4a7822d552df1c931da6aab4d409599a009036d0fce6ecd0"
+  },
+  {
+    "path": "openspec/changes/mos-1026-skill-operations-info/tasks.md",
+    "beforeSha256": "250b6b97a5d70ad1efffae9927063525a710e804b2fd8b0403a7da7fad318553",
+    "afterSha256": "da0ad607376b7e3d7c7f508012f726eecf131f9570cee84c73caa8587e50bf2e"
+  }
+]

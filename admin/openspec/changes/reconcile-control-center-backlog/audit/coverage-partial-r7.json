@@ -1,0 +1,66 @@
+{
+  "revision": 7,
+  "supplements": "coverage-partial-r6.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "chains": [
+    {
+      "issue": "MOS-909",
+      "report": "reports/WRITE-MOS-909-RESTORE.md",
+      "review": "reviews/R-WRITE-MOS-909-RESTORE.md",
+      "disposition": "D-020/D-021",
+      "scope": "Three-command direction explicitly selected; separate corrective planning accepted, implementation remains 0/6 and requires explicit apply"
+    },
+    {
+      "issue": "API-r2-status",
+      "report": "reports/API-R2-STATUS-DELTA.md",
+      "review": "reviews/R-API-R2-STATUS-DELTA.md",
+      "disposition": "D-023",
+      "scope": "Four bounded documentary candidates accepted; response-only status delta, historical evidence preserved"
+    },
+    {
+      "issue": "API-r2-token",
+      "report": "reports/API-R2-TOKEN-DELTA.md",
+      "review": "reviews/R-API-R2-TOKEN-DELTA.md",
+      "disposition": "D-023",
+      "scope": "Six bounded documentary candidates accepted; existing MOS1023 ownership and activation/disclosure gates retained"
+    },
+    {
+      "issue": "feedback-audience-journal",
+      "report": "reports/JOURNAL-FEEDBACK-AUDIENCE.md",
+      "review": "reviews/R-JOURNAL-SUPPLEMENTS.md",
+      "disposition": "D-024",
+      "scope": "Three documentary candidates accepted; existing shared binding retained, historical meeting question is not a new blocker"
+    },
+    {
+      "issue": "surface-MVP-journal",
+      "report": "reports/JOURNAL-SURFACE-MVP.md",
+      "review": "reviews/R-JOURNAL-SUPPLEMENTS.md",
+      "disposition": "D-024",
+      "scope": "Seven documentary candidates accepted; no-sandbox MVP and partial-save sequencing unchanged"
+    }
+  ],
+  "sourceAdditions": [
+    "sources/api-docs/r1/metadata.json",
+    "sources/api-live/r2/metadata.json",
+    "sources/wiki-238324523/r2/metadata.json",
+    "sources/wiki-241077052/r1/metadata.json",
+    "sources/wiki-250781168/r1/metadata.json"
+  ],
+  "derivedEvidence": [
+    "sources/api-token-status-readable/r1/metadata.json",
+    "sources/api-token-status-readable/r2/metadata.json"
+  ],
+  "priorBlockerDisposition": {
+    "MOS909-command-scope": "Direction resolved by D-020; planning accepted D-021. Product remediation not implemented or verified. Historical r6 retained unchanged."
+  },
+  "limitations": [
+    "No runtime, business requests or test execution",
+    "API review coverage is selected operations/ref closures, not independent whole-publication reachability verification",
+    "Journal review covers only first/third data rows; rows2/4/5 outstanding",
+    "Admin overview saved as image-only body-structure extraction; both image bodies unread",
+    "Root body and attachment collection, ambiguous-page relevance and explanatory-document dispositions incomplete",
+    "Existing formatting failure unresolved; immutable source hashes not rewritten",
+    "No product/main-spec/archive edits; global task completion unchanged"
+  ]
+}

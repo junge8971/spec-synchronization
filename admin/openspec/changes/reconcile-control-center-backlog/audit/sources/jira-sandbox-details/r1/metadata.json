@@ -1,0 +1,31 @@
+{
+  "sourceId": "jira-sandbox-details",
+  "retrievedAt": "2026-10-16T13:18:06.195Z",
+  "bytes": 4826,
+  "sha256": "4f6db63102f34912d4c50dc39d9f936635054dc805ddfbcf086414d5fe268cb8",
+  "membership": "jira-hierarchy/r1/content.json results0 MOS624 members MOS960/961/962",
+  "collection": "parent verified Jira-origin GET, exact three-key allowlist, selected fields/comments",
+  "comments": [
+    {
+      "key": "MOS-960",
+      "count": 0,
+      "total": 0
+    },
+    {
+      "key": "MOS-961",
+      "count": 0,
+      "total": 0
+    },
+    {
+      "key": "MOS-962",
+      "count": 0,
+      "total": 0
+    }
+  ],
+  "limitations": [
+    "custom fields not collected",
+    "attachment bodies not collected",
+    "comments pagination as reported"
+  ],
+  "redactions": []
+}

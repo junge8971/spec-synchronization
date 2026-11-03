@@ -1,0 +1,44 @@
+{
+  "revision": 10,
+  "supplements": "coverage-partial-r9.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "chains": [
+    {
+      "issue": "API-registry-wiki",
+      "report": "reports/WIKI-API-REGISTRY.md",
+      "review": "reviews/R-WIKI-API-REGISTRY.md",
+      "disposition": "D-027",
+      "scope": "Twelve documentary candidates accepted; source disagreements and implementation uncertainty retained"
+    },
+    {
+      "issue": "dictionary-wiki",
+      "report": "reports/WIKI-DICTIONARY-DETAIL.md",
+      "review": "reviews/R-WIKI-DICTIONARY-DETAIL.md",
+      "correctionReview": "reviews/R-WIKI-DICTIONARY-CORRECTIONS.md",
+      "disposition": "D-027/D-028",
+      "scope": "Thirteen initially accepted candidates plus corrected WD12; original REVISE retained, 29/10 partition and26 chunks independently verified"
+    }
+  ],
+  "sourceAdditions": [
+    "sources/wiki-attachment-250805153/r1/metadata.json",
+    "sources/wiki-attachment-247751845/r1/metadata.json",
+    "sources/wiki-attachment-250800526/r1/metadata.json",
+    "sources/wiki-attachment-247747361/r1/metadata.json"
+  ],
+  "priorCoverageDisposition": {
+    "fourHtmlAttachmentBodies": "Downloaded via exact indexed version URLs and saved as inert text; selected static analysis pending. No rendering or execution.",
+    "fourteenDictionaryCheckIdentities": "Explicit identities now documented in wiki body and independently reviewed; old lack-of-enumeration claims remain historically scoped, no deployed seed/check proof."
+  },
+  "pendingAnalysis": [
+    "work-items/ATTACH-DICTIONARY-PROTOTYPES.md",
+    "work-items/ATTACH-API-PROTOTYPES.md"
+  ],
+  "limitations": [
+    "Source disagreements not resolved by chronology or prototype behavior",
+    "No product implementation, frontend ownership, runtime or API compatibility acceptance",
+    "Other root bodies, attachments and ambiguous-page relevance remain incomplete",
+    "No browser/E2E or other tests executed; source HTML fetched as text only",
+    "Prior formatting failure remains unresolved"
+  ]
+}

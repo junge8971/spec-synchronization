@@ -1,0 +1,740 @@
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 9ms on 96 files using 12 threads.
+Checking formatting...
+
+app/entities/surface/model/types/surface.types.ts (0ms)
+
+Format issues found in above 1 files. Run without `--check` to fix.
+Finished in 7ms on 100 files using 12 threads.
+Checking formatting...
+
+app/features/skill-bulk-rollout/types/skill-bulk-rollout.types.ts (2ms)
+
+Format issues found in above 1 files. Run without `--check` to fix.
+Finished in 6ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 9ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 8ms on 100 files using 12 threads.
+Checking formatting...
+
+app/optional/ab-testing/types/registry.types.ts (0ms)
+app/optional/ab-testing/ui/registry/registry-filters.tsx (1ms)
+
+Format issues found in above 2 files. Run without `--check` to fix.
+Finished in 13ms on 100 files using 12 threads.
+Checking formatting...
+
+app/optional/feedback/model/use-feedback-registry-query-draft.ts (0ms)
+
+Format issues found in above 1 files. Run without `--check` to fix.
+Finished in 9ms on 100 files using 12 threads.
+Checking formatting...
+
+app/optional/knowledge-base/types/registry.types.ts (2ms)
+app/optional/knowledge-base/ui/registry/registry-filters.tsx (0ms)
+
+Format issues found in above 2 files. Run without `--check` to fix.
+Finished in 7ms on 100 files using 12 threads.
+Checking formatting...
+
+app/optional/reference-dictionaries/types/dictionary-lifecycle.types.ts (0ms)
+
+Format issues found in above 1 files. Run without `--check` to fix.
+Finished in 14ms on 100 files using 12 threads.
+Checking formatting...
+
+app/optional/system-state/model/use-system-state-query-draft.ts (0ms)
+app/optional/system-state/types/export.types.ts (0ms)
+
+Format issues found in above 2 files. Run without `--check` to fix.
+Finished in 6ms on 100 files using 12 threads.
+Checking formatting...
+
+app/optional/system-state/types/system-state.types.ts (0ms)
+
+Format issues found in above 1 files. Run without `--check` to fix.
+Finished in 9ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 10ms on 99 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 4ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 11ms on 100 files using 12 threads.
+Checking formatting...
+
+docs/api/contracts/surface-error-provenance.md (0ms)
+
+Format issues found in above 1 files. Run without `--check` to fix.
+Finished in 25ms on 95 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 10ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 11ms on 99 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 4ms on 6 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 40ms on 2 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 37ms on 1 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 9ms on 73 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 10ms on 90 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 11ms on 94 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 7ms on 100 files using 12 threads.
+Checking formatting...
+
+openspec/changes/optimize-lint-and-tests/baseline.md (2ms)
+openspec/changes/optimize-lint-and-tests/evidence/depcruise-app-graph-exports.json (71ms)
+openspec/changes/optimize-lint-and-tests/evidence/depcruise-app-graph.json (68ms)
+openspec/changes/optimize-lint-and-tests/evidence/dependency-cruiser-rules.md (4ms)
+openspec/changes/optimize-lint-and-tests/evidence/oxlint-candidate.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/collection-checkpoint.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r1.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r12.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r2.json (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r23.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r24.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r25.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r26.json (0ms)
+
+Format issues found in above 13 files. Run without `--check` to fix.
+Finished in 76ms on 48 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r27.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r28.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r29.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r3.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r30.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r31.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r32.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r33.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r34.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r35.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r36.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r37.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r38.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r39.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r4.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r40.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r41.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r42.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r43.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r44.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r45.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r46.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r5.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r6.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/coverage-partial-r9.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/dependencies.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/inventory-acceptance.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/inventory.json (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/manifest.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/DRAFT-DIALOG-D090.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/DRAFT-SURFACE-D091.md (5ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/PLAN-DICTIONARIES/author.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/PLAN-DICTIONARIES/contracts-code.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/PLAN-DICTIONARIES/local-author.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/PLAN-DICTIONARIES/local-review.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/PLAN-DICTIONARIES/requirements.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/PLAN-DICTIONARIES/review.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-G2-FEEDBACK/acceptance.json (0ms)
+
+Format issues found in above 38 files. Run without `--check` to fix.
+Finished in 13ms on 67 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-G2-MOS-1249/acceptance.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-LIFECYCLE-EXPORT/labels-candidate.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-MOS-1258-POINTER/acceptance.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-MOS-1258-POINTER/pointer-candidate.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-MOS-1258-POINTER/pointer-review.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-MOS-959/review.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-OPTIONAL-DOMAIN-CORRECTIONS/review.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-OPTIONAL-DOMAIN-CORRECTIONS/write-ab-sample.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-OPTIONAL-DOMAIN-CORRECTIONS/write-domain-read.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-OPTIONAL-DOMAIN-CORRECTIONS/write-kb-limit.md (0ms)
+
+Format issues found in above 10 files. Run without `--check` to fix.
+Finished in 6ms on 50 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-REPORTS-PLANS/review.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-SKILL-FOUR-CORRECTIONS/review.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-SKILL-FOUR-CORRECTIONS/write-skill-notice.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-SKILL-TOKEN-HISTORY/review.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-FEEDBACK-READ-EXPORT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-G2-FEEDBACK-SAVED-FILTERS.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-G2-FEEDBACK-SURVEY-MUTATIONS.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-G2-MOS-1250-READS.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-G2-MOS-1250-READS.recovery.md (1ms)
+
+Format issues found in above 9 files. Run without `--check` to fix.
+Finished in 6ms on 42 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-MOS-1322-r2.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-MOS-1323-r2.md (4ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-MOS-1409.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-MOS-712.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-MOS-717-r2.md (6ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-MOS-754-r2.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-OPS-001.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-R2-STATUS-DELTA.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-R2-TOKEN-DELTA.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/API-SCHEMA-001.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/ATTACH-API-PROTOTYPES.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/ATTACH-DICTIONARY-PROTOTYPES.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-ACCESS-ROLES-ROOT-DOCS.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-ADMIN-TOOLS-ROOT-BRIEFS.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-AUDIT-SERVICE-CONTRACT.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-AUTH-SESSION-ROOT-DOC.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-DASHBOARD-BOARD-CONTRACT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-DIALOG-BUSINESS-PLAN.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-KNOWLEDGE-BASE-ROOT-DOC.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-MANAGED-RESOURCE-MEMBERS.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-MOS-1018-LINKED-CONTRACT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-MOS-1119.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-MOS-1145-TESTPLAN.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-SKILL-MONITORING-EXAMPLE.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-SURFACES-ROOT-BRIEF.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-SYSTEM-STATE-ROOT-DOCS.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-TEAMS-API-CONTRACT.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-TEAMS-ROOT-DOC.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-TEMPLATES-STUBS-ROOT-DOCS.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/DELTA-USER-SESSION-CONTRACTS.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/FINAL-COVERAGE.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/FINAL-DEPENDENCIES.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/FINAL-PROCESS-PUBLICATION.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G1-API-COLLECTION-DELTA.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G1-API-COLLECTION.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G1-DISPOSITION-RECEIPT.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G1-INVENTORY-SOURCE-CROSSWALK.md (9ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G1-JIRA-CONTRACT-COLLECTION-DELTA.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G1-JIRA-DETAIL-DOCUMENT-EDGES.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G1-JIRA-SPECIAL-DOCUMENT-EDGES.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G1-REMAINING-OBLIGATIONS.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G1-ROOT-REGISTRY-DELTA.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G1-ROOT-REGISTRY-FINAL-INCREMENT.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G1-SAVED-BODY-DISCOVERY-BOUNDARY.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G1-WIKI-ROOT-REGISTRY.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G2-JIRA-MEMBER-JOINS.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G2-MAIN-CAPABILITY-JOINS.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G2-MAIN-CAPABILITY-JOINS.recovery.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G2-SCENARIO-LANE-GAPS.e6f2057a.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/G2-SCENARIO-LANE-GAPS.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-AB-EXPORT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-AB-REGISTRY.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-FEEDBACK-EDITOR-LIFECYCLE.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-FEEDBACK-READ-EXPORT.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-G2-FEEDBACK-SAVED-FILTER-MOCK.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-G2-FEEDBACK-SURVEY-MOCK.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-G2-FEEDBACK-UI-ENTRY.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-G2-MOS-916.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-KB-EDITOR.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-KB-EXPORT.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-KB-REGISTRY.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-1027.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-1145.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-1146.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-1250.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-1322-r2.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-1323-r2.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-1397.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-1398.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-1409.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-904.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-905.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-909.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-920.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-922.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-923.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-960.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-961.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-MOS-962.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-REPORT-CONSTRUCTOR.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-REPORT-CSV.md (2ms)
+
+Format issues found in above 81 files. Run without `--check` to fix.
+Finished in 20ms on 89 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-REPORT-CSV.original.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-REPORT-SCHEDULING.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-SKILL-AUDIT-HISTORY.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-SKILL-DOMAINS.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-SKILL-ENVIRONMENT-TOKENS.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-SKILL-MONITORING.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-SKILL-OPERATIONS-INFO.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-SKILL-PHRASE-CONFLICTS.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/IMPL-SKILL-RESULT-ANALYTICS.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-1246.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-1327.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-1328.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-1329.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-1388.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-1403.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-624.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-651.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-652.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-768.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-769.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-770.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-771.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-772.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-773.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-774.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-775.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-776.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-777.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-778.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-780.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-781.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-782.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-783.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-784.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JIRA-MOS-788.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1053.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1054.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1110.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1150.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1164.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1165.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1166.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1167.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1322.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1323.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1411.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1412.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1414.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1419.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-1422.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-672.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-673.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-674.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-707.md (4ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-708.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-709.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-901.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-910.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-911.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-913.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-914.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-MOS-958.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-SKILL-CHECKS.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-SKILL-CHECKS.original.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-SKILL-CONTRACTS.md (4ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-SKILL-IMPLEMENTATION.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-SKILL-PHRASES.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-SKILL-REVIEW.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-SKILL-REVIEW.original.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-SKILL-ROLLOUT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOIN-SKILL-ROLLOUT.original.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOURNAL-REMAINING-ROWS.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/JOURNAL-SURFACE-MVP.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/LOCAL-001.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/LOCAL-002.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REL-D031-DATA-DRAFTS.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REL-D031-PLANNING-API.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REL-MOS624-SHELL-REFERENCES.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REL-REMAINING-USER-SESSION-CONTRACTS.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-G2-MOS-1251.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-G2-MOS-1254.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-G2-MOS-1255.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-G2-MOS-1256.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-G2-MOS-1257.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-G2-MOS-1258.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-G2-MOS-1259.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-G2-MOS-1260.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-MOS-1018.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-MOS-1023.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-MOS-1250.md (2ms)
+
+Format issues found in above 90 files. Run without `--check` to fix.
+Finished in 19ms on 95 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-MOS-1322-r2.md (4ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-MOS-1323-r2.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-MOS-1409.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-MOS-904.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-MOS-905.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/REQ-MOS-959.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-DOMAIN-ZONES.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-1015.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-1016.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-1145.md (5ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-1146.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-1397.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-1398.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-916.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-919.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-920.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-922.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-923.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-960.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-961.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-MOS-962.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-SKILL-CHECKS.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-SURFACE-CONFIG-r2.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SCENARIO-SURFACE-CONFIG.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-G2-CODE-QUALITY.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-G2-DIALOG-CATEGORY.md (6ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-G2-DOCUMENTATION-SEARCH.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-G2-MOS-1249.md (4ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-G2-MOS-1251.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-G2-MOS-1254.md (7ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-G2-MOS-1255.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-G2-MOS-1256.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-G2-MOS-1257.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-G2-MOS-1258.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-G2-MOS-1259.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-G2-MOS-1260.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-MOS-1250.md (5ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-MOS-1322-r2.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-MOS-1323-r2.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/SPEC-MOS-1409.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/WAVE-D090-runtime-checkpoint.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/WIKI-API-REGISTRY.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/WIKI-DICTIONARY-DETAIL.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/WRITE-G2-MOS-1249.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/WRITE-G2-MOS-1254.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/WRITE-G2-MOS-1255.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/WRITE-G2-MOS-1257.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/WRITE-G2-MOS-1259.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/WRITE-MOS-1018.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reports/WRITE-MOS-909-RESTORE.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-API-001.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-API-G2-FEEDBACK-SAVED-FILTERS.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-API-G2-FEEDBACK-SURVEY-MUTATIONS.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-API-G2-MOS-1250-READS.md (4ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-API-R2-STATUS-DELTA.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-API-R2-TOKEN-DELTA.md (5ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-ATTACH-API-PROTOTYPES.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-ATTACH-DICTIONARY-PROTOTYPES.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-D090-EIGHT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-D091-RECOVERY.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-D092-DRAFTS.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-D092-OPTIONAL.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-D093-EIGHT.md (9ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-D094-EIGHT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-D095-TEN.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-AB-TESTING-ROOT-DOC.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-ACCESS-ROLES-ROOT-DOCS.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-ADMIN-TOOLS-ROOT-BRIEFS.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-AUDIT-SERVICE-CONTRACT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-AUTH-SESSION-ROOT-DOC.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-DASHBOARD-BOARD-CONTRACT.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-DASHBOARD-METRICS-CONTRACT.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-DIALOG-SUPPLEMENTS.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-KNOWLEDGE-BASE-ROOT-DOC.md (6ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-MANAGED-RESOURCE-MEMBERS.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-MOS-1018-LINKED-CONTRACT.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-MOS-1119-TESTPLAN.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-MOS-1119.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-MOS-1145-TESTPLAN.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-REPORTS-ROOT-DOCS.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-SKILL-EXAMPLES.md (4ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-SURFACES-ROOT-BRIEF.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-SYSTEM-STATE-ROOT-DOCS.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-TEAMS-API-CONTRACT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-TEAMS-ROOT-DOC.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-TEMPLATES-STUBS-ROOT-DOCS.md (0ms)
+
+Format issues found in above 86 files. Run without `--check` to fix.
+Finished in 22ms on 90 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DELTA-USER-SESSION-CONTRACTS.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-DOMAIN-ZONES.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-FEEDBACK-INDEX-REPAIR.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-FEEDBACK-REMAINING-EVIDENCE.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G1-API-COLLECTION-DELTA.md (4ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G1-DISPOSITION-RECEIPT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G1-INVENTORY-SOURCE-CROSSWALK.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G1-JIRA-CONTRACT-COLLECTION-DELTA.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G1-JIRA-DETAIL-DOCUMENT-EDGES.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G1-JIRA-SPECIAL-DOCUMENT-EDGES.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G1-REMAINING-OBLIGATIONS.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G1-ROOT-REGISTRY-DELTA.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G1-ROOT-REGISTRY-FINAL-INCREMENT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G1-SAVED-BODY-DISCOVERY-BOUNDARY.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G2-EDITOR-CONDITIONS-SPEC.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G2-FEEDBACK-EDITOR-CONDITIONS.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G2-FEEDBACK-REQUIREMENTS-RESUME-blocked.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G2-FEEDBACK-REQUIREMENTS-RESUME.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G2-JIRA-MEMBER-JOINS.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G2-LIFECYCLE-EXPORT-SPEC.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G2-MAIN-CAPABILITY-JOINS.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-G2-THREE-OWNERSHIP-JOINS.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-IMPL-G2-FEEDBACK-SAVED-FILTER-MOCK.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-IMPL-MOS-904.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-IMPL-MOS-905.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-IMPL-MOS-909.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-JOURNAL-REMAINING-ROWS.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-JOURNAL-SUPPLEMENTS.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-MOS-1409.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-OPTIONAL-DOMAINS-SEVEN.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-REL-D031-MPMM-ASSESSMENT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-REL-D031-PLANNING-DATA.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-REL-MOS624-SHELL-REFERENCES.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-REL-REMAINING-USER-SESSION-CONTRACTS.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-REPORTS-IMPLEMENTATION-BATCH.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-REQ-G2-MOS-1254.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-REQ-G2-MOS-1255.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-REQ-G2-MOS-1257.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-REQ-G2-MOS-1259.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-1015.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-1016.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-1145.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-1146.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-1397.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-1398.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-909.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-916.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-919.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-920.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-922.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-923.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-960.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-961.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SCENARIO-MOS-962.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SKILL-IMPLEMENTATION-BATCH.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SKILL-OBSERVABILITY-BATCH.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SKILL-REMAINING-SEVEN.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SPEC-G2-MOS-1249.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SPEC-G2-MOS-1254.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SPEC-G2-MOS-1255.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SPEC-G2-MOS-1257.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SPEC-G2-MOS-1259.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-SURFACE-CONFIG.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-WIKI-API-REGISTRY.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-WIKI-DICTIONARY-CORRECTIONS.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-WIKI-DICTIONARY-DETAIL.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-WRITE-G2-MOS-1249.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-WRITE-G2-MOS-1254.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-WRITE-G2-MOS-1257.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-WRITE-G2-MOS-1259.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-WRITE-LIFECYCLE-EXPORT-MINIMAL.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-WRITE-MOS-1018.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/R-WRITE-MOS-909-RESTORE.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/RECON-MOS-1018.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/RECON-MOS-1023.md (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/RECON-MOS-904.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/RECON-MOS-905.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/RECON-MOS-959-CONTRACT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/reviews/RECON-MOS-959.md (4ms)
+openspec/changes/reconcile-control-center-backlog/audit/root-ledger-review-parent-projection.json (0ms)
+
+Format issues found in above 80 files. Run without `--check` to fix.
+Finished in 17ms on 88 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/operations.json (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-01.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-03.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-04.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-05.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-06.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-08.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-09.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-11.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-12.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-13.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-14.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-15.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-17.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-18.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-19.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-20.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-21.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-22.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-23.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-24.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-25.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-26.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-27.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-28.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-30.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-31.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-32.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-dashboard-review-projection/r2/schema-34.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-docs/r1/content.html (224ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-docs/r1/metadata.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-live-status-readable/r1/content.json (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-live/r1/content.json (21ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-live/r2/content.json (21ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/operations.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-01.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-02.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-03.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-04.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-06.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-07.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-08.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-09.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-10.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-12.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-13.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-14.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-15.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-16.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-17.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-19.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-20.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-21.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-22.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-23.json (0ms)
+
+Format issues found in above 55 files. Run without `--check` to fix.
+Finished in 227ms on 72 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-24.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-25.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-26.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-27.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-28.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-teams-review-projection/r2/schema-29.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-token-status-readable/r1/content.json (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/api-token-status-readable/r2/content.json (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-MOS-1321/r1/metadata.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-MOS-1386/r1/metadata.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-MOS-1399/r1/metadata.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-attachment-833803/r1/content.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-attachment-835759/r1/content.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-details-MOS-774/r1/content.json (4ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-hierarchy/r1/content.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-lifecycle-details/r2/content.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-member-index/r1/metadata.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-monitoring-details/r1/metadata.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-operations-details/r1/content.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-optional-backend-details/r1/metadata.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-reports-details/r1/content.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-sandbox-details/r1/content.json (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-shell-details/r1/content.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-skill-switch-details/r1/metadata.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-subtasks/r1/metadata.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-surface-details-d095/r1/content.json (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/jira-surface-details-d095/r1/metadata.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/local-dictionaries-prototype/r1/content.html (1015ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-238324523/r2/metadata.json (0ms)
+
+Format issues found in above 29 files. Run without `--check` to fix.
+Finished in 1017ms on 73 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241077434/r1/content.json (1ms)
+
+Format issues found in above 1 files. Run without `--check` to fix.
+Finished in 12ms on 43 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241080062/r1/content.json (15ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241080659/r1/content.json (4ms)
+
+Format issues found in above 2 files. Run without `--check` to fix.
+Finished in 30ms on 43 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241082009/r2/attachments.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241082009/r2/content.json (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241085439/r1/content.json (7ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241085838/r1/content.json (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241088180/r1/content.json (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241092242/r1/content.json (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241095761/r1/content.json (3ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241097511/r2/attachments.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241097511/r2/content.json (5ms)
+
+Format issues found in above 9 files. Run without `--check` to fix.
+Finished in 14ms on 57 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-243776365/r1/content.json (5ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-245673187/r1/content.json (11ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-247734813-attachment-index/r1/content.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-247734813-attachment-index/r1/metadata.json (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-247751846/r2/content.json (5ms)
+
+Format issues found in above 5 files. Run without `--check` to fix.
+Finished in 16ms on 64 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/work-items/G2-SKILL-REMAINING-SEVEN.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/JIRA-INVENTORY-HANDOFF.md (0ms)
+
+Format issues found in above 2 files. Run without `--check` to fix.
+Finished in 10ms on 86 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/work-items/R-MONITORING-WAVE.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/R-REPORTS-WAVE.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/R-SCENARIO-MOS-920.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/R-SCENARIO-MOS-922.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/R-SCENARIO-MOS-923.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/R-SCENARIO-MOS-960.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/R-SCENARIO-MOS-961.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/R-SCENARIO-MOS-962.md (0ms)
+
+Format issues found in above 8 files. Run without `--check` to fix.
+Finished in 5ms on 84 files using 12 threads.
+Checking formatting...
+
+openspec/changes/reconcile-control-center-backlog/audit/work-items/SCENARIO-MONITORING-WAVE.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/SCENARIO-MOS-1015.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/SCENARIO-MOS-1016.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/SCENARIO-MOS-916.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/SCENARIO-MOS-919.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/SCENARIO-MOS-960.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/SCENARIO-MOS-961.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/SCENARIO-MOS-962.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/WAVE-D090-EIGHT.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/WAVE-D090-REVIEW-NEXT.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/WAVE-D092-OPTIONAL-BODIES.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/WAVE-D093-LOCAL-EIGHT.md (1ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/WAVE-D094-LOCAL-EIGHT.md (2ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/WAVE-D095-SURFACE-TEN.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/WRITE-MOS-1018.md (0ms)
+openspec/changes/reconcile-control-center-backlog/audit/work-items/WRITE-SKILL-FOUR-CORRECTIONS.md (0ms)
+
+Format issues found in above 16 files. Run without `--check` to fix.
+Finished in 10ms on 99 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 10ms on 47 files using 12 threads.

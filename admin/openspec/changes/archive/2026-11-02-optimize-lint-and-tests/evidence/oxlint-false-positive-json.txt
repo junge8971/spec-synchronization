@@ -1,0 +1,8 @@
+{ "diagnostics": [{"message": "No default export found in imported module \"pdfjs-dist/build/pdf.worker.min.mjs?url\"","code": "import(default)","severity": "error","url": "https://oxc.rs/docs/guide/usage/linter/rules/import/default.html","help": "Does \"pdfjs-dist/build/pdf.worker.min.mjs?url\" have the default export?","filename": "app/pages/dialog-details/model/load-pdf-preview.ts","labels": [{"span": {"offset": 70,"length": 9,"line": 2,"column": 8}}]},
+{"message": "Missing \"key\" prop for element in array.","code": "react(jsx-key)","severity": "error","url": "https://oxc.rs/docs/guide/usage/linter/rules/react/jsx-key.html","filename": "app/pages/dialog-details/ui/dialog-details/general-information.tsx","labels": [{"span": {"offset": 2544,"length": 1,"line": 77,"column": 10}}]}],
+              "number_of_files": 2,
+              "number_of_rules": 156,
+              "threads_count": 12,
+              "start_time": 0.236970811
+            }
+            

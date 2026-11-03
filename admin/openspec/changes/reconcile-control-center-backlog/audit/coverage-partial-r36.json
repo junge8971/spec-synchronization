@@ -1,0 +1,15 @@
+{
+  "revision": 36,
+  "supplements": "coverage-partial-r35.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "authority": "D-052 explicit user approval to read two unnamed MOS624 references for identity/relevance only",
+  "sourceAdditions": ["sources/wiki-223087110/r1", "sources/wiki-223087110-readable/r1", "sources/wiki-222659162/r1", "sources/wiki-222659162-readable/r1"],
+  "captures": [
+    {"id": "223087110", "title": "Архитектура", "version": 2, "retrievedAt": "2026-10-19T14:24:36.132Z", "status": 200, "indexSize": 0, "next": null, "readableLines": 1, "chunks": 1, "sha256": "b4d023b929f66044de086e2a4a8570d5ed01a60de3743e2e1f8e6fb801be1249"},
+    {"id": "222659162", "title": "[Done] Задачи для старта проекта", "version": 2, "retrievedAt": "2026-10-19T14:24:36.290Z", "status": 200, "indexSize": 0, "next": null, "readableLines": 80, "chunks": 3, "sha256": "adeba9e8d4a2cd829ffb1314e1fb13bd83f1f309da96661473c17668d57872dd"}
+  ],
+  "pendingRelevance": "work-items/REL-MOS624-SHELL-REFERENCES.md",
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "limits": ["Off-root source packets; no root-member addition", "Selected envelope/full bodyView, parent-generated derivatives; no raw HTTP or semantic acceptance", "No child223099233/wiki8576700/KR5/external links visited, source scripts executed or attachments downloaded", "Original two-page permission holds resolved, child links not authorized", "Named user/session contract dispositions and global gates/formatting issue remain"]
+}

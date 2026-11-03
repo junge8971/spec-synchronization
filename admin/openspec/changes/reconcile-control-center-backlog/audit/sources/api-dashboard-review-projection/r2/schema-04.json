@@ -1,0 +1,20 @@
+{
+  "pointer": "#/components/schemas/DeltaResponse",
+  "value": {
+    "properties": {
+      "value": {
+        "type": "number",
+        "title": "Value"
+      },
+      "unit": {
+        "$ref": "#/components/schemas/DeltaUnit"
+      }
+    },
+    "type": "object",
+    "required": [
+      "value",
+      "unit"
+    ],
+    "title": "DeltaResponse"
+  }
+}

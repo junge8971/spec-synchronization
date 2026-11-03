@@ -90,7 +90,7 @@
 
 ### Requirement: Documentation dropdown reuses article navigation
 
-Кнопка «Документация» внизу sidebar SHALL открывать выпадающее меню первых шести существующих статей в порядке каталога и пункта «Все разделы». Ссылки SHALL использовать `/docs?article=<id>` и `/docs` с сохранением deployment basename. Старый `/documentation` SHALL перенаправлять на `/docs` с сохранением query, включая `article`. Выбор статьи SHALL закрывать меню и мобильный sidebar. Неизвестный article SHALL сохранять существующий fallback на первую статью.
+Кнопка «Документация» внизу sidebar SHALL открывать выпадающее меню первых шести существующих статей в порядке каталога и пункта «Все разделы». Ссылки SHALL использовать `/docs?article=<id>` и `/docs` с сохранением deployment basename. Старый `/documentation` SHALL перенаправлять на `/docs` с сохранением query, включая `article` и `q`. Выбор статьи SHALL закрывать меню и мобильный sidebar. Неизвестный article без фильтра SHALL сохранять существующий fallback на первую статью полного каталога. При поиске выбор и fallback SHALL определяться documentation-search: первая статья выдачи при недопустимом выборе, отсутствие статьи при пустой выдаче.
 
 #### Scenario: Open article from sidebar
 
@@ -99,13 +99,23 @@
 
 #### Scenario: All articles and invalid identifier
 
-- **WHEN** пользователь выбирает «Все разделы» или открывает документацию с неизвестным article
+- **WHEN** пользователь выбирает «Все разделы» или открывает документацию с неизвестным article без поискового фильтра
 - **THEN** каталог остаётся работоспособным и показывается первая статья без ошибки страницы
 
 #### Scenario: Legacy article URL
 
 - **WHEN** пользователь открывает `/tsam-panel/documentation?article=surface-register&query=test`
 - **THEN** открывается `/tsam-panel/docs?article=surface-register&query=test` с выбранной статьёй и без промежуточной записи старого адреса в истории
+
+#### Scenario: Legacy search URL
+
+- **WHEN** пользователь открывает `/tsam-panel/documentation?q=неоднозначности&article=skill-register`
+- **THEN** открывается `/tsam-panel/docs` с теми же `q` и `article`, поиск восстановлен, промежуточной записи старого адреса в истории нет
+
+#### Scenario: Search without results
+
+- **WHEN** пользователь открывает документацию с запросом без совпадений и любым article
+- **THEN** показано «Ничего не нашлось», статья скрыта, `article` удалён по documentation-search
 
 ### Requirement: Local introductory help
 
@@ -303,3 +313,24 @@
 
 - **WHEN** выбран none либо `/me` временно недоступен
 - **THEN** пользователь может выбрать viewer/editor/full или повторить загрузку без очистки storage через DevTools и без разблокирования старого бизнес-UI
+
+### Requirement: System-state management extends existing operations entry points
+
+Существующий `/ops` SHALL подключать управление рубильниками внутри вкладки `modules`, сохраняя маршруты, вкладки, `tab`, permissions, legacy redirects и заглушки для незавершённых частей. Внутренний выбор `module|function` SHALL не переопределять внешний `tab`. Карточка `/ops/toggles/:toggleId` SHALL иметь ссылку на реестр, отдельную загрузку и подсветку пункта «Состояние системы». URL, переходы назад/вперёд и остальные query-параметры SHALL работать под существующим basename.
+
+Для нового непокрытого managed-resource UI SHALL сохраняться действующий fallback явного `*`; он MUST NOT назначать роль администратора или заменять проверку backend. Пользователь только с `TSAM.Module:view` SHALL сохранять доступ к прежней вкладке и заглушке без загрузки нового реестра. При прямом переходе на запрещённую карточку SHALL показываться отказ без бизнес-запроса. Показ раздела SHALL сохранять адаптивность, клавиатурное управление и соответствие существующему дизайн-коду проекта без pixel-perfect требования.
+
+#### Scenario: Existing operations links remain valid
+
+- **WHEN** пользователь открывает `/ops?tab=stubs`, `/ops?tab=maintenance` или прежний compatible URL
+- **THEN** выбирается та же разрешённая вкладка или показывается прежний отказ, остальные query сохранены, новая внутренняя вкладка не подменяет `tab`
+
+#### Scenario: Module-view principal without wildcard
+
+- **WHEN** подтверждённый principal имеет `TSAM.Module:view`, но не имеет `*`
+- **THEN** существующая вкладка «Модули и навыки» остаётся доступной с прежней заглушкой, а бизнес-запросы и действия управления рубильниками не запускаются
+
+#### Scenario: Direct allowed detail
+
+- **WHEN** пользователь с доступом открывает `/ops/toggles/<id>` и затем возвращается к реестру
+- **THEN** карточка отдельно загружается, крошки и подсветка ведут к «Состоянию системы», ранее применённый отбор восстанавливается штатной навигацией

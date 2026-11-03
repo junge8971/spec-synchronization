@@ -1,0 +1,348 @@
+--- /dev/null
++++ openspec/changes/fix-knowledge-base-export-limit-feedback/.openspec.yaml
+@@ -0,0 +1,2 @@
++schema: spec-driven
++created: 2026-10-20
+--- /dev/null
++++ openspec/changes/fix-knowledge-base-export-limit-feedback/design.md
+@@ -0,0 +1,25 @@
++## Context
++
++See proposal.md for motivation. Read-only inspection confirms that `ui/knowledge-base-export.tsx` renders `mutation.error.message` in an alert, while `mocks/knowledge-base/handlers.mjs` supplies `EXPORT_LIMIT_EXCEEDED` to `sendManagedCsv`, which emits HTTP 422 with `Mock export exceeds 10000 rows`. The component test currently injects narrowing advice into generic 413/500 envelopes. Shared `ApiError` in `app/shared/api/http-client.ts` already exposes status and code. This design resolves error-classification and test-boundary choices before implementation.
++
++## Goals / Non-Goals
++
++**Goals:** Keep the correction inside KB error presentation and verify it through the mounted export component using the existing fetch/transport seam. Preserve the alert's accessibility and form state.
++
++**Non-Goals:** No new transport, server limit, endpoint, DTO, dependency, auth/session/permission behavior, optional cross-import, broad export refactor or archive rewrite. Saved-detail, pending, session-owner and file-resource behavior remain intact.
++
++## Decisions
++
++- Recognize the existing structured HTTP 422 `EXPORT_LIMIT_EXCEEDED` error using shared `ApiError` information at the KB presentation boundary. Retain the server error text and add explicit local advice such as «Сузьте отбор и повторите экспорт». Do not match English message substrings or infer a limit from 422 alone: both alternatives are brittle or misclassify validation failures.
++- Keep generic failures on the existing alert path. Do not reset/remount the field form or change mutation/download flow to add advice. A KB-local helper is acceptable if needed for readability; importing A/B export behavior or moving domain-specific copy into shared transport is unnecessary coupling.
++- Add focused component coverage using HTTP 422 with `{ code: 'EXPORT_LIMIT_EXCEEDED', data: null, message: 'Mock export exceeds 10000 rows', errors: [] }`. Exercise non-default selected fields/order, assert server limit plus local advice, no object URL/download/success, no automatic replay and selection retention for retry. A separate 422 with a different validation code and no advice must retain its own message without added limit advice. Keep existing generic-error and successful-export regressions; do not change the mock to supply the missing advice.
++
++## Risks / Trade-offs
++
++- [Mock envelope is not live-backend proof] → Keep claims bounded to the saved connected contract and component regression; no deployment or browser-delivery acceptance follows.
++- [Server text may already contain advice] → Local advice remains reliable without language-dependent parsing; repeated server wording is preferable to omitting required guidance.
++- [Error formatting accidentally resets state or broadens classification] → Assert non-default field selection/order on retry and an unrelated 422 negative case through the component boundary.
++
++## Migration Plan
++
++No data migration or backend rollout is required. After separate implementation authorization, ship the local presentation correction and focused regression together; rollback is limited to those code/test edits. Preserve the original archive and all unrelated requirements. This planning run performs no implementation, tests, builds or browser checks.
+--- /dev/null
++++ openspec/changes/fix-knowledge-base-export-limit-feedback/proposal.md
+@@ -0,0 +1,24 @@
++## Why
++
++The existing Knowledge Base export limit scenario requires advice to narrow selection, but the connected HTTP 422 `EXPORT_LIMIT_EXCEEDED` message contains no advice and the UI renders it verbatim. The accepted bounded export audit and review identify a focused correction; existing tests inject advice themselves under different statuses.
++
++## What Changes
++
++- Make the existing limit scenario explicit for HTTP 422 `EXPORT_LIMIT_EXCEEDED` without server-supplied advice.
++- Show narrowing advice while preserving selected fields, with no download or false success.
++- Cover the real envelope at the export component boundary and distinguish unrelated 422 validation failures.
++- Preserve the current row limit, API, transport, optional-module boundaries and historical archive task states.
++
++## Capabilities
++
++### New Capabilities
++
++None.
++
++### Modified Capabilities
++
++- `knowledge-base-export`: Clarify limit-error feedback in the existing full-selection CSV export requirement, including a non-limit 422 negative case.
++
++## Impact
++
++Focused changes are expected in `app/optional/knowledge-base/ui/knowledge-base-export.tsx` and `app/optional/knowledge-base/ui/export/knowledge-base-export.test.tsx`, with a KB-local presentation helper only if needed. Existing shared error types and file transport remain unchanged; no optional cross-imports, API changes, dependencies, authentication or permission work. The original `2026-10-14-add-optional-knowledge-base` archive remains historical; this active correction does not reopen its tasks 9.1–9.3. Planning evidence: `IMPL-KB-EXPORT.md` and the KB-limit-advice section of `R-OPTIONAL-DOMAINS-SEVEN.md` under the reconciliation audit.
+--- /dev/null
++++ openspec/changes/fix-knowledge-base-export-limit-feedback/specs/knowledge-base-export/spec.md
+@@ -0,0 +1,27 @@
++## MODIFIED Requirements
++
++### Requirement: Full selection CSV export
++
++Экспорт списка SHALL передавать выбранные metadata export_fields в выбранном порядке и полный применённый search. Он SHALL выгружать весь отбор независимо от limit/offset страницы в пределах серверного export_max_rows, не более документированного лимита 10000 при текущем контракте. Пустой выбор SHALL блокировать отправку. UI MUST NOT экспортировать только загруженные строки или молча усекать результат.
++
++При HTTP 422 с кодом EXPORT_LIMIT_EXCEEDED UI SHALL показывать ограничение и предложение сузить отбор даже без такого предложения в сообщении сервера, сохранять выбранные поля и их порядок и не создавать файл или сообщение об успешной выгрузке. UI MUST NOT считать любую другую ошибку HTTP 422 превышением лимита только на основании статуса.
++
++#### Scenario: Export from a later page
++
++- **WHEN** пользователь находится на второй странице и выгружает name/category_code/skill_names
++- **THEN** запрос включает применённый отбор и выбранные поля, CSV включает весь серверный отбор, не только вторую страницу
++
++#### Scenario: Server limit exceeded
++
++- **WHEN** сервер отклоняет экспорт из-за превышения лимита
++- **THEN** показано ограничение и предложение сузить отбор, частичный файл не объявляется полным
++
++#### Scenario: Limit envelope without supplied advice
++
++- **WHEN** экспорт списка возвращает HTTP 422 с кодом EXPORT_LIMIT_EXCEEDED и сообщением «Mock export exceeds 10000 rows» без предложения сузить отбор
++- **THEN** UI показывает ограничение и предложение сузить отбор, сохраняет выбранные поля и их порядок, не скачивает файл и не показывает успешную выгрузку
++
++#### Scenario: Unrelated validation failure
++
++- **WHEN** экспорт списка возвращает HTTP 422 с кодом ошибки валидации, отличным от EXPORT_LIMIT_EXCEEDED
++- **THEN** UI показывает эту ошибку без добавления сообщения о превышении лимита или предложения сузить отбор на основании статуса, сохраняет выбранные поля и не скачивает файл и не показывает успешную выгрузку
+--- /dev/null
++++ openspec/changes/fix-knowledge-base-export-limit-feedback/tasks.md
+@@ -0,0 +1,10 @@
++## 1. Limit feedback correction
++
++- [ ] 1.1 Update KB export error presentation to append narrowing advice for the structured HTTP 422 `EXPORT_LIMIT_EXCEEDED` error while preserving the server message and accessible alert; verify the limit-envelope component regression shows advice without receiving it from the server and unrelated errors keep their existing presentation.
++- [ ] 1.2 Preserve form selection/order, mutation and download behavior without new transport or optional cross-imports; verify the scoped diff leaves server limit, API, session ownership, saved-detail behavior and historical archive tasks unchanged.
++
++## 2. Focused component regression
++
++- [ ] 2.1 Add a regression in `app/optional/knowledge-base/ui/export/knowledge-base-export.test.tsx` using the actual HTTP 422 `EXPORT_LIMIT_EXCEEDED` envelope with `Mock export exceeds 10000 rows`; verify limit plus narrowing advice, non-default selected fields/order retained through an explicit retry, no object URL/download/false success on failure and no automatic replay.
++- [ ] 2.2 Add a negative case with HTTP 422 and a different validation code, without supplied narrowing advice; verify its own error remains visible, no limit advice is added, selected fields remain and no download or false success occurs.
++- [ ] 2.3 After implementation authorization, run the focused KB export component suite and scoped formatting checks; verify existing successful/full-selection, generic-error, saved-detail and file-lifecycle regressions remain green, without E2E/browser checks or claims of live API/deployment acceptance.
+--- /dev/null
++++ openspec/changes/clarify-ab-testing-sample-size/.openspec.yaml
+@@ -0,0 +1,2 @@
++schema: spec-driven
++created: 2026-10-20
+--- /dev/null
++++ openspec/changes/clarify-ab-testing-sample-size/design.md
+@@ -0,0 +1,29 @@
++## Context
++
++See proposal.md — Why. Read-only source inspection confirms `editor-main.tsx` renders the generic sample label beside `executionBoundary`. `editor-text-field.tsx` already binds labels with `htmlFor` and hints with `aria-describedby`, and converts an empty numeric input to null. Existing `editor.test.tsx` cases cover the empty new default and clearing 42 to null using the old label. The accepted report/review establishes the per-group clarification, not a numerical defect.
++
++This short design resolves the label-versus-hint choice before implementation and keeps regression work bounded.
++
++## Goals / Non-Goals
++
++**Goals:** Make the meaning discoverable in the field's accessible name while preserving current scalar handling and nearby execution disclaimer.
++
++**Non-Goals:** No data migration, model/DTO or transport change, statistics calculation, per-group array, traffic enforcement, auth changes or editor redesign. Existing validation and error/draft behavior remain authoritative.
++
++## Decisions
++
++- Prefer the label “Минимальный размер выборки в каждой группе” on the existing field. A linked hint would satisfy the specification, but the direct label makes the qualifier available immediately and needs no new association mechanism. Avoid unassociated explanatory text.
++- Keep `min_sample_size`, numeric conversion, defaults and validators untouched. A per-group label describes the existing scalar, not separate group values or an aggregate total. Do not multiply by group count.
++- Extend focused component coverage in `ui/editor/editor.test.tsx`: locate the field by its clarified accessible name in new/detail views, preserve null/default and null-clearing assertions, check unchanged scalar payloads at both inclusive bounds, and rejection/no mutation for 0, negative, fractional and over-max input. Reuse existing form-model boundary coverage where appropriate rather than expanding unrelated editor tests.
++- Assert the existing `executionBoundary` remains visible beside these controls. No new execution behavior or alternative disclaimer is introduced.
++
++## Risks / Trade-offs
++
++- Longer label may wrap → use the existing responsive field layout, without redesigning surrounding cards.
++- Existing label-based tests will need updates → change only relevant queries and add semantic assertions rather than weakening selectors.
++- Wording could be mistaken for runtime enforcement → retain the current disclaimer and avoid statistical or traffic promises.
++- Component mocks cannot establish deployed API behavior → claim only bounded regression coverage, not integration acceptance.
++
++## Migration Plan
++
++No persisted-data or API migration. After separate implementation authorization, ship the local wording and focused tests together; rollback only those edits if necessary. Leave archived tasks and main specs untouched during planning. No browser/E2E activity is authorized.
+--- /dev/null
++++ openspec/changes/clarify-ab-testing-sample-size/proposal.md
+@@ -0,0 +1,23 @@
++## Why
++
++The accepted ABROOT-05 clarification and optional-domain review identify a wording gap: the editor says “Минимальная выборка” without explaining that the minimum is per group. Make that meaning accessible without changing numeric behavior or implying experiment execution.
++
++## What Changes
++
++- Clarify the existing sample-size field through an accessible label or associated hint stating “в каждой группе”.
++- Add focused label, null/default and numeric-boundary regression coverage; retain the execution disclaimer.
++- Preserve the nullable integer 1–2147483647 scalar, defaults and API payloads. No statistics, calculator, traffic enforcement or broad editor rewrite.
++
++## Capabilities
++
++### New Capabilities
++
++None.
++
++### Modified Capabilities
++
++- `ab-testing-editor`: clarify the per-group meaning in “Complete editor and initial values”, preserving the complete existing requirement and scenario.
++
++## Impact
++
++Bounded to `app/optional/ab-testing/ui/editor/editor-main.tsx` and focused editor/model regression tests. Existing `EditorTextField` label/help association supports the clarification; no shared component, DTO, API, mock contract, dependency or module requirement change is needed. Archive task 5.1 remains historical. Security, validation, draft/error handling and existing access boundaries remain unchanged; browser/E2E work is not authorized.
+--- /dev/null
++++ openspec/changes/clarify-ab-testing-sample-size/specs/ab-testing-editor/spec.md
+@@ -0,0 +1,22 @@
++## MODIFIED Requirements
++
++### Requirement: Complete editor and initial values
++
++Карточка SHALL содержать шапку с названием, описанием, статусом, кодом, владельцем, датами и серверными created_at/updated_at; вкладки «Основное», «Группы и распределение», «Поверхности», «Правила запуска». Основное SHALL редактировать name/code/status/owner/responsible_user_id/description/started_on/ended_on/tags/hypothesis/metric_code/min_sample_size/auto_stop. Правила SHALL редактировать launch_mode/audience_code/segment/priority/stable_bucketing/log_group/return_to_control. Новая карточка SHALL предлагать defaults прототипа: draft, resolution_rate, immediate, all, priority=50, stable_bucketing=true, log_group=true, return_to_control=false, auto_stop=false; min_sample_size SHALL быть пустым/null вместо невалидного 0. Две исходные группы SHALL иметь 50/50 и теги control/variant; поверхности SHALL быть пустыми. Справочные defaults SHALL выбираться только при доступности кода; недоступный default SHALL требовать явного выбора, без подмены первым значением.
++
++Доступная подпись либо связанное с полем пояснение min_sample_size SHALL явно указывать минимальный размер выборки в каждой группе. Поле SHALL сохранять единственное nullable scalar-значение null либо integer 1–2147483647 без расчёта общего размера выборки или отдельных значений для групп. Существующее видимое пояснение границы исполнения API SHALL сохраняться; уточнение подписи MUST NOT обещать сбор статистики, исполнение эксперимента или управление трафиком.
++
++#### Scenario: New form
++
++- **WHEN** открыта новая карточка с доступными справочными defaults
++- **THEN** показаны две группы 50/50, пустой размер выборки и отсутствие поверхностей; серверные даты не выдуманы, сохранение требует названия, кода и поверхности
++
++#### Scenario: Per-group sample meaning
++
++- **WHEN** пользователь открывает основную вкладку новой или сохранённой карточки
++- **THEN** доступная подпись либо связанное пояснение поля размера выборки явно говорит «в каждой группе», а видимое пояснение границы исполнения API остаётся без обещаний статистики или управления трафиком
++
++#### Scenario: Sample scalar compatibility
++
++- **WHEN** в корректном в остальном агрегате поле размера выборки очищено либо содержит 1 или 2147483647
++- **THEN** сохраняется соответственно null либо введённое единое число без умножения на число групп; 0, отрицательное, дробное значение или 2147483648 блокируют сохранение с полевой ошибкой без потери draft
+--- /dev/null
++++ openspec/changes/clarify-ab-testing-sample-size/tasks.md
+@@ -0,0 +1,8 @@
++## 1. Accessible sample-size wording
++
++- [ ] 1.1 Update only the sample-size label in `app/optional/ab-testing/ui/editor/editor-main.tsx` to state “в каждой группе”; verify the existing label association exposes that accessible name and the nearby execution disclaimer remains unchanged, with no DTO/default/validator/transport changes.
++
++## 2. Focused regression coverage
++
++- [ ] 2.1 Update relevant label queries and add new/detail component assertions in `app/optional/ab-testing/ui/editor/editor.test.tsx`; verify the per-group accessible name, visible execution disclaimer, empty/null new default and clearing a saved number to a null payload.
++- [ ] 2.2 Add or reuse focused component/form-model boundary cases for null, 1 and 2147483647 acceptance and 0, negative, fractional and 2147483648 rejection; verify accepted payloads retain the one scalar without group-count multiplication and rejected saves retain draft, expose a field error and send no mutation. After separate implementation authorization, run only the relevant unit/component cases and record results; no browser/E2E or real-API claim.
+--- /dev/null
++++ openspec/changes/fix-skill-domain-zone-read-compatibility/.openspec.yaml
+@@ -0,0 +1,2 @@
++schema: spec-driven
++created: 2026-10-20
+--- /dev/null
++++ openspec/changes/fix-skill-domain-zone-read-compatibility/design.md
+@@ -0,0 +1,33 @@
++## Context
++
++See proposal.md for motivation. Accepted inputs are `reconcile-control-center-backlog/audit/reports/IMPL-SKILL-DOMAINS.md` and the domain portion of `audit/reviews/R-OPTIONAL-DOMAINS-SEVEN.md` (D-002 domain-zone / D-007 continuation).
++
++Read-only source inspection confirms `app/entities/skill-domain/api/skill-domain-client.ts` shares a two-code enum response schema between list, detail and PUT. Its types alias generated schema types. `app/widgets/skill-domains-registry/ui/skill-domains-registry.tsx` labels every non-authenticated code as open. `app/features/skill-domain-editing/model/skill-domain-form-schema.ts` separately restricts assignment choices. Client tests cover seeded codes and invalid counts, not wider string responses. The accepted audit records existing editor snapshot, field-error and retry coverage; this plan extends rather than replaces it.
++
++## Goals / Non-Goals
++
++**Goals:** A truthful string-code read boundary and display, retained snapshots, focused negative coverage, no accidental widening of assignment options.
++
++**Non-Goals:** Dynamic selector or directory integration, new error-envelope contract, frontend enforcement of backend assignment rules, successful unchanged-inactive writes, auth changes, uniqueness/address decisions, broad CRUD rewrite or archive updates.
++
++## Decisions
++
++1. Use string arrays for response validation consistently across all three read paths. Check the generated response aliases and introduce only a narrow local response projection if needed; do not widen create/update assignment types incidentally or regenerate unrelated contracts. Keep non-string zone values and malformed counts invalid. Reject the alternative of widening only list reads because detail and PUT would remain inconsistent.
++2. Replace the binary label with explicit known-code mapping and raw-code fallback rendered as text. Do not normalize, sort, filter or infer activity from code. No activity metadata or lookup is required. Keep domain order, pagination and skill counts unchanged. Reject anonymous fallback because it misrepresents server data.
++3. Keep response snapshots distinct from selectable assignment values. Adapt the editor initialization boundary only as needed to retain wider returned codes visibly without casts that pretend they are valid fixed choices. Existing two-code controls remain the only assignment choices. Do not silently filter initial values to satisfy the form schema or change serialization to omission/null. A wider read is not write eligibility; existing validation may prevent an unsupported assignment, but must preserve data and explain the failure rather than report success. Do not implement a new inactive-update policy.
++4. Extend existing client, registry and editor tests. Model linked inactive history as fixture provenance, not invented DTO activity metadata. Cover empty/duplicate/unknown/inactive rejection and preservation with the published generic validation/error handling shapes, including unknown paths/general fallback. Fixtures demonstrate UI handling only, not exact backend payloads or successful inactive round trips. Do not modify mocks into an invented directory validator.
++
++## Risks / Trade-offs
++
++- Wider response types may leak into selector types → keep read snapshots and fixed choices separate; add explicit option regression assertions.
++- No activity metadata exists in the inspected DTO → retain linked codes without claiming eligibility or attaching invented inactive labels.
++- Backend rejection payloads and inactive resubmission policy remain unresolved → test generic no-loss behavior without asserting exact business envelopes or approving a new update strategy.
++- Static fixtures cannot establish deployment → future authorized unit/component checks remain local evidence only; no browser/E2E work without explicit permission.
++
++## Migration Plan
++
++After separate implementation authorization, land the bounded adapter/display/editor-boundary correction together with focused regressions. No server migration or directory dependency. Roll back the frontend patch as a unit if needed; no persisted data rewrite. This planning run does not execute tests/builds or apply changes.
++
++## Open Questions
++
++Separate future owner work must establish dynamic selector approval, lookup endpoint/key/labels/order/inactive inclusion, concrete rejection payloads and unchanged-inactive update semantics. None is a prerequisite for this read/preservation correction; do not resolve these by implementation side effects.
+--- /dev/null
++++ openspec/changes/fix-skill-domain-zone-read-compatibility/proposal.md
+@@ -0,0 +1,24 @@
++## Why
++
++The accepted domain audit and seven-lane review identify a conditional read incompatibility: string zone codes outside the two assignment choices fail the shared response adapter, and simply widening it would mislabel those codes as «Открытая». Truthful reads can be corrected now without deciding dynamic selection or inactive-update policy.
++
++## What Changes
++
++- Preserve returned string zone codes in list, detail and PUT responses, including linked inactive values, server order and counts.
++- Keep known labels and display unknown codes verbatim rather than normalizing them to anonymous.
++- Separate the read representation from the fixed assignment choices; add focused read/display and no-loss rejection regression coverage.
++- Retain PUT, version and idempotency behavior. No silent removal and no promise of successful unchanged-inactive writes.
++
++## Capabilities
++
++### New Capabilities
++
++None.
++
++### Modified Capabilities
++
++- `skill-domain-management`: clarify truthful zone reads and preservation on zone-related rejection within existing registry and editing requirements.
++
++## Impact
++
++Bounded changes to the skill-domain response type/adapter, registry labels, editor snapshot compatibility and connected unit/component tests. No new endpoint, lookup prerequisite, selector option, auth behavior or backend validation policy. Existing creation selection remains `authenticated`/`anonymous`; uniqueness/address deferrals and historical archives stay unchanged. Dynamic selector/lookup and concrete rejection payload/update policy remain separate owner decisions. This is planning only, not runtime or deployment evidence.
+--- /dev/null
++++ openspec/changes/fix-skill-domain-zone-read-compatibility/specs/skill-domain-management/spec.md
+@@ -0,0 +1,58 @@
++## MODIFIED Requirements
++
++### Requirement: Server-backed domain registry
++
++Вкладка «Домены» SHALL показывать серверный список с названием и API-адресом, описанием, владельцем, зонами, числом навыков и действием редактирования. Пагинация SHALL использовать серверный total; число навыков SHALL браться из `skills_count`. Переход по числу SHALL открывать реестр навыков с `domain_id` и первой страницей. Домены навыков MUST NOT смешиваться с DNS-доменами поверхностей.
++
++Read-модель зон SHALL принимать и сохранять строковые коды из списка, карточки и ответа PUT без нормализации, сортировки или удаления связанных неактивных зон. Известные коды `authenticated` и `anonymous` SHALL отображаться как «Авторизованная» и «Открытая» соответственно; остальные SHALL отображаться исходным кодом, а не как anonymous. Порядок доменов и зон, серверные total и `skills_count` SHALL сохраняться. Чтение MUST NOT требовать справочника зон или расширять фиксированные варианты назначения.
++
++#### Scenario: Domain with skills beyond the loaded skill page
++
++- **WHEN** сервер сообщает `skills_count=42`, а на текущей странице каталога загружено только 10 навыков
++- **THEN** таблица доменов показывает 42; ссылка открывает реестр с ID этого домена, а не фильтрует локальные 10 записей
++
++#### Scenario: Empty or failed registry
++
++- **WHEN** список доменов пуст либо его загрузка завершилась ошибкой
++- **THEN** первый случай предлагает создание домена, второй показывает ошибку и повтор, не подменяя её пустым списком
++
++#### Scenario: Wider codes across domain responses
++
++- **WHEN** список, карточка или успешный ответ PUT содержит зоны `['anonymous', 'legacy-zone', 'authenticated']`
++- **THEN** все три строки сохраняются в указанном порядке; известные подписи остаются прежними, `legacy-zone` отображается исходным кодом и не делает весь ответ ошибочным
++
++#### Scenario: Retained linked inactive zones
++
++- **WHEN** сервер возвращает домен со связанной неактивной зоной
++- **THEN** домен и зона остаются в серверном порядке без изменения total или `skills_count`; чтение не объявляет зону доступной для назначения и не требует lookup-запроса
++
++### Requirement: Version-safe domain editing
++
++Редактирование SHALL начинаться с актуальной карточки домена, отправлять PUT с `expected_version` и обязательным `Idempotency-Key`, сохранять dirty-ввод при ошибке или фоновом обновлении. Повтор того же логического запроса SHALL сохранять ключ, изменённое тело SHALL получать новый. Конфликт MUST NOT приводить к автоматической перезаписи с новой версией. Отмена MUST NOT отправлять мутацию.
++
++Редактор SHALL сохранять полученные коды зон в исходных данных и пользовательский ввод без молчаливого удаления или замены неизвестных либо связанных неактивных кодов. Расширение read-модели MUST NOT расширять текущий фиксированный selector. При отказе по зонам SHALL сохраняться значения, известные `loc`/`msg` SHALL связываться с полями, неизвестные пути SHALL оставаться в общей ошибке; успех MUST NOT показываться. Сохранение связанных неактивных зон при чтении MUST NOT означать обещание успешного PUT с неизменённой неактивной зоной или автоматический выбор политики omission/null.
++
++#### Scenario: Concurrent modification
++
++- **WHEN** сервер отклоняет PUT из-за изменения версии
++- **THEN** пользователь видит конфликт и возможность перечитать данные, его ввод сохранён, автоматический PUT с новой expected_version не выполняется
++
++#### Scenario: Retry after network failure
++
++- **WHEN** пользователь повторяет неизменённую логическую операцию создания или редактирования после сетевой ошибки
++- **THEN** запрос использует прежний ключ идемпотентности; во время отправки повторное нажатие не создаёт параллельную запись
++
++#### Scenario: Keyboard cancellation
++
++- **WHEN** пользователь открывает форму с клавиатуры и отменяет изменения
++- **THEN** запрос записи не выполняется, фокус возвращается к действию открытия, а форма имеет доступные заголовок и подписи полей
++
++#### Scenario: Zone rejection without data loss
++
++- **WHEN** сервер отклоняет операцию из-за пустого набора, дубликатов, неизвестной или неактивной зоны
++- **THEN** введённые значения и полученные связанные коды не теряются, доступная ошибка показывается без ложного успеха и без автоматического удаления зон, замены кодов или повторного PUT с изменённым телом
++
++#### Scenario: Fixed choices remain fixed after wider read
++
++- **WHEN** редактор получает карточку с кодом вне `authenticated` и `anonymous`
++- **THEN** исходный код сохраняется, но не становится новым вариантом назначения; форма не подменяет его anonymous и не скрывает потерю данных за успешным сохранением
+--- /dev/null
++++ openspec/changes/fix-skill-domain-zone-read-compatibility/tasks.md
+@@ -0,0 +1,14 @@
++## 1. Read boundary and truthful display
++
++- [ ] 1.1 Separate string-code response typing/validation from fixed assignment types in the skill-domain entity; verify client regressions preserve wider codes in list, detail and PUT responses while rejecting non-string zones and invalid counts, with PUT/version/idempotency assertions unchanged.
++- [ ] 1.2 Replace registry binary labels with explicit known labels and raw-code fallback; verify component fixtures retain domain/zone ordering, linked inactive history, total, skills_count and navigation, without a zone lookup request.
++
++## 2. Editor preservation and negative coverage
++
++- [ ] 2.1 Adapt only the editor read-snapshot boundary needed for wider codes; verify returned codes remain visible/preserved, fixed assignment options remain exactly authenticated/anonymous, and no code is silently stripped, converted, or promoted to a new option.
++- [ ] 2.2 Add focused empty/duplicate/unknown/inactive zone rejection regressions using existing error-handler/component boundaries and generic published error shapes; verify values and linked codes survive, known field locations and general fallback remain accessible, and no false success or automatic modified-body retry occurs. Do not assert an invented exact backend rejection payload or successful unchanged-inactive save.
++
++## 3. Bounded verification
++
++- [ ] 3.1 After separate implementation authorization, run the affected client, registry, editor and error-handler unit/component checks; verify existing conflict, retry-key, dirty-refetch and keyboard cancellation coverage remains passing and record results without claiming real integration. No browser/E2E tests without explicit permission.
++- [ ] 3.2 Review the final implementation diff against this delta; verify no selector/lookup expansion, PUT reversal, omission/null policy, mock business-policy invention, auth changes or uniqueness/address scope creep, and record the separately unresolved owner decisions.

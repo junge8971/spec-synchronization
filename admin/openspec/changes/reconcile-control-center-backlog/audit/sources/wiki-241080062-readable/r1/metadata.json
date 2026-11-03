@@ -1,0 +1,253 @@
+{
+  "sourceId": "wiki-241080062-readable",
+  "revision": "r1",
+  "derivedAt": "2026-10-19T07:28:01.894720+00:00",
+  "originalPath": "../../wiki-241080062/r1/content.json",
+  "originalMetadataPath": "../../wiki-241080062/r1/metadata.json",
+  "originalSha256": "4920e62124826b90c86ae1d6ec520f49f52a4d381334c94867864c1f218c3ab2",
+  "version": 17,
+  "versionWhen": "2026-10-09T23:32:41.029+08:00",
+  "retrievedAt": "2026-10-16T11:48:21.710Z",
+  "bodyViewPointer": "/bodyView",
+  "bodyViewSha256Utf8": "a111dadccb497c83b5ca5b4622ab472f4bd7e40150fedf3b6c2480069881d7b2",
+  "exactBodyChunks": [
+    {
+      "path": "bodyView-001.txt",
+      "sha256": "4967f788f781bbf006f55df1e5bf8cb3c6c26df5138416a68129b4ba472afd28",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-002.txt",
+      "sha256": "ca050dc0a77bd593e3d7715cbc45b3d09c5c5559ce4a5f4c88226fbe222ba891",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-003.txt",
+      "sha256": "99243a9a665906d41023d50a9a3e857231dfe0a3b431c69b80d61726daf33956",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-004.txt",
+      "sha256": "8c3155447dda4fc8788ba471281574ca221918f145c7552535ac1787ea5ad3a5",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-005.txt",
+      "sha256": "c2dd34a1ba877c75cfe3bf26b18aba18724334a0a87452e20701af26244360e4",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-006.txt",
+      "sha256": "1d7dbbf4d63b586ad2f6ac3e9210181acecb28baa0e5cb9b4a5ab0771cbcc385",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-007.txt",
+      "sha256": "233d93e736b05004ed01a16cef766b8e16d6c029d891195c6f268eef1b3b2645",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-008.txt",
+      "sha256": "d159f7961f3883f27471e12b67a6d6a241732e196aa1f655f30e7fb9e52400b7",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-009.txt",
+      "sha256": "9ef4865c9499d5cb39f984fc125847dc64472110f3c69b6bdcb878cfa943eb5e",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-010.txt",
+      "sha256": "69cbe5a20a4452b2b559f5cc00d30d6de2bcee851cd393da5f72a00dd87fc56b",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-011.txt",
+      "sha256": "2455d9adcd92813e2c360346e7716d733b133e19ceda0c3c75a0b0f2186800aa",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-012.txt",
+      "sha256": "c99d6e6cb9a839208e3456ac1505164a4f47d4a3f74e9623e40d0bac5d7c62be",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-013.txt",
+      "sha256": "1e4d30314ce99268e7b084a8bbee1a2247b995d295167b34a725e9b6a3b78696",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-014.txt",
+      "sha256": "69387f1744cf06131721ae6cc44f15f5e41d0eb0fb3424370a37e9aa68a208b9",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-015.txt",
+      "sha256": "d08056c4994c7c585960c54e79e6b50a39b5d71db1069b347d8740826ef94cd8",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-016.txt",
+      "sha256": "82b18765fd975749205b310f3cc6ad93cb70c88caa12c6f8601c6d172308a859",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-017.txt",
+      "sha256": "901bc407368ba3f91fda54103c918c8459b976405404b08c145718d56d5469a1",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-018.txt",
+      "sha256": "e22680c645a544fa2c6b208e66b71f1cfb8106748952a4bcc9052d2d38c831f9",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-019.txt",
+      "sha256": "cc48d65254f452f69f3d82ddf1287d4c2e145b6136e4937940f9d0f9e2847c34",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-020.txt",
+      "sha256": "8493391c4c285a65614955e5ad16ea553fb01230a9e10607594a2d9d26e552d6",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-021.txt",
+      "sha256": "68a72b8461b0dcde0ddd42caed057fd594e6ab182d5785c766a981fc700b5cf6",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-022.txt",
+      "sha256": "fdff0d3397ef3e509bb9f77a0cba939ee408491b7b150007597fd5e16fe7a198",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-023.txt",
+      "sha256": "a8933a84a0fcc9e41a2fd00ed776cbb3a463885e0b2f49100401fa77daf5908e",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-024.txt",
+      "sha256": "b53cc17cb90c5bed04670cab2fd56be5ab088210625d0298758834ffa927db96",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-025.txt",
+      "sha256": "8b6bb03faf100ea24413a2adda74017b6155d0deed9036354c8353cdf32b5405",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-026.txt",
+      "sha256": "16a040cdf4d3a9da90113685b81caaca04b76e67cf73fde1df6b1f42c277294c",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-027.txt",
+      "sha256": "5a685d94d7ce418477c235502c8827db0c9a060189dc76be517828b3e27fac72",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-028.txt",
+      "sha256": "ef54c9cb6073e792f00572b5b9f57f5069c5a3a89fcf89c6754f3bad3479fff2",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-029.txt",
+      "sha256": "a1e86463bc64c724ef25f970568b3e3446bfdb46f4130e60662d460232f7125d",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-030.txt",
+      "sha256": "b26c0d15f30d9a70173b44d86606f81221d4720d2efc4c42d6904901ecc68a12",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-031.txt",
+      "sha256": "29d5ce9aa963c140108151798ff57bdc8da0ae28933dc6ec2f5c2b4726926153",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-032.txt",
+      "sha256": "61e2559c393056fdae19219b43c76387dbc10781c6875ea19c10c3648c89fc51",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-033.txt",
+      "sha256": "764af9131a31d68cc4f7502b727f216ec056691045a14712b74bdd2586474bc9",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-034.txt",
+      "sha256": "07cae1e525743ebed5746422253627bac671b14a2f63f24261882fe8dbe2244c",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-035.txt",
+      "sha256": "abbdc665f2590fc4220a95e24ee91e983f2b6cf312b15ebb147d62036c16d788",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-036.txt",
+      "sha256": "3492cefaddea47bdd555e20f74485636396f269dfc252f98a5aa3e7d3658b106",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-037.txt",
+      "sha256": "41f96cb7711afab7c28b03f644719809aef1fe20648ae4c9d2f4ec49925ff4fb",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-038.txt",
+      "sha256": "fcf464c889e865caaa216ad518c1cd5ddfd2385ebedabf159c34403cf32d617f",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-039.txt",
+      "sha256": "eb60a658435ed4d0b0014d758baedba19804ed3cde2cce38844d93d9833d5430",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-040.txt",
+      "sha256": "d39121586127dadad26f9457f0ad216d39998f347ef27fb750daf538decfdfb4",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-041.txt",
+      "sha256": "4ab30ae474364ced837d388bce506969805de45016174ac46ed9af0e5578b85c",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-042.txt",
+      "sha256": "9ad8e70ebd130fbe81111d51c76336fd41f5c3840f38e96a84be136e7da27706",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-043.txt",
+      "sha256": "15b3209dd8f84dac697389a4a3c3a1fcd5b8970fa6d4e597274a331e6e9a58d4",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-044.txt",
+      "sha256": "59d881c42bf49d35e742abf30a50a6b995606acbb4989b7189058fff137ffcd1",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-045.txt",
+      "sha256": "5c8001c0c8fbe589a3cebb1cfbeaba83f61178586eae111d57d36e686fa1e133",
+      "characters": 6000
+    },
+    {
+      "path": "bodyView-046.txt",
+      "sha256": "08bd09972c3c6b13106228e3d64776c604303f6213de528b77d64b8681a101f7",
+      "characters": 5616
+    }
+  ],
+  "readableText": {
+    "path": "readable-text.txt",
+    "sha256": "015e33f38bf54e17c59f9aa3ed28eb8f6c117c992e5a7696b1e3739774ee4426",
+    "lines": 1129,
+    "bytes": 142978
+  },
+  "provenance": "Parent parsed existing local JSON. Exact bodyView chunks concatenate without separators to the original decoded string; equality verified. Readable text derived with Python HTMLParser, decoded entities, table cell separators and block line breaks; blank lines removed. No rendering, script execution, endpoints or network.",
+  "limitations": "Readable text is a convenience extraction, not exact HTML/visual rendering; consult exact chunks for markup/links. Full body retained; no section selection or content summarization. Version scalar retained exactly for skills; catalog version metadata excludes author personal fields and links. Parent-computed digests, not reviewer attestations. Original snapshots unchanged; derivation does not prove freshness."
+}

@@ -8,12 +8,27 @@
 
 ### Requirement: Export uses the accepted synchronous business API
 
-UI SHALL использовать POST `/api/control/api/dialogs/v1/dialogs/export` для selection либо chat_ids и GET `/api/control/api/dialogs/v1/dialogs/{chat_id}/export` для карточки. UI MUST NOT собирать CSV из реестра, обходить страницы/detail для экспорта, создавать job API или собственные auth/session/RBAC. Запросы экспорта SHALL использовать общий транспорт по `control-center-http` и `mpmm-session`: real mode с общей MPMM-сессией, mock mode без credentials. HTTP fixtures SHALL проверять интеграцию; недоступный backend MUST NOT подменяться локальным успешным файлом.
+UI SHALL использовать опубликованные в текущем live API POST `/api/control/api/dialogs/v1/dialogs/export` для selection либо chat_ids и GET `/api/control/api/dialogs/v1/dialogs/{chat_id}/export` для карточки. Live operationId и DTO SHALL заменить историческое локальное дополнение; правило ровно одного непустого источника состава, игнорирование неприменимых опций и безопасная передача CSV SHALL сохраняться согласно описаниям операций. null состава SHALL означать отсутствие; при chat_ids опции формата/колонок/параметров SHALL игнорироваться, fields SHALL применяться только к selection формата dialogs. UI MUST NOT собирать CSV из реестра, обходить страницы/detail для экспорта, создавать job API или собственные auth/session/RBAC. Запросы экспорта SHALL использовать общий транспорт по control-center-http и mpmm-session: real mode с общей MPMM-сессией, mock mode без credentials. HTTP fixtures SHALL проверять интеграцию; недоступный backend MUST NOT подменяться локальным успешным файлом.
 
 #### Scenario: Backend is unavailable
 
 - **WHEN** сервер возвращает 503
 - **THEN** UI показывает ошибку и сохраняет параметры для повтора без CSV и сообщения успеха
+
+#### Scenario: Published export replaces supplement
+
+- **WHEN** клиент и моки используют обновлённый контракт
+- **THEN** оба экспорта работают по опубликованным операциям без старых operationId и без потери проверок файла и бизнес-ограничений
+
+#### Scenario: Mutually exclusive scopes
+
+- **WHEN** переданы оба selection/chat_ids либо ни одного непустого поля
+- **THEN** запрос отклоняется без файла, несмотря на недостаточную выразительность формальной схемы
+
+#### Scenario: Irrelevant options
+
+- **WHEN** API получает chat_ids с неприменимыми опциями либо messages с fields
+- **THEN** неприменимые опции игнорируются по описанию операции, а применимые поля продолжают валидироваться
 
 ### Requirement: Export supports three explicit scopes
 
@@ -79,3 +94,22 @@ UI SHALL показывать формирование до получения �
 
 - **WHEN** серверный файл содержит Unicode, кавычки, переносы строк и защищённый формульный текст
 - **THEN** браузеру передаются те же байты, включая BOM, без повторного кодирования
+
+### Requirement: Required header failures are actionable without weakening safety
+
+При отсутствии доступного браузеру обязательного заголовка CSV клиент SHALL указывать имя недоступного заголовка в доступном сообщении ошибки. Сообщение SHALL объяснять, что проблема может быть в ответе сервера или настройке доступа браузера к заголовкам, не объявляя CORS доказанной причиной по одному null. При неверном значении доступного заголовка SHALL отображаться ошибка его проверки. Это правило SHALL одинаково применяться к экспорту отбора, отмеченных диалогов и карточки. Все существующие проверки MIME, attachment/имени, длины, no-store, nosniff, BOM и байтов SHALL сохраняться. До успешного завершения проверок MUST NOT создаваться download URL или отображаться успех; параметры SHALL сохраняться для новой явной попытки.
+
+#### Scenario: Browser cannot read nosniff header
+
+- **WHEN** ответ имеет HTTP 200, но браузер не видит X-Content-Type-Options
+- **THEN** скачивание не запускается, сообщение называет X-Content-Type-Options и необходимость проверить серверный ответ/доступность заголовка, не утверждает доказанный CORS-сбой и сохраняет параметры формы
+
+#### Scenario: Readable unsafe value
+
+- **WHEN** заголовок X-Content-Type-Options доступен, но его значение не nosniff
+- **THEN** файл отклоняется с ошибкой проверки заголовка, без обхода валидации и без ложного сообщения об отсутствии заголовка
+
+#### Scenario: Correct response after environment repair
+
+- **WHEN** пользователь явно повторяет экспорт и браузер получает все обязательные корректные заголовки и валидные серверные байты
+- **THEN** файл передаётся браузеру без перекодирования, сообщается только о запуске скачивания и Object URL освобождается

@@ -1,0 +1,1464 @@
+{
+  "operations": {
+    "/api/control/api/skills/v1/skills/{skill_id}/status": {
+      "tags": [
+        "Skills"
+      ],
+      "summary": "Change Skill Status",
+      "description": "Перевести навык в другой статус жизненного цикла; продвижение требует пройденных проверок готовности.\n\nДопустимые переходы задаёт справочник переходов. Перед продвижением все пять проверок выполняются заново по\nтекущим данным, и переход отклоняется, если хотя бы одна из них блокирует.\n\n### Параметры запроса (Fields):\n- `skill_id` - идентификатор навыка в пути, UUID версии 7.\n- `Idempotency-Key` - заголовок с UUID запроса.\n- `status` - целевой статус.\n- `expected_version` - версия навыка, которую видел клиент.\n- `reason` - причина перехода, необязательная.\n\n### Ограничения:\n- Нужно разрешение `TSAM.Skill:change_status`; вход - заголовки `X-Admin-Token` и `X-Access-Token`.\n- Проверки нужны переходам вперёд по цепочке `checking -> training -> autotest -> sandbox -> review -> whitelist\n  -> prod`. Переход `draft -> checking` и возвраты `review -> draft`, `whitelist -> review` проверок не требуют\n  и результаты не пересчитывают.\n- Решает расчёт этого запроса, а не сохранённые результаты: отсутствие результата пройденной проверкой не\n  считается. Предупреждение `semantic_conflicts` переходу не мешает.\n- При отказе статус, версия и история статусов не меняются, а пересчитанные результаты сохраняются: карточка\n  навыка покажет их с новым `checked_at`.\n- Переход в `training` и в любой статус дальше по цепочке выполняется по очереди с изменениями фраз навыков и\n  ждёт своей очереди не дольше 10 секунд. Переходы в `draft`, `checking` и `disabled` очереди не ждут.\n- Ответ - карточка навыка с `checks`.\n\n### Возможные ошибки (Errors):\n- `409 (SKILL_CHECKS_BLOCKED)` - \"Переход недоступен: есть блокирующие проверки\". В `errors` - элемент на каждую\n  блокирующую проверку в порядке их вывода: `field` - `/checks/{check_type}`, `code` - `BLOCKED`, `message` -\n  причина и место исправления.\n- `422 (VALIDATION_ERROR)` - \"Запрос не прошёл валидацию\": переход не разрешён справочником, `/status` с причиной\n  `transition from ... to ... is not allowed`; \"Ошибка валидации запроса\": нет `Idempotency-Key`, `status` или\n  `expected_version` либо `status` неизвестен.\n- `400 (INVALID_ARGUMENT)` - \"Ошибка валидации запроса\": `skill_id` не является UUID версии 7.\n- `401 (FAILED)` - \"Требуется аутентификация.\": нет заголовка `X-Admin-Token` или `X-Access-Token` либо сессия\n  недействительна.\n- `403 (FAILED)` - \"Недостаточно прав для доступа к ресурсу.\": у сотрудника нет разрешения метода.\n- `503 (FAILED)` - \"Сервис авторизации временно недоступен.\" или \"Сервис аудита временно недоступен.\".\n- `404 (NOT_FOUND)` - \"Навык {skill_id} не найден\": навыка нет или он принадлежит команде вне области доступа.\n- `409 (VERSION_CONFLICT)` - \"Объект был изменён другим пользователем\": `expected_version` устарела.\n- `409 (PHRASE_REGISTRY_BUSY)` - \"Фразы навыков сейчас изменяет другой запрос. Повторите запрос позже\":\n  переход в `training` или дальше не дождался очереди за 10 секунд; ничего не сохранено, запрос можно\n  повторить.\n- `409 (IDEMPOTENCY_KEY_REUSED)` - ключ уже использован для другого запроса.",
+      "operationId": "change_skill_status_api_control_api_skills_v1_skills__skill_id__status_post",
+      "security": [
+        {
+          "AdminToken": []
+        },
+        {
+          "AccessToken": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "skill_id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid7",
+            "title": "Skill Id"
+          }
+        },
+        {
+          "name": "Idempotency-Key",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Idempotency-Key"
+          }
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ChangeSkillStatusRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Successful Response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TsamResponseSchema_SkillTokenIssuanceResponse_"
+              }
+            }
+          }
+        },
+        "422": {
+          "description": "Validation Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HTTPValidationError"
+              }
+            }
+          }
+        }
+      },
+      "x-success-message": "Статус навыка изменен."
+    },
+    "/api/control/api/skills/v1/skills/{skill_id}/tokens/{environment}/reissue": {
+      "tags": [
+        "Skills"
+      ],
+      "summary": "Reissue Skill Token",
+      "operationId": "reissue_skill_token_api_control_api_skills_v1_skills__skill_id__tokens__environment__reissue_post",
+      "security": [
+        {
+          "AdminToken": []
+        },
+        {
+          "AccessToken": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "skill_id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid7",
+            "title": "Skill Id"
+          }
+        },
+        {
+          "name": "environment",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/SkillTokenEnvironmentCode"
+          }
+        },
+        {
+          "name": "Idempotency-Key",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Idempotency-Key"
+          }
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SkillTokenMutationRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Successful Response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TsamResponseSchema_SkillTokenIssuanceResponse_"
+              }
+            }
+          }
+        },
+        "422": {
+          "description": "Validation Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HTTPValidationError"
+              }
+            }
+          }
+        }
+      },
+      "x-success-message": "Токен навыка перевыпущен."
+    },
+    "/api/control/api/skills/v1/skills/{skill_id}/tokens/{environment}/revoke": {
+      "tags": [
+        "Skills"
+      ],
+      "summary": "Revoke Skill Token",
+      "operationId": "revoke_skill_token_api_control_api_skills_v1_skills__skill_id__tokens__environment__revoke_post",
+      "security": [
+        {
+          "AdminToken": []
+        },
+        {
+          "AccessToken": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "skill_id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid7",
+            "title": "Skill Id"
+          }
+        },
+        {
+          "name": "environment",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "$ref": "#/components/schemas/SkillTokenEnvironmentCode"
+          }
+        },
+        {
+          "name": "Idempotency-Key",
+          "in": "header",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Idempotency-Key"
+          }
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/SkillTokenMutationRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Successful Response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TsamResponseSchema_SkillResponse_"
+              }
+            }
+          }
+        },
+        "422": {
+          "description": "Validation Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HTTPValidationError"
+              }
+            }
+          }
+        }
+      },
+      "x-success-message": "Токен навыка отозван."
+    }
+  },
+  "absentPaths": [],
+  "references": {
+    "#/components/schemas/ChangeSkillStatusRequest": {
+      "properties": {
+        "status": {
+          "$ref": "#/components/schemas/SkillStatus"
+        },
+        "expected_version": {
+          "type": "integer",
+          "minimum": 1.0,
+          "title": "Expected Version"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Reason"
+        }
+      },
+      "type": "object",
+      "required": [
+        "status",
+        "expected_version"
+      ],
+      "title": "ChangeSkillStatusRequest"
+    },
+    "#/components/schemas/ErrorItem": {
+      "properties": {
+        "field": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Field"
+        },
+        "code": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Code"
+        },
+        "message": {
+          "type": "string",
+          "title": "Message"
+        },
+        "details": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Details"
+        }
+      },
+      "type": "object",
+      "required": [
+        "message"
+      ],
+      "title": "ErrorItem",
+      "description": "Одна ошибка в поле errors."
+    },
+    "#/components/schemas/HTTPValidationError": {
+      "properties": {
+        "detail": {
+          "items": {
+            "$ref": "#/components/schemas/ValidationError"
+          },
+          "type": "array",
+          "title": "Detail"
+        }
+      },
+      "type": "object",
+      "title": "HTTPValidationError"
+    },
+    "#/components/schemas/IssuedSkillTokenResponse": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "title": "Id"
+        },
+        "environment": {
+          "$ref": "#/components/schemas/SkillTokenEnvironmentCode"
+        },
+        "is_active": {
+          "type": "boolean",
+          "title": "Is Active"
+        },
+        "issued_at": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Issued At"
+        },
+        "revoked_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Revoked At"
+        },
+        "issued_by": {
+          "type": "string",
+          "title": "Issued By"
+        },
+        "token_value": {
+          "type": "string",
+          "title": "Token Value"
+        }
+      },
+      "type": "object",
+      "required": [
+        "id",
+        "environment",
+        "is_active",
+        "issued_at",
+        "revoked_at",
+        "issued_by",
+        "token_value"
+      ],
+      "title": "IssuedSkillTokenResponse"
+    },
+    "#/components/schemas/ResponseCode": {
+      "type": "string"
+    },
+    "#/components/schemas/SkillAuthType": {
+      "type": "string",
+      "enum": [
+        "transport_token"
+      ],
+      "title": "SkillAuthType"
+    },
+    "#/components/schemas/SkillCheckResponse": {
+      "properties": {
+        "check_type": {
+          "$ref": "#/components/schemas/SkillCheckType"
+        },
+        "status": {
+          "$ref": "#/components/schemas/SkillCheckStatus"
+        },
+        "blocking": {
+          "type": "boolean",
+          "title": "Blocking"
+        },
+        "message": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Message"
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Checked At"
+        }
+      },
+      "type": "object",
+      "required": [
+        "check_type",
+        "status",
+        "blocking",
+        "message",
+        "checked_at"
+      ],
+      "title": "SkillCheckResponse"
+    },
+    "#/components/schemas/SkillCheckStatus": {
+      "type": "string",
+      "enum": [
+        "passed",
+        "failed",
+        "warning",
+        "blocked"
+      ],
+      "title": "SkillCheckStatus"
+    },
+    "#/components/schemas/SkillCheckType": {
+      "type": "string",
+      "enum": [
+        "anketa",
+        "phrases",
+        "exact_conflicts",
+        "semantic_conflicts",
+        "endpoint"
+      ],
+      "title": "SkillCheckType",
+      "description": "Порядок объявления - порядок вывода проверок."
+    },
+    "#/components/schemas/SkillConnectionParameterSchema": {
+      "properties": {
+        "key": {
+          "type": "string",
+          "title": "Key"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "type": {
+          "$ref": "#/components/schemas/SkillParameterType"
+        },
+        "required": {
+          "type": "boolean",
+          "title": "Required"
+        },
+        "default": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Default"
+        },
+        "options": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "title": "Options"
+        }
+      },
+      "type": "object",
+      "required": [
+        "key",
+        "title",
+        "type",
+        "required"
+      ],
+      "title": "SkillConnectionParameterSchema"
+    },
+    "#/components/schemas/SkillConnectionSchema": {
+      "properties": {
+        "endpoint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Endpoint"
+        },
+        "contract_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Contract Version"
+        },
+        "auth_required": {
+          "type": "boolean",
+          "title": "Auth Required"
+        },
+        "auth_type": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/SkillAuthType"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "parameters": {
+          "items": {
+            "$ref": "#/components/schemas/SkillConnectionParameterSchema"
+          },
+          "type": "array",
+          "title": "Parameters"
+        }
+      },
+      "type": "object",
+      "required": [
+        "auth_required"
+      ],
+      "title": "SkillConnectionSchema"
+    },
+    "#/components/schemas/SkillContactResponse": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "Id"
+        },
+        "name": {
+          "$ref": "#/components/schemas/SkillUserNameResponse"
+        },
+        "email": {
+          "type": "string",
+          "title": "Email"
+        }
+      },
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "email"
+      ],
+      "title": "SkillContactResponse"
+    },
+    "#/components/schemas/SkillDomainResponse": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "title": "Id"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name"
+        }
+      },
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "SkillDomainResponse"
+    },
+    "#/components/schemas/SkillEntityType": {
+      "type": "string",
+      "enum": [
+        "string",
+        "number",
+        "date",
+        "enum",
+        "address"
+      ],
+      "title": "SkillEntityType"
+    },
+    "#/components/schemas/SkillIntentEntitySchema": {
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "type": {
+          "$ref": "#/components/schemas/SkillEntityType"
+        },
+        "required": {
+          "type": "boolean",
+          "title": "Required",
+          "default": false
+        },
+        "synonyms": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "title": "Synonyms"
+        },
+        "extraction_prompt": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Extraction Prompt"
+        }
+      },
+      "type": "object",
+      "required": [
+        "name",
+        "type"
+      ],
+      "title": "SkillIntentEntitySchema"
+    },
+    "#/components/schemas/SkillIntentResponse": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "title": "Id"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Description"
+        },
+        "phrases": {
+          "items": {
+            "$ref": "#/components/schemas/SkillPhraseResponse"
+          },
+          "type": "array",
+          "title": "Phrases"
+        },
+        "entities": {
+          "items": {
+            "$ref": "#/components/schemas/SkillIntentEntitySchema"
+          },
+          "type": "array",
+          "title": "Entities"
+        },
+        "is_active": {
+          "type": "boolean",
+          "title": "Is Active"
+        },
+        "sort_order": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Sort Order"
+        }
+      },
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "description",
+        "phrases",
+        "entities",
+        "is_active",
+        "sort_order"
+      ],
+      "title": "SkillIntentResponse"
+    },
+    "#/components/schemas/SkillParameterType": {
+      "type": "string",
+      "enum": [
+        "select"
+      ],
+      "title": "SkillParameterType"
+    },
+    "#/components/schemas/SkillPhraseResponse": {
+      "properties": {
+        "text": {
+          "type": "string",
+          "title": "Text"
+        },
+        "normalized": {
+          "type": "string",
+          "title": "Normalized"
+        },
+        "weight": {
+          "type": "number",
+          "title": "Weight"
+        },
+        "source": {
+          "type": "string",
+          "title": "Source"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Created At"
+        }
+      },
+      "type": "object",
+      "required": [
+        "text",
+        "normalized",
+        "weight",
+        "source",
+        "created_at"
+      ],
+      "title": "SkillPhraseResponse"
+    },
+    "#/components/schemas/SkillRelatedMaterialSchema": {
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "url": {
+          "type": "string",
+          "title": "Url"
+        }
+      },
+      "type": "object",
+      "required": [
+        "title",
+        "url"
+      ],
+      "title": "SkillRelatedMaterialSchema"
+    },
+    "#/components/schemas/SkillStatus": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "checking",
+        "training",
+        "autotest",
+        "sandbox",
+        "review",
+        "whitelist",
+        "prod",
+        "disabled"
+      ],
+      "title": "SkillStatus"
+    },
+    "#/components/schemas/SkillTeamResponse": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "title": "Id"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name"
+        }
+      },
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "title": "SkillTeamResponse"
+    },
+    "#/components/schemas/SkillTokenEnvironmentCode": {
+      "type": "string",
+      "enum": [
+        "sandbox",
+        "whitelist",
+        "prod"
+      ],
+      "title": "SkillTokenEnvironmentCode"
+    },
+    "#/components/schemas/SkillTokenIssuanceResponse": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "title": "Id"
+        },
+        "code": {
+          "type": "string",
+          "title": "Code"
+        },
+        "service_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Service Id"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "types": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "title": "Types"
+        },
+        "display_version": {
+          "type": "string",
+          "title": "Display Version"
+        },
+        "purpose": {
+          "type": "string",
+          "title": "Purpose"
+        },
+        "expected_result": {
+          "type": "string",
+          "title": "Expected Result"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Description"
+        },
+        "domain": {
+          "$ref": "#/components/schemas/SkillDomainResponse"
+        },
+        "team": {
+          "$ref": "#/components/schemas/SkillTeamResponse"
+        },
+        "contact": {
+          "$ref": "#/components/schemas/SkillContactResponse"
+        },
+        "author_user_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Author User Id"
+        },
+        "limitations": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Limitations"
+        },
+        "comments": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Comments"
+        },
+        "related_materials": {
+          "items": {
+            "$ref": "#/components/schemas/SkillRelatedMaterialSchema"
+          },
+          "type": "array",
+          "title": "Related Materials"
+        },
+        "connection": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/SkillConnectionSchema"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "intents": {
+          "items": {
+            "$ref": "#/components/schemas/SkillIntentResponse"
+          },
+          "type": "array",
+          "title": "Intents"
+        },
+        "tokens": {
+          "items": {
+            "$ref": "#/components/schemas/SkillTokenResponse"
+          },
+          "type": "array",
+          "title": "Tokens"
+        },
+        "status": {
+          "$ref": "#/components/schemas/SkillStatus"
+        },
+        "training": {
+          "type": "string",
+          "title": "Training"
+        },
+        "training_eta": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Training Eta"
+        },
+        "autotest": {
+          "type": "string",
+          "title": "Autotest"
+        },
+        "autotest_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Autotest Note"
+        },
+        "version": {
+          "type": "integer",
+          "title": "Version"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Created At"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Updated At"
+        },
+        "checks": {
+          "items": {
+            "$ref": "#/components/schemas/SkillCheckResponse"
+          },
+          "type": "array",
+          "title": "Checks"
+        },
+        "issued_token": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/IssuedSkillTokenResponse"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "required": [
+        "id",
+        "code",
+        "service_id",
+        "name",
+        "types",
+        "display_version",
+        "purpose",
+        "expected_result",
+        "description",
+        "domain",
+        "team",
+        "contact",
+        "author_user_id",
+        "limitations",
+        "comments",
+        "related_materials",
+        "connection",
+        "intents",
+        "tokens",
+        "status",
+        "training",
+        "training_eta",
+        "autotest",
+        "autotest_note",
+        "version",
+        "created_at",
+        "updated_at",
+        "checks",
+        "issued_token"
+      ],
+      "title": "SkillTokenIssuanceResponse"
+    },
+    "#/components/schemas/SkillTokenMutationRequest": {
+      "properties": {
+        "expected_version": {
+          "type": "integer",
+          "minimum": 1.0,
+          "title": "Expected Version"
+        }
+      },
+      "type": "object",
+      "required": [
+        "expected_version"
+      ],
+      "title": "SkillTokenMutationRequest"
+    },
+    "#/components/schemas/SkillTokenResponse": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "title": "Id"
+        },
+        "environment": {
+          "$ref": "#/components/schemas/SkillTokenEnvironmentCode"
+        },
+        "is_active": {
+          "type": "boolean",
+          "title": "Is Active"
+        },
+        "issued_at": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Issued At"
+        },
+        "revoked_at": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Revoked At"
+        },
+        "issued_by": {
+          "type": "string",
+          "title": "Issued By"
+        },
+        "token_value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Token Value"
+        }
+      },
+      "type": "object",
+      "required": [
+        "id",
+        "environment",
+        "is_active",
+        "issued_at",
+        "revoked_at",
+        "issued_by",
+        "token_value"
+      ],
+      "title": "SkillTokenResponse"
+    },
+    "#/components/schemas/SkillUserNameResponse": {
+      "properties": {
+        "family_name": {
+          "type": "string",
+          "title": "Family Name"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "middle_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Middle Name"
+        }
+      },
+      "type": "object",
+      "required": [
+        "family_name",
+        "name",
+        "middle_name"
+      ],
+      "title": "SkillUserNameResponse"
+    },
+    "#/components/schemas/TsamResponseSchema_SkillResponse_": {
+      "properties": {
+        "code": {
+          "$ref": "#/components/schemas/ResponseCode"
+        },
+        "data": {
+          "$ref": "#/components/schemas/tsam__assistant_management__skills__endpoints__http__schemas__SkillResponse"
+        },
+        "message": {
+          "type": "string",
+          "title": "Message"
+        },
+        "errors": {
+          "items": {
+            "$ref": "#/components/schemas/ErrorItem"
+          },
+          "type": "array",
+          "title": "Errors"
+        }
+      },
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "message"
+      ],
+      "title": "TsamResponseSchema[SkillResponse]"
+    },
+    "#/components/schemas/TsamResponseSchema_SkillTokenIssuanceResponse_": {
+      "properties": {
+        "code": {
+          "$ref": "#/components/schemas/ResponseCode"
+        },
+        "data": {
+          "$ref": "#/components/schemas/SkillTokenIssuanceResponse"
+        },
+        "message": {
+          "type": "string",
+          "title": "Message"
+        },
+        "errors": {
+          "items": {
+            "$ref": "#/components/schemas/ErrorItem"
+          },
+          "type": "array",
+          "title": "Errors"
+        }
+      },
+      "type": "object",
+      "required": [
+        "code",
+        "data",
+        "message"
+      ],
+      "title": "TsamResponseSchema[SkillTokenIssuanceResponse]"
+    },
+    "#/components/schemas/ValidationError": {
+      "properties": {
+        "loc": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "type": "array",
+          "title": "Location"
+        },
+        "msg": {
+          "type": "string",
+          "title": "Message"
+        },
+        "type": {
+          "type": "string",
+          "title": "Error Type"
+        },
+        "input": {
+          "title": "Input"
+        },
+        "ctx": {
+          "type": "object",
+          "title": "Context"
+        }
+      },
+      "type": "object",
+      "required": [
+        "loc",
+        "msg",
+        "type"
+      ],
+      "title": "ValidationError"
+    },
+    "#/components/schemas/tsam__assistant_management__skills__endpoints__http__schemas__SkillResponse": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "title": "Id"
+        },
+        "code": {
+          "type": "string",
+          "title": "Code"
+        },
+        "service_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Service Id"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "types": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "title": "Types"
+        },
+        "display_version": {
+          "type": "string",
+          "title": "Display Version"
+        },
+        "purpose": {
+          "type": "string",
+          "title": "Purpose"
+        },
+        "expected_result": {
+          "type": "string",
+          "title": "Expected Result"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Description"
+        },
+        "domain": {
+          "$ref": "#/components/schemas/SkillDomainResponse"
+        },
+        "team": {
+          "$ref": "#/components/schemas/SkillTeamResponse"
+        },
+        "contact": {
+          "$ref": "#/components/schemas/SkillContactResponse"
+        },
+        "author_user_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Author User Id"
+        },
+        "limitations": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Limitations"
+        },
+        "comments": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Comments"
+        },
+        "related_materials": {
+          "items": {
+            "$ref": "#/components/schemas/SkillRelatedMaterialSchema"
+          },
+          "type": "array",
+          "title": "Related Materials"
+        },
+        "connection": {
+          "anyOf": [
+            {
+              "$ref": "#/components/schemas/SkillConnectionSchema"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "intents": {
+          "items": {
+            "$ref": "#/components/schemas/SkillIntentResponse"
+          },
+          "type": "array",
+          "title": "Intents"
+        },
+        "tokens": {
+          "items": {
+            "$ref": "#/components/schemas/SkillTokenResponse"
+          },
+          "type": "array",
+          "title": "Tokens"
+        },
+        "status": {
+          "$ref": "#/components/schemas/SkillStatus"
+        },
+        "training": {
+          "type": "string",
+          "title": "Training"
+        },
+        "training_eta": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Training Eta"
+        },
+        "autotest": {
+          "type": "string",
+          "title": "Autotest"
+        },
+        "autotest_note": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Autotest Note"
+        },
+        "version": {
+          "type": "integer",
+          "title": "Version"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Created At"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Updated At"
+        },
+        "checks": {
+          "items": {
+            "$ref": "#/components/schemas/SkillCheckResponse"
+          },
+          "type": "array",
+          "title": "Checks"
+        }
+      },
+      "type": "object",
+      "required": [
+        "id",
+        "code",
+        "service_id",
+        "name",
+        "types",
+        "display_version",
+        "purpose",
+        "expected_result",
+        "description",
+        "domain",
+        "team",
+        "contact",
+        "author_user_id",
+        "limitations",
+        "comments",
+        "related_materials",
+        "connection",
+        "intents",
+        "tokens",
+        "status",
+        "training",
+        "training_eta",
+        "autotest",
+        "autotest_note",
+        "version",
+        "created_at",
+        "updated_at",
+        "checks"
+      ],
+      "title": "SkillResponse"
+    }
+  },
+  "securitySchemes": {
+    "AdminToken": {
+      "type": "apiKey",
+      "description": "Admin-service token. Supply both AdminToken and AccessToken as raw tokens.",
+      "in": "header",
+      "name": "X-Admin-Token"
+    },
+    "AccessToken": {
+      "type": "apiKey",
+      "description": "OpenID access token. Supply both AdminToken and AccessToken as raw tokens.",
+      "in": "header",
+      "name": "X-Access-Token"
+    }
+  },
+  "rootSecurity": null
+}

@@ -1,0 +1,24 @@
+{
+  "sourceId": "wiki-250781168",
+  "revision": 1,
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/250781168/",
+  "retrievedAt": "2026-10-19T08:24:54.988Z",
+  "version": {
+    "number": 8,
+    "when": "2026-10-08T18:31:40.254+08:00"
+  },
+  "content": "content.json",
+  "sha256": "cd74e398e690d48e3da571a6c2adf02d8c755856948d98747b8d447ad628244d",
+  "format": "selected-full-body-view-and-storage",
+  "provenance": "Parent browser Confluence read-only GET; exact authorized-page tool result recovered from local parent transcript, only that packet persisted. No session credentials/transcript dump saved. Full body strings retained inertly. Root r2 links.txt line42 establishes discovery.",
+  "attachments": {
+    "retrievedAt": "2026-10-19T08:24:09.933Z",
+    "status": 200,
+    "start": 0,
+    "limit": 100,
+    "size": 0,
+    "next": null,
+    "results": []
+  },
+  "limitations": "Page decision/status prose is documentary evidence, not automatic precedence or implementation proof. First names and source-attributed statements retained only within relevant body. No child links visited. Body and index obtained in separate reads; version8 observed in both."
+}

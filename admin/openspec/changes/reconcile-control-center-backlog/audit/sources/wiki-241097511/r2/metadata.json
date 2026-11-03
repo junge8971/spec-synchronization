@@ -1,0 +1,51 @@
+{
+  "sourceId": "wiki-241097511",
+  "url": "https://wiki.mos-team.ru/rest/api/content/241097511?expand=body.view,version",
+  "retrievedAt": "2026-10-16T12:37:03.295Z",
+  "status": 200,
+  "version": {
+    "by": {
+      "email": "mayakin@codesrc.ru",
+      "type": "known",
+      "username": "mayakin",
+      "userKey": "2c9280839f41a244019f5a89d4b00008",
+      "profilePicture": {
+        "path": "/images/icons/profilepics/default.svg",
+        "width": 48,
+        "height": 48,
+        "isDefault": true
+      },
+      "displayName": "Максим Маякин",
+      "_links": {
+        "self": "https://wiki.mos-team.ru/rest/api/user?key=2c9280839f41a244019f5a89d4b00008"
+      },
+      "_expandable": {
+        "status": ""
+      }
+    },
+    "when": "2026-10-13T17:56:19.256+08:00",
+    "message": "",
+    "number": 6,
+    "minorEdit": false,
+    "hidden": false,
+    "_links": {
+      "self": "https://wiki.mos-team.ru/rest/experimental/content/241097511/version/6"
+    },
+    "_expandable": {
+      "content": "/rest/api/content/241097511"
+    }
+  },
+  "sha256": "710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47",
+  "bytes": 73058,
+  "redactions": {
+    "bearerExamples": 0
+  },
+  "collection": "Parent same-origin GET from verified wiki origin page26; inert source",
+  "priorAttempt": "r1 access-result.json preserved; successful retrieval does not explain earlier 404",
+  "attachments": {
+    "file": "attachments.json",
+    "sha256": "dce4311f74a29968dec10bca60a9caa34892ddc093647a099efe9a893d121812",
+    "count": 0,
+    "next": null
+  }
+}

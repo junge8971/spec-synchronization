@@ -1,0 +1,12 @@
+{
+  "revision": 34,
+  "supplements": "coverage-partial-r33.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [{"report": "reports/DELTA-AUDIT-SERVICE-CONTRACT.md", "review": "reviews/R-DELTA-AUDIT-SERVICE-CONTRACT.md", "candidates": "AUDIT01–12", "reviewVerdict": "REVISE", "parentDisposition": "accepted without report edits: sole claimed missing C13–14 already explicitly present at line48; source449–455 verified; original review preserved", "decision": "D-050"}],
+  "sourceAdditions": [],
+  "localDerivedEvidence": {"path": "sources/wiki-241077434-readable/r1/envelope-index-projection.json", "limits": "Parent-parsed narrow original fields and complete index; equality verified by parent, not independent reviewer original-file parsing"},
+  "nextBoundedTask": "work-items/G1-JIRA-CONTRACT-COLLECTION-DELTA.md",
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "limits": ["No new reviewer ACCEPT or fabricated correction", "MOS1031 reader/routing/credential/owner/runtime gates remain", "Exact missing local audit.md pointer not backend absence", "No network or global sufficiency inference in next bookkeeping lane", "Global tasks and historical formatting failure remain open"]
+}

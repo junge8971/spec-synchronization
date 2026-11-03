@@ -1,0 +1,27 @@
+
+ RUN  v4.1.11 /home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests
+
+ ❯ app/optional/feedback/ui/editor/questions/questions.test.tsx (10 tests | 1 failed) 13234ms
+   × prevents a 101st question and enables adding after deletion 5617ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  app/optional/feedback/ui/editor/questions/questions.test.tsx > prevents a 101st question and enables adding after deletion
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ app/optional/feedback/ui/editor/questions/questions.test.tsx:294:1
+    292| });
+    293|
+    294| it('prevents a 101st question and enables adding after deletion', asyn…
+       | ^
+    295|   const questions = Array.from({ length: 100 }, (_, index) => ({
+    296|     title: `Вопрос ${index + 1}`,
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 251 passed (252)
+      Tests  1 failed | 2573 passed (2574)
+   Start at  18:23:04
+   Duration  389.00s (transform 8.97s, setup 79.67s, import 64.07s, tests 379.58s, environment 212.78s)
+

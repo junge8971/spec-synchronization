@@ -1,0 +1,31 @@
+{
+  "key": "MOS-1399",
+  "url": "https://task.mos-team.ru/browse/MOS-1399",
+  "status": 200,
+  "retrievedAt": "2026-10-19T08:52:34.018Z",
+  "summary": "[B] Актуализировать справочники для справочников",
+  "description": "h2. Описание\r\n\r\nДобавить {{ref\\_dictionary\\_types}} и {{ref\\_check\\_types}} в раздел \"Справочники\" по согласованной модели данных.\r\n\r\nh2. Что сделать\r\n\r\n* Создать таблицы по общей структуре справочных значений с первичным ключом {{code}}.\r\n* Заполнить {{ref\\_dictionary\\_types}} значениями:\r\n** {{system}}, \"Системный\";\r\n** {{informational}}, \"Информационный\";\r\n** {{user}}, \"Пользовательский\".\r\n* Заполнить {{ref\\_check\\_types}} 14 типами проверок из модели раздела.\r\n* Связать {{ref\\_dictionary.group}} внешним ключом с {{ref\\_dictionary\\_types.code}}. Добавить привязку {{group}} в метаданные.\r\n* Зарегистрировать оба справочника как системные в централизованном реестре.\r\n* Добавить в ответ {{GET /api/control/api/v1/managed\\-resources/catalogs/lookups/catalogs}} наборы {{ref\\_dictionary\\_types}} и {{ref\\_check\\_types}}.\r\n* Подготовить Alembic-миграцию и обновить OpenAPI и документацию API.\r\n\r\nh2. Критерии приёмки\r\n\r\n* Справочники содержат 3 типа влияния и 14 типов проверок с кодами и названиями из модели.\r\n* Миграция сохраняет существующие значения {{group}}. База отклоняет неизвестный тип влияния.\r\n* API возвращает оба справочника через lookup и позволяет просматривать и экспортировать их в централизованном реестре.\r\n* API запрещает добавлять, изменять и удалять значения этих справочников.\r\n* Метаданные содержат привязку {{group}} к {{ref\\_dictionary\\_types}}.\r\n\r\n",
+  "issueStatus": "Hold",
+  "updated": "2026-10-16T19:23:59.073+0800",
+  "attachments": [],
+  "subtasks": [],
+  "comments": {
+    "startAt": 0,
+    "maxResults": 2,
+    "total": 2,
+    "items": [
+      {
+        "id": "1131561",
+        "created": "2026-10-15T18:10:07.057+0800",
+        "updated": "2026-10-15T18:10:07.057+0800",
+        "body": "[Automated merge-request mention omitted: personal attribution and out-of-scope repository links; not delivery evidence.]"
+      },
+      {
+        "id": "1131702",
+        "created": "2026-10-15T19:28:04.530+0800",
+        "updated": "2026-10-15T19:28:04.530+0800",
+        "body": "Готово, тестировать вместе с фронтендом"
+      }
+    ]
+  }
+}

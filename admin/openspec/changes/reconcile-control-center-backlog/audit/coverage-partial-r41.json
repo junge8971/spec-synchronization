@@ -1,0 +1,12 @@
+{
+  "revision": 41,
+  "supplements": "coverage-partial-r40.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "sourceAdditions": [],
+  "acceptedChains": [{"report": "reports/G1-DISPOSITION-RECEIPT.md", "review": "reviews/R-G1-DISPOSITION-RECEIPT.md", "verdict": "ACCEPT", "decision": "D-058", "scope": "Bounded receipt and qualified acquisition/provenance subcriterion, not task2.4 overall/source sufficiency/G1 closure"}],
+  "openExceptions": ["E12 accepted Jira inventory to later sources crosswalk", "E12a exact nested-subtask attachment dispositions", "E13 saved-body discovery scope boundary"],
+  "nextWorkItem": "work-items/G1-INVENTORY-SOURCE-CROSSWALK.md",
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "limits": ["r2 positive docs-derived chain; original r1 discovery remains independently unverified", "Explicit no-body reasons not semantic acceptance or blanket exclusion", "No fresh acquisition or primary graph census authorized", "Downstream owner/runtime/product gates and historical formatting issue remain"]
+}

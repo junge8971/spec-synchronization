@@ -1,0 +1,63 @@
+нтрактреестрадоменовикаталоганавыков-Успешныйответ.5">Успешный ответ</h4><p>HTTP 200 OK. Возвращается полная модель Skill из раздела 1.3.</p><h4 id="APIконтрактреестрадоменовикаталоганавыков-Ошибки.5">Ошибки</h4><ul><li><code>400 INVALID_ARGUMENT</code>.</li><li><code>401 UNAUTHENTICATED</code>.</li><li><code>403 FORBIDDEN</code>, операция запрещена внешней проверкой доступа.</li><li><code>404 NOT_FOUND</code>, навык не найден или недоступен пользователю.</li></ul><h3 id="APIконтрактреестрадоменовикаталоганавыков-2.7Создатьнавык">2.7 Создать навык</h3><p><code>POST /api/control/api/skills/v1/skills</code></p><p>Доступ: требуется действующая прикладная сессия. Домен должен принадлежать выбранной команде, если иная модель владения не будет согласована.</p><h4 id="APIконтрактреестрадоменовикаталоганавыков-Заголовки.2">Заголовки</h4><p>Заголовок <code>Idempotency-Key</code> обязателен.</p><h4 id="APIконтрактреестрадоменовикаталоганавыков-Телозапроса.2">Тело запроса</h4><p>Минимальное тело запроса:</p><pre><code class="language-json">{
+  &quot;name&quot;: &quot;Оплата городских услуг&quot;,
+  &quot;purpose&quot;: &quot;Помочь пользователю найти и оплатить начисления&quot;,
+  &quot;expected_result&quot;: &quot;Пользователь получает ссылку или подтверждение оплаты&quot;,
+  &quot;domain_id&quot;: &quot;01991b3a-7c10-7000-8000-000000000041&quot;,
+  &quot;zones&quot;: [&quot;authenticated&quot;],
+  &quot;team_id&quot;: &quot;f24f0af5-e3ea-45e7-856d-b950fb94bd03&quot;,
+  &quot;contact_user_id&quot;: &quot;52f411aa-977b-4d26-9a5b-d896ca9c1e64&quot;
+}
+</code></pre><p>Полное тело может дополнительно содержать:</p><pre><code class="language-json">{
+  &quot;service_id&quot;: &quot;city-payments&quot;,
+  <code>&quot;types&quot;: [&quot;transactional&quot;],</code>
+  &quot;description&quot;: &quot;Работа с начислениями и платежами&quot;,
+  &quot;limitations&quot;: &quot;Недоступна оплата начислений со статусом обжалования&quot;,
+  &quot;comments&quot;: &quot;Для первого запуска доступен один платёж за запрос&quot;,
+  &quot;related_materials&quot;: [
+    {
+      &quot;title&quot;: &quot;Описание сценария&quot;,
+      &quot;url&quot;: &quot;https://docs.example.internal/city-payments&quot;
+    }
+  ],
+  &quot;connection&quot;: {
+    &quot;endpoint&quot;: &quot;https://skills.example.internal/city-payments&quot;,
+    &quot;contract_version&quot;: &quot;2&quot;,
+    &quot;auth_required&quot;: true,
+    &quot;auth_type&quot;: &quot;transport_token&quot;,
+    &quot;parameters&quot;: []
+  }
+}
+</code></pre><h4 id="APIконтрактреестрадоменовикаталоганавыков-Успешныйответ.6">Успешный ответ</h4><p>HTTP 201 Created. Возвращается полная модель Skill с <code>version = 1</code>.</p><h4 id="APIконтрактреестрадоменовикаталоганавыков-Ошибки.6">Ошибки</h4><ul><li><code>400 INVALID_ARGUMENT</code>, передан некорректный JSON.</li><li><code>422 VALIDATION_ERROR</code>, поля запроса не прошли проверку.</li><li><code>401 UNAUTHENTICATED</code>.</li><li><code>403 FORBIDDEN</code>, операция запрещена внешней проверкой доступа.</li><li><code>404 NOT_FOUND</code>, домен, контактный пользователь или команда не найдены либо недоступны.</li><li><code>409 SKILL_SERVICE_ID_ALREADY_EXISTS</code>, если <code>service_id</code> должен быть уникальным.</li><li><code>409 IDEMPOTENCY_KEY_REUSED</code>.</li><li><code>409 DOMAIN_TEAM_MISMATCH</code>, домен не принадлежит выбранной команде.</li></ul><p>Пример ошибки связи домена и команды:</p><pre><code class="language-json">{
+  &quot;code&quot;: &quot;DOMAIN_TEAM_MISMATCH&quot;,
+  &quot;data&quot;: null,
+  &quot;message&quot;: &quot;Выбранный домен не принадлежит команде навыка&quot;,
+  &quot;errors&quot;: [
+    {
+      &quot;field&quot;: &quot;/domain_id&quot;,
+      &quot;code&quot;: &quot;INVALID_RELATION&quot;,
+      &quot;message&quot;: &quot;Выберите домен команды team-city-services&quot;
+    }
+  ]
+}
+</code></pre><h3 id="APIконтрактреестрадоменовикаталоганавыков-2.8Изменитькарточкунавыка">2.8 Изменить карточку навыка</h3><p><code>PATCH /api/control/api/skills/v1/skills/{skill_id}</code></p><p>Доступ: требуется действующая прикладная сессия. Проверки области видимости определяются отдельным авторизационным контрактом.</p><h4 id="APIконтрактреестрадоменовикаталоганавыков-Заголовки.3">Заголовки</h4><p>Заголовок <code>Idempotency-Key</code> обязателен.</p><h4 id="APIконтрактреестрадоменовикаталоганавыков-Параметрыпути.3">Параметры пути</h4><div class="table-wrap"><table class="wrapped confluenceTable"><thead class=""><tr class=""><th class="confluenceTh">Параметр</th><th class="confluenceTh">Тип</th><th class="confluenceTh">Описание</th></tr></thead><tbody class=""><tr class=""><td class="confluenceTd"><code>skill_id</code></td><td class="confluenceTd">UUIDv7</td><td class="confluenceTd">Идентификатор навыка</td></tr></tbody></table></div><h4 id="APIконтрактреестрадоменовикаталоганавыков-Телозапроса.3">Тело запроса</h4><pre><code class="language-json">{
+  &quot;expected_version&quot;: 1,
+  &quot;purpose&quot;: &quot;Помочь пользователю проверить и оплатить городские начисления&quot;,
+  &quot;limitations&quot;: &quot;Недоступна оплата начислений со статусом обжалования&quot;,
+  &quot;connection&quot;: {
+    &quot;endpoint&quot;: &quot;https://skills.example.internal/city-payments/v2&quot;,
+    &quot;contract_version&quot;: &quot;2&quot;,
+    &quot;auth_required&quot;: true,
+    &quot;auth_type&quot;: &quot;transport_token&quot;,
+    &quot;parameters&quot;: [
+      {
+        &quot;key&quot;: &quot;show_debt_details&quot;,
+        &quot;title&quot;: &quot;Показывать детали начисления&quot;,
+        &quot;type&quot;: &quot;select&quot;,
+        &quot;required&quot;: false,
+        &quot;default&quot;: &quot;Показывать&quot;,
+        &quot;options&quot;: [&quot;Показывать&quot;, &quot;Скрывать&quot;]
+      }
+    ]
+  }
+}
+</code></pre><h4 id="APIконтрактреестрадоменовикаталоганавыков-Изменяемыеполя.1">Изменяемые поля</h4><ul><li><code>service_id</code>;</li><li><code>name</code>;</li><li><code>types</co

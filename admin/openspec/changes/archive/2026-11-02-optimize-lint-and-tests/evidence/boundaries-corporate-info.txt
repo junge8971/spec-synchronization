@@ -1,0 +1,4 @@
+{"type":"error","name":35,"displayName":"YN0035","indent":"","data":"Package not found"}
+{"type":"error","name":35,"displayName":"YN0035","indent":"","data":"  Response Code: 404 (Not Found)"}
+{"type":"error","name":35,"displayName":"YN0035","indent":"","data":"  Request Method: GET"}
+{"type":"error","name":35,"displayName":"YN0035","indent":"","data":"  Request URL: https://yarnpkg.mos-team.ru/@boundaries%2feslint-plugin"}

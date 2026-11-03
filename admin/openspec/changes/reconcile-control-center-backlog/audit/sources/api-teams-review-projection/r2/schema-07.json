@@ -1,0 +1,23 @@
+{
+  "pointer": "#/components/schemas/PaginatedResponseSchema_list_TeamResponse__",
+  "value": {
+    "properties": {
+      "items": {
+        "items": {
+          "$ref": "#/components/schemas/TeamResponse"
+        },
+        "type": "array",
+        "title": "Items"
+      },
+      "pagination": {
+        "$ref": "#/components/schemas/PaginationDto"
+      }
+    },
+    "type": "object",
+    "required": [
+      "items",
+      "pagination"
+    ],
+    "title": "PaginatedResponseSchema[list[TeamResponse]]"
+  }
+}

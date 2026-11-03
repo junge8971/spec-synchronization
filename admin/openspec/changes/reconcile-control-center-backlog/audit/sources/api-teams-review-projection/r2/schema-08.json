@@ -1,0 +1,36 @@
+{
+  "pointer": "#/components/schemas/PaginationDto",
+  "value": {
+    "properties": {
+      "limit": {
+        "type": "integer",
+        "title": "Limit"
+      },
+      "offset": {
+        "type": "integer",
+        "title": "Offset"
+      },
+      "current_page": {
+        "type": "integer",
+        "title": "Current Page"
+      },
+      "total_items": {
+        "type": "integer",
+        "title": "Total Items"
+      },
+      "total_pages": {
+        "type": "integer",
+        "title": "Total Pages"
+      }
+    },
+    "type": "object",
+    "required": [
+      "limit",
+      "offset",
+      "current_page",
+      "total_items",
+      "total_pages"
+    ],
+    "title": "PaginationDto"
+  }
+}

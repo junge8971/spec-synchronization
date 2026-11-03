@@ -1,0 +1,25 @@
+{
+  "approval": "Operator explicitly confirmed all four revisions with да",
+  "files": [
+    {
+      "path": "openspec/changes/mos-1018-skill-phrase-conflicts/proposal.md",
+      "sha256": "9afa3083fcead3b03c892d3fce3f7aeea2e0a802a4d1e4c470f4d3c2332215f5",
+      "backup": "openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-MOS-1018/before/proposal.md"
+    },
+    {
+      "path": "openspec/changes/mos-1018-skill-phrase-conflicts/design.md",
+      "sha256": "339d8a7a338c3a9937c8a252d2c340e188e5328a3c414bf9c2ad8325e6f87b0f",
+      "backup": "openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-MOS-1018/before/design.md"
+    },
+    {
+      "path": "openspec/changes/mos-1018-skill-phrase-conflicts/tasks.md",
+      "sha256": "ee02382ebeafe2f35b9f9b646e25934b1b4b17aac9b8f033a1063ae9d3fe63ef",
+      "backup": "openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-MOS-1018/before/tasks.md"
+    },
+    {
+      "path": "openspec/changes/mos-1018-skill-phrase-conflicts/specs/skill-phrase-conflicts/spec.md",
+      "sha256": "499103ce10274ddf12eed84974757f5a169f21e17f55c8cf83e5a888ebc17b6c",
+      "backup": "openspec/changes/reconcile-control-center-backlog/audit/publication/WRITE-MOS-1018/before/specs/skill-phrase-conflicts/spec.md"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+
+    &quot;zones&quot;: [&quot;authenticated&quot;, &quot;anonymous&quot;],
+    &quot;skills_count&quot;: 12,
+    &quot;version&quot;: 3,
+    &quot;created_at&quot;: &quot;2026-09-01T09:00:00.000Z&quot;,
+    &quot;updated_at&quot;: &quot;2026-09-07T10:15:00.000Z&quot;
+  },
+  &quot;message&quot;: &quot;&quot;,
+  &quot;errors&quot;: []
+}
+</code></pre><h4 id="APIконтрактреестрадоменовикаталоганавыков-Ошибки.1">Ошибки</h4><ul><li><code>400 INVALID_ARGUMENT</code>, идентификатор невалиден.</li><li><code>401 UNAUTHENTICATED</code>.</li><li><code>403 FORBIDDEN</code>, операция запрещена внешней проверкой доступа.</li><li><code>404 NOT_FOUND</code>, домен не найден или недоступен пользователю.</li></ul><p>Точное различие между <code>403</code> и маскировкой существования объекта через <code>404</code> определяется авторизационным контрактом.</p><h3 id="APIконтрактреестрадоменовикаталоганавыков-2.3Создатьдомен">2.3 Создать домен</h3><p><code>POST /api/control/api/skills/v1/domains</code></p><p>Доступ: требуется действующая прикладная сессия. Правило доступности <code>team_id</code> определяется отдельным авторизационным контрактом.</p><h4 id="APIконтрактреестрадоменовикаталоганавыков-Заголовки">Заголовки</h4><p>Заголовок <code>Idempotency-Key</code> обязателен.</p><h4 id="APIконтрактреестрадоменовикаталоганавыков-Телозапроса">Тело запроса</h4><pre><code class="language-json">{
+  &quot;name&quot;: &quot;Городские сервисы&quot;,
+  &quot;description&quot;: &quot;Навыки городских услуг и обращений&quot;,
+  &quot;owner&quot;: &quot;ДИТ, управление городских сервисов&quot;,
+  &quot;team_id&quot;: &quot;f24f0af5-e3ea-45e7-856d-b950fb94bd03&quot;,
+  &quot;api_url&quot;: &quot;https://skills.example.internal&quot;,
+  &quot;zones&quot;: [&quot;authenticated&quot;, &quot;anonymous&quot;]
+}
+</code></pre><p>Все поля обязательны.</p><h4 id="APIконтрактреестрадоменовикаталоганавыков-Успешныйответ.2">Успешный ответ</h4><p>HTTP 201 Created. В <code>data</code> возвращается полная модель Domain.</p><pre><code class="language-json">{
+  &quot;code&quot;: &quot;SUCCESS&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: &quot;01991b3a-7c10-7000-8000-000000000041&quot;,
+    &quot;name&quot;: &quot;Городские сервисы&quot;,
+    &quot;description&quot;: &quot;Навыки городских услуг и обращений&quot;,
+    &quot;owner&quot;: &quot;ДИТ, управление городских сервисов&quot;,
+    &quot;team&quot;: {
+      &quot;id&quot;: &quot;f24f0af5-e3ea-45e7-856d-b950fb94bd03&quot;,
+      &quot;name&quot;: &quot;Городские сервисы&quot;
+    },
+    &quot;api_url&quot;: &quot;https://skills.example.internal&quot;,
+    &quot;zones&quot;: [&quot;authenticated&quot;, &quot;anonymous&quot;],
+    &quot;skills_count&quot;: 0,
+    &quot;version&quot;: 1,
+    &quot;created_at&quot;: &quot;2026-09-07T12:00:00.000Z&quot;,
+    &quot;updated_at&quot;: &quot;2026-09-07T12:00:00.000Z&quot;
+  },
+  &quot;message&quot;: &quot;Домен создан&quot;,
+  &quot;errors&quot;: []
+}
+</code></pre><h4 id="APIконтрактреестрадоменовикаталоганавыков-Ошибки.2">Ошибки</h4><ul><li><code>400 INVALID_ARGUMENT</code>, передан некорректный JSON.</li><li><code>422 VALIDATION_ERROR</code>, поля запроса не прошли проверку.</li><li><code>401 UNAUTHENTICATED</code>.</li><li><code>403 FORBIDDEN</code>, операция запрещена внешней проверкой доступа.</li><li><code>404 NOT_FOUND</code>, <span style="color:var(--ds-text,#172B4D);">команда не найдена либо недоступна.</span></li><li><code>409 DOMAIN_NAME_ALREADY_EXISTS</code>, нормализованное имя занято.</li><li><code>409 DOMAIN_API_URL_ALREADY_EXISTS</code>, нормализованный адрес занят.</li><li><code>409 IDEMPOTENCY_KEY_REUSED</code>, ключ повторно использован с другим телом.</li></ul><p>Пример конфликта:</p><pre><code class="language-json">{
+  &quot;code&quot;: &quot;DOMAIN_API_URL_ALREADY_EXISTS&quot;,
+  &quot;data&quot;: null,
+  &quot;message&quot;: &quot;Домен с таким API-адресом уже существует&quot;,
+  &quot;errors&quot;: [
+    {
+      &quot;field&quot;: &quot;/api_url&quot;,
+      &quot;code&quot;: &quot;NOT_UNIQUE&quot;,
+      &quot;message&quot;: &quot;Укажите другой адрес&quot;
+    }
+  ]
+}
+</code></pre><h3 id="APIконтрактреестрадоменовикаталоганавыков-2.4Изменитьдомен">2.4 Изменить домен</h3><p><code>PATCH /api/control/api/skills/v1/domains/{domain_id}</code></p><p>Доступ: требуется действующая прикладная сессия. Правила изменения владельца и команды определяются отдельным авторизационным контрактом.</p><h4 id="APIконтрактреестрадоменовикаталоганавыков-Заголовки.1">Заголовки</h4><p>Заголовок <code>Idempotency-Key</code> обязателен.</p><h4 id="APIконтрактреестрадоменовикаталоганавыков-Параметрыпути.1">Параметры пути</h4><div class="table-wrap"><table class="wrapped confluenceTable"><thead class=""><tr class=""><th class="confluenceTh">Параметр</th><th class="confluenceTh">Тип</th><th class="confluenceTh">Описание</th></tr></thead><tbody class=""><tr class=""><td class="confluenceTd"><code>domain_id</code></td><td class="confluenceTd">UUIDv7</td><td class="confluenceTd">Идентификатор домена</td></tr></tbody></table></div><h4 id="APIконтрактреестрадоменовикаталоганавыков-Телозапроса.1">Тело запроса</h4><p>Тело запроса содержит только изменяемые поля и обязательный <code>expected_version</code>:</p><pre><code class="language-json">{
+  &quot;expected_version&quot;: 3,
+  &quot;description&quot;: &quot;Навыки городских услуг, обращений и записи&quot;,
+  &quot;owner&quot;: &quot;Департамент городских сервисов&quot;,
+  &quot;zones&quot;: [&quot;authenticated&quot;]
+}
+</code></pre><h4 id="APIконтрактреестрадоменовикаталоганавыков-Изменяемыеполя">Изменяемые поля</h4><ul><li><code>name</code>;</li><li><code>description</code>;</li><li><code>owner</code>;</li><li><code>team_id</code>;</li><li><code>api_url</code>;</li><li><code>zones</code>.</li></ul><h4 id="APIконтрактреестрадоменовикаталоганавыков-Успешныйответ.3">Успешный ответ</h4><p>HTTP 200 OK. Возвращается полная модель Domain с увеличенной версией.</p><h4 id="APIконтрактреестрадоменовикаталог

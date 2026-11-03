@@ -1,0 +1,135 @@
+{
+  "source": "sources/api-live/r2/content.json",
+  "sourceSha256RecomputedByParent": "ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993",
+  "purpose": "Reviewer request df5bfd84-f6f1-4c5f-8bd0-179be40cfcd6; exactly eight selected operations and recursively followed local schema refs",
+  "operationCount": 8,
+  "schemaCount": 29,
+  "refEdgeCount": 54,
+  "files": {
+    "operations.json": {
+      "sha256": "8fe186aeee40bba1d47309b79a7d8c061e9ab85de7112bc6d6194dd2abe0b51c",
+      "lines": 602
+    },
+    "schema-01.json": {
+      "sha256": "be7cf168f4893e6e99163b9680cb9fedc58938a86bad4103a6b187cb111c9c98",
+      "lines": 27
+    },
+    "schema-02.json": {
+      "sha256": "5436ac3b764830feaab769adc1368ca9510724b4db6ffe66c5cf5fdd9cc31040",
+      "lines": 32
+    },
+    "schema-03.json": {
+      "sha256": "a64558841c796d32541d735ee1425e28666bdcb6ec94ac7c2d288d0de94d0e31",
+      "lines": 51
+    },
+    "schema-04.json": {
+      "sha256": "d1c62ddeabb6491fd00d37e5136ebba39d1389800b7d2ed34cfe8590ba323966",
+      "lines": 32
+    },
+    "schema-05.json": {
+      "sha256": "64b7e21beff49ca71684cddb77b6d0cc444fc9f9e8b340ccaf56d1e89f5e8997",
+      "lines": 16
+    },
+    "schema-06.json": {
+      "sha256": "ffcd480e525452abad6d5b7b4b52490fa05d96e077b9d4b39806067256ac9bda",
+      "lines": 23
+    },
+    "schema-07.json": {
+      "sha256": "2bf8c3d50e9e7cc2addfbd5fb0c74e6e9e82c5994c6f3649ccbd8c3536cd430a",
+      "lines": 23
+    },
+    "schema-08.json": {
+      "sha256": "946aeaed2c09b84fcfca9023792ff5fbf94297ccd6b939c7c01e113dfb525140",
+      "lines": 36
+    },
+    "schema-09.json": {
+      "sha256": "959f2c735cbb8675aa27cbecb63eaf6e7386531856834ce03ca1ba279a7df59f",
+      "lines": 18
+    },
+    "schema-10.json": {
+      "sha256": "8f1a1d09d62ec9cf642433329a13ce8093181a2dfb6fcaee784b558d66f4edff",
+      "lines": 16
+    },
+    "schema-11.json": {
+      "sha256": "e52d37229f8bf85209ce7b8b1eda5665e4b73100feffdc12c3184abd5e9ef837",
+      "lines": 6
+    },
+    "schema-12.json": {
+      "sha256": "88c796e7097c554f365e7b98bd9750819c5b8d05658e852d1e5e33c805ee9cb4",
+      "lines": 16
+    },
+    "schema-13.json": {
+      "sha256": "bfe9f15e439dc03462b3c873d6ab65783c2d8350b03b9709acd7e6e9368f61c2",
+      "lines": 27
+    },
+    "schema-14.json": {
+      "sha256": "c6c9a918e6f20a81595d6a0b3c24a1e6a2a710af940f29473b1fd16d4e1b0cbd",
+      "lines": 26
+    },
+    "schema-15.json": {
+      "sha256": "add827a1e2a37cee3672ea3b186e2654f1cecdd4dbab6cb4111c38a73fdcb819",
+      "lines": 43
+    },
+    "schema-16.json": {
+      "sha256": "a596a4d16c91befa5d0c4829498ae66ae6d55eecaac786e3f2be98759505b7ee",
+      "lines": 11
+    },
+    "schema-17.json": {
+      "sha256": "64105bd3ffadbb0de1508dee2decc42dfbc8b052fb52892c86de8ad76c990361",
+      "lines": 44
+    },
+    "schema-18.json": {
+      "sha256": "933d7309f446c2cea36bf3f0ba18790413fbd74a855900fba632cbbf2c0dd5a8",
+      "lines": 76
+    },
+    "schema-19.json": {
+      "sha256": "4f7f73c0043c0cd33a2e9fa30168def717375c9b7587af99ac25d5a0188b6974",
+      "lines": 22
+    },
+    "schema-20.json": {
+      "sha256": "4c5f209afe6b78daed12e733f5d67d1d304e74fc1e529a0364f8d2e5c0d0cd64",
+      "lines": 26
+    },
+    "schema-21.json": {
+      "sha256": "fff533046fc7905f267a87668473660dc6f9983b2f5192205e2b66ab0d9d2d2e",
+      "lines": 31
+    },
+    "schema-22.json": {
+      "sha256": "59abf99b0a46b30c56fc2c119addf207d167eb05658d4b08193b81bd54376738",
+      "lines": 31
+    },
+    "schema-23.json": {
+      "sha256": "4ce8bce5b0e9fc94096c589069f7422e8eb87caf56e33b31e23587c19f3378d0",
+      "lines": 31
+    },
+    "schema-24.json": {
+      "sha256": "6228e1dd4c489e12344932d1604a8a055cfe6f23496a16a4cfae898c975d5132",
+      "lines": 31
+    },
+    "schema-25.json": {
+      "sha256": "cdc8984909a7a8ea7b19660ef4980e1ec832b9be6a7e4bffb27929f303618b1a",
+      "lines": 31
+    },
+    "schema-26.json": {
+      "sha256": "a4c086ad5aba91c1821b8fbf590cbf7d2ca5d2ac7b69e5552fab59b19ed27467",
+      "lines": 31
+    },
+    "schema-27.json": {
+      "sha256": "ec62a47260eda2bca6052a4c1eaaec97375deb33175c131723961ce2b652d63c",
+      "lines": 22
+    },
+    "schema-28.json": {
+      "sha256": "006a742fa693f8ecd54532f292fb0fdd0984e26678b19bf6a1d0a3befc974d34",
+      "lines": 32
+    },
+    "schema-29.json": {
+      "sha256": "80f6ca07f9a6925d5f2552f70869db8fcb9c19770703d81ba244e9f27e6f45a1",
+      "lines": 43
+    },
+    "closure.json": {
+      "sha256": "91bcb6a14b38ec4cc54d046612368d08ffdb08eead11c65ad04f79aecd30022f",
+      "lines": 339
+    }
+  },
+  "limits": "Parent-generated inert parsed projection, not new acquisition or independent reviewer parse/hash. Full selected operation and schema objects preserved; pointers are JSON references into saved r2. Security scheme definitions are outside schema-ref closure; operation security arrays retained. No runtime/source execution, tokens/storage, network or whole-API semantic census."
+}

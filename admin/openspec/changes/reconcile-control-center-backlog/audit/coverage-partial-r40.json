@@ -1,0 +1,11 @@
+{
+  "revision": 40,
+  "supplements": "coverage-partial-r39.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "sourceAdditions": [],
+  "acceptedChains": [{"report": "reports/G1-REMAINING-OBLIGATIONS.md", "review": "reviews/R-G1-REMAINING-OBLIGATIONS.md", "verdict": "ACCEPT", "decision": "D-057", "scope": "Remaining-obligations recommendation only, not source sufficiency or G1 acceptance"}],
+  "nextWorkItem": "work-items/G1-DISPOSITION-RECEIPT.md",
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "limits": ["Actual criterion-specific receipt pending; tasks2.3/2.4/2.6 still open", "Finite13-target retention not all-discovered completeness", "Separate unread inventories, unvisited edges, selected-field limits and historical provenance remain explicit", "No new acquisition authority or automatic exclusions; source sufficiency is parent judgment after independent review", "No code/runtime acceptance; formatting gap remains"]
+}

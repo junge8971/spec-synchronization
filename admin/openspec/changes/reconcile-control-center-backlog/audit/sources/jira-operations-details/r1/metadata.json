@@ -1,0 +1,42 @@
+{
+  "sourceId": "jira-operations-details",
+  "retrievedAt": "2026-10-16T13:02:57.872Z",
+  "sha256": "ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f",
+  "bytes": 9933,
+  "redactions": {
+    "bearerExamples": 0
+  },
+  "collection": "parent verified-origin GET only; no embedded code executed",
+  "membership": "jira-hierarchy/r1 results0 members717/754/920/922/923",
+  "limitations": [
+    "custom fields and attachment bodies uncollected",
+    "publication not runtime or approval"
+  ],
+  "comments": [
+    {
+      "key": "MOS-717",
+      "count": 2,
+      "total": 2
+    },
+    {
+      "key": "MOS-754",
+      "count": 0,
+      "total": 0
+    },
+    {
+      "key": "MOS-920",
+      "count": 0,
+      "total": 0
+    },
+    {
+      "key": "MOS-922",
+      "count": 0,
+      "total": 0
+    },
+    {
+      "key": "MOS-923",
+      "count": 0,
+      "total": 0
+    }
+  ]
+}

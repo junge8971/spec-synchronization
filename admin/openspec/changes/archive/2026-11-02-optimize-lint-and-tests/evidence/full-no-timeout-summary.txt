@@ -1,0 +1,14 @@
+[
+  {
+    "phase": "vitest",
+    "exit": 0,
+    "wall_seconds": 343.502,
+    "log": "openspec/changes/optimize-lint-and-tests/evidence/full-no-timeout-vitest.txt"
+  },
+  {
+    "phase": "node",
+    "exit": 0,
+    "wall_seconds": 134.997,
+    "log": "openspec/changes/optimize-lint-and-tests/evidence/full-no-timeout-node.txt"
+  }
+]

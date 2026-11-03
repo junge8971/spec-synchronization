@@ -1,0 +1,13 @@
+{
+  "sourceId": "wiki-241097511",
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/241097511/",
+  "inclusionReason": "Explicit contract link in collected MOS-1018 description, reported in REQ-MOS-1018; skills/domain scope",
+  "method": "Parent browser same-origin read-only GET /rest/api/content/241097511?expand=body.view,version",
+  "httpStatus": 404,
+  "bodyCollected": false,
+  "interpretation": "Unavailable through this content API request; deletion, incorrect ID and permission masking are not distinguished. This does not establish absence of a business API.",
+  "provenance": "Parent chrome-devtools_evaluate_script result sourceId wiki-241097511, error 404, after requirements workflow 52399231-5efa-443c-94cf-b28bed080648",
+  "retrievedAt": null,
+  "timestampLimitation": "Failed collector branch returned no timestamp; no exact collection time invented.",
+  "nextAction": "Preserve access gap; use existing saved published OpenAPI separately. Do not traverse neighboring pages or treat this as product decision."
+}

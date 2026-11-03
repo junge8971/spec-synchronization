@@ -1,0 +1,32 @@
+{
+  "revision": 8,
+  "supplements": "coverage-partial-r7.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "chains": [
+    {
+      "issue": "remaining-journal-rows",
+      "report": "reports/JOURNAL-REMAINING-ROWS.md",
+      "review": "reviews/R-JOURNAL-REMAINING-ROWS.md",
+      "disposition": "D-025",
+      "scope": "Fifteen documentary routing units accepted without mandatory corrections; no implementation verification or policy selection"
+    }
+  ],
+  "priorCoverageDisposition": {
+    "journalRows2_4_5": "Documentary dispositions accepted under D-025. Together with D-024 all five saved data rows are assessed; downstream owner evidence, decisions and implementation mapping remain incomplete."
+  },
+  "collectionBlocker": {
+    "tool": "chrome-devtools_list_pages",
+    "result": "Request timed out on initial discovery and one bounded retry",
+    "effect": "Unable to rediscover browser pages for next authorized read-only collection; no new source requests performed, stale page IDs not used",
+    "nextSources": ["MOS-1321", "MOS-1399", "MOS-1386"],
+    "resumeCondition": "Restore browser MCP connectivity, then rediscover and origin-guard the Jira page before reading existing scoped members"
+  },
+  "limitations": [
+    "General body/attachment collection and ambiguous-page relevance remain incomplete",
+    "Journal coverage is documentary, not runtime or implementation acceptance",
+    "No new source revision captured in this step",
+    "No tests/build/browser tests executed; prior formatting failure remains unresolved",
+    "No product/main-spec/archive changes or global task closure"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "sourceId": "jira-shell-details",
+  "retrievedAt": "2026-10-16T12:45:22.199Z",
+  "sha256": "30caeb33afa1ae7f9be6c55b9157687174e3bd786dd73a54693e78979b4deef4",
+  "bytes": 14311,
+  "membership": "jira-hierarchy/r1/content.json results[0] MOS-624; members 672/673/674/904/905",
+  "collection": "parent same-origin read-only GET from verified Jira origin, exact allowlist; selected fields/comments, attachment metadata only",
+  "comments": [
+    {
+      "key": "MOS-624",
+      "count": 0,
+      "total": 0,
+      "complete": true
+    },
+    {
+      "key": "MOS-672",
+      "count": 1,
+      "total": 1,
+      "complete": true
+    },
+    {
+      "key": "MOS-673",
+      "count": 1,
+      "total": 1,
+      "complete": true
+    },
+    {
+      "key": "MOS-674",
+      "count": 1,
+      "total": 1,
+      "complete": true
+    },
+    {
+      "key": "MOS-904",
+      "count": 2,
+      "total": 2,
+      "complete": true
+    },
+    {
+      "key": "MOS-905",
+      "count": 2,
+      "total": 2,
+      "complete": true
+    }
+  ],
+  "limitations": [
+    "custom fields not collected",
+    "attachment bodies not collected",
+    "comments pagination as reported per item"
+  ],
+  "redactions": []
+}

@@ -1,0 +1,12 @@
+{
+  "revision": 39,
+  "supplements": "coverage-partial-r38.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "sourceAdditions": [],
+  "acceptedChains": [{"report": "reports/DELTA-USER-SESSION-CONTRACTS.md", "review": "reviews/R-DELTA-USER-SESSION-CONTRACTS.md", "originalVerdict": "REVISE", "decision": "D-056", "parentDisposition": "Accepted after prescribed SES10 full action names and SES11 source locator correction", "findings": ["USR01–07", "SES01–11"]}],
+  "scopedJiraWikiAccounting": {"attribution": "Parent additive11+2 from prior accepted ledger and D055 captures/D056 findings, not global recensus", "targets": 13, "occurrences": 41, "retained": 13, "canonicalGaps": 0},
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "nextWorkItem": "work-items/G1-REMAINING-OBLIGATIONS.md",
+  "limits": ["Finite13-ID availability not global source or semantic completeness", "Session4PNG bodies unread, separate from root/Jira totals", "Historical draft architecture not new auth policy/owner/runtime acceptance", "Original REVISE and historical snapshots retained", "Tasks2.3/2.4/2.6 remain open pending explicit sufficiency assessment; formatting issue persists"]
+}

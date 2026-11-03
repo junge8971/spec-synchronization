@@ -1,0 +1,22 @@
+{
+  "sourceId": "wiki-243761671",
+  "revision": 1,
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/243761671/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F+%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0+%D0%BF%D0%BE+%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D1%83%D1%8E%D1%89%D0%B5%D0%B9+%D0%B0%D0%B4%D0%BC%D0%B8%D0%BD%D0%BA%D0%B5+%D0%9C%D0%9F%D0%9C%D0%9C",
+  "retrievedAt": "2026-10-19T09:37:21.097Z",
+  "status": 200,
+  "version": {
+    "number": 3,
+    "when": "2026-09-17T21:14:13.972+08:00"
+  },
+  "content": "content.json",
+  "sha256": "a48483689544f9562e992a63d7859fd7ff69a9d2033817be7840192b67f85855",
+  "method": "User-approved D031 same-origin read-only exact root-linked bodies and attachment indexes; no recursion or execution",
+  "authorization": "D-031 user approval of ten named relevance reads",
+  "discovery": "sources/wiki-238324523/r2/links.txt; exact root DOM href reconfirmed before request",
+  "redactions": 0,
+  "limitations": [
+    "Relevance classification pending; no scope/precedence/implementation approval",
+    "Attachment index fetched separately; bytes and child pages not visited",
+    "Any next index link remains uncollected; HTML saved inertly, not rendered or executed"
+  ]
+}

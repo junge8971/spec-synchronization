@@ -1,0 +1,19 @@
+
+ RUN  v4.1.11 /home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests
+
+ ↓ app/optional/feedback/ui/editor/questions/questions.test.tsx > adds a question without a fabricated ID and edits all seven catalog types in the shared draft
+ ↓ app/optional/feedback/ui/editor/questions/questions.test.tsx > moves questions with keyboard buttons and native drag while retaining business UUIDs and focus
+ ↓ app/optional/feedback/ui/editor/questions/questions.test.tsx > adds, reorders and removes options without replacing saved option UUIDs
+ ↓ app/optional/feedback/ui/editor/questions/questions.test.tsx > allows dropping a question onto its target nested option without mixing list scopes
+ ↓ app/optional/feedback/ui/editor/questions/questions.test.tsx > ignores native drag and drop when the enclosing editor fields become disabled
+ ↓ app/optional/feedback/ui/editor/questions/questions.test.tsx > confirms destructive type changes and restores focus when cancelling or confirming
+ ↓ app/optional/feedback/ui/editor/questions/questions.test.tsx > preserves inactive and unknown types while excluding them from new selections
+ ↓ app/optional/feedback/ui/editor/questions/questions.test.tsx > registers array groups for errors and focuses the remaining question after deleting
+ ✓ app/optional/feedback/ui/editor/questions/questions.test.tsx > prevents a 101st question and enables adding after deletion 4539ms
+ ↓ app/optional/feedback/ui/editor/questions/questions.test.tsx > prevents a 101st option and disables question creation when no supported active types exist
+
+ Test Files  1 passed (1)
+      Tests  1 passed | 9 skipped (10)
+   Start at  14:29:15
+   Duration  6.17s (transform 232ms, setup 331ms, import 399ms, tests 4.54s, environment 692ms)
+

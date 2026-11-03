@@ -1,0 +1,16 @@
+{
+  "pointer": "#/components/schemas/SurfaceStatus",
+  "value": {
+    "type": "string",
+    "enum": [
+      "draft",
+      "configured",
+      "review",
+      "sandbox",
+      "prod",
+      "disabled",
+      "archived"
+    ],
+    "title": "SurfaceStatus"
+  }
+}

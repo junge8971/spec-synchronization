@@ -1,0 +1,21 @@
+{
+  "pointer": "#/components/schemas/RefreshDashboardResponse",
+  "value": {
+    "properties": {
+      "sample": {
+        "$ref": "#/components/schemas/SampleResponse"
+      },
+      "calculated_at": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Calculated At"
+      }
+    },
+    "type": "object",
+    "required": [
+      "sample",
+      "calculated_at"
+    ],
+    "title": "RefreshDashboardResponse"
+  }
+}

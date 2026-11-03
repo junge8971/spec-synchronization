@@ -1,0 +1,2169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Центр управления · API</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#fff; --border:#e6e8ee; --muted:#8b93a3;
+    --text:#1a1d24; --accent:#b3121b; --accent-2:#0b6b3a; --warn:#c47a00;
+    --sidebar:#1c1f26; --sidebar-muted:#8b93a3; --sidebar-text:#e8ebf0;
+    --radius:10px; --radius-sm:6px;
+    --shadow:0 1px 3px rgba(15,20,30,.06), 0 1px 2px rgba(15,20,30,.04);
+    --code-bg:#0f1218; --code-text:#e8ebf0;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Golos Text",sans-serif;
+    font-size:13.5px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+  .app{display:grid;grid-template-columns:248px 1fr;min-height:100vh}
+  .sidebar{background:var(--sidebar);color:var(--sidebar-text);padding:16px 10px;
+    display:flex;flex-direction:column;gap:20px;position:sticky;top:0;height:100vh;overflow:auto}
+  .brand{display:flex;align-items:center;gap:10px;padding:6px 8px 10px}
+  .brand .logo{width:28px;height:28px;border-radius:6px;background:var(--accent);
+    display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px}
+  .brand .title{font-weight:600;font-size:13px;line-height:1.2}
+  .brand .sub{font-size:10.5px;color:var(--sidebar-muted);text-transform:uppercase;letter-spacing:.08em}
+  .nav-group{padding:0 4px}
+  .nav-group .eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--sidebar-muted);padding:8px 8px 4px;font-weight:600}
+  .nav-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:var(--radius-sm);
+    color:var(--sidebar-text);font-size:13px;cursor:pointer;opacity:.9}
+  .nav-item:hover{background:#232730;opacity:1}
+  .nav-item.active{background:#262a33;color:#fff;opacity:1;font-weight:500}
+  .nav-item.active::before{content:"";width:3px;height:14px;background:var(--accent);border-radius:2px;margin-left:-7px;margin-right:4px}
+  .nav-item .ic{width:16px;text-align:center;opacity:.9;font-size:13px}
+
+  .main{padding:20px 24px 40px;min-width:0}
+  .topline{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:6px}
+  .crumbs{font-size:11.5px;color:var(--muted)}
+  .user{display:flex;align-items:center;gap:10px;font-size:12px}
+  .avatar{width:30px;height:30px;border-radius:50%;background:#e9ecf2;display:grid;place-items:center;
+    font-weight:600;font-size:11.5px;color:#3a4150}
+  .badge-demo{background:#fff0f0;color:var(--accent);border:1px solid #f0c7c7;
+    font-size:10.5px;padding:1px 6px;border-radius:4px;font-weight:600}
+
+  h1{font-size:22px;font-weight:600;margin:6px 0 4px}
+
+  .btn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:8px;
+    background:var(--text);color:#fff;font-size:12.5px;font-weight:500}
+  .btn:hover{background:#000}
+  .btn.outline{background:#fff;color:var(--text);border:1px solid var(--border)}
+  .btn.outline:hover{background:#f2f4f8}
+  .btn.danger{background:var(--accent)}
+  .btn.danger:hover{background:#8f0e15}
+  .btn.sm{padding:5px 9px;font-size:11.5px}
+  .btn[disabled]{opacity:.5;pointer-events:none}
+
+  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .card-header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .card-title{font-weight:600}
+  .card-hint{font-size:11.5px;color:var(--muted)}
+  .card-body{padding:16px}
+
+  .page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px;flex-wrap:wrap}
+  .page-head h1{margin:0}
+  .page-head .purpose{color:var(--muted);margin-top:6px;max-width:820px}
+  .page-head .actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+
+  .filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+  .input,select,textarea{background:#fff;border:1px solid var(--border);border-radius:8px;
+    padding:6px 10px;font:inherit;font-size:12.5px;color:var(--text);outline:none;width:100%}
+  .input:focus,select:focus,textarea:focus{border-color:#b9c0cf;box-shadow:0 0 0 3px rgba(26,29,36,.06)}
+  .search{position:relative;min-width:280px;flex:1;max-width:340px}
+  .search input{padding-left:30px}
+  .search::before{content:"⌕";position:absolute;left:10px;top:50%;transform:translateY(-55%);
+    color:var(--muted);font-size:14px}
+  select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);
+    background-position:calc(100% - 14px) 12px,calc(100% - 9px) 12px;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:26px;min-width:150px}
+  .count{margin-left:auto;font-size:12px;color:var(--muted)}
+
+  .ms-wrap{position:relative}
+  .ms-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:8px;
+    height:32px;padding:0 10px;background:#fff;border:1px solid var(--border);border-radius:8px;
+    font:inherit;font-size:12.5px;color:var(--text);cursor:pointer;text-align:left;
+    min-width:180px;max-width:280px}
+  .ms-btn:hover{background:#f5f6f8}
+  .ms-btn.active{border-color:#cdd3de;color:var(--text)}
+  .ms-btn-label{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ms-btn-chev{color:var(--muted);font-size:9px;flex-shrink:0}
+  .ms-menu{position:absolute;top:calc(100% + 4px);left:0;z-index:50;
+    min-width:240px;max-width:320px;max-height:320px;overflow-y:auto;
+    background:#fff;border:1px solid var(--border);border-radius:8px;
+    box-shadow:0 8px 24px rgba(15,20,30,.12);padding:4px;display:none}
+  .ms-menu.open{display:block}
+  .ms-opt{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:6px;
+    font-size:12.5px;cursor:pointer;color:var(--text);user-select:none;font-weight:400}
+  .ms-opt:hover{background:#f5f6f8}
+  .ms-opt input{width:auto;margin:0;accent-color:var(--accent);pointer-events:none}
+  .ms-opt-all{font-weight:500;border-bottom:1px solid var(--border);margin-bottom:4px;border-radius:6px 6px 0 0}
+  .ms-opt-check{width:14px;display:inline-flex;justify-content:center;
+    color:var(--accent);font-size:12px;flex-shrink:0;line-height:1}
+  .ms-opt .code-inline{font-family:ui-monospace,Menlo,monospace;font-size:10.5px;color:var(--muted);margin-left:auto}
+
+  .reset-btn{display:none;align-items:center;gap:4px;padding:5px 10px;
+    font-size:12px;color:var(--muted);border-radius:6px;background:none;border:0;cursor:pointer}
+  .reset-btn.on{display:inline-flex}
+  .reset-btn:hover{background:#f2f4f8;color:var(--text)}
+
+  .af-btn{position:relative;display:inline-flex;align-items:center;gap:6px;
+    height:32px;padding:0 10px;background:#fff;border:1px solid var(--border);border-radius:8px;
+    font:inherit;font-size:12.5px;color:var(--text);cursor:pointer}
+  .af-btn:hover{background:#f5f6f8}
+  .af-btn.has-conditions{border-color:var(--accent);color:var(--accent);background:#fff5f5}
+  .af-badge{display:inline-flex;align-items:center;justify-content:center;
+    min-width:18px;height:18px;padding:0 5px;border-radius:999px;
+    background:var(--accent);color:#fff;font-size:10.5px;font-weight:600}
+  .af-badge.hidden{display:none}
+
+  .menu-wrap{position:relative}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center;
+    width:32px;height:32px;border-radius:8px;color:var(--muted);cursor:pointer;
+    background:none;border:0;font:inherit;font-size:16px;line-height:1}
+  .menu-btn:hover{background:#f2f4f8;color:var(--text)}
+  .menu-content{position:absolute;top:calc(100% + 4px);right:0;z-index:50;
+    min-width:230px;background:#fff;border:1px solid var(--border);border-radius:8px;
+    box-shadow:0 8px 24px rgba(15,20,30,.12);padding:4px;display:none}
+  .menu-content.open{display:block}
+  .menu-item{display:flex;align-items:center;gap:8px;padding:7px 10px;
+    border-radius:6px;font-size:12.5px;cursor:pointer;color:var(--text)}
+  .menu-item:hover{background:#f5f6f8}
+  .menu-item .saved-filter-del{color:var(--muted);cursor:pointer;padding:2px 6px;border-radius:4px;
+    flex-shrink:0;line-height:1;font-size:12px}
+  .menu-item .saved-filter-del:hover{color:var(--accent);background:#f8eaea}
+
+  .filter-panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:16px;margin-bottom:12px}
+  .filter-panel-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+  .filter-panel-title{font-weight:600;font-size:13px}
+  .filter-join{display:inline-flex;border:1px solid var(--border);border-radius:8px;
+    overflow:hidden;margin-left:auto}
+  .filter-join-btn{padding:5px 12px;font-size:12px;color:var(--muted);background:#fff;
+    cursor:pointer;border:0;font:inherit}
+  .filter-join-btn + .filter-join-btn{border-left:1px solid var(--border)}
+  .filter-join-btn:hover{background:#f5f6f8;color:var(--text)}
+  .filter-join-btn.active{background:var(--text);color:#fff}
+
+  .filter-conditions{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+  .filter-row{display:grid;grid-template-columns:1.1fr 1fr 2fr auto;
+    gap:8px;align-items:start;padding:10px;border:1px solid var(--border);
+    border-radius:10px;background:#fafbfd}
+  .filter-row select,.filter-row .input{height:32px}
+  .filter-value-wrap{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+  .filter-value-wrap .input{width:auto;min-width:100px;flex:1}
+  .filter-value-wrap .filter-value + .filter-value{max-width:110px}
+  .filter-del{color:var(--muted);font-size:13px;padding:6px 8px;border-radius:6px;
+    align-self:start;margin-top:2px;cursor:pointer;background:none;border:0}
+  .filter-del:hover{color:var(--accent);background:#f8eaea}
+  .filter-enum-chips{display:flex;flex-wrap:wrap;gap:4px;padding:2px 0;min-height:28px}
+  .filter-enum-chip{display:inline-flex;align-items:center;gap:5px;
+    padding:3px 9px;border-radius:999px;border:1px solid var(--border);
+    background:#fff;font-size:11.5px;cursor:pointer;user-select:none}
+  .filter-enum-chip:hover{background:#f5f6f8}
+  .filter-enum-chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .filter-empty{padding:14px;text-align:center;color:var(--muted);font-size:12px;
+    border:1px dashed var(--border);border-radius:8px;margin-bottom:10px}
+  .filter-panel-foot{display:flex;gap:8px;align-items:center;margin-top:12px;
+    padding-top:12px;border-top:1px solid var(--border);flex-wrap:wrap}
+  .filter-panel-foot .right{margin-left:auto;display:flex;gap:8px}
+
+  .applied-bar{display:flex;align-items:center;gap:8px;padding:8px 12px;
+    background:var(--card);border:1px solid var(--border);border-radius:8px;
+    margin-bottom:12px;font-size:12.5px;flex-wrap:wrap}
+  .applied-bar-label{color:var(--muted);font-size:11.5px}
+  .applied-bar-text{color:var(--text)}
+  .applied-bar .reset-btn{display:inline-flex;margin-left:auto}
+
+  table{width:100%;border-collapse:separate;border-spacing:0;font-size:12.5px}
+  thead th{text-align:left;font-weight:500;color:var(--muted);padding:9px 12px;
+    border-bottom:1px solid var(--border);font-size:11.5px;white-space:nowrap}
+  th.sortable{cursor:pointer;user-select:none}
+  th.sortable:hover{color:var(--text)}
+  th.sortable::after{content:"↕";margin-left:6px;color:var(--muted);opacity:.45;font-size:11px}
+  th.sortable[data-dir="asc"]::after{content:"↑";opacity:1;color:var(--accent)}
+  th.sortable[data-dir="desc"]::after{content:"↓";opacity:1;color:var(--accent)}
+  tbody td{padding:11px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+  tbody tr:hover{background:#fafbfd;cursor:pointer}
+  tbody tr:last-child td{border-bottom:0}
+  .name-cell .n{font-weight:600;display:block}
+  .name-cell .c{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+  .tag{display:inline-block;padding:1px 7px;border-radius:4px;font-size:11px;border:1px solid var(--border);color:var(--muted);background:#fafbfd}
+  .tag.ok{color:var(--accent-2);border-color:#cbe6d5;background:#f0f8f3}
+  .tag.acc{color:var(--accent);border-color:#f0c7c7;background:#fff2f2}
+  .tag.warn{color:var(--warn);border-color:#f0dca6;background:#fdf7e6}
+  .tag.ink{color:#2b3140;border-color:#d8dce5;background:#f2f4f8}
+  .tag.mute{color:var(--muted)}
+  .tag.off{color:#8b93a3;border-color:#e6e8ee;background:#f5f6f8}
+
+  .switch{display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:#fff}
+  .switch input{width:auto;margin:0}
+  .switch .lbl{font-size:12.5px}
+
+  .num{font-variant-numeric:tabular-nums}
+  .right{text-align:right}
+  .empty{padding:40px 20px;text-align:center;color:var(--muted)}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+  .screen{display:none}
+  .screen.active{display:block}
+
+  .tabs{display:flex;gap:2px;border-bottom:1px solid var(--border);margin-bottom:14px;overflow:auto}
+  .tab{padding:9px 12px;font-size:12.5px;color:var(--muted);border-bottom:2px solid transparent;white-space:nowrap;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);font-weight:500}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .grid-form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media (max-width:1100px){.grid-2,.grid-form{grid-template-columns:1fr}}
+
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field label{font-size:12px;font-weight:500}
+  .field .hint{font-size:11px;color:var(--muted)}
+  .field.full{grid-column:1/-1}
+  .req-star{color:var(--accent);font-weight:700;margin-left:2px}
+  .field-error-text{display:none;font-size:11px;color:var(--accent);margin-top:2px}
+  .field.has-error .input,
+  .field.has-error select,
+  .field.has-error textarea{border-color:var(--accent);box-shadow:0 0 0 3px rgba(179,18,27,.08)}
+  .field.has-error .field-error-text{display:block}
+
+  /* API specific */
+  .api-tabs{display:flex;gap:2px;border-bottom:1px solid var(--border);margin-bottom:12px;overflow:auto}
+  .api-tab{padding:9px 14px;font-size:12.5px;color:var(--muted);border-bottom:2px solid transparent;white-space:nowrap;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .api-tab:hover{color:var(--text)}
+  .api-tab.active{color:var(--text);border-bottom-color:var(--accent);font-weight:500}
+  .api-tab .tab-count{display:inline-block;padding:0 6px;border-radius:999px;
+    background:#f2f4f8;color:var(--muted);font-size:10.5px;font-weight:600}
+  .api-tab.active .tab-count{background:var(--accent);color:#fff}
+
+  .api-endpoint-preview{display:flex;align-items:center;gap:8px;padding:10px 12px;
+    background:#fafbfd;border:1px solid var(--border);border-radius:8px;margin-bottom:12px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+  .api-endpoint-preview .method{flex-shrink:0}
+  .api-endpoint-preview .path{color:var(--text);flex:1;word-break:break-all}
+
+  .method{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10.5px;font-weight:700;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.03em;line-height:1.6}
+  .method.get{background:#e6f4ec;color:#0b6b3a;border:1px solid #cbe6d5}
+  .method.post{background:#e8eefb;color:#1f4f8b;border:1px solid #c9d8f2}
+  .method.put{background:#fdf7e6;color:#c47a00;border:1px solid #f0dca6}
+  .method.patch{background:#fdf7e6;color:#c47a00;border:1px solid #f0dca6}
+  .method.delete{background:#fff2f2;color:#b3121b;border:1px solid #f0c7c7}
+  .method.head,.method.options{background:#f2f4f8;color:#3a4150;border:1px solid #d8dce5}
+
+  .api-edit-row{display:grid;grid-template-columns:auto 1.2fr 1fr 1fr 1.6fr auto;
+    gap:8px;align-items:start;padding:10px;border:1px solid var(--border);
+    border-radius:10px;background:#fafbfd;margin-bottom:6px}
+  .api-edit-row .input{height:32px}
+  .api-edit-row .handle{align-self:center}
+
+  .api-resp-row{display:grid;grid-template-columns:100px 1fr 2fr auto;
+    gap:8px;align-items:start;padding:10px;border:1px solid var(--border);
+    border-radius:10px;background:#fafbfd;margin-bottom:6px}
+  .api-resp-row .input{height:32px}
+
+  .code-block{background:var(--code-bg);color:var(--code-text);border-radius:10px;
+    padding:12px 14px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:11.5px;line-height:1.6;white-space:pre;overflow:auto;max-height:340px;
+    border:1px solid #232730}
+
+  .field-row{display:flex;align-items:center;gap:6px}
+  .handle{cursor:grab;color:var(--muted);font-size:16px;line-height:1;user-select:none;padding:4px}
+  .handle:active{cursor:grabbing}
+  .field-del{color:var(--muted);font-size:13px;padding:5px 8px;border-radius:6px}
+  .field-del:hover{color:var(--accent);background:#f8eaea}
+
+  .add-row{display:flex;gap:8px;margin-top:6px;align-items:center}
+  .add-row select{min-width:180px;flex:0 0 auto;width:auto}
+
+  .url-input{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+
+  .req-check{display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border:1px solid var(--border);
+    border-radius:6px;background:#fff;color:#4a5162;font-size:11.5px;cursor:pointer}
+  .req-check input{width:auto;margin:0;accent-color:var(--accent)}
+
+  /* Modal */
+  .modal-backdrop{position:fixed;inset:0;background:rgba(15,20,30,.45);z-index:100;
+    display:flex;align-items:center;justify-content:center;padding:20px;
+    opacity:0;pointer-events:none;transition:opacity .18s}
+  .modal-backdrop.on{opacity:1;pointer-events:auto}
+  .modal{background:#fff;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.25);
+    width:100%;max-width:560px;max-height:86vh;display:flex;flex-direction:column;
+    transform:translateY(12px);transition:transform .18s}
+  .modal-backdrop.on .modal{transform:translateY(0)}
+  .modal-head{padding:14px 18px;border-bottom:1px solid var(--border);
+    display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .modal-title{font-weight:600;font-size:14.5px}
+  .modal-x{color:var(--muted);font-size:14px;padding:4px 8px;border-radius:6px;line-height:1}
+  .modal-x:hover{background:#f2f4f8;color:var(--text)}
+  .modal-body{padding:16px 18px;overflow:auto}
+  .modal-hint{color:var(--muted);font-size:12.5px;margin:0 0 14px;line-height:1.55}
+  .modal-fields{display:flex;flex-direction:column;gap:6px}
+  .modal-check{display:flex;align-items:center;gap:10px;padding:9px 12px;
+    border:1px solid var(--border);border-radius:8px;cursor:pointer;font-size:12.5px;transition:background .12s;font-weight:400}
+  .modal-check:hover{background:#f7f8fa}
+  .modal-check input{width:auto;margin:0;accent-color:var(--accent)}
+  .modal-foot{padding:12px 18px;border-top:1px solid var(--border);
+    display:flex;justify-content:flex-end;gap:8px;align-items:center}
+  .modal-foot .left{margin-right:auto;font-size:12px;color:var(--muted)}
+
+  .toast{position:fixed;bottom:20px;right:20px;background:#1a1d24;color:#fff;padding:10px 14px;
+    border-radius:10px;font-size:12.5px;box-shadow:0 8px 24px rgba(0,0,0,.18);opacity:0;transform:translateY(10px);
+    transition:all .2s;pointer-events:none;z-index:200}
+  .toast.on{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">Ц</div>
+      <div>
+        <div class="title">Центр управления</div>
+        <div class="sub">Цифровой ассистент</div>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="eyebrow">Платформа</div>
+      <div class="nav-item active" data-nav="api" onclick="showSection('api','list')">
+        <span class="ic">🔌</span>API
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="topline">
+      <div class="crumbs">Центр управления · <span id="crumb-now">API</span></div>
+      <div class="user">
+        <span class="badge-demo">демо</span>
+        <div class="avatar">МС</div>
+        <div>
+          <div style="font-weight:500">Марина Соколова</div>
+          <div style="color:var(--muted);font-size:11px">Команда ЖКХ, ДИТ</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== API LIST ========== -->
+    <section id="screen-api-list" class="screen active">
+      <div class="page-head">
+        <div>
+          <h1>API</h1>
+          <p class="purpose">Управление списком эндпоинтов ЦАМ. Здесь описаны внутренние API (BE↔FE), исходящие (эндпоинты ЦАМ-панели) и входящие (внешние эндпоинты МПММ, ЕСК, ЦХЭД). Данные используются для публикации справочника API на лендинге для внешних систем.</p>
+          <div style="margin-top:8px;display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:var(--warn)">
+            <span>🔒</span><span>Доступ только для администратора платформы</span>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn outline" onclick="openExportModal('api_list')"><span>⤓</span> Экспорт</button>
+          <button class="btn" onclick="createNewApi()"><span>＋</span> Создать эндпоинт</button>
+        </div>
+      </div>
+
+      <div class="api-tabs" id="api-tabs">
+        <div class="api-tab active" data-group="all">Все <span class="tab-count" id="api-tab-count-all">0</span></div>
+        <div class="api-tab" data-group="internal">Внутренние <span class="tab-count" id="api-tab-count-internal">0</span></div>
+        <div class="api-tab" data-group="outgoing">Исходящие <span class="tab-count" id="api-tab-count-out">0</span></div>
+        <div class="api-tab" data-group="incoming">Входящие <span class="tab-count" id="api-tab-count-in">0</span></div>
+      </div>
+
+      <div class="filters">
+        <div class="search"><input class="input" id="api-q" placeholder="Название, путь, описание" oninput="renderApiList();updateResetVisibility('api')" /></div>
+
+        <div class="ms-wrap" id="api-method-wrap" data-all-label="Все методы">
+          <button type="button" class="ms-btn" id="api-method-btn" onclick="toggleMs('api-method')">
+            <span class="ms-btn-label" id="api-method-label">Все методы</span>
+            <span class="ms-btn-chev">▾</span>
+          </button>
+          <div class="ms-menu" id="api-method-menu">
+            <div class="ms-opt ms-opt-all" onclick="clearMs('api-method')">
+              <span class="ms-opt-check" id="api-method-check-all">✓</span>
+              <span>Все методы</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ms-wrap" id="api-source-wrap" data-all-label="Все источники">
+          <button type="button" class="ms-btn" id="api-source-btn" onclick="toggleMs('api-source')">
+            <span class="ms-btn-label" id="api-source-label">Все источники</span>
+            <span class="ms-btn-chev">▾</span>
+          </button>
+          <div class="ms-menu" id="api-source-menu">
+            <div class="ms-opt ms-opt-all" onclick="clearMs('api-source')">
+              <span class="ms-opt-check" id="api-source-check-all">✓</span>
+              <span>Все источники</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ms-wrap" id="api-status-wrap" data-all-label="Все статусы">
+          <button type="button" class="ms-btn" id="api-status-btn" onclick="toggleMs('api-status')">
+            <span class="ms-btn-label" id="api-status-label">Все статусы</span>
+            <span class="ms-btn-chev">▾</span>
+          </button>
+          <div class="ms-menu" id="api-status-menu">
+            <div class="ms-opt ms-opt-all" onclick="clearMs('api-status')">
+              <span class="ms-opt-check" id="api-status-check-all">✓</span>
+              <span>Все статусы</span>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="af-btn" id="af-btn-api" onclick="toggleFilterPanel('api')">
+          ⚙ Условия <span class="af-badge hidden" id="af-badge-api">0</span>
+        </button>
+
+        <button type="button" class="reset-btn" id="api-reset" onclick="resetFilters('api')">Сбросить</button>
+
+        <div class="menu-wrap">
+          <button type="button" class="menu-btn" id="api-menu-btn" onclick="toggleMenu('api')" aria-label="Действия с отбором">⋮</button>
+          <div class="menu-content" id="api-menu"></div>
+        </div>
+
+        <span class="count" id="api-count">— эндпоинтов</span>
+      </div>
+
+      <div id="af-panel-api" class="filter-panel" style="display:none"></div>
+      <div id="applied-api" class="applied-bar" style="display:none"></div>
+
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:9%" class="sortable" data-sort="method">Метод</th>
+              <th style="width:34%" class="sortable" data-sort="path">Эндпоинт</th>
+              <th style="width:22%" class="sortable" data-sort="group_code">Группа / Источник</th>
+              <th style="width:10%" class="sortable" data-sort="version">Версия</th>
+              <th style="width:13%" class="sortable" data-sort="status">Статус</th>
+              <th style="width:8%"></th>
+            </tr>
+          </thead>
+          <tbody id="api-rows"></tbody>
+        </table>
+        <div id="api-empty" class="empty" style="display:none">Эндпоинтов пока нет. Создайте первый — например, «Список навыков».</div>
+      </div>
+    </section>
+
+    <!-- ========== API CARD ========== -->
+    <section id="screen-api-card" class="screen">
+      <div class="crumbs" style="margin-bottom:6px"><a href="#" onclick="showSection('api','list');return false;">API</a> · <span id="api-crumb-name">—</span></div>
+
+      <div class="page-head">
+        <div>
+          <h1 id="api-title">—</h1>
+          <div class="purpose" id="api-purpose">—</div>
+          <div class="status-row" style="display:flex;gap:8px;align-items:center;margin-top:6px;font-size:12px;color:var(--muted);flex-wrap:wrap">
+            <span class="status-dot" id="api-head-status-dot" style="width:8px;height:8px;border-radius:50%;background:var(--accent-2);display:inline-block"></span>
+            <span><b id="api-head-status">—</b></span>
+            <span>·</span>
+            <span>Код: <span class="num mono" id="api-head-code">—</span></span>
+            <span>·</span>
+            <span>Владелец: <span id="api-head-owner">—</span></span>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn outline sm" onclick="openExportModal('api_card')"><span>⤓</span> Экспорт</button>
+          <button class="btn outline sm" onclick="saveApiCard()">Сохранить</button>
+          <button class="btn outline sm" onclick="pauseApiCard()">Приостановить</button>
+          <button class="btn danger sm" onclick="archiveApiCard()">В архив</button>
+          <button class="btn outline sm" onclick="tryCloseCard('api')">Закрыть</button>
+        </div>
+      </div>
+
+      <div class="api-endpoint-preview" id="api-endpoint-preview">
+        <span class="method get" id="api-preview-method">GET</span>
+        <span class="path" id="api-preview-path">/api/v1/skills</span>
+      </div>
+
+      <div class="tabs" id="api-tabs2">
+        <div class="tab active" data-tab="main">Основное</div>
+        <div class="tab" data-tab="request">Запрос</div>
+        <div class="tab" data-tab="responses">Ответы</div>
+      </div>
+
+      <div class="tab-panel" data-panel="main">
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header"><div class="card-title">Основное</div></div>
+            <div class="card-body">
+              <div class="grid-form">
+                <div class="field full" id="api-name-field">
+                  <label>Название <span class="req-star">*</span></label>
+                  <input class="input" id="api-name" oninput="onFieldInput('name', this.value)" />
+                  <span class="field-error-text" id="api-name-err">Укажите название. Оно должно быть уникальным.</span>
+                </div>
+                <div class="field" id="api-code-field">
+                  <label>Служебный код <span class="req-star">*</span></label>
+                  <input class="input mono" id="api-code" oninput="onFieldInput('code', this.value)" />
+                  <span class="hint">Используется в выгрузках и на лендинге. Уникален.</span>
+                  <span class="field-error-text" id="api-code-err">Укажите код. Он должен быть уникальным.</span>
+                </div>
+                <div class="field">
+                  <label>Метод <span class="req-star">*</span></label>
+                  <select id="api-method" onchange="onFieldInput('method', this.value); onApiMethodOrPathChange();"></select>
+                </div>
+                <div class="field">
+                  <label>Версия</label>
+                  <input class="input num" id="api-version" oninput="onFieldInput('version', this.value)" />
+                </div>
+                <div class="field full">
+                  <label>Путь (path) <span class="req-star">*</span></label>
+                  <input class="input mono" id="api-path" placeholder="/api/v1/..." oninput="onFieldInput('path', this.value); onApiMethodOrPathChange();" />
+                  <span class="hint">Поддерживает path-параметры в фигурных скобках: <span class="mono">{id}</span>.</span>
+                </div>
+                <div class="field">
+                  <label>Группа <span class="req-star">*</span></label>
+                  <select id="api-group" onchange="onFieldInput('group_code', this.value); onApiGroupChange();"></select>
+                </div>
+                <div class="field" id="api-source-field">
+                  <label>Источник</label>
+                  <select id="api-source" onchange="onFieldInput('source_code', this.value)"></select>
+                  <span class="hint">Обязателен для «Исходящих» и «Входящих».</span>
+                </div>
+                <div class="field">
+                  <label>Статус</label>
+                  <select id="api-status" onchange="onFieldInput('status', this.value)"></select>
+                </div>
+                <div class="field">
+                  <label>Команда-владелец</label>
+                  <input class="input" id="api-owner" oninput="onFieldInput('owner', this.value)" placeholder="Например: Команда ЦАМ" />
+                </div>
+                <div class="field">
+                  <label>Ответственный</label>
+                  <select id="api-responsible" onchange="onFieldInput('responsible_user_id', this.value)"></select>
+                </div>
+                <div class="field full"><label>Описание</label><textarea class="input" rows="2" id="api-desc" oninput="onFieldInput('description', this.value)"></textarea></div>
+                <div class="field full"><label>Теги</label><input class="input" id="api-tags" oninput="onFieldInput('tags', this.value)" placeholder="через запятую" /></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">Публикация на лендинге</div></div>
+            <div class="card-body">
+              <div class="grid-form">
+                <div class="field full">
+                  <div class="switch">
+                    <input type="checkbox" id="api-public" onchange="onFieldInput('publish_on_landing', this.checked)" />
+                    <div class="lbl">Показывать на публичном лендинге API</div>
+                  </div>
+                </div>
+                <div class="field full">
+                  <div class="switch">
+                    <input type="checkbox" id="api-auth" onchange="onFieldInput('auth_required', this.checked)" />
+                    <div class="lbl">Требуется авторизация (API-key / Bearer)</div>
+                  </div>
+                </div>
+                <div class="field full">
+                  <label>Базовый URL</label>
+                  <input class="input url-input" id="api-base" oninput="onFieldInput('base_url', this.value)" placeholder="https://api.cam.mos.ru" />
+                </div>
+                <div class="field full">
+                  <label>Категория на лендинге</label>
+                  <select id="api-landing-category" onchange="onFieldInput('landing_category', this.value)"></select>
+                </div>
+                <div class="field full">
+                  <label>Пример cURL</label>
+                  <textarea class="input" rows="3" id="api-curl" oninput="onFieldInput('curl_example', this.value)" style="font-family:ui-monospace,Menlo,monospace;font-size:12px" placeholder="curl -X GET ..."></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="request" style="display:none">
+        <div class="grid-2">
+          <div>
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <div class="card-title">Параметры запроса</div>
+                  <div class="card-hint">Место, имя, тип, описание, обязательность (api_endpoint_param). Порядок меняется перетаскиванием.</div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div id="api-params-list"></div>
+                <div class="add-row">
+                  <select id="api-add-param-location"></select>
+                  <button class="btn outline sm" onclick="addApiParam()">＋ Добавить параметр</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Тело запроса (JSON)</div>
+                <div class="card-hint">Схема тела запроса для POST / PUT / PATCH. Отображается на лендинге.</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <textarea class="input" id="api-request-body" rows="14"
+                        style="font-family:ui-monospace,Menlo,monospace;font-size:12px"
+                        oninput="onFieldInput('request_body', this.value)"
+                        placeholder='{
+  "field": "value"
+}'></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="responses" style="display:none">
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Коды ответов</div>
+                <div class="card-hint">HTTP-код, краткое описание и пример тела ответа (api_endpoint_response).</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div id="api-responses-list"></div>
+              <div class="add-row">
+                <button class="btn outline sm" onclick="addApiResponse()">＋ Добавить ответ</button>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">Предпросмотр примера</div></div>
+            <div class="card-body">
+              <div id="api-response-preview" class="code-block" style="max-height:420px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ========== MODAL ========== -->
+<div class="modal-backdrop" id="modal-backdrop" onclick="if(event.target===this)closeModal()">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-head">
+      <div class="modal-title" id="modal-title">Заголовок</div>
+      <button class="modal-x" onclick="closeModal()" aria-label="Закрыть">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-foot" id="modal-foot"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   СПРАВОЧНИКИ (соответствуют api_* из модели данных)
+   ============================================================ */
+const DICT_API_METHODS = [
+  { code:'GET',    label:'GET' },
+  { code:'POST',   label:'POST' },
+  { code:'PUT',    label:'PUT' },
+  { code:'PATCH',  label:'PATCH' },
+  { code:'DELETE', label:'DELETE' }
+];
+
+const DICT_API_GROUPS = [
+  { code:'internal', label:'Внутренние' },
+  { code:'outgoing', label:'Исходящие' },
+  { code:'incoming', label:'Входящие' }
+];
+
+const DICT_API_SOURCES = [
+  { code:'cam_panel', label:'ЦАМ панель' },
+  { code:'mppm',      label:'МПММ' },
+  { code:'esk',       label:'ЕСК' },
+  { code:'tshed',     label:'ЦХЭД' }
+];
+
+const DICT_API_STATUSES = [
+  { code:'draft',      label:'Черновик' },
+  { code:'active',     label:'Активен' },
+  { code:'deprecated', label:'Устарел' },
+  { code:'archived',   label:'Архив' }
+];
+
+const DICT_API_LANDING_CATEGORIES = [
+  { code:'skills',      label:'Навыки' },
+  { code:'dialogs',     label:'Диалоги' },
+  { code:'feedback',    label:'Обратная связь' },
+  { code:'kb',          label:'База знаний' },
+  { code:'experiments', label:'Эксперименты' },
+  { code:'external',    label:'Внешние системы' }
+];
+
+const DICT_API_PARAM_LOCATIONS = [
+  { code:'path',   label:'path' },
+  { code:'query',  label:'query' },
+  { code:'header', label:'header' },
+  { code:'body',   label:'body' }
+];
+
+/* Ответственные — из СУДИР (responsible_user_id) */
+const RESPONSIBLE_USERS = [
+  { id:'ms', name:'Марина Соколова' },
+  { id:'pg', name:'Павел Гущин' }
+];
+
+function labelOf(dict, code){ const f = dict.find(x => x.code === code); return f ? f.label : (code || '—'); }
+function userName(id){ const f = RESPONSIBLE_USERS.find(x => x.id === id); return f ? f.name : '—'; }
+
+/* ============================================================
+   ДАННЫЕ (api_endpoint + api_endpoint_param + api_endpoint_response)
+   ============================================================ */
+const API_DATA = [
+  {
+    id:'api1', code:'api_skills_list', name:'Список навыков',
+    method:'GET', path:'/api/v1/skills', version:'v1',
+    group_code:'internal', source_code:'', status:'active',
+    owner:'Команда ЦАМ', responsible_user_id:'ms',
+    description:'Возвращает список всех навыков ЦАМ, доступных пользователю.',
+    tags:'skills, catalog',
+    request_body:'',
+    publish_on_landing:true, auth_required:true,
+    base_url:'https://api.cam.mos.ru',
+    landing_category:'skills',
+    curl_example:'curl -X GET "https://api.cam.mos.ru/api/v1/skills" \\\n  -H "Authorization: Bearer <token>"',
+    created_at:'2026-08-15 09:00', updated_at:'2026-09-12 14:20', deleted_at:null,
+    params:[
+      { location:'query',  name:'limit',        data_type:'integer', required:false, description:'Количество записей (по умолчанию 20)' },
+      { location:'query',  name:'offset',       data_type:'integer', required:false, description:'Смещение для пагинации' },
+      { location:'header', name:'X-Request-Id', data_type:'string',  required:false, description:'Идентификатор запроса для трассировки' }
+    ],
+    responses:[
+      { http_code:'200', description:'Успешный ответ', example:'{\n  "items": [\n    { "id": "1", "name": "ЖКХ", "active": true },\n    { "id": "2", "name": "МЭШ", "active": true }\n  ],\n  "total": 2\n}' },
+      { http_code:'401', description:'Неавторизованный запрос', example:'{ "error": "unauthorized" }' },
+      { http_code:'500', description:'Внутренняя ошибка сервера', example:'{ "error": "internal_error" }' }
+    ]
+  },
+  {
+    id:'api2', code:'api_dialogs_get', name:'Получить карточку диалога',
+    method:'GET', path:'/api/v1/dialogs/{id}', version:'v1',
+    group_code:'internal', source_code:'', status:'active',
+    owner:'Команда ЦАМ', responsible_user_id:'pg',
+    description:'Возвращает полную карточку диалога по его идентификатору.',
+    tags:'dialogs', request_body:'',
+    publish_on_landing:false, auth_required:true,
+    base_url:'https://api.cam.mos.ru', landing_category:'dialogs',
+    curl_example:'curl -X GET "https://api.cam.mos.ru/api/v1/dialogs/42" \\\n  -H "Authorization: Bearer <token>"',
+    created_at:'2026-08-15 09:00', updated_at:'2026-09-10 11:30', deleted_at:null,
+    params:[
+      { location:'path', name:'id', data_type:'integer', required:true, description:'Идентификатор диалога' }
+    ],
+    responses:[
+      { http_code:'200', description:'Карточка диалога', example:'{\n  "id": 42,\n  "status": "resolved",\n  "messages": []\n}' },
+      { http_code:'404', description:'Диалог не найден', example:'{ "error": "not_found" }' }
+    ]
+  },
+  {
+    id:'api3', code:'api_ab_list', name:'Список A/B экспериментов',
+    method:'GET', path:'/api/v1/experiments', version:'v1',
+    group_code:'internal', source_code:'', status:'active',
+    owner:'Команда ЕСК', responsible_user_id:'ms',
+    description:'Возвращает список активных и завершённых A/B экспериментов.',
+    tags:'experiments', request_body:'',
+    publish_on_landing:false, auth_required:true,
+    base_url:'https://api.cam.mos.ru', landing_category:'experiments',
+    curl_example:'curl -X GET "https://api.cam.mos.ru/api/v1/experiments"',
+    created_at:'2026-08-20 10:00', updated_at:'2026-09-08 12:00', deleted_at:null,
+    params:[
+      { location:'query', name:'status', data_type:'string', required:false, description:'Фильтр по статусу (active, finished)' }
+    ],
+    responses:[
+      { http_code:'200', description:'Список экспериментов', example:'{ "items": [] }' }
+    ]
+  },
+  {
+    id:'api4', code:'api_tickets_create', name:'Создать обращение',
+    method:'POST', path:'/api/v1/tickets', version:'v1',
+    group_code:'outgoing', source_code:'cam_panel', status:'active',
+    owner:'Команда ЦАМ', responsible_user_id:'ms',
+    description:'Создаёт обращение из ЦАМ-панели во внешние системы.',
+    tags:'tickets, outgoing',
+    request_body:'{\n  "subject": "string",\n  "body": "string",\n  "user_id": "string",\n  "priority": "normal"\n}',
+    publish_on_landing:false, auth_required:true,
+    base_url:'https://api.cam.mos.ru', landing_category:'feedback',
+    curl_example:'curl -X POST "https://api.cam.mos.ru/api/v1/tickets" \\\n  -H "Content-Type: application/json" \\\n  -d \'{"subject":"...","body":"..."}\'',
+    created_at:'2026-07-01 08:00', updated_at:'2026-09-05 11:30', deleted_at:null,
+    params:[
+      { location:'header', name:'Content-Type', data_type:'string', required:true, description:'application/json' }
+    ],
+    responses:[
+      { http_code:'201', description:'Обращение создано', example:'{ "id": "tk-1001", "status": "created" }' },
+      { http_code:'400', description:'Некорректный запрос', example:'{ "error": "bad_request" }' }
+    ]
+  },
+  {
+    id:'api5', code:'api_tickets_status', name:'Обновить статус заявки',
+    method:'PATCH', path:'/api/v1/tickets/{id}/status', version:'v1',
+    group_code:'outgoing', source_code:'cam_panel', status:'active',
+    owner:'Команда ЦАМ', responsible_user_id:'pg',
+    description:'Обновляет статус заявки во внешней системе.',
+    tags:'tickets, outgoing',
+    request_body:'{\n  "status": "in_progress"\n}',
+    publish_on_landing:false, auth_required:true,
+    base_url:'https://api.cam.mos.ru', landing_category:'feedback',
+    curl_example:'curl -X PATCH "https://api.cam.mos.ru/api/v1/tickets/tk-1001/status" \\\n  -d \'{"status":"in_progress"}\'',
+    created_at:'2026-07-01 08:00', updated_at:'2026-09-05 11:30', deleted_at:null,
+    params:[
+      { location:'path', name:'id', data_type:'string', required:true, description:'Идентификатор заявки' }
+    ],
+    responses:[
+      { http_code:'200', description:'Статус обновлён', example:'{ "id": "tk-1001", "status": "in_progress" }' }
+    ]
+  },
+  {
+    id:'api6', code:'api_analytics_event', name:'Отправить событие аналитики',
+    method:'POST', path:'/api/v1/analytics/events', version:'v1',
+    group_code:'outgoing', source_code:'cam_panel', status:'active',
+    owner:'Команда ЦАМ', responsible_user_id:'ms',
+    description:'Отправляет событие аналитики из ЦАМ-панели в шину данных.',
+    tags:'analytics, events',
+    request_body:'{\n  "event": "string",\n  "ts": "ISO8601",\n  "payload": {}\n}',
+    publish_on_landing:false, auth_required:true,
+    base_url:'https://api.cam.mos.ru', landing_category:'feedback',
+    curl_example:'curl -X POST "https://api.cam.mos.ru/api/v1/analytics/events" \\\n  -d \'{"event":"dialog_finished"}\'',
+    created_at:'2026-07-01 08:00', updated_at:'2026-09-01 10:00', deleted_at:null,
+    params:[],
+    responses:[
+      { http_code:'202', description:'Событие принято', example:'{ "accepted": true }' }
+    ]
+  },
+  {
+    id:'api7', code:'api_mpmm_request_status', name:'Статус заявки в МПММ',
+    method:'GET', path:'/mpmm/v1/requests/{id}/status', version:'v1',
+    group_code:'incoming', source_code:'mppm', status:'active',
+    owner:'Команда ЦАМ', responsible_user_id:'ms',
+    description:'Внешний эндпоинт МПММ — получить статус заявки по идентификатору.',
+    tags:'mpmm, requests', request_body:'',
+    publish_on_landing:false, auth_required:true,
+    base_url:'https://mpmm.mos.ru', landing_category:'external',
+    curl_example:'curl -X GET "https://mpmm.mos.ru/mpmm/v1/requests/12345/status"',
+    created_at:'2026-06-15 09:00', updated_at:'2026-08-20 15:00', deleted_at:null,
+    params:[
+      { location:'path', name:'id', data_type:'string', required:true, description:'Номер заявки в МПММ' }
+    ],
+    responses:[
+      { http_code:'200', description:'Статус заявки', example:'{ "id": "12345", "status": "in_progress" }' },
+      { http_code:'404', description:'Заявка не найдена', example:'{ "error": "not_found" }' }
+    ]
+  },
+  {
+    id:'api8', code:'api_mpmm_request_create', name:'Создать обращение в МПММ',
+    method:'POST', path:'/mpmm/v1/requests', version:'v1',
+    group_code:'incoming', source_code:'mppm', status:'active',
+    owner:'Команда ЦАМ', responsible_user_id:'pg',
+    description:'Внешний эндпоинт МПММ — создать обращение.',
+    tags:'mpmm',
+    request_body:'{\n  "subject": "string",\n  "body": "string",\n  "category": "zhkh"\n}',
+    publish_on_landing:false, auth_required:true,
+    base_url:'https://mpmm.mos.ru', landing_category:'external',
+    curl_example:'curl -X POST "https://mpmm.mos.ru/mpmm/v1/requests" \\\n  -d \'{"subject":"...","body":"..."}\'',
+    created_at:'2026-06-15 09:00', updated_at:'2026-08-20 15:00', deleted_at:null,
+    params:[],
+    responses:[
+      { http_code:'201', description:'Обращение создано', example:'{ "id": "12345" }' }
+    ]
+  },
+  {
+    id:'api9', code:'api_esk_decision', name:'Получить решение ЕСК',
+    method:'POST', path:'/esk/v2/decision', version:'v2',
+    group_code:'incoming', source_code:'esk', status:'active',
+    owner:'Команда ЕСК', responsible_user_id:'ms',
+    description:'Внешний эндпоинт ЕСК — запросить решение по распределению запроса.',
+    tags:'esk, dispatcher',
+    request_body:'{\n  "query": "string",\n  "user_id": "string"\n}',
+    publish_on_landing:false, auth_required:true,
+    base_url:'https://esk.mos.ru', landing_category:'external',
+    curl_example:'curl -X POST "https://esk.mos.ru/esk/v2/decision" \\\n  -d \'{"query":"..."}\'',
+    created_at:'2026-06-01 09:00', updated_at:'2026-09-01 09:00', deleted_at:null,
+    params:[],
+    responses:[
+      { http_code:'200', description:'Решение ЕСК', example:'{ "decision": "route_to_skill", "skill_id": "zhkh" }' }
+    ]
+  },
+  {
+    id:'api10', code:'api_tshed_documents', name:'Запрос документов в ЦХЭД',
+    method:'GET', path:'/tshed/v1/documents', version:'v1',
+    group_code:'incoming', source_code:'tshed', status:'draft',
+    owner:'Команда ЦАМ', responsible_user_id:'pg',
+    description:'Внешний эндпоинт ЦХЭД — получить список документов по фильтру.',
+    tags:'tshed, documents', request_body:'',
+    publish_on_landing:false, auth_required:true,
+    base_url:'https://tshed.mos.ru', landing_category:'external',
+    curl_example:'curl -X GET "https://tshed.mos.ru/tshed/v1/documents?user_id=..."',
+    created_at:'2026-09-05 12:00', updated_at:'2026-09-05 12:00', deleted_at:null,
+    params:[
+      { location:'query', name:'user_id', data_type:'string', required:true,  description:'Идентификатор пользователя' },
+      { location:'query', name:'type',    data_type:'string', required:false, description:'Тип документа' }
+    ],
+    responses:[
+      { http_code:'200', description:'Список документов', example:'{ "items": [] }' }
+    ]
+  },
+  {
+    id:'api11', code:'api_tshed_act', name:'Выгрузить акт из ЦХЭД',
+    method:'GET', path:'/tshed/v1/acts/{id}', version:'v1',
+    group_code:'incoming', source_code:'tshed', status:'deprecated',
+    owner:'Команда ЦАМ', responsible_user_id:'pg',
+    description:'Устаревший эндпоинт ЦХЭД — выгрузка акта по идентификатору.',
+    tags:'tshed, acts', request_body:'',
+    publish_on_landing:false, auth_required:false,
+    base_url:'https://tshed.mos.ru', landing_category:'external',
+    curl_example:'curl -X GET "https://tshed.mos.ru/tshed/v1/acts/42"',
+    created_at:'2026-03-01 09:00', updated_at:'2026-08-01 09:00', deleted_at:null,
+    params:[
+      { location:'path', name:'id', data_type:'integer', required:true, description:'Идентификатор акта' }
+    ],
+    responses:[
+      { http_code:'200', description:'Акт', example:'{ "id": 42, "url": "..." }' }
+    ]
+  }
+];
+
+/* ============================================================
+   РАСШИРЕННЫЙ ФИЛЬТР
+   ============================================================ */
+const AF_FIELDS = {
+  api: [
+    { id:'name',             label:'Название',         type:'text', get: r => r.name },
+    { id:'code',             label:'Служебный код',    type:'text', get: r => r.code },
+    { id:'method',           label:'Метод',            type:'enum',
+      options: DICT_API_METHODS.map(x => x.code),
+      labels:  DICT_API_METHODS.map(x => x.label),
+      get: r => r.method },
+    { id:'path',             label:'Путь',             type:'text', get: r => r.path },
+    { id:'group_code',       label:'Группа',           type:'enum',
+      options: DICT_API_GROUPS.map(x => x.code),
+      labels:  DICT_API_GROUPS.map(x => x.label),
+      get: r => r.group_code },
+    { id:'source_code',      label:'Источник',         type:'enum',
+      options: DICT_API_SOURCES.map(x => x.code),
+      labels:  DICT_API_SOURCES.map(x => x.label),
+      get: r => r.source_code || '' },
+    { id:'version',          label:'Версия',           type:'text', get: r => r.version },
+    { id:'status',           label:'Статус',           type:'enum',
+      options: DICT_API_STATUSES.map(x => x.code),
+      labels:  DICT_API_STATUSES.map(x => x.label),
+      get: r => r.status },
+    { id:'landing_category', label:'Категория на лендинге', type:'enum',
+      options: DICT_API_LANDING_CATEGORIES.map(x => x.code),
+      labels:  DICT_API_LANDING_CATEGORIES.map(x => x.label),
+      get: r => r.landing_category }
+  ]
+};
+
+const AF_OPS = {
+  text: [
+    { id:'contains',    label:'содержит' },
+    { id:'notContains', label:'не содержит' },
+    { id:'equals',      label:'равно' },
+    { id:'notEquals',   label:'не равно' },
+    { id:'startsWith',  label:'начинается с' },
+    { id:'endsWith',    label:'заканчивается на' },
+    { id:'empty',       label:'пусто',    noValue:true },
+    { id:'notEmpty',    label:'не пусто', noValue:true }
+  ],
+  enum: [
+    { id:'in',    label:'входит в',    multi:true },
+    { id:'notIn', label:'не входит в', multi:true }
+  ]
+};
+
+const advFilters = { api: { conditions:[], join:'and', appliedConditions:[], appliedJoin:'and' } };
+const filterPanelOpen = { api:false };
+const savedFilters = { api: [] };
+let afUid = 1000;
+const newAfId = () => 'af' + (++afUid);
+let sfUid = 2000;
+const newSfId = () => 'sf' + (++sfUid);
+
+/* ============================================================
+   УТИЛИТЫ
+   ============================================================ */
+function plural(n, forms){
+  const a = Math.abs(n) % 100, b = a % 10;
+  if (a > 10 && a < 20) return forms[2];
+  if (b > 1 && b < 5) return forms[1];
+  if (b === 1) return forms[0];
+  return forms[2];
+}
+function esc(s){
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[c]));
+}
+function toast(msg){
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('on');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => el.classList.remove('on'), 2000);
+}
+
+/* ============================================================
+   ФИЛЬТРЫ
+   ============================================================ */
+function findFieldDef(condField){
+  for (const key in AF_FIELDS){
+    const f = AF_FIELDS[key].find(x => x.id === condField);
+    if (f) return f;
+  }
+  return null;
+}
+function matchesCondition(record, cond){
+  const fieldDef = findFieldDef(cond.field);
+  if (!fieldDef) return true;
+  const value = fieldDef.get(record);
+  const op = cond.op, v = cond.value;
+  if (fieldDef.type === 'enum'){
+    const arr = Array.isArray(value) ? value : [value];
+    const sel = Array.isArray(v) ? v : (v ? [v] : []);
+    if (op === 'in') return sel.length === 0 || sel.some(s => arr.includes(s));
+    if (op === 'notIn') return sel.length === 0 || !sel.some(s => arr.includes(s));
+    return true;
+  }
+  const s = String(value == null ? '' : value).toLowerCase();
+  if (op === 'empty')    return s.trim() === '';
+  if (op === 'notEmpty') return s.trim() !== '';
+  if (v == null || String(v).trim() === '') return true;
+  const needle = String(v).toLowerCase();
+  if (op === 'contains')    return s.includes(needle);
+  if (op === 'notContains') return !s.includes(needle);
+  if (op === 'equals')      return s === needle;
+  if (op === 'notEquals')   return s !== needle;
+  if (op === 'startsWith')  return s.startsWith(needle);
+  if (op === 'endsWith')    return s.endsWith(needle);
+  return true;
+}
+function matchesAdvanced(record, listId){
+  const state = advFilters[listId];
+  if (!state) return true;
+  const conds = state.appliedConditions;
+  if (!conds || conds.length === 0) return true;
+  const results = conds.map(c => matchesCondition(record, c));
+  return state.appliedJoin === 'or' ? results.some(Boolean) : results.every(Boolean);
+}
+function countAppliedConditions(listId){
+  const st = advFilters[listId];
+  return st ? (st.appliedConditions || []).length : 0;
+}
+function updateAfBadge(listId){
+  const btn = document.getElementById('af-btn-' + listId);
+  const badge = document.getElementById('af-badge-' + listId);
+  if (!btn || !badge) return;
+  const n = countAppliedConditions(listId);
+  if (n > 0){
+    badge.textContent = n;
+    badge.classList.remove('hidden');
+    btn.classList.add('has-conditions');
+  } else {
+    badge.classList.add('hidden');
+    btn.classList.remove('has-conditions');
+  }
+}
+function toggleFilterPanel(listId){
+  const panel = document.getElementById('af-panel-' + listId);
+  if (!panel) return;
+  const isOpen = filterPanelOpen[listId];
+  if (!isOpen){
+    const state = advFilters[listId];
+    state.conditions = JSON.parse(JSON.stringify(state.appliedConditions || []));
+    state.join = state.appliedJoin || 'and';
+    panel.style.display = '';
+    filterPanelOpen[listId] = true;
+    renderFilterPanel(listId);
+  } else {
+    panel.style.display = 'none';
+    filterPanelOpen[listId] = false;
+  }
+}
+function renderFilterPanel(listId){
+  const panel = document.getElementById('af-panel-' + listId);
+  const state = advFilters[listId];
+  if (!panel) return;
+  panel.innerHTML = `
+    <div class="filter-panel-head">
+      <div class="filter-panel-title">Условия отбора</div>
+      <div class="filter-join" id="filter-join-${listId}">
+        <button type="button" class="filter-join-btn ${state.join==='and'?'active':''}" data-join="and">И — все условия</button>
+        <button type="button" class="filter-join-btn ${state.join==='or'?'active':''}" data-join="or">ИЛИ — любое условие</button>
+      </div>
+    </div>
+    <div class="filter-conditions" id="filter-conditions-${listId}"></div>
+    <button type="button" class="btn outline sm" onclick="addFilterCondition('${listId}')">+ Добавить условие</button>
+    <div class="filter-panel-foot">
+      <button type="button" class="btn outline sm" onclick="clearFilterConditions('${listId}')">Очистить</button>
+      <div class="right">
+        <button type="button" class="btn outline sm" onclick="toggleFilterPanel('${listId}')">Закрыть</button>
+        <button type="button" class="btn sm" onclick="applyFilter('${listId}')">Применить отбор</button>
+      </div>
+    </div>
+  `;
+  panel.querySelectorAll('#filter-join-' + listId + ' .filter-join-btn').forEach(btn => {
+    btn.onclick = () => { state.join = btn.dataset.join; renderFilterPanel(listId); };
+  });
+  renderFilterConditions(listId);
+}
+function renderFilterConditions(listId){
+  const state = advFilters[listId];
+  const fields = AF_FIELDS[listId];
+  const wrap = document.getElementById('filter-conditions-' + listId);
+  if (!wrap) return;
+  wrap.innerHTML = '';
+  if (state.conditions.length === 0){
+    wrap.innerHTML = '<div class="filter-empty">Условий нет. Нажмите «Добавить условие».</div>';
+    return;
+  }
+  state.conditions.forEach(c => {
+    const fieldDef = fields.find(f => f.id === c.field) || fields[0];
+    const ops = AF_OPS[fieldDef.type];
+    const opDef = ops.find(o => o.id === c.op) || ops[0];
+    const row = document.createElement('div');
+    row.className = 'filter-row';
+
+    const fieldSel = document.createElement('select');
+    fieldSel.className = 'input';
+    fields.forEach(f => {
+      const opt = document.createElement('option');
+      opt.value = f.id; opt.textContent = f.label;
+      if (f.id === fieldDef.id) opt.selected = true;
+      fieldSel.appendChild(opt);
+    });
+    fieldSel.onchange = () => onFilterFieldChange(listId, c.id, fieldSel.value);
+
+    const opSel = document.createElement('select');
+    opSel.className = 'input';
+    ops.forEach(o => {
+      const opt = document.createElement('option');
+      opt.value = o.id; opt.textContent = o.label;
+      if (o.id === opDef.id) opt.selected = true;
+      opSel.appendChild(opt);
+    });
+    opSel.onchange = () => onFilterOpChange(listId, c.id, opSel.value);
+
+    const valWrap = document.createElement('div');
+    valWrap.className = 'filter-value-wrap';
+    if (!opDef.noValue){
+      if (fieldDef.type === 'enum'){
+        const chips = document.createElement('div');
+        chips.className = 'filter-enum-chips';
+        const selected = Array.isArray(c.value) ? c.value : [];
+        fieldDef.options.forEach((code, i) => {
+          const lbl = document.createElement('label');
+          const on = selected.includes(code);
+          lbl.className = 'filter-enum-chip' + (on ? ' on' : '');
+          lbl.innerHTML = `<input type="checkbox" ${on ? 'checked' : ''} /><span>${esc(fieldDef.labels[i])}</span>`;
+          lbl.onclick = (e) => {
+            e.preventDefault();
+            const arr = Array.isArray(c.value) ? c.value.slice() : [];
+            const ix = arr.indexOf(code);
+            if (ix >= 0) arr.splice(ix,1); else arr.push(code);
+            c.value = arr;
+            renderFilterConditions(listId);
+          };
+          chips.appendChild(lbl);
+        });
+        valWrap.appendChild(chips);
+      } else {
+        const inp = document.createElement('input');
+        inp.className = 'input filter-value';
+        inp.placeholder = 'значение';
+        inp.value = c.value ?? '';
+        inp.oninput = () => { c.value = inp.value; };
+        valWrap.appendChild(inp);
+      }
+    } else {
+      const note = document.createElement('span');
+      note.style.color = 'var(--muted)';
+      note.style.fontSize = '11.5px';
+      note.textContent = 'значение не требуется';
+      valWrap.appendChild(note);
+    }
+    const del = document.createElement('button');
+    del.type = 'button'; del.className = 'filter-del'; del.textContent = '✕';
+    del.onclick = () => removeFilterCondition(listId, c.id);
+
+    row.appendChild(fieldSel); row.appendChild(opSel); row.appendChild(valWrap); row.appendChild(del);
+    wrap.appendChild(row);
+  });
+}
+function addFilterCondition(listId){
+  const state = advFilters[listId];
+  const fields = AF_FIELDS[listId];
+  const firstField = fields[0];
+  const firstOp = AF_OPS[firstField.type][0];
+  state.conditions.push({
+    id: newAfId(), field: firstField.id, op: firstOp.id,
+    value: firstField.type === 'enum' ? [] : ''
+  });
+  renderFilterConditions(listId);
+}
+function removeFilterCondition(listId, condId){
+  const state = advFilters[listId];
+  state.conditions = state.conditions.filter(c => c.id !== condId);
+  renderFilterConditions(listId);
+}
+function onFilterFieldChange(listId, condId, fieldId){
+  const state = advFilters[listId];
+  const c = state.conditions.find(x => x.id === condId);
+  if (!c) return;
+  const fieldDef = AF_FIELDS[listId].find(f => f.id === fieldId);
+  const firstOp = AF_OPS[fieldDef.type][0];
+  c.field = fieldId; c.op = firstOp.id;
+  c.value = fieldDef.type === 'enum' ? [] : '';
+  renderFilterConditions(listId);
+}
+function onFilterOpChange(listId, condId, opId){
+  const state = advFilters[listId];
+  const c = state.conditions.find(x => x.id === condId);
+  if (!c) return;
+  c.op = opId;
+  renderFilterConditions(listId);
+}
+function clearFilterConditions(listId){
+  const state = advFilters[listId];
+  state.conditions = []; state.join = 'and';
+  renderFilterPanel(listId);
+}
+function applyFilter(listId){
+  const state = advFilters[listId];
+  state.appliedConditions = JSON.parse(JSON.stringify(state.conditions));
+  state.appliedJoin = state.join;
+  updateAfBadge(listId);
+  renderAppliedBar(listId);
+  renderApiList();
+  updateResetVisibility(listId);
+  toggleFilterPanel(listId);
+  const n = state.appliedConditions.length;
+  toast(n > 0 ? `Применено условий: ${n}` : 'Расширенные условия очищены');
+}
+function renderAppliedBar(listId){
+  const bar = document.getElementById('applied-' + listId);
+  if (!bar) return;
+  const state = advFilters[listId];
+  const conds = state.appliedConditions;
+  if (!conds || conds.length === 0){ bar.style.display = 'none'; return; }
+  bar.style.display = '';
+  bar.innerHTML = `
+    <span class="applied-bar-label">Условия отбора</span>
+    <span class="applied-bar-text">${esc(describeConditions(listId, conds, state.appliedJoin))}</span>
+    <button type="button" class="reset-btn on" onclick="clearAppliedFilter('${listId}')">Сбросить всё</button>
+  `;
+}
+function describeConditions(listId, conds, join){
+  const fields = AF_FIELDS[listId];
+  return conds.map(c => {
+    const fieldDef = fields.find(f => f.id === c.field);
+    if (!fieldDef) return '';
+    const opDef = AF_OPS[fieldDef.type].find(o => o.id === c.op);
+    let val = '';
+    if (Array.isArray(c.value)){
+      val = c.value.map(code => {
+        const i = fieldDef.options.indexOf(code);
+        return fieldDef.labels ? fieldDef.labels[i] : code;
+      }).join(', ');
+    } else val = c.value ?? '';
+    return `${fieldDef.label} ${opDef ? opDef.label : c.op}${val ? ' ' + val : ''}`;
+  }).filter(Boolean).join(join === 'and' ? ' и ' : ' или ');
+}
+function clearAppliedFilter(listId){
+  const state = advFilters[listId];
+  state.appliedConditions = []; state.appliedJoin = 'and';
+  updateAfBadge(listId);
+  renderAppliedBar(listId);
+  renderApiList();
+  updateResetVisibility(listId);
+}
+
+/* ============================================================
+   МЕНЮ «⋮» И СОХРАНЁННЫЕ ФИЛЬТРЫ
+   ============================================================ */
+function toggleMenu(listId){
+  const menu = document.getElementById(listId + '-menu');
+  if (!menu) return;
+  const isOpen = menu.classList.contains('open');
+  document.querySelectorAll('.menu-content.open').forEach(m => m.classList.remove('open'));
+  if (!isOpen){ renderMenuContent(listId); menu.classList.add('open'); }
+}
+function renderMenuContent(listId){
+  const menu = document.getElementById(listId + '-menu');
+  if (!menu) return;
+  const list = savedFilters[listId] || [];
+  menu.innerHTML = `
+    <div class="menu-item" onclick="saveCurrentFilter('${listId}')"><span>🔖</span> Сохранить текущий фильтр</div>
+    <div class="menu-item" onclick="copyFilterLink('${listId}')"><span>🔗</span> Скопировать ссылку на отбор</div>
+    <div style="padding:8px 10px 4px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);margin-top:4px;letter-spacing:.05em;text-transform:uppercase;font-weight:600">
+      Сохранённые фильтры
+    </div>
+    ${list.length === 0
+      ? `<div style="padding:6px 10px 10px;font-size:12px;color:var(--muted);font-style:italic;line-height:1.45">
+           Пока нет сохранённых фильтров.
+         </div>`
+      : list.map(f => `
+        <div class="menu-item" style="justify-content:space-between;gap:8px" onclick="applySavedFilter('${listId}','${f.id}')">
+          <span style="flex:1;display:flex;align-items:center;gap:8px;min-width:0">
+            <span style="flex-shrink:0;color:var(--muted)">▸</span>
+            <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(f.name)}</span>
+          </span>
+          <span class="saved-filter-del" onclick="event.stopPropagation();deleteSavedFilter('${listId}','${f.id}')" title="Удалить фильтр">✕</span>
+        </div>`).join('')}
+  `;
+}
+function saveCurrentFilter(listId){
+  const name = window.prompt('Название фильтра');
+  if (!name || !name.trim()) return;
+  const trimmed = name.trim();
+  const filterData = {
+    id: newSfId(), name: trimmed,
+    search: (document.getElementById('api-q')?.value || ''),
+    ms: {}, af: null
+  };
+  Object.keys(msState).forEach(k => {
+    if (k.startsWith(listId) && msState[k].length > 0) filterData.ms[k] = msState[k].slice();
+  });
+  if (advFilters[listId]) filterData.af = {
+    conditions: JSON.parse(JSON.stringify(advFilters[listId].appliedConditions)),
+    join: advFilters[listId].appliedJoin
+  };
+  const arr = savedFilters[listId];
+  const idx = arr.findIndex(f => f.name === trimmed);
+  if (idx >= 0) arr[idx] = filterData; else arr.push(filterData);
+  toast(`Фильтр «${trimmed}» сохранён`);
+  document.querySelectorAll('.menu-content.open').forEach(m => m.classList.remove('open'));
+}
+function applySavedFilter(listId, filterId){
+  const f = (savedFilters[listId] || []).find(x => x.id === filterId);
+  if (!f) return;
+  const s = document.getElementById('api-q');
+  if (s) s.value = f.search || '';
+  Object.keys(msState).forEach(k => {
+    if (k.startsWith(listId)){
+      msState[k] = (f.ms[k] || []).slice();
+      document.querySelectorAll('#' + k + '-menu input[type=checkbox]').forEach(cb => {
+        cb.checked = msState[k].includes(cb.value);
+      });
+      updateMsLabel(k);
+    }
+  });
+  if (f.af){
+    advFilters[listId].appliedConditions = JSON.parse(JSON.stringify(f.af.conditions));
+    advFilters[listId].appliedJoin = f.af.join;
+    updateAfBadge(listId); renderAppliedBar(listId);
+  }
+  renderApiList();
+  updateResetVisibility(listId);
+  toast(`Фильтр «${f.name}» применён`);
+  document.querySelectorAll('.menu-content.open').forEach(m => m.classList.remove('open'));
+}
+function deleteSavedFilter(listId, filterId){
+  savedFilters[listId] = (savedFilters[listId] || []).filter(f => f.id !== filterId);
+  renderMenuContent(listId);
+  toast('Фильтр удалён');
+}
+function copyFilterLink(listId){
+  const search = document.getElementById('api-q')?.value.trim() || '';
+  const params = new URLSearchParams();
+  if (search) params.set('q', search);
+  if (msState['api-method']?.length) params.set('method', msState['api-method'].join(','));
+  if (msState['api-source']?.length) params.set('source', msState['api-source'].join(','));
+  if (msState['api-status']?.length) params.set('status', msState['api-status'].join(','));
+  const url = window.location.origin + window.location.pathname + '?' + params.toString();
+  if (navigator.clipboard) navigator.clipboard.writeText(url);
+  toast('Ссылка на отбор скопирована');
+  document.querySelectorAll('.menu-content.open').forEach(m => m.classList.remove('open'));
+}
+
+/* ============================================================
+   МУЛЬТИВЫБОР
+   ============================================================ */
+const msState = { 'api-method': [], 'api-source': [], 'api-status': [] };
+
+function toggleMs(id){
+  const menu = document.getElementById(id + '-menu');
+  if (!menu) return;
+  const isOpen = menu.classList.contains('open');
+  document.querySelectorAll('.ms-menu.open').forEach(m => m.classList.remove('open'));
+  document.querySelectorAll('.ms-btn.active').forEach(b => b.classList.remove('active'));
+  if (!isOpen){
+    menu.classList.add('open');
+    document.getElementById(id + '-btn').classList.add('active');
+  }
+}
+function clearMs(id){
+  msState[id] = [];
+  document.querySelectorAll('#' + id + '-menu input[type=checkbox]').forEach(cb => cb.checked = false);
+  closeMs();
+  updateMsLabel(id);
+  renderApiList();
+  updateResetVisibility(id.split('-')[0]);
+}
+function onMsChange(id){
+  msState[id] = [...document.querySelectorAll('#' + id + '-menu input[type=checkbox]:checked')].map(cb => cb.value);
+  updateMsLabel(id);
+  renderApiList();
+  updateResetVisibility(id.split('-')[0]);
+}
+function closeMs(){
+  document.querySelectorAll('.ms-menu.open').forEach(m => m.classList.remove('open'));
+  document.querySelectorAll('.ms-btn.active').forEach(b => b.classList.remove('active'));
+}
+function updateMsLabel(id){
+  const wrap = document.getElementById(id + '-wrap');
+  const allLabel = wrap?.dataset.allLabel || 'Все';
+  const labelEl = document.getElementById(id + '-label');
+  const checkAll = document.getElementById(id + '-check-all');
+  const values = msState[id] || [];
+  if (checkAll) checkAll.style.visibility = values.length === 0 ? 'visible' : 'hidden';
+  if (values.length === 0) labelEl.textContent = allLabel;
+  else if (values.length === 1){
+    const dict = id === 'api-method' ? DICT_API_METHODS
+               : id === 'api-source' ? DICT_API_SOURCES
+               : id === 'api-status' ? DICT_API_STATUSES : null;
+    labelEl.textContent = dict ? labelOf(dict, values[0]) : values[0];
+  } else labelEl.textContent = `Выбрано: ${values.length}`;
+}
+function resetFilters(group){
+  const s = document.getElementById('api-q');
+  if (s) s.value = '';
+  Object.keys(msState).forEach(k => {
+    if (k.startsWith(group)){
+      msState[k] = [];
+      document.querySelectorAll('#' + k + '-menu input[type=checkbox]').forEach(cb => cb.checked = false);
+      updateMsLabel(k);
+    }
+  });
+  const af = advFilters[group];
+  if (af){
+    af.appliedConditions = []; af.appliedJoin = 'and';
+    updateAfBadge(group); renderAppliedBar(group);
+    if (filterPanelOpen[group]) toggleFilterPanel(group);
+  }
+  renderApiList();
+  updateResetVisibility(group);
+}
+function updateResetVisibility(group){
+  const searchVal = (document.getElementById('api-q')?.value || '').trim();
+  const hasMs = Object.keys(msState).some(k => k.startsWith(group) && msState[k].length > 0);
+  const hasAf = advFilters[group] && countAppliedConditions(group) > 0;
+  const btn = document.getElementById(group + '-reset');
+  if (btn) btn.classList.toggle('on', searchVal.length > 0 || hasMs || hasAf);
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.ms-wrap')) closeMs();
+  if (!e.target.closest('.menu-wrap')) {
+    document.querySelectorAll('.menu-content.open').forEach(m => m.classList.remove('open'));
+  }
+});
+
+/* ============================================================
+   НАВИГАЦИЯ
+   ============================================================ */
+function showSection(section, view){
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  const id = view === 'card' ? 'screen-api-card' : 'screen-api-list';
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.toggle('active', n.dataset.nav === section));
+  const crumb = document.getElementById('crumb-now');
+  crumb.textContent = view === 'card'
+    ? (document.getElementById('api-title').textContent || 'API')
+    : 'API';
+  window.scrollTo(0,0);
+}
+
+/* ============================================================
+   ВКЛАДКИ
+   ============================================================ */
+function setupTabs(screenId, tabsId){
+  const screen = document.getElementById(screenId);
+  const tabsEl = document.getElementById(tabsId);
+  if (!screen || !tabsEl) return;
+  tabsEl.querySelectorAll('.tab').forEach(t => {
+    t.onclick = () => {
+      tabsEl.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      const id = t.dataset.tab;
+      screen.querySelectorAll(':scope > .tab-panel').forEach(p => {
+        p.style.display = p.dataset.panel === id ? '' : 'none';
+      });
+    };
+  });
+}
+
+/* ============================================================
+   СОРТИРОВКА
+   ============================================================ */
+let apiSort = { field:null, dir:null };
+function setupSorting(){
+  document.querySelectorAll('#screen-api-list thead th.sortable').forEach(th => {
+    th.onclick = () => {
+      const f = th.dataset.sort;
+      if (apiSort.field === f){
+        if (apiSort.dir === 'asc') apiSort.dir = 'desc';
+        else { apiSort.field = null; apiSort.dir = null; }
+      } else { apiSort.field = f; apiSort.dir = 'asc'; }
+      paintSort('#screen-api-list thead', apiSort);
+      renderApiList();
+    };
+  });
+}
+function paintSort(sel, sort){
+  document.querySelectorAll(sel + ' th.sortable').forEach(th => {
+    if (th.dataset.sort === sort.field) th.dataset.dir = sort.dir || '';
+    else th.removeAttribute('data-dir');
+  });
+}
+function applySort(rows, sort, accessors){
+  if (!sort.field || !sort.dir) return rows;
+  const acc = accessors[sort.field];
+  if (!acc) return rows;
+  const dir = sort.dir === 'asc' ? 1 : -1;
+  return rows.slice().sort((a,b) => {
+    const va = acc(a), vb = acc(b);
+    if (va == null && vb == null) return 0;
+    if (va == null) return 1;
+    if (vb == null) return -1;
+    if (typeof va === 'number' && typeof vb === 'number') return (va - vb) * dir;
+    return String(va).localeCompare(String(vb), 'ru') * dir;
+  });
+}
+
+/* ============================================================
+   API LIST
+   ============================================================ */
+function methodClass(m){
+  const s = String(m || '').toLowerCase();
+  if (['get','post','put','patch','delete','head','options'].includes(s)) return s;
+  return '';
+}
+function methodBadge(m){
+  return `<span class="method ${methodClass(m)}">${esc(m || '')}</span>`;
+}
+
+function updateApiTabCounts(){
+  const all = API_DATA.length;
+  const internal = API_DATA.filter(r => r.group_code === 'internal').length;
+  const out = API_DATA.filter(r => r.group_code === 'outgoing').length;
+  const inb = API_DATA.filter(r => r.group_code === 'incoming').length;
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  set('api-tab-count-all', all);
+  set('api-tab-count-internal', internal);
+  set('api-tab-count-out', out);
+  set('api-tab-count-in', inb);
+}
+
+let apiGroupTab = 'all';
+function setupApiTabs(){
+  const tabsEl = document.getElementById('api-tabs');
+  if (!tabsEl) return;
+  tabsEl.querySelectorAll('.api-tab').forEach(t => {
+    t.onclick = () => {
+      tabsEl.querySelectorAll('.api-tab').forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      apiGroupTab = t.dataset.group;
+      renderApiList();
+    };
+  });
+}
+
+function renderApiList(){
+  const q  = document.getElementById('api-q').value.trim().toLowerCase();
+  const mSel = msState['api-method'];
+  const sSel = msState['api-source'];
+  const stSel = msState['api-status'];
+
+  const filtered = API_DATA.filter(r => {
+    if (apiGroupTab !== 'all' && r.group_code !== apiGroupTab) return false;
+    if (mSel.length && !mSel.includes(r.method)) return false;
+    if (sSel.length && !sSel.includes(r.source_code || '')) return false;
+    if (stSel.length && !stSel.includes(r.status)) return false;
+    if (q.length >= 2){
+      const hay = (r.name + ' ' + r.code + ' ' + r.path + ' ' + r.description).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    if (!matchesAdvanced(r, 'api')) return false;
+    return true;
+  });
+  const rows = applySort(filtered, apiSort, {
+    method: r => r.method,
+    path: r => r.path,
+    group_code: r => labelOf(DICT_API_GROUPS, r.group_code) + (r.source_code ? ' · ' + labelOf(DICT_API_SOURCES, r.source_code) : ''),
+    version: r => r.version,
+    status: r => labelOf(DICT_API_STATUSES, r.status),
+    name: r => r.name
+  });
+
+  const tbody = document.getElementById('api-rows');
+  const empty = document.getElementById('api-empty');
+  tbody.innerHTML = '';
+  empty.style.display = rows.length === 0 ? 'block' : 'none';
+
+  rows.forEach(r => {
+    const tr = document.createElement('tr');
+    tr.onclick = () => openApiCard(r.id);
+    const stTag = r.status === 'active' ? 'ok'
+                : r.status === 'deprecated' ? 'warn'
+                : r.status === 'archived' ? 'mute' : 'ink';
+    const groupLine = labelOf(DICT_API_GROUPS, r.group_code) + (r.source_code ? ' · ' + labelOf(DICT_API_SOURCES, r.source_code) : '');
+    tr.innerHTML = `
+      <td>${methodBadge(r.method)}</td>
+      <td>
+        <div class="name-cell">
+          <span class="n">${esc(r.name)}</span>
+          <span class="c endpoint-path">${esc(r.path)}</span>
+        </div>
+      </td>
+      <td>${esc(groupLine)}</td>
+      <td><span class="num mono" style="font-size:12px">${esc(r.version || '—')}</span></td>
+      <td><span class="tag ${stTag}">${esc(labelOf(DICT_API_STATUSES, r.status))}</span></td>
+      <td class="right">›</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById('api-count').textContent =
+    rows.length + ' ' + plural(rows.length, ['эндпоинт','эндпоинта','эндпоинтов']);
+
+  updateApiTabCounts();
+}
+
+/* ============================================================
+   API CARD
+   ============================================================ */
+let currentApiId = null;
+let draft = null;
+let apiParams = [];
+let apiResponses = [];
+let apiSelectedResponseId = null;
+let apiParamDragId = null;
+let uid = 100;
+const newId = (p) => (p || 'x') + (++uid);
+
+function fillSelect(el, dict, value, withEmpty){
+  const items = withEmpty ? [{code:'', label:'— не выбрано —'}, ...dict] : dict;
+  el.innerHTML = items.map(x => `<option value="${esc(x.code)}">${esc(x.label)}</option>`).join('');
+  el.value = value || (items[0] ? items[0].code : '');
+}
+
+function openApiCard(id){
+  const r = API_DATA.find(x => x.id === id);
+  if (!r) return;
+  currentApiId = r.id;
+  draft = JSON.parse(JSON.stringify(r));
+  apiParams = (draft.params || []).map((p, i) => ({...p, _id: 'p' + i + '_' + Date.now()}));
+  apiResponses = (draft.responses || []).map((p, i) => ({...p, _id: 'r' + i + '_' + Date.now()}));
+  apiSelectedResponseId = apiResponses.length ? apiResponses[0]._id : null;
+
+  document.getElementById('api-title').textContent      = draft.name || 'Без названия';
+  document.getElementById('api-crumb-name').textContent = draft.name || 'Без названия';
+  renderHead();
+  renderMainTab();
+  renderApiParams();
+  renderApiResponses();
+  renderApiResponsePreview();
+  onApiMethodOrPathChange();
+  onApiGroupChange();
+  clearApiErrors();
+  showSection('api','card');
+}
+
+function createNewApi(){
+  currentApiId = null;
+  draft = {
+    id:'new',
+    code:'',
+    name:'',
+    method:'GET',
+    path:'/api/v1/',
+    version:'v1',
+    group_code:'internal',
+    source_code:'',
+    status:'draft',
+    owner:'',
+    responsible_user_id:'',
+    description:'',
+    tags:'',
+    request_body:'',
+    publish_on_landing:false,
+    auth_required:true,
+    base_url:'https://api.cam.mos.ru',
+    landing_category:'skills',
+    curl_example:'',
+    created_at: new Date().toISOString().slice(0,16).replace('T',' '),
+    updated_at: new Date().toISOString().slice(0,16).replace('T',' '),
+    deleted_at:null
+  };
+  apiParams = [];
+  apiResponses = [
+    { _id:'r_' + Date.now() + '_1', http_code:'200', description:'Успешный ответ', example:'{ "ok": true }' },
+    { _id:'r_' + Date.now() + '_2', http_code:'400', description:'Некорректный запрос', example:'{ "error": "bad_request" }' }
+  ];
+  apiSelectedResponseId = apiResponses[0]._id;
+
+  document.getElementById('api-title').textContent      = 'Новый эндпоинт';
+  document.getElementById('api-crumb-name').textContent = 'Новый эндпоинт';
+  renderHead();
+  renderMainTab();
+  renderApiParams();
+  renderApiResponses();
+  renderApiResponsePreview();
+  onApiMethodOrPathChange();
+  onApiGroupChange();
+  clearApiErrors();
+  showSection('api','card');
+  toast('Создаётся новый эндпоинт');
+}
+
+function renderHead(){
+  document.getElementById('api-title').textContent = draft.name || 'Без названия';
+  document.getElementById('api-purpose').textContent = draft.description || 'Описание не заполнено.';
+  document.getElementById('api-head-code').textContent = draft.code || '—';
+  document.getElementById('api-head-owner').textContent = draft.owner || '—';
+  document.getElementById('api-head-status').textContent = labelOf(DICT_API_STATUSES, draft.status);
+  const dot = document.getElementById('api-head-status-dot');
+  dot.style.background = draft.status === 'active' ? 'var(--accent-2)'
+                       : draft.status === 'deprecated' ? 'var(--warn)'
+                       : draft.status === 'archived' ? 'var(--muted)' : '#c9cfdb';
+}
+
+function renderMainTab(){
+  document.getElementById('api-name').value = draft.name || '';
+  document.getElementById('api-code').value = draft.code || '';
+  fillSelect(document.getElementById('api-method'),           DICT_API_METHODS, draft.method);
+  document.getElementById('api-version').value = draft.version || '';
+  document.getElementById('api-path').value = draft.path || '';
+  fillSelect(document.getElementById('api-group'),            DICT_API_GROUPS, draft.group_code);
+  fillSelect(document.getElementById('api-source'),           DICT_API_SOURCES, draft.source_code, true);
+  fillSelect(document.getElementById('api-status'),           DICT_API_STATUSES, draft.status);
+  document.getElementById('api-owner').value = draft.owner || '';
+  fillSelect(document.getElementById('api-responsible'),
+    [{code:'', label:'— не указан —'}, ...RESPONSIBLE_USERS.map(u => ({code:u.id, label:u.name}))],
+    draft.responsible_user_id || '');
+  document.getElementById('api-desc').value = draft.description || '';
+  document.getElementById('api-tags').value = draft.tags || '';
+  document.getElementById('api-public').checked = !!draft.publish_on_landing;
+  document.getElementById('api-auth').checked = !!draft.auth_required;
+  document.getElementById('api-base').value = draft.base_url || '';
+  fillSelect(document.getElementById('api-landing-category'), DICT_API_LANDING_CATEGORIES, draft.landing_category);
+  document.getElementById('api-curl').value = draft.curl_example || '';
+  document.getElementById('api-request-body').value = draft.request_body || '';
+}
+
+function onFieldInput(key, value){
+  if (!draft) return;
+  draft[key] = value;
+  if (key === 'name'){
+    document.getElementById('api-title').textContent = value || 'Без названия';
+    document.getElementById('api-crumb-name').textContent = value || 'Без названия';
+  }
+  if (key === 'code') document.getElementById('api-head-code').textContent = value || '—';
+  if (key === 'description') document.getElementById('api-purpose').textContent = value || 'Описание не заполнено.';
+  if (key === 'owner') document.getElementById('api-head-owner').textContent = value || '—';
+  if (key === 'status') renderHead();
+}
+
+function onApiGroupChange(){
+  const group = document.getElementById('api-group').value;
+  const field = document.getElementById('api-source-field');
+  const sourceSel = document.getElementById('api-source');
+  if (!sourceSel) return;
+
+  let options = [];
+  if (group === 'incoming') options = DICT_API_SOURCES.filter(s => ['mppm','esk','tshed'].includes(s.code));
+  else if (group === 'outgoing') options = DICT_API_SOURCES.filter(s => s.code === 'cam_panel');
+  else options = [];
+
+  const current = sourceSel.value;
+  sourceSel.innerHTML = (options.length
+    ? [{code:'', label:'— не выбрано —'}, ...options]
+    : [{code:'', label:'—'}]
+  ).map(o => `<option value="${esc(o.code)}">${esc(o.label)}</option>`).join('');
+  if (options.some(o => o.code === current)) sourceSel.value = current;
+
+  if (field) field.style.display = (group === 'internal') ? 'none' : '';
+  if (group === 'internal') sourceSel.value = '';
+}
+
+function onApiMethodOrPathChange(){
+  const m = document.getElementById('api-method').value;
+  const p = document.getElementById('api-path').value;
+  const mEl = document.getElementById('api-preview-method');
+  const pEl = document.getElementById('api-preview-path');
+  if (mEl){
+    mEl.textContent = m;
+    mEl.className = 'method ' + methodClass(m);
+  }
+  if (pEl) pEl.textContent = p || '—';
+}
+
+function renderApiParams(){
+  const wrap = document.getElementById('api-params-list');
+  if (!wrap) return;
+  wrap.innerHTML = '';
+  if (apiParams.length === 0){
+    wrap.innerHTML = `<div class="empty" style="padding:18px">Параметров пока нет. Добавьте первый ниже.</div>`;
+    return;
+  }
+  apiParams.forEach(p => {
+    const row = document.createElement('div');
+    row.className = 'api-edit-row';
+    row.draggable = true;
+    row.dataset.id = p._id;
+    attachApiParamDrag(row, p._id);
+
+    const locOptions = DICT_API_PARAM_LOCATIONS.map(o =>
+      `<option value="${esc(o.code)}" ${o.code === p.location ? 'selected' : ''}>${esc(o.label)}</option>`).join('');
+
+    row.innerHTML = `
+      <div class="handle" title="Перетащите, чтобы изменить порядок">⠿</div>
+      <select class="input" onchange="updateApiParam('${p._id}','location',this.value)">${locOptions}</select>
+      <input class="input" value="${esc(p.name || '')}"
+             placeholder="имя" oninput="updateApiParam('${p._id}','name',this.value)" />
+      <input class="input" value="${esc(p.data_type || '')}"
+             placeholder="тип" oninput="updateApiParam('${p._id}','data_type',this.value)" />
+      <input class="input" value="${esc(p.description || '')}"
+             placeholder="описание" oninput="updateApiParam('${p._id}','description',this.value)" />
+      <div style="display:flex;gap:6px;align-items:center">
+        <label class="req-check">
+          <input type="checkbox" ${p.required ? 'checked' : ''}
+                 onchange="updateApiParam('${p._id}','required',this.checked)" />
+          обяз.
+        </label>
+        <button class="field-del" title="Удалить" onclick="removeApiParam('${p._id}')">✕</button>
+      </div>
+    `;
+    wrap.appendChild(row);
+  });
+}
+
+function addApiParam(){
+  const locSel = document.getElementById('api-add-param-location');
+  const locVal = locSel ? locSel.value : 'query';
+  apiParams.push({
+    _id: 'p' + Date.now() + '_' + (apiParams.length+1),
+    location: locVal, name:'', data_type:'', required:false, description:''
+  });
+  renderApiParams();
+  toast('Параметр добавлен');
+}
+function removeApiParam(id){
+  apiParams = apiParams.filter(p => p._id !== id);
+  renderApiParams();
+  toast('Параметр удалён');
+}
+function updateApiParam(id, key, value){
+  const p = apiParams.find(x => x._id === id);
+  if (!p) return;
+  p[key] = value;
+}
+
+function attachApiParamDrag(row, id){
+  row.addEventListener('dragstart', e => {
+    apiParamDragId = id;
+    row.style.opacity = '.4';
+    e.dataTransfer.effectAllowed = 'move';
+    try { e.dataTransfer.setData('text/plain', id); } catch(_){}
+  });
+  row.addEventListener('dragend', () => {
+    row.style.opacity = '';
+    document.querySelectorAll('.api-edit-row').forEach(el => el.style.borderColor = '');
+    apiParamDragId = null;
+  });
+  row.addEventListener('dragover', e => {
+    e.preventDefault();
+    if (apiParamDragId && apiParamDragId !== id) row.style.borderColor = 'var(--accent)';
+  });
+  row.addEventListener('dragleave', () => row.style.borderColor = '');
+  row.addEventListener('drop', e => {
+    e.preventDefault();
+    row.style.borderColor = '';
+    if (!apiParamDragId || apiParamDragId === id) return;
+    const from = apiParams.findIndex(x => x._id === apiParamDragId);
+    const to = apiParams.findIndex(x => x._id === id);
+    if (from < 0 || to < 0) return;
+    const [moved] = apiParams.splice(from, 1);
+    apiParams.splice(to, 0, moved);
+    apiParamDragId = null;
+    renderApiParams();
+  });
+}
+
+function renderApiResponses(){
+  const wrap = document.getElementById('api-responses-list');
+  if (!wrap) return;
+  wrap.innerHTML = '';
+  if (apiResponses.length === 0){
+    wrap.innerHTML = `<div class="empty" style="padding:18px">Ответов пока нет. Добавьте первый ниже.</div>`;
+    renderApiResponsePreview();
+    return;
+  }
+  if (!apiResponses.some(r => r._id === apiSelectedResponseId)){
+    apiSelectedResponseId = apiResponses[0]._id;
+  }
+  apiResponses.forEach(r => {
+    const row = document.createElement('div');
+    row.className = 'api-resp-row';
+    row.style.cursor = 'pointer';
+    row.dataset.id = r._id;
+    if (r._id === apiSelectedResponseId){
+      row.style.borderColor = 'var(--accent)';
+      row.style.background = '#fffafa';
+    }
+    row.onclick = (e) => {
+      if (e.target.closest('input, button')) return;
+      apiSelectedResponseId = r._id;
+      renderApiResponses();
+    };
+    row.innerHTML = `
+      <input class="input" value="${esc(r.http_code || '')}"
+             placeholder="200" oninput="updateApiResponse('${r._id}','http_code',this.value)" />
+      <input class="input" value="${esc(r.description || '')}"
+             placeholder="описание" oninput="updateApiResponse('${r._id}','description',this.value)" />
+      <input class="input url-input" value="${esc(r.example || '')}"
+             placeholder='{ "ok": true }' oninput="updateApiResponse('${r._id}','example',this.value)" />
+      <button class="field-del" title="Удалить" onclick="removeApiResponse('${r._id}')">✕</button>
+    `;
+    wrap.appendChild(row);
+  });
+  renderApiResponsePreview();
+}
+
+function addApiResponse(){
+  const r = { _id:'r' + Date.now() + '_' + (apiResponses.length+1),
+              http_code:'200', description:'Описание', example:'{ "ok": true }' };
+  apiResponses.push(r);
+  apiSelectedResponseId = r._id;
+  renderApiResponses();
+  toast('Ответ добавлен');
+}
+function removeApiResponse(id){
+  apiResponses = apiResponses.filter(p => p._id !== id);
+  if (apiSelectedResponseId === id) apiSelectedResponseId = apiResponses.length ? apiResponses[0]._id : null;
+  renderApiResponses();
+  toast('Ответ удалён');
+}
+function updateApiResponse(id, key, value){
+  const r = apiResponses.find(x => x._id === id);
+  if (!r) return;
+  r[key] = value;
+  if (apiSelectedResponseId === id) renderApiResponsePreview();
+}
+
+function renderApiResponsePreview(){
+  const el = document.getElementById('api-response-preview');
+  if (!el) return;
+  const r = apiResponses.find(x => x._id === apiSelectedResponseId) || apiResponses[0];
+  if (!r){
+    el.textContent = 'Здесь появится пример тела ответа.';
+    el.style.color = 'rgba(232,235,240,.5)';
+    return;
+  }
+  el.style.color = '';
+  el.textContent = (r.http_code ? 'HTTP ' + r.http_code + (r.description ? ' — ' + r.description : '') + '\n\n' : '') + (r.example || '');
+}
+
+/* ============================================================
+   ВАЛИДАЦИЯ / СОХРАНЕНИЕ
+   ============================================================ */
+function clearApiErrors(){
+  ['api-name','api-code'].forEach(id => {
+    const wrap = document.getElementById(id + '-field');
+    if (wrap) wrap.classList.remove('has-error');
+  });
+}
+function checkApiUnique(key){
+  const value = (draft[key] || '').trim();
+  const wrap  = document.getElementById('api-' + key + '-field');
+  if (!wrap) return true;
+  let ok = true;
+  if (!value) ok = false;
+  else {
+    const dup = API_DATA.some(d => d[key] === value && d.id !== currentApiId);
+    if (dup) ok = false;
+  }
+  wrap.classList.toggle('has-error', !ok);
+  return ok;
+}
+function saveApiCard(){
+  const okName = checkApiUnique('name');
+  const okCode = checkApiUnique('code');
+  const pathVal = (draft.path || '').trim();
+  if (!okName || !okCode || !pathVal){
+    toast('Проверьте обязательные поля');
+    return;
+  }
+  draft.updated_at = new Date().toISOString().slice(0,16).replace('T',' ');
+  draft.params = apiParams.map(p => ({
+    location: p.location, name: p.name, data_type: p.data_type,
+    required: !!p.required, description: p.description
+  }));
+  draft.responses = apiResponses.map(r => ({
+    http_code: r.http_code, description: r.description, example: r.example
+  }));
+
+  if (currentApiId){
+    const ix = API_DATA.findIndex(d => d.id === currentApiId);
+    if (ix >= 0) API_DATA[ix] = JSON.parse(JSON.stringify(draft));
+  } else {
+    draft.id = 'd' + Date.now();
+    API_DATA.push(JSON.parse(JSON.stringify(draft)));
+    currentApiId = draft.id;
+  }
+  renderApiList();
+  renderHead();
+  toast('Изменения сохранены');
+}
+function pauseApiCard(){
+  if (!draft) return;
+  draft.status = draft.status === 'paused' ? 'active' : 'paused';
+  fillSelect(document.getElementById('api-status'), DICT_API_STATUSES, draft.status);
+  renderHead();
+  toast(draft.status === 'paused' ? 'Эндпоинт приостановлен' : 'Эндпоинт возобновлён');
+}
+function archiveApiCard(){
+  if (!draft) return;
+  if (!confirm('Перевести эндпоинт в архив?')) return;
+  draft.status = 'archived';
+  fillSelect(document.getElementById('api-status'), DICT_API_STATUSES, draft.status);
+  renderHead();
+  toast('Эндпоинт переведён в архив');
+}
+
+/* ============================================================
+   ЗАКРЫТИЕ КАРТОЧКИ
+   ============================================================ */
+function tryCloseCard(section){
+  document.getElementById('modal-title').textContent = 'Выйти без сохранения?';
+  document.getElementById('modal-body').innerHTML = `
+    <p class="modal-hint" style="margin:0">Все несохранённые изменения будут потеряны. Продолжить?</p>
+  `;
+  document.getElementById('modal-foot').innerHTML = `
+    <button class="btn outline sm" onclick="closeModal()">Нет</button>
+    <button class="btn sm" onclick="confirmLeaveCard('${section}')">Да</button>
+  `;
+  document.getElementById('modal-backdrop').classList.add('on');
+}
+function confirmLeaveCard(section){
+  closeModal();
+  draft = null;
+  showSection(section, 'list');
+}
+
+/* ============================================================
+   ЭКСПОРТ
+   ============================================================ */
+const EXPORT_PRESETS = {
+  api_list: {
+    title: 'Экспорт списка API-эндпоинтов',
+    hint: 'Выберите поля, которые попадут в выгрузку (api_endpoint).',
+    fields: [
+      { key:'method',           label:'Метод',                checked:true },
+      { key:'path',             label:'Путь',                 checked:true },
+      { key:'name',             label:'Название',             checked:true },
+      { key:'group_code',       label:'Группа (код)',         checked:true },
+      { key:'source_code',      label:'Источник (код)',       checked:true },
+      { key:'version',          label:'Версия',               checked:true },
+      { key:'status',           label:'Статус',               checked:true }
+    ]
+  },
+  api_card: {
+    title: 'Экспорт карточки API-эндпоинта',
+    hint: 'Выберите разделы карточки, которые попадут в выгрузку.',
+    fields: [
+      { key:'main',     label:'Основное (api_endpoint)',              checked:true },
+      { key:'publish',  label:'Публикация на лендинге',                checked:true },
+      { key:'params',   label:'Параметры запроса (api_endpoint_param)', checked:true },
+      { key:'body',     label:'Тело запроса (JSON)',                   checked:true },
+      { key:'responses',label:'Коды ответов (api_endpoint_response)',  checked:true }
+    ]
+  }
+};
+let currentExportType = null;
+
+function openExportModal(type){
+  const preset = EXPORT_PRESETS[type];
+  if (!preset) return;
+  currentExportType = type;
+  document.getElementById('modal-title').textContent = preset.title;
+  document.getElementById('modal-body').innerHTML = `
+    <p class="modal-hint">${esc(preset.hint)}</p>
+    <div class="modal-fields">
+      ${preset.fields.map(f => `
+        <label class="modal-check">
+          <input type="checkbox" ${f.checked ? 'checked' : ''} data-key="${f.key}" />
+          <span>${esc(f.label)}</span>
+        </label>`).join('')}
+    </div>
+  `;
+  document.getElementById('modal-foot').innerHTML = `
+    <button class="btn outline sm" onclick="closeModal()">Отмена</button>
+    <button class="btn sm" onclick="doExport()">Выгрузить</button>
+  `;
+  document.getElementById('modal-backdrop').classList.add('on');
+}
+function doExport(){
+  const sel = [...document.querySelectorAll('#modal-body input[type=checkbox]:checked')].map(cb => cb.dataset.key);
+  if (sel.length === 0){ toast('Выберите хотя бы одно поле'); return; }
+  document.getElementById('modal-title').textContent = 'Выгрузка сформирована';
+  document.getElementById('modal-body').innerHTML = `
+    <p style="margin:0 0 6px;font-size:13px">Файл готов.</p>
+    <p style="margin:0;color:var(--muted);font-size:12px">Проверьте папку загрузок браузера.</p>
+  `;
+  document.getElementById('modal-foot').innerHTML = `<button class="btn sm" onclick="closeModal()">Закрыть</button>`;
+}
+function closeModal(){
+  document.getElementById('modal-backdrop').classList.remove('on');
+  currentExportType = null;
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+/* ============================================================
+   ИНИЦИАЛИЗАЦИЯ
+   ============================================================ */
+function initFilterMenus(){
+  const methodMenu = document.getElementById('api-method-menu');
+  DICT_API_METHODS.forEach(m => {
+    const l = document.createElement('label');
+    l.className = 'ms-opt';
+    l.innerHTML = `<input type="checkbox" value="${m.code}" onchange="onMsChange('api-method')" /><span>${esc(m.label)}</span><span class="code-inline">${m.code}</span>`;
+    methodMenu.appendChild(l);
+  });
+  const sourceMenu = document.getElementById('api-source-menu');
+  DICT_API_SOURCES.forEach(s => {
+    const l = document.createElement('label');
+    l.className = 'ms-opt';
+    l.innerHTML = `<input type="checkbox" value="${s.code}" onchange="onMsChange('api-source')" /><span>${esc(s.label)}</span><span class="code-inline">${s.code}</span>`;
+    sourceMenu.appendChild(l);
+  });
+  const statusMenu = document.getElementById('api-status-menu');
+  DICT_API_STATUSES.forEach(s => {
+    const l = document.createElement('label');
+    l.className = 'ms-opt';
+    l.innerHTML = `<input type="checkbox" value="${s.code}" onchange="onMsChange('api-status')" /><span>${esc(s.label)}</span><span class="code-inline">${s.code}</span>`;
+    statusMenu.appendChild(l);
+  });
+}
+function initAddParamSelect(){
+  fillSelect(document.getElementById('api-add-param-location'), DICT_API_PARAM_LOCATIONS, 'query');
+}
+
+initFilterMenus();
+initAddParamSelect();
+setupTabs('screen-api-card', 'api-tabs2');
+setupApiTabs();
+setupSorting();
+renderApiList();
+updateAfBadge('api');
+</script>
+</body>
+</html>

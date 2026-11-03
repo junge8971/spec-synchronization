@@ -1,0 +1,15 @@
+{
+  "revision": 38,
+  "supplements": "coverage-partial-r37.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "authority": "D055 explicit user approval; D054 corrected recommendation retains original REVISE",
+  "sourceAdditions": ["sources/wiki-238347672/r1", "sources/wiki-238347672-readable/r1", "sources/wiki-241079770/r1", "sources/wiki-241079770-readable/r1"],
+  "captures": [
+    {"id": "238347672", "version": 8, "retrievedAt": "2026-10-19T14:43:52.961Z", "status": 200, "indexSize": 0, "next": null, "lines": 313, "chunks": 7, "sha256": "990c0198ff58b7b746c973d037d5f363635d436ff3c5b55920eaa0de743d70d3"},
+    {"id": "241079770", "version": 2, "retrievedAt": "2026-10-19T14:43:53.276Z", "status": 200, "indexSize": 4, "next": null, "lines": 445, "chunks": 22, "sha256": "f6f79334c9db061dade15aba84f0cb0257127775d67f34c28a270c4f4eb209ca"}
+  ],
+  "pendingAnalysis": "work-items/DELTA-USER-SESSION-CONTRACTS.md",
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "limits": ["Session4attachment entries index-only; no bytes and no sum with root/Jira totals", "Parent canonical/derived hashes and roundtrip verified; envelope projections preserve exact non-body values with parent attribution", "Off-root pages, no root members added", "Documentation not policy/owner/runtime acceptance; original snapshots preserved", "No auth/business calls, recursion, source execution or code changes; global gates/formatting issue remain"]
+}

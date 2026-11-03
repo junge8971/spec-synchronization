@@ -1,0 +1,40 @@
+{
+  "revision": 9,
+  "supplements": "coverage-partial-r8.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "chains": [
+    {
+      "issue": "managed-resource-members",
+      "report": "reports/DELTA-MANAGED-RESOURCE-MEMBERS.md",
+      "review": "reviews/R-DELTA-MANAGED-RESOURCE-MEMBERS.md",
+      "disposition": "D-026",
+      "scope": "Twelve documentary enrichment candidates accepted without mandatory corrections; no frontend assignment or runtime acceptance"
+    }
+  ],
+  "sourceAdditions": [
+    "sources/jira-MOS-1321/r1/metadata.json",
+    "sources/jira-MOS-1399/r1/metadata.json",
+    "sources/jira-MOS-1386/r1/metadata.json",
+    "sources/wiki-247751846/r1/metadata.json",
+    "sources/wiki-247747363/r1/metadata.json"
+  ],
+  "derivedEvidence": [
+    "sources/wiki-247751846-readable/r1/metadata.json",
+    "sources/wiki-247747363-readable/r1/metadata.json"
+  ],
+  "priorBlockerDisposition": {
+    "browserCollection": "Recovered on user-requested retry; three existing direct members and two explicit root-linked wiki pages collected read-only. Historical r8 timeout receipt retained."
+  },
+  "pendingAnalysis": [
+    "work-items/WIKI-DICTIONARY-DETAIL.md",
+    "work-items/WIKI-API-REGISTRY.md"
+  ],
+  "limitations": [
+    "Two wiki bodies saved with complete returned attachment indexes; four attachment bodies unread",
+    "Wiki-derived text loses markup; exact body chunks retained and parent roundtrip checked",
+    "New wiki semantics not accepted pending analysis and independent review",
+    "No chronology-based precedence, product activation, code changes or runtime verification",
+    "General source collection, other attachments and ambiguous-page relevance incomplete; formatting failure unresolved"
+  ]
+}

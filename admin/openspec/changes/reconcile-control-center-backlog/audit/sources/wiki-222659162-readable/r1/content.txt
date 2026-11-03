@@ -1,0 +1,80 @@
+Заркыто в рамках
+KR-5
+-
+Получение подробных данных проблемы...
+СТАТУС
+1. Инициировать проект на Vite
+Нужно поднять новый проект через yarn create vite на React и TypeScript.
+vite =>  8.0.0
+Минимальная версия Node >= 24, TypeScript включаем в строгом режиме.
+В `package.json` сразу заводим базовые команды: `dev`, `build`, `preview`, `typecheck`.
+В Vite сразу закладываем multi-entry конфигурацию т.к. виджет будет собираться в несколько точек входа.
+2. Настроить пакетный менеджер yarn
+Пакетным менеджером делаем Yarn Berry 4 версии
+В корне проекта настраиваем `.yarnrc.yml` где указываем внутренний regestry как npmRegistryServer, прописываем scope для @mos-pg-front-tools и @mos-cat, добавляем токен авторизации через REGISTRY_TOKEN. Папку .yarn/releases/ коммитим в репозиторий. Проверка, что всё работает: yarn add -D @mos-pg-front-tools/prettier-config должен пройти без ошибок.
+За образец можно взять https://gitlab.mos-team.ru/mosru/front/pg-front-tools/-/blob/dev/.yarnrc.yml
+3. Добавить Prettier
+Установить и подключить конфиг и зависимости
+В prettier.config.mjs просто реэкспортируем готовую конфигурацию из пакета. В .prettierignore исключаем dist, .yarn, coverage. В scripts добавляем format и format:check.
+Документация по настройкам - в https://gitlab.mos-team.ru/mosru/front/pg-front-tools/-/tree/dev/packages/configs/prettier-config?ref_type=heads
+4. Добавить ESLint
+Установить и подключить конфиг и зависимости
+Используем Flat Config (ESLint 9 и выше) в файле eslint.config.mjs, не забываем peer-зависимости - prettier и typescript-eslint. Команды lint и lint:fix добавляем в package.json.
+Документация по настройкам - в https://gitlab.mos-team.ru/mosru/front/pg-front-tools/-/blob/dev/packages/configs/eslint-config/README.md?ref_type=heads
+5. Создать файловую структуру
+Код раскладываем по Feature-Sliced Design.
+В src/app - живут точки входа .
+В pages - экраны чата, приветствия и оболочка webview.
+widgets - крупные блоки вроде окна чата, ленты сообщений и поля ввода.
+features - отправка сообщений, голос, карточки,
+entities  - доменные сущности
+shared  - обёртки над UI-kit, API-клиент, конфиги, утилиты и типы.
+6. Настройка роутинга в проете
+Нужно поставить react-router-dom@8.1 и настроить роутинг в Data Mode через createBrowserRouter и RouterProvider, без legacy <BrowserRouter>.
+Конфигурацию маршрутов выносисти в src/app/routesи  там описать route objects с path, Component, loader, action и errorElement.
+Страницы из слоя pages подключить как компоненты маршрутов
+Также настроить errorBoundary
+Документация -  https://reactrouter.com/start/data/routing
+7. Настройка стейтменеджера запросов
+Подключить @tanstack/react-query для работы состояния запросов.
+В src/app/providers создать QueryClient с дефолтными настройками и обернуть приложение в QueryClientProvider.
+Ключи запросов и фабрики вынести в shared/api или соответствующие entities.
+8. Установка ДС
+Дизайн-систему поставить из внутреннего registry: yarn add @mos-cat/ds.
+Подключить theme provider и токены.
+Референс по интеграции дока - https://gitlab.mos-team.ru/mosru/front/mos-cat
+9. Настройка shadow DOM
+Виджет встраивается на чужие страницы, поэтому всё React-приложение надо монтировать внутрь Shadow DOM.
+Внутрь shadow должны быть проброшены все стили приложения и mos-cat
+10. Настройка сборки
+Реализовать интеграцию в веб через выполнение подключаемого одного JavaScript-скрипта. Скрипт сам загружает клиентскую часть виджета и инициализирует интерфейс ассистента на странице
+Базовое подключение
+<script src="https://stage-chat.mos.ru/client/scripts/script.js?channelId=web_portal"></scrip
+t>
+С ПЕРЕДАЧЕЙ ТОКЕНА АВТОРИЗАЦИИ
+<script src="https://stage-chat.mos.ru/client/scripts/script.js?channelId=web_portal&transpor
+tToken=<token>"></script>
+После подключения скрипта виджет автоматически инициализируется и становится доступен пользователю.
+Также необходимо реализовать сборку для WebView
+URL БЕЗ АВТОРИЗАЦИИ
+https://stage-chat.mos.ru/client/scripts/webview?channelId=mobile_app
+URL С ТРАНСПОРТНЫМ ТОКЕНОМ
+https://stage-chat.mos.ru/client/scripts/webview?channelId=mobile_app&transportToken=
+11. Настроить моки
+Необходимо поднять отдельный mock-сервер на Express. Код сервера живёт в mock-server/. Express отдаёт HTTP API и при необходимости поднимает WebSocket-заглушку.
+В dev-режиме mock включается по флагу, например `VITE_USE_MOCKS=true`.
+Команда `yarn dev:mock` параллельно стартует Express mock-сервер и Vite; в `vite.config` для этого режима прописываем proxy на локальный порт mock-сервера.
+Обычный `yarn dev` без флага ходит на реальный backend.
+12. Настройка инфраструктуры
+Настроить и подключить маки в проект
+https://wiki.mos-team.ru/pages/viewpage.action?pageId=8576700
+В GitLab CI добавляем lint, typecheck, сборку и деплой на stage-chat.mos.ru. SAST берём из шаблона Maki. Релизный поток: dev -> stage -> prod.
+За образец pipeline можно смотреть cit-pipeline.
+13. Описание проекта
+В README описать проект
+Указать технические требования (Node, Yarn 4), доступ к внутреннему registry.
+Расписать команды установки, локального запуска и сборки, в том числе dev:mock с Express mock-сервером и флагом VITE_USE_MOCKS.
+Закрепить схему FSD-структуры каталогов, описать роутинг на React Router 8.1, работу с данными через TanStack Query и изоляцию стилей через Shadow DOM.
+Закрепить, какие build-скрипты за что отвечают и как подключает script или webview.
+Добавить stage endpoints, ссылку на test-app
+Пример заполнения - https://gitlab.mos-team.ru/mosru/front/arenda

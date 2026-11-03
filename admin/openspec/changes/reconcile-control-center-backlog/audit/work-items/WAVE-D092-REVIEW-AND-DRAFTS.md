@@ -1,0 +1,17 @@
+# D092 review и подготовка двух непротиворечивых planning-пакетов
+
+Root/HEAD: текущий проект, bc0d9800f25a90989b9c73c76f91996f8300f1d3. Модель всех исполнителей: openai-codex/gpt-6-astra / low. Только чтение проекта и полный final response через уникальный runtime output; никаких tool-write/edit, tests, network/browser, git mutations, child fanout. Parent единолично выполняет scaffold/интеграцию после freshness и независимой приёмки; draft не является опубликованным change.
+
+## R-D092-OPTIONAL (fresh reviewer)
+
+Inputs: восемь reports/{REQ,API,SPEC,IMPL}-MOS-{1322,1323}-r2.md, новый sources/jira-optional-backend-details/r1, исходные locators, D091 и действующие контрактные решения. Output reviews/R-D092-OPTIONAL.md. Dependencies: завершённая волна 95b64e13-1980-4bf9-a9f1-6ab05f84fc01. Acceptance: проверить каждый отчёт и hashes, дать accept/revise/escalate, exact corrections и bounded coverage; не подменять backend клиентом/mock. Особое замечание parent: local security AND уже согласованная нормализация — проверить docs/api/contracts/README.md и соответствующие archived decisions; API-отчёт не должен превращать известное решение в новый нерешённый auth-вопрос или предлагать отмену согласованной модели.
+
+## DRAFT-DIALOG-D090 (artifact author)
+
+Inputs: D090, reviews/R-D090-EIGHT.md, reports/JOIN-MOS-{1411,1412,1414,1419}.md, текущая main dialog-registry и dialog-selection-builder. Output publication/DRAFT-DIALOG-D090.md. Produce complete proposed contents for native spec-driven change `fix-dialog-registry-presentation-and-reset`: proposal/design/tasks/specs/dialog-registry/spec.md, each clearly delimited path. One lossless MODIFIED row requirement; reset one ADDED requirement. Preserve all existing scenarios and constraints, registry-local null rating, snapshot suffix/no timer, accessible red dot, applied and pending quick reset. Complex-only unapplied condition draft is not newly specified; preserve existing editor behavior. No surface changes or sorting corrective scope. All implementation tasks unchecked. Source timestamps changed; packet remains publication-held until parent freshness comparison. Do not invent a policy or rewrite main/archive. Success: coherent minimal draft ready for native scaffold + independent fresh review, exact baseline hashes and all sources/decision IDs.
+
+## DRAFT-SURFACE-D091 (artifact author)
+
+Inputs: D091, reviews/R-D091-RECOVERY.md, reports/JOIN-MOS-{1166,1167}.md, current main surface-skill-selection/surface-registration. Output publication/DRAFT-SURFACE-D091.md. Produce complete proposed contents for native spec-driven change `fix-surface-registration-text-feedback`: proposal/design/tasks/two delta specs. Preserve separate capability owners; scope only visual bounded descriptive catalog text without data truncation/accessibility loss and visible reflection of entered domains without claiming server channel/occupancy. No purpose=detail.description assumption, fixed line-count/tooltip/200 data cap, additional API, or unresolved popup geometry/1164 retargeting. Existing parseDomains/validation remain. All implementation tasks unchecked. Exact baseline hashes and sources/decision IDs; draft only, freshness and independent review before publication.
+
+Reviewers of final drafts: fresh child after authors, not self-acceptance. Stop/ask for missing inputs or unapproved product choices; report blockers without narrowing agreed behavior. All shared registers/checkboxes remain parent-owned.

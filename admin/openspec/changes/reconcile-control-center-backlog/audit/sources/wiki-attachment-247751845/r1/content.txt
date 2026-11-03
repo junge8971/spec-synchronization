@@ -1,0 +1,1436 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Справочники · Центр управления ЦАМ</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#fff; --border:#e6e8ee; --muted:#8b93a3;
+    --text:#1a1d24; --accent:#b3121b; --accent-2:#0b6b3a; --warn:#c47a00;
+    --sidebar:#1c1f26; --sidebar-muted:#8b93a3; --sidebar-text:#e8ebf0;
+    --radius:10px; --radius-sm:6px;
+    --shadow:0 1px 3px rgba(15,20,30,.06), 0 1px 2px rgba(15,20,30,.04);
+    --code-bg:#0f1218; --code-text:#e8ebf0;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Golos Text",sans-serif;
+    font-size:13.5px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+  .app{display:grid;grid-template-columns:248px 1fr;min-height:100vh}
+
+  .sidebar{background:var(--sidebar);color:var(--sidebar-text);padding:16px 10px;
+    display:flex;flex-direction:column;gap:20px;position:sticky;top:0;height:100vh;overflow:auto}
+  .brand{display:flex;align-items:center;gap:10px;padding:6px 8px 10px}
+  .brand .logo{width:28px;height:28px;border-radius:6px;background:var(--accent);
+    display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px}
+  .brand .title{font-weight:600;font-size:13px;line-height:1.2}
+  .brand .sub{font-size:10.5px;color:var(--sidebar-muted);text-transform:uppercase;letter-spacing:.08em}
+  .nav-group{padding:0 4px}
+  .nav-group .eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--sidebar-muted);padding:8px 8px 4px;font-weight:600}
+  .nav-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:var(--radius-sm);
+    color:var(--sidebar-text);font-size:13px;cursor:pointer;opacity:.9}
+  .nav-item:hover{background:#232730;opacity:1}
+  .nav-item.active{background:#262a33;color:#fff;opacity:1;font-weight:500}
+  .nav-item.active::before{content:"";width:3px;height:14px;background:var(--accent);border-radius:2px;margin-left:-7px;margin-right:4px}
+  .nav-item .ic{width:16px;text-align:center;opacity:.9;font-size:13px}
+  .nav-item.disabled{opacity:.45;cursor:not-allowed}
+  .nav-item .new-badge{margin-left:auto;font-size:9.5px;background:var(--accent);color:#fff;
+    padding:1px 5px;border-radius:4px;font-weight:700;letter-spacing:.03em}
+
+  .main{padding:20px 24px 40px;min-width:0}
+  .topline{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:6px}
+  .crumbs{font-size:11.5px;color:var(--muted)}
+  .user{display:flex;align-items:center;gap:10px;font-size:12px}
+  .avatar{width:30px;height:30px;border-radius:50%;background:#e9ecf2;display:grid;place-items:center;
+    font-weight:600;font-size:11.5px;color:#3a4150}
+  .badge-demo{background:#fff0f0;color:var(--accent);border:1px solid #f0c7c7;
+    font-size:10.5px;padding:1px 6px;border-radius:4px;font-weight:600}
+
+  h1{font-size:22px;font-weight:600;margin:6px 0 4px}
+  .lead{color:var(--muted);max-width:820px;margin-bottom:16px}
+
+  .btn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:8px;
+    background:var(--text);color:#fff;font-size:12.5px;font-weight:500}
+  .btn:hover{background:#000}
+  .btn.outline{background:#fff;color:var(--text);border:1px solid var(--border)}
+  .btn.outline:hover{background:#f2f4f8}
+  .btn.danger{background:var(--accent)}
+  .btn.danger:hover{background:#8f0e15}
+  .btn.sm{padding:5px 9px;font-size:11.5px}
+  .btn[disabled]{opacity:.5;pointer-events:none}
+
+  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .card-header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .card-title{font-weight:600}
+  .card-hint{font-size:11.5px;color:var(--muted)}
+  .card-body{padding:16px}
+
+  .page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px;flex-wrap:wrap}
+  .page-head h1{margin:0}
+  .page-head .purpose{color:var(--muted);margin-top:6px;max-width:820px}
+  .page-head .actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+
+  .filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+  .input,select,textarea{background:#fff;border:1px solid var(--border);border-radius:8px;
+    padding:6px 10px;font:inherit;font-size:12.5px;color:var(--text);outline:none;width:100%}
+  .input:focus,select:focus,textarea:focus{border-color:#b9c0cf;box-shadow:0 0 0 3px rgba(26,29,36,.06)}
+  .search{position:relative;min-width:280px;flex:1;max-width:340px}
+  .search input{padding-left:30px}
+  .search::before{content:"⌕";position:absolute;left:10px;top:50%;transform:translateY(-55%);
+    color:var(--muted);font-size:14px}
+  select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);
+    background-position:calc(100% - 14px) 12px,calc(100% - 9px) 12px;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:26px;min-width:150px}
+  .count{margin-left:auto;font-size:12px;color:var(--muted)}
+
+  .ms-wrap{position:relative}
+  .ms-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:8px;
+    height:32px;padding:0 10px;background:#fff;border:1px solid var(--border);border-radius:8px;
+    font:inherit;font-size:12.5px;color:var(--text);cursor:pointer;text-align:left;
+    min-width:180px;max-width:280px}
+  .ms-btn:hover{background:#f5f6f8}
+  .ms-btn.active{border-color:#cdd3de;color:var(--text)}
+  .ms-btn-label{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ms-btn-chev{color:var(--muted);font-size:9px;flex-shrink:0}
+  .ms-menu{position:absolute;top:calc(100% + 4px);left:0;z-index:50;
+    min-width:240px;max-width:320px;max-height:320px;overflow-y:auto;
+    background:#fff;border:1px solid var(--border);border-radius:8px;
+    box-shadow:0 8px 24px rgba(15,20,30,.12);padding:4px;display:none}
+  .ms-menu.open{display:block}
+  .ms-opt{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:6px;
+    font-size:12.5px;cursor:pointer;color:var(--text);user-select:none;font-weight:400}
+  .ms-opt:hover{background:#f5f6f8}
+  .ms-opt input{width:auto;margin:0;accent-color:var(--accent);pointer-events:none}
+  .ms-opt-all{font-weight:500;border-bottom:1px solid var(--border);margin-bottom:4px;border-radius:6px 6px 0 0}
+  .ms-opt-check{width:14px;display:inline-flex;justify-content:center;
+    color:var(--accent);font-size:12px;flex-shrink:0;line-height:1}
+
+  .reset-btn{display:none;align-items:center;gap:4px;padding:5px 10px;
+    font-size:12px;color:var(--muted);border-radius:6px;background:none;border:0;cursor:pointer}
+  .reset-btn.on{display:inline-flex}
+  .reset-btn:hover{background:#f2f4f8;color:var(--text)}
+
+  table{width:100%;border-collapse:separate;border-spacing:0;font-size:12.5px}
+  thead th{text-align:left;font-weight:500;color:var(--muted);padding:9px 12px;
+    border-bottom:1px solid var(--border);font-size:11.5px;white-space:nowrap}
+  tbody td{padding:11px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+  tbody tr:hover{background:#fafbfd;cursor:pointer}
+  tbody tr:last-child td{border-bottom:0}
+  .name-cell .n{font-weight:600;display:block}
+  .name-cell .c{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .right{text-align:right}
+  .num{font-variant-numeric:tabular-nums}
+
+  .tag{display:inline-block;padding:1px 7px;border-radius:4px;font-size:11px;border:1px solid var(--border);color:var(--muted);background:#fafbfd}
+  .tag.ok{color:var(--accent-2);border-color:#cbe6d5;background:#f0f8f3}
+  .tag.acc{color:var(--accent);border-color:#f0c7c7;background:#fff2f2}
+  .tag.warn{color:var(--warn);border-color:#f0dca6;background:#fdf7e6}
+  .tag.ink{color:#2b3140;border-color:#d8dce5;background:#f2f4f8}
+  .tag.mute{color:var(--muted)}
+  .tag.sys{color:#1f4f8b;border-color:#c9d8f2;background:#e8eefb}
+  .tag.custom{color:#7a2ea1;border-color:#e5d1f2;background:#f7ecfd}
+
+  .chips{display:flex;flex-wrap:wrap;gap:4px}
+  .chip{padding:1px 8px;border-radius:999px;border:1px solid var(--border);background:#fafbfd;
+    font-size:11px;color:#3a4150}
+
+  .screen{display:none}
+  .screen.active{display:block}
+
+  .tabs{display:flex;gap:2px;border-bottom:1px solid var(--border);margin-bottom:14px;overflow:auto}
+  .tab{padding:9px 12px;font-size:12.5px;color:var(--muted);border-bottom:2px solid transparent;white-space:nowrap;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);font-weight:500}
+  .tab .tab-count{display:inline-block;padding:0 6px;border-radius:999px;
+    background:#f2f4f8;color:var(--muted);font-size:10.5px;font-weight:600}
+  .tab.active .tab-count{background:var(--accent);color:#fff}
+
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field label{font-size:12px;font-weight:500}
+  .field .hint{font-size:11px;color:var(--muted)}
+  .field.full{grid-column:1/-1}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .grid-form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media (max-width:1100px){.grid-2,.grid-form{grid-template-columns:1fr}}
+
+  .switch{display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:#fff}
+  .switch input{width:auto;margin:0;accent-color:var(--accent)}
+  .switch .lbl{font-size:12.5px}
+
+  .toggle{
+    --w:36px; --h:20px; --k:16px;
+    display:inline-block; position:relative; width:var(--w); height:var(--h);
+    border-radius:999px; background:#cfd4de; cursor:pointer; transition:background .15s;
+    flex-shrink:0; vertical-align:middle;
+  }
+  .toggle:hover{background:#c0c6d2}
+  .toggle .knob{
+    position:absolute; top:2px; left:2px; width:var(--k); height:var(--k);
+    border-radius:50%; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.15);
+    transition:transform .18s;
+  }
+  .toggle.on{background:var(--accent-2)}
+  .toggle.on:hover{background:#0a5c32}
+  .toggle.on .knob{transform:translateX(calc(var(--w) - var(--k) - 4px))}
+  .toggle.disabled{opacity:.4;pointer-events:none}
+
+  .empty{padding:40px 20px;text-align:center;color:var(--muted)}
+
+  /* Values table */
+  .values-table{width:100%;border-collapse:separate;border-spacing:0;font-size:12.5px;
+    border:1px solid var(--border);border-radius:8px;overflow:hidden}
+  .values-table th{background:#fafbfd;text-align:left;font-weight:500;color:var(--muted);
+    padding:9px 12px;font-size:11.5px;border-bottom:1px solid var(--border);white-space:nowrap}
+  .values-table td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:middle}
+  .values-table tr:last-child td{border-bottom:0}
+  .values-table tr.dragging{opacity:.4}
+  .values-table tr.drop-target td{border-top:2px solid var(--accent)}
+  .values-table .handle{cursor:grab;color:var(--muted);font-size:15px;user-select:none;padding:0 4px}
+  .values-table .handle:active{cursor:grabbing}
+  .values-table input.input{height:30px;font-size:12.5px}
+  .values-table .val-code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
+  .values-table .row-actions{display:flex;gap:4px;justify-content:flex-end}
+  .values-table .del-btn{color:var(--muted);padding:4px 7px;border-radius:6px;font-size:12px}
+  .values-table .del-btn:hover{color:var(--accent);background:#f8eaea}
+  .values-table .color-swatch{width:24px;height:24px;border-radius:6px;border:1px solid var(--border);display:inline-block;cursor:pointer;vertical-align:middle}
+
+  .add-row{display:flex;gap:8px;margin-top:10px;align-items:center}
+
+  .banner{display:flex;gap:12px;padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:#fafbfd;margin-bottom:14px;align-items:flex-start}
+  .banner .ic{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-size:15px;flex-shrink:0}
+  .banner .ic.info{background:#e8eefb;color:#1f4f8b}
+  .banner .ic.warn{background:#fdf7e6;color:var(--warn)}
+  .banner .ic.acc{background:#fff2f2;color:var(--accent)}
+  .banner .body{flex:1;min-width:0}
+  .banner .body p{margin:0;font-size:12.5px;line-height:1.55}
+  .banner .body p + p{margin-top:4px}
+  .banner .body strong{font-weight:600}
+
+  .usage-list{display:flex;flex-direction:column;gap:10px}
+  .usage-row{display:flex;gap:14px;align-items:flex-start;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:#fff}
+  .usage-row .icon{width:32px;height:32px;border-radius:8px;background:#f2f4f8;color:var(--muted);display:grid;place-items:center;font-size:14px;flex-shrink:0}
+  .usage-row .body{flex:1;min-width:0}
+  .usage-row .title{font-weight:600;font-size:13px}
+  .usage-row .desc{color:var(--muted);font-size:12px;margin-top:2px}
+  .usage-row .link{color:var(--accent);font-size:12px;text-decoration:underline;text-underline-offset:3px;margin-top:6px;display:inline-block}
+
+  .toast{position:fixed;bottom:20px;right:20px;background:#1a1d24;color:#fff;padding:10px 14px;
+    border-radius:10px;font-size:12.5px;box-shadow:0 8px 24px rgba(0,0,0,.18);opacity:0;transform:translateY(10px);
+    transition:all .2s;pointer-events:none;z-index:200}
+  .toast.on{opacity:1;transform:translateY(0)}
+
+  .page-head .status-row{display:flex;gap:8px;align-items:center;margin-top:6px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+  .page-head .status-dot{width:8px;height:8px;border-radius:50%;background:var(--accent-2);display:inline-block}
+  .page-head .status-dot.off{background:var(--muted)}
+
+  .modal-backdrop{position:fixed;inset:0;background:rgba(15,20,30,.45);z-index:100;
+    display:flex;align-items:center;justify-content:center;padding:20px;
+    opacity:0;pointer-events:none;transition:opacity .18s}
+  .modal-backdrop.on{opacity:1;pointer-events:auto}
+  .modal{background:#fff;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.25);
+    width:100%;max-width:560px;max-height:82vh;display:flex;flex-direction:column;
+    transform:translateY(12px);transition:transform .18s}
+  .modal-backdrop.on .modal{transform:translateY(0)}
+  .modal-head{padding:14px 18px;border-bottom:1px solid var(--border);
+    display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .modal-title{font-weight:600;font-size:14.5px}
+  .modal-x{color:var(--muted);font-size:14px;padding:4px 8px;border-radius:6px;line-height:1}
+  .modal-x:hover{background:#f2f4f8;color:var(--text)}
+  .modal-body{padding:16px 18px;overflow:auto}
+  .modal-foot{padding:12px 18px;border-top:1px solid var(--border);
+    display:flex;justify-content:flex-end;gap:8px}
+
+  .kv{display:flex;flex-direction:column;gap:0}
+  .kv-row{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--border)}
+  .kv-row:last-child{border-bottom:0}
+  .kv-key{width:160px;flex-shrink:0;color:var(--muted);font-size:12px}
+  .kv-val{flex:1;font-size:12.5px}
+
+  .sys-row-badge{display:inline-flex;align-items:center;gap:5px;padding:1px 8px;border-radius:999px;
+    font-size:11px;border:1px solid var(--border);background:#fafbfd;color:#3a4150}
+  .sys-row-badge.sys{background:#e8eefb;color:#1f4f8b;border-color:#c9d8f2}
+  .sys-row-badge.custom{background:#f7ecfd;color:#7a2ea1;border-color:#e5d1f2}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">Ц</div>
+      <div>
+        <div class="title">Центр управления</div>
+        <div class="sub">Цифровой ассистент</div>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="eyebrow">Контент</div>
+      <div class="nav-item disabled"><span class="ic">★</span>Обратная связь</div>
+      <div class="nav-item disabled"><span class="ic">📚</span>База знаний</div>
+      <div class="nav-item disabled"><span class="ic">📝</span>Шаблоны ответов</div>
+      <div class="nav-item disabled"><span class="ic">⚖</span>A/B эксперименты</div>
+    </div>
+    <div class="nav-group">
+      <div class="eyebrow">Платформа</div>
+      <div class="nav-item disabled"><span class="ic">🔌</span>API</div>
+      <div class="nav-item active" onclick="showSection('ref','list')">
+        <span class="ic">📖</span>Справочники
+        <span class="new-badge">new</span>
+      </div>
+      <div class="nav-item disabled"><span class="ic">🎛</span>Состояние системы</div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="topline">
+      <div class="crumbs">Центр управления · <span id="crumb-now">Справочники</span></div>
+      <div class="user">
+        <span class="badge-demo">демо</span>
+        <div class="avatar">МС</div>
+        <div>
+          <div style="font-weight:500">Марина Соколова</div>
+          <div style="color:var(--muted);font-size:11px">Команда ЖКХ, ДИТ</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ LIST ============ -->
+    <section id="screen-list" class="screen active">
+      <div class="page-head">
+        <div>
+          <h1>Справочники</h1>
+          <p class="purpose">Единое хранилище значений, которые раньше были захардкожены: статусы, типы, шрифты, формы элементов, категории БЗ, причины оценок, правила вложений. Администратор меняет их через форму, без релиза и разработчика.</p>
+        </div>
+        <div class="actions">
+          <button class="btn outline" onclick="toast('Список справочников выгружен')"><span>⤓</span> Экспорт</button>
+          <button class="btn" onclick="createNewDictionary()"><span>＋</span> Создать справочник</button>
+        </div>
+      </div>
+
+      <div class="banner" style="margin-bottom:16px">
+        <div class="ic info">ℹ</div>
+        <div class="body">
+          <p><strong>Системные справочники</strong> уже используются в коде платформы и формах. Их нельзя удалить — но можно дополнять значениями, отключать отдельные значения и менять отображаемые названия.</p>
+          <p><strong>Пользовательские справочники</strong> создаёт администратор под свои фильтры и формы. Они полностью управляемы: значения, порядок, статус.</p>
+        </div>
+      </div>
+
+      <div class="filters">
+        <div class="search"><input class="input" id="q" placeholder="Название, код, описание" oninput="renderList();updateResetVisibility()" /></div>
+
+        <div class="ms-wrap" id="ref-kind-wrap" data-all-label="Все типы">
+          <button type="button" class="ms-btn" id="ref-kind-btn" onclick="toggleMs('ref-kind')">
+            <span class="ms-btn-label" id="ref-kind-label">Все типы</span>
+            <span class="ms-btn-chev">▾</span>
+          </button>
+          <div class="ms-menu" id="ref-kind-menu">
+            <div class="ms-opt ms-opt-all" onclick="clearMs('ref-kind')">
+              <span class="ms-opt-check" id="ref-kind-check-all">✓</span>
+              <span>Все типы</span>
+            </div>
+            <label class="ms-opt"><input type="checkbox" value="Системный" onchange="onMsChange('ref-kind')" /><span>Системный</span></label>
+            <label class="ms-opt"><input type="checkbox" value="Пользовательский" onchange="onMsChange('ref-kind')" /><span>Пользовательский</span></label>
+          </div>
+        </div>
+
+        <div class="ms-wrap" id="ref-status-wrap" data-all-label="Все статусы">
+          <button type="button" class="ms-btn" id="ref-status-btn" onclick="toggleMs('ref-status')">
+            <span class="ms-btn-label" id="ref-status-label">Все статусы</span>
+            <span class="ms-btn-chev">▾</span>
+          </button>
+          <div class="ms-menu" id="ref-status-menu">
+            <div class="ms-opt ms-opt-all" onclick="clearMs('ref-status')">
+              <span class="ms-opt-check" id="ref-status-check-all">✓</span>
+              <span>Все статусы</span>
+            </div>
+            <label class="ms-opt"><input type="checkbox" value="Активен" onchange="onMsChange('ref-status')" /><span>Активен</span></label>
+            <label class="ms-opt"><input type="checkbox" value="Черновик" onchange="onMsChange('ref-status')" /><span>Черновик</span></label>
+            <label class="ms-opt"><input type="checkbox" value="Приостановлен" onchange="onMsChange('ref-status')" /><span>Приостановлен</span></label>
+          </div>
+        </div>
+
+        <button type="button" class="reset-btn" id="ref-reset" onclick="resetFilters()">Сбросить</button>
+        <span class="count" id="count">— справочников</span>
+      </div>
+
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:32%">Справочник</th>
+              <th style="width:12%">Тип</th>
+              <th style="width:10%" class="right">Значений</th>
+              <th style="width:26%">Где используется</th>
+              <th style="width:12%">Статус</th>
+              <th style="width:8%"></th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <div id="empty" class="empty" style="display:none">Справочников пока нет. Создайте первый — например, «Категории базы знаний».</div>
+      </div>
+    </section>
+
+    <!-- ============ CARD ============ -->
+    <section id="screen-card" class="screen">
+      <div class="crumbs" style="margin-bottom:6px">
+        <a href="#" onclick="showSection('ref','list');return false;">Справочники</a> · <span id="crumb-name">—</span>
+      </div>
+
+      <div class="page-head">
+        <div>
+          <h1 id="title">—</h1>
+          <div class="purpose" id="subtitle">—</div>
+          <div class="status-row">
+            <span class="status-dot" id="head-status-dot"></span>
+            <span><b id="head-status-text">Активен</b></span>
+            <span>·</span>
+            <span>Код: <span class="num" style="font-family:ui-monospace,Menlo,monospace" id="head-code">—</span></span>
+            <span>·</span>
+            <span id="head-kind-badge-wrap"></span>
+            <span>·</span>
+            <span>Обновлён: <span class="num" id="head-updated">—</span></span>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn outline sm" onclick="toast('Справочник выгружен')"><span>⤓</span> Экспорт</button>
+          <button class="btn outline sm" id="btn-save" onclick="saveDictionary()">Сохранить</button>
+          <button class="btn outline sm" id="btn-pause" onclick="togglePauseDictionary()">Приостановить</button>
+          <button class="btn danger sm" id="btn-delete" onclick="deleteDictionary()">Удалить</button>
+        </div>
+      </div>
+
+      <div class="tabs" id="card-tabs">
+        <div class="tab active" data-tab="values">Значения <span class="tab-count" id="tab-values-count">0</span></div>
+        <div class="tab" data-tab="settings">Настройки</div>
+        <div class="tab" data-tab="usage">Где используется</div>
+      </div>
+
+      <!-- ==== TAB: VALUES ==== -->
+      <div class="tab-panel" data-panel="values">
+        <div id="values-banner"></div>
+
+        <div class="card" style="padding:0">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Значения справочника</div>
+              <div class="card-hint" id="values-hint">Порядок меняется перетаскиванием. Изменения применяются сразу после сохранения.</div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button class="btn outline sm" onclick="exportValuesCsv()">⤓ CSV</button>
+              <button class="btn sm" id="btn-add-value" onclick="addValue()">＋ Добавить значение</button>
+            </div>
+          </div>
+          <div class="card-body" id="values-body" style="padding:0"></div>
+        </div>
+      </div>
+
+      <!-- ==== TAB: SETTINGS ==== -->
+      <div class="tab-panel" data-panel="settings" style="display:none">
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header"><div class="card-title">Основное</div></div>
+            <div class="card-body">
+              <div class="grid-form">
+                <div class="field full">
+                  <label>Название <span style="color:var(--accent)">*</span></label>
+                  <input class="input" id="set-name" oninput="markDirty()" />
+                </div>
+                <div class="field">
+                  <label>Служебный код <span style="color:var(--accent)">*</span></label>
+                  <input class="input val-code" id="set-code" oninput="markDirty()" />
+                  <span class="hint">Используется в коде и API. Меняется только для пользовательских справочников.</span>
+                </div>
+                <div class="field">
+                  <label>Тип справочника</label>
+                  <select id="set-kind" onchange="markDirty()">
+                    <option value="list">Список значений</option>
+                    <option value="rules-attachments">Правила вложений</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label>Описание</label>
+                  <textarea class="input" id="set-desc" rows="3" oninput="markDirty()"></textarea>
+                </div>
+                <div class="field">
+                  <label>Владелец (команда)</label>
+                  <input class="input" id="set-owner" oninput="markDirty()" />
+                </div>
+                <div class="field">
+                  <label>Публикуется в API</label>
+                  <div class="switch" style="height:36px">
+                    <input type="checkbox" id="set-public" onchange="markDirty()" />
+                    <div class="lbl">Доступен внешним сервисам</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">Правила изменения</div></div>
+            <div class="card-body">
+              <div style="display:flex;flex-direction:column;gap:10px">
+                <div class="switch"><input type="checkbox" id="set-allow-add" onchange="markDirty()" /><div class="lbl">Разрешить администраторам добавлять новые значения</div></div>
+                <div class="switch"><input type="checkbox" id="set-allow-delete" onchange="markDirty()" /><div class="lbl">Разрешить удалять значения</div></div>
+                <div class="switch"><input type="checkbox" id="set-allow-rename" checked onchange="markDirty()" /><div class="lbl">Разрешить переименовывать значения</div></div>
+                <div class="switch"><input type="checkbox" id="set-required" onchange="markDirty()" /><div class="lbl">Значения обязательны для других сущностей</div></div>
+                <div class="field" style="margin-top:8px">
+                  <label>Кэширование, сек</label>
+                  <input class="input num" id="set-cache" type="number" value="60" oninput="markDirty()" />
+                  <span class="hint">0 — без кэша. Значения всё равно подхватываются сразу после сохранения.</span>
+                </div>
+                <div class="field">
+                  <label>Комментарий к изменениям</label>
+                  <input class="input" id="set-note" placeholder="Например: добавили новый статус" oninput="markDirty()" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==== TAB: USAGE ==== -->
+      <div class="tab-panel" data-panel="usage" style="display:none">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Где используется справочник</div>
+              <div class="card-hint">Реальные места в системе, где берутся значения из этого справочника.</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="usage-list" id="usage-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   ДАННЫЕ
+   ============================================================ */
+const DICTIONARIES = [
+  {
+    id:'d1',
+    name:'Статусы опросников обратной связи',
+    code:'feedback_statuses',
+    description:'Статусы, которые может принимать опросник ОС: от черновика до архива.',
+    kind:'list', type:'Системный', owner:'Ядро ЦАМ',
+    status:'Активен', updatedAt:'2026-09-12 14:20',
+    publicApi:true, allowAdd:true, allowDelete:false, allowRename:true, required:true, cache:60,
+    usage:[
+      { icon:'★', title:'Обратная связь → фильтр по статусу', desc:'Список статусов в фильтре и в колонке таблицы.', link:'Открыть раздел'},
+      { icon:'⚙', title:'Форма карточки опросника', desc:'Поле «Статус» на карточке.', link:'Открыть форму'},
+      { icon:'🔌', title:'API: GET /feedback/forms', desc:'Поле status в ответе.', link:'Открыть в API'}
+    ],
+    values:[
+      { id:'v1', code:'draft',         label:'Черновик',        description:'Ещё не показывается пользователю', color:'',           isDefault:true,  enabled:true },
+      { id:'v2', code:'active',        label:'Активен',         description:'Показывается пользователю',        color:'#0b6b3a',    isDefault:false, enabled:true },
+      { id:'v3', code:'paused',        label:'Приостановлен',   description:'Временно не показывается',         color:'#c47a00',    isDefault:false, enabled:true },
+      { id:'v4', code:'archived',      label:'Архив',           description:'Убран, но данные сохранены',        color:'#8b93a3',    isDefault:false, enabled:true }
+    ]
+  },
+  {
+    id:'d2',
+    name:'Типы опросников обратной связи',
+    code:'feedback_types',
+    description:'Какие бывают опросники: оценка оператора, ассистента, навыка, NPS и исследовательские.',
+    kind:'list', type:'Системный', owner:'Ядро ЦАМ',
+    status:'Активен', updatedAt:'2026-09-12 14:20',
+    publicApi:true, allowAdd:true, allowDelete:false, allowRename:true, required:true, cache:60,
+    usage:[
+      { icon:'★', title:'Обратная связь → фильтр по типу', desc:'Значения в выпадающем списке фильтра.', link:'Открыть раздел'},
+      { icon:'⚙', title:'Форма карточки опросника → поле «Тип»', desc:'', link:'Открыть форму'}
+    ],
+    values:[
+      { id:'v1', code:'operator_rating',  label:'Оценка оператора',  color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v2', code:'assistant_rating', label:'Оценка ассистента', color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v3', code:'skill_rating',     label:'Оценка навыка',     color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v4', code:'nps',              label:'NPS',               color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v5', code:'research',         label:'Исследование',      color:'', isDefault:false, enabled:true, description:'' }
+    ]
+  },
+  {
+    id:'d3',
+    name:'Статусы шаблонов ответов',
+    code:'template_statuses',
+    description:'Жизненный цикл шаблона: от черновика до архива.',
+    kind:'list', type:'Системный', owner:'Ядро ЦАМ',
+    status:'Активен', updatedAt:'2026-09-11 10:05',
+    publicApi:true, allowAdd:true, allowDelete:false, allowRename:true, required:true, cache:60,
+    usage:[
+      { icon:'📝', title:'Шаблоны ответов → фильтр по статусу', desc:'', link:'Открыть раздел'},
+      { icon:'📝', title:'Карточка шаблона → статус в шапке', desc:'', link:'Открыть карточку'}
+    ],
+    values:[
+      { id:'v1', code:'draft',   label:'Черновик',       color:'', isDefault:true,  enabled:true, description:'' },
+      { id:'v2', code:'active',  label:'Активен',        color:'#0b6b3a', isDefault:false, enabled:true, description:'' },
+      { id:'v3', code:'paused',  label:'Приостановлен',  color:'#c47a00', isDefault:false, enabled:true, description:'' },
+      { id:'v4', code:'archived',label:'Архив',          color:'#8b93a3', isDefault:false, enabled:true, description:'' }
+    ]
+  },
+  {
+    id:'d4',
+    name:'Типы шаблонов ответов',
+    code:'template_types',
+    description:'Типы шаблонов: приветствие, прощание, уточнение, отказ, перевод на оператора и другие.',
+    kind:'list', type:'Системный', owner:'Ядро ЦАМ',
+    status:'Активен', updatedAt:'2026-09-11 10:05',
+    publicApi:true, allowAdd:true, allowDelete:false, allowRename:true, required:true, cache:60,
+    usage:[
+      { icon:'📝', title:'Шаблоны ответов → фильтр по типу', desc:'', link:'Открыть раздел'},
+      { icon:'📝', title:'Карточка шаблона → поле «Тип шаблона»', desc:'', link:'Открыть карточку'}
+    ],
+    values:[
+      { id:'v1', code:'greeting',       label:'Приветствие',            color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v2', code:'farewell',       label:'Прощание',                color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v3', code:'clarify',        label:'Уточнение',               color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v4', code:'refusal',        label:'Отказ',                   color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v5', code:'to_operator',    label:'Перевод на оператора',    color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v6', code:'error',          label:'Ошибка',                  color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v7', code:'thanks',         label:'Благодарность',           color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v8', code:'instruction',    label:'Инструкция',              color:'', isDefault:false, enabled:true, description:'' }
+    ]
+  },
+  {
+    id:'d5',
+    name:'Категории базы знаний',
+    code:'kb_categories',
+    description:'Категории материалов БЗ. Используются в фильтре раздела «База знаний» и в карточках материалов.',
+    kind:'list', type:'Пользовательский', owner:'Команда ЖКХ',
+    status:'Активен', updatedAt:'2026-09-10 09:15',
+    publicApi:false, allowAdd:true, allowDelete:true, allowRename:true, required:false, cache:0,
+    usage:[
+      { icon:'📚', title:'База знаний → фильтр по категории', desc:'', link:'Открыть раздел'},
+      { icon:'📚', title:'Карточка материала → поле «Категория»', desc:'', link:'Открыть карточку'}
+    ],
+    values:[
+      { id:'v1', code:'zhkh',    label:'ЖКХ',              color:'#b3121b', isDefault:false, enabled:true, description:'' },
+      { id:'v2', code:'edu',     label:'Образование',      color:'#1f4f8b', isDefault:false, enabled:true, description:'' },
+      { id:'v3', code:'health',  label:'Здравоохранение',  color:'#0b6b3a', isDefault:false, enabled:true, description:'' },
+      { id:'v4', code:'transport',label:'Транспорт',       color:'#c47a00', isDefault:false, enabled:true, description:'' },
+      { id:'v5', code:'social',  label:'Соцзащита',        color:'#7a2ea1', isDefault:false, enabled:true, description:'' }
+    ]
+  },
+  {
+    id:'d6',
+    name:'Типы поверхностей',
+    code:'surface_types',
+    description:'Типы поверхностей для регистрации конфигурации ассистента.',
+    kind:'list', type:'Системный', owner:'Ядро ЦАМ',
+    status:'Активен', updatedAt:'2026-09-09 18:40',
+    publicApi:true, allowAdd:true, allowDelete:false, allowRename:true, required:true, cache:60,
+    usage:[
+      { icon:'🌐', title:'Поверхности → фильтр по типу', desc:'', link:'Открыть раздел'},
+      { icon:'🌐', title:'Мастер регистрации поверхности → поле «Тип поверхности»', desc:'', link:'Открыть мастер'}
+    ],
+    values:[
+      { id:'v1', code:'portal',     label:'портал',              color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v2', code:'portal_section', label:'раздел портала',  color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v3', code:'mobile_app', label:'мобильное приложение',color:'', isDefault:false, enabled:true, description:'' }
+    ]
+  },
+  {
+    id:'d7',
+    name:'Шрифты виджета',
+    code:'widget_fonts',
+    description:'Доступные шрифты для оформления виджета ассистента на поверхностях.',
+    kind:'list', type:'Пользовательский', owner:'Команда ЦАМ',
+    status:'Активен', updatedAt:'2026-09-08 12:00',
+    publicApi:false, allowAdd:true, allowDelete:true, allowRename:true, required:false, cache:0,
+    usage:[
+      { icon:'🎨', title:'Поверхность → конфигуратор → оформление → шрифт', desc:'', link:'Открыть конфигуратор'}
+    ],
+    values:[
+      { id:'v1', code:'moscow',  label:'Moscow Sans',   color:'', isDefault:true,  enabled:true, description:"'Moscow Sans', 'Helvetica Neue', sans-serif" },
+      { id:'v2', code:'system',  label:'Системный',     color:'', isDefault:false, enabled:true, description:"system-ui, -apple-system, sans-serif" },
+      { id:'v3', code:'golos',   label:'Golos Text',    color:'', isDefault:false, enabled:true, description:"'Golos Text', 'Segoe UI', sans-serif" }
+    ]
+  },
+  {
+    id:'d8',
+    name:'Формы элементов',
+    code:'widget_shapes',
+    description:'Скругления элементов интерфейса виджета: пузыри, карточки.',
+    kind:'list', type:'Пользовательский', owner:'Команда ЦАМ',
+    status:'Активен', updatedAt:'2026-09-08 12:00',
+    publicApi:false, allowAdd:true, allowDelete:true, allowRename:true, required:false, cache:0,
+    usage:[
+      { icon:'🎨', title:'Поверхность → конфигуратор → оформление → форма элементов', desc:'', link:'Открыть конфигуратор'}
+    ],
+    values:[
+      { id:'v1', code:'round',  label:'Скруглённая',  color:'', isDefault:true,  enabled:true, description:'rounded-2xl' },
+      { id:'v2', code:'soft',   label:'Умеренная',    color:'', isDefault:false, enabled:true, description:'rounded-lg' },
+      { id:'v3', code:'square', label:'Прямая',       color:'', isDefault:false, enabled:true, description:'rounded-sm' }
+    ]
+  },
+  {
+    id:'d9',
+    name:'Причины низких оценок оператора',
+    code:'operator_low_reasons',
+    description:'Список причин, которые пользователь может указать при низкой оценке работы оператора.',
+    kind:'list', type:'Пользовательский', owner:'Команда ЖКХ',
+    status:'Активен', updatedAt:'2026-09-07 16:30',
+    publicApi:false, allowAdd:true, allowDelete:true, allowRename:true, required:false, cache:0,
+    usage:[
+      { icon:'★', title:'Форма опросника ОС → блок «Что не понравилось?»', desc:'', link:'Открыть форму'},
+      { icon:'📊', title:'Отчёты → разрез «Причины низких оценок»', desc:'', link:'Открыть отчёт'}
+    ],
+    values:[
+      { id:'v1', code:'long_wait',      label:'Долгое ожидание оператора', color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v2', code:'unresolved',     label:'Вопрос остался нерешённым', color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v3', code:'off_topic',      label:'Ответ не по существу',      color:'', isDefault:false, enabled:true, description:'' },
+      { id:'v4', code:'had_to_repeat',  label:'Пришлось повторять вопрос', color:'', isDefault:false, enabled:true, description:'' }
+    ]
+  },
+  {
+    id:'d10',
+    name:'Правила вложений',
+    code:'attachment_rules',
+    description:'Форматы, MIME, максимальные размеры и количество вложений. Применяются к загрузке файлов пользователями и операторами.',
+    kind:'rules-attachments', type:'Системный', owner:'Безопасность ЦАМ',
+    status:'Активен', updatedAt:'2026-09-12 11:00',
+    publicApi:false, allowAdd:false, allowDelete:false, allowRename:true, required:true, cache:60,
+    usage:[
+      { icon:'📎', title:'Виджет ассистента → загрузка вложения пользователем', desc:'Проверка формата, размера, количества.', link:'Открыть правило'},
+      { icon:'📎', title:'Рабочее место оператора → ответ с вложением', desc:'Те же правила применяются симметрично.', link:'Открыть правило'},
+      { icon:'🔒', title:'Сервис этики и PII', desc:'Фильтрация чувствительных файлов.', link:'Открыть сервис'}
+    ],
+    values:[
+      { id:'v1', code:'image',    label:'Изображения', extensions:'jpg, jpeg, png, webp, heic', mime:'image/*',  maxSizeMb:10, maxCount:5, zones:'auth, anon', enabled:true, note:'Сжимаем на клиенте до 2 МБ.' },
+      { id:'v2', code:'document', label:'Документы',   extensions:'pdf, doc, docx, xls, xlsx, txt', mime:'application/*', maxSizeMb:20, maxCount:3, zones:'auth', enabled:true, note:'PDF не более 20 МБ, остальное — 15 МБ.' },
+      { id:'v3', code:'audio',    label:'Аудио',       extensions:'mp3, ogg, wav, m4a', mime:'audio/*',  maxSizeMb:5,  maxCount:2, zones:'auth', enabled:true, note:'' },
+      { id:'v4', code:'video',    label:'Видео',       extensions:'mp4, mov', mime:'video/*',  maxSizeMb:50, maxCount:1, zones:'auth', enabled:false, note:'Временно отключено до проработки политики хранения.' }
+    ]
+  },
+  {
+    id:'d11',
+    name:'Статусы навыков',
+    code:'skill_statuses',
+    description:'Полный жизненный цикл навыка: от черновика до прода и отключения.',
+    kind:'list', type:'Системный', owner:'Ядро ЦАМ',
+    status:'Активен', updatedAt:'2026-09-06 09:00',
+    publicApi:true, allowAdd:true, allowDelete:false, allowRename:true, required:true, cache:60,
+    usage:[
+      { icon:'⚙', title:'Навыки → фильтр по статусу', desc:'', link:'Открыть раздел'},
+      { icon:'⚙', title:'Карточка навыка → статус в шапке', desc:'', link:'Открыть карточку'}
+    ],
+    values:[
+      { id:'v1', code:'draft',     label:'Черновик',         color:'', isDefault:true,  enabled:true, description:'' },
+      { id:'v2', code:'checking',  label:'На проверке',      color:'#c47a00', isDefault:false, enabled:true, description:'' },
+      { id:'v3', code:'rejected',  label:'Отклонён',         color:'#b3121b', isDefault:false, enabled:true, description:'' },
+      { id:'v4', code:'training',  label:'Обучение модели',  color:'#c47a00', isDefault:false, enabled:true, description:'' },
+      { id:'v5', code:'autotest',  label:'Автотесты',        color:'#c47a00', isDefault:false, enabled:true, description:'' },
+      { id:'v6', code:'sandbox',   label:'Песочница',        color:'#2b3140', isDefault:false, enabled:true, description:'' },
+      { id:'v7', code:'review',    label:'На ревью',         color:'#c47a00', isDefault:false, enabled:true, description:'' },
+      { id:'v8', code:'approved',  label:'Согласован',       color:'#0b6b3a', isDefault:false, enabled:true, description:'' },
+      { id:'v9', code:'whitelist', label:'Белые списки',     color:'#2b3140', isDefault:false, enabled:true, description:'' },
+      { id:'v10',code:'prod',      label:'Прод',             color:'#0b6b3a', isDefault:false, enabled:true, description:'' },
+      { id:'v11',code:'disabled',  label:'Отключён',         color:'#8b93a3', isDefault:false, enabled:true, description:'' }
+    ]
+  }
+];
+
+/* ============================================================
+   СОСТОЯНИЕ
+   ============================================================ */
+const msState = { 'ref-kind': [], 'ref-status': [] };
+let currentId = null;
+let dragId = null;
+let dirty = false;
+
+/* ============================================================
+   УТИЛИТЫ
+   ============================================================ */
+function esc(s){
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[c]));
+}
+function toast(msg){
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('on');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => el.classList.remove('on'), 2200);
+}
+function plural(n, forms){
+  const a = Math.abs(n) % 100, b = a % 10;
+  if (a > 10 && a < 20) return forms[2];
+  if (b > 1 && b < 5) return forms[1];
+  if (b === 1) return forms[0];
+  return forms[2];
+}
+function getCurrent(){
+  return DICTIONARIES.find(d => d.id === currentId);
+}
+function markDirty(){ dirty = true; }
+
+/* ============================================================
+   МУЛЬТИВЫБОР
+   ============================================================ */
+function toggleMs(id){
+  const menu = document.getElementById(id + '-menu');
+  const isOpen = menu.classList.contains('open');
+  document.querySelectorAll('.ms-menu.open').forEach(m => m.classList.remove('open'));
+  document.querySelectorAll('.ms-btn.active').forEach(b => b.classList.remove('active'));
+  if (!isOpen){
+    menu.classList.add('open');
+    document.getElementById(id + '-btn').classList.add('active');
+  }
+}
+function clearMs(id){
+  msState[id] = [];
+  document.querySelectorAll('#' + id + '-menu input[type=checkbox]').forEach(cb => cb.checked = false);
+  closeMs();
+  updateMsLabel(id);
+  renderList();
+  updateResetVisibility();
+}
+function onMsChange(id){
+  msState[id] = [...document.querySelectorAll('#' + id + '-menu input[type=checkbox]:checked')].map(cb => cb.value);
+  updateMsLabel(id);
+  renderList();
+  updateResetVisibility();
+}
+function closeMs(){
+  document.querySelectorAll('.ms-menu.open').forEach(m => m.classList.remove('open'));
+  document.querySelectorAll('.ms-btn.active').forEach(b => b.classList.remove('active'));
+}
+function updateMsLabel(id){
+  const wrap = document.getElementById(id + '-wrap');
+  const allLabel = wrap?.dataset.allLabel || 'Все';
+  const label = document.getElementById(id + '-label');
+  const checkAll = document.getElementById(id + '-check-all');
+  const values = msState[id];
+  if (checkAll) checkAll.style.visibility = values.length === 0 ? 'visible' : 'hidden';
+  if (values.length === 0) label.textContent = allLabel;
+  else if (values.length === 1) label.textContent = values[0];
+  else label.textContent = `${values[0]} и ещё ${values.length - 1}`;
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.ms-wrap')) closeMs();
+});
+
+/* ============================================================
+   СПИСОК
+   ============================================================ */
+function renderList(){
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const kindSel = msState['ref-kind'];
+  const statusSel = msState['ref-status'];
+
+  const filtered = DICTIONARIES.filter(d => {
+    if (kindSel.length && !kindSel.includes(d.type)) return false;
+    if (statusSel.length && !statusSel.includes(d.status)) return false;
+    if (q.length >= 2){
+      const hay = (d.name + ' ' + d.code + ' ' + d.description).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  const tbody = document.getElementById('rows');
+  const empty = document.getElementById('empty');
+  tbody.innerHTML = '';
+  empty.style.display = filtered.length === 0 ? 'block' : 'none';
+
+  filtered.forEach(d => {
+    const tr = document.createElement('tr');
+    tr.onclick = () => openCard(d.id);
+    const statusTag = d.status === 'Активен' ? 'ok'
+                    : d.status === 'Приостановлен' ? 'warn'
+                    : d.status === 'Черновик' ? 'ink' : 'mute';
+    const typeTag = d.type === 'Системный' ? 'sys' : 'custom';
+    const usedIn = d.usage.slice(0,2).map(u => u.title).join(' · ') +
+                   (d.usage.length > 2 ? ` и ещё ${d.usage.length - 2}` : '');
+    const kindMark = d.kind === 'rules-attachments'
+      ? `<span class="sys-row-badge custom" title="Правила вложений">📎 правила</span>`
+      : '';
+
+    tr.innerHTML = `
+      <td class="name-cell">
+        <span class="n">${esc(d.name)} ${kindMark}</span>
+        <span class="c">${esc(d.code)}</span>
+      </td>
+      <td><span class="tag ${typeTag}">${esc(d.type)}</span></td>
+      <td class="right num">${d.values.length}</td>
+      <td style="color:var(--muted);font-size:12px">${esc(usedIn)}</td>
+      <td><span class="tag ${statusTag}">${esc(d.status)}</span></td>
+      <td class="right">›</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById('count').textContent =
+    filtered.length + ' ' + plural(filtered.length, ['справочник','справочника','справочников']);
+}
+
+function updateResetVisibility(){
+  const hasSearch = document.getElementById('q').value.trim().length > 0;
+  const hasMs = msState['ref-kind'].length > 0 || msState['ref-status'].length > 0;
+  document.getElementById('ref-reset').classList.toggle('on', hasSearch || hasMs);
+}
+function resetFilters(){
+  document.getElementById('q').value = '';
+  ['ref-kind','ref-status'].forEach(id => {
+    msState[id] = [];
+    document.querySelectorAll('#' + id + '-menu input[type=checkbox]').forEach(cb => cb.checked = false);
+    updateMsLabel(id);
+  });
+  renderList();
+  updateResetVisibility();
+}
+
+/* ============================================================
+   КАРТОЧКА
+   ============================================================ */
+function openCard(id){
+  currentId = id;
+  dirty = false;
+  const d = getCurrent();
+  if (!d) return;
+
+  document.getElementById('title').textContent = d.name;
+  document.getElementById('crumb-name').textContent = d.name;
+  document.getElementById('subtitle').textContent = d.description;
+  document.getElementById('head-code').textContent = d.code;
+  document.getElementById('head-updated').textContent = d.updatedAt;
+
+  const dot = document.getElementById('head-status-dot');
+  const statusText = document.getElementById('head-status-text');
+  statusText.textContent = d.status;
+  if (d.status === 'Активен'){ dot.classList.remove('off'); }
+  else { dot.classList.add('off'); }
+
+  document.getElementById('head-kind-badge-wrap').innerHTML =
+    d.kind === 'rules-attachments'
+      ? `<span class="sys-row-badge custom">📎 Правила вложений</span>`
+      : '';
+
+  // Settings form
+  document.getElementById('set-name').value = d.name;
+  document.getElementById('set-code').value = d.code;
+  document.getElementById('set-code').disabled = (d.type === 'Системный');
+  document.getElementById('set-kind').value = d.kind;
+  document.getElementById('set-desc').value = d.description;
+  document.getElementById('set-owner').value = d.owner;
+  document.getElementById('set-public').checked = !!d.publicApi;
+  document.getElementById('set-allow-add').checked = !!d.allowAdd;
+  document.getElementById('set-allow-delete').checked = !!d.allowDelete;
+  document.getElementById('set-allow-rename').checked = !!d.allowRename;
+  document.getElementById('set-required').checked = !!d.required;
+  document.getElementById('set-cache').value = d.cache ?? 60;
+
+  // Delete button — disabled for system
+  document.getElementById('btn-delete').disabled = d.type === 'Системный';
+  document.getElementById('btn-pause').textContent = d.status === 'Приостановлен' ? 'Возобновить' : 'Приостановить';
+
+  // Add value button — disabled if not allowed
+  document.getElementById('btn-add-value').disabled = !d.allowAdd;
+
+  // Tab counts
+  document.getElementById('tab-values-count').textContent = d.values.length;
+
+  renderValues();
+  renderUsage();
+  renderValuesBanner();
+  switchTab('values');
+  showSection('ref','card');
+}
+
+function switchTab(tab){
+  document.querySelectorAll('#card-tabs .tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.tab === tab);
+  });
+  document.querySelectorAll('#screen-card .tab-panel').forEach(p => {
+    p.style.display = p.dataset.panel === tab ? '' : 'none';
+  });
+}
+
+document.querySelectorAll('#card-tabs .tab').forEach(t => {
+  t.onclick = () => switchTab(t.dataset.tab);
+});
+
+/* ============================================================
+   ЗНАЧЕНИЯ (обычный список)
+   ============================================================ */
+function renderValuesBanner(){
+  const d = getCurrent();
+  const el = document.getElementById('values-banner');
+  if (!el) return;
+  if (!d){ el.innerHTML = ''; return; }
+
+  if (d.kind === 'rules-attachments'){
+    el.innerHTML = `
+      <div class="banner">
+        <div class="ic warn">📎</div>
+        <div class="body">
+          <p><strong>Это не список строк, а набор правил.</strong> Каждое правило задаёт категорию файла, разрешённые расширения, MIME-маску, максимальный размер, максимальное количество и зоны, где правило действует.</p>
+          <p>Правила применяются симметрично к пользователям и к операторам. Отключение правила сразу блокирует загрузку соответствующих файлов.</p>
+        </div>
+      </div>`;
+    return;
+  }
+
+  if (d.type === 'Системный'){
+    el.innerHTML = `
+      <div class="banner">
+        <div class="ic info">🔒</div>
+        <div class="body">
+          <p><strong>Системный справочник.</strong> Используется в коде платформы и в формах других разделов. Можно добавлять значения, отключать отдельные значения и менять отображаемое название — но нельзя удалить сам справочник.</p>
+        </div>
+      </div>`;
+  } else {
+    el.innerHTML = `
+      <div class="banner">
+        <div class="ic info">✏</div>
+        <div class="body">
+          <p><strong>Пользовательский справочник.</strong> Полностью управляем: значения, порядок, статусы. Изменения применяются сразу, релиз не требуется.</p>
+        </div>
+      </div>`;
+  }
+}
+
+function renderValues(){
+  const d = getCurrent();
+  const body = document.getElementById('values-body');
+  if (!d || !body) return;
+
+  if (d.kind === 'rules-attachments'){
+    renderAttachmentRules(d, body);
+    return;
+  }
+
+  if (d.values.length === 0){
+    body.innerHTML = `<div class="empty">Значений пока нет. Нажмите «Добавить значение», чтобы создать первое.</div>`;
+    return;
+  }
+
+  const table = document.createElement('table');
+  table.className = 'values-table';
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th style="width:36px"></th>
+        <th style="width:22%">Код</th>
+        <th style="width:26%">Отображается как</th>
+        <th style="width:26%">Описание</th>
+        <th style="width:60px" title="Цвет">Цвет</th>
+        <th style="width:80px">По умолч.</th>
+        <th style="width:80px">Включено</th>
+        <th style="width:56px"></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  `;
+
+  const tbody = table.querySelector('tbody');
+  d.values.forEach(v => {
+    const tr = document.createElement('tr');
+    tr.draggable = true;
+    tr.dataset.id = v.id;
+    attachRowDrag(tr, v.id);
+
+    tr.innerHTML = `
+      <td><span class="handle" title="Перетащите, чтобы изменить порядок">⠿</span></td>
+      <td>
+        <input class="input val-code" value="${esc(v.code)}" ${d.type === 'Системный' && !d.allowRename ? 'disabled' : ''} oninput="updateValue('${v.id}','code',this.value)" />
+      </td>
+      <td>
+        <input class="input" value="${esc(v.label)}" oninput="updateValue('${v.id}','label',this.value)" />
+      </td>
+      <td>
+        <input class="input" value="${esc(v.description || '')}" placeholder="необязательно" oninput="updateValue('${v.id}','description',this.value)" />
+      </td>
+      <td>
+        <label class="color-swatch" style="background:${v.color || '#f5f6f8'};" title="${v.color || 'без цвета'}">
+          <input type="color" value="${v.color || '#b3121b'}" style="width:0;height:0;opacity:0;position:absolute" oninput="updateValue('${v.id}','color',this.value)" />
+        </label>
+      </td>
+      <td>
+        <label class="toggle ${v.isDefault ? 'on' : ''}" onclick="toggleDefault('${v.id}', event)">
+          <span class="knob"></span>
+        </label>
+      </td>
+      <td>
+        <label class="toggle ${v.enabled ? 'on' : ''}" onclick="toggleEnabled('${v.id}', event)">
+          <span class="knob"></span>
+        </label>
+      </td>
+      <td class="right">
+        <button class="del-btn" title="Удалить значение" onclick="removeValue('${v.id}', event)" ${!d.allowDelete ? 'disabled style="opacity:.3;cursor:not-allowed"' : ''}>✕</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  body.innerHTML = '';
+  body.appendChild(table);
+}
+
+function updateValue(id, key, value){
+  const d = getCurrent();
+  if (!d) return;
+  const v = d.values.find(x => x.id === id);
+  if (!v) return;
+  v[key] = value;
+  markDirty();
+}
+function toggleEnabled(id, ev){
+  ev.stopPropagation();
+  const d = getCurrent();
+  if (!d) return;
+  const v = d.values.find(x => x.id === id);
+  if (!v) return;
+  v.enabled = !v.enabled;
+  markDirty();
+  renderValues();
+  updateTabCounts();
+}
+function toggleDefault(id, ev){
+  ev.stopPropagation();
+  const d = getCurrent();
+  if (!d) return;
+  const v = d.values.find(x => x.id === id);
+  if (!v) return;
+  // По умолчанию может быть только одно значение
+  d.values.forEach(x => x.isDefault = (x.id === id ? !v.isDefault : false));
+  markDirty();
+  renderValues();
+}
+function addValue(){
+  const d = getCurrent();
+  if (!d || !d.allowAdd) return;
+  if (d.kind === 'rules-attachments'){
+    d.values.push({
+      id:'v' + Date.now(),
+      code:'new_category',
+      label:'Новая категория',
+      extensions:'',
+      mime:'',
+      maxSizeMb:10,
+      maxCount:1,
+      zones:'auth',
+      enabled:true,
+      note:''
+    });
+  } else {
+    d.values.push({
+      id:'v' + Date.now(),
+      code:'new_value',
+      label:'Новое значение',
+      description:'',
+      color:'',
+      isDefault:false,
+      enabled:true
+    });
+  }
+  markDirty();
+  renderValues();
+  updateTabCounts();
+  toast('Значение добавлено');
+}
+function removeValue(id, ev){
+  ev?.stopPropagation();
+  const d = getCurrent();
+  if (!d) return;
+  const v = d.values.find(x => x.id === id);
+  if (!v) return;
+  if (!confirm(`Удалить значение «${v.label}»? Оно перестанет быть доступным в фильтрах и формах.`)) return;
+  d.values = d.values.filter(x => x.id !== id);
+  markDirty();
+  renderValues();
+  updateTabCounts();
+  toast('Значение удалено');
+}
+function updateTabCounts(){
+  const d = getCurrent();
+  if (d) document.getElementById('tab-values-count').textContent = d.values.length;
+}
+
+/* Drag & drop для строк значений */
+function attachRowDrag(tr, id){
+  tr.addEventListener('dragstart', e => {
+    dragId = id;
+    tr.classList.add('dragging');
+    e.dataTransfer.effectAllowed = 'move';
+    try { e.dataTransfer.setData('text/plain', id); } catch(_){}
+  });
+  tr.addEventListener('dragend', () => {
+    tr.classList.remove('dragging');
+    document.querySelectorAll('.values-table tr.drop-target').forEach(el => el.classList.remove('drop-target'));
+    dragId = null;
+  });
+  tr.addEventListener('dragover', e => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    if (dragId && dragId !== id) tr.classList.add('drop-target');
+  });
+  tr.addEventListener('dragleave', () => tr.classList.remove('drop-target'));
+  tr.addEventListener('drop', e => {
+    e.preventDefault();
+    tr.classList.remove('drop-target');
+    if (!dragId || dragId === id) return;
+    const d = getCurrent();
+    if (!d) return;
+    const from = d.values.findIndex(x => x.id === dragId);
+    const to = d.values.findIndex(x => x.id === id);
+    if (from < 0 || to < 0) return;
+    const [moved] = d.values.splice(from, 1);
+    d.values.splice(to, 0, moved);
+    dragId = null;
+    markDirty();
+    renderValues();
+  });
+}
+
+/* ============================================================
+   ПРАВИЛА ВЛОЖЕНИЙ — специальный рендер
+   ============================================================ */
+function renderAttachmentRules(d, body){
+  const table = document.createElement('table');
+  table.className = 'values-table';
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th style="width:36px"></th>
+        <th style="width:12%">Код</th>
+        <th style="width:14%">Категория</th>
+        <th style="width:22%">Расширения</th>
+        <th style="width:14%">MIME</th>
+        <th style="width:90px">Макс. размер, МБ</th>
+        <th style="width:80px">Макс. кол-во</th>
+        <th style="width:14%">Зоны</th>
+        <th style="width:80px">Включено</th>
+        <th style="width:56px"></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  `;
+  const tbody = table.querySelector('tbody');
+  d.values.forEach(v => {
+    const tr = document.createElement('tr');
+    tr.draggable = true;
+    tr.dataset.id = v.id;
+    attachRowDrag(tr, v.id);
+    tr.innerHTML = `
+      <td><span class="handle" title="Перетащите, чтобы изменить порядок">⠿</span></td>
+      <td><input class="input val-code" value="${esc(v.code)}" oninput="updateValue('${v.id}','code',this.value)" /></td>
+      <td><input class="input" value="${esc(v.label)}" oninput="updateValue('${v.id}','label',this.value)" /></td>
+      <td><input class="input val-code" value="${esc(v.extensions)}" placeholder="jpg, png, pdf" oninput="updateValue('${v.id}','extensions',this.value)" /></td>
+      <td><input class="input val-code" value="${esc(v.mime)}" placeholder="image/*" oninput="updateValue('${v.id}','mime',this.value)" /></td>
+      <td><input class="input num" type="number" min="0" value="${esc(v.maxSizeMb)}" oninput="updateValue('${v.id}','maxSizeMb',Number(this.value))" /></td>
+      <td><input class="input num" type="number" min="0" value="${esc(v.maxCount)}" oninput="updateValue('${v.id}','maxCount',Number(this.value))" /></td>
+      <td><input class="input val-code" value="${esc(v.zones)}" placeholder="auth, anon" oninput="updateValue('${v.id}','zones',this.value)" /></td>
+      <td>
+        <label class="toggle ${v.enabled ? 'on' : ''}" onclick="toggleEnabled('${v.id}', event)">
+          <span class="knob"></span>
+        </label>
+      </td>
+      <td class="right">
+        <button class="del-btn" title="Удалить правило" onclick="removeValue('${v.id}', event)" ${!d.allowDelete ? 'disabled style="opacity:.3;cursor:not-allowed"' : ''}>✕</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+  body.innerHTML = '';
+  body.appendChild(table);
+
+  // Нижняя подсказка
+  const note = document.createElement('div');
+  note.style.cssText = 'padding:12px 16px;border-top:1px solid var(--border);background:#fafbfd;color:var(--muted);font-size:12px;line-height:1.55';
+  note.innerHTML = `Приоритет проверки: сначала идёт точное совпадение MIME, затем расширения. Если файл не подходит ни под одно включённое правило — он блокируется, пользователь получает понятное сообщение с указанием причины.`;
+  body.appendChild(note);
+}
+
+/* ============================================================
+   «ГДЕ ИСПОЛЬЗУЕТСЯ»
+   ============================================================ */
+function renderUsage(){
+  const d = getCurrent();
+  const wrap = document.getElementById('usage-list');
+  if (!d || !wrap) return;
+  wrap.innerHTML = d.usage.map(u => `
+    <div class="usage-row">
+      <div class="icon">${u.icon}</div>
+      <div class="body">
+        <div class="title">${esc(u.title)}</div>
+        ${u.desc ? `<div class="desc">${esc(u.desc)}</div>` : ''}
+        ${u.link ? `<a class="link" href="#" onclick="event.preventDefault();toast('Переход в раздел: ${esc(u.title)}')">${esc(u.link)} →</a>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ============================================================
+   ДЕЙСТВИЯ В КАРТОЧКЕ
+   ============================================================ */
+function saveDictionary(){
+  const d = getCurrent();
+  if (!d) return;
+  const name = document.getElementById('set-name').value.trim();
+  const code = document.getElementById('set-code').value.trim();
+  if (!name){ toast('Заполните название'); return; }
+  if (!code){ toast('Заполните служебный код'); return; }
+
+  d.name = name;
+  if (d.type !== 'Системный') d.code = code;
+  d.kind = document.getElementById('set-kind').value;
+  d.description = document.getElementById('set-desc').value;
+  d.owner = document.getElementById('set-owner').value;
+  d.publicApi = document.getElementById('set-public').checked;
+  d.allowAdd = document.getElementById('set-allow-add').checked;
+  d.allowDelete = document.getElementById('set-allow-delete').checked;
+  d.allowRename = document.getElementById('set-allow-rename').checked;
+  d.required = document.getElementById('set-required').checked;
+  d.cache = Number(document.getElementById('set-cache').value) || 0;
+  d.updatedAt = nowStr();
+
+  dirty = false;
+
+  // Обновляем шапку
+  document.getElementById('title').textContent = d.name;
+  document.getElementById('crumb-name').textContent = d.name;
+  document.getElementById('head-code').textContent = d.code;
+  document.getElementById('head-updated').textContent = d.updatedAt;
+  document.getElementById('subtitle').textContent = d.description;
+  document.getElementById('btn-add-value').disabled = !d.allowAdd;
+
+  renderList();
+  renderValues();
+  renderValuesBanner();
+  toast('Изменения сохранены');
+}
+
+function togglePauseDictionary(){
+  const d = getCurrent();
+  if (!d) return;
+  d.status = d.status === 'Приостановлен' ? 'Активен' : 'Приостановлен';
+  d.updatedAt = nowStr();
+  document.getElementById('head-status-text').textContent = d.status;
+  const dot = document.getElementById('head-status-dot');
+  if (d.status === 'Активен') dot.classList.remove('off'); else dot.classList.add('off');
+  document.getElementById('btn-pause').textContent = d.status === 'Приостановлен' ? 'Возобновить' : 'Приостановить';
+  document.getElementById('head-updated').textContent = d.updatedAt;
+  renderList();
+  toast(d.status === 'Активен' ? 'Справочник возобновлён' : 'Справочник приостановлен');
+}
+
+function deleteDictionary(){
+  const d = getCurrent();
+  if (!d) return;
+  if (d.type === 'Системный'){
+    toast('Системный справочник нельзя удалить');
+    return;
+  }
+  if (!confirm(`Удалить справочник «${d.name}»? Значения перестанут быть доступными в фильтрах и формах.`)) return;
+  const idx = DICTIONARIES.findIndex(x => x.id === d.id);
+  if (idx >= 0) DICTIONARIES.splice(idx, 1);
+  toast('Справочник удалён');
+  showSection('ref','list');
+  renderList();
+}
+
+function createNewDictionary(){
+  const name = prompt('Название нового справочника');
+  if (!name || !name.trim()) return;
+  const code = prompt('Служебный код (латиницей, например: my_dictionary)');
+  if (!code || !code.trim()) return;
+
+  const id = 'd' + Date.now();
+  DICTIONARIES.unshift({
+    id,
+    name: name.trim(),
+    code: code.trim(),
+    description: '',
+    kind:'list',
+    type:'Пользовательский',
+    owner:'Команда ЖКХ',
+    status:'Черновик',
+    updatedAt: nowStr(),
+    publicApi:false,
+    allowAdd:true,
+    allowDelete:true,
+    allowRename:true,
+    required:false,
+    cache:0,
+    usage:[],
+    values:[]
+  });
+  renderList();
+  openCard(id);
+  toast('Справочник создан. Добавьте значения во вкладке «Значения».');
+}
+
+function nowStr(){
+  const d = new Date();
+  const pad = n => String(n).padStart(2,'0');
+  return d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate()) +
+    ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+}
+
+/* ============================================================
+   ЭКСПОРТ CSV (демо)
+   ============================================================ */
+function exportValuesCsv(){
+  const d = getCurrent();
+  if (!d) return;
+  const rows = d.kind === 'rules-attachments'
+    ? [['Код','Категория','Расширения','MIME','Макс. размер, МБ','Макс. кол-во','Зоны','Включено','Примечание'],
+       ...d.values.map(v => [v.code, v.label, v.extensions, v.mime, v.maxSizeMb, v.maxCount, v.zones, v.enabled ? 'да' : 'нет', v.note || ''])]
+    : [['Код','Отображается как','Описание','Цвет','По умолчанию','Включено'],
+       ...d.values.map(v => [v.code, v.label, v.description || '', v.color || '', v.isDefault ? 'да' : 'нет', v.enabled ? 'да' : 'нет'])];
+
+  const csv = rows.map(r => r.map(c => {
+    const s = String(c ?? '');
+    return /[",\n;]/.test(s) ? `"${s.replace(/"/g,'""')}"` : s;
+  }).join(';')).join('\n');
+
+  const blob = new Blob(['\uFEFF' + csv], { type:'text/csv;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${d.code}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('CSV выгружен');
+}
+
+/* ============================================================
+   НАВИГАЦИЯ
+   ============================================================ */
+function showSection(section, view){
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  const screenId = view === 'card' ? 'screen-card' : 'screen-list';
+  const el = document.getElementById(screenId);
+  if (el) el.classList.add('active');
+  const crumbNow = document.getElementById('crumb-now');
+  if (view === 'card'){
+    crumbNow.textContent = document.getElementById('title').textContent;
+  } else {
+    crumbNow.textContent = 'Справочники';
+    // Сброс открытого справочника при возврате
+    if (dirty) dirty = false;
+  }
+  window.scrollTo(0,0);
+}
+
+/* ============================================================
+   ИНИЦИАЛИЗАЦИЯ
+   ============================================================ */
+renderList();
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "pointer": "#/components/schemas/DashboardFilterRequest",
+  "value": {
+    "properties": {
+      "started_from": {
+        "anyOf": [
+          {
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Started From"
+      },
+      "started_to": {
+        "anyOf": [
+          {
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Started To"
+      },
+      "channel_id": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Channel Id"
+      }
+    },
+    "type": "object",
+    "title": "DashboardFilterRequest"
+  }
+}

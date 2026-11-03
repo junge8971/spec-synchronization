@@ -1,0 +1,17 @@
+{
+  "sourceId": "jira-attachment-833803",
+  "revision": "r1",
+  "url": "https://task.mos-team.ru/secure/attachment/833803/TEST_PLAN_MOS_1119.md",
+  "retrievedAt": "2026-10-19T07:13:04.297Z",
+  "status": 200,
+  "contentType": "text/markdown;charset=UTF-8",
+  "contentPath": "content.md",
+  "sha256": "36817b1ee1a9087fe418a45874ee570f32f56d63557214ab58186a8379b3a766",
+  "savedUtf8Bytes": 7410,
+  "format": "full-decoded-text",
+  "hashScope": "Locally persisted UTF-8 decoded response text, not independently hashed raw HTTP bytes",
+  "provenance": "Parent origin-guarded browser MCP GET on task.mos-team.ru page5; URL taken from MOS1119 attachment metadata in jira-lifecycle-details/r2. Inline response persisted locally, no credential extraction.",
+  "membershipEvidence": "../../jira-lifecycle-details/r2/content.md section Other selected fields; reports/JIRA-MOS-782.md identifies MOS1119 membership",
+  "completeness": "Full returned text saved, saved byte count equals attachment metadata size7410. No attachment version/ETag captured.",
+  "limitations": "Documentary test plan only. No instructions, SQL, endpoint calls, tests or migration checks executed; no access to named environments or databases. Historical D-016 unread-body statement remains valid for its input set. Attachment835759 remains unread."
+}

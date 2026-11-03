@@ -1,0 +1,11 @@
+{
+  "root": {
+    "path": "/home/user/my/work/codesrc/projects/CAM/tsam-admin-front",
+    "source": "nearest",
+    "healthy": true,
+    "status": []
+  },
+  "store": null,
+  "references": [],
+  "status": []
+}

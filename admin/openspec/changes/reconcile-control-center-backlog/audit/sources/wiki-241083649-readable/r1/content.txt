@@ -1,0 +1,255 @@
+| POST: /api/dialogs/{id}
+| Description | Запрос карточки диалога, включая сведения для вкладок общая информация, таймлайн и ответы
+|
+parameters
+|
+| name | in | required | description | Пример
+| Id | path | true | Идентификатор диалога |
+dlg-8
+|
+Request Body
+|
+{
+"sudir_id": "id", //обязательное - идентификатор пользователя sudir , если аноним - null
+"access_token": "токен", //обязательно - токен пользователя sudir, если аноним - null
+}
+|
+Responses
+|
+| Code | Description
+|
+200
+|
+{
+"dialog": {
+"id": "dlg-8",
+"chatId": "CH-8842412",
+"sessionId": "SS-1180702",
+"authorized": true,
+"ssoId": "SSO-30188",
+"channel": "Портал mos.ru",
+"startedAt": "2026-08-12T15:02:10+03:00",
+"endedAt": "2026-08-12T15:23:34+03:00",
+"durationSec": 1284,
+"stepsCount": 6,
+"endReason": "Завершение оператором",
+"endedBy": "operator",
+"url": "https://mos.ru/services/gkh",
+"deviceInfo": "Desktop, Chrome 141",
+"title": "Переезд в новую квартиру"
+},
+"messages": [
+{
+"id": "msg-8-01",
+"author": "user",
+"postedAt": "2026-08-12T15:02:10+03:00",
+"text": "Здравствуйте, мы переехали...",
+"rating": null,
+"operatorId": null,
+"skillId ": null
+}
+...
+],
+"categories": [
+{
+"id": "cat-8-1",
+"name": "ЖКХ",
+"assignedBy": "operator",
+"assignedAt": "2026-08-12T15:20:18+03:00"
+}
+],
+"participants": {
+"totalMessages": 8,
+"items": [
+{
+"type": "skill",
+"id": "s-water",
+"name": "Вода",
+"messagesCount": 2,
+"messagesShare": 0.25,
+"goodRatingsCount": 1,
+"badRatingsCount": 0
+}
+]
+},
+"operator": {
+"id": "op-anna",
+"name": "Анна С.",
+"rating": 3,
+"ratingScale": 5,
+"ratingComment": "Помогли, но пришлось объяснять несколько раз",
+"ratingReason": "Пришлось повторять вопрос"
+},
+"routeTimeline": {
+"stepsCount": 37,
+"coveredSec": 1141,
+"totalDurationSec": 1284,
+"steps": [
+{
+"type": "reception",
+"component": "Виджет",
+"title": "Приём обращения пользователя",
+"startedAt": "2026-08-12T15:02:10+03:00",
+"durationMs": 40,
+"transitionMs": 0,
+"isThresholdExceeded": false,
+"isError": false,
+"details": {
+"zone": "authorized",
+"zoneLabel": "авторизованная"
+}
+}
+...
+]
+},
+"operatorActions": [
+{
+"id": "oa-8-1",
+"operatorId": "op-anna",
+"operatorName": "Анна С.",
+"action": "accept",
+"actionLabel": "Принял обращение в работу",
+"object": null,
+"result": "Очередь «ЖКХ, первая линия»",
+"waitSec": 18,
+"performedAt": "2026-08-12T15:11:22+03:00"
+}
+],
+"answers": [
+{
+"id": "ans-8-1",
+"questionMessageId": "msg-8-01",
+"questionText": "Здравствуйте...",
+"answeredAt": "2026-08-12T15:02:12+03:00",
+"answerMessageId": "msg-8-02",
+"answerText": "Помогу по порядку...",
+"skill": {
+"id": "s-water",
+"name": "Вода",
+"serviceId": "gkh.water"
+},
+"basis": {
+"type": "external_data",
+"label": "Данные внешней системы навыка",
+"description": "Вода: ответ построен на данных, которые навык получил из своей системы",
+"sources": [
+{
+"endpoint": "https://api.mos.ru/gkh/assistant/water",
+"serviceId": "gkh.water"
+}
+]
+},
+"rating": null
+}
+]
+}
+|
+422
+| {
+"error_type": "Validation error",
+"error_message": "Validation error message"
+}
+|
+500
+|
+{
+"error_type": "Internal Server Error",
+"error_message": "Internal server error message"
+}
+messages[] - Переписка
+| # | Поле | Тип | Пример | Описание
+| 1 | id | string | msg-8-01 | Идентификатор сообщения
+| 2 | author | string | user | Автор: user / assistant / operator
+| 3 | operatorId | string или null | op-anna | ID оператора (если автор operator)
+| 4 | skill | string или null | s-water | ID навыка (если автор assistant).
+| 5 | postedAt | string | 2026-08-12T15:02:10+03:00 | Время отправки
+| 6 | text | string | Здравствуйте... | Текст сообщения
+| 7 | rating | object или null | { "rating": "bad", "reason": "Ответ неполный", "comment": "..." } | Оценка ответа (только на сообщения ассистента, у которых есть оценка)
+| 8 | hasComment | boolean | true | Есть ли комментарий пользователя к оценке
+categories[] - Категории
+| # | Поле | Тип | Пример | Описание
+| 1 | id | string | cat-8-1 | Идентификатор
+| 2 | dialogId | string | dlg-8 | ID диалога
+| 3 | name | string | ЖКХ | Название категории
+| 4 | assignedBy | string | operator | Кто назначил: operator / auto
+| 5 | assignedAt | string  | 2026-08-12T15:20:18+03:00 | Время назначения
+participants - Блок участников
+| # | Поле | Тип | Пример | Описание
+| 1 | totalMessages | integer | 8 | Всего сообщений от ассистента и оператора (без пользователя)
+| 2 | items | array[object] | [{ "type": "skill", "id": "s-water", "name": "Вода", "messagesCount": 2, "messagesShare": 0.25 }] | Участники диалога
+participants.items[]
+| # | Поле | Тип | Пример | Описание
+| 1 | type | string | skill | Тип: skill / operator
+| 2 | id | string | s-water | ID навыка или оператора
+| 3 | name | string | Вода | Название навыка или ФИО оператора
+| 4 | messagesCount | integer | 2 | Число сообщений
+| 5 | messagesShare | float | 0.25 | Доля от всех сообщений (0..1)
+| 6 | goodRatingsCount | integer | 1 | Оценок «хорошо»
+| 7 | badRatingsCount | integer | 0 | Оценок «плохо»
+operator - Блок оператора (опционально)
+| # | Поле | Тип | Пример | Описание
+| 1 | id | string | op-anna | Идентификатор оператора
+| 2 | name | string | Анна С. | ФИО оператора
+| 3 | rating | integer (1–5) | 3 | Оценка диалога с оператором
+| 4 | ratingScale | integer | 5 | Максимум шкалы оценки
+| 5 | ratingComment | string или null | Помогли, но пришлось объяснять несколько раз | Комментарий к оценке
+| 6 | ratingReason | string или null | Пришлось повторять вопрос | Причина низкой оценки
+routeTimeline - Блок таймлайна (маршрут обращения)
+| # | Поле | Тип | Пример | Описание
+| 1 | stepsCount | integer | 37 | Общее число шагов трассировки
+| 2 | coveredSec | integer | 1141 | Длительность, покрытая шагами (с)
+| 3 | totalDurationSec | integer | 1284 | Полная длительность диалога (с)
+| 4 | notCoveredSec | integer | 143 | Не покрыто трассировкой (с)
+| 5 | steps | array[object] | [{ "type": "reception", ... }] | Массив шагов маршрута
+routeTimeline.steps[] - Шаг маршрута
+| # | Поле | Тип | Пример | Описание
+| 1 | id | string | step-8-001 | Идентификатор шага
+| 2 | type | string | reception | Тип: reception / classification / routing / external_call / response / ethics / operator_transfer / operator_response / completion
+| 3 | component | string | Виджет | Компонент платформы
+| 4 | title | string | Приём обращения пользователя | Описание шага
+| 5 | startedAt | string | 2026-08-12T15:02:10+03:00 | Время начала
+| 6 | durationMs | integer | 40 | Длительность выполнения (мс)
+| 7 | transitionMs | integer | 0 | Длительность перехода к следующему шагу (мс)
+| 8 | isThresholdExceeded | boolean | false | Превышен ли порог длительности
+| 9 | isError | boolean | false | Была ли ошибка
+| 10 | details | object | { "zone": "authorized", "zoneLabel": "авторизованная" } | Детали шага (зависят от type)
+operatorActions[] - Действия оператора
+| # | Поле | Тип | Пример | Описание
+| 1 | id | string | oa-8-1 | Идентификатор действия
+| 2 | operatorId | string | op-anna | ID оператора
+| 3 | operatorName | string | Анна С. | ФИО оператора
+| 4 | action | string | accept | Тип: accept / open_profile / apply_template / set_topic / set_category / request_rating / close
+| 5 | actionLabel | string | Принял обращение в работу | Описание действия
+| 6 | object | string или null | SSO-30188 | Объект действия
+| 7 | result | string или null | Очередь «ЖКХ, первая линия» | Результат
+| 8 | waitSec | integer или null | 18 | Ожидание в секундах
+| 9 | performedAt | string | 2026-08-12T15:11:22+03:00 | Время выполнения
+answers[] - Разбор ответов ассистента
+| # | Поле | Тип | Пример | Описание
+| 1 | id | string | ans-8-1 | Идентификатор
+| 2 | questionMessageId | string | msg-8-01 | ID сообщения пользователя
+| 3 | questionText | string | Здравствуйте... | Текст вопроса
+| 4 | answeredAt | string | 2026-08-12T15:02:12+03:00 | Время ответа
+| 5 | answerMessageId | string | msg-8-02 | ID сообщения ответа
+| 6 | answerText | string | Помогу по порядку... | Текст ответа
+| 7 | skill | object | { "id": "s-water", "name": "Вода", "serviceId": "gkh.water" } | Навык, сформировавший ответ
+| 8 | basis | object | { "type": "external_data", "label": "...", "description": "...", "sources": [...] } | Основание ответа
+| 9 | rating | object или null | { "rating": "bad", "ratingLabel": "Пользователь оценил ответ плохо", "reason": "Ответ неполный", "comment": "...", "ratedAt": "..." } | Оценка ответа
+| 10 | hasComment | boolean | true | Есть ли комментарий к оценке
+answers[].skill
+| # | Поле | Тип | Пример | Описание
+| 1 | id | string | s-water | ID навыка
+| 2 | name | string | Вода | Название
+| 3 | serviceId | string | gkh.water | Системный идентификатор
+answers[].basis
+| # | Поле | Тип | Пример | Описание
+| 1 | type | string | external_data | Тип: external_data / no_data / llm
+| 2 | label | string | Данные внешней системы навыка | Краткая метка
+| 3 | description | string | Вода: ответ построен на данных... | Описание
+| 4 | sources | array[object] | [{ "endpoint": "https://api.mos.ru/gkh/assistant/water", "serviceId": "gkh.water" }] | Источники данных
+answers[].rating
+| # | Поле | Тип | Пример | Описание
+| 1 | rating | string | bad | Оценка: good / bad
+| 3 | reason | string | Ответ неполный | Причина плохой оценки
+| 4 | comment | string или null | Ассистент не смог помочь | Комментарий
+| 5 | ratedAt | string | 2026-08-12T15:10:00+03:00 | Время оценки

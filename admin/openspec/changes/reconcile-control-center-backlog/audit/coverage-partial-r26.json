@@ -1,0 +1,23 @@
+{
+  "revision": 26,
+  "supplements": "coverage-partial-r25.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [{"source": "sources/wiki-247734813-attachment-index/r1/content.json", "review": "reviews/R-FEEDBACK-INDEX-REPAIR.md", "verdict": "ACCEPT", "decision": "D-044", "limits": "Selected projection only; acquisition/hash parent-attributed, historical byte identity not reviewer-certified"}],
+  "sourceAdditions": [],
+  "acceptedRootAccountingAfterIndexRepair": {
+    "rootBodyOrExtractionPackets": 42,
+    "rootPagesWithReturnedIndexes": 42,
+    "knownIndexedEntries": 39,
+    "savedPrototypeTexts": 4,
+    "unreadIndexedBodies": 35
+  },
+  "nextBoundedTask": "work-items/G1-API-COLLECTION-DELTA.md",
+  "limits": [
+    "Historical D043 snapshot unchanged; separate index not backdated",
+    "No attachment-body acquisition, version/relevance/precedence inference or new authority",
+    "Feedback structural-body repair conditional; broader explanatory/Jira-linked source gaps unresolved",
+    "API collection delta reuses saved increments; no semantic rerun or task closure",
+    "Global tasks2.3/2.4/2.6 remain open; historical formatting failure unresolved"
+  ]
+}

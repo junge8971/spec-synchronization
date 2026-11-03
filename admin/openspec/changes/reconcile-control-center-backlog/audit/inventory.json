@@ -1,0 +1,1131 @@
+{
+  "local": [
+    {
+      "id": "ab-testing-editor",
+      "kind": "main-spec",
+      "path": "openspec/specs/ab-testing-editor",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "ab-testing-export",
+      "kind": "main-spec",
+      "path": "openspec/specs/ab-testing-export",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "ab-testing-module",
+      "kind": "main-spec",
+      "path": "openspec/specs/ab-testing-module",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "ab-testing-registry",
+      "kind": "main-spec",
+      "path": "openspec/specs/ab-testing-registry",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "code-quality-gates",
+      "kind": "main-spec",
+      "path": "openspec/specs/code-quality-gates",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "control-center-api-integration",
+      "kind": "main-spec",
+      "path": "openspec/specs/control-center-api-integration",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "control-center-http",
+      "kind": "main-spec",
+      "path": "openspec/specs/control-center-http",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "control-center-mock-server",
+      "kind": "main-spec",
+      "path": "openspec/specs/control-center-mock-server",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "control-center-permissions",
+      "kind": "main-spec",
+      "path": "openspec/specs/control-center-permissions",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "control-center-shell",
+      "kind": "main-spec",
+      "path": "openspec/specs/control-center-shell",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "dialog-answer-insights",
+      "kind": "main-spec",
+      "path": "openspec/specs/dialog-answer-insights",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "dialog-category-addition",
+      "kind": "main-spec",
+      "path": "openspec/specs/dialog-category-addition",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "dialog-details",
+      "kind": "main-spec",
+      "path": "openspec/specs/dialog-details",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "dialog-export",
+      "kind": "main-spec",
+      "path": "openspec/specs/dialog-export",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "dialog-registry",
+      "kind": "main-spec",
+      "path": "openspec/specs/dialog-registry",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "dialog-route",
+      "kind": "main-spec",
+      "path": "openspec/specs/dialog-route",
+      "jiraReferences": [
+        "MOS-1041"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "dialog-saved-filters",
+      "kind": "main-spec",
+      "path": "openspec/specs/dialog-saved-filters",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "dialog-selection-builder",
+      "kind": "main-spec",
+      "path": "openspec/specs/dialog-selection-builder",
+      "jiraReferences": [
+        "MOS-1037"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "documentation-search",
+      "kind": "main-spec",
+      "path": "openspec/specs/documentation-search",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "knowledge-base-editor",
+      "kind": "main-spec",
+      "path": "openspec/specs/knowledge-base-editor",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "knowledge-base-export",
+      "kind": "main-spec",
+      "path": "openspec/specs/knowledge-base-export",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "knowledge-base-module",
+      "kind": "main-spec",
+      "path": "openspec/specs/knowledge-base-module",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "knowledge-base-registry",
+      "kind": "main-spec",
+      "path": "openspec/specs/knowledge-base-registry",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "local-session-demo",
+      "kind": "main-spec",
+      "path": "openspec/specs/local-session-demo",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mpmm-session",
+      "kind": "main-spec",
+      "path": "openspec/specs/mpmm-session",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "skill-bulk-rollout",
+      "kind": "main-spec",
+      "path": "openspec/specs/skill-bulk-rollout",
+      "jiraReferences": [
+        "MOS-1021"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "skill-card-editing",
+      "kind": "main-spec",
+      "path": "openspec/specs/skill-card-editing",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "skill-catalog-experience",
+      "kind": "main-spec",
+      "path": "openspec/specs/skill-catalog-experience",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "skill-checks-training",
+      "kind": "main-spec",
+      "path": "openspec/specs/skill-checks-training",
+      "jiraReferences": [
+        "MOS-909"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "skill-connection-settings",
+      "kind": "main-spec",
+      "path": "openspec/specs/skill-connection-settings",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "skill-domain-management",
+      "kind": "main-spec",
+      "path": "openspec/specs/skill-domain-management",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "skill-global-toggle",
+      "kind": "main-spec",
+      "path": "openspec/specs/skill-global-toggle",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "skill-lifecycle",
+      "kind": "main-spec",
+      "path": "openspec/specs/skill-lifecycle",
+      "jiraReferences": [
+        "MOS-909"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "skill-registration",
+      "kind": "main-spec",
+      "path": "openspec/specs/skill-registration",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "skill-review",
+      "kind": "main-spec",
+      "path": "openspec/specs/skill-review",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "skill-training-phrases",
+      "kind": "main-spec",
+      "path": "openspec/specs/skill-training-phrases",
+      "jiraReferences": [
+        "MOS-809"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "surface-lifecycle-publication",
+      "kind": "main-spec",
+      "path": "openspec/specs/surface-lifecycle-publication",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "surface-overview-connection",
+      "kind": "main-spec",
+      "path": "openspec/specs/surface-overview-connection",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "surface-registration",
+      "kind": "main-spec",
+      "path": "openspec/specs/surface-registration",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "surface-skill-selection",
+      "kind": "main-spec",
+      "path": "openspec/specs/surface-skill-selection",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1015-report-constructor",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1015-report-constructor",
+      "jiraReferences": [
+        "MOS-1015",
+        "MOS-1016",
+        "MOS-916",
+        "MOS-919"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1016-report-template-scheduling",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1016-report-template-scheduling",
+      "jiraReferences": [
+        "MOS-1015",
+        "MOS-1016",
+        "MOS-916",
+        "MOS-919"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1018-skill-phrase-conflicts",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1018-skill-phrase-conflicts",
+      "jiraReferences": [
+        "MOS-1018",
+        "MOS-1019",
+        "MOS-942",
+        "MOS-945"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1023-skill-environment-tokens",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1023-skill-environment-tokens",
+      "jiraReferences": [
+        "MOS-1019",
+        "MOS-1023"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1025-skill-monitoring",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1025-skill-monitoring",
+      "jiraReferences": [
+        "MOS-1025",
+        "MOS-1026",
+        "MOS-1030"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1026-skill-operations-info",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1026-skill-operations-info",
+      "jiraReferences": [
+        "MOS-1025",
+        "MOS-1026"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1030-skill-result-analytics",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1030-skill-result-analytics",
+      "jiraReferences": [
+        "MOS-1025",
+        "MOS-1030"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1031-skill-audit-history",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1031-skill-audit-history",
+      "jiraReferences": [
+        "MOS-1031"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1249-feedback-api",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1249-feedback-api",
+      "jiraReferences": [
+        "MOS-1246",
+        "MOS-1249",
+        "MOS-1259",
+        "MOS-1260"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1250-feedback-registry",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1250-feedback-registry",
+      "jiraReferences": [
+        "MOS-1246",
+        "MOS-1249",
+        "MOS-1250",
+        "MOS-1258"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1251-feedback-editor",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1251-feedback-editor",
+      "jiraReferences": [
+        "MOS-1246",
+        "MOS-1249",
+        "MOS-1251",
+        "MOS-1254",
+        "MOS-1257"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1254-feedback-questions",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1254-feedback-questions",
+      "jiraReferences": [
+        "MOS-1246",
+        "MOS-1249",
+        "MOS-1251",
+        "MOS-1254",
+        "MOS-1255"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1255-feedback-preview",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1255-feedback-preview",
+      "jiraReferences": [
+        "MOS-1246",
+        "MOS-1251",
+        "MOS-1254",
+        "MOS-1255"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1256-feedback-lifecycle",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1256-feedback-lifecycle",
+      "jiraReferences": [
+        "MOS-1246",
+        "MOS-1250",
+        "MOS-1251",
+        "MOS-1256"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1257-feedback-labels",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1257-feedback-labels",
+      "jiraReferences": [
+        "MOS-1246",
+        "MOS-1251",
+        "MOS-1257"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1258-feedback-conditions",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1258-feedback-conditions",
+      "jiraReferences": [
+        "MOS-1246",
+        "MOS-1249",
+        "MOS-1250",
+        "MOS-1258"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1259-feedback-saved-filters",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1259-feedback-saved-filters",
+      "jiraReferences": [
+        "MOS-1246",
+        "MOS-1250",
+        "MOS-1258",
+        "MOS-1259"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-1260-feedback-export",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-1260-feedback-export",
+      "jiraReferences": [
+        "MOS-1246",
+        "MOS-1249",
+        "MOS-1250",
+        "MOS-1251",
+        "MOS-1258",
+        "MOS-1260"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-916-report-templates",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-916-report-templates",
+      "jiraReferences": [
+        "MOS-916",
+        "MOS-919"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "mos-919-report-csv-export",
+      "kind": "active-change",
+      "path": "openspec/changes/mos-919-report-csv-export",
+      "jiraReferences": [
+        "MOS-1015",
+        "MOS-1016",
+        "MOS-916",
+        "MOS-919"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "reconcile-control-center-backlog",
+      "kind": "active-change",
+      "path": "openspec/changes/reconcile-control-center-backlog",
+      "jiraReferences": [
+        "MOS-623"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": true
+    },
+    {
+      "id": "2026-09-23-connect-control-center-http-client",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-23-connect-control-center-http-client",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-09-23-improve-code-quality",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-23-improve-code-quality",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-09-24-update-control-center-shell",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-24-update-control-center-shell",
+      "jiraReferences": [
+        "MOS-904"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-09-25-defer-auth-and-role-access",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-25-defer-auth-and-role-access",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-09-25-enforce-fsd-code-decomposition",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-25-enforce-fsd-code-decomposition",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-09-28-surface-registry",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-28-surface-registry",
+      "jiraReferences": [
+        "MOS-707",
+        "MOS-910"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-09-28-update-assistant-modules-contract",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-28-update-assistant-modules-contract",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-09-28-update-control-center-routing",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-28-update-control-center-routing",
+      "jiraReferences": [
+        "MOS-905"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-09-29-mos-944-skill-card-editing",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-29-mos-944-skill-card-editing",
+      "jiraReferences": [
+        "MOS-1022",
+        "MOS-944"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-09-30-merge-assistant-modules-contract-preserve-intents",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-30-merge-assistant-modules-contract-preserve-intents",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-09-30-mos-1022-skill-connection-settings",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-30-mos-1022-skill-connection-settings",
+      "jiraReferences": [
+        "MOS-1022",
+        "MOS-944"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-09-30-mos-911-surface-skill-selection",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-30-mos-911-surface-skill-selection",
+      "jiraReferences": [
+        "MOS-911"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-09-30-mos-945-skill-training-phrases",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-09-30-mos-945-skill-training-phrases",
+      "jiraReferences": [
+        "MOS-1018",
+        "MOS-1019",
+        "MOS-945"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-01-skills-prototype-alignment",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment",
+      "jiraReferences": [
+        "MOS-1018",
+        "MOS-1020",
+        "MOS-907",
+        "MOS-909",
+        "MOS-929",
+        "MOS-933",
+        "MOS-935",
+        "MOS-942"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-01-skills-status-and-registration-recovery",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-01-skills-status-and-registration-recovery",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-02-mos-1019-skill-checks-training",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-02-mos-1019-skill-checks-training",
+      "jiraReferences": [
+        "MOS-1018",
+        "MOS-1019",
+        "MOS-1020",
+        "MOS-1023",
+        "MOS-909"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-02-mos-1020-skill-review",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-02-mos-1020-skill-review",
+      "jiraReferences": [
+        "MOS-1019",
+        "MOS-1020",
+        "MOS-1021",
+        "MOS-909"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-02-mos-909-skill-current-status",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-02-mos-909-skill-current-status",
+      "jiraReferences": [
+        "MOS-909"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-02-mos-909-skill-lifecycle-rollout",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-02-mos-909-skill-lifecycle-rollout",
+      "jiraReferences": [
+        "MOS-1019",
+        "MOS-909"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-02-mos-911-prod-skill-selection",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-02-mos-911-prod-skill-selection",
+      "jiraReferences": [
+        "MOS-911"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-05-mos-1021-skill-bulk-rollout",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-05-mos-1021-skill-bulk-rollout",
+      "jiraReferences": [
+        "MOS-1020",
+        "MOS-1021",
+        "MOS-909"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-05-mos-1037-dialog-registry",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-05-mos-1037-dialog-registry",
+      "jiraReferences": [
+        "MOS-1037",
+        "MOS-1038",
+        "MOS-1040",
+        "MOS-1041",
+        "MOS-1045"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-05-mos-1038-dialog-selection-builder",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-05-mos-1038-dialog-selection-builder",
+      "jiraReferences": [
+        "MOS-1037",
+        "MOS-1038"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-06-mos-1040-dialog-saved-filters",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-06-mos-1040-dialog-saved-filters",
+      "jiraReferences": [
+        "MOS-1037",
+        "MOS-1038",
+        "MOS-1040"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-06-mos-1041-dialog-details",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-06-mos-1041-dialog-details",
+      "jiraReferences": [
+        "MOS-1037",
+        "MOS-1041",
+        "MOS-1042",
+        "MOS-1043",
+        "MOS-1044",
+        "MOS-1045"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-06-mos-1042-dialog-answer-insights",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-06-mos-1042-dialog-answer-insights",
+      "jiraReferences": [
+        "MOS-1041",
+        "MOS-1042",
+        "MOS-1043"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-07-mos-1044-dialog-category-addition",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-07-mos-1044-dialog-category-addition",
+      "jiraReferences": [
+        "MOS-1037",
+        "MOS-1041",
+        "MOS-1044"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-07-mos-913-surface-lifecycle-publication",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-07-mos-913-surface-lifecycle-publication",
+      "jiraReferences": [
+        "MOS-913"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-07-mos-913-surface-overview-connection",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-07-mos-913-surface-overview-connection",
+      "jiraReferences": [
+        "MOS-913"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-09-add-local-session-demo",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-09-add-local-session-demo",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-09-integrate-mpmm-auth-permissions",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-12-mos-914-surface-lifecycle-mvp",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-12-mos-914-surface-lifecycle-mvp",
+      "jiraReferences": [
+        "MOS-914"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-13-mos-1027-skill-global-toggle",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-13-mos-1027-skill-global-toggle",
+      "jiraReferences": [
+        "MOS-1027"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-13-mos-1043-dialog-route",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-13-mos-1043-dialog-route",
+      "jiraReferences": [
+        "MOS-1041",
+        "MOS-1042",
+        "MOS-1043"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-13-mos-1045-dialog-export",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-13-mos-1045-dialog-export",
+      "jiraReferences": [
+        "MOS-1045",
+        "MOS-919"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-13-mos-906-documentation-search-url",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-13-mos-906-documentation-search-url",
+      "jiraReferences": [
+        "MOS-906"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-13-update-control-center-contracts-put",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-13-update-control-center-contracts-put",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-14-add-optional-knowledge-base",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-14-add-optional-knowledge-base",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-15-add-optional-ab-testing",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-15-add-optional-ab-testing",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-15-update-control-center-api-contracts",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-15-update-control-center-api-contracts",
+      "jiraReferences": [],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    },
+    {
+      "id": "2026-10-16-fix-existing-scenarios-test-contour",
+      "kind": "archived-change",
+      "path": "openspec/changes/archive/2026-10-16-fix-existing-scenarios-test-contour",
+      "jiraReferences": [
+        "MOS-1407",
+        "MOS-1409"
+      ],
+      "status": "inventoried",
+      "semanticReview": "pending",
+      "processOnly": false
+    }
+  ],
+  "jiraHierarchySource": "sources/jira-hierarchy/r1/content.json",
+  "externalContentCoverage": "partial",
+  "reports": [
+    "reports/LOCAL-001.md",
+    "reports/LOCAL-002.md"
+  ]
+}

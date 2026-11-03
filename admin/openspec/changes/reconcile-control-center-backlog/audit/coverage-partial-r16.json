@@ -1,0 +1,42 @@
+{
+  "revision": 16,
+  "supplements": "coverage-partial-r15.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "sourceAdditions": [
+    "sources/wiki-245670575/r1/metadata.json",
+    "sources/wiki-241080643/r1/metadata.json",
+    "sources/wiki-241083649/r1/metadata.json",
+    "sources/wiki-241080071/r1/metadata.json"
+  ],
+  "capture": {
+    "authority": "Existing root batch retained by D-034; user requested continuation after timeout",
+    "transport": "Rediscovery succeeded; exact root href and origin guarded before documentation GETs",
+    "versions": [4, 7, 2, 2],
+    "httpStatuses": [200, 200, 200, 200],
+    "bodyFormat": "Full bodyView with separate returned attachment indexes",
+    "attachmentCounts": [0, 0, 0, 0],
+    "nextPointers": [null, null, null, null],
+    "redactions": [0, 0, 0, 0],
+    "integrity": "Parent SHA256 canonical/derived records and exact HTML chunk roundtrips; no rendering/example execution",
+    "semanticAcceptance": "pending"
+  },
+  "parentComputedRootCounts": {
+    "capturedBodyOrExtraction": 25,
+    "withoutCanonicalPacket": 17,
+    "returnedIndexes": 24,
+    "knownIndexedAttachments": 25,
+    "knownIndexedUnreadBodies": 21,
+    "note": "Four empty-index captures appended after prior21/42 snapshot; feedback index still missing"
+  },
+  "pendingAnalysis": [
+    "work-items/DELTA-DIALOG-BUSINESS-PLAN.md",
+    "work-items/DELTA-DIALOG-LIST-CARD-EXAMPLES.md"
+  ],
+  "limits": [
+    "No recursive link or attachment-body traversal, business API request, credentials or new Jira graph",
+    "Source task placeholders, stage dates and compliance/auth prose are not runtime/implementation verification",
+    "No new source precedence, auth model, feature activation or global gate closure",
+    "Remaining sources/attachments/explanatory-document, owner and implementation gaps and prior formatting failure unresolved"
+  ]
+}

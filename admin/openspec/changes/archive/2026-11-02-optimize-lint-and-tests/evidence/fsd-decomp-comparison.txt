@@ -1,0 +1,38 @@
+[
+  {
+    "attempt": 1,
+    "variant": "old",
+    "seconds": 18.337,
+    "exit": 0
+  },
+  {
+    "attempt": 1,
+    "variant": "new",
+    "seconds": 1.808,
+    "exit": 0
+  },
+  {
+    "attempt": 2,
+    "variant": "old",
+    "seconds": 19.193,
+    "exit": 0
+  },
+  {
+    "attempt": 2,
+    "variant": "new",
+    "seconds": 1.698,
+    "exit": 0
+  },
+  {
+    "attempt": 3,
+    "variant": "old",
+    "seconds": 19.883,
+    "exit": 0
+  },
+  {
+    "attempt": 3,
+    "variant": "new",
+    "seconds": 1.465,
+    "exit": 0
+  }
+]

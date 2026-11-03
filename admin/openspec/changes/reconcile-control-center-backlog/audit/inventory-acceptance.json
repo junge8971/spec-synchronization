@@ -1,0 +1,33 @@
+{
+  "scope": "Observed Jira module membership only; not complete requirements, visibility or implementation acceptance",
+  "reviewer": "parent supervisor",
+  "accepted": [
+    {"module":"MOS-788","members":0,"nested":0,"report":"reports/JIRA-MOS-788.md","runId":"29c6faf2-efe9-4366-a516-2c0d1442747e"},
+    {"module":"MOS-1388","members":1,"nested":0,"report":"reports/JIRA-MOS-1388.md","runId":"a8383238-563d-4c6f-9ad9-de2f6603863c"},
+    {"module":"MOS-1403","members":1,"nested":0,"report":"reports/JIRA-MOS-1403.md","runId":"b61ba8d1-9ba7-4b81-8513-b11fabf35547"},
+    {"module":"MOS-770","members":0,"nested":0,"report":"reports/JIRA-MOS-770.md","runId":"761ea3f0-7542-4148-8778-ab6dff9e63ca"},
+    {"module":"MOS-772","members":0,"nested":0,"report":"reports/JIRA-MOS-772.md","runId":"ceb73524-d561-42b8-a07f-ec0e1d8f8ed8"},
+    {"module":"MOS-781","members":1,"nested":0,"report":"reports/JIRA-MOS-781.md","runId":"40b11a9a-215a-455e-8c4c-dc8da0a26468"},
+    {"module":"MOS-1327","members":2,"nested":0,"report":"reports/JIRA-MOS-1327.md","runId":"aeb0090a-a26c-4bdc-8589-56e53e640527"},
+    {"module":"MOS-1328","members":2,"nested":0,"report":"reports/JIRA-MOS-1328.md","runId":"f5c566dc-d19f-4169-8684-53d92cee3d23"},
+    {"module":"MOS-1329","members":2,"nested":0,"report":"reports/JIRA-MOS-1329.md","runId":"0e741845-a2e2-4d27-9ac7-0538402049df"},
+    {"module":"MOS-776","members":1,"nested":0,"report":"reports/JIRA-MOS-776.md","runId":"bdc1cfbf-faf5-4e35-b89b-e2080723953f"},
+    {"module":"MOS-777","members":5,"nested":0,"report":"reports/JIRA-MOS-777.md","runId":"f8310833-0d38-424e-b117-a8374555516e"},
+    {"module":"MOS-778","members":6,"nested":0,"report":"reports/JIRA-MOS-778.md","runId":"6633ede1-9b5e-43f5-ac2b-d05bf8a857eb"},
+    {"module":"MOS-780","members":1,"nested":0,"report":"reports/JIRA-MOS-780.md","runId":"f4338609-7f20-47c9-9ae1-876381d47655"},
+    {"module":"MOS-652","members":4,"nested":0,"report":"reports/JIRA-MOS-652.md","runId":"b71e5bd9-7962-477e-95c1-bb9d1df04619"},
+    {"module":"MOS-768","members":4,"nested":0,"report":"reports/JIRA-MOS-768.md","runId":"01b546be-e7c7-4333-8cf2-d7b25ad9b20c"},
+    {"module":"MOS-769","members":2,"nested":0,"report":"reports/JIRA-MOS-769.md","runId":"6aa99634-eb82-4c6c-9357-7e587861c289"},
+    {"module":"MOS-775","members":3,"nested":0,"report":"reports/JIRA-MOS-775.md","runId":"1fa81eb7-e60d-437a-95aa-6e5aed81353f"},
+    {"module":"MOS-624","members":29,"nested":1,"report":"reports/JIRA-MOS-624.md","runId":"fc57eaa8-cbd8-481a-824c-bb78753d875f"},
+    {"module":"MOS-651","members":5,"nested":0,"report":"reports/JIRA-MOS-651.md","runId":"27042ce8-fb26-4fae-9f7c-230c7a51bda5"},
+    {"module":"MOS-771","members":1,"nested":1,"report":"reports/JIRA-MOS-771.md","runId":"6bde14e0-1376-41d1-acab-d24d67fcf55b"},
+    {"module":"MOS-784","members":4,"nested":1,"report":"reports/JIRA-MOS-784.md","runId":"c87b06b0-118e-45ab-85d8-b8643e1ba690"},
+    {"module":"MOS-1246","members":11,"nested":0,"report":"reports/JIRA-MOS-1246.md","runId":"fdf0000a-97bb-41ca-9859-56a63e142b99"},
+    {"module":"MOS-773","members":11,"nested":5,"report":"reports/JIRA-MOS-773.md","runId":"f29186d6-eff7-4b59-892d-7b82b4075cfc"},
+    {"module":"MOS-774","members":18,"nested":3,"report":"reports/JIRA-MOS-774.md","runId":"a1846dc0-e0da-40ad-8868-e04a29632c06"},
+    {"module":"MOS-782","members":25,"nested":0,"report":"reports/JIRA-MOS-782.md","runId":"e23808a9-5bc9-4b78-96d3-96acfb5ea17c"},
+    {"module":"MOS-783","members":18,"nested":5,"report":"reports/JIRA-MOS-783.md","runId":"9c081e14-674e-4b3b-8e5a-79876a62682c"}
+  ],
+  "limitations": "All listed reports read by supervisor; no observed membership conflicts. Module parents mostly have hierarchy entries only; many member descriptions and all comments/custom-field coverage remain uncollected. Attachment metadata is not attachment content. Later source packets require separate reconciliation; original snapshot timestamps retained. All 26 module inventory reports read and accepted within these limits; aggregate set checks recorded separately in inventory-reconciliation.json."
+}

@@ -1,0 +1,15 @@
+{
+  "revision": 3,
+  "supplements": "coverage-partial-r2.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "scope": "Monitoring documentary reconciliation only; not implementation or global requirements coverage",
+  "chains": [
+    {"issue": "MOS-1146", "report": "reports/SCENARIO-MOS-1146.md", "review": "reviews/R-SCENARIO-MOS-1146.md", "disposition": "D-014", "correction": "ge/le annotate non-null union, not numeric branch alone"},
+    {"issue": "MOS-1397", "report": "reports/SCENARIO-MOS-1397.md", "review": "reviews/R-SCENARIO-MOS-1397.md", "disposition": "D-014"},
+    {"issue": "MOS-1398", "report": "reports/SCENARIO-MOS-1398.md", "review": "reviews/R-SCENARIO-MOS-1398.md", "disposition": "D-014", "corrections": ["Backup/prod scope tension, not proven contradictory transition rule", "Validation exemption for unchanged assignment pairs", "At most one user request per unique ID"]}
+  ],
+  "sourceAdditions": ["sources/jira-monitoring-details/r1/metadata.json"],
+  "pendingSources": ["sources/jira-skill-switch-details/r1/metadata.json"],
+  "limitations": ["Product planning unchanged", "Historical reports require named reviews and disposition", "No runtime/code/test verification", "Index unverified", "MOS1145 attachment body unread"]
+}

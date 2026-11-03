@@ -1,0 +1,240 @@
+{
+  "sourceId": "jira-shell-details",
+  "retrievedAt": "2026-10-16T12:45:22.199Z",
+  "allowlist": [
+    "MOS-624",
+    "MOS-672",
+    "MOS-673",
+    "MOS-674",
+    "MOS-904",
+    "MOS-905"
+  ],
+  "items": [
+    {
+      "key": "MOS-624",
+      "retrievedAt": "2026-10-16T12:45:21.394Z",
+      "summary": "[KR] Каркас административной панели",
+      "description": "|*Что будет сделано*| |\r\n|*Результат для пользователя*|для пользователя изменений не будет|\r\n|*Заказчики (Стейкхолдеры)*|Катков Д.\r\nПопова Л.|\r\n|*Проблема*| |\r\n|*Решение (Acceptance criteria)* |Цикл разработки задачи:\r\n * продуктовая постановка\r\n * системный анализ\r\n * разработка\r\n * тестирование\r\n * релиз|\r\n|*Целевая аудитория*|-|\r\n|*Сценарий использования (для разработчиков)*|-|\r\n|*Предпосылки*|-|\r\n|*Гипотеза*|-|\r\n|*Документация*|[https://wiki.mos-team.ru/pages/viewpage.action?pageId=223087110] \r\n[https://wiki.mos-team.ru/pages/viewpage.action?pageId=222659162] |\r\n|*SEO*|Не требуется|\r\n|*Макеты*|-|",
+      "issuetype": "Q key result",
+      "status": "Backlog",
+      "parent": null,
+      "updated": "2026-10-09T15:04:52.907+0800",
+      "subtasks": [],
+      "attachments": [],
+      "comments": {
+        "startAt": 0,
+        "maxResults": 0,
+        "total": 0,
+        "items": []
+      }
+    },
+    {
+      "key": "MOS-672",
+      "retrievedAt": "2026-10-16T12:45:21.471Z",
+      "summary": "[FE] Создание шапки админки",
+      "description": "Создать шапку по контенту идентичную скриншоту и примеру \r\n !image-2026-09-03-13-26-35-746.png|thumbnail! ",
+      "issuetype": "Development task",
+      "status": "CLOSED",
+      "parent": null,
+      "updated": "2026-09-22T21:33:47.993+0800",
+      "subtasks": [],
+      "attachments": [
+        {
+          "id": "817138",
+          "filename": "image-2026-09-03-13-26-35-746.png",
+          "mimeType": "image/png",
+          "size": 22057,
+          "content": "https://task.mos-team.ru/secure/attachment/817138/image-2026-09-03-13-26-35-746.png"
+        },
+        {
+          "id": "825952",
+          "filename": "image-2026-09-22-16-31-27-903.png",
+          "mimeType": "image/png",
+          "size": 17129,
+          "content": "https://task.mos-team.ru/secure/attachment/825952/image-2026-09-22-16-31-27-903.png"
+        },
+        {
+          "id": "817137",
+          "filename": "Прототип ЦАМ, версия MVP.html",
+          "mimeType": "text/html",
+          "size": 1158654,
+          "content": "https://task.mos-team.ru/secure/attachment/817137/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF+%D0%A6%D0%90%D0%9C%2C+%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F+MVP.html"
+        }
+      ],
+      "comments": {
+        "startAt": 0,
+        "maxResults": 1,
+        "total": 1,
+        "items": [
+          {
+            "id": "1114541",
+            "body": "Протестировано успешно на контуре: [https://mobile-a-tech.mos.ru/tsam-panel]\r\n\r\n!image-2026-09-22-16-31-27-903.png!",
+            "created": "2026-09-22T21:32:51.609+0800",
+            "updated": "2026-09-22T21:32:51.609+0800"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MOS-673",
+      "retrievedAt": "2026-10-16T12:45:21.808Z",
+      "summary": "[FE] Создание навигации админки",
+      "description": "Сделать навигацию аналогичную по наполнению согласно примеру и скриншоту\r\n !image-2026-09-03-13-29-40-640.png|thumbnail! ",
+      "issuetype": "Development task",
+      "status": "CLOSED",
+      "parent": null,
+      "updated": "2026-09-23T17:21:47.836+0800",
+      "subtasks": [],
+      "attachments": [
+        {
+          "id": "817141",
+          "filename": "image-2026-09-03-13-29-40-640.png",
+          "mimeType": "image/png",
+          "size": 24010,
+          "content": "https://task.mos-team.ru/secure/attachment/817141/image-2026-09-03-13-29-40-640.png"
+        },
+        {
+          "id": "826497",
+          "filename": "image-2026-09-23-12-21-03-315.png",
+          "mimeType": "image/png",
+          "size": 31195,
+          "content": "https://task.mos-team.ru/secure/attachment/826497/image-2026-09-23-12-21-03-315.png"
+        },
+        {
+          "id": "817140",
+          "filename": "Прототип ЦАМ, версия MVP.html",
+          "mimeType": "text/html",
+          "size": 1158654,
+          "content": "https://task.mos-team.ru/secure/attachment/817140/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF+%D0%A6%D0%90%D0%9C%2C+%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F+MVP.html"
+        }
+      ],
+      "comments": {
+        "startAt": 0,
+        "maxResults": 1,
+        "total": 1,
+        "items": [
+          {
+            "id": "1115041",
+            "body": "Протестировано успешно на контуре: [https://mobile-a-tech.mos.ru/tsam-panel]\r\n!image-2026-09-23-12-21-03-315.png!",
+            "created": "2026-09-23T17:21:09.555+0800",
+            "updated": "2026-09-23T17:21:09.555+0800"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MOS-674",
+      "retrievedAt": "2026-10-16T12:45:22.008Z",
+      "summary": "[FE] Создания механизма хлебных крошер",
+      "description": "Создать хлебных крошек и сделать так чтобы они автоматически отображались на каждой странице\r\n !image-2026-09-03-13-36-19-668.png|thumbnail! \r\n",
+      "issuetype": "Development task",
+      "status": "CLOSED",
+      "parent": null,
+      "updated": "2026-09-22T21:44:47.949+0800",
+      "subtasks": [],
+      "attachments": [
+        {
+          "id": "817144",
+          "filename": "image-2026-09-03-13-36-19-668.png",
+          "mimeType": "image/png",
+          "size": 8078,
+          "content": "https://task.mos-team.ru/secure/attachment/817144/image-2026-09-03-13-36-19-668.png"
+        },
+        {
+          "id": "825968",
+          "filename": "image-2026-09-22-16-44-42-595.png",
+          "mimeType": "image/png",
+          "size": 3319,
+          "content": "https://task.mos-team.ru/secure/attachment/825968/image-2026-09-22-16-44-42-595.png"
+        },
+        {
+          "id": "817143",
+          "filename": "Прототип ЦАМ, версия MVP.html",
+          "mimeType": "text/html",
+          "size": 1158654,
+          "content": "https://task.mos-team.ru/secure/attachment/817143/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF+%D0%A6%D0%90%D0%9C%2C+%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F+MVP.html"
+        }
+      ],
+      "comments": {
+        "startAt": 0,
+        "maxResults": 1,
+        "total": 1,
+        "items": [
+          {
+            "id": "1114562",
+            "body": "Протестировано успешно на контуре: [https://mobile-a-tech.mos.ru/tsam-panel]\r\n!image-2026-09-22-16-44-42-595.png!",
+            "created": "2026-09-22T21:44:47.947+0800",
+            "updated": "2026-09-22T21:44:47.947+0800"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MOS-904",
+      "retrievedAt": "2026-10-16T12:45:22.111Z",
+      "summary": "[FE][Общая оболочка] Доработать шапку и навигацию под Центр управления",
+      "description": "Заменить старый бренд и жёстко заданные ФИО/роль. \r\nДоработать существующие header, SidebarHeader, SidebarContent и SidebarFooter.\r\nДобавить профиль с выходом, переход к командам и контекстное меню статей документации. Доступность разделов брать из auth-контекста.\r\nДемонстрационные reset, переключение произвольной роли и сценарии показа не переносить в рабочий контур.\r\nПодсказки первого входа и повторное открытие справки оставить как справочную UI-функцию.\r\n\r\nКонтракты:\r\nhttps://wiki.mos-team.ru/spaces/KR/pages/241079770/API-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82+%D0%B2%D1%85%D0%BE%D0%B4%D0%B0+%D0%B8+%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D1%81%D0%B5%D1%81%D1%81%D0%B8%D0%B5%D0%B9",
+      "issuetype": "Development task",
+      "status": "Ready for test",
+      "parent": null,
+      "updated": "2026-10-16T19:22:21.694+0800",
+      "subtasks": [],
+      "attachments": [],
+      "comments": {
+        "startAt": 0,
+        "maxResults": 2,
+        "total": 2,
+        "items": [
+          {
+            "id": "1117112",
+            "body": " Что поменялось \r\n\r\n - Добавлена кнопка справки с вводным пошаговым описанием интерфейса.\r\n - Боковая навигация: разделы сгруппированы: основное меню, «Аналитика» и «Эксплуатация». Добавлена ссылка «Состояние системы»; она пока не ведёт на рабочую страницу. «Документация»\r\n   доступна внизу меню, в том числе через быстрое меню статей.\r\n - Навыки и поверхности: изменился вид меню и состояний реестров - загрузка, пустой результат и ошибка. В реестре навыков переход по страницам сохраняет состояние в URL; в реестре\r\n   поверхностей при выходе за диапазон страниц доступен переход к последней странице.",
+            "created": "2026-09-25T20:23:52.388+0800",
+            "updated": "2026-09-25T20:23:52.388+0800"
+          },
+          {
+            "id": "1117939",
+            "body": "И пути для апи поменял",
+            "created": "2026-09-28T19:02:50.149+0800",
+            "updated": "2026-09-28T19:02:50.149+0800"
+          }
+        ]
+      }
+    },
+    {
+      "key": "MOS-905",
+      "retrievedAt": "2026-10-16T12:45:22.198Z",
+      "summary": "[FE][Общая оболочка] Доработать маршруты, вкладки и хлебные крошки",
+      "description": "Главная нового прототипа ведёт в навыки вместо отдельного обзорного дашборда. Добавить /skills/new, /surfaces/new, карточки поверхности и диалога, /teams, /ops. Поддержать /metrics и /docs из прототипа с совместимостью существующих /dashboard и /documentation. Сохранить basename /tsam-panel. \r\nСтарые /domains, /review, /audit, /ops/stubs и /ops/maintenance перенаправлять на соответствующую вкладку с сохранением прочих query. \r\nДля роли без навыков использовать согласованную доступную точку входа.\r\n\r\nКонтракты:\r\nhttps://wiki.mos-team.ru/spaces/KR/pages/241097511/API-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82+%D1%80%D0%B5%D0%B5%D1%81%D1%82%D1%80%D0%B0+%D0%B4%D0%BE%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2+%D0%B8+%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D0%B0+%D0%BD%D0%B0%D0%B2%D1%8B%D0%BA%D0%BE%D0%B2\r\nhttps://wiki.mos-team.ru/spaces/KR/pages/241082009/API-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82+%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%85%D0%BD%D0%BE%D1%81%D1%82%D1%8F%D0%BC%D0%B8\r\nhttps://wiki.mos-team.ru/spaces/KR/pages/241080659/API-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82+%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F+%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0%D0%BC%D0%B8",
+      "issuetype": "Development task",
+      "status": "Ready for test",
+      "parent": null,
+      "updated": "2026-10-16T19:22:22.081+0800",
+      "subtasks": [],
+      "attachments": [],
+      "comments": {
+        "startAt": 0,
+        "maxResults": 2,
+        "total": 2,
+        "items": [
+          {
+            "id": "1117971",
+            "body": " - Добавлены /metrics, /docs и редиректы со старых адресов; главная ведёт в /skills.\r\n - Вкладки навыков, команд и эксплуатации синхронизированы с URL и историей.\r\n - Добавлены страницы-заглушки новых разделов и карточек.\r\n - Обновлены меню, хлебные крошки и ссылки на документацию.",
+            "created": "2026-09-28T19:25:01.666+0800",
+            "updated": "2026-09-28T19:25:01.666+0800"
+          },
+          {
+            "id": "1118004",
+            "body": "[Тимофей Ищенко|https://gitlab.mos-team.ru/ishenkotc] mentioned this issue in [a merge request|https://gitlab.mos-team.ru/tsam/front/tsam-assistant-management-front/-/merge_requests/9] of [tsam / front / tsam-assistant-management-front|https://gitlab.mos-team.ru/tsam/front/tsam-assistant-management-front] on branch [MOS-905|https://gitlab.mos-team.ru/tsam/front/tsam-assistant-management-front/-/tree/MOS-905]:{quote}feat: MOS-905 дорабатывает маршруты и хлебные крошки{quote}",
+            "created": "2026-09-28T19:52:16.599+0800",
+            "updated": "2026-09-28T19:52:16.599+0800"
+          }
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "custom fields not collected",
+    "attachment bodies not collected",
+    "comments pagination as reported per item"
+  ]
+}

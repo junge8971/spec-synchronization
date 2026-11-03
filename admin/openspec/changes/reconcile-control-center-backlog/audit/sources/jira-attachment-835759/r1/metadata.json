@@ -1,0 +1,23 @@
+{
+  "captureId": "audit-attachment-835759-testplan",
+  "id": "835759",
+  "issue": "MOS-1145",
+  "url": "https://task.mos-team.ru/secure/attachment/835759/TEST_PLAN_MOS_1145.md",
+  "retrievedAt": "2026-10-19T09:25:25.254Z",
+  "status": 200,
+  "contentType": "text/markdown;charset=UTF-8",
+  "redactions": 0,
+  "method": "Parent origin-guarded read-only GET of exact previously indexed Jira attachment; text only, no examples or scenarios executed; redirects refused",
+  "sourceId": "jira-attachment-835759",
+  "revision": 1,
+  "content": "content.md",
+  "sha256": "0470403731a2268bd483bd4ce986d2ae4415f0aaadccfbbc03451b41fa8ecfb8",
+  "discovery": "sources/jira-skill-switch-details/r1/content.json MOS1145 attachment835759",
+  "provenance": "Only exact authorized attachment tool-result packet recovered from local parent transcript; original issue-author personal metadata not copied.",
+  "limitations": [
+    "Saved decoded text, digest covers persisted UTF-8 not independently verified original transfer bytes",
+    "Test/deploy-success and current-implementation claims are source-attributed, no pipeline/DB/business endpoint accessed",
+    "All scenarios/SQL/HTTP remain unexecuted; historical API-absence claim requires publication qualification",
+    "No auth/session policy change inferred from token placeholder instructions"
+  ]
+}

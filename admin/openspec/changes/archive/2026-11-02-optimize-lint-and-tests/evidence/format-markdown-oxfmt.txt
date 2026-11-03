@@ -1,0 +1,35 @@
+# Surface creation errors: evidence and release gate
+
+## Backend evidence (unresolved)
+
+Sources: retained live [`openapi-2026-10-15.raw`](openapi-2026-10-15.raw),
+[`crud-api-2026-10-15.raw`](crud-api-2026-10-15.raw), and their
+[hash/provenance audit](delta-2026-10-15.md).
+Neither supplies an exact HTTP status, envelope and reliable field pointer for
+`DOMAIN_ALREADY_IN_USE`, unknown responsible users, or configuration business
+rejections. No live mutation was performed and no backend-team example was supplied.
+
+Task 3.1 records this missing evidence; **3.2 remains blocked**. Obtain a sanitized
+backend response for each case before adding real-mode error recognition. Do not
+parse domain names from messages or treat arbitrary 409/422 as proof of non-creation.
+The existing structured validation-detail adapter remains unchanged; unfamiliar
+responses keep the unknown-outcome/no-replay path. Confirm old saved assignments
+and missing directory users against the real backend before rollout.
+
+## Local mock conventions (not backend evidence)
+
+- Unknown user: HTTP 422, existing `{detail: [{loc: ["body", "responsible",
+  "product"|"connection"], msg: "Unknown user_id", type: ...}]}` validation convention.
+- Occupied domain: HTTP 409, existing error envelope with code
+  `DOMAIN_ALREADY_IN_USE`, null data and diagnostic message. The real UI deliberately
+  does not classify this undocumented envelope as a safe rejection.
+- Invalid configuration shape: HTTP 422 from the existing OpenAPI request validator,
+  before the business handler executes; configuration uses the same published schema
+  as PUT. No surface or team relation is committed on any rejection.
+- Stored user IDs are resolved on GET. Removed users retain ID with null name/email;
+  assigning an unknown ID anew is rejected.
+- The seed multiline script at `https://example.invalid/control-demo.js` and
+  authorization explanation are server-provided demonstration text only. No secret,
+  auth policy or executable client integration is implied. The UI renders and copies
+  the exact string; null connection fields remain supported. New surfaces retain
+  nullable connection defaults.

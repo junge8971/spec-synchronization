@@ -1,0 +1,22 @@
+{
+  "source": "wiki-241077434/r1/content.json",
+  "purpose": "Narrow parent-parsed projection for supervisor request bda9feba-1ca2-4159-bb17-77053bf10f88",
+  "limits": "Selected original top-level fields at identical JSON keys; attachments object complete. Parent parsing, not independent child original-file parsing or new acquisition. Full body remains in canonical packet and exact chunks; no source execution.",
+  "fields": {
+    "id": "241077434",
+    "title": "API-контракт сервиса аудита",
+    "version": 2,
+    "versionWhen": "2026-09-07T19:22:13.762+08:00",
+    "retrievedAt": "2026-10-19T14:00:29.066Z",
+    "status": 200,
+    "redactions": 0,
+    "attachments": {
+      "status": 200,
+      "start": 0,
+      "limit": 100,
+      "size": 0,
+      "next": null,
+      "results": []
+    }
+  }
+}

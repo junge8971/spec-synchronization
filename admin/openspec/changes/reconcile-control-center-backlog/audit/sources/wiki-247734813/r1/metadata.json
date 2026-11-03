@@ -1,0 +1,11 @@
+{
+  "sourceId": "wiki-247734813",
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/247734813/",
+  "retrievedAt": "2026-10-16T11:17:53.564Z",
+  "version": 11,
+  "versionWhen": "2026-10-12T17:21:31.204+08:00",
+  "sha256": "d47db6bfc15f5f4a881c777ec78892161ed6be000c6cdf1c5c61ab4c7030c7d7",
+  "format": "body.view textContent and links extraction",
+  "locator": "GET /rest/api/content/247734813?expand=body.view,version",
+  "limitations": "Tables flattened by textContent; original attachment linked but not fetched/executed. Autolinks to field names are not external evidence and must not be visited."
+}

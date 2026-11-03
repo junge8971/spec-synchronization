@@ -1,0 +1,13 @@
+{
+  "revision": 42,
+  "supplements": "coverage-partial-r41.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "sourceAdditions": [],
+  "acceptedChains": [{"report": "reports/G1-INVENTORY-SOURCE-CROSSWALK.md", "review": "reviews/R-G1-INVENTORY-SOURCE-CROSSWALK.md", "originalVerdict": "REVISE", "decision": "D-059", "parentDisposition": "Accepted bounded E12/E12a accounting after feedback hierarchy-order qualification"}],
+  "accountedInventory": {"modules": 26, "directMembers": 157, "observedNested": 16, "nestedAttachmentIndexRows": 20},
+  "openException": "E13 saved-body discovery scope boundary",
+  "nextWorkItem": "work-items/G1-SAVED-BODY-DISCOVERY-BOUNDARY.md",
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "limits": ["E12/E12a accounting not complete issue fields/semantics or source sufficiency", "Feedback exact F pointers and membership retained; individual hierarchy child positions not established", "20nested attachments separate inventory, scoped non-discovery not global absence", "E13/task2.3/2.4/2.6 remain open; no policy/runtime changes", "Historical provenance/formatting and downstream gates retained"]
+}

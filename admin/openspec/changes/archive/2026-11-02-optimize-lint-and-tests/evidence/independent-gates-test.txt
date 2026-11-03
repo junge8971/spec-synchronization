@@ -1,0 +1,40 @@
+✔ accepts public APIs, local imports, and type-only imports in an isolated graph (527.217634ms)
+✔ rejects runtime imports of unresolved generated router types (1062.356509ms)
+✔ rechecks an unchanged consumer when a target moves behind its public API (533.223592ms)
+✔ rejects FSD violations through aliases, relative paths and type-only re-exports (557.564147ms)
+✔ accepts the configured groups, type imports, and non-alphabetical imports within a group (99.593942ms)
+✔ reports and safely fixes ordering and spacing between import groups (204.354027ms)
+✔ moves an out-of-order import before the first higher-ranked group (99.151936ms)
+✔ does not move imports across side effects (95.369439ms)
+✔ keeps trailing comments attached and does not detach standalone comments (288.519187ms)
+✔ rejects unnecessary empty lines within a group (196.862474ms)
+✔ safely fixes CommonJS require groups without moving executable calls (292.599778ms)
+✔ full lint accepts a clean project and blocks warning-only complexity (2253.948457ms)
+✔ full lint checks imports in newly added source directories (1121.098352ms)
+✔ full lint fix applies safe source formatting (2313.015154ms)
+✔ lint fix completes overlapping import-order fixes (1426.402958ms)
+✔ staged lint accepts a passed ignored generated file (1173.924259ms)
+✔ staged lint fixes the supplied file before checking the full application (1233.740637ms)
+✔ lint-staged runs the new JS gate and stages its fixes (1346.672761ms)
+✔ lint-staged rechecks an unchanged consumer after its target moves (1356.116899ms)
+✔ recognizes a Vite URL default export without weakening the native rule (481.097128ms)
+✔ still rejects a non-URL default import in the same file (373.624379ms)
+✔ does not suppress URL-like imports outside the Vite application (138.482737ms)
+✔ propagates warning-only, parse and configuration errors (345.585611ms)
+✔ blocks warnings above the complexity limit but accepts the boundary (226.150827ms)
+✔ rejects parameter mutations except the approved state property (210.715496ms)
+✔ checks undefined identifiers in JavaScript without changing TypeScript scope (311.408373ms)
+✔ rejects duplicate parameters and legacy octal literals in CommonJS (420.7614ms)
+✔ recognizes JSX component references when checking unused variables (207.080584ms)
+✔ checks keys in JSX arrays and iterators without flagging conditional tuple values (1052.72035ms)
+✔ checks image accessibility and hook ordering (326.305849ms)
+✔ enforces named type ownership and the two specific context aliases (1129.624395ms)
+✔ enforces one component except in the approved shadcn files (2236.462484ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 23904.59109

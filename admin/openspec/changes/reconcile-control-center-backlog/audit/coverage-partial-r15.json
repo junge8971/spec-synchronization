@@ -1,0 +1,43 @@
+{
+  "revision": 15,
+  "supplements": "coverage-partial-r14.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [
+    {
+      "report": "reports/DELTA-SKILL-LIST-CARD-EXAMPLES.md",
+      "candidates": "DELTA-SKILL-LIST-CARD-EXAMPLES-01–05",
+      "review": "reviews/R-DELTA-SKILL-EXAMPLES.md",
+      "verdict": "ACCEPT",
+      "decision": "D-034"
+    },
+    {
+      "report": "reports/DELTA-SKILL-MONITORING-EXAMPLE.md",
+      "candidates": "SME-01–06",
+      "review": "reviews/R-DELTA-SKILL-EXAMPLES.md",
+      "verdict": "ACCEPT",
+      "decision": "D-034"
+    }
+  ],
+  "acceptanceBoundary": "Historical documentary examples and scoped owner comparison only; no current API/auth/DTO adoption, source precedence, implementation acceptance or gate closure",
+  "rootCaptureCountsUnchanged": {
+    "captured": 21,
+    "withoutCanonicalPacket": 21,
+    "returnedIndexes": 20,
+    "knownIndexedAttachments": 25,
+    "knownIndexedUnreadBodies": 21
+  },
+  "nextAuthorizedBatch": ["245670575", "241080643", "241083649", "241080071"],
+  "transport": {
+    "operation": "chrome-devtools_list_pages",
+    "result": "Request timed out",
+    "pageRequestsMade": false,
+    "note": "Fresh discovery for next dialogues batch failed; no page-level access failure, fallback transport or new capture"
+  },
+  "remainingGates": [
+    "Restore authorized browser discovery before next body/index collection",
+    "Root and linked-source/attachment/explanatory-document gaps",
+    "Owner questions and broader semantic/implementation reconciliation",
+    "Historical formatting failure unresolved; global tasks2.3/2.4/2.6 remain open"
+  ]
+}

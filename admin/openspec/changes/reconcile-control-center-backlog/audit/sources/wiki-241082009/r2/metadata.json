@@ -1,0 +1,50 @@
+{
+  "sourceId": "wiki-241082009",
+  "url": "https://wiki.mos-team.ru/rest/api/content/241082009?expand=body.view,version",
+  "retrievedAt": "2026-10-16T12:28:15.837Z",
+  "status": 200,
+  "version": {
+    "by": {
+      "email": "haritonov@codesrc.ru",
+      "type": "known",
+      "username": "haritonov",
+      "userKey": "2c9280839ef994b0019f18ec280b0009",
+      "profilePicture": {
+        "path": "/images/icons/profilepics/default.svg",
+        "width": 48,
+        "height": 48,
+        "isDefault": true
+      },
+      "displayName": "Глеб Харитонов",
+      "_links": {
+        "self": "https://wiki.mos-team.ru/rest/api/user?key=2c9280839ef994b0019f18ec280b0009"
+      },
+      "_expandable": {
+        "status": ""
+      }
+    },
+    "when": "2026-09-08T18:24:09.893+08:00",
+    "message": "",
+    "number": 5,
+    "minorEdit": false,
+    "hidden": false,
+    "_links": {
+      "self": "https://wiki.mos-team.ru/rest/experimental/content/241082009/version/5"
+    },
+    "_expandable": {
+      "content": "/rest/api/content/241082009"
+    }
+  },
+  "sha256": "13ff11a35b27fe17db263039ba4c9a2b5c335728bad7615d06aed3d94ab2d86b",
+  "bytes": 56040,
+  "redactions": [],
+  "membershipEvidence": "jira-api-delta-scenarios/r1/content.json /items/3/description (MOS-959)",
+  "collection": "Parent same-origin GET from verified wiki origin, page 26; no embedded HTML executed",
+  "priorAttempt": "../r1/access-result.json retained; old page 25 currently file-origin prototype",
+  "attachments": {
+    "file": "attachments.json",
+    "sha256": "70590629831676a0bfde3fc46438aaeb623b3915746bbab62c1221b13e3fb960",
+    "count": 0,
+    "next": null
+  }
+}

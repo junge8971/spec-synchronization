@@ -1,0 +1,16 @@
+{
+  "revision": 45,
+  "supplements": "coverage-partial-r44.json",
+  "complete": false,
+  "globalProgress": "9/28",
+  "decision": "D-064",
+  "additiveJoins": [
+    {"jira": "MOS-1254", "from": "U", "to": "P", "lane": "requirements-only", "report": "reports/REQ-G2-MOS-1254.md", "review": "reviews/R-REQ-G2-MOS-1254.md"},
+    {"jira": "MOS-1255", "from": "U", "to": "P", "lane": "requirements-only", "report": "reports/REQ-G2-MOS-1255.md", "review": "reviews/R-REQ-G2-MOS-1255.md"},
+    {"jira": "MOS-1257", "from": "U", "to": "P", "lane": "requirements-only", "report": "reports/REQ-G2-MOS-1257.md", "review": "reviews/R-REQ-G2-MOS-1257.md"},
+    {"jira": "MOS-1259", "from": "U", "to": "P", "lane": "requirements-only", "report": "reports/REQ-G2-MOS-1259.md", "review": "reviews/R-REQ-G2-MOS-1259.md"}
+  ],
+  "currentBoundedMemberCounts": {"P": 53, "B": 6, "U": 114, "total": 173},
+  "nextWork": "work-items/G2-FEEDBACK-SPEC-WAVE.md",
+  "limits": ["Accepted extraction is not feature completion or complete independent lanes", "Source omissions and unresolved applicability remain", "Existing approved plans must be inspected before new product approval requests", "Prior failed runs, original REVISE verdicts and formatting failure retained"]
+}

@@ -1,0 +1,2 @@
+app/pages/dialog-details/ui/dialog-details/general-information.tsx:77:10: error react(jsx-key): Missing "key" prop for element in array.
+app/pages/dialog-details/model/load-pdf-preview.ts:2:8: error import(default): No default export found in imported module "pdfjs-dist/build/pdf.worker.min.mjs?url" help: Does "pdfjs-dist/build/pdf.worker.min.mjs?url" have the default export?

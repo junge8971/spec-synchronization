@@ -1,0 +1,29 @@
+{
+  "pointer": "#/components/schemas/SeriesPointResponse",
+  "value": {
+    "properties": {
+      "date": {
+        "type": "string",
+        "format": "date",
+        "title": "Date"
+      },
+      "value": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "number"
+          }
+        ],
+        "title": "Value"
+      }
+    },
+    "type": "object",
+    "required": [
+      "date",
+      "value"
+    ],
+    "title": "SeriesPointResponse"
+  }
+}

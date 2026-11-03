@@ -1,0 +1,25 @@
+{
+  "revision": 24,
+  "supplements": "coverage-partial-r23.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [
+    {"report": "reports/DELTA-AUTH-SESSION-ROOT-DOC.md", "review": "reviews/R-DELTA-AUTH-SESSION-ROOT-DOC.md", "candidates": "ASR01–07", "reviewVerdict": "REVISE", "parentDisposition": "accepted after directly verified ASR-04 row-level qualifier correction; original review preserved", "decision": "D-042"},
+    {"report": "reports/DELTA-ACCESS-ROLES-ROOT-DOCS.md", "review": "reviews/R-DELTA-ACCESS-ROLES-ROOT-DOCS.md", "candidates": "ACCESS-ROOT01–11", "reviewVerdict": "ACCEPT", "parentDisposition": "accepted without fixes", "decision": "D-042"}
+  ],
+  "sourceAdditions": [],
+  "rootCountsInheritedFromR23PendingIndependentLedgerReview": {
+    "capturedBodyOrExtraction": 42,
+    "withoutCanonicalPacket": 0,
+    "returnedIndexes": 41,
+    "knownIndexedAttachments": 34,
+    "knownIndexedUnreadBodies": 30
+  },
+  "limits": [
+    "No new collection, auth policy, grants, code, runtime or regulatory applicability verdict",
+    "Original session REVISE is retained; no fresh independent ACCEPT claimed",
+    "Root accounting includes container/image-only/flattened sources, not full substantive completeness",
+    "Feedback index, unread attachment bodies and global source/semantic/owner/implementation gates remain",
+    "Historical formatting failure unresolved; global tasks2.3/2.4/2.6 remain open"
+  ]
+}

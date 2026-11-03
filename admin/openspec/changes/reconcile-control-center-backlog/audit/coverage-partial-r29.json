@@ -1,0 +1,13 @@
+{
+  "revision": 29,
+  "supplements": "coverage-partial-r28.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [{"report": "reports/G1-JIRA-SPECIAL-DOCUMENT-EDGES.md", "review": "reviews/R-G1-JIRA-SPECIAL-DOCUMENT-EDGES.md", "verdict": "ACCEPT", "decision": "D-047"}],
+  "sourceAdditions": [],
+  "acceptedSpecialSubset": {"bundles": 5, "issueRecords": 16, "selectedCommentRecords": 8, "wikiOccurrences": 1, "distinctWikiTargetAdditions": 0, "savedAttachmentEntries": 0, "feedbackIssuesWithoutCommentOrIndexFields": 12},
+  "combinedExplicitJiraSubsetNotGlobal": {"wikiIds": 13, "wikiOccurrences": 41, "indexedJiraAttachmentIds": 23},
+  "teamContractCollection": {"pageId": "241080659", "authority": "D-046 unchanged", "discoveryAttemptsTimedOut": 2, "pageGetSent": false, "pageAccessOutcome": "unknown", "resumeCondition": "Browser MCP discovery restored; fresh origin/exact saved href/local absence guards before documentation GET"},
+  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
+  "limits": ["No alternate transport, stale-tab request, attachment downloads or new authority", "Two unnamed shell references remain ambiguous/unvisited", "No global source/semantic/owner/runtime closure", "Historical formatting failure unresolved; no tests/build/browser-E2E"]
+}

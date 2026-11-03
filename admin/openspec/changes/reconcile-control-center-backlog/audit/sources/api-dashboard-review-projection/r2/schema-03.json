@@ -1,0 +1,41 @@
+{
+  "pointer": "#/components/schemas/DashboardResponse",
+  "value": {
+    "properties": {
+      "period": {
+        "$ref": "#/components/schemas/PeriodResponse"
+      },
+      "sample": {
+        "$ref": "#/components/schemas/SampleResponse"
+      },
+      "scope": {
+        "$ref": "#/components/schemas/ScopeResponse"
+      },
+      "calculated_at": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Calculated At"
+      },
+      "series_granularity": {
+        "$ref": "#/components/schemas/SeriesGranularity"
+      },
+      "widgets": {
+        "items": {
+          "$ref": "#/components/schemas/WidgetResponse"
+        },
+        "type": "array",
+        "title": "Widgets"
+      }
+    },
+    "type": "object",
+    "required": [
+      "period",
+      "sample",
+      "scope",
+      "calculated_at",
+      "series_granularity",
+      "widgets"
+    ],
+    "title": "DashboardResponse"
+  }
+}

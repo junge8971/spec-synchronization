@@ -1,0 +1,30 @@
+{
+  "decision": "D-068",
+  "scope": "Four independently reviewed documentary patches, not feature or global audit completion",
+  "writerWorkflow": "a764f7bc-1d09-48a2-950a-3cd1247e5cd5",
+  "reviewWorkflow": "74bc6dd6-9269-4000-bf37-ff9f6935f926",
+  "head": "bc0d9800f25a90989b9c73c76f91996f8300f1d3",
+  "baselineDirectory": "baseline",
+  "reviewVerdicts": {"1254": "ACCEPT", "1255": "ACCEPT", "1257": "ACCEPT", "1259": "ACCEPT"},
+  "versionChecks": "All writer artifact hashes matched independent reviews; all9target baseline hashes matched before edits; every resulting byte reconstructed from reviewed unified diff and compared equal after edits",
+  "integratedSha256": {
+    "mos-1254-feedback-questions/design.md": "cb891fc3bdd717c065a93b3b853429079b77081778f3f4657e5f05d832baf101",
+    "mos-1254-feedback-questions/specs/feedback-questions/spec.md": "35e1558375dea280c906f547c7c1234d13bb1023c00f2e3427cd40fe7f06367a",
+    "mos-1254-feedback-questions/tasks.md": "8279fa1cd82bb872dae3e3c0a8048325cfa930a458838a8acbcf7056d811e8f6",
+    "mos-1255-feedback-preview/tasks.md": "1a123c8a60456a7ee17635dc927a991f4af0bbe06c3ee87600fdc905a4117ee7",
+    "mos-1257-feedback-labels/design.md": "473338d29fc16fc603742d06141abbeb05a37e8154db2f09871bb08f1bf95668",
+    "mos-1257-feedback-labels/specs/feedback-labels/spec.md": "2447a00853d434827025bbb080e3f9bb36bc18f9f52057d421c09010a1d192b6",
+    "mos-1257-feedback-labels/tasks.md": "e334966563ee6288ceeb0b30e293c92f12943f3323aa591c72bcd2bbb137bc22",
+    "mos-1259-feedback-saved-filters/design.md": "e441bbefacf217c592d49ea86ac35fcc578ed3b0b2dd1da72c699863eaed9e59",
+    "mos-1259-feedback-saved-filters/specs/feedback-saved-filters/spec.md": "e35cf7972ab0064e4a46ea44cd87fbd04054e6e80175d3a288c676e75ea653c9"
+  },
+  "checks": {
+    "applyCheck": "passed for all4exact candidates before integration",
+    "strictValidation": "all4owning changes exit0; individual logs alongside receipt",
+    "checkboxPreservation": "all20feature tasks remain unchecked, equal baseline states",
+    "formatCheck": "FAILED exit1,382files; format-check.log retained; previous337failure retained separately, current failure not wholly attributed to baseline",
+    "applicationChecks": "typecheck/lint/test/api:check/build not run: documentary-only changes; no code, API types or build config modified",
+    "browserE2E": "not run, prohibited"
+  },
+  "limits": ["Formatting gate remains open", "Q1 unknown-type options unselected and excluded", "No runtime/deployment evidence", "No main-spec/archive/external/code edits", "Global9/28 and53P/6B/114U unchanged"]
+}

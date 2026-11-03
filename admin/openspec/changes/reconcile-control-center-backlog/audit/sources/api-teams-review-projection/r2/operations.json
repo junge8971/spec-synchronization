@@ -1,0 +1,602 @@
+[
+  {
+    "pointer": "#/paths/~1api~1control~1api~1teams~1v1~1teams/get",
+    "method": "get",
+    "path": "/api/control/api/teams/v1/teams",
+    "value": {
+      "tags": [
+        "Teams"
+      ],
+      "summary": "Get Team List",
+      "operationId": "get_team_list_api_control_api_teams_v1_teams_get",
+      "security": [
+        {
+          "AdminToken": []
+        },
+        {
+          "AccessToken": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "query",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Query"
+          }
+        },
+        {
+          "name": "sort",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "string",
+            "default": "name",
+            "title": "Sort"
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "integer",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50,
+            "title": "Limit"
+          }
+        },
+        {
+          "name": "offset",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 0,
+            "title": "Offset"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Successful Response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TsamResponseSchema_PaginatedResponseSchema_list_TeamResponse___"
+              }
+            }
+          }
+        },
+        "422": {
+          "description": "Validation Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HTTPValidationError"
+              }
+            }
+          }
+        }
+      },
+      "x-success-message": "Список команд получен."
+    }
+  },
+  {
+    "pointer": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}/get",
+    "method": "get",
+    "path": "/api/control/api/teams/v1/teams/{team_id}",
+    "value": {
+      "tags": [
+        "Teams"
+      ],
+      "summary": "Get Team Detail",
+      "operationId": "get_team_detail_api_control_api_teams_v1_teams__team_id__get",
+      "security": [
+        {
+          "AdminToken": []
+        },
+        {
+          "AccessToken": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "team_id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Team Id"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Successful Response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TsamResponseSchema_TeamResponse_"
+              }
+            }
+          }
+        },
+        "422": {
+          "description": "Validation Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HTTPValidationError"
+              }
+            }
+          }
+        }
+      },
+      "x-success-message": "Карточка команды получена."
+    }
+  },
+  {
+    "pointer": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members/get",
+    "method": "get",
+    "path": "/api/control/api/teams/v1/teams/{team_id}/members",
+    "value": {
+      "tags": [
+        "Teams"
+      ],
+      "summary": "Get Team Members",
+      "operationId": "get_team_members_api_control_api_teams_v1_teams__team_id__members_get",
+      "security": [
+        {
+          "AdminToken": []
+        },
+        {
+          "AccessToken": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "team_id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Team Id"
+          }
+        },
+        {
+          "name": "query",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Query"
+          }
+        },
+        {
+          "name": "membership_role",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Membership Role"
+          }
+        },
+        {
+          "name": "sort",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "string",
+            "default": "full_name",
+            "title": "Sort"
+          }
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "integer",
+            "maximum": 100,
+            "minimum": 1,
+            "default": 50,
+            "title": "Limit"
+          }
+        },
+        {
+          "name": "offset",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 0,
+            "title": "Offset"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "Successful Response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TsamResponseSchema_PaginatedResponseSchema_list_TeamMemberResponse___"
+              }
+            }
+          }
+        },
+        "422": {
+          "description": "Validation Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HTTPValidationError"
+              }
+            }
+          }
+        }
+      },
+      "x-success-message": "Состав команды получен."
+    }
+  },
+  {
+    "pointer": "#/paths/~1api~1control~1api~1teams~1v1~1teams/post",
+    "method": "post",
+    "path": "/api/control/api/teams/v1/teams",
+    "value": {
+      "tags": [
+        "Teams"
+      ],
+      "summary": "Create Team",
+      "operationId": "create_team_api_control_api_teams_v1_teams_post",
+      "security": [
+        {
+          "AdminToken": []
+        },
+        {
+          "AccessToken": []
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateTeamRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Successful Response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TsamResponseSchema_TeamMutationResponse_"
+              }
+            }
+          }
+        },
+        "422": {
+          "description": "Validation Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HTTPValidationError"
+              }
+            }
+          }
+        }
+      },
+      "x-success-message": "Команда создана."
+    }
+  },
+  {
+    "pointer": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}/patch",
+    "method": "patch",
+    "path": "/api/control/api/teams/v1/teams/{team_id}",
+    "value": {
+      "tags": [
+        "Teams"
+      ],
+      "summary": "Update Team",
+      "operationId": "update_team_api_control_api_teams_v1_teams__team_id__patch",
+      "security": [
+        {
+          "AdminToken": []
+        },
+        {
+          "AccessToken": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "team_id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Team Id"
+          }
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdateTeamRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Successful Response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TsamResponseSchema_TeamMutationResponse_"
+              }
+            }
+          }
+        },
+        "422": {
+          "description": "Validation Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HTTPValidationError"
+              }
+            }
+          }
+        }
+      },
+      "x-success-message": "Команда изменена."
+    }
+  },
+  {
+    "pointer": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members/post",
+    "method": "post",
+    "path": "/api/control/api/teams/v1/teams/{team_id}/members",
+    "value": {
+      "tags": [
+        "Teams"
+      ],
+      "summary": "Add Team Member",
+      "operationId": "add_team_member_api_control_api_teams_v1_teams__team_id__members_post",
+      "security": [
+        {
+          "AdminToken": []
+        },
+        {
+          "AccessToken": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "team_id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Team Id"
+          }
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/AddTeamMemberRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "201": {
+          "description": "Successful Response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TsamResponseSchema_TeamMemberMutationResponse_"
+              }
+            }
+          }
+        },
+        "422": {
+          "description": "Validation Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HTTPValidationError"
+              }
+            }
+          }
+        }
+      },
+      "x-success-message": "Пользователь добавлен в команду."
+    }
+  },
+  {
+    "pointer": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members~1{user_id}/patch",
+    "method": "patch",
+    "path": "/api/control/api/teams/v1/teams/{team_id}/members/{user_id}",
+    "value": {
+      "tags": [
+        "Teams"
+      ],
+      "summary": "Update Team Member",
+      "operationId": "update_team_member_api_control_api_teams_v1_teams__team_id__members__user_id__patch",
+      "security": [
+        {
+          "AdminToken": []
+        },
+        {
+          "AccessToken": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "team_id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Team Id"
+          }
+        },
+        {
+          "name": "user_id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "title": "User Id"
+          }
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UpdateTeamMemberRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Successful Response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TsamResponseSchema_TeamMemberMutationResponse_"
+              }
+            }
+          }
+        },
+        "422": {
+          "description": "Validation Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HTTPValidationError"
+              }
+            }
+          }
+        }
+      },
+      "x-success-message": "Членство изменено."
+    }
+  },
+  {
+    "pointer": "#/paths/~1api~1control~1api~1teams~1v1~1teams~1{team_id}~1members~1{user_id}~1actions~1remove/post",
+    "method": "post",
+    "path": "/api/control/api/teams/v1/teams/{team_id}/members/{user_id}/actions/remove",
+    "value": {
+      "tags": [
+        "Teams"
+      ],
+      "summary": "Remove Team Member",
+      "operationId": "remove_team_member_api_control_api_teams_v1_teams__team_id__members__user_id__actions_remove_post",
+      "security": [
+        {
+          "AdminToken": []
+        },
+        {
+          "AccessToken": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "team_id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Team Id"
+          }
+        },
+        {
+          "name": "user_id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "title": "User Id"
+          }
+        }
+      ],
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/RemoveTeamMemberRequest"
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": "Successful Response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TsamResponseSchema_RemoveTeamMemberResponse_"
+              }
+            }
+          }
+        },
+        "422": {
+          "description": "Validation Error",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HTTPValidationError"
+              }
+            }
+          }
+        }
+      },
+      "x-success-message": "Пользователь удалён из команды."
+    }
+  }
+]

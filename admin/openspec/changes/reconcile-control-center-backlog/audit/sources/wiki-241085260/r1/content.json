@@ -1,0 +1,21 @@
+{
+  "id": "241085260",
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/241085260/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D1%8B%D0%B9+%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7",
+  "retrievedAt": "2026-10-19T09:36:52.127Z",
+  "status": 200,
+  "title": "Системный анализ",
+  "version": {
+    "number": 2,
+    "when": "2026-09-09T12:51:49.608+08:00"
+  },
+  "bodyView": "<p><ul class=\"childpages-macro conf-macro output-block\" data-hasbody=\"false\" data-macro-name=\"children\" data-host-id=\"5dd70249-3d20-390f-98f9-39c36c403964\" data-macro-id=\"db23528e-83b2-4af4-aa03-49e70841f371\" data-content-id=\"241085260\" data-content-version=\"2\"><li><a href=\"/spaces/KR/pages/241085256/API\">API</a></li><li><a href=\"/spaces/KR/pages/241102892/RBAC+-+%D0%A0%D0%BE%D0%BB%D0%B8+%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B+%D0%B8+%D1%80%D0%B0%D0%B7%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F\">RBAC - Роли, ресурсы и разрешения</a></li><li><a href=\"/spaces/KR/pages/241092173/%D0%93%D1%80%D1%83%D0%BF%D0%BF%D1%8B+%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85\">Группы данных</a></li><li><a href=\"/spaces/KR/pages/241076726/%D0%9C%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C+%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85\">Модель данных</a></li><li><a href=\"/spaces/KR/pages/245678373/%D0%A0%D0%BE%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F+%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C+%D0%9C%D0%9F%D0%9C%D0%9C\">Ролевая модель МПММ</a></li></ul></p>",
+  "redactions": 0,
+  "attachments": {
+    "status": 200,
+    "start": 0,
+    "limit": 100,
+    "size": 0,
+    "next": null,
+    "results": []
+  }
+}

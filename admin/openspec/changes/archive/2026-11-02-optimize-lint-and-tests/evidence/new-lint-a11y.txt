@@ -1,0 +1,67 @@
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 4ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 4ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 4ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 6ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 4ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 7ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 5ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 5ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 6ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 4ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 8ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 3ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 8ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 8ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 8ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 4ms on 65 files using 12 threads.
+
+✔ no dependency violations found (1652 modules, 6452 dependencies cruised)
+

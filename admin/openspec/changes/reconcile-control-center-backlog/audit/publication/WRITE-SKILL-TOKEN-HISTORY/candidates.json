@@ -1,0 +1,37 @@
+[
+  {
+    "path": "openspec/changes/mos-1023-skill-environment-tokens/design.md",
+    "oldText": "Метаданные могут находиться в обычном Query cache; раскрытый секрет не класть в общий persistent cache, URL, localStorage, логи или telemetry.",
+    "newText": "Метаданные могут находиться в обычном Query cache; секрет отделять до помещения ответа в общий кеш, включая обычный skill-detail с `tokens[].token_value`, а не только ответ выпуска `issued_token`. Проверить все входы общего detail DTO, в том числе GET и ответы мутаций: текущий loose-parser сохраняет дополнительные поля, а query/mutation сохраняют ответ целиком. Это условный риск при получении совместимого secret-bearing ответа, не свидетельство фактической доставки или утечки. Раскрытый секрет не класть в общий Query/persistent cache, URL, localStorage, логи или telemetry."
+  },
+  {
+    "path": "openspec/changes/mos-1023-skill-environment-tokens/tasks.md",
+    "oldText": "1.2 Добавить общие предметные типы/клиент метаданных и операций с отдельным обращением с секретом; проверка: API-тесты ответа и ошибки без секрета в диагностике, yarn api:check.",
+    "newText": "1.2 Добавить общие предметные типы/клиент метаданных и операций с отдельным обращением с секретом; отделять секрет до общего кеша на всех входах detail DTO, включая обычный `tokens[].token_value` в GET/ответах мутаций и отдельный `issued_token`. Проверка: синтетические secret-bearing ответы в API/cache-тестах не оставляют секрет в общих query data или диагностике, metadata сохраняются; yarn api:check."
+  },
+  {
+    "path": "openspec/changes/mos-1023-skill-environment-tokens/tasks.md",
+    "oldText": "2.4 Исключить секрет из persistent cache, хранилищ, логов и ошибок; проверка: unit/component-тест закрытия/смены навыка и spies хранилища/диагностики без утечки.",
+    "newText": "2.4 Исключить секрет из общего Query/persistent cache, хранилищ, логов и ошибок, сохраняя его только во временном состоянии раскрытия; проверка: unit/component-тест закрытия/смены навыка, отсутствия секрета в общем detail cache и spies хранилища/диагностики без утечки."
+  },
+  {
+    "path": "openspec/changes/mos-1031-skill-audit-history/proposal.md",
+    "oldText": "**BLOCKED API:** в `docs/api/contracts/openapi.json` нет Query API аудита; `docs/api/contracts/audit.md` подтверждает отсутствие контракта.",
+    "newText": "**BLOCKED API/integration:** в сохранённом `docs/api/contracts/openapi.json` нет Query API аудита, а подключённого frontend-reader пока нет. Отдельный документальный контракт сервиса аудита зафиксирован в `../reconcile-control-center-backlog/audit/reports/DELTA-AUDIT-SERVICE-CONTRACT.md` и принят решением D-050; это не согласование его браузерной интеграции. Ранее указанный `docs/api/contracts/audit.md` отсутствует и не является доказательством отсутствия сервиса."
+  },
+  {
+    "path": "openspec/changes/mos-1031-skill-audit-history/design.md",
+    "oldText": "См. proposal.md. `history-tab.tsx` — unavailable, `docs/api/contracts/audit.md` подтверждает отсутствие методов. В прототипе сопоставление по названию непригодно для реальной истории.",
+    "newText": "См. proposal.md. `history-tab.tsx` — unavailable; подключённого frontend-reader нет. Отдельный документальный контракт сервиса аудита принят как evidence в D-050 (`../reconcile-control-center-backlog/audit/reports/DELTA-AUDIT-SERVICE-CONTRACT.md`), но не как согласованная браузерная интеграция. Локальный `docs/api/contracts/audit.md` отсутствует; его отсутствие не доказывает отсутствие методов сервиса. В прототипе сопоставление по названию непригодно для реальной истории."
+  },
+  {
+    "path": "openspec/changes/mos-1031-skill-audit-history/design.md",
+    "oldText": "**BLOCKED API:** согласовать Query API, wire-тип сущности навыка и ID-фильтр, время/автора/действие/details, сортировку, pagination, redaction и eventual consistency. Не придумывать URL `/audit` как backend endpoint.",
+    "newText": "**BLOCKED API/integration:** подтвердить принятие документального Query API для frontend-reader: маршрутизацию и разрешённый адрес credentials, авторизацию чтения, wire-тип сущности навыка и ID-фильтр, отображение событий, время/автора/действие/details, сортировку, период/retention, pagination, redaction и eventual consistency. Публикация отдельного сервиса не снимает этот gate и не меняет штатную модель сессии. Не придумывать URL `/audit` как backend endpoint."
+  },
+  {
+    "path": "openspec/changes/mos-1023-skill-environment-tokens/specs/skill-environment-tokens/spec.md",
+    "oldText": "#### Scenario: Navigate to sandbox",
+    "newText": "#### Scenario: Secret-bearing ordinary detail response\n\n- **WHEN** согласованный ответ GET карточки или мутации содержит секрет в `tokens[].token_value`, либо операция выпуска возвращает `issued_token`\n- **THEN** секрет отделяется до помещения данных в общий Query/persistent cache, метаданные сохраняются, а раскрытие допускается только во временном состоянии по согласованным правилам\n\n#### Scenario: Navigate to sandbox"
+  }
+]

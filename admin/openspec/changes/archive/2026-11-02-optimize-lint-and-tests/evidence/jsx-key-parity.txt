@@ -1,0 +1,143 @@
+[
+  {
+    "name": "array",
+    "oldCount": 1,
+    "newCount": 1,
+    "oldMessages": [
+      "Missing \"key\" prop for element in array"
+    ],
+    "newMessages": [
+      "Missing key prop for element in an array or iterator."
+    ]
+  },
+  {
+    "name": "keyed",
+    "oldCount": 0,
+    "newCount": 0,
+    "oldMessages": [],
+    "newMessages": []
+  },
+  {
+    "name": "tuple",
+    "oldCount": 0,
+    "newCount": 0,
+    "oldMessages": [],
+    "newMessages": []
+  },
+  {
+    "name": "fragment",
+    "oldCount": 0,
+    "newCount": 0,
+    "oldMessages": [],
+    "newMessages": []
+  },
+  {
+    "name": "toArray",
+    "oldCount": 0,
+    "newCount": 0,
+    "oldMessages": [],
+    "newMessages": []
+  },
+  {
+    "name": "children",
+    "oldCount": 0,
+    "newCount": 0,
+    "oldMessages": [],
+    "newMessages": []
+  },
+  {
+    "name": "map",
+    "oldCount": 1,
+    "newCount": 1,
+    "oldMessages": [
+      "Missing \"key\" prop for element in iterator"
+    ],
+    "newMessages": [
+      "Missing key prop for element in an array or iterator."
+    ]
+  },
+  {
+    "name": "mapKey",
+    "oldCount": 0,
+    "newCount": 0,
+    "oldMessages": [],
+    "newMessages": []
+  },
+  {
+    "name": "conditional",
+    "oldCount": 2,
+    "newCount": 2,
+    "oldMessages": [
+      "Missing \"key\" prop for element in iterator",
+      "Missing \"key\" prop for element in iterator"
+    ],
+    "newMessages": [
+      "Missing key prop for element in an array or iterator.",
+      "Missing key prop for element in an array or iterator."
+    ]
+  },
+  {
+    "name": "logical",
+    "oldCount": 1,
+    "newCount": 1,
+    "oldMessages": [
+      "Missing \"key\" prop for element in iterator"
+    ],
+    "newMessages": [
+      "Missing key prop for element in an array or iterator."
+    ]
+  },
+  {
+    "name": "optional",
+    "oldCount": 1,
+    "newCount": 1,
+    "oldMessages": [
+      "Missing \"key\" prop for element in iterator"
+    ],
+    "newMessages": [
+      "Missing key prop for element in an array or iterator."
+    ]
+  },
+  {
+    "name": "from",
+    "oldCount": 1,
+    "newCount": 1,
+    "oldMessages": [
+      "Missing \"key\" prop for element in iterator"
+    ],
+    "newMessages": [
+      "Missing key prop for element in an array or iterator."
+    ]
+  },
+  {
+    "name": "block",
+    "oldCount": 2,
+    "newCount": 2,
+    "oldMessages": [
+      "Missing \"key\" prop for element in iterator",
+      "Missing \"key\" prop for element in iterator"
+    ],
+    "newMessages": [
+      "Missing key prop for element in an array or iterator.",
+      "Missing key prop for element in an array or iterator."
+    ]
+  },
+  {
+    "name": "directNested",
+    "oldCount": 1,
+    "newCount": 1,
+    "oldMessages": [
+      "Missing \"key\" prop for element in array"
+    ],
+    "newMessages": [
+      "Missing key prop for element in an array or iterator."
+    ]
+  },
+  {
+    "name": "functionReference",
+    "oldCount": 0,
+    "newCount": 0,
+    "oldMessages": [],
+    "newMessages": []
+  }
+]

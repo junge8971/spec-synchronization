@@ -1,0 +1,61 @@
+# Code Context
+
+## Result — recommendation, not parent decision
+
+**Neither exact candidate is established as a mandatory task2.4 prerequisite by the saved evidence.** Recommend two explicit applicability questions below. Necessity remains unestablished; any nonmandatory deferral requires a separate parent documentary-sufficiency judgment with its rationale and uncertainty recorded. Relevance is plausible from the accepted carrying references; necessity and unseen content remain unknown. This is not a finding that either document is irrelevant, redundant, obsolete or inaccessible.
+
+Aliases expand to repository-relative paths: **C** = `openspec/changes/reconcile-control-center-backlog`; **A** = `openspec/changes/reconcile-control-center-backlog/audit`; **H** = `openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions`; **D** = `openspec/changes/archive/2026-10-09-add-local-session-demo`.
+
+## Two-candidate decision table
+
+| Exact candidate / verified carrying reference | Concrete question and existing evidence | Minimal recommended task2.4 disposition |
+| --- | --- | --- |
+| **user238347672 / MOS-944**. Accepted reference: `A/sources/jira-details-MOS-774/r1/content.json#/items/5/description`, reused from `A/reports/G1-JIRA-CONTRACT-COLLECTION-DELTA.md:26–42` and `A/reviews/R-G1-JIRA-CONTRACT-COLLECTION-DELTA.md:18–36`. Exact canonical body/version/index unavailable in the accepted ledger; no fresh absence census performed. | **Does this MOS-944 reference address a concrete in-scope explanatory need, including historical requirements/applicability, ownership or provenance? User lookup/contact or user-management operation/field/error questions are examples, not exclusive conditions.** Approved `/me` identity is already specified (`H/specs/mpmm-session/spec.md:45–57`). Historical user administration is a distinct scope, not Team membership or permission grants (`A/reports/DELTA-ACCESS-ROLES-ROOT-DOCS.md:42,59–60`, ACCESS-ROOT-04/09/10). Demo fixtures and business-user records are explicitly separate (`D/specs/control-center-mock-server/spec.md:74–76,98–106`). These resolve the identity/policy distinction; they do **not** establish what MOS-944's exact linked document says or whether an in-scope business-user contract question remains. | **Ask that applicability question; necessity remains unestablished, not automatically excluded. Any nonmandatory deferral requires explicit parent sufficiency judgment and recorded rationale/uncertainty.** A member/contact DTO is neither a substitute for this publication nor proof it is needed. If the parent identifies a concrete in-scope explanatory need (including historical requirements/applicability, ownership or provenance) and confirms the exact carrying link is applicable, recommend only that exact page's bounded documentary body/metadata/returned-index capture under applicable existing authority. If the question is solely a new user/role administration capability, retain a separate scope question, not a collection-completion blocker or implementation mandate. |
+| **session241079770 / MOS-904**. Accepted reference: `A/sources/jira-shell-details/r1/content.json#/items/4/description`, same report **26–42** and review **18–36**. Exact canonical body/version/index unavailable in the accepted ledger. Historical **238329164 is not this ID**. | **Does this MOS-904 reference address a concrete in-scope explanatory need, including historical requirements/applicability, ownership or provenance? Applicability to approved MPMM integration and entry/refresh, `/me`, header/error discrepancies are examples, not exclusive conditions.** Approved lifecycle, principal, 401/403 recovery and destination rules already answer how this frontend should behave (`H/specs/mpmm-session/spec.md:7–137`; `H/specs/control-center-http/spec.md:3–42`). Accepted ASR-07 says historical238329164 supplies none of those wire details; it cannot replace241079770 (`A/reports/DELTA-AUTH-SESSION-ROOT-DOC.md:31–45`). The historical idle/account-blocking, dual-entry and audit ambitions are ownership/applicability questions, not missing authorization for approved integration. No saved evidence establishes that241079770 answers them. | **Ask the broader applicability question; necessity remains unestablished, not automatically excluded or “superseded by approved auth.” Any nonmandatory deferral requires explicit parent sufficiency judgment and recorded rationale/uncertainty.** If a concrete in-scope explanatory need remains, including historical requirements/applicability, ownership or provenance rather than necessarily a conflict, recommend an exact-page capture limited to its explanation/provenance/index after the parent confirms applicability and existing authority. Do not collect merely to reopen settled frontend policy, prove runtime, or satisfy a document-count target. A conflicting newly saved source would become an attributed finding, not policy adoption by date. |
+
+**Suggested parent question/disposition:** “For task2.4, do238347672/MOS944 or241079770/MOS904 address a concrete in-scope explanatory need, including historical requirements/applicability, ownership or provenance? Wire gaps and approved-session discrepancies are examples only. Failure to identify those particular gaps leaves necessity unestablished and does not alone justify exclusion. Any nonmandatory deferral/exclusion requires an explicit parent bounded documentary-sufficiency judgment with rationale and uncertainty recorded.” This is a recommendation for independent review and parent judgment—not a demand for all documents, automatic exclusion from future work, permission request to exercise APIs, or task closure.
+
+## Key Code — governing documentary contracts
+
+No code inspected. Task2.4 asks for the published API snapshot and available explanatory documents, docs-derived URL and metadata/time/version/hash/provenance (`C/tasks.md:13`); it does not require every linked document, attachment, code path or downstream runtime question. Relevant allowed-task Confluence material is within the process discovery boundary, but ambiguous applicability needs clarification (`C/design.md:17–23`; `C/specs/control-center-backlog-reconciliation/spec.md:7–21`). D-045 preserves historical API-r1 discovery uncertainty and leaves broader explanatory sufficiency explicit (`A/decisions.md:59–63`). Neither settled policy nor the absence of additional links in saved Swagger proves whole-source sufficiency.
+
+Retain configuration-selected mock dev/production real mode; credentials allowlist is separate from mode. Exact action/resource/literal `*` governs UI, never role-name grants; backend owns request/object scope even for `*`. No frontend transport ACL or fabricated403, own OIDC, global logout, role editor, or automatic mutation replay follows. Demo remains fixed credential-free fixtures/reload, not real identity or backend enforcement (`H/specs/control-center-permissions/spec.md:7–90`; `H/specs/control-center-shell/spec.md:3–5`; `D/specs/local-session-demo/spec.md:7–78,99–103`). Reader/token gates are untouched.
+
+## Files Retrieved — prerequisite read coverage
+
+All following prerequisite files were read **completely to EOF**, before this assessment; ranges below identify the principal citation anchors, not selective-read claims:
+
+- `C/proposal.md`, `C/design.md`, `C/specs/control-center-backlog-reconciliation/spec.md`, `C/tasks.md` — complete process contract; task2.4 anchor **tasks:13**, bounded discovery **spec:7–21**.
+- `H/proposal.md`, `H/design.md`, and all six `H/specs/{mpmm-session,control-center-http,control-center-permissions,control-center-api-integration,control-center-shell,control-center-mock-server}/spec.md` — complete approved auth prerequisites. Key anchors respectively **proposal:7–15**, **design:133–141,151–170**, **session:7–137**, **HTTP:3–42**, **permissions:7–90**, **integration:3–45**, **shell:3–64**, **mock-server:3–24**.
+- `D/proposal.md`, `D/design.md`, and all three `D/specs/{local-session-demo,control-center-shell,control-center-mock-server}/spec.md` — complete approved demo prerequisites. Key anchors **proposal:5–13**, **design:17–46**, **demo:45–78,99–103**, **shell:24–26**, **mock-server:74–76,98–106**.
+- Complete `A/reports/G1-JIRA-CONTRACT-COLLECTION-DELTA.md` and `A/reviews/R-G1-JIRA-CONTRACT-COLLECTION-DELTA.md` — accepted carrying ledger; anchors **report:26–42,73–85**, **review:18–36**.
+- Complete `A/reports/G1-API-COLLECTION-DELTA.md` and `A/reviews/R-G1-API-COLLECTION-DELTA.md` — accepted collection limits; **report:9–15,77–86**, review section “Task2.4: precise remaining boundary”.
+- Complete `A/reports/DELTA-AUTH-SESSION-ROOT-DOC.md` / `A/reviews/R-DELTA-AUTH-SESSION-ROOT-DOC.md`, and `A/reports/DELTA-ACCESS-ROLES-ROOT-DOCS.md` / `A/reviews/R-DELTA-ACCESS-ROLES-ROOT-DOCS.md` — accepted documentary distinctions; **auth report:31–51**, **access report:38–61**. Source bodies were not reopened.
+- `A/decisions.md:3–21,59–63,81–85` — D-051–053, D-045, D-042 read fully. **D-042 accepts the parent-corrected ASR qualifier; original independent REVISE remains**, not relabeled ACCEPT. Access review ACCEPT remains distinct. D-053's later two shell captures do not change these two candidates or grant collection authority here. Historical ledger counts remain historical; no global recount.
+- Complete `A/work-items/REL-REMAINING-USER-SESSION-CONTRACTS.md` — sole assignment and output boundary.
+
+## Architecture
+
+Accepted carrying edge establishes a candidate, not its body or necessity. Approved prerequisites settle frontend policy; accepted comparisons expose documentary limits without replacing policy. Parent sufficiency/authority judgment precedes any separately assigned capture. Source conflicts, ownership/applicability and runtime acceptance remain three different questions: documentation could clarify the first two but cannot verify common-session placement, CORS, rotation, `/me` execution or backend scope enforcement.
+
+## Start Here
+
+Open `C/tasks.md:13` beside the two-row table and `A/decisions.md:9,21,63`. Decide only the two precise applicability questions. No source-body rewrite, owner-plan change or automatic task2.4/G1 closure is warranted. Global **6/28** and tasks2.3/2.4/2.6 remain unchanged.
+
+## Validation and limits
+
+Only local read/find/ls/scoped grep and this sole report write. Full prerequisite and assigned accepted-report reads completed; citations manually compared. No unseen titles/body inferred, primary Jira graph repeated, application/API schema audit, browser/network/credentials/storage access, requests/downloads/source execution/code/tests/build/E2E/nested delegation or other edits. Hashes, acquisition and source equality remain prior-author/parent-attributed. External freshness, exact candidate content and necessity are unknown; independent review follows. **No staging-state inspection or attestation.**
+
+```acceptance-report
+{
+  "criteriaSatisfied": [{"id":"criterion-1","status":"satisfied","evidence":"Two exact candidates receive accepted carrying references, concrete applicability questions and conditional nonmandatory dispositions against complete approved auth/demo prerequisites."}],
+  "changedFiles": ["openspec/changes/reconcile-control-center-backlog/audit/reports/REL-REMAINING-USER-SESSION-CONTRACTS.md"],
+  "testsAddedOrUpdated": [],
+  "commandsRun": [],
+  "validationOutput": ["Manual prerequisite/report/decision and citation comparison only; no executable validation permitted."],
+  "residualRisks": ["Exact candidate bodies and necessity remain unknown; deferral is not irrelevance or supersession.","Independent review and parent sufficiency/authority decision pending; runtime and historical provenance limits persist."],
+  "diffSummary": "Sole recommendation report; no sources, specs, tasks, decisions or owner plans edited.",
+  "reviewFindings": ["Saved evidence does not establish either exact page as mandatory; no collection authority or closure inferred."],
+  "manualNotes": "Complete required auth/demo and process prerequisites read. Original auth review REVISE preserved with D042 parent correction. No tests or staging inspection/attestation. Global6/28 unchanged."
+}
+```

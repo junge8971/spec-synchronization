@@ -1,0 +1,16 @@
+{
+  "sourceId": "api-token-status-readable",
+  "revision": "r2",
+  "derivedAt": "2026-10-19T08:20:02.731548+00:00",
+  "originalPath": "../../api-live/r2/content.json",
+  "originalMetadataPath": "../../api-live/r2/metadata.json",
+  "originalSha256": "ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993",
+  "content": "content.json",
+  "sha256": "029649055813f2b7b5dff726b2ab9a891aa2769d69e160b5ec990fbef31fdcb4",
+  "bytes": 38460,
+  "lines": 1464,
+  "referenceCount": 30,
+  "format": "local-lossless-selected-json-values-pretty-printed",
+  "provenance": "Parent selected status/reissue/revoke POSTs, explicit absence list, shared skill DTO and all recursive local schema references plus original security definitions. Exact parsed-value roundtrip verified. No network/execution.",
+  "limitations": "Not complete OpenAPI; operation keys correspond to /paths/<escaped-path>/post and reference keys are original pointers. Root security null here may mean absent, not a declared null. Original metadata controls publication date; parent-computed hashes not reviewer attestations. No live token values."
+}

@@ -1,0 +1,10 @@
+{
+  "sourceId": "jira-details-MOS-774",
+  "revision": 1,
+  "retrievedAt": "2026-10-16T11:49:06.782Z",
+  "sha256": "e082adf172c47760787f15ea7a856107d25d2e4c085f2e3ca3a0bc93d7079208",
+  "bytes": 33468,
+  "method": "Parent browser same-origin Jira GET, selected description/identity/status/update/parent/subtask/attachment fields; gzip transport decoded with hash/size verification; keys checked against saved module allowlist",
+  "limitations": "Comments/custom fields/attachment bodies not collected. Current snapshot does not replace earlier index timestamps or expand membership automatically.",
+  "redactionPolicy": "Matching Authorization Bearer examples replaced before transfer; no example commands executed"
+}

@@ -1,0 +1,1 @@
+JSON report written to /home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/openspec/changes/optimize-lint-and-tests/evidence/vitest-workers3-paired.json

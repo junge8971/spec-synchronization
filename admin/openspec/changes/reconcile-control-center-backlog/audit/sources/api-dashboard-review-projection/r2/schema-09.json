@@ -1,0 +1,47 @@
+{
+  "pointer": "#/components/schemas/FailedWidgetResponse",
+  "value": {
+    "properties": {
+      "widget_id": {
+        "type": "string",
+        "title": "Widget Id"
+      },
+      "type": {
+        "$ref": "#/components/schemas/WidgetType"
+      },
+      "title": {
+        "type": "string",
+        "title": "Title"
+      },
+      "subtitle": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Subtitle"
+      },
+      "status": {
+        "type": "string",
+        "const": "error",
+        "title": "Status",
+        "default": "error"
+      },
+      "error": {
+        "$ref": "#/components/schemas/WidgetErrorResponse"
+      }
+    },
+    "type": "object",
+    "required": [
+      "widget_id",
+      "type",
+      "title",
+      "subtitle",
+      "error"
+    ],
+    "title": "FailedWidgetResponse"
+  }
+}

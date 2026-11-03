@@ -1,0 +1,20 @@
+{
+  "decision": "D-076",
+  "authorization": "D-075",
+  "reviewRun": "e5a90e16-5f30-4846-9eb3-afac8ce4392c",
+  "target": "openspec/changes/mos-1258-feedback-conditions/specs/feedback-conditions/spec.md",
+  "before": "875d5c7c0118d43033967eeca0caf716d1e029008f5034745a742411b720232e",
+  "after": "4881e04c01299b0bd09011b5e1c7e7e7e99a28a4fa3f95dd3bd7571fa46adc30",
+  "exactReviewedDeltaVerified": true,
+  "freshness": {
+    "url": "https://task.mos-team.ru/rest/api/2/issue/MOS-1258?fields=updated,description",
+    "retrievedAt": "2026-10-20T11:37:34.292Z",
+    "updated": "2026-10-12T21:16:28.873+0800",
+    "descriptionSha256": "a1bb7860f524cc9b38d8af52b6be09e618ff1cb121374b8f51252bd0a36feb10",
+    "matchesRetainedItem9": true,
+    "scope": "Exact Jira clause supplying this correction; parent read-only browser GET, no global freshness claim"
+  },
+  "checks": { "ownerStrict": 0, "allStrict": 0, "doctor": 0, "threeChangedProductFilesFormat": 0 },
+  "uncheckedFeatureTasks": 5,
+  "limits": ["Global format remains unresolved; last full run399 files, not rerun for this one-sentence patch", "No runtime/API/build edits or tests; no browser/E2E tests", "Global11/28 and57P/5B/111U unchanged"]
+}

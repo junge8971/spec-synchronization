@@ -1,0 +1,87 @@
+{
+  "pointer": "#/components/schemas/MetricWidgetResponse",
+  "value": {
+    "properties": {
+      "widget_id": {
+        "type": "string",
+        "title": "Widget Id"
+      },
+      "type": {
+        "type": "string",
+        "const": "metric",
+        "title": "Type",
+        "default": "metric"
+      },
+      "title": {
+        "type": "string",
+        "title": "Title"
+      },
+      "subtitle": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Subtitle"
+      },
+      "status": {
+        "type": "string",
+        "const": "ok",
+        "title": "Status",
+        "default": "ok"
+      },
+      "error": {
+        "type": "null",
+        "title": "Error"
+      },
+      "value": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Value"
+      },
+      "unit": {
+        "$ref": "#/components/schemas/MetricUnit"
+      },
+      "delta": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/DeltaResponse"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "series": {
+        "items": {
+          "$ref": "#/components/schemas/SeriesPointResponse"
+        },
+        "type": "array",
+        "title": "Series"
+      }
+    },
+    "type": "object",
+    "required": [
+      "widget_id",
+      "title",
+      "subtitle",
+      "value",
+      "unit",
+      "delta",
+      "series"
+    ],
+    "title": "MetricWidgetResponse"
+  }
+}

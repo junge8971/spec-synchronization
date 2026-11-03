@@ -1,0 +1,20 @@
+{
+  "revision": 44,
+  "supplements": "coverage-partial-r43.json",
+  "complete": false,
+  "globalProgress": "9/28",
+  "decisions": ["D-061", "D-062", "D-063"],
+  "acceptedCapabilityIndex": "reports/G2-MAIN-CAPABILITY-JOINS.md",
+  "acceptedMemberIndex": "reports/G2-JIRA-MEMBER-JOINS.md",
+  "memberIndexCorrection": "MOS1258 classified B per original REVISE; parent verified/applied. No fresh independent ACCEPT claimed.",
+  "historicalMemberCounts": {"P": 47, "B": 7, "U": 119, "total": 173},
+  "additiveJoins": [
+    {"jira": "MOS-906", "capability": "documentation-search", "report": "reports/SPEC-G2-DOCUMENTATION-SEARCH.md", "review": "reviews/R-G2-THREE-OWNERSHIP-JOINS.md", "from": "U", "to": "P"},
+    {"jira": "MOS-1044", "capability": "dialog-category-addition", "report": "reports/SPEC-G2-DIALOG-CATEGORY.md", "review": "reviews/R-G2-THREE-OWNERSHIP-JOINS.md", "from": "B", "to": "P", "question": "Contrary brief applicability unresolved; existing local approval preserved"},
+    {"jira": null, "capability": "code-quality-gates", "report": "reports/SPEC-G2-CODE-QUALITY.md", "review": "reviews/R-G2-THREE-OWNERSHIP-JOINS.md", "scope": "Normative ownership9requirements/31scenarios, no current gate execution"}
+  ],
+  "currentBoundedMemberCounts": {"P": 49, "B": 6, "U": 118, "total": 173},
+  "publication": "publication/WRITE-G2-MOS-1249/acceptance.json",
+  "nextWork": "work-items/G2-FEEDBACK-REQUIREMENTS-WAVE.md",
+  "limits": ["Partial evidence never means complete scenario lanes or delivery", "Unresolved members remain unexamined, not excluded scope", "No global G2–G5 acceptance", "Formatting check failed in337files; no blanket baseline attribution or suppression", "Original source, failure/recovery and REVISE histories retained"]
+}

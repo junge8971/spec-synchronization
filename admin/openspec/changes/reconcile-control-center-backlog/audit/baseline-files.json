@@ -1,0 +1,2590 @@
+[
+  {
+    "path": "openspec/changes/archive/.gitkeep",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-23-connect-control-center-http-client/.openspec.yaml",
+    "sha256": "cf5360f31deed84738022ca9c3a2083e4a5b799c20222b896b83cca22d874996"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-23-connect-control-center-http-client/design.md",
+    "sha256": "b43e09d55b49486feb5a3aeac7f42011c7def4cf98cb3dd5ccf184cd2909c946"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-23-connect-control-center-http-client/proposal.md",
+    "sha256": "a1ee15b888553289d93dfd423a5adad0a3f395b3c413422843f24ee9d04e08b9"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-23-connect-control-center-http-client/specs/control-center-api-integration/spec.md",
+    "sha256": "4f69fa1972dc8223916cdd75be9fb8544101b1eb14194ed46ebcd9592d52d391"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-23-connect-control-center-http-client/specs/control-center-http/spec.md",
+    "sha256": "fca44e94e123aba6e7ac135d832d1d8bb1ca7b232159f0e1103a8b5ca704ad1c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-23-connect-control-center-http-client/specs/control-center-mock-server/spec.md",
+    "sha256": "e357c85ee7e9285ce1d9541481580ebf6acd76af50843d96ab1dcf9fc3f65cd6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-23-connect-control-center-http-client/tasks.md",
+    "sha256": "efb1921c5625886755276a35d349de02119ecf4f2662492e9de02d4ab8fa8176"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-23-improve-code-quality/.openspec.yaml",
+    "sha256": "d04b6ad7c1b1e5eb9e8ec8cfdae94bc49d29216b59b73cea7a3cc1de9d508463"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-23-improve-code-quality/design.md",
+    "sha256": "c2e9109fb507e78b105fc84da7cd87f7d1fb35ce34956ec2cbd306daf78b1014"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-23-improve-code-quality/proposal.md",
+    "sha256": "a89e2d4a2a90a7d486908d274823644b826f01155869a1565da3c55caf49fe6b"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-23-improve-code-quality/specs/code-quality-gates/spec.md",
+    "sha256": "6c1f5fc338f7ab0f58af883b4d79d71ec2438b03fa8be2fd76426333436cba51"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-23-improve-code-quality/tasks.md",
+    "sha256": "854b2745fe2f95f517e9bf0f704037f246beca60d0bfe4d4089daf25e44859de"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-24-update-control-center-shell/.openspec.yaml",
+    "sha256": "e002504731ceb6e8fcf026b601ec3f0568d075aa00e43292bbd0642986212f03"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-24-update-control-center-shell/design.md",
+    "sha256": "53a39d2e071e72fa4f91f71a6e039feaa88dd2969685fbad69b742c03f0c14aa"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-24-update-control-center-shell/proposal.md",
+    "sha256": "080770573cbdf46480d49f5446e0c6a7a8ae73685e35fe3a8eaf2e5f8fdfef21"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-24-update-control-center-shell/specs/control-center-shell/spec.md",
+    "sha256": "872b1b458ae7b4b2e913b6a12101363b349f0eabcec3de9d6dbe17f57bd9d235"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-24-update-control-center-shell/tasks.md",
+    "sha256": "0684e197cf396d92414ab74b3d6c5e6087d73093762494ff8142cba49113d1ac"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-defer-auth-and-role-access/.openspec.yaml",
+    "sha256": "8ce533eab9c047a4566f79d81b21eb252f3437f591dee942f9dbb2669f23cdfb"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-defer-auth-and-role-access/design.md",
+    "sha256": "d84a50410a9027de28db17d996c9ee97bbe456a8a76e87975fea3278caafd0a2"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-defer-auth-and-role-access/proposal.md",
+    "sha256": "aa801d63bb64921cfcef0bbeec31c49cc3980db79d2b98c877e28e62089646f6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-defer-auth-and-role-access/specs/control-center-api-integration/spec.md",
+    "sha256": "f9c33030b3dd468ad5f4b18e579f6946cb081f6cfc4771c4bf2396198a0ab80c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-defer-auth-and-role-access/specs/control-center-http/spec.md",
+    "sha256": "092064cc5efa05aa63f8fe993940e0659f72a6dd877ccdabb65e733436ab4212"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-defer-auth-and-role-access/specs/control-center-mock-server/spec.md",
+    "sha256": "0f559cd663f860715c615eb6cff4ba9cba41bc540c4caa577b420539fa2e3bb0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-defer-auth-and-role-access/specs/control-center-shell/spec.md",
+    "sha256": "c117659001bd3af0f99fe4b04bd47c14dbce29aa4c2ce86d3224a14196e14a0f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-defer-auth-and-role-access/tasks.md",
+    "sha256": "ece39eed3d6530e4562a5524f17f768a5805ee0f4a6c780682a7f113c0e2bc5f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-enforce-fsd-code-decomposition/.openspec.yaml",
+    "sha256": "e002504731ceb6e8fcf026b601ec3f0568d075aa00e43292bbd0642986212f03"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-enforce-fsd-code-decomposition/design.md",
+    "sha256": "d52414c9ea79a5464cecc10fdd9081238028a04d9d26ec1d0234dfe100d5d42c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-enforce-fsd-code-decomposition/proposal.md",
+    "sha256": "553787bc78f5764c71f9f8492dd201e7266e9546cc1c5d362cdd66a0f314572f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-enforce-fsd-code-decomposition/specs/code-quality-gates/spec.md",
+    "sha256": "8ee49bd2677fe3ef706dd5ce07b53f478af0b075d91da9ee7182a2cb280e90f4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-25-enforce-fsd-code-decomposition/tasks.md",
+    "sha256": "33fd168dea596ca3260ab94485a9c27d1fc18d28e3cb070bc95b819626f9b7c9"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-surface-registry/.openspec.yaml",
+    "sha256": "8ce533eab9c047a4566f79d81b21eb252f3437f591dee942f9dbb2669f23cdfb"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-surface-registry/design.md",
+    "sha256": "2968bf34ebd61cc2d861b129e080512843f0718b08ba796ab3049dc714644681"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-surface-registry/proposal.md",
+    "sha256": "9785022b4382ac10469754fc49799021684e5ff7956b23fe6a543540dd10a8de"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-surface-registry/specs/surface-registry/spec.md",
+    "sha256": "7895c5b5e6e66f066138b541eb16b3a1dde760c591f92e3c82f2d919dd1bccdf"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-surface-registry/tasks.md",
+    "sha256": "a1ad5429920f771dc04d8a8ff218fed59f9ff7dbda244a242f22aa3a3a69d6b2"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-update-assistant-modules-contract/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-update-assistant-modules-contract/design.md",
+    "sha256": "14b55211da9a91599c0353216dc2681980d9b0868f76fc166fab00155ac43abc"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-update-assistant-modules-contract/proposal.md",
+    "sha256": "a28f2579ea5798ae3cd2a6b072e3e1a7c592cdbf99eb6e7a94b8b534127a2283"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-update-assistant-modules-contract/specs/control-center-mock-server/spec.md",
+    "sha256": "53b521df7c1621fc12bca39d35f6490de9ff39078003b7e3e7a18a1ed629a6cb"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-update-assistant-modules-contract/tasks.md",
+    "sha256": "926f63d9605f9e51a473c007a6b90949db248227a58a9463149f1ae878404c21"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-update-control-center-routing/.openspec.yaml",
+    "sha256": "8ce533eab9c047a4566f79d81b21eb252f3437f591dee942f9dbb2669f23cdfb"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-update-control-center-routing/design.md",
+    "sha256": "8c2d95bc58f7146b3d4096d1928c354508e056295b75e3f81f2d819d8149ca1c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-update-control-center-routing/proposal.md",
+    "sha256": "687c513a3727decb57ca50b3344e6f1551e506dd4fb915f8a1cc19ac43a2fbc7"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-update-control-center-routing/specs/control-center-shell/spec.md",
+    "sha256": "9d51ba0735a20bb12c80618f6ec5aad6eb73e401e133e60af3bb7d11d5808ee5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-28-update-control-center-routing/tasks.md",
+    "sha256": "f2141493cfeb15dfbda613669be3787fd1f4ab8bd3e086b6c72c0ef8be16d855"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-29-mos-944-skill-card-editing/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-29-mos-944-skill-card-editing/design.md",
+    "sha256": "be0e919933d6f96d040f98deb854d6734039e7cb6272f1a323755e62b83257db"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-29-mos-944-skill-card-editing/proposal.md",
+    "sha256": "98f60c52c48ba39b679187cde684e7bf7c13020a642bafabde387bedef1eb81c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-29-mos-944-skill-card-editing/specs/skill-card-editing/spec.md",
+    "sha256": "0f3733d4ecb91befafe85be77cd36de88ee1f2f51efd973e5e054b4b35e02897"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-29-mos-944-skill-card-editing/tasks.md",
+    "sha256": "442c5c604f592d47fa81986c586ce174b5223dd0cca1b3d6eb92293b956e8bc0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-merge-assistant-modules-contract-preserve-intents/.openspec.yaml",
+    "sha256": "dadfffd827282f22738d1215a8fa326bc6e3bda0a2aae3e3af6d203a1ef4c4aa"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-merge-assistant-modules-contract-preserve-intents/design.md",
+    "sha256": "1ef334b0407305c444860d23ab5b6bd7699b42c85d647b0a0d71dcc26c5fea20"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-merge-assistant-modules-contract-preserve-intents/proposal.md",
+    "sha256": "0fca107b0681e678ac632ad5126913dd3be2ec5eb557e17a01e6d59a21303ef4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-merge-assistant-modules-contract-preserve-intents/specs/control-center-mock-server/spec.md",
+    "sha256": "a46696e5676b5d44f75910c6c31029d2dc4b397481b2af27567a4723952e50cb"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-merge-assistant-modules-contract-preserve-intents/tasks.md",
+    "sha256": "e40d3e68b2e5293fd7ecb480b8777e17d02c836dec6cd181d8ae310afcc789ea"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-1022-skill-connection-settings/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-1022-skill-connection-settings/design.md",
+    "sha256": "30d7b11023715c4f439c5c460977643179a0a634609b97b6209726db4c1490c7"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-1022-skill-connection-settings/proposal.md",
+    "sha256": "7d68ded8d6e64c4818d6474575e863293194a0d39885e6300f2658f271ef418e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-1022-skill-connection-settings/specs/skill-connection-settings/spec.md",
+    "sha256": "927a9c8de74f8ead9822d2dc1df940afefba0e40c2550e292ee126d1a79ae8c0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-1022-skill-connection-settings/tasks.md",
+    "sha256": "263d0afa711c190c7837597b04fef999c4f5fe1abb7fb68c6f4848ef93e2d200"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-911-surface-skill-selection/.openspec.yaml",
+    "sha256": "5edc88a042fdda2550686e54689bdd6779b13445bcaf782a1af9426634b9b4fb"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-911-surface-skill-selection/design.md",
+    "sha256": "f7d8d3857dea0a5aa0fb8f9f92f3125eaa9bb1665f0d75ce8124b4c1365bd82d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-911-surface-skill-selection/proposal.md",
+    "sha256": "48f3c679f30af43cb689a965dbd56cada965e2db5328462858da329c271e4f8c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-911-surface-skill-selection/specs/surface-skill-selection/spec.md",
+    "sha256": "a70a747351d6d3fa49b23ca6599a840f60a6da18bea14be10b4456409ca9c8b2"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-911-surface-skill-selection/tasks.md",
+    "sha256": "da20c42ad0ba8180d0a356e5283ec9955b6ff892647d2d2c8a81eda40d195668"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-945-skill-training-phrases/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-945-skill-training-phrases/design.md",
+    "sha256": "3e92aade42f716f197764ae28a307de40d6b428666310494ef89a35a61019ea9"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-945-skill-training-phrases/proposal.md",
+    "sha256": "1c4621230e65b13f02efbf8568887ac0cc6924ec4806aa9abebef0aa302ac6aa"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-945-skill-training-phrases/specs/skill-training-phrases/spec.md",
+    "sha256": "d27b93b3cdd210fcc3de51d65fb523b01310000a51aac68b4360130caa482662"
+  },
+  {
+    "path": "openspec/changes/archive/2026-09-30-mos-945-skill-training-phrases/tasks.md",
+    "sha256": "0804765171247b70b0482336eda3e45951608f8ab1de01f306a939135a54fea1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/.openspec.yaml",
+    "sha256": "dadfffd827282f22738d1215a8fa326bc6e3bda0a2aae3e3af6d203a1ef4c4aa"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/design.md",
+    "sha256": "f7d7a35a618667b3e1945022610cd3d95e3ae341d84ef889f351ad861aa9e29f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/proposal.md",
+    "sha256": "f7b33ba61bdc76155bbc19b27b5d2dc9038444839e432939f868a77e841bbe10"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/readiness.md",
+    "sha256": "47f10e2988cc1e7a6901f167a51e85f5b1905c37ec66a6aaa85a94669001b5ef"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/specs/control-center-api-integration/spec.md",
+    "sha256": "0a9998cb3634003fa52d51faf181b19ef19f601a82264f462e7177828390e7f2"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/specs/control-center-shell/spec.md",
+    "sha256": "6ecbf592cc1094816b91b7997bc0482c719840da4069e2a215a3fdffabb1ef35"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/specs/skill-catalog-experience/spec.md",
+    "sha256": "9746a8f96820ea444ef2f33269619216d242be754bb6bb640186bdbc5aadc215"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/specs/skill-domain-management/spec.md",
+    "sha256": "1bd93c7d9f69e900e93c075c4f000ab23eed8229255491065c532cf254e08f2e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/specs/skill-lifecycle/spec.md",
+    "sha256": "526370768b87972cdc3c24449b26c9a4e6d136b57d1163e2a670ae6e803d8ad9"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/specs/skill-registration/spec.md",
+    "sha256": "3422fb224836aa8abe47633cd94c482eed5b2c0b81134a9d40b40d6d365d7b6a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/tasks.md",
+    "sha256": "fca3825b59ad64394fc0714e8cb22cc3934eb8e2c7ec73bd9c587d393295e1b2"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-catalog-1280.png",
+    "sha256": "420e7fd98495ffce081a7c74277f8b69a24e410bf1e2b7dc930fddfa4b237ee6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-catalog-1440.png",
+    "sha256": "6ccd1862f9d9d6ff77d7bbdc50044c15f2565073df0d8192116f114219ed79ab"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-catalog-390.png",
+    "sha256": "42f8b9babc5eae4b52179eb48967afc07c5958b48dbc3d0798ea1ff330a9ef08"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-catalog-long-1280.png",
+    "sha256": "da47eaaabe495a14237201f408aaaa0a71a6374070f607db6d16d029977b57d5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-catalog-long-1440.png",
+    "sha256": "d36772d8d35837823d1cab330803a24a0692e5c9fdab63134185278534292e35"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-catalog-long-390.png",
+    "sha256": "965d69865c64d5b940861e5faf20cde4c4d680afb8fb2073221ef99f3213fc90"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domain-dialog-1280.png",
+    "sha256": "978c6b7a454c9e773f1c442449f53cab24e323212c4dc60ceb58ffef65871475"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domain-dialog-1440.png",
+    "sha256": "e1d84a40d7aba8c8cebad3a2d46976e340e78d82edac965a3180f617b1779989"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domain-dialog-390.png",
+    "sha256": "61e9706604eca481a4204aa38b630a522f9f98974259b1f883787f3ca2d4f10a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domain-focus-1280.png",
+    "sha256": "c115b1a59a483c053fe316db07c7142a4af4f512a11ef24195b3799a54c87d88"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domain-focus-1440.png",
+    "sha256": "e1f5d9d875f1c4f0e97b996ffa51a09b773dc3d602a302337781a1fad28af29e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domain-focus-390.png",
+    "sha256": "64fdb7337133568b6bfaf75edfc66bddac150f0f1921ef46c49653a9bfd4d0b0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domain-server-error-1280.png",
+    "sha256": "ddb912360e007538253f15447953553dc478299b7c05da6b5421ec9620d15197"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domain-server-error-1440.png",
+    "sha256": "1d43f8e40dda36b5843e5f2e1374a9183ef82062b1b2e00bf49bbcb7b2a53570"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domain-server-error-390.png",
+    "sha256": "4ba19df575b5c274605033d3539d06608e53913cccc1c2b008e1ca4d89dfe10a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domain-validation-1280.png",
+    "sha256": "887361b41fdf4cc3374e5815749e4951906ff2784790d4a9f4ffc4cbe29476a8"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domain-validation-1440.png",
+    "sha256": "f225ee6c7e778e2ddf23ddf49f4025111d8103160684b72b12e732ee6b8ab8be"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domain-validation-390.png",
+    "sha256": "f1de2d6145929505ebd63f399273e411325683af2b1beec266d5fd48bca62ccc"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domains-1280.png",
+    "sha256": "cbf3b534c6b0c01ded791ca59bfe932c50ecc80169087ef0f6e46d7b5e596cac"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domains-1440.png",
+    "sha256": "1b108a673d2bd5c865f6ec37009ad9f804763c63713d8c3cd93ac30f251218fb"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domains-390.png",
+    "sha256": "2f1e1db005a32364ce932727c431b6b24a00f90cf62da248a2317b95179c4bc5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domains-empty-1280.png",
+    "sha256": "de3ee6de19b628af9f436157c7c5c3980378460d8e75380c2fc30995cfe5769c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domains-empty-1440.png",
+    "sha256": "ef2207bd1438ef0fa8def449a9adbe1fdca70ea2867c1d6f2716abc8b69c23ee"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domains-empty-390.png",
+    "sha256": "f0fb00c4ab8dfa1b0588d856842e0482c1842922b5f85d198b44fc5b8fdeeaf0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domains-error-1280.png",
+    "sha256": "9566a5e9999045dc2d56a7d932d77e5787fb7fd4f18f3fdc2545afada50dbf6b"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domains-error-1440.png",
+    "sha256": "2990656588bcace6749a7de2d1f55512fb0013604457588831b7a545dd7efadf"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domains-error-390.png",
+    "sha256": "1ab3c35f04a4b374e0d61149c0bf4f1984491a2e6a61d42a6c7afe71de31e102"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domains-long-1280.png",
+    "sha256": "0f0c7f63f29d57de4450156d0cd2f53e6e385f94a046febe4104b5cde1c61304"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domains-long-1440.png",
+    "sha256": "0ef0103da05b1abc51cbe0a430d8e6f35f2e89ee357e57a48d9a2c2e588c0da2"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-domains-long-390.png",
+    "sha256": "21332aaa61138ad48bda421b7a43007385422ee7a292a1a10f0716a23cd4dbbb"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-empty-1280.png",
+    "sha256": "0c2d91b10e154999106e784515341f957bed9b1f17bc2aa7a4441d3ecf88c1e0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-empty-1440.png",
+    "sha256": "3f05b094c519948a90cb832e22ad85df062c9c5def5b3c202d7490fcb7732479"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-empty-390.png",
+    "sha256": "91f1ecfd15e72eb29a0aa8bc72576c978edd1a12a6aa1d66febc13c427e29c93"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-error-1280.png",
+    "sha256": "d1c27cb219f470d192390e08c54fab615faf2626edf747b39b434641b9da3dae"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-error-1440.png",
+    "sha256": "9d48b0d335183a6c03a5b2ac5bd371b53a06d7ea29517cfde7e4cbf4ec52fdc6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-error-390.png",
+    "sha256": "4ef1bbb567aa6e1a8cff4be493de0d2a14cfe77afceb2546400d8754e26b1466"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-lifecycle-unavailable-1280.png",
+    "sha256": "11833cadbf2277da998c18ccee12141ef19c8eee6370ac65305d0aeaa64097e5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-lifecycle-unavailable-1440.png",
+    "sha256": "41680bbd4c7228baeebc5602624ad7140cc98fa7ea8c63f691db31aa16949c77"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-lifecycle-unavailable-390.png",
+    "sha256": "4311c93cfc7dc195c3d1588220c216e90defa62feff91be8356d6191f4e89591"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-no-results-1280.png",
+    "sha256": "0a56624acc7c025ee9b409c7b274a2e7a6a2b1142475586f53d572bbe14b7456"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-no-results-1440.png",
+    "sha256": "6e68489ef4c0f4cf4c805356d4fb34d5c71f75d4094e86f9dba54705c8412d8a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-no-results-390.png",
+    "sha256": "0365a83c94fb92f10c046a8425113296517c0a601b21bccf46fb107a87285370"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-1-1280.png",
+    "sha256": "407c74db0705fbe4aa1be173a93748ee1b0d3e37d2f424ad1f1411297ee2f651"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-1-1440.png",
+    "sha256": "9e3c696e8fe331c222cd521f56c56e026e92fc8e86ee6025ac79ccfd1e665d3b"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-1-390.png",
+    "sha256": "638a190b323ad547ca8ab9f526c2174b72e244f512e56e44219784ab0773cbe5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-2-1280.png",
+    "sha256": "7d7e0b30a2caf6273abf21c593fe97c17ec28a696d5e8b6a18320600572526c9"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-2-1440.png",
+    "sha256": "a527f896f46638b8ef9a6ffebc0c50f3da9d86df037173557a0380a3be9a5654"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-2-390.png",
+    "sha256": "e3da6ea3cd1f66fa966be023fa0aa84cc9c34d27b84eff527a21e2dc4ed741a1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-3-1280.png",
+    "sha256": "e4adc1b3bc504c670545efe590b1b21fbbfa7fb9dc83b062d14b1eef16da493c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-3-1440.png",
+    "sha256": "a483ce3a748566452045096e6391f2af862d4ce7b12d10704fe9e8ce73cbb174"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-3-390.png",
+    "sha256": "10c612b723c33a8e9d981edb6e3edc119fe53b0f24f22fc0bdb9f6a9b586f1cd"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-4-1280.png",
+    "sha256": "e882d7a54aa66a35a72644a7f42ad294f75ba951d2ad19c084f5428e4e6eb607"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-4-1440.png",
+    "sha256": "c12081766e58eeb428fba6c9529a6fdeafe3f5b2cbfd8280fbe8e6aa16933f4b"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-4-390.png",
+    "sha256": "f1142f20650629279c710582a5f23fd7925c72f477f0e91c2dca2a6a7150271c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-leave-1280.png",
+    "sha256": "9c2153dd757e6699a408730b1e42bb645b82816abb5a4861d5247521ac159411"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-leave-1440.png",
+    "sha256": "9c4cb24a8d356a04f85b6fdb37c9c836472cff9adbbdec0b59b59f576d6d1f18"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-leave-390.png",
+    "sha256": "783221cac706175cac0491411a31d3e6b5306f4cc735bee533b0fba8a6bb07cf"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-long-1280.png",
+    "sha256": "053d8b8670fa724e8905b1252b4d495bac2151cfa2fefc38f153c9bdaed88a5d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-long-1440.png",
+    "sha256": "290af26131f858e5925958984c4c57e3d3c7afe25620bcc05af3e3cb9d275bf1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-long-390.png",
+    "sha256": "8f4a32579b8c468722da10a77a1a425ba524971158d4562f25099d21fef57352"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-validation-1280.png",
+    "sha256": "a53c373d541b4af0a84a708837cd34c319b6601cab399cc5482506096f36859f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-validation-1440.png",
+    "sha256": "10909769505655f205ce6eea40b339c5851718f475450cda5faa92741a335075"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/app-wizard-validation-390.png",
+    "sha256": "af7854af5b3f71259f88e587c014cfd2dbdefbedbae5075d2af5d6db3734a390"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-catalog-1280.png",
+    "sha256": "a524a3fabbbbf5d39df7ac4001bc33060fb391e2d1d0de26c826c166cd54b800"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-catalog-1440.png",
+    "sha256": "f760290be5425f6e72043810e25d8bf0e6c190e6e462faf8af04638ba7da2e1d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-catalog-390.png",
+    "sha256": "f9c2ce9bd781d62edef2ba258d3e7a2675e429061ca10cfcaff4694e7cf18f69"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-catalog-empty-1280.png",
+    "sha256": "2cc3304c45f75542877c236221d969cdb48ca818f095d3702a44ef7e05c23332"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-catalog-empty-1440.png",
+    "sha256": "c7043e4199a19b84685edebf920a3a62a5c9757e67779bc1f04ea8939c604a68"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-catalog-empty-390.png",
+    "sha256": "87326f7f49c8494b3a2e0870a5bf761381b98418b03466510e166abfd5573f3a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-catalog-error-1280.png",
+    "sha256": "5be7893773ca659b7bc0f5b733acbd1a94c43236022072655e325beacad40af5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-catalog-error-1440.png",
+    "sha256": "c57893607068f4846cd2fe8771c5c591b05b6d60cc61d915befc327162d82844"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-catalog-error-390.png",
+    "sha256": "fdcedfabb7b3945aa999c7a10c22d4168fc32f98b87d90cb7ad4bd0acbae465c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-catalog-long-1280.png",
+    "sha256": "1290f025469887c94ef140d9aa59c57d4208b3b0fd45c6ef287c3d8c37ba7eca"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-catalog-long-1440.png",
+    "sha256": "29845b892bc86fc53a8122f6f26b0818cdf9aa4838b929262caabb4eaa8a4b65"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-catalog-long-390.png",
+    "sha256": "33a213d1977de17429e8b0b5f065efda074523c48f3351474d2e4e1dda0088e3"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-checks-1280.png",
+    "sha256": "9143b95d5b095d4b259fb291e2d4188d36c31a1b4002593e36ac03fab780b831"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-checks-1440.png",
+    "sha256": "4a5ad56f6cbf6546e3b7b49c736d0db95262089a00ae42c8ea8c5d312bcf5946"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-checks-390.png",
+    "sha256": "c8dba9c7109ffd481f62f41571ba25a24615f587bcece6fe105478ff92bc6e9e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-contact-empty-1280.png",
+    "sha256": "9be6fc1329553d3a87473c1a237f4b617a4e16af75e97981a6d29b5e0fbc7dc0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-contact-empty-1440.png",
+    "sha256": "571a8622051a53ff3e7f2cc1280c40ed4a3711a0e60796b726920b4dfa466d53"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-contact-empty-390.png",
+    "sha256": "b662cee1af84b934c81b537376eb1121b3f2df9ed3a4592149184d3f6dcdfde1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-contact-error-1280.png",
+    "sha256": "0ae49e01f5c503df5c81cc3671d4adb82cf5c5fa9e0715d9799b0ce5ac0bb859"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-contact-error-1440.png",
+    "sha256": "90b1008784fa55d757e2d4d3cd35ef8e85ab4b962ddf8c6354cd82102668be5a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-contact-error-390.png",
+    "sha256": "2aa361e1235eebaf3f900716d79025f6b793e90b61d238671c9a06b5b0ddb3dc"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-contact-loading-1280.png",
+    "sha256": "f4918bbc67f0fa2b73809583ecf5e25bc909c2cd463855e55f662ed6099817b4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-contact-loading-1440.png",
+    "sha256": "f665ab98b9dea03abeaa3e1248c94240f9087ff9b868e356c8e4da80c4677f2d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-contact-loading-390.png",
+    "sha256": "a7a972f327a1cbc36f362ae70801876fc225a6e6b34664866d5e2fcc63512538"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-contact-reset-1280.png",
+    "sha256": "e0443e5932ac04dcabb0fc0ba334f24bca7e7db712cb8aecc6986668a257720a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-contact-reset-1440.png",
+    "sha256": "7033cf1daa61691042098d001f5feb61bc52ff427dcfbd377dfefe501f54cd31"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-contact-reset-390.png",
+    "sha256": "8f8b51396213e83ffadc55c0f8046f5d71c626c15173517f55369ab4c71dfac6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-detail-1280.png",
+    "sha256": "3dcc0988d30efc515f34ca1ea9f656d4c0768a75bd6dbbfdfdc1ccd3c1b5d16c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-detail-1440.png",
+    "sha256": "2bd77b9f806848ae4ad5fadb5c75afde21491d62ec99352589a48d9cb561ab53"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-detail-390.png",
+    "sha256": "40e3ab38d4b9fb6a012e8298c19f82677a8972ee821d9a84af2249d4ee3eab02"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-review-tab-1280.png",
+    "sha256": "170f7c81a8f6b7438496d8204ea150db2ec67b3f51a2c859905be1d610000b23"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-review-tab-1440.png",
+    "sha256": "1835fd03a17b348440bfe0d519bad602eff85d09dc0793864135b1e302d388ca"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-review-tab-390.png",
+    "sha256": "eccbc2e28564551fe880d393f8d62bde57f0dd0f60a3910682a6600c78bf11ff"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-summary-reset-1280.png",
+    "sha256": "e5914a4adbb1fc9709bbebd894edb4e03d9d815c134222fce1fb17ee0346967e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-summary-reset-1440.png",
+    "sha256": "d43c466482ea89e87af4fe1252a255ef9619593f2162dc28ad7480515fb00e3e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-summary-reset-390.png",
+    "sha256": "54d3c072ec855b32e0f3eb210b57dfdd90e55eee68dd0724e8837f010f790749"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-1-1280.png",
+    "sha256": "072a70f532ea9daa354736c3e07767c9f37f810ae1ce4cf8dab880ca27dd54c8"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-1-1440.png",
+    "sha256": "89de647aedceb55af870c36d5ada8e1a0297d7b94d51d22ae0e51002af2ab6ee"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-1-390.png",
+    "sha256": "b157fc064f3f459d82fd709d5dac5e399376d82e3bdac7f78f502168d0719055"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-2-1280.png",
+    "sha256": "d145a1c8ca1e1e732b8843d75376d8080395fa7c2fb98d518b9890db1bc640fc"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-2-1440.png",
+    "sha256": "9fef2dfc365e6e622c214329b0eb1f6afcb4af35cffdf30d7698aa7ff8e3f5dd"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-2-390.png",
+    "sha256": "8037302429a7cc6a5c23780292e56dd6186c5d6b88ca5d5dcdb3ecb8dbac5687"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-3-1280.png",
+    "sha256": "e0a39554f8ddcde42a4da5544fc2ca6e1d11e3d8f2c81c487fe8197500ee5e47"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-3-1440.png",
+    "sha256": "55147c972161d6301d1a65b382fea1c31d01b7861028ac9a230430cc7fb96699"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-3-390.png",
+    "sha256": "10c612b723c33a8e9d981edb6e3edc119fe53b0f24f22fc0bdb9f6a9b586f1cd"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-4-1280.png",
+    "sha256": "96682891a8124149c79dd615ea983eb4a2472cf0574ce2e698f9ca03d3e12976"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-4-1440.png",
+    "sha256": "85c12aba046e67991110ea3b60753879816d4fecf238064c4d171a226617f8b5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-4-390.png",
+    "sha256": "c3e8461995999f536c014bc7f8d8b454f9d41d40918d64ad1497fa8452e51342"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-focus-1280.png",
+    "sha256": "1fcdd621813a013aeed9d9961700e32dd4933adb119f32ab03180ed7ee3cef37"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-focus-1440.png",
+    "sha256": "679686928612e45d4995c4c197b3e69935b4d1d69c7e49648580fa585b3a9db7"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-focus-390.png",
+    "sha256": "823ded8402ffbf554c75f2e386ac54dbdce86e3860c1829e9f487b4a8c25f837"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-validation-1280.png",
+    "sha256": "62d6b9c1097d7c16a73ab527e54c1fb98db0bfe855f10fc1592e844abd13cdc8"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-validation-1440.png",
+    "sha256": "5e1079491266b87e88faa65bea96a3dfe794b1d6ca58d1205cf59f7ff36c4b53"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/app-wizard-validation-390.png",
+    "sha256": "9f652ffd8fc41f72f304256f4be87e764c7f5cb7565a7528ff80728f32a80375"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/measurements.json",
+    "sha256": "d6fea939152674d475adf25f0f93190e8148a60445d8cb741e196fe814c8c778"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-catalog-1280.png",
+    "sha256": "2f56f36dfb1b403e3317b18503e2f96dbf4785ec56a3ff26ecd24e524f0a516d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-catalog-1440.png",
+    "sha256": "b2aaa26daaa1a9a7e73095508f262b835712535b46586090c44f0842db496065"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-catalog-390.png",
+    "sha256": "2d0c4cda2b2024652c56da85bd7fb61848d753bd380ae67504f56da0e2456d09"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-detail-1280.png",
+    "sha256": "04d2b6739b3c7c284c44bd1aa75d8b31c3293a3ba840bee27c1089fad02b31d4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-detail-1440.png",
+    "sha256": "8aeb38974587c96f57704ead409c6f2665d05221cfad8dd627cd5041bb35813e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-detail-390.png",
+    "sha256": "a7f847c981afec083fbd1b3c043ec93b810112ab6ee909fce2268b237c3328e6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-wizard-1-1280.png",
+    "sha256": "2fafb75566ef0f990e9523dce1cdff98d99ce0f7310f60c4fa1f8a37e8b29f0c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-wizard-1-1440.png",
+    "sha256": "56dfde610834e1cfc7f996d85736c6421b72e52c4419a7f976e4951d72c229ff"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-wizard-1-390.png",
+    "sha256": "dbdd19dacf5c19cb5266357cb49dd9263de6d0c55dfdce080fb918a8a59fab46"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-wizard-2-1280.png",
+    "sha256": "857020a815c2754606956eaa49386b0f499e72fa7b8a41b165099bf17d9ccc64"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-wizard-2-1440.png",
+    "sha256": "314a91b140771129f441d82c04bc407b4b2ea30e853cc5546e1ed78be4933bb6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-wizard-2-390.png",
+    "sha256": "8240e88dfa0df61a7a5e23b35fff89778295bd61128c44c69295b8fd0bfd2ef4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-wizard-3-1280.png",
+    "sha256": "776c8b45cb3caf1d3fd235a23c032911b801363fe3285a1c8174059209757ced"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-wizard-3-1440.png",
+    "sha256": "798483da94957e22fb24c1a5caf3e9127cdd7e646887d974889ef2affb04e4c4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-wizard-3-390.png",
+    "sha256": "5a0d25f6f6f11b2ba3e3925beb958f00f7297995892065ebc1f4c0a8629b9d81"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-wizard-4-1280.png",
+    "sha256": "f7ac621dc94f4057c88272d03b5e613f84c85b2658a1a100965a5dec783f2373"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-wizard-4-1440.png",
+    "sha256": "612d4d324b0580c509e0a6d51ae8dcfd57de2465e3f7b9db41a81f95ef01df6a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/delta-review/reference-wizard-4-390.png",
+    "sha256": "63f426b156ec8102e55a18c51549c983c4da5dd547c70ef6f702c5b54a7cf5c1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/measurements.json",
+    "sha256": "a610f95f1c3ab2e1a553c98c63977ba482b9d403828188a12f51bfb86367529c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-catalog-1280.png",
+    "sha256": "65bad7f59a4e3bd04ac410aec0a9571cfc0ba0f2657e9b8f58a1cf1a71e1e607"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-catalog-1440.png",
+    "sha256": "2abd8514d4eeda7e57f5d06ed4dcf3a83991a6d8dbbec9ae4479c53095f5f827"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-catalog-390.png",
+    "sha256": "d55dc3cfac826758d5424a6357f1a9702d2728c7193ee9f161cf9f15e85a06fc"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-catalog-long-1280.png",
+    "sha256": "e0ca2c793eb47361bbed05630d5785f48e50279bc6ef651897307dd4796bb35d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-catalog-long-1440.png",
+    "sha256": "b215775c487740560514d42d4fec8cfcab6444f3c3afdf0bb7fd4ad77a89a6c5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-catalog-long-390.png",
+    "sha256": "1b891188b20d8ba1b0b9fa71519e54cd043492761a21d97b18833a67953d15a4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-domain-dialog-1280.png",
+    "sha256": "c1195feaae4c7491dd2304b4297824c182aa0c5ad42dc81c5b606f10008f7e5d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-domain-dialog-1440.png",
+    "sha256": "87bf8170c4182e610358184abe060cb32d31c1e3a33e17aa5ab1a8570a28320b"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-domain-dialog-390.png",
+    "sha256": "a0d62603af423bf92d1f0680f7f6d5eb601bb516e95ac0c768191f5a337beb5e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-domains-1280.png",
+    "sha256": "cb1f60165fd2e7306f0a05bcd14231a845c33b6a13fac0a9fb4fbf5e43cede56"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-domains-1440.png",
+    "sha256": "87d5eae2f9cc8a77b2e2cb44894ed87c941512f9affc1a2b413934ff823e5ef5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-domains-390.png",
+    "sha256": "315c61ec84ffd1ce67265f52e5b20512d35453416a03cf4185ae18ef4c9c56cf"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-wizard-1-1280.png",
+    "sha256": "2fafb75566ef0f990e9523dce1cdff98d99ce0f7310f60c4fa1f8a37e8b29f0c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-wizard-1-1440.png",
+    "sha256": "56dfde610834e1cfc7f996d85736c6421b72e52c4419a7f976e4951d72c229ff"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-wizard-1-390.png",
+    "sha256": "dbdd19dacf5c19cb5266357cb49dd9263de6d0c55dfdce080fb918a8a59fab46"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-wizard-2-1280.png",
+    "sha256": "857020a815c2754606956eaa49386b0f499e72fa7b8a41b165099bf17d9ccc64"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-wizard-2-1440.png",
+    "sha256": "314a91b140771129f441d82c04bc407b4b2ea30e853cc5546e1ed78be4933bb6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-wizard-2-390.png",
+    "sha256": "8240e88dfa0df61a7a5e23b35fff89778295bd61128c44c69295b8fd0bfd2ef4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-wizard-3-1280.png",
+    "sha256": "776c8b45cb3caf1d3fd235a23c032911b801363fe3285a1c8174059209757ced"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-wizard-3-1440.png",
+    "sha256": "798483da94957e22fb24c1a5caf3e9127cdd7e646887d974889ef2affb04e4c4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-wizard-3-390.png",
+    "sha256": "5a0d25f6f6f11b2ba3e3925beb958f00f7297995892065ebc1f4c0a8629b9d81"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-wizard-4-1280.png",
+    "sha256": "f7ac621dc94f4057c88272d03b5e613f84c85b2658a1a100965a5dec783f2373"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-wizard-4-1440.png",
+    "sha256": "612d4d324b0580c509e0a6d51ae8dcfd57de2465e3f7b9db41a81f95ef01df6a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/reference-wizard-4-390.png",
+    "sha256": "63f426b156ec8102e55a18c51549c983c4da5dd547c70ef6f702c5b54a7cf5c1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-catalog-1280.png",
+    "sha256": "83d0de34c4550a8c75e99453a84d4be4dd0898acce3506b68b1b1d230bd74f20"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-catalog-1440.png",
+    "sha256": "f760290be5425f6e72043810e25d8bf0e6c190e6e462faf8af04638ba7da2e1d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-catalog-390.png",
+    "sha256": "5f9f9582258dadf2619d39648a40aa8b8ac7c2d5a6521f5259b36b9554ac9544"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-catalog-empty-1280.png",
+    "sha256": "2cc3304c45f75542877c236221d969cdb48ca818f095d3702a44ef7e05c23332"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-catalog-empty-1440.png",
+    "sha256": "5c0cf180c82ed37ef9100a9c2f73c51d474811cb921bd0f4ebc00c0f2d898c33"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-catalog-empty-390.png",
+    "sha256": "87326f7f49c8494b3a2e0870a5bf761381b98418b03466510e166abfd5573f3a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-catalog-error-1280.png",
+    "sha256": "5be7893773ca659b7bc0f5b733acbd1a94c43236022072655e325beacad40af5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-catalog-error-1440.png",
+    "sha256": "c57893607068f4846cd2fe8771c5c591b05b6d60cc61d915befc327162d82844"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-catalog-error-390.png",
+    "sha256": "fdcedfabb7b3945aa999c7a10c22d4168fc32f98b87d90cb7ad4bd0acbae465c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-catalog-long-1280.png",
+    "sha256": "1290f025469887c94ef140d9aa59c57d4208b3b0fd45c6ef287c3d8c37ba7eca"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-catalog-long-1440.png",
+    "sha256": "29845b892bc86fc53a8122f6f26b0818cdf9aa4838b929262caabb4eaa8a4b65"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-catalog-long-390.png",
+    "sha256": "33a213d1977de17429e8b0b5f065efda074523c48f3351474d2e4e1dda0088e3"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-checks-1280.png",
+    "sha256": "23fd7b830b1df26afb8c423d5990ce8185bc31e3ff0af598086a7199966ccb88"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-checks-1440.png",
+    "sha256": "efaa8ecf888bd936fabd69cf05155946b33e1bfae7f0ffa63778f73cb6486fde"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-checks-390.png",
+    "sha256": "3fe7e467df0ded7997f55783af968eec60e82f1f9c6dedb3c40838ed08d95e0d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-contact-empty-1280.png",
+    "sha256": "9be6fc1329553d3a87473c1a237f4b617a4e16af75e97981a6d29b5e0fbc7dc0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-contact-empty-1440.png",
+    "sha256": "571a8622051a53ff3e7f2cc1280c40ed4a3711a0e60796b726920b4dfa466d53"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-contact-empty-390.png",
+    "sha256": "b662cee1af84b934c81b537376eb1121b3f2df9ed3a4592149184d3f6dcdfde1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-contact-error-1280.png",
+    "sha256": "0ae49e01f5c503df5c81cc3671d4adb82cf5c5fa9e0715d9799b0ce5ac0bb859"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-contact-error-1440.png",
+    "sha256": "90b1008784fa55d757e2d4d3cd35ef8e85ab4b962ddf8c6354cd82102668be5a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-contact-error-390.png",
+    "sha256": "2aa361e1235eebaf3f900716d79025f6b793e90b61d238671c9a06b5b0ddb3dc"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-contact-loading-1280.png",
+    "sha256": "f4918bbc67f0fa2b73809583ecf5e25bc909c2cd463855e55f662ed6099817b4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-contact-loading-1440.png",
+    "sha256": "f665ab98b9dea03abeaa3e1248c94240f9087ff9b868e356c8e4da80c4677f2d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-contact-loading-390.png",
+    "sha256": "a7a972f327a1cbc36f362ae70801876fc225a6e6b34664866d5e2fcc63512538"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-contact-reset-1280.png",
+    "sha256": "e0443e5932ac04dcabb0fc0ba334f24bca7e7db712cb8aecc6986668a257720a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-contact-reset-1440.png",
+    "sha256": "7033cf1daa61691042098d001f5feb61bc52ff427dcfbd377dfefe501f54cd31"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-contact-reset-390.png",
+    "sha256": "8f8b51396213e83ffadc55c0f8046f5d71c626c15173517f55369ab4c71dfac6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-detail-1280.png",
+    "sha256": "466e847ee0b97186b9269751d9495622090321c112bddab7c1745a0c62c54080"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-detail-1440.png",
+    "sha256": "9aa671528a00eb44781d4e3abb4ffb233e4d0d9fb1769e3e4fc7603ffdb825cb"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-detail-390.png",
+    "sha256": "b1156351605f4fa069b738471b1aebd764bc8aa58bba98cb944d92a579cd500c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-history-keyboard-1280.png",
+    "sha256": "a176001a47a3dc17ceaa8c90ceb9d9f7bfd794209104d92521a366cf4793f002"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-history-keyboard-1440.png",
+    "sha256": "8f703d5c8cf9e29191585ce2e14589986602b26b73cb110ddf93bf181bbfd141"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-history-keyboard-390.png",
+    "sha256": "74803e356ca959ba90da3ed8ad55b076eb8f08c13ff5919750ec5428a05b703b"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-overview-keyboard-1280.png",
+    "sha256": "a350a809deee96fcc73fbdbe8455f3d1e45cf38b284b8e82a0ac752cbd9e23a0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-overview-keyboard-1440.png",
+    "sha256": "f79a871e18cf1f0da789c2072336d0bd35765325c2cb6080c747bc6395cbeb7a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-overview-keyboard-390.png",
+    "sha256": "19829ed978adb2a0fbac1542aba81d6886fc98b895625b877a337ea3aa9a47fb"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-review-tab-1280.png",
+    "sha256": "170f7c81a8f6b7438496d8204ea150db2ec67b3f51a2c859905be1d610000b23"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-review-tab-1440.png",
+    "sha256": "1835fd03a17b348440bfe0d519bad602eff85d09dc0793864135b1e302d388ca"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-review-tab-390.png",
+    "sha256": "eccbc2e28564551fe880d393f8d62bde57f0dd0f60a3910682a6600c78bf11ff"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-summary-reset-1280.png",
+    "sha256": "e5914a4adbb1fc9709bbebd894edb4e03d9d815c134222fce1fb17ee0346967e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-summary-reset-1440.png",
+    "sha256": "d43c466482ea89e87af4fe1252a255ef9619593f2162dc28ad7480515fb00e3e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-summary-reset-390.png",
+    "sha256": "54d3c072ec855b32e0f3eb210b57dfdd90e55eee68dd0724e8837f010f790749"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-1-1280.png",
+    "sha256": "01e412c9a98d145b7c19342d72b60848a6168c88525a501e05eae672dca08503"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-1-1440.png",
+    "sha256": "ad27d22f7a5cda85df576c975a41dcac4b99a730a6a2664f7d32332f0c3731e5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-1-390.png",
+    "sha256": "36cb12972e683e1d0c48de7d8b7ed4dc6db63a4dc4ed5e514d7ff5aba13f7080"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-2-1280.png",
+    "sha256": "d145a1c8ca1e1e732b8843d75376d8080395fa7c2fb98d518b9890db1bc640fc"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-2-1440.png",
+    "sha256": "9fef2dfc365e6e622c214329b0eb1f6afcb4af35cffdf30d7698aa7ff8e3f5dd"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-2-390.png",
+    "sha256": "8037302429a7cc6a5c23780292e56dd6186c5d6b88ca5d5dcdb3ecb8dbac5687"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-3-1280.png",
+    "sha256": "e0a39554f8ddcde42a4da5544fc2ca6e1d11e3d8f2c81c487fe8197500ee5e47"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-3-1440.png",
+    "sha256": "55147c972161d6301d1a65b382fea1c31d01b7861028ac9a230430cc7fb96699"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-3-390.png",
+    "sha256": "10c612b723c33a8e9d981edb6e3edc119fe53b0f24f22fc0bdb9f6a9b586f1cd"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-4-1280.png",
+    "sha256": "96682891a8124149c79dd615ea983eb4a2472cf0574ce2e698f9ca03d3e12976"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-4-1440.png",
+    "sha256": "85c12aba046e67991110ea3b60753879816d4fecf238064c4d171a226617f8b5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-4-390.png",
+    "sha256": "c3e8461995999f536c014bc7f8d8b454f9d41d40918d64ad1497fa8452e51342"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-focus-1280.png",
+    "sha256": "1fcdd621813a013aeed9d9961700e32dd4933adb119f32ab03180ed7ee3cef37"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-focus-1440.png",
+    "sha256": "679686928612e45d4995c4c197b3e69935b4d1d69c7e49648580fa585b3a9db7"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-focus-390.png",
+    "sha256": "823ded8402ffbf554c75f2e386ac54dbdce86e3860c1829e9f487b4a8c25f837"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-validation-1280.png",
+    "sha256": "62d6b9c1097d7c16a73ab527e54c1fb98db0bfe855f10fc1592e844abd13cdc8"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-validation-1440.png",
+    "sha256": "5e1079491266b87e88faa65bea96a3dfe794b1d6ca58d1205cf59f7ff36c4b53"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/app-wizard-validation-390.png",
+    "sha256": "d7d4efc50d7411c32c66f1635c1cc3d4ae729a4d5b9b31847b729f3318189155"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/measurements.json",
+    "sha256": "ba48552fd962a84a625c5020131c69fbcb8338ce753ba7bfc48f642686039543"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-catalog-1280.png",
+    "sha256": "2f56f36dfb1b403e3317b18503e2f96dbf4785ec56a3ff26ecd24e524f0a516d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-catalog-1440.png",
+    "sha256": "b2aaa26daaa1a9a7e73095508f262b835712535b46586090c44f0842db496065"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-catalog-390.png",
+    "sha256": "2d0c4cda2b2024652c56da85bd7fb61848d753bd380ae67504f56da0e2456d09"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-detail-1280.png",
+    "sha256": "04d2b6739b3c7c284c44bd1aa75d8b31c3293a3ba840bee27c1089fad02b31d4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-detail-1440.png",
+    "sha256": "8aeb38974587c96f57704ead409c6f2665d05221cfad8dd627cd5041bb35813e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-detail-390.png",
+    "sha256": "a7f847c981afec083fbd1b3c043ec93b810112ab6ee909fce2268b237c3328e6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-wizard-1-1280.png",
+    "sha256": "2fafb75566ef0f990e9523dce1cdff98d99ce0f7310f60c4fa1f8a37e8b29f0c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-wizard-1-1440.png",
+    "sha256": "6de54acbdac814281fbbcea1afb0101906ae51bffbcb6b8c5ff34d971638fa39"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-wizard-1-390.png",
+    "sha256": "dbdd19dacf5c19cb5266357cb49dd9263de6d0c55dfdce080fb918a8a59fab46"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-wizard-2-1280.png",
+    "sha256": "857020a815c2754606956eaa49386b0f499e72fa7b8a41b165099bf17d9ccc64"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-wizard-2-1440.png",
+    "sha256": "314a91b140771129f441d82c04bc407b4b2ea30e853cc5546e1ed78be4933bb6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-wizard-2-390.png",
+    "sha256": "e1944859f7fde67e4c4335dc9882e2efa2dc36ecfc38fd037d94903faa40d6bc"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-wizard-3-1280.png",
+    "sha256": "776c8b45cb3caf1d3fd235a23c032911b801363fe3285a1c8174059209757ced"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-wizard-3-1440.png",
+    "sha256": "798483da94957e22fb24c1a5caf3e9127cdd7e646887d974889ef2affb04e4c4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-wizard-3-390.png",
+    "sha256": "5a0d25f6f6f11b2ba3e3925beb958f00f7297995892065ebc1f4c0a8629b9d81"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-wizard-4-1280.png",
+    "sha256": "f7ac621dc94f4057c88272d03b5e613f84c85b2658a1a100965a5dec783f2373"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-wizard-4-1440.png",
+    "sha256": "612d4d324b0580c509e0a6d51ae8dcfd57de2465e3f7b9db41a81f95ef01df6a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual/tabs-fix-review/reference-wizard-4-390.png",
+    "sha256": "63f426b156ec8102e55a18c51549c983c4da5dd547c70ef6f702c5b54a7cf5c1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-prototype-alignment/visual-review.md",
+    "sha256": "f17bf78a6c3d26427b16663bfbab061b0ae4fa947fa915a688c256011ffbe544"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-status-and-registration-recovery/.openspec.yaml",
+    "sha256": "c51317fdb09f4c0096f955c8beeb5f19a56ba49530c79732bb429ad0f423004d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-status-and-registration-recovery/design.md",
+    "sha256": "6ae8545818ab8c2b8e381514e11d81ddeb6cb6f91b10d75a149192a0300da99d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-status-and-registration-recovery/proposal.md",
+    "sha256": "2af390f22d3369698eefeef29f8b0f243666128316ea3a2f16a6376f731be78a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-status-and-registration-recovery/specs/control-center-api-integration/spec.md",
+    "sha256": "ddf64d16e8396ca51921e358980de9014dc4b2915cbd3619ecd7841f2fc30f1f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-status-and-registration-recovery/specs/control-center-mock-server/spec.md",
+    "sha256": "db34b5525145a5003e71383acc0023b51be96cf9ba9bc238111d264091e0ca70"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-status-and-registration-recovery/specs/skill-catalog-experience/spec.md",
+    "sha256": "d7898924843ceee7e5dc0f824566f28cc105d4b3804badf7eaab175e05178a1d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-status-and-registration-recovery/specs/skill-registration/spec.md",
+    "sha256": "601dffbda661ea23d09732c6cffe5545925caa0a77c476a76672ad58c37209e2"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-01-skills-status-and-registration-recovery/tasks.md",
+    "sha256": "fb9c1c7c3fdb7b673775314143e226ed5d0128249be1dcac0be48f3f66831fbc"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-1019-skill-checks-training/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-1019-skill-checks-training/design.md",
+    "sha256": "8c74ab6fea73f12bc1b0c0b11a8ff2ba917a7a8cf7051aa93d1dd38f601c106d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-1019-skill-checks-training/proposal.md",
+    "sha256": "620afb965e1c05ab8ead562250526cdfa6b80b59849b9fd8323d9ea11498a8c4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-1019-skill-checks-training/specs/skill-checks-training/spec.md",
+    "sha256": "2a47f132ff64e26bb491d54e09ef82b86b7b140c63c012318ba6769f71643648"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-1019-skill-checks-training/tasks.md",
+    "sha256": "95618108c97afdbf6f7b2920e8596d5fc2556754c9ccc2e20c1b8f36b4be0e08"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-1020-skill-review/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-1020-skill-review/design.md",
+    "sha256": "80a076f93f4e9802ba03d932e6b0340c12ed9dd00954b279b9652253fee364fa"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-1020-skill-review/proposal.md",
+    "sha256": "e2fa76c3ed5d0b6eacd01a5661d44d024d84f58723f53d9543d8bba9a4d32d0d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-1020-skill-review/specs/control-center-shell/spec.md",
+    "sha256": "5be7246d2f3edf50f746fc132f9943e8c2c408d0e40656483eb6c29b3a2ed859"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-1020-skill-review/specs/skill-review/spec.md",
+    "sha256": "35d65d13b580a7a0a026510a5ede35ab6f80da556758f1bfaea220e0509f6c73"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-1020-skill-review/tasks.md",
+    "sha256": "8f133d43d360664d73d350e9d5f960de3ff1980fdb5f9e111d2fe15d1fdd82d6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-current-status/.openspec.yaml",
+    "sha256": "5d113f7d56015df3c7cad21b6f5da445ffbc4edc2785a2391465abec93ac5afc"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-current-status/design.md",
+    "sha256": "1b92b84a12eb160d1cc32066130081e95abfb5149bf98e1639f2b1f50a40ca5a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-current-status/proposal.md",
+    "sha256": "b30b148efd3988f3efe2068f8867e67d93b3acc986410dc1b2b59b750ca15745"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-current-status/specs/skill-lifecycle/spec.md",
+    "sha256": "d0c7d71788db53faf60e9ce3abc4f281b2a39d23afdec8c7db43d1d376e6718a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-current-status/tasks.md",
+    "sha256": "7112b473c9d959aabd379baf7b2e44290b1f040f428945b6b20bddd9a02330b7"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-lifecycle-rollout/.openspec.yaml",
+    "sha256": "5d113f7d56015df3c7cad21b6f5da445ffbc4edc2785a2391465abec93ac5afc"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-lifecycle-rollout/design.md",
+    "sha256": "99d5a69b37212d97f03f7661de4adb1476bac59cb77e7f9f05a1308584f41fb5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-lifecycle-rollout/proposal.md",
+    "sha256": "4e49a35ebd79cf29ceb2da96b34f356845df5d56e3f0d21e6128a721d8a39f98"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-lifecycle-rollout/specs/control-center-mock-server/spec.md",
+    "sha256": "4cd5a71a769a8bc01771b412ec86e31aeecd8dc8848027ec2cd0ddf675d63868"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-lifecycle-rollout/specs/skill-lifecycle/spec.md",
+    "sha256": "5367b32f717e8c8c4ef24abc9cec6dca3bbf29e9b78d53731d74532944bc94fb"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-lifecycle-rollout/specs/skill-training-phrases/spec.md",
+    "sha256": "377c00cb31f23f5b8c98964e57fd0232986e7d9a7b8d387ec2f5b3cc644e10a0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-lifecycle-rollout/tasks.md",
+    "sha256": "3a21cdb11e87eb50a756c4e7315351fdc235b5a12ccc37ef1221e2c3b50cfa02"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-909-skill-lifecycle-rollout/verification.md",
+    "sha256": "f117fb822caea6ca92acaae657ef700b1694abaf128a1aac3c7bd0f886a83b14"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-911-prod-skill-selection/.openspec.yaml",
+    "sha256": "c51317fdb09f4c0096f955c8beeb5f19a56ba49530c79732bb429ad0f423004d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-911-prod-skill-selection/design.md",
+    "sha256": "6d8a20f2720800559525f479a9a468558c7a07b895d2938d26f8c75b20fe4240"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-911-prod-skill-selection/proposal.md",
+    "sha256": "a414e4c52a150ebc378ae9aeaedb102a7536aaa5b1fb3a7f477710e47db697be"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-911-prod-skill-selection/specs/surface-skill-selection/spec.md",
+    "sha256": "17ddca2bdb446f562c47bbe0af30807829a140addce6ff68241f547ae230e44a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-02-mos-911-prod-skill-selection/tasks.md",
+    "sha256": "2008b14232a10476f3b2f4bd96c70b117e7e9b4fb6cd5b7e2e5e50b0c593bf4c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1021-skill-bulk-rollout/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1021-skill-bulk-rollout/design.md",
+    "sha256": "5384537a03c86c5ef048b7c5d4176a1ede413dc68439ac4208f93faf820af8b4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1021-skill-bulk-rollout/proposal.md",
+    "sha256": "08f9c221ef90f2b32300390b2878ac9b0ff15b3f317fbecc2b55fd89fb1044f9"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1021-skill-bulk-rollout/specs/skill-bulk-rollout/spec.md",
+    "sha256": "ae3bd7ee27e7002d8fce6d553fc26a3ec8e0754c1504a623c639fa85be30e59f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1021-skill-bulk-rollout/tasks.md",
+    "sha256": "451f02b8059a30b3eb742bb9e23dfeb416d20f695340255b85d32b885554fb9c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1037-dialog-registry/.openspec.yaml",
+    "sha256": "c956e2a907cf0aa23d948e300827f91e46ab77d64e288d98285dfe990bb0d989"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1037-dialog-registry/design.md",
+    "sha256": "fa42e4039612ea27458579fb2752d90919e964c4bc707f6b9ce611006b6d9ff9"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1037-dialog-registry/proposal.md",
+    "sha256": "28c35797a290fdbcf37a1739ce755d349bcc8d77600e642e6c9afa802453fefe"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1037-dialog-registry/specs/dialog-registry/spec.md",
+    "sha256": "742762a4b4565370424c79645372cfdfe46007423842d88eba20a3376fc1d17d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1037-dialog-registry/tasks.md",
+    "sha256": "42d48a907b11addb08719f698ae68ec5fb2faa3587e8a63e8e1f0a30efc91302"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1038-dialog-selection-builder/.openspec.yaml",
+    "sha256": "c956e2a907cf0aa23d948e300827f91e46ab77d64e288d98285dfe990bb0d989"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1038-dialog-selection-builder/design.md",
+    "sha256": "88666c8c38b40e22d77624eb1a926a408a5af964e5f215c1698ad0ad4f9319d7"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1038-dialog-selection-builder/proposal.md",
+    "sha256": "bccb79cbe12d33b205285746929e8ceb22f43790fea67e58612271a46d62268b"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1038-dialog-selection-builder/specs/dialog-selection-builder/spec.md",
+    "sha256": "ad738bae8454585a2fa661a3ee39a58e4295d0dc62ba53b39988bbfad3ec18d3"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-05-mos-1038-dialog-selection-builder/tasks.md",
+    "sha256": "22b437d528b45f59bfb18e9a26cda47d4f2666fdf69fe197bf1cee2f72190f45"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1040-dialog-saved-filters/.openspec.yaml",
+    "sha256": "c956e2a907cf0aa23d948e300827f91e46ab77d64e288d98285dfe990bb0d989"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1040-dialog-saved-filters/design.md",
+    "sha256": "70c5e6fe51125fd7b065ed641966a8950b8acaa4b55db965d7a17016b9be6147"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1040-dialog-saved-filters/proposal.md",
+    "sha256": "f1f97059f33bb0ec927862170c3888b0b880f08129c9123235e17d57a5593836"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1040-dialog-saved-filters/specs/dialog-saved-filters/spec.md",
+    "sha256": "54f133f82e733f42f822a7c5372d6ef091d50cd84a8df53bc19ff75121f61c7c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1040-dialog-saved-filters/tasks.md",
+    "sha256": "18d16545847bc433aa404246a19f5169476f39cc3ff42f7dfd1d5728817454ea"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1041-dialog-details/.openspec.yaml",
+    "sha256": "c956e2a907cf0aa23d948e300827f91e46ab77d64e288d98285dfe990bb0d989"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1041-dialog-details/design.md",
+    "sha256": "304be2a56c255ed0703b878e5254d88ab911ae2c029ce6947062ebe181edea06"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1041-dialog-details/proposal.md",
+    "sha256": "04c9039508e317228a4e6021fe373cb7411ebc254dba3e6dba8d4100829196e2"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1041-dialog-details/specs/control-center-shell/spec.md",
+    "sha256": "a3ae403c94d536e8074ef2c9e3923b9d6e9da681134a95cd04635eae76af5be0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1041-dialog-details/specs/dialog-details/spec.md",
+    "sha256": "fd5a496fa49931c64de6d44fcfd439843773a6f96b2110eca88cc54a8410866c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1041-dialog-details/tasks.md",
+    "sha256": "d92b53f5d3f04c378085227687755d3f130cc36cf59c3c325203b269aa7f38f8"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1042-dialog-answer-insights/.openspec.yaml",
+    "sha256": "c956e2a907cf0aa23d948e300827f91e46ab77d64e288d98285dfe990bb0d989"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1042-dialog-answer-insights/design.md",
+    "sha256": "2dc46239bf1eb9d593c117a5039a8e0d3523387df2ec2ec32af719e08d33c38c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1042-dialog-answer-insights/proposal.md",
+    "sha256": "ceb62c15ad189fab8e70f7d02ce4e0d3a499b356fafb9535820b9849feed0969"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1042-dialog-answer-insights/specs/dialog-answer-insights/spec.md",
+    "sha256": "aff966e44277ca825809e26230f59989d1861d78e17fc1b7e2c319647b54983a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-06-mos-1042-dialog-answer-insights/tasks.md",
+    "sha256": "34da1190197413a686a21ac3b2267fcb44c3322bbe0e7b41d61bf932873a167b"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-1044-dialog-category-addition/.openspec.yaml",
+    "sha256": "c956e2a907cf0aa23d948e300827f91e46ab77d64e288d98285dfe990bb0d989"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-1044-dialog-category-addition/design.md",
+    "sha256": "3ba354a2649c21c1cfdfcf138ac93730fe3c0bf000a5587e54500a4ea0db33b5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-1044-dialog-category-addition/proposal.md",
+    "sha256": "04a2d4b05690342b9e4155024f138ea86002a700ffb05ab050667df5508eb476"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-1044-dialog-category-addition/specs/dialog-category-addition/spec.md",
+    "sha256": "60fc6e51a2679cee44aaee5df5d3136c972202d144c99b89e87f9d20df62964b"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-1044-dialog-category-addition/tasks.md",
+    "sha256": "47af85325e78563f1426cc357079c51882cf5221aa5af1f1bc659ab26878472f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-913-surface-lifecycle-publication/.openspec.yaml",
+    "sha256": "d71302f07db183bc30ff75198cd90cb17632c1d016043d0f43248f117bdc2e26"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-913-surface-lifecycle-publication/design.md",
+    "sha256": "df61ecc81e8757a51083d5b331b002c43c09032931d764c16392d97ca2dcab23"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-913-surface-lifecycle-publication/proposal.md",
+    "sha256": "6da0e42376cb8a75d8a5e8bdda06cbbc01528d22e1ad7fea3a11f7457919e9b7"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-913-surface-lifecycle-publication/specs/surface-lifecycle-publication/spec.md",
+    "sha256": "32cf52191e2648b08fa9578c2f91d9f3e4df61812d9f704d296280d9e832b72f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-913-surface-lifecycle-publication/tasks.md",
+    "sha256": "a34c49450c18636cc8bbc7008f16382682e3bc6cddd2b16c724f718af61b8e53"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-913-surface-overview-connection/.openspec.yaml",
+    "sha256": "c956e2a907cf0aa23d948e300827f91e46ab77d64e288d98285dfe990bb0d989"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-913-surface-overview-connection/design.md",
+    "sha256": "1a1c977ebcfb2df6c825204d6e9a07d6f0fc87c386d746b96ca7c81acec32166"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-913-surface-overview-connection/proposal.md",
+    "sha256": "1e373dfc08d448226348f18f8871e707c3fa5f792c61a35d7204f6713cc379b2"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-913-surface-overview-connection/specs/surface-overview-connection/spec.md",
+    "sha256": "895079dfe116e6124fc43b80b2268107f86898e0cb59a585a46af63baced7173"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-07-mos-913-surface-overview-connection/tasks.md",
+    "sha256": "2fabf6471c36fa9553e9933ce92c9ef391ace12f36adc31220949494246499be"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-add-local-session-demo/.openspec.yaml",
+    "sha256": "ec3a1b167d0ccdb9f7a3f8f370ba8038feb637051c90a0b3fbcc5e9cef45d7a5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-add-local-session-demo/design.md",
+    "sha256": "0a9a23ad13bd87d5203c266a19fb16620ca0f24d0bb0144e19f13e01bb1f343c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-add-local-session-demo/proposal.md",
+    "sha256": "6a752ccfa3a8ec9676c7e9657fd038cfc9fee792125cb55ff92a737040e701b6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-add-local-session-demo/specs/control-center-mock-server/spec.md",
+    "sha256": "faea88ab06472789297262e9f646ac5faea43d1292948d5ccf67bc4365f45dfb"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-add-local-session-demo/specs/control-center-shell/spec.md",
+    "sha256": "eaa7a9abf2bea3a29b9480fa3c0d7efdf8fe3685eec680679e02fb5bc7fc1fa1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-add-local-session-demo/specs/local-session-demo/spec.md",
+    "sha256": "e022b6a8a24c5ca29e2c3cdb79c3db8abe3a030dc13243a88dbd5cb75384f010"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-add-local-session-demo/tasks.md",
+    "sha256": "fbc91280db59fd09e2ac03145241b7daea80bca9e6117b9d742a33a0c06539d5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions/.openspec.yaml",
+    "sha256": "ec3a1b167d0ccdb9f7a3f8f370ba8038feb637051c90a0b3fbcc5e9cef45d7a5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions/design.md",
+    "sha256": "abad61fde268e29440a61ca3781c364ea925f5ff8dcc43b84b34eb55c7631357"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions/proposal.md",
+    "sha256": "0caae10e8eac783119004fb538898be9e7ce60480e86fe2492eb2bd2ac670d58"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions/specs/control-center-api-integration/spec.md",
+    "sha256": "2b45da1ca4206b0e12d5d25cda068050196b40f676464d83e1b5ad0e5d600536"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions/specs/control-center-http/spec.md",
+    "sha256": "49e3ee8bd60b702d5a6e4e86706a02d7fa24d607f0bed35a273d9f706dd5e241"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions/specs/control-center-mock-server/spec.md",
+    "sha256": "65881139d1fcbbfe295513b613263a4f40942ceae63f7bbc3e04b972b5861533"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions/specs/control-center-permissions/spec.md",
+    "sha256": "c6461f73efbbedea7a0f19907e1d9454a707775db208578d600b33eba997cc9d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions/specs/control-center-shell/spec.md",
+    "sha256": "80a31db0c4d23540ab42856e1ae7ddec4295effc7f01e19d2a1669c0f33245ca"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions/specs/mpmm-session/spec.md",
+    "sha256": "c2f9a3e32789e8782ab6c81aabe65a911493883aaa1449728c5957c4e7040e37"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions/tasks.md",
+    "sha256": "cec516b30e1bf0932ea6a9227837b0d44058b69331acfde7e5b3a571ffe2b718"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-12-mos-914-surface-lifecycle-mvp/.openspec.yaml",
+    "sha256": "ec3a1b167d0ccdb9f7a3f8f370ba8038feb637051c90a0b3fbcc5e9cef45d7a5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-12-mos-914-surface-lifecycle-mvp/design.md",
+    "sha256": "86ddcdb9de515531106758ae1ca70fdf0bc278bf1065276e6be7a78968ddd4c3"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-12-mos-914-surface-lifecycle-mvp/proposal.md",
+    "sha256": "229e010a89c0fbbd7aa0d44778b070f7e8f7a1824ac11a8a3fe7e510024e30de"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-12-mos-914-surface-lifecycle-mvp/specs/surface-lifecycle-publication/spec.md",
+    "sha256": "75854f9b0fae7c7d1c3f90b942f0a960745d96a4676dc8bbb86d90ff7676172f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-12-mos-914-surface-lifecycle-mvp/specs/surface-overview-connection/spec.md",
+    "sha256": "ca3431b1f8f84296c0269cc801546ad05217673d66aac75d08a95f31640f0d0d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-12-mos-914-surface-lifecycle-mvp/tasks.md",
+    "sha256": "919f0bce3ec3292d3a4ea0be308b8e4f0f3e9f056ca2617a73069e9b16270654"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1027-skill-global-toggle/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1027-skill-global-toggle/design.md",
+    "sha256": "dee80a6d387f4e8558e3e028506982a8008a89e82c3bc449207db477e9e9763e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1027-skill-global-toggle/proposal.md",
+    "sha256": "2d117d38a667e78b632e35dfaa54aa35d0a406b3d7a2f12f491b269cc76ecc74"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1027-skill-global-toggle/specs/skill-global-toggle/spec.md",
+    "sha256": "fab45828043c763f75c1df23c9cedabd7e4973eae891dad8d6df506b09d7a6be"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1027-skill-global-toggle/tasks.md",
+    "sha256": "a124742e156ac4982d06f9e26fe8e4b5c8d5889fb72e77c553e24b3fd12b769c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1043-dialog-route/.openspec.yaml",
+    "sha256": "c956e2a907cf0aa23d948e300827f91e46ab77d64e288d98285dfe990bb0d989"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1043-dialog-route/design.md",
+    "sha256": "f06b34c893af5fd4e155ced012956395f3498f80363914af929e501370ea2bf8"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1043-dialog-route/proposal.md",
+    "sha256": "4905210e0211e1ce106381d182860b7f9aeee9377598c28b671f3d6aacff3ef0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1043-dialog-route/specs/dialog-route/spec.md",
+    "sha256": "5c934ca76427a21d5d8d73fe4f5a68e1819c973a1f5e47dc3a15ea568584ac19"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1043-dialog-route/tasks.md",
+    "sha256": "dda2c613818bec1ce6de52043d83311745b5ac0e3ad0b3486b4397eae7f711c0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1045-dialog-export/.openspec.yaml",
+    "sha256": "c956e2a907cf0aa23d948e300827f91e46ab77d64e288d98285dfe990bb0d989"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1045-dialog-export/design.md",
+    "sha256": "0e14e432b5ba21ff6ff5fc4151a8eeba29902634e93209709551a6969d8d976f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1045-dialog-export/proposal.md",
+    "sha256": "4f6e53fd86ecc333632d14c73d7539e65a6087163ccd03a6c8f369b1118b509e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1045-dialog-export/specs/dialog-export/spec.md",
+    "sha256": "56a173af213746d88a670b538e4e8ab1a4d00b48505a8ac68545dbedabebe54f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-1045-dialog-export/tasks.md",
+    "sha256": "c60d5a10ece15cfa1fd4f60ae32add7df21fbd448fb90f51058982a047a55853"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-906-documentation-search-url/.openspec.yaml",
+    "sha256": "010447270992e8e9533b7bbfb4dbdecda78eab560f05c50428c80463aa9e0ec1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-906-documentation-search-url/design.md",
+    "sha256": "849aca071ad4123c133979fbbec0c721fe3f7a71e31dd5954bc2fad0ebb5619b"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-906-documentation-search-url/proposal.md",
+    "sha256": "627e6be0e705936eefac14a04ed790a87ae72e6c5f9a950177071f30a0c86cba"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-906-documentation-search-url/specs/control-center-shell/spec.md",
+    "sha256": "f058e30128fea38343ea491b4cf3512c2e1dbc591f276ac1022750aab09aebf3"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-906-documentation-search-url/specs/documentation-search/spec.md",
+    "sha256": "e34f3afe30cd6d357d07254072e168baa40c2a11308e8e81d014a57c6d0c57c8"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-mos-906-documentation-search-url/tasks.md",
+    "sha256": "04bd8c2fce3c1a797e7ddf972380a5b15b94e44e461f8f58c9f67c8b487ba415"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-update-control-center-contracts-put/.openspec.yaml",
+    "sha256": "010447270992e8e9533b7bbfb4dbdecda78eab560f05c50428c80463aa9e0ec1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-update-control-center-contracts-put/design.md",
+    "sha256": "1fc1af4a37931abb995788bdb4509d4e1b252b9ba84315f96fe9eb3e729aa4e2"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-update-control-center-contracts-put/proposal.md",
+    "sha256": "513e4dada738d4fe889144aad9b4f06c796279a0dae251f5b283a47a199f0a3d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-update-control-center-contracts-put/specs/control-center-http/spec.md",
+    "sha256": "b6d7894e93cda4b4f2d1229d78303ff6a8662e4a7f04b7b2ff73002403800427"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-update-control-center-contracts-put/specs/control-center-mock-server/spec.md",
+    "sha256": "951580bb8c69c08a996cb1415a819f914e00234b9ab5f0b0db2d623266cc3d02"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-update-control-center-contracts-put/specs/skill-card-editing/spec.md",
+    "sha256": "c4aba42816526d89274a4025b5d596efbf8294881ef7d26c0bd23b6187f7a568"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-update-control-center-contracts-put/specs/skill-connection-settings/spec.md",
+    "sha256": "d3dad4ef4a3eebdde5d1a4837b14717e98542e253d26949535ae557d3fba5674"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-update-control-center-contracts-put/specs/skill-domain-management/spec.md",
+    "sha256": "3612df6bbcd87fa8bf802be3935a7b422ac61da1669f6700ac1d66b5767424be"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-13-update-control-center-contracts-put/tasks.md",
+    "sha256": "98c6c15e913ab1c221493ec8969c76360e65db3189c71e250570bbc2ab2e1c1f"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-14-add-optional-knowledge-base/.openspec.yaml",
+    "sha256": "010447270992e8e9533b7bbfb4dbdecda78eab560f05c50428c80463aa9e0ec1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-14-add-optional-knowledge-base/design.md",
+    "sha256": "76110bb2afca215e8404fcd00c81c1ddc9f0c29caddef3af07a0a833beff2667"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-14-add-optional-knowledge-base/proposal.md",
+    "sha256": "2ad551556756d7a32617702fba28b14302f5212546d96e66291f7d993b63e095"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-14-add-optional-knowledge-base/specs/code-quality-gates/spec.md",
+    "sha256": "f14b53e8e4e32c375bc54de6443599f2bf003dabbf5ab2d5ab06f22045b9f570"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-14-add-optional-knowledge-base/specs/control-center-mock-server/spec.md",
+    "sha256": "74f740817881e745262ea22e8ca4a1233935ce9f49a5207a7fda7a3dc77e847e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-14-add-optional-knowledge-base/specs/knowledge-base-editor/spec.md",
+    "sha256": "878e640610727625339945dbad63b3a12e681ca1c06b3d932c9a410b515362e4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-14-add-optional-knowledge-base/specs/knowledge-base-export/spec.md",
+    "sha256": "bf212f9c9d3c1b0801be80fc63f7b08c5f47edbaf294188f6b11980819ed6b62"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-14-add-optional-knowledge-base/specs/knowledge-base-module/spec.md",
+    "sha256": "1aaad0aad54ba9222a4198a1aaf009a39aa4e6ea57c43d19facc5ebb3b3a8dd1"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-14-add-optional-knowledge-base/specs/knowledge-base-registry/spec.md",
+    "sha256": "da86d44db2851bfe471819fd01975a648250c25717916ee60dd9960105b48c39"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-14-add-optional-knowledge-base/tasks.md",
+    "sha256": "8da528d3d8cc27463bfea88b49dcb002aa07f2969bb0721531c5178045097e6d"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-14-add-optional-knowledge-base/verification.md",
+    "sha256": "a4c4fe89b50689e5de9b045997bb86c5606292035a15df813affa4e9aa0faddd"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-add-optional-ab-testing/.openspec.yaml",
+    "sha256": "cd54fe01555559ffd5cf6f7f1d1b06209492e5ba9147cdc3800201c09e2291d0"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-add-optional-ab-testing/design.md",
+    "sha256": "fba208c2d27c670ff0e981d5fa17d2121df16ff67ca66d8df0adf255fff2cee6"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-add-optional-ab-testing/proposal.md",
+    "sha256": "93d219f6c749cda697f3b1dcc231e3d4dbf2ea71b99267f7d610b19ba390edfd"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-add-optional-ab-testing/specs/ab-testing-editor/spec.md",
+    "sha256": "d6609115890ed3f2db3b2b9889dce58fd6274a323579c7bd40aa328569d76891"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-add-optional-ab-testing/specs/ab-testing-export/spec.md",
+    "sha256": "1a8bec1cfb40b3759e54016c5007595a1e457c227a09a6e70e6bc6b92814607b"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-add-optional-ab-testing/specs/ab-testing-module/spec.md",
+    "sha256": "f2f83ebaa1bc01e27fd5cf7aa988e18c57cabb01ff114a41602322afc71eed37"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-add-optional-ab-testing/specs/ab-testing-registry/spec.md",
+    "sha256": "465d4a87309f1d1049fd0bf5a8e8d1bffa8910bc403b71df2ca7d78053c5bb27"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-add-optional-ab-testing/specs/code-quality-gates/spec.md",
+    "sha256": "027c401a133d32780ca5aeee9d3c40b1ca1624494d570e1c10306e4757dabb0e"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-add-optional-ab-testing/specs/control-center-mock-server/spec.md",
+    "sha256": "b94c273b466861c5f2f08ba44870fcec71ab340738713ec0f73d5ebea637a1e7"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-add-optional-ab-testing/tasks.md",
+    "sha256": "e005921905e56e00cead68fd3c58d7ae30b9ffb79d6313de3162734ec30f1073"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-add-optional-ab-testing/verification.md",
+    "sha256": "c3669c8b4e13b0ab739b96413a97587cd68b3d4670d1de8ff72ffcf6b144d557"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-update-control-center-api-contracts/.openspec.yaml",
+    "sha256": "c5936a7e8ac90455175dd905c9e8fb9d33cf82476be795f24133b51ef95c3d96"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-update-control-center-api-contracts/design.md",
+    "sha256": "58f8cdbd387508c10285387b3fcdbf208bfdb73559a8243997af676e38df6156"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-update-control-center-api-contracts/proposal.md",
+    "sha256": "6ece6e82490038d5ce491f19acf089c10a27dc845f74c2cf035ac37826c13bd8"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-update-control-center-api-contracts/specs/ab-testing-registry/spec.md",
+    "sha256": "209a9388acfcb2ac83ff6104a2c5d2f723b9e6395335b0f950befdf711b322f5"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-update-control-center-api-contracts/specs/control-center-api-integration/spec.md",
+    "sha256": "3c852185ac73c7b68a17ee03406953c2910b2ccabff864961d1530b279e12560"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-update-control-center-api-contracts/specs/control-center-mock-server/spec.md",
+    "sha256": "2441e5c89518d3c68f9edae32a788ca63bc4b6a5ffeb9fd5515a396f601ad4f8"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-update-control-center-api-contracts/specs/dialog-export/spec.md",
+    "sha256": "c488ba5a99b2197ab66f38fb74cc7fcd1076769a3ebf4226be100ca248d3e821"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-update-control-center-api-contracts/specs/knowledge-base-registry/spec.md",
+    "sha256": "d15bfbc57ee26f736eaa47aa417180d7f63f26b4da516d279546e48cfe7ae107"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-update-control-center-api-contracts/specs/surface-overview-connection/spec.md",
+    "sha256": "2de60313c7425ecd0ee1c776b97faee68f295398527d4c2e99b7e9a058b1e52a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-update-control-center-api-contracts/specs/surface-registration/spec.md",
+    "sha256": "20183114e812bea2bd54cd2c4f54b49277f9c485bb68fbbe9032d948c3a1e047"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-15-update-control-center-api-contracts/tasks.md",
+    "sha256": "6002750f35319a52ce0c9fcd50731385ada811844c6edc3499943d87051dd478"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-16-fix-existing-scenarios-test-contour/.openspec.yaml",
+    "sha256": "c5936a7e8ac90455175dd905c9e8fb9d33cf82476be795f24133b51ef95c3d96"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-16-fix-existing-scenarios-test-contour/design.md",
+    "sha256": "19091c1e11cb73197df85a3f1d61855aad7e986abf3151465f39fc1255545a3c"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-16-fix-existing-scenarios-test-contour/proposal.md",
+    "sha256": "bcf568f019a0ba2bc8c5ad683fa118d0589da61b90715b9fda309695ef8724e4"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-16-fix-existing-scenarios-test-contour/specs/dialog-export/spec.md",
+    "sha256": "d3b1266f62851b034885bb6f9bb82b0349f5950993467d8d72886e3bd8e8ac5a"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-16-fix-existing-scenarios-test-contour/specs/dialog-registry/spec.md",
+    "sha256": "3590e25793853406e9b0fd6ff9c4c094d4c4f7f8cd52f0dd119c96527ad8ed24"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-16-fix-existing-scenarios-test-contour/specs/surface-registration/spec.md",
+    "sha256": "cbf6470a59c038b83faefe9df58aac4b3f935d5ee6ae2e2cfcaebdab4c9b8ed7"
+  },
+  {
+    "path": "openspec/changes/archive/2026-10-16-fix-existing-scenarios-test-contour/tasks.md",
+    "sha256": "d76039d131500b3d79043bf7bc250609611bd058daab69f7386d18f0628e6a99"
+  },
+  {
+    "path": "openspec/changes/mos-1015-report-constructor/.openspec.yaml",
+    "sha256": "5edc88a042fdda2550686e54689bdd6779b13445bcaf782a1af9426634b9b4fb"
+  },
+  {
+    "path": "openspec/changes/mos-1015-report-constructor/design.md",
+    "sha256": "7b45547f74f69aeac21f5357628ce94f373c4e61a737c7b47fe43fb292bd9d4f"
+  },
+  {
+    "path": "openspec/changes/mos-1015-report-constructor/proposal.md",
+    "sha256": "861fbf568514355c6b5bb251bef2697e4197533f0b3f10b72204d5454fad2c09"
+  },
+  {
+    "path": "openspec/changes/mos-1015-report-constructor/specs/dialog-selection-draft/spec.md",
+    "sha256": "cff8f90dcd26c4e52e96c9d8c7fa214ca4bc6f3780eed58fd59811b777b6af07"
+  },
+  {
+    "path": "openspec/changes/mos-1015-report-constructor/specs/report-constructor-draft/spec.md",
+    "sha256": "07f81f1887a214bb005e85061a813de573484196c7faf3eb9a0bbb87ab92b132"
+  },
+  {
+    "path": "openspec/changes/mos-1015-report-constructor/tasks.md",
+    "sha256": "119a9e51350cebc6dd1b3417389d07b3e92be65262b2de26940d9687916a98e9"
+  },
+  {
+    "path": "openspec/changes/mos-1016-report-template-scheduling/.openspec.yaml",
+    "sha256": "5edc88a042fdda2550686e54689bdd6779b13445bcaf782a1af9426634b9b4fb"
+  },
+  {
+    "path": "openspec/changes/mos-1016-report-template-scheduling/design.md",
+    "sha256": "0a00e34bb393675d3f73d766a3008d3c271370dbe7248d1260414806e8c30048"
+  },
+  {
+    "path": "openspec/changes/mos-1016-report-template-scheduling/proposal.md",
+    "sha256": "539e8d599a4d61f9a74e97c8902225051c7c8841f8cbf5d8c79172b31a050b12"
+  },
+  {
+    "path": "openspec/changes/mos-1016-report-template-scheduling/specs/report-template-scheduling-draft/spec.md",
+    "sha256": "123929540220e08cf97635697edd5ae17c15b6ee22bb96a76e0055766b1e707b"
+  },
+  {
+    "path": "openspec/changes/mos-1016-report-template-scheduling/tasks.md",
+    "sha256": "a5f9a9500a3290e9133afba12c4ef1003f96c1f2c039256cd54c8fc7317a9960"
+  },
+  {
+    "path": "openspec/changes/mos-1018-skill-phrase-conflicts/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/mos-1018-skill-phrase-conflicts/design.md",
+    "sha256": "339d8a7a338c3a9937c8a252d2c340e188e5328a3c414bf9c2ad8325e6f87b0f"
+  },
+  {
+    "path": "openspec/changes/mos-1018-skill-phrase-conflicts/proposal.md",
+    "sha256": "9afa3083fcead3b03c892d3fce3f7aeea2e0a802a4d1e4c470f4d3c2332215f5"
+  },
+  {
+    "path": "openspec/changes/mos-1018-skill-phrase-conflicts/specs/skill-phrase-conflicts/spec.md",
+    "sha256": "499103ce10274ddf12eed84974757f5a169f21e17f55c8cf83e5a888ebc17b6c"
+  },
+  {
+    "path": "openspec/changes/mos-1018-skill-phrase-conflicts/tasks.md",
+    "sha256": "ee02382ebeafe2f35b9f9b646e25934b1b4b17aac9b8f033a1063ae9d3fe63ef"
+  },
+  {
+    "path": "openspec/changes/mos-1023-skill-environment-tokens/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/mos-1023-skill-environment-tokens/design.md",
+    "sha256": "d2944e6cf270a88f90ddfb57d0d69669e28620942ee86fceff681bda0e9c04c8"
+  },
+  {
+    "path": "openspec/changes/mos-1023-skill-environment-tokens/proposal.md",
+    "sha256": "40c764c37f0017c01cdd91d0283c5c0cc031d460dcb1d2f254833e84b648bc3a"
+  },
+  {
+    "path": "openspec/changes/mos-1023-skill-environment-tokens/specs/skill-environment-tokens/spec.md",
+    "sha256": "130aa7f19daa88428808af5ccd717482308318029a30764ecedc7985ac760ace"
+  },
+  {
+    "path": "openspec/changes/mos-1023-skill-environment-tokens/tasks.md",
+    "sha256": "8da3635da6e0aa46ea45b20f321b44ecce816c6dcaeec568856b011df1492c75"
+  },
+  {
+    "path": "openspec/changes/mos-1025-skill-monitoring/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/mos-1025-skill-monitoring/design.md",
+    "sha256": "705131c4ba33d553c2dbae6edb90afea8da28208bb50398a09e602175ce24c81"
+  },
+  {
+    "path": "openspec/changes/mos-1025-skill-monitoring/proposal.md",
+    "sha256": "1056c3c2d4d63e86828856b43113d8d121e42275c77ee2c6fbb10daf8de5ef37"
+  },
+  {
+    "path": "openspec/changes/mos-1025-skill-monitoring/specs/skill-monitoring/spec.md",
+    "sha256": "07d874d8fe439797c8a0b7d0efe6db455f970a73f4fd574929ba0426b631cdee"
+  },
+  {
+    "path": "openspec/changes/mos-1025-skill-monitoring/tasks.md",
+    "sha256": "069e9a4f274aa0355b063502338bdf90a04e6d10639d012feaa97f2b4745c9c1"
+  },
+  {
+    "path": "openspec/changes/mos-1026-skill-operations-info/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/mos-1026-skill-operations-info/design.md",
+    "sha256": "6b3877218cf8a9d3e0ccd63e0eb5a40d623bac80654d41a71bf505c49491cf91"
+  },
+  {
+    "path": "openspec/changes/mos-1026-skill-operations-info/proposal.md",
+    "sha256": "a2177d7a3dee5836dda19c259612f61019cbf3eabee7a510fbfb86485be2da67"
+  },
+  {
+    "path": "openspec/changes/mos-1026-skill-operations-info/specs/skill-operations-info/spec.md",
+    "sha256": "352c91a51f2b01e43ec712c33b0310bd04774011fe156c45621e07a950201488"
+  },
+  {
+    "path": "openspec/changes/mos-1026-skill-operations-info/tasks.md",
+    "sha256": "250b6b97a5d70ad1efffae9927063525a710e804b2fd8b0403a7da7fad318553"
+  },
+  {
+    "path": "openspec/changes/mos-1030-skill-result-analytics/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/mos-1030-skill-result-analytics/design.md",
+    "sha256": "da911a70a964bac23ed85418f3b9b54026d3aba5daa3fe5c3b36004db35c4d62"
+  },
+  {
+    "path": "openspec/changes/mos-1030-skill-result-analytics/proposal.md",
+    "sha256": "34dbd05760c72035b2f44be5d3acb414f9032d297cf5054c3ddafc104b3c0b42"
+  },
+  {
+    "path": "openspec/changes/mos-1030-skill-result-analytics/specs/skill-result-analytics/spec.md",
+    "sha256": "000a1ac081a6f5c376a2049809e5332dab8ae7666df0243d78816cab77d393d7"
+  },
+  {
+    "path": "openspec/changes/mos-1030-skill-result-analytics/tasks.md",
+    "sha256": "863461aedfad51318304966a20c3925b4a82cda690e44c64db299fdefba4e468"
+  },
+  {
+    "path": "openspec/changes/mos-1031-skill-audit-history/.openspec.yaml",
+    "sha256": "d707823457f58b4f938a99bc049bddd9b937affec2d09c976c9a16a9dcd03f77"
+  },
+  {
+    "path": "openspec/changes/mos-1031-skill-audit-history/design.md",
+    "sha256": "3e5b5e3f5130035ea501bbce273388fbd9ac3990cba5d82c2244b6088ffd53db"
+  },
+  {
+    "path": "openspec/changes/mos-1031-skill-audit-history/proposal.md",
+    "sha256": "59785c7c1d12d1619322c6e1af8451fa1b983193bd7ad1ff1ef9b92384fe3a8e"
+  },
+  {
+    "path": "openspec/changes/mos-1031-skill-audit-history/specs/skill-audit-history/spec.md",
+    "sha256": "cdfaf7e2a954e49725fd577fc624c7d29d57b06fcddbf7c20ccb73c74feaf87f"
+  },
+  {
+    "path": "openspec/changes/mos-1031-skill-audit-history/tasks.md",
+    "sha256": "83c42abdbb9fc3a2f81aaa4a8826f0657df08f26cdc2b884b23aa29d103dada0"
+  },
+  {
+    "path": "openspec/changes/mos-1249-feedback-api/.openspec.yaml",
+    "sha256": "1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9"
+  },
+  {
+    "path": "openspec/changes/mos-1249-feedback-api/design.md",
+    "sha256": "0b15bcebfea15e35aca35a90c835a00efd892bb9a962fc16401892ca6017d91d"
+  },
+  {
+    "path": "openspec/changes/mos-1249-feedback-api/proposal.md",
+    "sha256": "5cc397bd1aab8722961df260fbc16216069816d3fe02d2a82eab09b9e41506ac"
+  },
+  {
+    "path": "openspec/changes/mos-1249-feedback-api/specs/feedback-api/spec.md",
+    "sha256": "a783836ee1f191457d5331e87e2befaf809740fe39125ab302457645b9a591a3"
+  },
+  {
+    "path": "openspec/changes/mos-1249-feedback-api/tasks.md",
+    "sha256": "21dbfcf3e2d71406070ee374fbb77c76955928326297ec0ca97af4690a2354dd"
+  },
+  {
+    "path": "openspec/changes/mos-1250-feedback-registry/.openspec.yaml",
+    "sha256": "1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9"
+  },
+  {
+    "path": "openspec/changes/mos-1250-feedback-registry/design.md",
+    "sha256": "d5d1bd912b9abc55c704a06c9d0f6620b5d17b15160fc58accd946319e3fd9c2"
+  },
+  {
+    "path": "openspec/changes/mos-1250-feedback-registry/proposal.md",
+    "sha256": "540f57a298f81e6de648895977fc6ae01e9ee456c5baed5de6d3b58ef7ef3057"
+  },
+  {
+    "path": "openspec/changes/mos-1250-feedback-registry/specs/feedback-registry/spec.md",
+    "sha256": "f2f2a142dbb84eb1d61107644d0a05028abb70b4bafacd778d30807e8d11606b"
+  },
+  {
+    "path": "openspec/changes/mos-1250-feedback-registry/tasks.md",
+    "sha256": "6aca5e571483d2e6312d4df1280018f4650d2b7da462ef90209715f078f5c3bf"
+  },
+  {
+    "path": "openspec/changes/mos-1251-feedback-editor/.openspec.yaml",
+    "sha256": "1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9"
+  },
+  {
+    "path": "openspec/changes/mos-1251-feedback-editor/design.md",
+    "sha256": "dfd986336cf1b687206752fb8d436c162dd2c38e8ba87b807809c1b5fbd9c028"
+  },
+  {
+    "path": "openspec/changes/mos-1251-feedback-editor/proposal.md",
+    "sha256": "5944a99ea97776fcf405b657cfdb6fd1b79a999ab26bf69245461f47d48c6240"
+  },
+  {
+    "path": "openspec/changes/mos-1251-feedback-editor/specs/feedback-editor/spec.md",
+    "sha256": "03e584e4c9d6d1d99f9e0949949dce92b1fd1cc83a5378afaf67fe86ba4b31ee"
+  },
+  {
+    "path": "openspec/changes/mos-1251-feedback-editor/tasks.md",
+    "sha256": "67f76db911e4bd852d2dfa4d24d5bcd64e57aacb8693a586210c340c803f1906"
+  },
+  {
+    "path": "openspec/changes/mos-1254-feedback-questions/.openspec.yaml",
+    "sha256": "1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9"
+  },
+  {
+    "path": "openspec/changes/mos-1254-feedback-questions/design.md",
+    "sha256": "181f2800f8e8f359147ef9c9d3a6eb4f3d4daafa20324dd3b8e1cf0c23d54e10"
+  },
+  {
+    "path": "openspec/changes/mos-1254-feedback-questions/proposal.md",
+    "sha256": "87cfa93c0aee962cdc7371784a6e22f37c3d8413f1c9904f05c051112e196e41"
+  },
+  {
+    "path": "openspec/changes/mos-1254-feedback-questions/specs/feedback-questions/spec.md",
+    "sha256": "eeb2d92c74667f09a97d933390176b2771d39a1596a4f0c21cf0e23e39c9d27c"
+  },
+  {
+    "path": "openspec/changes/mos-1254-feedback-questions/tasks.md",
+    "sha256": "2920f54aba3994e856679db78d4706c553e7a97be0c17d420643b7f3d72fba65"
+  },
+  {
+    "path": "openspec/changes/mos-1255-feedback-preview/.openspec.yaml",
+    "sha256": "1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9"
+  },
+  {
+    "path": "openspec/changes/mos-1255-feedback-preview/design.md",
+    "sha256": "1d2766da0fa4246267b6a42e35e503788f668eda21b496504ac7e53b66085153"
+  },
+  {
+    "path": "openspec/changes/mos-1255-feedback-preview/proposal.md",
+    "sha256": "5dffd3459e0cd0958fcfedc239878faa4e06c5a1f08c55565bcce59b0268e0a1"
+  },
+  {
+    "path": "openspec/changes/mos-1255-feedback-preview/specs/feedback-preview/spec.md",
+    "sha256": "8917ec33bc3768a3a0616a95ecd6719894e4bc3f659c87779ce1cde17a132a51"
+  },
+  {
+    "path": "openspec/changes/mos-1255-feedback-preview/tasks.md",
+    "sha256": "311d06349f6bf1781845fe300af6cbb6df900c77120899a673a194c77583b12b"
+  },
+  {
+    "path": "openspec/changes/mos-1256-feedback-lifecycle/.openspec.yaml",
+    "sha256": "1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9"
+  },
+  {
+    "path": "openspec/changes/mos-1256-feedback-lifecycle/design.md",
+    "sha256": "6b76dcf90e9ed606eedf4ad05bd0c40eb00d97b8ae3d049e14f6693e153ffa2a"
+  },
+  {
+    "path": "openspec/changes/mos-1256-feedback-lifecycle/proposal.md",
+    "sha256": "1e76481999f08e03862f9b89443e8ef01c4b13f0a88f1dcb1d395c53a9e26a6b"
+  },
+  {
+    "path": "openspec/changes/mos-1256-feedback-lifecycle/specs/feedback-lifecycle/spec.md",
+    "sha256": "6c5006da2ccb955a9a949df209a967350a0c44bd35aee76b29f9d5f24853b770"
+  },
+  {
+    "path": "openspec/changes/mos-1256-feedback-lifecycle/tasks.md",
+    "sha256": "b5c7255ec9131d9326dba7b9d5e58d7b15f72f4bce953469d53a7ee3be2bdd5e"
+  },
+  {
+    "path": "openspec/changes/mos-1257-feedback-labels/.openspec.yaml",
+    "sha256": "1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9"
+  },
+  {
+    "path": "openspec/changes/mos-1257-feedback-labels/design.md",
+    "sha256": "696819963b5df1695641c2fdf0ee6849591ca103b97eeb23e0375aaae062a585"
+  },
+  {
+    "path": "openspec/changes/mos-1257-feedback-labels/proposal.md",
+    "sha256": "00fef67d22a0c465537f081c16948042d0980641198736d52f3e855780a60846"
+  },
+  {
+    "path": "openspec/changes/mos-1257-feedback-labels/specs/feedback-labels/spec.md",
+    "sha256": "7b3704e24f3f64ac9d5d08e20a152bfd245c3b02585c87a5a91e5b641060e24c"
+  },
+  {
+    "path": "openspec/changes/mos-1257-feedback-labels/tasks.md",
+    "sha256": "173a3d33a3242cd2a4cf1540f3fd6f89c027182359f46045f909966955925899"
+  },
+  {
+    "path": "openspec/changes/mos-1258-feedback-conditions/.openspec.yaml",
+    "sha256": "1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9"
+  },
+  {
+    "path": "openspec/changes/mos-1258-feedback-conditions/design.md",
+    "sha256": "64e879ed2c1869a8173a35558feed6bb708ba35c2f1c112f811a4903beebb948"
+  },
+  {
+    "path": "openspec/changes/mos-1258-feedback-conditions/proposal.md",
+    "sha256": "a38950f7a8478421fbe6932afa0c066823aba7c812683175dd7d762f57c0598f"
+  },
+  {
+    "path": "openspec/changes/mos-1258-feedback-conditions/specs/feedback-conditions/spec.md",
+    "sha256": "875d5c7c0118d43033967eeca0caf716d1e029008f5034745a742411b720232e"
+  },
+  {
+    "path": "openspec/changes/mos-1258-feedback-conditions/tasks.md",
+    "sha256": "c749150ccdfb4fc050b808e9a0b72f89f33ab1a15802eb745edf4d1b7ddaa757"
+  },
+  {
+    "path": "openspec/changes/mos-1259-feedback-saved-filters/.openspec.yaml",
+    "sha256": "1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9"
+  },
+  {
+    "path": "openspec/changes/mos-1259-feedback-saved-filters/design.md",
+    "sha256": "ffd8b183f81be81aee20d199b76cc7ad73ad196b604a41ead9d56019778b8e08"
+  },
+  {
+    "path": "openspec/changes/mos-1259-feedback-saved-filters/proposal.md",
+    "sha256": "c955adf218151450f06e1260040fd65dff6cf8905ca49eb2720b8d5908da983b"
+  },
+  {
+    "path": "openspec/changes/mos-1259-feedback-saved-filters/specs/feedback-saved-filters/spec.md",
+    "sha256": "4e9aee0264a677b7dd13a6d4a3bb2eb2bd648b52be1b877a19e86bc33e36655f"
+  },
+  {
+    "path": "openspec/changes/mos-1259-feedback-saved-filters/tasks.md",
+    "sha256": "029e84d2fb5fad51da26bf567325709055405101a5c91cebddbf9159f04b3b5a"
+  },
+  {
+    "path": "openspec/changes/mos-1260-feedback-export/.openspec.yaml",
+    "sha256": "1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9"
+  },
+  {
+    "path": "openspec/changes/mos-1260-feedback-export/design.md",
+    "sha256": "e934d239a4cb62e87eb3b2a9ecdf043830010f61dfd938177217a67c0a4a363f"
+  },
+  {
+    "path": "openspec/changes/mos-1260-feedback-export/proposal.md",
+    "sha256": "c3a68bc94f36aae32ad654851b0f4e015c0ef74b08163ca1b9ab0a8eeb9fc953"
+  },
+  {
+    "path": "openspec/changes/mos-1260-feedback-export/specs/feedback-export/spec.md",
+    "sha256": "a490622da85bbfd7dc20bc4f1714896427541bfeadb639c6de4b5af01994ea2b"
+  },
+  {
+    "path": "openspec/changes/mos-1260-feedback-export/tasks.md",
+    "sha256": "7e5b68ad71aa7ad76b6beb5eea6607d1d985ffb800261b133f403d33b77a5e65"
+  },
+  {
+    "path": "openspec/changes/mos-916-report-templates/.openspec.yaml",
+    "sha256": "5edc88a042fdda2550686e54689bdd6779b13445bcaf782a1af9426634b9b4fb"
+  },
+  {
+    "path": "openspec/changes/mos-916-report-templates/design.md",
+    "sha256": "0d2aff996b1929f3f092dfe2880144a6b53cd283b3d92bf3b50e6bdeab4b96c1"
+  },
+  {
+    "path": "openspec/changes/mos-916-report-templates/proposal.md",
+    "sha256": "81c9f87e8ae9f4980a2bb3e7ac0dbe23c5603671a0ec0ebd5df0a58b43df2ec8"
+  },
+  {
+    "path": "openspec/changes/mos-916-report-templates/specs/report-template-access/spec.md",
+    "sha256": "27a08331b5695a422362e7ae045beaadb1e55daa008b4575dd89e4b3b72e4d97"
+  },
+  {
+    "path": "openspec/changes/mos-916-report-templates/tasks.md",
+    "sha256": "13bdf61d45b55a7174dcf2feabe19d7ec7e15e1cd7f5c68f5179c5f10b498e12"
+  },
+  {
+    "path": "openspec/changes/mos-919-report-csv-export/.openspec.yaml",
+    "sha256": "5edc88a042fdda2550686e54689bdd6779b13445bcaf782a1af9426634b9b4fb"
+  },
+  {
+    "path": "openspec/changes/mos-919-report-csv-export/design.md",
+    "sha256": "78b1d7657f6bd8e4a8146deadf77ad88dec8cefcaff3a45f977a3961f14d578c"
+  },
+  {
+    "path": "openspec/changes/mos-919-report-csv-export/proposal.md",
+    "sha256": "261e54647980a4e36846da478e758ef3dfed5ec408f1532a591e4ab185ee3c80"
+  },
+  {
+    "path": "openspec/changes/mos-919-report-csv-export/specs/report-export-availability/spec.md",
+    "sha256": "db3b4fffc78e6d7bfbd545f797e73e20095e84b231da19f828d5cb4e6d9fa33e"
+  },
+  {
+    "path": "openspec/changes/mos-919-report-csv-export/tasks.md",
+    "sha256": "503bf4ba27ecd972a60ed29b57c15360db6d3a54fd753b196ab4fa9bb67f18e5"
+  },
+  {
+    "path": "openspec/changes/reconcile-control-center-backlog/.openspec.yaml",
+    "sha256": "9cfa2ab963a8c9b58eecdb9fd5b55544e988fee8de8b887226ffc32d27744459"
+  },
+  {
+    "path": "openspec/changes/reconcile-control-center-backlog/design.md",
+    "sha256": "ad825c1257cf7453408cbec289c3898b7235a9ce3625b71fbe8bb4d3bce3a82b"
+  },
+  {
+    "path": "openspec/changes/reconcile-control-center-backlog/proposal.md",
+    "sha256": "1a97715e2566329143febbb509e934a88b4ecc478628fac559da690fa59bd879"
+  },
+  {
+    "path": "openspec/changes/reconcile-control-center-backlog/specs/control-center-backlog-reconciliation/spec.md",
+    "sha256": "a4dbe5d2ca48741281d27b96eb0405edac04d071e37924ec18de7a60d6d23f36"
+  },
+  {
+    "path": "openspec/changes/reconcile-control-center-backlog/tasks.md",
+    "sha256": "15a523c9a76712e84253e539c1196069b64896bb09cad98feacbcf91c0cd5c46"
+  },
+  {
+    "path": "openspec/config.yaml",
+    "sha256": "07a48798af3c9a8fa9e7b857c0747de7ddc9603d3f6fe1530dc6cdd5f58f2201"
+  },
+  {
+    "path": "openspec/specs/.gitkeep",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "openspec/specs/ab-testing-editor/spec.md",
+    "sha256": "7cffebc09d33477bc300ec9c76f2989c9e095846e2a90fc74747b3393c2d13e9"
+  },
+  {
+    "path": "openspec/specs/ab-testing-export/spec.md",
+    "sha256": "d672a8a81e8847e28f91910e2b34510ff320ebf7a3a81df219923195ec5801ca"
+  },
+  {
+    "path": "openspec/specs/ab-testing-module/spec.md",
+    "sha256": "0013ea05d4c913d321baae18dca1076029792bf58ffc06e6a1715d53eca60366"
+  },
+  {
+    "path": "openspec/specs/ab-testing-registry/spec.md",
+    "sha256": "f23569188a872ab976bbe1ae8be032a667c854ed4a544404f068e1d6e4a59bd5"
+  },
+  {
+    "path": "openspec/specs/code-quality-gates/spec.md",
+    "sha256": "1e55e2fe646805cbe206f6a8ae6de00e38354657fc541bf3b39a2415a4797494"
+  },
+  {
+    "path": "openspec/specs/control-center-api-integration/spec.md",
+    "sha256": "697c9c5fcb5e55e361662f93785ce5c2eb55ea8efd4992d18825c36b0107db09"
+  },
+  {
+    "path": "openspec/specs/control-center-http/spec.md",
+    "sha256": "31fe54a7c9a7c16556b6c02582b13a204560dfce35d33e49c4dd3ec2dfa6b58a"
+  },
+  {
+    "path": "openspec/specs/control-center-mock-server/spec.md",
+    "sha256": "54cd451a911c13129fbf8be64b06f920a837d4c816255f6ee6f5ee65f4406588"
+  },
+  {
+    "path": "openspec/specs/control-center-permissions/spec.md",
+    "sha256": "867d98333458e571ec84c07defc20f0c6b310dc169b963dc1e4a3a56cf737f38"
+  },
+  {
+    "path": "openspec/specs/control-center-shell/spec.md",
+    "sha256": "4274bde7ecdf7e18bdcf73cb1755886f3e61bc2cbea3728da0a382006dd0276f"
+  },
+  {
+    "path": "openspec/specs/dialog-answer-insights/spec.md",
+    "sha256": "e3050057cf350daf4cf7c3d769142bff823151eb87ec8330756158be43adcef9"
+  },
+  {
+    "path": "openspec/specs/dialog-category-addition/spec.md",
+    "sha256": "cba0585a946e649233f28d0e3775f32dfb36cbddc80277ab9ac2c56d04819e93"
+  },
+  {
+    "path": "openspec/specs/dialog-details/spec.md",
+    "sha256": "25fa6ea2bb92bbcd37ac24d6fb668b6756e7be04dd36d3e23b2abb399d666334"
+  },
+  {
+    "path": "openspec/specs/dialog-export/spec.md",
+    "sha256": "7bbd9695f2eb94ce30be5dfe23376c287e5cdfc2cd7e2f31143ae7c2322a42f6"
+  },
+  {
+    "path": "openspec/specs/dialog-registry/spec.md",
+    "sha256": "ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83"
+  },
+  {
+    "path": "openspec/specs/dialog-route/spec.md",
+    "sha256": "83f4c70246bf8a1b9f0e1e1ec1488a1a6977d232b981516cfede6c15e722986b"
+  },
+  {
+    "path": "openspec/specs/dialog-saved-filters/spec.md",
+    "sha256": "469a50066d251b8f451404331dfe27f40f8509493b7a8c02d820ca75672ecb4a"
+  },
+  {
+    "path": "openspec/specs/dialog-selection-builder/spec.md",
+    "sha256": "87d9ad1687832a1f1eb54a69b65d168cfe04a94fdc5bed1f95ea25983afc8ca6"
+  },
+  {
+    "path": "openspec/specs/documentation-search/spec.md",
+    "sha256": "f9b88a2c524c152a4817b5e05861bb6c6e2ef3a9debf548e5b7a852135bb0c6f"
+  },
+  {
+    "path": "openspec/specs/knowledge-base-editor/spec.md",
+    "sha256": "c2729b5220fc690b2866fd760bde2751fb43de1e13d70e4749f60438c72fbc36"
+  },
+  {
+    "path": "openspec/specs/knowledge-base-export/spec.md",
+    "sha256": "87733e1890d135f29ef5629b8e1b2a3735e4f8fa3e8c9fdbad995a491c400973"
+  },
+  {
+    "path": "openspec/specs/knowledge-base-module/spec.md",
+    "sha256": "7e9d5498dd603b9ef5e7b241f81857dc767c3532009fa68ede116f4e496809f0"
+  },
+  {
+    "path": "openspec/specs/knowledge-base-registry/spec.md",
+    "sha256": "909cde42dadfff0bad8caa5a75e09c01f5b3c538b6c2033c8cfe2d4a6b1f1733"
+  },
+  {
+    "path": "openspec/specs/local-session-demo/spec.md",
+    "sha256": "c14dee8705ed68bc3d5d8de4ce16a48b7594f3516939152848aeba0b157d8d24"
+  },
+  {
+    "path": "openspec/specs/mpmm-session/spec.md",
+    "sha256": "07fa51635fad1a05f8b412a57f34eed7e5d3e8e3d792ea55207f50b62f58c6de"
+  },
+  {
+    "path": "openspec/specs/skill-bulk-rollout/spec.md",
+    "sha256": "38a5f4996a9d8e1506aa8094ef313383b29d1b113219eff6435028bc6eeaae11"
+  },
+  {
+    "path": "openspec/specs/skill-card-editing/spec.md",
+    "sha256": "4901cf34abc8fd2b196f26f4017805a9281bc3b82a3e5b080942b9abe56c7229"
+  },
+  {
+    "path": "openspec/specs/skill-catalog-experience/spec.md",
+    "sha256": "21bff8f61b30215d95b59b0adbb1059ac3b64e80be358fa6bfa64b3e7cbed942"
+  },
+  {
+    "path": "openspec/specs/skill-checks-training/spec.md",
+    "sha256": "9ac5fe8a92ecff214ccdd1998b7d69a2d9083d0bd222ff62541945567c1152cc"
+  },
+  {
+    "path": "openspec/specs/skill-connection-settings/spec.md",
+    "sha256": "750866cd4e2856fba3c843027e8b8a373812a0ccbdc6449aa8a8d71c6001d341"
+  },
+  {
+    "path": "openspec/specs/skill-domain-management/spec.md",
+    "sha256": "b5f3ffc7329e9315b94484b0ce0333711634708779cd3b07fba734fdbbb66f25"
+  },
+  {
+    "path": "openspec/specs/skill-global-toggle/spec.md",
+    "sha256": "80dc6e3d1bdb7db54f74171f9cc8dae9e68494e9de158795f59ff2b72c07b2e9"
+  },
+  {
+    "path": "openspec/specs/skill-lifecycle/spec.md",
+    "sha256": "0d568a12a535816dae50fe6831d8a8b1232d360a5ea0649a5526b9e43bfbf30c"
+  },
+  {
+    "path": "openspec/specs/skill-registration/spec.md",
+    "sha256": "47df387d95bd503dc10e26a214635b3d46cd1c41dfd3fcfe5089f7c1a449b9e2"
+  },
+  {
+    "path": "openspec/specs/skill-review/spec.md",
+    "sha256": "51fdde74c8221ebec090d90cfe86bfe9b0df596afc12866d2312595d379582e1"
+  },
+  {
+    "path": "openspec/specs/skill-training-phrases/spec.md",
+    "sha256": "740d206c1bec064cd6f822d556d1c087a018316300a429c611190fe48fda22d3"
+  },
+  {
+    "path": "openspec/specs/surface-lifecycle-publication/spec.md",
+    "sha256": "675265a0ba98b45f1d659f6048fe97f2e590a0597d7eda304cdcfe9854ebdd91"
+  },
+  {
+    "path": "openspec/specs/surface-overview-connection/spec.md",
+    "sha256": "51f9dc1a1d7b92ccdb059b7fda0117bf6c898378fa9a9fe185c7e2045044d193"
+  },
+  {
+    "path": "openspec/specs/surface-registration/spec.md",
+    "sha256": "31928d907bfff75eca61d2efe176879e3c7f4d3e0029dbe6bb97258b8d00f9a5"
+  },
+  {
+    "path": "openspec/specs/surface-skill-selection/spec.md",
+    "sha256": "e27eb8b354e4370da3519b5387cff5369a2f083e6c3be05f82d8631746c19ee0"
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "pointer": "#/components/schemas/ScopeResponse",
+  "value": {
+    "properties": {
+      "kind": {
+        "$ref": "#/components/schemas/ScopeKind"
+      },
+      "notice": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Notice"
+      }
+    },
+    "type": "object",
+    "required": [
+      "kind",
+      "notice"
+    ],
+    "title": "ScopeResponse"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "decision": "D-078",
+  "kind": "bounded-evidence-acceptance-not-product-publication",
+  "head": "bc0d9800f25a90989b9c73c76f91996f8300f1d3",
+  "hashVerification": "parent verified exact original copies; reviewed CSV correction is the sole report delta",
+  "sha256": {
+    "reports/IMPL-REPORT-CONSTRUCTOR.md": "fad748870836d29d1d115a6efab7ab60aa1f7d5a8e2a926893cc661a7b4bbcea",
+    "reports/IMPL-REPORT-CSV.original.md": "0d62985cfbdef0d0358e17f0edff569b1deea574595b96c32946607cf346aaff",
+    "reports/IMPL-REPORT-CSV.md": "4e6a92044518c9e7878357e1103fa20854913cb1e6521fcc60537333d69de411",
+    "reports/IMPL-REPORT-SCHEDULING.md": "f8590a709af7ce73a0ab4b0534e02eb9ec956909e8d4707f226293161ddcff30",
+    "reviews/R-REPORTS-IMPLEMENTATION-BATCH.md": "899dd2d4ce7e16897623caf512840196217a893bef6158112b138cdbfb9aa2d3"
+  },
+  "checks": {
+    "managingChangeStrictValidation": "passed",
+    "fourMutableRegistersPrettierCheck": "passed",
+    "coverageReferencesAndCount173": "passed",
+    "trackedDiffAndStatus": "empty; OpenSpec ignored by Git, report byte comparison performed separately",
+    "applyProgress": "11/28; unchanged",
+    "globalFormatCheck": "not rerun; earlier failure unresolved",
+    "runtimeChecks": "not run; audit documentation only",
+    "browserE2E": "not run"
+  },
+  "productPlansChanged": false,
+  "pending": "MOS1015/919 factual planning corrections require confirmation and publication checks; MOS1016 no additional correction",
+  "limitations": [
+    "Static evidence only; no feature completion or deployment certification",
+    "External freshness not refreshed",
+    "No new report/auth policy, scope expansion or task closure"
+  ]
+}

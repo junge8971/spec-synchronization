@@ -1,0 +1,112 @@
+[
+  {
+    "file": "example.js",
+    "oldStatus": 0,
+    "newStatus": 0,
+    "same": true,
+    "oldOutput": "// prettier-ignore\nconst values = [ 1,2,3 ];\nexport const x = { alpha: 1, beta: 2 };\n",
+    "newOutput": "// prettier-ignore\nconst values = [ 1,2,3 ];\nexport const x = { alpha: 1, beta: 2 };\n",
+    "oldError": "",
+    "newError": ""
+  },
+  {
+    "file": "example.ts",
+    "oldStatus": 0,
+    "newStatus": 0,
+    "same": true,
+    "oldOutput": "export interface Example {\n  foo: string;\n  bar?: number;\n}\nexport const fn = (value: Example): string => value.foo;\n",
+    "newOutput": "export interface Example {\n  foo: string;\n  bar?: number;\n}\nexport const fn = (value: Example): string => value.foo;\n",
+    "oldError": "",
+    "newError": ""
+  },
+  {
+    "file": "example.tsx",
+    "oldStatus": 0,
+    "newStatus": 0,
+    "same": true,
+    "oldOutput": "export function Example({ name }: { name: string }) {\n  return (\n    <main>\n      <span>{name}</span>\n      <button type=\"button\">Save</button>\n    </main>\n  );\n}\n",
+    "newOutput": "export function Example({ name }: { name: string }) {\n  return (\n    <main>\n      <span>{name}</span>\n      <button type=\"button\">Save</button>\n    </main>\n  );\n}\n",
+    "oldError": "",
+    "newError": ""
+  },
+  {
+    "file": "data.json",
+    "oldStatus": 0,
+    "newStatus": 0,
+    "same": true,
+    "oldOutput": "{ \"a\": [1, 2, 3], \"b\": { \"c\": true } }\n",
+    "newOutput": "{ \"a\": [1, 2, 3], \"b\": { \"c\": true } }\n",
+    "oldError": "",
+    "newError": ""
+  },
+  {
+    "file": "style.css",
+    "oldStatus": 0,
+    "newStatus": 0,
+    "same": true,
+    "oldOutput": ".a {\n  color: red;\n  padding: 0 2px;\n}\n",
+    "newOutput": ".a {\n  color: red;\n  padding: 0 2px;\n}\n",
+    "oldError": "",
+    "newError": ""
+  },
+  {
+    "file": "style.scss",
+    "oldStatus": 0,
+    "newStatus": 0,
+    "same": true,
+    "oldOutput": "$color: red;\n.a {\n  color: $color;\n  &:hover {\n    color: blue;\n  }\n}\n",
+    "newOutput": "$color: red;\n.a {\n  color: $color;\n  &:hover {\n    color: blue;\n  }\n}\n",
+    "oldError": "",
+    "newError": ""
+  },
+  {
+    "file": "config.yaml",
+    "oldStatus": 0,
+    "newStatus": 0,
+    "same": true,
+    "oldOutput": "list:\n  - a\n  - b\nvalue: 1\n",
+    "newOutput": "list:\n  - a\n  - b\nvalue: 1\n",
+    "oldError": "",
+    "newError": ""
+  },
+  {
+    "file": "readme.md",
+    "oldStatus": 0,
+    "newStatus": 0,
+    "same": true,
+    "oldOutput": "# Header\n\n- first\n- second\n\n```js\nconst x = { a: 1 };\n```\n",
+    "newOutput": "# Header\n\n- first\n- second\n\n```js\nconst x = { a: 1 };\n```\n",
+    "oldError": "",
+    "newError": ""
+  },
+  {
+    "file": "page.html",
+    "oldStatus": 0,
+    "newStatus": 0,
+    "same": true,
+    "oldOutput": "<main>\n  <h1>Title</h1>\n  <p>hello <b>world</b></p>\n</main>\n",
+    "newOutput": "<main>\n  <h1>Title</h1>\n  <p>hello <b>world</b></p>\n</main>\n",
+    "oldError": "",
+    "newError": ""
+  },
+  {
+    "file": "page.mdx",
+    "oldStatus": 0,
+    "newStatus": 0,
+    "same": true,
+    "oldOutput": "# Title\n\n<Component value={1} other=\"x\" />\n",
+    "newOutput": "# Title\n\n<Component value={1} other=\"x\" />\n",
+    "oldError": "",
+    "newError": ""
+  },
+  {
+    "file": "icon.svg",
+    "oldStatus": 2,
+    "newStatus": 1,
+    "same": false,
+    "oldOutput": "",
+    "newOutput": "",
+    "oldError": "[error] No parser could be inferred for file \"/home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/.formatter-probe.hHVdhv/icon.svg\".\n",
+    "newError": "Unsupported file type for stdin-filepath\n"
+  }
+]

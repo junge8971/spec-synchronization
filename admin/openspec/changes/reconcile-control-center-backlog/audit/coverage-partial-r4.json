@@ -1,0 +1,12 @@
+{
+  "revision": 4,
+  "supplements": "coverage-partial-r3.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "chains": [
+    {"issue": "MOS-1145", "report": "reports/SCENARIO-MOS-1145.md", "review": "reviews/R-SCENARIO-MOS-1145.md", "disposition": "D-015", "scope": "Fifteen documentary candidates; no implementation/runtime acceptance"}
+  ],
+  "sourceAdditions": ["sources/jira-skill-switch-details/r1/metadata.json"],
+  "failedCollection": "sources/jira-lifecycle-details/r1/access-result.json",
+  "limitations": ["MOS1119 detailed body remains uncollected", "Attachment835759 body unread", "Product plans unchanged", "No index or runtime attestation", "Global coverage incomplete"]
+}

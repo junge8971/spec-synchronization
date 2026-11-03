@@ -1,0 +1,16 @@
+{
+  "pointer": "#/components/schemas/RemoveTeamMemberResponse",
+  "value": {
+    "properties": {
+      "id": {
+        "type": "string",
+        "title": "Id"
+      }
+    },
+    "type": "object",
+    "required": [
+      "id"
+    ],
+    "title": "RemoveTeamMemberResponse"
+  }
+}

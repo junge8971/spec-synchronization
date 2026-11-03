@@ -1,0 +1,14 @@
+{
+  "sourceId": "jira-MOS-909",
+  "revision": "r1",
+  "url": "https://task.mos-team.ru/browse/MOS-909",
+  "retrievedAt": "2026-10-19T07:21:29.300Z",
+  "externalUpdatedAt": "2026-10-16T19:22:23.479+0800",
+  "contentPath": "content.md",
+  "sha256": "b2def825eb88fa33d1e553a33d7c75fca087f4593c1c431e5daf7f68baabda72",
+  "format": "selected-normalized-extraction",
+  "hashScope": "Saved UTF-8 Markdown, not original response bytes",
+  "provenance": "Parent origin-guarded browser MCP same-origin Jira REST GET; exact selected fields and membership locators in content.md. No credential extraction or external mutations.",
+  "completeness": "Full description normalized; both comments read, one MR mention reduced to non-personal excerpt. Returned attachment/subtask arrays empty. Custom fields and changelog uncollected.",
+  "limitations": "Status/comment assertions not implementation or test evidence. Linked wiki freshness and MR contents not inspected."
+}

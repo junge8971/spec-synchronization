@@ -1,0 +1,54 @@
+{
+  "sourceId": "wiki-241085439",
+  "retrievedAt": "2026-10-16T13:31:52.139Z",
+  "sha256": "974ea35aaf44b9ec7c14c573ba58bdf7ed55397a9ca47d62b37fb39d9886f8bc",
+  "bytes": 356350,
+  "redactions": {
+    "bearerExamples": 8
+  },
+  "collection": "parent verified-origin GET; inert evidence; no business calls",
+  "membership": "jira-reports-details/r1 items4/description MOS1015",
+  "limitations": [
+    "custom fields/attachment bodies uncollected",
+    "publication not runtime/approval"
+  ],
+  "version": {
+    "by": {
+      "email": "drozdov@codesrc.ru",
+      "type": "known",
+      "username": "drozdov",
+      "userKey": "2c9280839e96cc8a019ecb990439001c",
+      "profilePicture": {
+        "path": "/download/attachments/216650373/user-avatar",
+        "width": 48,
+        "height": 48,
+        "isDefault": false
+      },
+      "displayName": "Кирилл Дроздов",
+      "_links": {
+        "self": "https://wiki.mos-team.ru/rest/api/user?key=2c9280839e96cc8a019ecb990439001c"
+      },
+      "_expandable": {
+        "status": ""
+      }
+    },
+    "when": "2026-10-07T18:54:12.389+08:00",
+    "message": "",
+    "number": 15,
+    "minorEdit": false,
+    "hidden": false,
+    "_links": {
+      "self": "https://wiki.mos-team.ru/rest/experimental/content/241085439/version/15"
+    },
+    "_expandable": {
+      "content": "/rest/api/content/241085439"
+    }
+  },
+  "status": 200,
+  "url": "https://wiki.mos-team.ru/rest/api/content/241085439?expand=body.view,version",
+  "attachments": {
+    "status": 200,
+    "count": 0,
+    "next": null
+  }
+}

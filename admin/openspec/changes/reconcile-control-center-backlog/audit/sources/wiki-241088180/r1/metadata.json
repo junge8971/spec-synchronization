@@ -1,0 +1,54 @@
+{
+  "sourceId": "wiki-241088180",
+  "retrievedAt": "2026-10-16T13:03:14.658Z",
+  "sha256": "e1d5f5320e05d1e65354f2523341cab788adfacac8ac5acf6aaabf31003c18fc",
+  "bytes": 36471,
+  "redactions": {
+    "bearerExamples": 0
+  },
+  "collection": "parent verified-origin GET only; no embedded code executed",
+  "membership": "jira-operations-details/r1 items0/comments/items0/body",
+  "limitations": [
+    "custom fields and attachment bodies uncollected",
+    "publication not runtime or approval"
+  ],
+  "version": {
+    "by": {
+      "email": "kim@codesrc.ru",
+      "type": "known",
+      "username": "kim",
+      "userKey": "2c92808388c5be670188d288bfcb017e",
+      "profilePicture": {
+        "path": "/images/icons/profilepics/default.svg",
+        "width": 48,
+        "height": 48,
+        "isDefault": true
+      },
+      "displayName": "Иннокентий Ким",
+      "_links": {
+        "self": "https://wiki.mos-team.ru/rest/api/user?key=2c92808388c5be670188d288bfcb017e"
+      },
+      "_expandable": {
+        "status": ""
+      }
+    },
+    "when": "2026-09-25T19:33:43.672+08:00",
+    "message": "",
+    "number": 4,
+    "minorEdit": false,
+    "hidden": false,
+    "_links": {
+      "self": "https://wiki.mos-team.ru/rest/experimental/content/241088180/version/4"
+    },
+    "_expandable": {
+      "content": "/rest/api/content/241088180"
+    }
+  },
+  "status": 200,
+  "url": "https://wiki.mos-team.ru/rest/api/content/241088180?expand=body.view,version",
+  "attachments": {
+    "status": 200,
+    "count": 0,
+    "next": null
+  }
+}

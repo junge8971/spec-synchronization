@@ -1,0 +1,19 @@
+{
+  "sourceId": "api-live",
+  "revision": 1,
+  "discoveredFrom": "https://nchat-a-tech.mos.ru/api/control/docs",
+  "url": "https://nchat-a-tech.mos.ru/api/control/openapi.json",
+  "retrievedAt": "2026-10-16T11:13:29.451Z",
+  "method": "Parent browser same-origin GET of the URL linked in Swagger; SHA-256 of response text encoded as UTF-8",
+  "sha256": "549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06",
+  "bytes": 413007,
+  "paths": 94,
+  "operations": 128,
+  "schemas": 382,
+  "etag": null,
+  "lastModified": null,
+  "contentSaved": true,
+  "content": "content.json",
+  "capture": "Public documentation downloaded without credentials from the exact Swagger-discovered URL; saved bytes SHA-256 matched browser response digest before writing.",
+  "limitations": "Counts differ from local README (380 schemas); no backend business operation invoked. No ETag or Last-Modified available."
+}

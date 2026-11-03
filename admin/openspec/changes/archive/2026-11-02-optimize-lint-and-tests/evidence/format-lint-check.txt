@@ -1,0 +1,81 @@
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 3ms on 100 files using 12 threads.
+Checking formatting...
+
+app/entities/surface/model/types/surface.types.ts (0ms)
+
+Format issues found in above 1 files. Run without `--check` to fix.
+Finished in 3ms on 100 files using 12 threads.
+Checking formatting...
+
+app/features/skill-bulk-rollout/types/skill-bulk-rollout.types.ts (0ms)
+
+Format issues found in above 1 files. Run without `--check` to fix.
+Finished in 5ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 7ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 5ms on 100 files using 12 threads.
+Checking formatting...
+
+app/optional/ab-testing/types/registry.types.ts (0ms)
+app/optional/ab-testing/ui/registry/registry-filters.tsx (1ms)
+
+Format issues found in above 2 files. Run without `--check` to fix.
+Finished in 7ms on 100 files using 12 threads.
+Checking formatting...
+
+app/optional/feedback/model/use-feedback-registry-query-draft.ts (0ms)
+app/optional/knowledge-base/types/registry.types.ts (0ms)
+
+Format issues found in above 2 files. Run without `--check` to fix.
+Finished in 7ms on 100 files using 12 threads.
+Checking formatting...
+
+app/optional/knowledge-base/ui/registry/registry-filters.tsx (0ms)
+app/optional/reference-dictionaries/types/dictionary-lifecycle.types.ts (0ms)
+
+Format issues found in above 2 files. Run without `--check` to fix.
+Finished in 5ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 7ms on 100 files using 12 threads.
+Checking formatting...
+
+app/optional/system-state/model/use-system-state-query-draft.ts (0ms)
+app/optional/system-state/types/export.types.ts (0ms)
+app/optional/system-state/types/system-state.types.ts (0ms)
+
+Format issues found in above 3 files. Run without `--check` to fix.
+Finished in 5ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 7ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 3ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 8ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 9ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 9ms on 100 files using 12 threads.
+Checking formatting...
+
+All matched files use the correct format.
+Finished in 3ms on 61 files using 12 threads.

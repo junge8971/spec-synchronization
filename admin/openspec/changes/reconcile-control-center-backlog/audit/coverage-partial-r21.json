@@ -1,0 +1,52 @@
+{
+  "revision": 21,
+  "supplements": "coverage-partial-r20.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [
+    {
+      "report": "reports/DELTA-TEAMS-ROOT-DOC.md",
+      "review": "reviews/R-DELTA-TEAMS-ROOT-DOC.md",
+      "historicalVerdict": "REVISE: one locator",
+      "parentDisposition": "D-039: source verified,220→221 corrected, all8 accepted; no new reviewer ACCEPT"
+    },
+    {
+      "report": "reports/DELTA-SURFACES-ROOT-BRIEF.md",
+      "review": "reviews/R-DELTA-SURFACES-ROOT-BRIEF.md",
+      "historicalVerdict": "REVISE: domain uniqueness wording",
+      "parentDisposition": "D-039: source/current spec verified, uniqueness across surfaces not per-surface domain-count limit; all9 accepted after correction, no new reviewer ACCEPT"
+    }
+  ],
+  "sourceAdditions": [
+    "sources/wiki-250794931/r1/metadata.json",
+    "sources/wiki-241080068/r1/metadata.json",
+    "sources/wiki-241080080/r1/metadata.json"
+  ],
+  "capture": {
+    "authority": "Existing root admin-tools batch; D-039 continuation",
+    "transport": "Fresh browser discovery and exact root href/origin/absent-packet checks",
+    "versions": [2, 1, 1],
+    "httpStatuses": [200, 200, 200],
+    "bodyFormat": "Full bodyView plus separately returned attachment indexes",
+    "attachmentCounts": [0, 0, 0],
+    "nextPointers": [null, null, null],
+    "redactions": [0, 0, 0],
+    "integrity": "Parent canonical/derived SHA256 and exact chunk roundtrip",
+    "semanticAcceptance": "pending"
+  },
+  "parentComputedRootCounts": {
+    "capturedBodyOrExtraction": 36,
+    "withoutCanonicalPacket": 6,
+    "returnedIndexes": 35,
+    "knownIndexedAttachments": 29,
+    "knownIndexedUnreadBodies": 25,
+    "note": "Three new empty-index pages; feedback index still missing; captures not complete semantic reconciliation"
+  },
+  "pendingAnalysis": ["work-items/DELTA-ADMIN-TOOLS-ROOT-BRIEFS.md"],
+  "limits": [
+    "Original two REVISE verdicts retained; corrections only in reports/parent disposition",
+    "No sandbox/chat/analytics execution, business requests, attachment downloads or product activation",
+    "Remaining source/attachment/explanatory-document, owner and implementation gates unresolved",
+    "Historical formatting failure unresolved; global tasks remain open"
+  ]
+}

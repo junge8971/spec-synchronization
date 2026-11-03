@@ -1,0 +1,11 @@
+{
+  "pointer": "#/components/schemas/Measure",
+  "value": {
+    "type": "string",
+    "enum": [
+      "share",
+      "count"
+    ],
+    "title": "Measure"
+  }
+}

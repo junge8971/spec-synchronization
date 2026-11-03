@@ -1,0 +1,24 @@
+{
+  "id": "250800526",
+  "parent": "247747363",
+  "title": "API_Прототип.html",
+  "version": 2,
+  "url": "https://wiki.mos-team.ru/download/attachments/247747363/API_%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF.html?version=2&modificationDate=1791963516292&api=v2",
+  "status": 200,
+  "retrievedAt": "2026-10-19T09:15:22.006Z",
+  "contentType": "text/html;charset=UTF-8",
+  "redactions": 0,
+  "sourceId": "wiki-attachment-250800526",
+  "revision": 1,
+  "content": "content.txt",
+  "sha256": "c7a685533f48c22167dd2019efc91060337f30c02de2aa1ac3e5231220396437",
+  "method": "Parent same-origin GET exact indexed attachment version paths; fetched as inert text only, no DOM insertion or source execution; redirects refused",
+  "discovery": "sources/wiki-247747363/r1/content.json#/attachments/results",
+  "format": "HTML source saved with inert .txt extension; browser-decoded UTF-8 text, not rendered or executed",
+  "limitations": [
+    "Version-qualified selected attachment only; filename/version/chronology is not precedence",
+    "Bearer-shaped values replaced before tool output if present; hash covers saved text, not original download bytes",
+    "No DOM insertion, JS evaluation, external assets, UI interaction or browser/E2E tests",
+    "Static source analysis pending; HTTP200 is not implementation or product acceptance"
+  ]
+}

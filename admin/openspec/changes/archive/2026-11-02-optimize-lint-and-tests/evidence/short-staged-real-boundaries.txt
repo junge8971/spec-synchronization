@@ -1,0 +1,24 @@
+⚠ Skipping backup because `--no-stash` was used. This might result in data loss.
+
+⚠ Skipping hiding unstaged changes from partially staged files because `--no-hide-partially-staged` was used.
+
+⋯ Preparing lint-staged…
+✔ Done preparing lint-staged!
+⋯ Running tasks for staged files…
+    *.{js,jsx,mjs,cjs,ts,mts,cts,tsx} — 1 file
+      ⋯ oxlint --fix --deny-warnings --no-error-on-unmatched-pattern
+      ⋯ oxfmt --write --no-error-on-unmatched-pattern --ignore-path .oxfmtignore
+      ⋯ oxlint --deny-warnings app
+      ⋯ oxfmt --check --ignore-path .oxfmtignore 'app/**/*.{js,jsx,mjs,cjs,ts,mts,cts,tsx}'
+
+✔ oxlint --fix --deny-warnings --no-error-on-unmatched-pattern
+✔ oxfmt --write --no-error-on-unmatched-pattern --ignore-path .oxfmtignore
+✖ oxlint --deny-warnings app
+↓ oxfmt --check --ignore-path .oxfmtignore 'app/**/*.{js,jsx,mjs,cjs,ts,mts,cts,tsx}'
+
+✖ Failed to run tasks for staged files!
+⋯ Staging changes from tasks…
+✔ Done staging changes from tasks!
+
+✖ oxlint --deny-warnings app:
+app/features/consumer/consumer.ts:1:23: error boundaries(dependencies): Cannot resolve dependency.

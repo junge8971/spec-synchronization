@@ -1,0 +1,6 @@
+{
+  "pointer": "#/components/schemas/ResponseCode",
+  "value": {
+    "type": "string"
+  }
+}

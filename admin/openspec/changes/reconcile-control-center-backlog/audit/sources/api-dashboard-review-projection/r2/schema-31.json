@@ -1,0 +1,21 @@
+{
+  "pointer": "#/components/schemas/WidgetErrorResponse",
+  "value": {
+    "properties": {
+      "code": {
+        "type": "string",
+        "title": "Code"
+      },
+      "message": {
+        "type": "string",
+        "title": "Message"
+      }
+    },
+    "type": "object",
+    "required": [
+      "code",
+      "message"
+    ],
+    "title": "WidgetErrorResponse"
+  }
+}

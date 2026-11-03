@@ -1,0 +1,12 @@
+{
+  "sourceId": "jira-optional-backend-details",
+  "revision": "r1",
+  "retrievedAt": "2026-10-20T14:35:05.335Z",
+  "format": "selected-field-extraction",
+  "sha256": "3a135ce9c6e285f66d92263fdb995a48ddad098d4b9e4dd2324754c1cf2bb618",
+  "urls": ["https://task.mos-team.ru/browse/MOS-1322", "https://task.mos-team.ru/browse/MOS-1323"],
+  "retrieval": "Parent chrome-devtools evaluate_script page 28; GET /rest/api/2/issue/{key}?fields=summary,description,updated,parent,status. No mutation/business endpoint calls.",
+  "membershipEvidence": "../../jira-member-index/r1/content.json items[140],items[142]; ../../jira-hierarchy/r1/content.json results[22],results[23]",
+  "limitations": ["No comments, attachments or custom acceptance fields collected", "parent:null is the returned Jira subtask-parent field, not absence of module membership", "Updated timestamp is not a hash of full issue", "Historical missing-body reports remain valid for their earlier local packets but need additive follow-up against this new source", "MOS-1142 dependency recorded from allowed descriptions; no linked issue opened by this collection"],
+  "secrets": "No credentials or personal user fields requested/saved"
+}

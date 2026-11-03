@@ -1,0 +1,43 @@
+{
+  "pointer": "#/components/schemas/TeamMemberResponse",
+  "value": {
+    "properties": {
+      "id": {
+        "type": "string",
+        "title": "Id"
+      },
+      "full_name": {
+        "$ref": "#/components/schemas/FullName"
+      },
+      "email": {
+        "type": "string",
+        "title": "Email"
+      },
+      "roles": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array",
+        "title": "Roles"
+      },
+      "membership_role": {
+        "$ref": "#/components/schemas/TeamMemberRole"
+      },
+      "valid_from": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Valid From"
+      }
+    },
+    "type": "object",
+    "required": [
+      "id",
+      "full_name",
+      "email",
+      "roles",
+      "membership_role",
+      "valid_from"
+    ],
+    "title": "TeamMemberResponse"
+  }
+}

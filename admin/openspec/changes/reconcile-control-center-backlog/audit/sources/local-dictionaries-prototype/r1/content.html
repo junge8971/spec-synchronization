@@ -1,0 +1,2253 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Центр управления · Справочники</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#fff; --border:#e6e8ee; --muted:#8b93a3;
+    --text:#1a1d24; --accent:#b3121b; --accent-2:#0b6b3a; --warn:#c47a00;
+    --sidebar:#1c1f26; --sidebar-muted:#8b93a3; --sidebar-text:#e8ebf0;
+    --radius:10px; --radius-sm:6px;
+    --shadow:0 1px 3px rgba(15,20,30,.06), 0 1px 2px rgba(15,20,30,.04);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;height:100%;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Golos Text",sans-serif;
+    font-size:13.5px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+  .app{display:grid;grid-template-columns:248px 1fr;min-height:100vh}
+  .sidebar{background:var(--sidebar);color:var(--sidebar-text);padding:16px 10px;
+    display:flex;flex-direction:column;gap:20px;position:sticky;top:0;height:100vh;overflow:auto}
+  .brand{display:flex;align-items:center;gap:10px;padding:6px 8px 10px}
+  .brand .logo{width:28px;height:28px;border-radius:6px;background:var(--accent);
+    display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px}
+  .brand .title{font-weight:600;font-size:13px;line-height:1.2}
+  .brand .sub{font-size:10.5px;color:var(--sidebar-muted);text-transform:uppercase;letter-spacing:.08em}
+  .nav-group{padding:0 4px}
+  .nav-group .eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--sidebar-muted);padding:8px 8px 4px;font-weight:600}
+  .nav-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:var(--radius-sm);
+    color:var(--sidebar-text);font-size:13px;cursor:pointer;opacity:.9}
+  .nav-item:hover{background:#232730;opacity:1}
+  .nav-item.active{background:#262a33;color:#fff;opacity:1;font-weight:500}
+  .nav-item.active::before{content:"";width:3px;height:14px;background:var(--accent);border-radius:2px;margin-left:-7px;margin-right:4px}
+  .nav-item .ic{width:16px;text-align:center;opacity:.9;font-size:13px}
+
+  .main{padding:20px 24px 40px;min-width:0}
+  .topline{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:6px}
+  .crumbs{font-size:11.5px;color:var(--muted)}
+  .user{display:flex;align-items:center;gap:10px;font-size:12px}
+  .avatar{width:30px;height:30px;border-radius:50%;background:#e9ecf2;display:grid;place-items:center;
+    font-weight:600;font-size:11.5px;color:#3a4150}
+  .badge-demo{background:#fff0f0;color:var(--accent);border:1px solid #f0c7c7;
+    font-size:10.5px;padding:1px 6px;border-radius:4px;font-weight:600}
+
+  h1{font-size:22px;font-weight:600;margin:6px 0 4px}
+
+  .btn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:8px;
+    background:var(--text);color:#fff;font-size:12.5px;font-weight:500}
+  .btn:hover{background:#000}
+  .btn.outline{background:#fff;color:var(--text);border:1px solid var(--border)}
+  .btn.outline:hover{background:#f2f4f8}
+  .btn.danger{background:var(--accent)}
+  .btn.danger:hover{background:#8f0e15}
+  .btn.sm{padding:5px 9px;font-size:11.5px}
+  .btn[disabled]{opacity:.5;pointer-events:none}
+
+  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .card-header{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .card-title{font-weight:600}
+  .card-hint{font-size:11.5px;color:var(--muted)}
+  .card-body{padding:16px}
+
+  .page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px;flex-wrap:wrap}
+  .page-head h1{margin:0}
+  .page-head .purpose{color:var(--muted);margin-top:6px;max-width:820px}
+  .page-head .actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+
+  .filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+  .input,select,textarea{background:#fff;border:1px solid var(--border);border-radius:8px;
+    padding:6px 10px;font:inherit;font-size:12.5px;color:var(--text);outline:none;width:100%}
+  .input:focus,select:focus,textarea:focus{border-color:#b9c0cf;box-shadow:0 0 0 3px rgba(26,29,36,.06)}
+  .input[disabled],select[disabled],textarea[disabled]{background:#f5f6f8;color:var(--muted);cursor:not-allowed}
+  .search{position:relative;min-width:280px;flex:1;max-width:340px}
+  .search input{padding-left:30px}
+  .search::before{content:"⌕";position:absolute;left:10px;top:50%;transform:translateY(-55%);
+    color:var(--muted);font-size:14px}
+  select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);
+    background-position:calc(100% - 14px) 12px,calc(100% - 9px) 12px;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:26px;min-width:150px}
+  .count{margin-left:auto;font-size:12px;color:var(--muted)}
+
+  .ms-wrap{position:relative}
+  .ms-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:8px;
+    height:32px;padding:0 10px;background:#fff;border:1px solid var(--border);border-radius:8px;
+    font:inherit;font-size:12.5px;color:var(--text);cursor:pointer;text-align:left;
+    min-width:180px;max-width:280px}
+  .ms-btn:hover{background:#f5f6f8}
+  .ms-btn.active{border-color:#cdd3de;color:var(--text)}
+  .ms-btn-label{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ms-btn-chev{color:var(--muted);font-size:9px;flex-shrink:0}
+  .ms-menu{position:absolute;top:calc(100% + 4px);left:0;z-index:50;
+    min-width:260px;max-width:340px;max-height:320px;overflow-y:auto;
+    background:#fff;border:1px solid var(--border);border-radius:8px;
+    box-shadow:0 8px 24px rgba(15,20,30,.12);padding:4px;display:none}
+  .ms-menu.open{display:block}
+  .ms-opt{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:6px;
+    font-size:12.5px;cursor:pointer;color:var(--text);user-select:none;font-weight:400}
+  .ms-opt:hover{background:#f5f6f8}
+  .ms-opt input{width:auto;margin:0;accent-color:var(--accent);pointer-events:none}
+  .ms-opt-all{font-weight:500;border-bottom:1px solid var(--border);margin-bottom:4px;border-radius:6px 6px 0 0}
+  .ms-opt-check{width:14px;display:inline-flex;justify-content:center;
+    color:var(--accent);font-size:12px;flex-shrink:0;line-height:1}
+  .ms-opt .sub{font-size:10.5px;color:var(--muted);margin-left:auto}
+
+  .reset-btn{display:none;align-items:center;gap:4px;padding:5px 10px;
+    font-size:12px;color:var(--muted);border-radius:6px;background:none;border:0;cursor:pointer}
+  .reset-btn.on{display:inline-flex}
+  .reset-btn:hover{background:#f2f4f8;color:var(--text)}
+
+  .af-btn{position:relative;display:inline-flex;align-items:center;gap:6px;
+    height:32px;padding:0 10px;background:#fff;border:1px solid var(--border);border-radius:8px;
+    font:inherit;font-size:12.5px;color:var(--text);cursor:pointer}
+  .af-btn:hover{background:#f5f6f8}
+  .af-btn.has-conditions{border-color:var(--accent);color:var(--accent);background:#fff5f5}
+  .af-badge{display:inline-flex;align-items:center;justify-content:center;
+    min-width:18px;height:18px;padding:0 5px;border-radius:999px;
+    background:var(--accent);color:#fff;font-size:10.5px;font-weight:600}
+  .af-badge.hidden{display:none}
+
+  .menu-wrap{position:relative}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center;
+    width:32px;height:32px;border-radius:8px;color:var(--muted);cursor:pointer;
+    background:none;border:0;font:inherit;font-size:16px;line-height:1}
+  .menu-btn:hover{background:#f2f4f8;color:var(--text)}
+  .menu-content{position:absolute;top:calc(100% + 4px);right:0;z-index:50;
+    min-width:230px;background:#fff;border:1px solid var(--border);border-radius:8px;
+    box-shadow:0 8px 24px rgba(15,20,30,.12);padding:4px;display:none}
+  .menu-content.open{display:block}
+  .menu-item{display:flex;align-items:center;gap:8px;padding:7px 10px;
+    border-radius:6px;font-size:12.5px;cursor:pointer;color:var(--text)}
+  .menu-item:hover{background:#f5f6f8}
+  .menu-item .saved-filter-del{color:var(--muted);cursor:pointer;padding:2px 6px;border-radius:4px;
+    flex-shrink:0;line-height:1;font-size:12px}
+  .menu-item .saved-filter-del:hover{color:var(--accent);background:#f8eaea}
+
+  .filter-panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:16px;margin-bottom:12px}
+  .filter-panel-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+  .filter-panel-title{font-weight:600;font-size:13px}
+  .filter-join{display:inline-flex;border:1px solid var(--border);border-radius:8px;
+    overflow:hidden;margin-left:auto}
+  .filter-join-btn{padding:5px 12px;font-size:12px;color:var(--muted);background:#fff;
+    cursor:pointer;border:0;font:inherit}
+  .filter-join-btn + .filter-join-btn{border-left:1px solid var(--border)}
+  .filter-join-btn:hover{background:#f5f6f8;color:var(--text)}
+  .filter-join-btn.active{background:var(--text);color:#fff}
+  .filter-conditions{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+  .filter-row{display:grid;grid-template-columns:1.1fr 1fr 2fr auto;
+    gap:8px;align-items:start;padding:10px;border:1px solid var(--border);
+    border-radius:10px;background:#fafbfd}
+  .filter-row select,.filter-row .input{height:32px}
+  .filter-value-wrap{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+  .filter-value-wrap .input{width:auto;min-width:100px;flex:1}
+  .filter-del{color:var(--muted);font-size:13px;padding:6px 8px;border-radius:6px;
+    align-self:start;margin-top:2px;cursor:pointer;background:none;border:0}
+  .filter-del:hover{color:var(--accent);background:#f8eaea}
+  .filter-enum-chips{display:flex;flex-wrap:wrap;gap:4px;padding:2px 0;min-height:28px}
+  .filter-enum-chip{display:inline-flex;align-items:center;gap:5px;
+    padding:3px 9px;border-radius:999px;border:1px solid var(--border);
+    background:#fff;font-size:11.5px;cursor:pointer;user-select:none}
+  .filter-enum-chip:hover{background:#f5f6f8}
+  .filter-enum-chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  .filter-empty{padding:14px;text-align:center;color:var(--muted);font-size:12px;
+    border:1px dashed var(--border);border-radius:8px;margin-bottom:10px}
+  .filter-panel-foot{display:flex;gap:8px;align-items:center;margin-top:12px;
+    padding-top:12px;border-top:1px solid var(--border);flex-wrap:wrap}
+  .filter-panel-foot .right{margin-left:auto;display:flex;gap:8px}
+
+  .applied-bar{display:flex;align-items:center;gap:8px;padding:8px 12px;
+    background:var(--card);border:1px solid var(--border);border-radius:8px;
+    margin-bottom:12px;font-size:12.5px;flex-wrap:wrap}
+  .applied-bar-label{color:var(--muted);font-size:11.5px}
+  .applied-bar-text{color:var(--text)}
+  .applied-bar .reset-btn{display:inline-flex;margin-left:auto}
+
+  table{width:100%;border-collapse:separate;border-spacing:0;font-size:12.5px}
+  thead th{text-align:left;font-weight:500;color:var(--muted);padding:9px 12px;
+    border-bottom:1px solid var(--border);font-size:11.5px;white-space:nowrap}
+  th.sortable{cursor:pointer;user-select:none}
+  th.sortable:hover{color:var(--text)}
+  th.sortable::after{content:"↕";margin-left:6px;color:var(--muted);opacity:.45;font-size:11px}
+  th.sortable[data-dir="asc"]::after{content:"↑";opacity:1;color:var(--accent)}
+  th.sortable[data-dir="desc"]::after{content:"↓";opacity:1;color:var(--accent)}
+  tbody td{padding:11px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+  tbody tr:hover{background:#fafbfd;cursor:pointer}
+  tbody tr:last-child td{border-bottom:0}
+  .name-cell .n{font-weight:600;display:block}
+  .name-cell .c{font-size:11px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+  .tag{display:inline-block;padding:1px 7px;border-radius:4px;font-size:11px;border:1px solid var(--border);color:var(--muted);background:#fafbfd}
+  .tag.ok{color:var(--accent-2);border-color:#cbe6d5;background:#f0f8f3}
+  .tag.acc{color:var(--accent);border-color:#f0c7c7;background:#fff2f2}
+  .tag.warn{color:var(--warn);border-color:#f0dca6;background:#fdf7e6}
+  .tag.ink{color:#2b3140;border-color:#d8dce5;background:#f2f4f8}
+  .tag.mute{color:var(--muted)}
+  .tag.off{color:#8b93a3;border-color:#e6e8ee;background:#f5f6f8}
+  .tag.sys{color:#1f4f8b;border-color:#c9d8f2;background:#e8eefb}
+  .tag.info{color:#0b6b3a;border-color:#cbe6d5;background:#f0f8f3}
+  .tag.custom{color:#7a2ea1;border-color:#e5d1f2;background:#f7ecfd}
+
+  .switch{display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:#fff}
+  .switch input{width:auto;margin:0}
+  .switch .lbl{font-size:12.5px}
+  .switch.disabled{opacity:.55;background:#f5f6f8}
+  .switch.disabled .lbl{color:var(--muted)}
+
+  .num{font-variant-numeric:tabular-nums}
+  .right{text-align:right}
+  .empty{padding:40px 20px;text-align:center;color:var(--muted)}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+  .screen{display:none}
+  .screen.active{display:block}
+
+  .tabs{display:flex;gap:2px;border-bottom:1px solid var(--border);margin-bottom:14px;overflow:auto}
+  .tab{padding:9px 12px;font-size:12.5px;color:var(--muted);border-bottom:2px solid transparent;white-space:nowrap;cursor:pointer;display:flex;align-items:center;gap:8px}
+  .tab:hover{color:var(--text)}
+  .tab.active{color:var(--text);border-bottom-color:var(--accent);font-weight:500}
+  .tab .tab-count{display:inline-block;padding:0 6px;border-radius:999px;
+    background:#f2f4f8;color:var(--muted);font-size:10.5px;font-weight:600}
+  .tab.active .tab-count{background:var(--accent);color:#fff}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .grid-form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media (max-width:1100px){.grid-2,.grid-form{grid-template-columns:1fr}}
+
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field label{font-size:12px;font-weight:500}
+  .field .hint{font-size:11px;color:var(--muted)}
+  .field.full{grid-column:1/-1}
+  .field input[disabled], .field textarea[disabled], .field select[disabled]{background:#f5f6f8;color:var(--muted)}
+
+  .banner{display:flex;gap:12px;padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:#fafbfd;margin-bottom:14px;align-items:flex-start}
+  .banner .ic{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-size:15px;flex-shrink:0}
+  .banner .ic.info{background:#e8eefb;color:#1f4f8b}
+  .banner .ic.warn{background:#fdf7e6;color:var(--warn)}
+  .banner .ic.acc{background:#fff2f2;color:var(--accent)}
+  .banner .ic.custom{background:#f7ecfd;color:#7a2ea1}
+  .banner .body{flex:1;min-width:0}
+  .banner .body p{margin:0;font-size:12.5px;line-height:1.55}
+  .banner .body p + p{margin-top:4px}
+  .banner .body strong{font-weight:600}
+
+  .values-table{width:100%;border-collapse:separate;border-spacing:0;font-size:12.5px;
+    border:1px solid var(--border);border-radius:8px;overflow:hidden}
+  .values-table th{background:#fafbfd;text-align:left;font-weight:500;color:var(--muted);
+    padding:9px 12px;font-size:11.5px;border-bottom:1px solid var(--border);white-space:nowrap}
+  .values-table td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:middle}
+  .values-table tr:last-child td{border-bottom:0}
+  .values-table tr.dragging{opacity:.4}
+  .values-table tr.drop-target td{border-top:2px solid var(--accent)}
+  .values-table .handle{cursor:grab;color:var(--muted);font-size:15px;user-select:none;padding:0 4px}
+  .values-table .handle:active{cursor:grabbing}
+  .values-table input.input{height:30px;font-size:12.5px}
+  .values-table .val-code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
+  .values-table .del-btn{color:var(--muted);padding:4px 7px;border-radius:6px;font-size:12px}
+  .values-table .del-btn:hover{color:var(--accent);background:#f8eaea}
+  .values-table .del-btn[disabled]{opacity:.35;cursor:not-allowed}
+  .values-table td.muted{color:var(--muted);font-style:italic}
+
+  .toggle{
+    --w:36px; --h:20px; --k:16px;
+    display:inline-block; position:relative; width:var(--w); height:var(--h);
+    border-radius:999px; background:#cfd4de; cursor:pointer; transition:background .15s;
+    flex-shrink:0; vertical-align:middle;
+  }
+  .toggle .knob{
+    position:absolute; top:2px; left:2px; width:var(--k); height:var(--k);
+    border-radius:50%; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.15);
+    transition:transform .18s;
+  }
+  .toggle.on{background:var(--accent-2)}
+  .toggle.on .knob{transform:translateX(calc(var(--w) - var(--k) - 4px))}
+  .toggle.disabled{opacity:.4;pointer-events:none;cursor:not-allowed}
+
+  .modal-backdrop{position:fixed;inset:0;background:rgba(15,20,30,.45);z-index:100;
+    display:flex;align-items:center;justify-content:center;padding:20px;
+    opacity:0;pointer-events:none;transition:opacity .18s}
+  .modal-backdrop.on{opacity:1;pointer-events:auto}
+  .modal{background:#fff;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.25);
+    width:100%;max-width:560px;max-height:86vh;display:flex;flex-direction:column;
+    transform:translateY(12px);transition:transform .18s}
+  .modal-backdrop.on .modal{transform:translateY(0)}
+  .modal-head{padding:14px 18px;border-bottom:1px solid var(--border);
+    display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .modal-title{font-weight:600;font-size:14.5px}
+  .modal-x{color:var(--muted);font-size:14px;padding:4px 8px;border-radius:6px;line-height:1}
+  .modal-x:hover{background:#f2f4f8;color:var(--text)}
+  .modal-body{padding:16px 18px;overflow:auto}
+  .modal-hint{color:var(--muted);font-size:12.5px;margin:0 0 14px;line-height:1.55}
+  .modal-fields{display:flex;flex-direction:column;gap:6px}
+  .modal-check{display:flex;align-items:center;gap:10px;padding:9px 12px;
+    border:1px solid var(--border);border-radius:8px;cursor:pointer;font-size:12.5px;transition:background .12s;font-weight:400}
+  .modal-check:hover{background:#f7f8fa}
+  .modal-check input{width:auto;margin:0;accent-color:var(--accent)}
+  .modal-foot{padding:12px 18px;border-top:1px solid var(--border);
+    display:flex;justify-content:flex-end;gap:8px;align-items:center}
+  .modal-foot .left{margin-right:auto;font-size:12px;color:var(--muted)}
+  .modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .modal-grid .full{grid-column:1/-1}
+  .modal-field{display:flex;flex-direction:column;gap:6px}
+  .modal-field label{font-size:12px;font-weight:500}
+  .modal-field .hint{font-size:11px;color:var(--muted)}
+  .modal-field .err{font-size:11px;color:var(--accent);display:none}
+  .modal-field.has-error .input,
+  .modal-field.has-error select,
+  .modal-field.has-error textarea{border-color:var(--accent);box-shadow:0 0 0 3px rgba(179,18,27,.08)}
+  .modal-field.has-error .err{display:block}
+  .modal-field .req-star{color:var(--accent);font-weight:700;margin-left:2px}
+
+  .checks-list{display:flex;flex-direction:column;gap:0}
+  .check-row{display:flex;gap:12px;padding:14px 0;border-bottom:1px dashed var(--border);align-items:flex-start}
+  .check-row:last-child{border-bottom:0}
+  .check-row .mark{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;
+    font-size:12px;flex-shrink:0;font-weight:700;margin-top:1px}
+  .check-row.ok .mark{background:#f0f8f3;color:var(--accent-2)}
+  .check-row.fail .mark{background:#fff2f2;color:var(--accent)}
+  .check-row.warn .mark{background:#fdf7e6;color:var(--warn)}
+  .check-row .body{flex:1;min-width:0}
+  .check-row .title{font-size:13px;font-weight:500;line-height:1.4}
+  .check-row .detail{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.5}
+  .check-row.fail .title{color:var(--accent)}
+  .check-summary{display:flex;align-items:center;gap:14px;padding:14px 16px;
+    border:1px solid var(--border);border-radius:10px;background:#fafbfd;margin-bottom:16px}
+  .check-summary .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-size:16px;flex-shrink:0}
+  .check-summary.ok .ic{background:#f0f8f3;color:var(--accent-2)}
+  .check-summary.fail .ic{background:#fff2f2;color:var(--accent)}
+  .check-summary.warn .ic{background:#fdf7e6;color:var(--warn)}
+  .check-summary .body{flex:1;min-width:0}
+  .check-summary .title{font-weight:600;font-size:13.5px}
+  .check-summary .desc{font-size:12px;color:var(--muted);margin-top:2px}
+  .check-summary .progress{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+  .toast{position:fixed;bottom:20px;right:20px;background:#1a1d24;color:#fff;padding:10px 14px;
+    border-radius:10px;font-size:12.5px;box-shadow:0 8px 24px rgba(0,0,0,.18);opacity:0;transform:translateY(10px);
+    transition:all .2s;pointer-events:none;z-index:200}
+  .toast.on{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">Ц</div>
+      <div>
+        <div class="title">Центр управления</div>
+        <div class="sub">Цифровой ассистент</div>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div class="eyebrow">Платформа</div>
+      <div class="nav-item active" data-nav="ref" onclick="showSection('ref','list')">
+        <span class="ic">📖</span>Справочники
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <div class="topline">
+      <div class="crumbs">Центр управления · <span id="crumb-now">Справочники</span></div>
+      <div class="user">
+        <span class="badge-demo">демо</span>
+        <div class="avatar">МС</div>
+        <div>
+          <div style="font-weight:500">Марина Соколова</div>
+          <div style="color:var(--muted);font-size:11px">Команда ЖКХ, ДИТ</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== REF LIST ========== -->
+    <section id="screen-ref-list" class="screen active">
+      <div class="page-head">
+        <div>
+          <h1>Справочники</h1>
+          <p class="purpose">Единый реестр справочников платформы. Администратор ведёт значения, которые ранее были захардкожены: статусы, типы, шрифты, формы элементов, категории базы знаний, причины оценок, правила вложений. Изменения применяются без релиза.</p>
+        </div>
+        <div class="actions">
+          <button class="btn outline" onclick="openExportDictModal()"><span>⤓</span> Экспорт</button>
+          <button class="btn" onclick="openCreateDictModal()"><span>＋</span> Создать справочник</button>
+        </div>
+      </div>
+
+      <div class="banner" style="margin-bottom:16px">
+        <div class="ic info">ℹ</div>
+        <div class="body">
+          <p><strong>Системный справочник</strong> — значения, на которые завязана логика в коде. Например, статусы объектов. Только просмотр.</p>
+          <p><strong>Информационный справочник</strong> — выпадающие списки в карточках, которые хранят метаданные объектов. Просмотр и редактирование.</p>
+          <p><strong>Пользовательский справочник</strong> — значения, которые не отражаются в карточках. Полный CRUD: создание, редактирование, удаление.</p>
+        </div>
+      </div>
+
+      <div class="filters">
+        <div class="search"><input class="input" id="ref-q" placeholder="Название, код, описание" oninput="renderDictList();updateResetVisibility('ref')" /></div>
+
+        <div class="ms-wrap" id="ref-type-wrap" data-all-label="Все типы">
+          <button type="button" class="ms-btn" id="ref-type-btn" onclick="toggleMs('ref-type')">
+            <span class="ms-btn-label" id="ref-type-label">Все типы</span>
+            <span class="ms-btn-chev">▾</span>
+          </button>
+          <div class="ms-menu" id="ref-type-menu">
+            <div class="ms-opt ms-opt-all" onclick="clearMs('ref-type')">
+              <span class="ms-opt-check" id="ref-type-check-all">✓</span>
+              <span>Все типы</span>
+            </div>
+            <label class="ms-opt"><input type="checkbox" value="system" onchange="onMsChange('ref-type')" /><span>Системный</span><span class="sub">system</span></label>
+            <label class="ms-opt"><input type="checkbox" value="informational" onchange="onMsChange('ref-type')" /><span>Информационный</span><span class="sub">informational</span></label>
+            <label class="ms-opt"><input type="checkbox" value="user" onchange="onMsChange('ref-type')" /><span>Пользовательский</span><span class="sub">user</span></label>
+          </div>
+        </div>
+
+        <div class="ms-wrap" id="ref-status-wrap" data-all-label="Все статусы">
+          <button type="button" class="ms-btn" id="ref-status-btn" onclick="toggleMs('ref-status')">
+            <span class="ms-btn-label" id="ref-status-label">Все статусы</span>
+            <span class="ms-btn-chev">▾</span>
+          </button>
+          <div class="ms-menu" id="ref-status-menu">
+            <div class="ms-opt ms-opt-all" onclick="clearMs('ref-status')">
+              <span class="ms-opt-check" id="ref-status-check-all">✓</span>
+              <span>Все статусы</span>
+            </div>
+            <label class="ms-opt"><input type="checkbox" value="Активен" onchange="onMsChange('ref-status')" /><span>Активен</span></label>
+            <label class="ms-opt"><input type="checkbox" value="Черновик" onchange="onMsChange('ref-status')" /><span>Черновик</span></label>
+            <label class="ms-opt"><input type="checkbox" value="Приостановлен" onchange="onMsChange('ref-status')" /><span>Приостановлен</span></label>
+          </div>
+        </div>
+
+        <button type="button" class="af-btn" id="af-btn-ref" onclick="toggleFilterPanel('ref')">
+          ⚙ Условия <span class="af-badge hidden" id="af-badge-ref">0</span>
+        </button>
+
+        <button type="button" class="reset-btn" id="ref-reset" onclick="resetFilters('ref')">Сбросить</button>
+
+        <div class="menu-wrap">
+          <button type="button" class="menu-btn" id="ref-menu-btn" onclick="toggleMenu('ref')" aria-label="Действия с отбором">⋮</button>
+          <div class="menu-content" id="ref-menu"></div>
+        </div>
+
+        <span class="count" id="ref-count">— справочников</span>
+      </div>
+
+      <div id="af-panel-ref" class="filter-panel" style="display:none"></div>
+      <div id="applied-ref" class="applied-bar" style="display:none"></div>
+
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:32%" class="sortable" data-sort="name">Справочник</th>
+              <th style="width:14%" class="sortable" data-sort="type">Тип</th>
+              <th style="width:10%" class="right sortable" data-sort="valuesCount">Значений</th>
+              <th style="width:22%" class="sortable" data-sort="owner">Владелец</th>
+              <th style="width:12%" class="sortable" data-sort="status">Статус</th>
+              <th style="width:8%"></th>
+            </tr>
+          </thead>
+          <tbody id="ref-rows"></tbody>
+        </table>
+        <div id="ref-empty" class="empty" style="display:none">Справочников пока нет.</div>
+      </div>
+    </section>
+
+    <!-- ========== REF CARD ========== -->
+    <section id="screen-ref-card" class="screen">
+      <div class="crumbs" style="margin-bottom:6px">
+        <a href="#" onclick="showSection('ref','list');return false;">Справочники</a> · <span id="ref-crumb-name">—</span>
+      </div>
+
+      <div class="page-head">
+        <div>
+          <h1 id="ref-title">—</h1>
+          <div class="purpose" id="ref-subtitle">—</div>
+          <div class="status-row" style="display:flex;gap:8px;align-items:center;margin-top:6px;font-size:12px;color:var(--muted);flex-wrap:wrap">
+            <span class="status-dot" id="ref-head-status-dot" style="width:8px;height:8px;border-radius:50%;background:var(--accent-2);display:inline-block"></span>
+            <span><b id="ref-head-status-text">Активен</b></span>
+            <span>·</span>
+            <span>Код: <span class="num mono" id="ref-head-code">—</span></span>
+            <span>·</span>
+            <span id="ref-head-type-badge-wrap"></span>
+            <span>·</span>
+            <span>Обновлён: <span class="num" id="ref-head-updated">—</span></span>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn outline sm" onclick="toast('Справочник выгружен')"><span>⤓</span> Экспорт</button>
+          <button class="btn outline sm" id="ref-btn-save" onclick="saveDict()">Сохранить</button>
+          <button class="btn outline sm" id="ref-btn-pause" onclick="togglePauseDict()">Приостановить</button>
+          <button class="btn danger sm" id="ref-btn-delete" onclick="deleteDict()">Удалить</button>
+          <button class="btn outline sm" onclick="tryCloseCard('ref')">Закрыть</button>
+        </div>
+      </div>
+
+      <div id="ref-card-banner"></div>
+
+      <div class="tabs" id="ref-tabs">
+        <div class="tab active" data-tab="values">Значения <span class="tab-count" id="ref-tab-values-count">0</span></div>
+        <div class="tab" data-tab="settings">Настройки</div>
+        <div class="tab" data-tab="checks">
+          Проверка
+          <span class="tab-count" id="ref-tab-checks-count">0</span>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="values">
+        <div class="card" style="padding:0">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Значения справочника</div>
+              <div class="card-hint" id="ref-values-hint">Порядок меняется перетаскиванием. Изменения применяются сразу после сохранения.</div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button class="btn outline sm" onclick="exportDictValuesCsv()">⤓ CSV</button>
+              <button class="btn sm" id="ref-btn-add-value" onclick="addDictValue()">＋ Добавить значение</button>
+            </div>
+          </div>
+          <div class="card-body" id="ref-values-body" style="padding:0"></div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="settings" style="display:none">
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-header"><div class="card-title">Основное</div></div>
+            <div class="card-body">
+              <div class="grid-form">
+                <div class="field full">
+                  <label>Название <span style="color:var(--accent)">*</span></label>
+                  <input class="input" id="ref-set-name" oninput="markDictDirty()" />
+                </div>
+                <div class="field">
+                  <label>Служебный код <span style="color:var(--accent)">*</span></label>
+                  <input class="input mono" id="ref-set-code" oninput="markDictDirty()" />
+                  <span class="hint">Используется в коде и API.</span>
+                </div>
+                <div class="field">
+                  <label>Тип справочника</label>
+                  <select id="ref-set-type" onchange="markDictDirty()" disabled>
+                    <option value="system">Системный</option>
+                    <option value="informational">Информационный</option>
+                    <option value="user">Пользовательский</option>
+                  </select>
+                  <span class="hint">Тип задаётся при создании и не меняется.</span>
+                </div>
+                <div class="field full">
+                  <label>Описание</label>
+                  <textarea class="input" id="ref-set-desc" rows="3" oninput="markDictDirty()"></textarea>
+                </div>
+                <div class="field">
+                  <label>Владелец</label>
+                  <input class="input" id="ref-set-owner" oninput="markDictDirty()" />
+                </div>
+                <div class="field">
+                  <label>Публикуется в API</label>
+                  <div class="switch" style="height:36px" id="ref-sw-public">
+                    <input type="checkbox" id="ref-set-public" onchange="markDictDirty()" />
+                    <div class="lbl">Доступен внешним сервисам</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title">Правила изменения</div></div>
+            <div class="card-body">
+              <div style="display:flex;flex-direction:column;gap:10px">
+                <div class="switch" id="ref-sw-allow-add"><input type="checkbox" id="ref-set-allow-add" onchange="markDictDirty()" /><div class="lbl">Разрешить добавлять новые значения</div></div>
+                <div class="switch" id="ref-sw-allow-delete"><input type="checkbox" id="ref-set-allow-delete" onchange="markDictDirty()" /><div class="lbl">Разрешить удалять значения</div></div>
+                <div class="switch" id="ref-sw-allow-rename"><input type="checkbox" id="ref-set-allow-rename" onchange="markDictDirty()" /><div class="lbl">Разрешить переименовывать значения</div></div>
+                <div class="switch" id="ref-sw-required"><input type="checkbox" id="ref-set-required" onchange="markDictDirty()" /><div class="lbl">Значения обязательны для других сущностей</div></div>
+                <div class="field" style="margin-top:8px">
+                  <label>Кэширование, секунд</label>
+                  <input class="input num" id="ref-set-cache" type="number" value="60" oninput="markDictDirty()" />
+                  <span class="hint">0 — без кэша.</span>
+                </div>
+                <div class="field">
+                  <label>Комментарий к изменениям</label>
+                  <input class="input" id="ref-set-note" placeholder="Например: добавили новый статус" oninput="markDictDirty()" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="checks" style="display:none">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Что проверила система</div>
+              <div class="card-hint">Проверки выполняются автоматически.</div>
+            </div>
+            <button class="btn outline sm" onclick="runDictChecks()">↻ Перепроверить</button>
+          </div>
+          <div class="card-body">
+            <div id="ref-checks-summary"></div>
+            <div class="checks-list" id="ref-checks-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modal-backdrop" onclick="if(event.target===this)closeModal()">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-head">
+      <div class="modal-title" id="modal-title">Заголовок</div>
+      <button class="modal-x" onclick="closeModal()" aria-label="Закрыть">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-foot" id="modal-foot"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   СПРАВОЧНИКИ ТИПОВ
+   ============================================================ */
+const DICT_TYPES = [
+  { code:'system',        label:'Системный',        cls:'sys',    hint:'Значения, на которые завязана логика в коде. Только просмотр.' },
+  { code:'informational', label:'Информационный',   cls:'info',   hint:'Выпадающие списки в карточках. Просмотр и редактирование.' },
+  { code:'user',          label:'Пользовательский', cls:'custom', hint:'Полный CRUD. Не отражается в других карточках.' }
+];
+
+const DICT_STATUSES = ['Активен','Черновик','Приостановлен'];
+
+function typeLabel(code){ const t = DICT_TYPES.find(x => x.code === code); return t ? t.label : code; }
+function typeClass(code){ const t = DICT_TYPES.find(x => x.code === code); return t ? t.cls : 'mute'; }
+
+/* ============================================================
+   ДАННЫЕ
+   ============================================================ */
+const DICT_DATA = [
+  /* -------------------- СИСТЕМНЫЕ (system) -------------------- */
+  {
+    id:'d1', name:'Статусы опросников обратной связи', code:'feedback_statuses',
+    type:'system', kind:'list', owner:'Ядро ЦАМ', status:'Активен', updatedAt:'2026-09-12 14:20',
+    description:'Статусы, которые может принимать опросник ОС: от черновика до архива.',
+    publicApi:true, allowAdd:false, allowDelete:false, allowRename:false, valuesRequired:true, cache:60,
+    values:[
+      { id:'v1', code:'draft',    label:'Черновик',      description:'Ещё не показывается пользователю', isDefault:true,  enabled:true },
+      { id:'v2', code:'active',   label:'Активен',       description:'Показывается пользователю',         isDefault:false, enabled:true },
+      { id:'v3', code:'paused',   label:'Приостановлен', description:'Временно не показывается',          isDefault:false, enabled:true },
+      { id:'v4', code:'archived', label:'Архив',         description:'Убран, но данные сохранены',        isDefault:false, enabled:true }
+    ]
+  },
+  {
+    id:'d2', name:'Типы опросников обратной связи', code:'feedback_types',
+    type:'system', kind:'list', owner:'Ядро ЦАМ', status:'Активен', updatedAt:'2026-09-12 14:20',
+    description:'Какие бывают опросники: оценка оператора, ассистента, навыка, NPS и исследовательские.',
+    publicApi:true, allowAdd:false, allowDelete:false, allowRename:false, valuesRequired:true, cache:60,
+    values:[
+      { id:'v1', code:'operator_rating',  label:'Оценка оператора',  description:'', isDefault:false, enabled:true },
+      { id:'v2', code:'assistant_rating', label:'Оценка ассистента', description:'', isDefault:false, enabled:true },
+      { id:'v3', code:'skill_rating',     label:'Оценка навыка',     description:'', isDefault:false, enabled:true },
+      { id:'v4', code:'nps',              label:'NPS',               description:'', isDefault:false, enabled:true },
+      { id:'v5', code:'research',         label:'Исследование',      description:'', isDefault:false, enabled:true }
+    ]
+  },
+  {
+    id:'d3', name:'Статусы шаблонов ответов', code:'template_statuses',
+    type:'system', kind:'list', owner:'Ядро ЦАМ', status:'Активен', updatedAt:'2026-09-11 10:05',
+    description:'Жизненный цикл шаблона: от черновика до архива.',
+    publicApi:true, allowAdd:false, allowDelete:false, allowRename:false, valuesRequired:true, cache:60,
+    values:[
+      { id:'v1', code:'draft',    label:'Черновик',      description:'', isDefault:true,  enabled:true },
+      { id:'v2', code:'active',   label:'Активен',       description:'', isDefault:false, enabled:true },
+      { id:'v3', code:'paused',   label:'Приостановлен', description:'', isDefault:false, enabled:true },
+      { id:'v4', code:'archived', label:'Архив',         description:'', isDefault:false, enabled:true }
+    ]
+  },
+  {
+    id:'d4', name:'Типы поверхностей', code:'surface_types',
+    type:'system', kind:'list', owner:'Ядро ЦАМ', status:'Активен', updatedAt:'2026-09-09 18:40',
+    description:'Типы поверхностей для регистрации конфигурации ассистента.',
+    publicApi:true, allowAdd:false, allowDelete:false, allowRename:false, valuesRequired:true, cache:60,
+    values:[
+      { id:'v1', code:'portal',         label:'портал',               description:'', isDefault:false, enabled:true },
+      { id:'v2', code:'portal_section', label:'раздел портала',       description:'', isDefault:false, enabled:true },
+      { id:'v3', code:'mobile_app',     label:'мобильное приложение', description:'', isDefault:false, enabled:true }
+    ]
+  },
+  {
+    id:'d5', name:'Статусы навыков', code:'skill_statuses',
+    type:'system', kind:'list', owner:'Ядро ЦАМ', status:'Активен', updatedAt:'2026-09-06 09:00',
+    description:'Полный жизненный цикл навыка: от черновика до прода и отключения.',
+    publicApi:true, allowAdd:false, allowDelete:false, allowRename:false, valuesRequired:true, cache:60,
+    values:[
+      { id:'v1',  code:'draft',     label:'Черновик',        description:'', isDefault:true,  enabled:true },
+      { id:'v2',  code:'checking',  label:'На проверке',     description:'', isDefault:false, enabled:true },
+      { id:'v3',  code:'rejected',  label:'Отклонён',        description:'', isDefault:false, enabled:true },
+      { id:'v4',  code:'training',  label:'Обучение модели', description:'', isDefault:false, enabled:true },
+      { id:'v5',  code:'autotest',  label:'Автотесты',       description:'', isDefault:false, enabled:true },
+      { id:'v6',  code:'sandbox',   label:'Песочница',       description:'', isDefault:false, enabled:true },
+      { id:'v7',  code:'review',    label:'На ревью',        description:'', isDefault:false, enabled:true },
+      { id:'v8',  code:'approved',  label:'Согласован',      description:'', isDefault:false, enabled:true },
+      { id:'v9',  code:'whitelist', label:'Белые списки',    description:'', isDefault:false, enabled:true },
+      { id:'v10', code:'prod',      label:'Прод',            description:'', isDefault:false, enabled:true },
+      { id:'v11', code:'disabled',  label:'Отключён',        description:'', isDefault:false, enabled:true }
+    ]
+  },
+  {
+    id:'d6', name:'Правила вложений', code:'attachment_rules',
+    type:'system', kind:'rules-attachments', owner:'Безопасность ЦАМ', status:'Активен', updatedAt:'2026-09-12 11:00',
+    description:'Форматы, MIME, максимальные размеры и количество вложений. Применяются к загрузке файлов пользователями и операторами.',
+    publicApi:false, allowAdd:false, allowDelete:false, allowRename:false, valuesRequired:true, cache:60,
+    values:[
+      { id:'v1', code:'image',    label:'Изображения', extensions:'jpg, jpeg, png, webp, heic', mime:'image/*',        maxSizeMb:10, maxCount:5, zones:'auth, anon', enabled:true,  note:'Сжимаем на клиенте до 2 МБ.' },
+      { id:'v2', code:'document', label:'Документы',   extensions:'pdf, doc, docx, xls, xlsx, txt', mime:'application/*', maxSizeMb:20, maxCount:3, zones:'auth',       enabled:true,  note:'PDF не более 20 МБ, остальное — 15 МБ.' },
+      { id:'v3', code:'audio',    label:'Аудио',       extensions:'mp3, ogg, wav, m4a', mime:'audio/*',  maxSizeMb:5,  maxCount:2, zones:'auth',       enabled:true,  note:'' },
+      { id:'v4', code:'video',    label:'Видео',       extensions:'mp4, mov', mime:'video/*',  maxSizeMb:50, maxCount:1, zones:'auth',       enabled:false, note:'Временно отключено.' }
+    ]
+  },
+
+  /* -------------------- ИНФОРМАЦИОННЫЕ (informational) -------------------- */
+  {
+    id:'d7', name:'Типы шаблонов ответов', code:'template_types',
+    type:'informational', kind:'list', owner:'Команда ЦАМ', status:'Активен', updatedAt:'2026-09-11 10:05',
+    description:'Типы шаблонов: приветствие, прощание, уточнение, отказ, перевод на оператора и другие.',
+    publicApi:true, allowAdd:true, allowDelete:true, allowRename:true, valuesRequired:false, cache:60,
+    values:[
+      { id:'v1', code:'greeting',    label:'Приветствие',          description:'', isDefault:false, enabled:true },
+      { id:'v2', code:'farewell',    label:'Прощание',             description:'', isDefault:false, enabled:true },
+      { id:'v3', code:'clarify',     label:'Уточнение',            description:'', isDefault:false, enabled:true },
+      { id:'v4', code:'refusal',     label:'Отказ',                description:'', isDefault:false, enabled:true },
+      { id:'v5', code:'to_operator', label:'Перевод на оператора', description:'', isDefault:false, enabled:true },
+      { id:'v6', code:'error',       label:'Ошибка',               description:'', isDefault:false, enabled:true },
+      { id:'v7', code:'thanks',      label:'Благодарность',        description:'', isDefault:false, enabled:true },
+      { id:'v8', code:'instruction', label:'Инструкция',           description:'', isDefault:false, enabled:true }
+    ]
+  },
+  {
+    id:'d8', name:'Категории базы знаний', code:'kb_categories',
+    type:'informational', kind:'list', owner:'Команда ЖКХ', status:'Активен', updatedAt:'2026-09-10 09:15',
+    description:'Категории материалов БЗ. Используются в фильтре раздела «База знаний» и в карточках материалов.',
+    publicApi:false, allowAdd:true, allowDelete:true, allowRename:true, valuesRequired:false, cache:0,
+    values:[
+      { id:'v1', code:'zhkh',      label:'ЖКХ',             description:'', isDefault:false, enabled:true },
+      { id:'v2', code:'edu',       label:'Образование',     description:'', isDefault:false, enabled:true },
+      { id:'v3', code:'health',    label:'Здравоохранение', description:'', isDefault:false, enabled:true },
+      { id:'v4', code:'transport', label:'Транспорт',       description:'', isDefault:false, enabled:true },
+      { id:'v5', code:'social',    label:'Соцзащита',       description:'', isDefault:false, enabled:true }
+    ]
+  },
+  {
+    id:'d9', name:'Шрифты виджета', code:'widget_fonts',
+    type:'informational', kind:'list', owner:'Команда ЦАМ', status:'Активен', updatedAt:'2026-09-08 12:00',
+    description:'Доступные шрифты для оформления виджета ассистента на поверхностях.',
+    publicApi:false, allowAdd:true, allowDelete:true, allowRename:true, valuesRequired:false, cache:0,
+    values:[
+      { id:'v1', code:'moscow', label:'Moscow Sans', description:"'Moscow Sans', 'Helvetica Neue', sans-serif", isDefault:true,  enabled:true },
+      { id:'v2', code:'system', label:'Системный',   description:"system-ui, -apple-system, sans-serif",         isDefault:false, enabled:true },
+      { id:'v3', code:'golos',  label:'Golos Text',  description:"'Golos Text', 'Segoe UI', sans-serif",         isDefault:false, enabled:true }
+    ]
+  },
+  {
+    id:'d10', name:'Формы элементов', code:'widget_shapes',
+    type:'informational', kind:'list', owner:'Команда ЦАМ', status:'Активен', updatedAt:'2026-09-08 12:00',
+    description:'Скругления элементов интерфейса виджета: пузыри, карточки.',
+    publicApi:false, allowAdd:true, allowDelete:true, allowRename:true, valuesRequired:false, cache:0,
+    values:[
+      { id:'v1', code:'round',  label:'Скруглённая', description:'rounded-2xl', isDefault:true,  enabled:true },
+      { id:'v2', code:'soft',   label:'Умеренная',   description:'rounded-lg',  isDefault:false, enabled:true },
+      { id:'v3', code:'square', label:'Прямая',      description:'rounded-sm',  isDefault:false, enabled:true }
+    ]
+  },
+  {
+    id:'d11', name:'Причины низких оценок оператора', code:'operator_low_reasons',
+    type:'informational', kind:'list', owner:'Команда ЖКХ', status:'Активен', updatedAt:'2026-09-07 16:30',
+    description:'Список причин, которые пользователь может указать при низкой оценке работы оператора.',
+    publicApi:false, allowAdd:true, allowDelete:true, allowRename:true, valuesRequired:false, cache:0,
+    values:[
+      { id:'v1', code:'long_wait',     label:'Долгое ожидание оператора', description:'', isDefault:false, enabled:true },
+      { id:'v2', code:'unresolved',    label:'Вопрос остался нерешённым', description:'', isDefault:false, enabled:true },
+      { id:'v3', code:'off_topic',     label:'Ответ не по существу',      description:'', isDefault:false, enabled:true },
+      { id:'v4', code:'had_to_repeat', label:'Пришлось повторять вопрос', description:'', isDefault:false, enabled:true }
+    ]
+  },
+
+  /* -------------------- ПОЛЬЗОВАТЕЛЬСКИЕ (user) -------------------- */
+  {
+    id:'d12', name:'Каналы обращений', code:'contact_channels',
+    type:'user', kind:'list', owner:'Команда ЦАМ', status:'Активен', updatedAt:'2026-10-05 11:20',
+    description:'Способы, которыми пользователи могут обратиться за поддержкой.',
+    publicApi:false, allowAdd:true, allowDelete:true, allowRename:true, valuesRequired:false, cache:0,
+    values:[
+      { id:'v1', code:'portal',  label:'Портал mos.ru',      description:'', isDefault:true,  enabled:true },
+      { id:'v2', code:'app',     label:'Мобильное приложение', description:'', isDefault:false, enabled:true },
+      { id:'v3', code:'chat',    label:'Чат на сайте',       description:'', isDefault:false, enabled:true },
+      { id:'v4', code:'voice',   label:'Голосовой ассистент', description:'', isDefault:false, enabled:true }
+    ]
+  },
+  {
+    id:'d13', name:'Округа Москвы', code:'moscow_districts',
+    type:'user', kind:'list', owner:'Команда ЦАМ', status:'Активен', updatedAt:'2026-10-07 15:40',
+    description:'Список административных округов Москвы для внутренней классификации.',
+    publicApi:false, allowAdd:true, allowDelete:true, allowRename:true, valuesRequired:false, cache:0,
+    values:[
+      { id:'v1', code:'cao',  label:'ЦАО',  description:'Центральный административный округ', isDefault:false, enabled:true },
+      { id:'v2', code:'sao',  label:'САО',  description:'Северный административный округ',    isDefault:false, enabled:true },
+      { id:'v3', code:'svao', label:'СВАО', description:'Северо-Восточный округ',             isDefault:false, enabled:true },
+      { id:'v4', code:'vao',  label:'ВАО',  description:'Восточный административный округ',   isDefault:false, enabled:true },
+      { id:'v5', code:'uvao', label:'ЮВАО', description:'Юго-Восточный административный округ', isDefault:false, enabled:true },
+      { id:'v6', code:'uao',  label:'ЮАО',  description:'Южный административный округ',       isDefault:false, enabled:true }
+    ]
+  },
+  {
+    id:'d14', name:'Приоритеты заявок', code:'ticket_priorities',
+    type:'user', kind:'list', owner:'Команда ЖКХ', status:'Черновик', updatedAt:'2026-10-10 09:00',
+    description:'Внутренняя шкала приоритетов для сортировки заявок в работе оператора.',
+    publicApi:false, allowAdd:true, allowDelete:true, allowRename:true, valuesRequired:false, cache:0,
+    values:[
+      { id:'v1', code:'low',      label:'Низкий',    description:'', isDefault:true,  enabled:true },
+      { id:'v2', code:'normal',   label:'Обычный',   description:'', isDefault:false, enabled:true },
+      { id:'v3', code:'high',     label:'Высокий',   description:'', isDefault:false, enabled:true },
+      { id:'v4', code:'critical', label:'Критичный', description:'', isDefault:false, enabled:true }
+    ]
+  }
+];
+
+/* ============================================================
+   ФИЛЬТРЫ
+   ============================================================ */
+const AF_FIELDS = {
+  ref: [
+    { id:'name',        label:'Название справочника', type:'text', get: r => r.name },
+    { id:'code',        label:'Служебный код',        type:'text', get: r => r.code },
+    { id:'type',        label:'Тип',                  type:'enum',
+      options:['system','informational','user'],
+      labels: ['Системный','Информационный','Пользовательский'],
+      get: r => r.type },
+    { id:'owner',       label:'Владелец',             type:'text', get: r => r.owner },
+    { id:'status',      label:'Статус',               type:'enum',
+      options:['Активен','Черновик','Приостановлен'],
+      labels: ['Активен','Черновик','Приостановлен'],
+      get: r => r.status },
+    { id:'valuesCount', label:'Количество значений',  type:'number', get: r => r.values.length }
+  ]
+};
+
+const AF_OPS = {
+  text: [
+    { id:'contains',    label:'содержит' },
+    { id:'notContains', label:'не содержит' },
+    { id:'equals',      label:'равно' },
+    { id:'notEquals',   label:'не равно' },
+    { id:'startsWith',  label:'начинается с' },
+    { id:'endsWith',    label:'заканчивается на' },
+    { id:'empty',       label:'пусто',    noValue:true },
+    { id:'notEmpty',    label:'не пусто', noValue:true }
+  ],
+  enum: [
+    { id:'in',    label:'входит в',    multi:true },
+    { id:'notIn', label:'не входит в', multi:true }
+  ],
+  number: [
+    { id:'eq',      label:'=' },
+    { id:'gt',      label:'>' },
+    { id:'gte',     label:'больше или равно' },
+    { id:'lt',      label:'<' },
+    { id:'lte',     label:'меньше или равно' },
+    { id:'between', label:'между', two:true }
+  ]
+};
+
+const advFilters = { ref: { conditions:[], join:'and', appliedConditions:[], appliedJoin:'and' } };
+const filterPanelOpen = { ref:false };
+const savedFilters = { ref: [] };
+let afUid = 1000;
+const newAfId = () => 'af' + (++afUid);
+let sfUid = 2000;
+const newSfId = () => 'sf' + (++sfUid);
+
+/* ============================================================
+   УТИЛИТЫ
+   ============================================================ */
+function esc(s){
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[c]));
+}
+function plural(n, forms){
+  const a = Math.abs(n) % 100, b = a % 10;
+  if (a > 10 && a < 20) return forms[2];
+  if (b > 1 && b < 5) return forms[1];
+  if (b === 1) return forms[0];
+  return forms[2];
+}
+function toast(msg){
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('on');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => el.classList.remove('on'), 2000);
+}
+function nowStr(){
+  const d = new Date();
+  const pad = n => String(n).padStart(2,'0');
+  return d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate()) + ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+}
+function codeExists(code, excludeId){
+  return DICT_DATA.some(d => d.code === code && d.id !== excludeId);
+}
+
+/* ============================================================
+   ФИЛЬТРАЦИЯ
+   ============================================================ */
+function findFieldDef(condField){
+  for (const key in AF_FIELDS){
+    const f = AF_FIELDS[key].find(x => x.id === condField);
+    if (f) return f;
+  }
+  return null;
+}
+function matchesCondition(record, cond){
+  const fieldDef = findFieldDef(cond.field);
+  if (!fieldDef) return true;
+  const value = fieldDef.get(record);
+  const op = cond.op, v = cond.value, v2 = cond.value2;
+  if (fieldDef.type === 'enum'){
+    const arr = Array.isArray(value) ? value : [value];
+    const sel = Array.isArray(v) ? v : (v ? [v] : []);
+    if (op === 'in') return sel.length === 0 || sel.some(s => arr.includes(s));
+    if (op === 'notIn') return sel.length === 0 || !sel.some(s => arr.includes(s));
+    return true;
+  }
+  if (fieldDef.type === 'number'){
+    const n = Number(value);
+    if (v === '' || v == null) return true;
+    const a = Number(v);
+    if (op === 'eq')  return n === a;
+    if (op === 'gt')  return n > a;
+    if (op === 'gte') return n >= a;
+    if (op === 'lt')  return n < a;
+    if (op === 'lte') return n <= a;
+    if (op === 'between'){
+      if (v2 === '' || v2 == null) return true;
+      const b = Number(v2);
+      const min = Math.min(a,b), max = Math.max(a,b);
+      return n >= min && n <= max;
+    }
+    return true;
+  }
+  const s = String(value == null ? '' : value).toLowerCase();
+  if (op === 'empty')    return s.trim() === '';
+  if (op === 'notEmpty') return s.trim() !== '';
+  if (v == null || String(v).trim() === '') return true;
+  const needle = String(v).toLowerCase();
+  if (op === 'contains')    return s.includes(needle);
+  if (op === 'notContains') return !s.includes(needle);
+  if (op === 'equals')      return s === needle;
+  if (op === 'notEquals')   return s !== needle;
+  if (op === 'startsWith')  return s.startsWith(needle);
+  if (op === 'endsWith')    return s.endsWith(needle);
+  return true;
+}
+function matchesAdvanced(record, listId){
+  const state = advFilters[listId];
+  if (!state) return true;
+  const conds = state.appliedConditions;
+  if (!conds || conds.length === 0) return true;
+  const results = conds.map(c => matchesCondition(record, c));
+  return state.appliedJoin === 'or' ? results.some(Boolean) : results.every(Boolean);
+}
+function countAppliedConditions(listId){
+  const st = advFilters[listId];
+  return st ? (st.appliedConditions || []).length : 0;
+}
+function updateAfBadge(listId){
+  const btn = document.getElementById('af-btn-' + listId);
+  const badge = document.getElementById('af-badge-' + listId);
+  if (!btn || !badge) return;
+  const n = countAppliedConditions(listId);
+  if (n > 0){
+    badge.textContent = n;
+    badge.classList.remove('hidden');
+    btn.classList.add('has-conditions');
+  } else {
+    badge.classList.add('hidden');
+    btn.classList.remove('has-conditions');
+  }
+}
+function toggleFilterPanel(listId){
+  const panel = document.getElementById('af-panel-' + listId);
+  if (!panel) return;
+  const isOpen = filterPanelOpen[listId];
+  if (!isOpen){
+    const state = advFilters[listId];
+    state.conditions = JSON.parse(JSON.stringify(state.appliedConditions || []));
+    state.join = state.appliedJoin || 'and';
+    panel.style.display = '';
+    filterPanelOpen[listId] = true;
+    renderFilterPanel(listId);
+  } else {
+    panel.style.display = 'none';
+    filterPanelOpen[listId] = false;
+  }
+}
+function renderFilterPanel(listId){
+  const panel = document.getElementById('af-panel-' + listId);
+  const state = advFilters[listId];
+  if (!panel) return;
+  panel.innerHTML = `
+    <div class="filter-panel-head">
+      <div class="filter-panel-title">Условия отбора</div>
+      <div class="filter-join" id="filter-join-${listId}">
+        <button type="button" class="filter-join-btn ${state.join==='and'?'active':''}" data-join="and">И — все условия</button>
+        <button type="button" class="filter-join-btn ${state.join==='or'?'active':''}" data-join="or">ИЛИ — любое условие</button>
+      </div>
+    </div>
+    <div class="filter-conditions" id="filter-conditions-${listId}"></div>
+    <button type="button" class="btn outline sm" onclick="addFilterCondition('${listId}')">+ Добавить условие</button>
+    <div class="filter-panel-foot">
+      <button type="button" class="btn outline sm" onclick="clearFilterConditions('${listId}')">Очистить</button>
+      <div class="right">
+        <button type="button" class="btn outline sm" onclick="toggleFilterPanel('${listId}')">Закрыть</button>
+        <button type="button" class="btn sm" onclick="applyFilter('${listId}')">Применить отбор</button>
+      </div>
+    </div>
+  `;
+  panel.querySelectorAll('#filter-join-' + listId + ' .filter-join-btn').forEach(btn => {
+    btn.onclick = () => { state.join = btn.dataset.join; renderFilterPanel(listId); };
+  });
+  renderFilterConditions(listId);
+}
+function renderFilterConditions(listId){
+  const state = advFilters[listId];
+  const fields = AF_FIELDS[listId];
+  const wrap = document.getElementById('filter-conditions-' + listId);
+  if (!wrap) return;
+  wrap.innerHTML = '';
+  if (state.conditions.length === 0){
+    wrap.innerHTML = '<div class="filter-empty">Условий нет. Нажмите «Добавить условие».</div>';
+    return;
+  }
+  state.conditions.forEach(c => {
+    const fieldDef = fields.find(f => f.id === c.field) || fields[0];
+    const ops = AF_OPS[fieldDef.type];
+    const opDef = ops.find(o => o.id === c.op) || ops[0];
+    const row = document.createElement('div');
+    row.className = 'filter-row';
+
+    const fieldSel = document.createElement('select');
+    fieldSel.className = 'input';
+    fields.forEach(f => {
+      const opt = document.createElement('option');
+      opt.value = f.id; opt.textContent = f.label;
+      if (f.id === fieldDef.id) opt.selected = true;
+      fieldSel.appendChild(opt);
+    });
+    fieldSel.onchange = () => onFilterFieldChange(listId, c.id, fieldSel.value);
+
+    const opSel = document.createElement('select');
+    opSel.className = 'input';
+    ops.forEach(o => {
+      const opt = document.createElement('option');
+      opt.value = o.id; opt.textContent = o.label;
+      if (o.id === opDef.id) opt.selected = true;
+      opSel.appendChild(opt);
+    });
+    opSel.onchange = () => onFilterOpChange(listId, c.id, opSel.value);
+
+    const valWrap = document.createElement('div');
+    valWrap.className = 'filter-value-wrap';
+    if (!opDef.noValue){
+      if (fieldDef.type === 'enum'){
+        const chips = document.createElement('div');
+        chips.className = 'filter-enum-chips';
+        const selected = Array.isArray(c.value) ? c.value : (c.value ? [c.value] : []);
+        fieldDef.options.forEach((code, i) => {
+          const lbl = document.createElement('label');
+          const on = selected.includes(code);
+          lbl.className = 'filter-enum-chip' + (on ? ' on' : '');
+          lbl.innerHTML = `<input type="checkbox" ${on ? 'checked' : ''} /><span>${esc(fieldDef.labels[i])}</span>`;
+          lbl.onclick = (e) => {
+            e.preventDefault();
+            const arr = Array.isArray(c.value) ? c.value.slice() : [];
+            const ix = arr.indexOf(code);
+            if (ix >= 0) arr.splice(ix,1); else arr.push(code);
+            c.value = arr;
+            renderFilterConditions(listId);
+          };
+          chips.appendChild(lbl);
+        });
+        valWrap.appendChild(chips);
+      } else if (opDef.two){
+        const i1 = document.createElement('input');
+        i1.className = 'input filter-value'; i1.type = 'number'; i1.placeholder = 'от';
+        i1.value = c.value ?? ''; i1.oninput = () => { c.value = i1.value; };
+        const i2 = document.createElement('input');
+        i2.className = 'input filter-value'; i2.type = 'number'; i2.placeholder = 'до';
+        i2.value = c.value2 ?? ''; i2.oninput = () => { c.value2 = i2.value; };
+        valWrap.appendChild(i1); valWrap.appendChild(i2);
+      } else {
+        const inp = document.createElement('input');
+        inp.className = 'input filter-value';
+        if (fieldDef.type === 'number') inp.type = 'number';
+        inp.placeholder = 'значение';
+        inp.value = c.value ?? '';
+        inp.oninput = () => { c.value = inp.value; };
+        valWrap.appendChild(inp);
+      }
+    } else {
+      const note = document.createElement('span');
+      note.style.color = 'var(--muted)';
+      note.style.fontSize = '11.5px';
+      note.textContent = 'значение не требуется';
+      valWrap.appendChild(note);
+    }
+    const del = document.createElement('button');
+    del.type = 'button'; del.className = 'filter-del'; del.textContent = '✕';
+    del.onclick = () => removeFilterCondition(listId, c.id);
+
+    row.appendChild(fieldSel); row.appendChild(opSel); row.appendChild(valWrap); row.appendChild(del);
+    wrap.appendChild(row);
+  });
+}
+function addFilterCondition(listId){
+  const state = advFilters[listId];
+  const fields = AF_FIELDS[listId];
+  const firstField = fields[0];
+  const firstOp = AF_OPS[firstField.type][0];
+  state.conditions.push({
+    id: newAfId(), field: firstField.id, op: firstOp.id,
+    value: firstField.type === 'enum' ? [] : '', value2:''
+  });
+  renderFilterConditions(listId);
+}
+function removeFilterCondition(listId, condId){
+  const state = advFilters[listId];
+  state.conditions = state.conditions.filter(c => c.id !== condId);
+  renderFilterConditions(listId);
+}
+function onFilterFieldChange(listId, condId, fieldId){
+  const state = advFilters[listId];
+  const c = state.conditions.find(x => x.id === condId);
+  if (!c) return;
+  const fieldDef = AF_FIELDS[listId].find(f => f.id === fieldId);
+  const firstOp = AF_OPS[fieldDef.type][0];
+  c.field = fieldId; c.op = firstOp.id;
+  c.value = fieldDef.type === 'enum' ? [] : ''; c.value2 = '';
+  renderFilterConditions(listId);
+}
+function onFilterOpChange(listId, condId, opId){
+  const state = advFilters[listId];
+  const c = state.conditions.find(x => x.id === condId);
+  if (!c) return;
+  c.op = opId;
+  renderFilterConditions(listId);
+}
+function clearFilterConditions(listId){
+  const state = advFilters[listId];
+  state.conditions = []; state.join = 'and';
+  renderFilterPanel(listId);
+}
+function applyFilter(listId){
+  const state = advFilters[listId];
+  state.appliedConditions = JSON.parse(JSON.stringify(state.conditions));
+  state.appliedJoin = state.join;
+  updateAfBadge(listId);
+  renderAppliedBar(listId);
+  renderDictList();
+  updateResetVisibility(listId);
+  toggleFilterPanel(listId);
+  const n = state.appliedConditions.length;
+  toast(n > 0 ? `Применено условий: ${n}` : 'Расширенные условия очищены');
+}
+function renderAppliedBar(listId){
+  const bar = document.getElementById('applied-' + listId);
+  if (!bar) return;
+  const state = advFilters[listId];
+  const conds = state.appliedConditions;
+  if (!conds || conds.length === 0){ bar.style.display = 'none'; return; }
+  const text = describeConditions(listId, conds, state.appliedJoin);
+  bar.style.display = '';
+  bar.innerHTML = `
+    <span class="applied-bar-label">Условия отбора</span>
+    <span class="applied-bar-text">${esc(text)}</span>
+    <button type="button" class="reset-btn on" onclick="clearAppliedFilter('${listId}')">Сбросить всё</button>
+  `;
+}
+function describeConditions(listId, conds, join){
+  const fields = AF_FIELDS[listId];
+  return conds.map(c => {
+    const fieldDef = fields.find(f => f.id === c.field);
+    if (!fieldDef) return '';
+    const opDef = AF_OPS[fieldDef.type].find(o => o.id === c.op);
+    let val = '';
+    if (Array.isArray(c.value)){
+      val = c.value.map(code => {
+        const i = fieldDef.options.indexOf(code);
+        return fieldDef.labels ? fieldDef.labels[i] : code;
+      }).join(', ');
+    } else val = c.value ?? '';
+    if (opDef && opDef.two && c.value2) val = `${c.value} – ${c.value2}`;
+    return `${fieldDef.label} ${opDef ? opDef.label : c.op}${val ? ' ' + val : ''}`;
+  }).filter(Boolean).join(join === 'and' ? ' и ' : ' или ');
+}
+function clearAppliedFilter(listId){
+  const state = advFilters[listId];
+  state.appliedConditions = []; state.appliedJoin = 'and';
+  updateAfBadge(listId);
+  renderAppliedBar(listId);
+  renderDictList();
+  updateResetVisibility(listId);
+}
+
+/* ============================================================
+   МУЛЬТИВЫБОР
+   ============================================================ */
+const msState = { 'ref-type': [], 'ref-status': [] };
+
+function toggleMs(id){
+  const menu = document.getElementById(id + '-menu');
+  if (!menu) return;
+  const isOpen = menu.classList.contains('open');
+  document.querySelectorAll('.ms-menu.open').forEach(m => m.classList.remove('open'));
+  document.querySelectorAll('.ms-btn.active').forEach(b => b.classList.remove('active'));
+  if (!isOpen){
+    menu.classList.add('open');
+    document.getElementById(id + '-btn').classList.add('active');
+  }
+}
+function clearMs(id){
+  msState[id] = [];
+  document.querySelectorAll('#' + id + '-menu input[type=checkbox]').forEach(cb => cb.checked = false);
+  closeMs();
+  updateMsLabel(id);
+  renderDictList();
+  updateResetVisibility(id.split('-')[0]);
+}
+function onMsChange(id){
+  msState[id] = [...document.querySelectorAll('#' + id + '-menu input[type=checkbox]:checked')].map(cb => cb.value);
+  updateMsLabel(id);
+  renderDictList();
+  updateResetVisibility(id.split('-')[0]);
+}
+function closeMs(){
+  document.querySelectorAll('.ms-menu.open').forEach(m => m.classList.remove('open'));
+  document.querySelectorAll('.ms-btn.active').forEach(b => b.classList.remove('active'));
+}
+function updateMsLabel(id){
+  const wrap = document.getElementById(id + '-wrap');
+  const allLabel = wrap?.dataset.allLabel || 'Все';
+  const labelEl = document.getElementById(id + '-label');
+  const checkAll = document.getElementById(id + '-check-all');
+  const values = msState[id] || [];
+  if (checkAll) checkAll.style.visibility = values.length === 0 ? 'visible' : 'hidden';
+  if (values.length === 0) labelEl.textContent = allLabel;
+  else if (values.length === 1){
+    if (id === 'ref-type') labelEl.textContent = typeLabel(values[0]);
+    else labelEl.textContent = values[0];
+  } else labelEl.textContent = `Выбрано: ${values.length}`;
+}
+function resetFilters(group){
+  const s = document.getElementById('ref-q');
+  if (s) s.value = '';
+  Object.keys(msState).forEach(k => {
+    if (k.startsWith(group)){
+      msState[k] = [];
+      document.querySelectorAll('#' + k + '-menu input[type=checkbox]').forEach(cb => cb.checked = false);
+      updateMsLabel(k);
+    }
+  });
+  const af = advFilters[group];
+  if (af){
+    af.appliedConditions = []; af.appliedJoin = 'and';
+    updateAfBadge(group); renderAppliedBar(group);
+    if (filterPanelOpen[group]) toggleFilterPanel(group);
+  }
+  renderDictList();
+  updateResetVisibility(group);
+}
+function updateResetVisibility(group){
+  const searchVal = (document.getElementById('ref-q')?.value || '').trim();
+  const hasMs = Object.keys(msState).some(k => k.startsWith(group) && msState[k].length > 0);
+  const hasAf = advFilters[group] && countAppliedConditions(group) > 0;
+  const btn = document.getElementById(group + '-reset');
+  if (btn) btn.classList.toggle('on', searchVal.length > 0 || hasMs || hasAf);
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.ms-wrap')) closeMs();
+  if (!e.target.closest('.menu-wrap')) {
+    document.querySelectorAll('.menu-content.open').forEach(m => m.classList.remove('open'));
+  }
+});
+
+/* ============================================================
+   МЕНЮ «⋮» И СОХРАНЁННЫЕ ФИЛЬТРЫ
+   ============================================================ */
+function toggleMenu(listId){
+  const menu = document.getElementById(listId + '-menu');
+  if (!menu) return;
+  const isOpen = menu.classList.contains('open');
+  document.querySelectorAll('.menu-content.open').forEach(m => m.classList.remove('open'));
+  if (!isOpen){ renderMenuContent(listId); menu.classList.add('open'); }
+}
+function renderMenuContent(listId){
+  const menu = document.getElementById(listId + '-menu');
+  if (!menu) return;
+  const list = savedFilters[listId] || [];
+  menu.innerHTML = `
+    <div class="menu-item" onclick="saveCurrentFilter('${listId}')"><span>🔖</span> Сохранить текущий фильтр</div>
+    <div class="menu-item" onclick="copyFilterLink('${listId}')"><span>🔗</span> Скопировать ссылку на отбор</div>
+    <div style="padding:8px 10px 4px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);margin-top:4px;letter-spacing:.05em;text-transform:uppercase;font-weight:600">
+      Сохранённые фильтры
+    </div>
+    ${list.length === 0
+      ? `<div style="padding:6px 10px 10px;font-size:12px;color:var(--muted);font-style:italic;line-height:1.45">
+           Пока нет сохранённых фильтров.
+         </div>`
+      : list.map(f => `
+        <div class="menu-item" style="justify-content:space-between;gap:8px" onclick="applySavedFilter('${listId}','${f.id}')">
+          <span style="flex:1;display:flex;align-items:center;gap:8px;min-width:0">
+            <span style="flex-shrink:0;color:var(--muted)">▸</span>
+            <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(f.name)}</span>
+          </span>
+          <span class="saved-filter-del" onclick="event.stopPropagation();deleteSavedFilter('${listId}','${f.id}')" title="Удалить фильтр">✕</span>
+        </div>`).join('')}
+  `;
+}
+function saveCurrentFilter(listId){
+  const name = window.prompt('Название фильтра');
+  if (!name || !name.trim()) return;
+  const trimmed = name.trim();
+  const filterData = {
+    id: newSfId(), name: trimmed,
+    search: (document.getElementById('ref-q')?.value || ''),
+    ms: {}, af: null
+  };
+  Object.keys(msState).forEach(k => {
+    if (k.startsWith(listId) && msState[k].length > 0) filterData.ms[k] = msState[k].slice();
+  });
+  if (advFilters[listId]) filterData.af = {
+    conditions: JSON.parse(JSON.stringify(advFilters[listId].appliedConditions)),
+    join: advFilters[listId].appliedJoin
+  };
+  const arr = savedFilters[listId];
+  const idx = arr.findIndex(f => f.name === trimmed);
+  if (idx >= 0) arr[idx] = filterData; else arr.push(filterData);
+  toast(`Фильтр «${trimmed}» сохранён`);
+  document.querySelectorAll('.menu-content.open').forEach(m => m.classList.remove('open'));
+}
+function applySavedFilter(listId, filterId){
+  const f = (savedFilters[listId] || []).find(x => x.id === filterId);
+  if (!f) return;
+  const s = document.getElementById('ref-q');
+  if (s) s.value = f.search || '';
+  Object.keys(msState).forEach(k => {
+    if (k.startsWith(listId)){
+      msState[k] = (f.ms[k] || []).slice();
+      document.querySelectorAll('#' + k + '-menu input[type=checkbox]').forEach(cb => {
+        cb.checked = msState[k].includes(cb.value);
+      });
+      updateMsLabel(k);
+    }
+  });
+  if (f.af){
+    advFilters[listId].appliedConditions = JSON.parse(JSON.stringify(f.af.conditions));
+    advFilters[listId].appliedJoin = f.af.join;
+    updateAfBadge(listId); renderAppliedBar(listId);
+  }
+  renderDictList();
+  updateResetVisibility(listId);
+  toast(`Фильтр «${f.name}» применён`);
+  document.querySelectorAll('.menu-content.open').forEach(m => m.classList.remove('open'));
+}
+function deleteSavedFilter(listId, filterId){
+  savedFilters[listId] = (savedFilters[listId] || []).filter(f => f.id !== filterId);
+  renderMenuContent(listId);
+  toast('Фильтр удалён');
+}
+function copyFilterLink(listId){
+  const q = document.getElementById('ref-q')?.value.trim();
+  const params = new URLSearchParams();
+  if (q) params.set('q', q);
+  const url = window.location.origin + window.location.pathname + '?' + params.toString();
+  if (navigator.clipboard) navigator.clipboard.writeText(url);
+  toast('Ссылка на отбор скопирована');
+  document.querySelectorAll('.menu-content.open').forEach(m => m.classList.remove('open'));
+}
+
+/* ============================================================
+   НАВИГАЦИЯ
+   ============================================================ */
+function showSection(section, view){
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  const id = view === 'card' ? 'screen-ref-card' : 'screen-ref-list';
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.toggle('active', n.dataset.nav === section));
+  const crumb = document.getElementById('crumb-now');
+  crumb.textContent = view === 'card'
+    ? (document.getElementById('ref-title').textContent || 'Справочники')
+    : 'Справочники';
+  window.scrollTo(0,0);
+}
+
+/* ============================================================
+   ВКЛАДКИ КАРТОЧКИ
+   ============================================================ */
+function setupDictTabs(){
+  const screen = document.getElementById('screen-ref-card');
+  const tabsEl = document.getElementById('ref-tabs');
+  if (!screen || !tabsEl) return;
+  tabsEl.querySelectorAll('.tab').forEach(t => {
+    t.onclick = () => {
+      tabsEl.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      const id = t.dataset.tab;
+      screen.querySelectorAll(':scope > .tab-panel').forEach(p => {
+        p.style.display = p.dataset.panel === id ? '' : 'none';
+      });
+      if (id === 'checks') runDictChecks();
+    };
+  });
+}
+function switchDictTab(tab){
+  const t = document.querySelector('#ref-tabs .tab[data-tab="' + tab + '"]');
+  if (t) t.click();
+}
+
+/* ============================================================
+   СПИСОК
+   ============================================================ */
+let refSort = { field:null, dir:null };
+function setupSorting(){
+  document.querySelectorAll('#screen-ref-list thead th.sortable').forEach(th => {
+    th.onclick = () => {
+      const f = th.dataset.sort;
+      if (refSort.field === f){
+        if (refSort.dir === 'asc') refSort.dir = 'desc';
+        else { refSort.field = null; refSort.dir = null; }
+      } else { refSort.field = f; refSort.dir = 'asc'; }
+      paintSort();
+      renderDictList();
+    };
+  });
+}
+function paintSort(){
+  document.querySelectorAll('#screen-ref-list thead th.sortable').forEach(th => {
+    if (th.dataset.sort === refSort.field) th.dataset.dir = refSort.dir || '';
+    else th.removeAttribute('data-dir');
+  });
+}
+function applySort(rows, sort, accessors){
+  if (!sort.field || !sort.dir) return rows;
+  const acc = accessors[sort.field];
+  if (!acc) return rows;
+  const dir = sort.dir === 'asc' ? 1 : -1;
+  return rows.slice().sort((a,b) => {
+    const va = acc(a), vb = acc(b);
+    if (va == null && vb == null) return 0;
+    if (va == null) return 1;
+    if (vb == null) return -1;
+    if (typeof va === 'number' && typeof vb === 'number') return (va - vb) * dir;
+    return String(va).localeCompare(String(vb), 'ru') * dir;
+  });
+}
+
+function getFilteredDicts(){
+  const q = document.getElementById('ref-q').value.trim().toLowerCase();
+  const tpSel = msState['ref-type'];
+  const stSel = msState['ref-status'];
+  return DICT_DATA.filter(d => {
+    if (tpSel.length && !tpSel.includes(d.type)) return false;
+    if (stSel.length && !stSel.includes(d.status)) return false;
+    if (q.length >= 2){
+      const hay = (d.name + ' ' + d.code + ' ' + d.description).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    if (!matchesAdvanced(d, 'ref')) return false;
+    return true;
+  });
+}
+
+function renderDictList(){
+  const filtered = getFilteredDicts();
+  const rows = applySort(filtered, refSort, {
+    name: d => d.name, type: d => typeLabel(d.type),
+    valuesCount: d => d.values.length,
+    owner: d => d.owner, status: d => d.status
+  });
+  const tbody = document.getElementById('ref-rows');
+  const empty = document.getElementById('ref-empty');
+  if (!tbody || !empty) return;
+  tbody.innerHTML = '';
+  empty.style.display = rows.length === 0 ? 'block' : 'none';
+
+  rows.forEach(d => {
+    const tr = document.createElement('tr');
+    tr.onclick = () => openDictCard(d.id);
+    const stTag = d.status === 'Активен' ? 'ok'
+                : d.status === 'Приостановлен' ? 'warn'
+                : d.status === 'Черновик' ? 'ink' : 'mute';
+    const kindMark = d.kind === 'rules-attachments'
+      ? ` <span class="tag mute" title="Правила вложений">📎 правила</span>` : '';
+    tr.innerHTML = `
+      <td class="name-cell">
+        <span class="n">${esc(d.name)}${kindMark}</span>
+        <span class="c">${esc(d.code)}</span>
+      </td>
+      <td><span class="tag ${typeClass(d.type)}">${esc(typeLabel(d.type))}</span></td>
+      <td class="right num">${d.values.length}</td>
+      <td style="color:var(--muted);font-size:12px">${esc(d.owner)}</td>
+      <td><span class="tag ${stTag}">${esc(d.status)}</span></td>
+      <td class="right">›</td>
+    `;
+    tbody.appendChild(tr);
+  });
+  document.getElementById('ref-count').textContent =
+    rows.length + ' ' + plural(rows.length, ['справочник','справочника','справочников']);
+}
+
+/* ============================================================
+   КАРТОЧКА
+   ============================================================ */
+let currentDictId = null;
+let dictDirty = false;
+
+function getCurrentDict(){ return DICT_DATA.find(d => d.id === currentDictId); }
+
+function openDictCard(id){
+  currentDictId = id;
+  dictDirty = false;
+  const d = getCurrentDict();
+  if (!d) return;
+
+  document.getElementById('ref-title').textContent = d.name;
+  document.getElementById('ref-crumb-name').textContent = d.name;
+  document.getElementById('ref-subtitle').textContent = d.description;
+  document.getElementById('ref-head-code').textContent = d.code;
+  document.getElementById('ref-head-updated').textContent = d.updatedAt;
+
+  const dot = document.getElementById('ref-head-status-dot');
+  const statusText = document.getElementById('ref-head-status-text');
+  statusText.textContent = d.status;
+  dot.style.background = d.status === 'Активен' ? 'var(--accent-2)' : 'var(--muted)';
+
+  document.getElementById('ref-head-type-badge-wrap').innerHTML =
+    `<span class="tag ${typeClass(d.type)}">${esc(typeLabel(d.type))}</span>`;
+
+  // Заполнение настроек
+  document.getElementById('ref-set-name').value = d.name;
+  document.getElementById('ref-set-code').value = d.code;
+  document.getElementById('ref-set-type').value = d.type;
+  document.getElementById('ref-set-desc').value = d.description;
+  document.getElementById('ref-set-owner').value = d.owner;
+  document.getElementById('ref-set-public').checked = !!d.publicApi;
+  document.getElementById('ref-set-allow-add').checked = !!d.allowAdd;
+  document.getElementById('ref-set-allow-delete').checked = !!d.allowDelete;
+  document.getElementById('ref-set-allow-rename').checked = !!d.allowRename;
+  document.getElementById('ref-set-required').checked = !!d.valuesRequired;
+  document.getElementById('ref-set-cache').value = d.cache ?? 60;
+
+  applyDictTypeRules(d);
+
+  document.getElementById('ref-tab-values-count').textContent = d.values.length;
+  document.getElementById('ref-btn-pause').textContent =
+    d.status === 'Приостановлен' ? 'Возобновить' : 'Приостановить';
+
+  renderDictValues();
+  renderDictCardBanner();
+  updateDictChecksTabCount();
+  switchDictTab('values');
+  showSection('ref','card');
+}
+
+/* Применение правил редактирования в зависимости от типа */
+function applyDictTypeRules(d){
+  const isSystem = d.type === 'system';
+  const isInformational = d.type === 'informational';
+  const isUser = d.type === 'user';
+
+  // Поля настроек
+  const nameEl = document.getElementById('ref-set-name');
+  const codeEl = document.getElementById('ref-set-code');
+  const typeEl = document.getElementById('ref-set-type');
+  const descEl = document.getElementById('ref-set-desc');
+  const ownerEl = document.getElementById('ref-set-owner');
+  const pubEl = document.getElementById('ref-set-public');
+  const addEl = document.getElementById('ref-set-allow-add');
+  const delEl = document.getElementById('ref-set-allow-delete');
+  const renEl = document.getElementById('ref-set-allow-rename');
+  const reqEl = document.getElementById('ref-set-required');
+  const cacheEl = document.getElementById('ref-set-cache');
+
+  // Всегда отключено: код, тип
+  codeEl.disabled = true;
+  typeEl.disabled = true;
+
+  // Системный — всё read-only
+  nameEl.disabled = isSystem;
+  descEl.disabled = isSystem;
+  ownerEl.disabled = isSystem;
+  pubEl.disabled = isSystem;
+  addEl.disabled = isSystem;
+  delEl.disabled = isSystem;
+  renEl.disabled = isSystem;
+  reqEl.disabled = isSystem;
+  cacheEl.disabled = isSystem;
+
+  // У системных галочки allow_* принудительно сняты
+  if (isSystem){
+    addEl.checked = false;
+    delEl.checked = false;
+    renEl.checked = false;
+  }
+
+  // Визуальная блокировка свитчей
+  document.getElementById('ref-sw-public').classList.toggle('disabled', isSystem);
+  document.getElementById('ref-sw-allow-add').classList.toggle('disabled', isSystem);
+  document.getElementById('ref-sw-allow-delete').classList.toggle('disabled', isSystem);
+  document.getElementById('ref-sw-allow-rename').classList.toggle('disabled', isSystem);
+  document.getElementById('ref-sw-required').classList.toggle('disabled', isSystem);
+
+  // Кнопки в шапке
+  const saveBtn = document.getElementById('ref-btn-save');
+  const pauseBtn = document.getElementById('ref-btn-pause');
+  const delBtn = document.getElementById('ref-btn-delete');
+  const addValueBtn = document.getElementById('ref-btn-add-value');
+
+  saveBtn.style.display = isSystem ? 'none' : '';
+  pauseBtn.style.display = isSystem ? 'none' : '';
+  delBtn.style.display = isUser ? '' : 'none';
+  if (addValueBtn) addValueBtn.style.display = isSystem ? 'none' : '';
+}
+
+function renderDictCardBanner(){
+  const d = getCurrentDict();
+  const el = document.getElementById('ref-card-banner');
+  if (!d || !el){ return; }
+
+  let icon = '';
+  let text = '';
+  let cls = 'info';
+
+  if (d.type === 'system'){
+    cls = 'info';
+    icon = '🔒';
+    text = '<strong>Системный справочник.</strong> На значения этого справочника завязана логика в коде. Доступен только просмотр — редактирование и удаление заблокированы на уровне платформы.';
+  } else if (d.type === 'informational'){
+    cls = 'warn';
+    icon = '✏';
+    text = '<strong>Информационный справочник.</strong> Используется как выпадающий список в карточках других разделов. Значения можно добавлять, переименовывать и удалять — изменения сразу подхватываются в формах.';
+  } else {
+    cls = 'custom';
+    icon = '✚';
+    text = '<strong>Пользовательский справочник.</strong> Не отражается в карточках других разделов. Полный контроль: редактирование, приостановка, удаление, полный CRUD по значениям.';
+  }
+
+  if (d.kind === 'rules-attachments'){
+    cls = 'acc';
+    icon = '📎';
+    text = '<strong>Правила вложений.</strong> Единственный справочник, описывающий политику безопасности загрузки файлов. Не список строк, а набор правил: расширения, MIME-маски, размеры, зоны действия.';
+  }
+
+  el.innerHTML = `
+    <div class="banner">
+      <div class="ic ${cls}">${icon}</div>
+      <div class="body"><p>${text}</p></div>
+    </div>
+  `;
+}
+
+/* ============================================================
+   ЗНАЧЕНИЯ
+   ============================================================ */
+function renderDictValues(){
+  const d = getCurrentDict();
+  const body = document.getElementById('ref-values-body');
+  if (!d || !body) return;
+
+  if (d.values.length === 0){
+    body.innerHTML = `<div class="empty">Значений пока нет.</div>`;
+    return;
+  }
+
+  if (d.kind === 'rules-attachments'){
+    renderDictAttachmentRules(d, body);
+    return;
+  }
+
+  const isSystem = d.type === 'system';
+  const canRename = !isSystem && d.allowRename;
+  const canDelete = !isSystem && d.allowDelete;
+
+  const table = document.createElement('table');
+  table.className = 'values-table';
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th style="width:36px"></th>
+        <th style="width:22%">Код</th>
+        <th style="width:28%">Отображается как</th>
+        <th style="width:28%">Описание</th>
+        <th style="width:90px">По умолч.</th>
+        <th style="width:90px">Включено</th>
+        <th style="width:56px"></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  `;
+  const tbody = table.querySelector('tbody');
+  d.values.forEach(v => {
+    const tr = document.createElement('tr');
+    tr.draggable = !isSystem;
+    tr.dataset.id = v.id;
+    if (!isSystem) attachDictRowDrag(tr, v.id);
+
+    tr.innerHTML = `
+      <td>${isSystem ? '' : '<span class="handle" title="Перетащите, чтобы изменить порядок">⠿</span>'}</td>
+      <td><input class="input val-code" value="${esc(v.code)}" ${!canRename ? 'disabled' : ''} oninput="updateDictValue('${v.id}','code',this.value)" /></td>
+      <td><input class="input" value="${esc(v.label)}" ${!canRename ? 'disabled' : ''} oninput="updateDictValue('${v.id}','label',this.value)" /></td>
+      <td><input class="input" value="${esc(v.description || '')}" placeholder="необязательно" ${!canRename ? 'disabled' : ''} oninput="updateDictValue('${v.id}','description',this.value)" /></td>
+      <td>
+        <label class="toggle ${v.isDefault ? 'on' : ''} ${isSystem ? 'disabled' : ''}" onclick="toggleDictValueDefault('${v.id}', event)">
+          <span class="knob"></span>
+        </label>
+      </td>
+      <td>
+        <label class="toggle ${v.enabled ? 'on' : ''} ${isSystem ? 'disabled' : ''}" onclick="toggleDictValueEnabled('${v.id}', event)">
+          <span class="knob"></span>
+        </label>
+      </td>
+      <td class="right">
+        <button class="del-btn" title="${canDelete ? 'Удалить значение' : 'Удаление запрещено'}" onclick="removeDictValue('${v.id}', event)" ${!canDelete ? 'disabled' : ''}>✕</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+  body.innerHTML = '';
+  body.appendChild(table);
+}
+
+function renderDictAttachmentRules(d, body){
+  const isSystem = d.type === 'system';
+  const canRename = !isSystem && d.allowRename;
+  const canDelete = !isSystem && d.allowDelete;
+
+  const table = document.createElement('table');
+  table.className = 'values-table';
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th style="width:36px"></th>
+        <th style="width:12%">Код</th>
+        <th style="width:14%">Категория</th>
+        <th style="width:22%">Расширения</th>
+        <th style="width:14%">MIME</th>
+        <th style="width:90px">Макс. размер, МБ</th>
+        <th style="width:80px">Макс. кол-во</th>
+        <th style="width:14%">Зоны</th>
+        <th style="width:80px">Включено</th>
+        <th style="width:56px"></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  `;
+  const tbody = table.querySelector('tbody');
+  d.values.forEach(v => {
+    const tr = document.createElement('tr');
+    tr.draggable = !isSystem;
+    tr.dataset.id = v.id;
+    if (!isSystem) attachDictRowDrag(tr, v.id);
+    tr.innerHTML = `
+      <td>${isSystem ? '' : '<span class="handle">⠿</span>'}</td>
+      <td><input class="input val-code" value="${esc(v.code)}" ${!canRename ? 'disabled' : ''} oninput="updateDictValue('${v.id}','code',this.value)" /></td>
+      <td><input class="input" value="${esc(v.label)}" ${!canRename ? 'disabled' : ''} oninput="updateDictValue('${v.id}','label',this.value)" /></td>
+      <td><input class="input val-code" value="${esc(v.extensions)}" ${!canRename ? 'disabled' : ''} oninput="updateDictValue('${v.id}','extensions',this.value)" /></td>
+      <td><input class="input val-code" value="${esc(v.mime)}" ${!canRename ? 'disabled' : ''} oninput="updateDictValue('${v.id}','mime',this.value)" /></td>
+      <td><input class="input num" type="number" value="${esc(v.maxSizeMb)}" ${!canRename ? 'disabled' : ''} oninput="updateDictValue('${v.id}','maxSizeMb',Number(this.value))" /></td>
+      <td><input class="input num" type="number" value="${esc(v.maxCount)}" ${!canRename ? 'disabled' : ''} oninput="updateDictValue('${v.id}','maxCount',Number(this.value))" /></td>
+      <td><input class="input val-code" value="${esc(v.zones)}" ${!canRename ? 'disabled' : ''} oninput="updateDictValue('${v.id}','zones',this.value)" /></td>
+      <td>
+        <label class="toggle ${v.enabled ? 'on' : ''} ${isSystem ? 'disabled' : ''}" onclick="toggleDictValueEnabled('${v.id}', event)">
+          <span class="knob"></span>
+        </label>
+      </td>
+      <td class="right">
+        <button class="del-btn" onclick="removeDictValue('${v.id}', event)" ${!canDelete ? 'disabled' : ''}>✕</button>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+  body.innerHTML = '';
+  body.appendChild(table);
+
+  const note = document.createElement('div');
+  note.style.cssText = 'padding:12px 16px;border-top:1px solid var(--border);background:#fafbfd;color:var(--muted);font-size:12px;line-height:1.55';
+  note.innerHTML = `Приоритет проверки: сначала точное совпадение MIME, затем расширение. Если файл не подходит ни под одно включённое правило — он блокируется.`;
+  body.appendChild(note);
+}
+
+function updateDictValue(id, key, value){
+  if (currentDictId == null) return;
+  const d = getCurrentDict();
+  if (!d || d.type === 'system') return;
+  const v = d.values.find(x => x.id === id);
+  if (!v) return;
+  if (!d.allowRename) return;
+  v[key] = value;
+  markDictDirty();
+}
+function toggleDictValueEnabled(id, ev){
+  ev.stopPropagation();
+  const d = getCurrentDict();
+  if (!d || d.type === 'system') return;
+  const v = d.values.find(x => x.id === id);
+  if (!v) return;
+  v.enabled = !v.enabled;
+  markDictDirty();
+  renderDictValues();
+  updateDictTabCounts();
+}
+function toggleDictValueDefault(id, ev){
+  ev.stopPropagation();
+  const d = getCurrentDict();
+  if (!d || d.type === 'system') return;
+  const v = d.values.find(x => x.id === id);
+  if (!v) return;
+  d.values.forEach(x => x.isDefault = (x.id === id ? !v.isDefault : false));
+  markDictDirty();
+  renderDictValues();
+}
+function addDictValue(){
+  const d = getCurrentDict();
+  if (!d || d.type === 'system' || !d.allowAdd) return;
+  if (d.kind === 'rules-attachments'){
+    d.values.push({
+      id:'v' + Date.now(), code:'new_category', label:'Новая категория',
+      extensions:'', mime:'', maxSizeMb:10, maxCount:1, zones:'auth', enabled:true, note:''
+    });
+  } else {
+    d.values.push({
+      id:'v' + Date.now(), code:'new_value', label:'Новое значение',
+      description:'', isDefault:false, enabled:true
+    });
+  }
+  markDictDirty();
+  renderDictValues();
+  updateDictTabCounts();
+  toast('Значение добавлено');
+}
+function removeDictValue(id, ev){
+  ev?.stopPropagation();
+  const d = getCurrentDict();
+  if (!d || d.type === 'system' || !d.allowDelete) return;
+  const v = d.values.find(x => x.id === id);
+  if (!v) return;
+  if (!confirm(`Удалить значение «${v.label}»?`)) return;
+  d.values = d.values.filter(x => x.id !== id);
+  markDictDirty();
+  renderDictValues();
+  updateDictTabCounts();
+  toast('Значение удалено');
+}
+function updateDictTabCounts(){
+  const d = getCurrentDict();
+  if (d){
+    const el = document.getElementById('ref-tab-values-count');
+    if (el) el.textContent = d.values.length;
+  }
+  updateDictChecksTabCount();
+}
+
+function attachDictRowDrag(tr, id){
+  tr.addEventListener('dragstart', e => {
+    dictValueDragId = id;
+    tr.classList.add('dragging');
+    e.dataTransfer.effectAllowed = 'move';
+    try { e.dataTransfer.setData('text/plain', id); } catch(_){}
+  });
+  tr.addEventListener('dragend', () => {
+    tr.classList.remove('dragging');
+    document.querySelectorAll('.values-table tr.drop-target').forEach(el => el.classList.remove('drop-target'));
+    dictValueDragId = null;
+  });
+  tr.addEventListener('dragover', e => {
+    e.preventDefault();
+    if (dictValueDragId && dictValueDragId !== id) tr.classList.add('drop-target');
+  });
+  tr.addEventListener('dragleave', () => tr.classList.remove('drop-target'));
+  tr.addEventListener('drop', e => {
+    e.preventDefault();
+    tr.classList.remove('drop-target');
+    if (!dictValueDragId || dictValueDragId === id) return;
+    const d = getCurrentDict();
+    if (!d) return;
+    const from = d.values.findIndex(x => x.id === dictValueDragId);
+    const to = d.values.findIndex(x => x.id === id);
+    if (from < 0 || to < 0) return;
+    const [moved] = d.values.splice(from, 1);
+    d.values.splice(to, 0, moved);
+    dictValueDragId = null;
+    markDictDirty();
+    renderDictValues();
+  });
+}
+let dictValueDragId = null;
+
+/* ============================================================
+   СОХРАНЕНИЕ / УДАЛЕНИЕ / ПАУЗА
+   ============================================================ */
+function markDictDirty(){
+  dictDirty = true;
+  const checksTab = document.querySelector('#ref-tabs .tab[data-tab="checks"]');
+  if (checksTab && checksTab.classList.contains('active')) runDictChecks();
+}
+function saveDict(){
+  const d = getCurrentDict();
+  if (!d || d.type === 'system'){ toast('Системный справочник нельзя редактировать'); return; }
+  const name = document.getElementById('ref-set-name').value.trim();
+  if (!name){ toast('Заполните название'); return; }
+
+  d.name = name;
+  d.description = document.getElementById('ref-set-desc').value;
+  d.owner = document.getElementById('ref-set-owner').value;
+  d.publicApi = document.getElementById('ref-set-public').checked;
+  if (d.type === 'user'){
+    d.allowAdd = document.getElementById('ref-set-allow-add').checked;
+    d.allowDelete = document.getElementById('ref-set-allow-delete').checked;
+    d.allowRename = document.getElementById('ref-set-allow-rename').checked;
+    d.required = document.getElementById('ref-set-required').checked;
+  }
+  d.cache = Number(document.getElementById('ref-set-cache').value) || 0;
+  d.updatedAt = nowStr();
+
+  dictDirty = false;
+  document.getElementById('ref-title').textContent = d.name;
+  document.getElementById('ref-crumb-name').textContent = d.name;
+  document.getElementById('ref-subtitle').textContent = d.description;
+  document.getElementById('ref-head-updated').textContent = d.updatedAt;
+  renderDictList();
+  renderDictValues();
+  updateDictChecksTabCount();
+  toast('Изменения сохранены');
+}
+function togglePauseDict(){
+  const d = getCurrentDict();
+  if (!d || d.type === 'system') return;
+  d.status = d.status === 'Приостановлен' ? 'Активен' : 'Приостановлен';
+  d.updatedAt = nowStr();
+  document.getElementById('ref-head-status-text').textContent = d.status;
+  const dot = document.getElementById('ref-head-status-dot');
+  dot.style.background = d.status === 'Активен' ? 'var(--accent-2)' : 'var(--muted)';
+  document.getElementById('ref-btn-pause').textContent =
+    d.status === 'Приостановлен' ? 'Возобновить' : 'Приостановить';
+  document.getElementById('ref-head-updated').textContent = d.updatedAt;
+  renderDictList();
+  toast(d.status === 'Активен' ? 'Справочник возобновлён' : 'Справочник приостановлен');
+}
+function deleteDict(){
+  const d = getCurrentDict();
+  if (!d) return;
+  if (d.type !== 'user'){ toast('Удалить можно только пользовательский справочник'); return; }
+  if (!confirm(`Удалить справочник «${d.name}»? Значения перестанут быть доступными.`)) return;
+  const idx = DICT_DATA.findIndex(x => x.id === d.id);
+  if (idx >= 0) DICT_DATA.splice(idx, 1);
+  toast('Справочник удалён');
+  showSection('ref','list');
+  renderDictList();
+}
+
+/* ============================================================
+   ПРОВЕРКИ
+   ============================================================ */
+function runDictChecks(){
+  const d = getCurrentDict();
+  const listEl = document.getElementById('ref-checks-list');
+  const sumEl = document.getElementById('ref-checks-summary');
+  if (!d || !listEl || !sumEl) return;
+
+  const checks = buildDictChecks(d);
+  const failed = checks.filter(c => c.status === 'fail').length;
+  const warned = checks.filter(c => c.status === 'warn').length;
+  const passed = checks.filter(c => c.status === 'ok').length;
+
+  let cls = 'ok', icon = '✓';
+  let title = 'Справочник готов к сохранению';
+  let desc = 'Все обязательные проверки пройдены.';
+  if (failed > 0){ cls = 'fail'; icon = '✕'; title = `Не пройдено проверок: ${failed}`; desc = 'Исправьте замечания.'; }
+  else if (warned > 0){ cls = 'warn'; icon = '!'; title = 'Есть предупреждения'; desc = 'Сохранение возможно, но обратите внимание.'; }
+
+  sumEl.className = 'check-summary ' + cls;
+  sumEl.innerHTML = `
+    <div class="ic">${icon}</div>
+    <div class="body">
+      <div class="title">${esc(title)}</div>
+      <div class="desc">${esc(desc)}</div>
+    </div>
+    <div class="progress">${passed} / ${checks.length}</div>
+  `;
+
+  listEl.innerHTML = checks.map(c => `
+    <div class="check-row ${c.status}">
+      <div class="mark">${c.status === 'ok' ? '✓' : c.status === 'warn' ? '!' : '✕'}</div>
+      <div class="body">
+        <div class="title">${esc(c.title)}</div>
+        ${c.detail ? `<div class="detail">${esc(c.detail)}</div>` : ''}
+      </div>
+    </div>
+  `).join('');
+
+  updateDictChecksTabCount(checks);
+}
+function buildDictChecks(d){
+  const checks = [];
+  const isAtt = d.kind === 'rules-attachments';
+  checks.push(d.name && d.name.trim() ? { status:'ok', title:'Указано название справочника' } : { status:'fail', title:'Указано название справочника' });
+  checks.push(d.code && d.code.trim() ? { status:'ok', title:'Указан служебный код' } : { status:'fail', title:'Указан служебный код' });
+  checks.push(!codeExists(d.code, d.id) ? { status:'ok', title:'Код справочника уникален' } : { status:'fail', title:'Код справочника уникален', detail:'Такой код уже используется.' });
+  checks.push(d.description && d.description.trim() ? { status:'ok', title:'Заполнено описание' } : { status:'warn', title:'Заполнено описание' });
+  checks.push(d.owner && d.owner.trim() ? { status:'ok', title:'Указан владелец' } : { status:'fail', title:'Указан владелец' });
+  checks.push(d.values.length > 0 ? { status:'ok', title:'Добавлено хотя бы одно значение' } : { status:'fail', title:'Добавлено хотя бы одно значение' });
+  checks.push(!d.values.some(v => !v.code) ? { status:'ok', title:'У всех значений заполнен код' } : { status:'fail', title:'У всех значений заполнен код' });
+  checks.push(!d.values.some(v => !v.label) ? { status:'ok', title:'У всех значений заполнено название' } : { status:'fail', title:'У всех значений заполнено название' });
+  const codes = d.values.map(v => v.code);
+  const dup = codes.some((c,i) => c && codes.indexOf(c) !== i);
+  checks.push(!dup ? { status:'ok', title:'Коды значений уникальны' } : { status:'fail', title:'Коды значений уникальны' });
+  const defaults = d.values.filter(v => v.isDefault).length;
+  checks.push(defaults <= 1 ? { status:'ok', title:'Не более одного значения по умолчанию' } : { status:'fail', title:'Не более одного значения по умолчанию' });
+  if (isAtt){
+    checks.push(!d.values.some(v => !v.extensions) ? { status:'ok', title:'У всех правил указаны расширения' } : { status:'fail', title:'У всех правил указаны расширения' });
+    checks.push(!d.values.some(v => !v.mime) ? { status:'ok', title:'У всех правил указаны MIME-маски' } : { status:'warn', title:'У всех правил указаны MIME-маски' });
+    checks.push(!d.values.some(v => !v.zones) ? { status:'ok', title:'У всех правил указаны зоны действия' } : { status:'fail', title:'У всех правил указаны зоны действия' });
+    checks.push(d.values.some(v => v.enabled) ? { status:'ok', title:'Есть хотя бы одно включённое правило' } : { status:'warn', title:'Есть хотя бы одно включённое правило' });
+  }
+  return checks;
+}
+function updateDictChecksTabCount(precomputed){
+  const d = getCurrentDict();
+  const el = document.getElementById('ref-tab-checks-count');
+  if (!d || !el) return;
+  const checks = precomputed || buildDictChecks(d);
+  const issues = checks.filter(c => c.status !== 'ok').length;
+  el.textContent = issues;
+  const tab = document.querySelector('#ref-tabs .tab[data-tab="checks"]');
+  if (tab){
+    tab.style.color = issues > 0 ? 'var(--accent)' : '';
+    tab.style.fontWeight = issues > 0 ? '600' : '';
+  }
+}
+
+/* ============================================================
+   CSV ЭКСПОРТ ЗНАЧЕНИЙ
+   ============================================================ */
+function exportDictValuesCsv(){
+  const d = getCurrentDict();
+  if (!d) return;
+  const rows = d.kind === 'rules-attachments'
+    ? [['Код','Категория','Расширения','MIME','Макс. размер, МБ','Макс. кол-во','Зоны','Включено','Примечание'],
+       ...d.values.map(v => [v.code, v.label, v.extensions, v.mime, v.maxSizeMb, v.maxCount, v.zones, v.enabled ? 'да' : 'нет', v.note || ''])]
+    : [['Код','Отображается как','Описание','По умолчанию','Включено'],
+       ...d.values.map(v => [v.code, v.label, v.description || '', v.isDefault ? 'да' : 'нет', v.enabled ? 'да' : 'нет'])];
+  const csv = rows.map(r => r.map(c => {
+    const s = String(c ?? '');
+    return /[",\n;]/.test(s) ? '"' + s.replace(/"/g,'""') + '"' : s;
+  }).join(';')).join('\n');
+  const blob = new Blob(['\uFEFF' + csv], { type:'text/csv;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = d.code + '.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('CSV выгружен');
+}
+
+/* ============================================================
+   СОЗДАНИЕ СПРАВОЧНИКА
+   ============================================================ */
+function openCreateDictModal(){
+  document.getElementById('modal-title').textContent = 'Новый справочник';
+  document.getElementById('modal-body').innerHTML = `
+    <p class="modal-hint">По умолчанию создаётся <strong>пользовательский</strong> справочник — с полным CRUD. Системные и информационные справочники создаются разработчиками.</p>
+    <div class="modal-grid">
+      <div class="modal-field full" id="mc-name-field">
+        <label>Название <span class="req-star">*</span></label>
+        <input class="input" id="mc-name" placeholder="Например: Каналы обращений" oninput="validateCreateDictModal()" />
+        <span class="err">Укажите название</span>
+      </div>
+      <div class="modal-field full" id="mc-code-field">
+        <label>Служебный код <span class="req-star">*</span></label>
+        <input class="input mono" id="mc-code" placeholder="contact_channels" oninput="validateCreateDictModal()" />
+        <span class="hint">Латиница, цифры и подчёркивания.</span>
+        <span class="err">Укажите уникальный код</span>
+      </div>
+      <div class="modal-field full">
+        <label>Описание</label>
+        <textarea class="input" id="mc-desc" rows="2"></textarea>
+      </div>
+      <div class="modal-field">
+        <label>Владелец</label>
+        <input class="input" id="mc-owner" value="Команда ЦАМ" />
+      </div>
+    </div>
+  `;
+  document.getElementById('modal-foot').innerHTML = `
+    <span class="left">Справочник создаётся в статусе «Черновик»</span>
+    <button class="btn outline sm" onclick="closeModal()">Отмена</button>
+    <button class="btn sm" id="mc-submit" onclick="submitCreateDict()" disabled>Создать</button>
+  `;
+  document.getElementById('modal-backdrop').classList.add('on');
+  setTimeout(() => document.getElementById('mc-name').focus(), 50);
+}
+function validateCreateDictModal(){
+  const name = document.getElementById('mc-name').value.trim();
+  const code = document.getElementById('mc-code').value.trim();
+  const codeRegex = /^[a-z][a-z0-9_]*$/;
+  const nameOk = name.length > 0;
+  const codeOk = code.length > 0 && codeRegex.test(code) && !codeExists(code);
+  document.getElementById('mc-name-field').classList.toggle('has-error', !nameOk && name.length > 0);
+  document.getElementById('mc-code-field').classList.toggle('has-error', !codeOk && code.length > 0);
+  document.getElementById('mc-submit').disabled = !(nameOk && codeOk);
+  return nameOk && codeOk;
+}
+function submitCreateDict(){
+  const name = document.getElementById('mc-name').value.trim();
+  const code = document.getElementById('mc-code').value.trim();
+  const desc = document.getElementById('mc-desc').value.trim();
+  const owner = document.getElementById('mc-owner').value.trim() || 'Не указан';
+  const codeRegex = /^[a-z][a-z0-9_]*$/;
+  if (!name || !code || !codeRegex.test(code) || codeExists(code)) return;
+
+  const id = 'd' + Date.now();
+  DICT_DATA.unshift({
+    id, name, code,
+    type:'user', kind:'list',
+    owner, status:'Черновик',
+    updatedAt: nowStr(),
+    description: desc,
+    publicApi:false, allowAdd:true, allowDelete:true, allowRename:true, valuesRequired:false, cache:0,
+    values:[]
+  });
+  closeModal();
+  renderDictList();
+  toast(`Справочник «${name}» создан. Добавьте значения.`);
+  openDictCard(id);
+}
+
+/* ============================================================
+   ЭКСПОРТ СПИСКА СПРАВОЧНИКОВ
+   ============================================================ */
+const EXPORT_DICT_FIELDS = [
+  { key:'name',        label:'Название справочника', checked:true },
+  { key:'code',        label:'Служебный код',        checked:true },
+  { key:'type',        label:'Тип',                  checked:true },
+  { key:'owner',       label:'Владелец',             checked:true },
+  { key:'valuesCount', label:'Количество значений',  checked:true },
+  { key:'status',      label:'Статус',               checked:true },
+  { key:'description', label:'Описание',             checked:false },
+  { key:'updatedAt',   label:'Дата обновления',      checked:false }
+];
+function openExportDictModal(){
+  const total = getFilteredDicts().length;
+  document.getElementById('modal-title').textContent = 'Экспорт списка справочников';
+  document.getElementById('modal-body').innerHTML = `
+    <p class="modal-hint">Выберите поля, которые попадут в файл. Экспортируется текущая выборка с учётом фильтров.</p>
+    <div class="modal-fields">
+      ${EXPORT_DICT_FIELDS.map(f => `
+        <label class="modal-check">
+          <input type="checkbox" ${f.checked ? 'checked' : ''} data-key="${f.key}" />
+          <span>${esc(f.label)}</span>
+        </label>
+      `).join('')}
+    </div>
+  `;
+  document.getElementById('modal-foot').innerHTML = `
+    <span class="left">К выгрузке: ${total} ${plural(total,['справочник','справочника','справочников'])}</span>
+    <button class="btn outline sm" onclick="closeModal()">Отмена</button>
+    <button class="btn sm" onclick="doExportDictList()">Выгрузить</button>
+  `;
+  document.getElementById('modal-backdrop').classList.add('on');
+}
+function doExportDictList(){
+  const selected = [...document.querySelectorAll('#modal-body input[type=checkbox]:checked')].map(cb => cb.dataset.key);
+  if (selected.length === 0){ toast('Выберите хотя бы одно поле'); return; }
+  const fieldMap = {
+    name:        d => d.name,
+    code:        d => d.code,
+    type:        d => typeLabel(d.type),
+    owner:       d => d.owner,
+    valuesCount: d => d.values.length,
+    status:      d => d.status,
+    description: d => d.description || '',
+    updatedAt:   d => d.updatedAt
+  };
+  const labelMap = Object.fromEntries(EXPORT_DICT_FIELDS.map(f => [f.key, f.label]));
+  const filtered = getFilteredDicts();
+  const header = selected.map(k => labelMap[k]);
+  const rows = filtered.map(d => selected.map(k => fieldMap[k](d)));
+  const csv = [header, ...rows].map(r => r.map(c => {
+    const s = String(c ?? '');
+    return /[",\n;]/.test(s) ? '"' + s.replace(/"/g,'""') + '"' : s;
+  }).join(';')).join('\n');
+  const blob = new Blob(['\uFEFF' + csv], { type:'text/csv;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'dictionaries_' + new Date().toISOString().slice(0,10) + '.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+  document.getElementById('modal-title').textContent = 'Выгрузка сформирована';
+  document.getElementById('modal-body').innerHTML = `
+    <p style="margin:0 0 6px;font-size:13px">Файл готов.</p>
+    <p style="margin:0;color:var(--muted);font-size:12px">Проверьте папку загрузок браузера.</p>
+  `;
+  document.getElementById('modal-foot').innerHTML = `<button class="btn sm" onclick="closeModal()">Закрыть</button>`;
+}
+
+/* ============================================================
+   ЗАКРЫТИЕ
+   ============================================================ */
+function tryCloseCard(section){
+  document.getElementById('modal-title').textContent = 'Выйти без сохранения?';
+  document.getElementById('modal-body').innerHTML = `<p class="modal-hint" style="margin:0">Все несохранённые изменения будут потеряны. Продолжить?</p>`;
+  document.getElementById('modal-foot').innerHTML = `
+    <button class="btn outline sm" onclick="closeModal()">Нет</button>
+    <button class="btn sm" onclick="confirmLeaveCard('${section}')">Да</button>
+  `;
+  document.getElementById('modal-backdrop').classList.add('on');
+}
+function confirmLeaveCard(section){
+  closeModal();
+  dictDirty = false;
+  showSection(section, 'list');
+}
+function closeModal(){
+  document.getElementById('modal-backdrop').classList.remove('on');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+/* ============================================================
+   ИНИЦИАЛИЗАЦИЯ
+   ============================================================ */
+setupDictTabs();
+setupSorting();
+renderDictList();
+updateAfBadge('ref');
+</script>
+</body>
+</html>

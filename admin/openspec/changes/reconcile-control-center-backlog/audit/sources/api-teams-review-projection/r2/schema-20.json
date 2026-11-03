@@ -1,0 +1,26 @@
+{
+  "pointer": "#/components/schemas/TeamSurfaceResponse",
+  "value": {
+    "properties": {
+      "id": {
+        "type": "string",
+        "format": "uuid",
+        "title": "Id"
+      },
+      "name": {
+        "type": "string",
+        "title": "Name"
+      },
+      "status": {
+        "$ref": "#/components/schemas/SurfaceStatus"
+      }
+    },
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "status"
+    ],
+    "title": "TeamSurfaceResponse"
+  }
+}

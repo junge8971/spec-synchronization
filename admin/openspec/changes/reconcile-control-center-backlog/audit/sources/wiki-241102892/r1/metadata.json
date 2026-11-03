@@ -1,0 +1,21 @@
+{
+  "sourceId": "wiki-241102892",
+  "revision": 1,
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/241102892/RBAC+-+%D0%A0%D0%BE%D0%BB%D0%B8+%D1%80%D0%B5%D1%81%D1%83%D1%80%D1%81%D1%8B+%D0%B8+%D1%80%D0%B0%D0%B7%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F",
+  "retrievedAt": "2026-10-19T11:45:22.146Z",
+  "status": 200,
+  "version": {
+    "number": 7,
+    "when": "2026-09-15T20:02:39.688+08:00"
+  },
+  "content": "content.json",
+  "sha256": "43a48fa7c96f3a92e1da407c815cc6f465ed53f1cede3dd28a132de65d2c29e7",
+  "method": "Parent same-origin exact authorized root-linked documentation GET plus attachment indexes; no session/token inspection, auth/business calls, recursive traversal or source execution",
+  "discovery": "sources/wiki-238324523/r2/links.txt lines11,37,38,34; exact href reconfirmed in root DOM",
+  "redactions": 0,
+  "limitations": [
+    "Full bodyView and separate returned attachment index, not complete Confluence export",
+    "No child links/assets/attachments visited; no examples executed",
+    "No source precedence, current API/runtime or implementation claims"
+  ]
+}

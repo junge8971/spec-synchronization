@@ -1,0 +1,12 @@
+{
+  "source": "wiki-241080659/r1/content.json",
+  "version": 5,
+  "format": "Inert HTMLParser text derivative plus exact ordered 4000-character bodyView chunks",
+  "lines": 328,
+  "chunks": 8,
+  "files": {
+    "content.txt": "6fb56c35ae1b4dcf16b926337383ea5c85ea5cd4a29d27e516b9b99554eeb831",
+    "body-view-chunks.json": "cd3eac46e6c06a79441f3ac0f2330819e168a8fd1e2dc9b317a8d5d2c388db66"
+  },
+  "limits": "Text loses markup/table structure; inspect all exact chunks for structural claims. Parent verified chunk roundtrip; no rendering/execution/semantic acceptance."
+}

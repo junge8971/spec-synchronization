@@ -1,0 +1,7 @@
+{"name":"props-js-missing","status":0,"diagnostics":[]}
+{"name":"props-js-nested","status":0,"diagnostics":[]}
+{"name":"props-ts-untyped","status":0,"diagnostics":[]}
+{"name":"deprecated-dom-render","status":0,"diagnostics":[]}
+{"name":"deprecated-dom-unmount","status":0,"diagnostics":[]}
+{"name":"deprecated-react-proptypes","status":0,"diagnostics":[]}
+{"name":"deprecated-old-lifecycle","status":1,"diagnostics":[{"code":"eslint(class-methods-use-this)","message":"Expected method `componentWillMount` to have this."},{"code":"eslint(no-empty-function)","message":"Unexpected empty method `componentWillMount`"}]}

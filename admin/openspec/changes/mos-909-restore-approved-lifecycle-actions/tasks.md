@@ -1,0 +1,14 @@
+## 1. Restore the feature-owned action boundary
+
+- [ ] 1.1 Remove checking → training, training → autotest, autotest → sandbox and review → whitelist from `app/features/skill-lifecycle/constants/skill-lifecycle.constants.ts`; verify the diff leaves exactly draft → checking, sandbox → review and whitelist → prod with unchanged labels, partial-map type and eight-stage scale, and does not alter shared enum/client/mutation, review, toggle, polling or permissions.
+
+## 2. Protect the approved matrix with component regressions
+
+- [ ] 2.1 Update the all-status table in `app/widgets/skill-details/ui/skill-lifecycle.test.tsx` to assert the three allowed triggers only in their source states and explicit absence of all four removed labels across every recognized status; verify checking/training/autotest/review/prod/disabled have no generic trigger/new lifecycle dialog and opening/reading sends only GET, while retaining eight neutral stages, current markers and recognized disabled assertions. Use explicit expectations independent of the production action map; retain refresh and dedicated toggle controls.
+- [ ] 2.2 Restrict that file's successful transition table to draft → checking, sandbox → review and whitelist → prod; verify each still asserts confirmation name/ID, prod warning where applicable, exact POST path/target/version/key, one send during duplicate clicks, actual returned detail, registry invalidation and dialog closure. Preserve the existing cancellation/focus, stale-version, older-read, error/recovery, new-key and mismatched-response assertions without weakening them.
+- [ ] 2.3 Add component cases in the same file for an actionable card refreshed into a no-generic-command state and an open confirmation invalidated by a status-only change to review with unchanged version; verify the old trigger disappears, no prohibited trigger appears, stale confirmation cannot submit, closing it cannot start a review transition, and neither case sends POST.
+
+## 3. Validate the bounded correction
+
+- [ ] 3.1 Run `yarn typecheck`, `yarn lint` (no warnings), `yarn test` and `yarn format:check`; record pass/fail/not-run evidence, including lifecycle regressions and unchanged neighboring review/toggle and observation suites. Do not create, edit or run browser/E2E tests. API/build checks are unnecessary absent API-type or build changes.
+- [ ] 3.2 Review the final implementation diff against D-020 and the Contract-gated lifecycle delta; verify only the planned feature constant and component-test seams changed, all three allowed commands and six no-command states are covered, and snapshot/pending/unknown-outcome/GET recovery, server-derived caches, accessibility and separate owners remain intact. Report any failure or unexpected scope need rather than changing shared transport, checks UI, mocks, DTOs or unrelated specifications.

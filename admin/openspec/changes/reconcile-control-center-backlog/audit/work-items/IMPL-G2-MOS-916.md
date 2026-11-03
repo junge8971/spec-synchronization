@@ -1,0 +1,11 @@
+# IMPL-G2-MOS-916
+
+Status: assigned. Owner: fresh Astra medium implementation analyst. Output reports/IMPL-G2-MOS-916.md. Independent reviewer: fresh static implementation reviewer, reviews/R-IMPL-G2-MOS-916.md. Parent owns acceptance. HEAD bc0d9800f25a90989b9c73c76f91996f8300f1d3. Depends D013/D060, independent of API/plan lanes.
+
+Read governing reconcile-control-center-backlog proposal/design/spec/tasks; audit/reports/SCENARIO-MOS-916.md and reviews/R-SCENARIO-MOS-916.md, reports/LOCAL-002.md; complete mos-916-report-templates proposal/design/tasks/specs. Parent verified planning inputs: proposal81c9f87e8ae9f4980a2bb3e7ac0dbe23c5603671a0ec0ebd5df0a58b43df2ec8; design0d2aff996b1929f3f092dfe2880144a6b53cd283b3d92bf3b50e6bdeab4b96c1; tasks13bdf61d45b55a7174dcf2feabe19d7ec7e15e1cd7f5c68f5179c5f10b498e12; report-template-access spec27a08331b5695a422362e7ae045beaadb1e55daa008b4575dd89e4b3b72e4d97. Record actual code/input hashes for review.
+
+Inspect mounted template-access/unavailable navigation behavior only: app/routes/reports.tsx, app/routes.ts, app/application/constants/application-routes.constants.ts, app/shared/config/constants/application-routes.constants.ts, app/shared/config/application-routes.ts; follow actual mounted components and relevant written unit/component assertions. Narrow discovery if paths differ. mocks/analytics.mjs only to distinguish dashboard mocks from template delivery. No tests executed or E2E inspected/edited. If necessary documentary anchors: audit/sources/jira-reports-details/r1 items0–2 and wiki-241085838/r1 with metadata; do not repeat requirements extraction.
+
+Acceptance: entry→component path and file/line/ref evidence; implemented/absent/unknown for current active scope, separate blocked continuation C916-01–08/B916.1–5. Keep UI/client/mock/test-source/deployment states distinct. State exact absence-search boundaries. No CSV transport, constructor, scheduler, backend-provider or whole-app audit. Opening is not execution; report activation gates remain.
+
+Read-only local analysis; configured output only. No project/source edits, network/browser/credentials/commands from sources/tests/build/typegen/nested delegation. Stop affected lane for changed/missing required inputs or material unexplained requirement needing approval; ask parent precisely. Do not close feature tasks or infer runtime validation.

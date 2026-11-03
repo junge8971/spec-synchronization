@@ -1,0 +1,38 @@
+
+/home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/app/entities/surface/model/types/surface.types.ts
+  50:3  error  Replace `|·'sandbox'⏎··|·'publish'⏎··|·'disable'⏎··|·'enable'⏎··|·'archive'⏎·` with `'sandbox'·|·'publish'·|·'disable'·|·'enable'·|·'archive'`  prettier/prettier
+
+/home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/app/features/skill-bulk-rollout/types/skill-bulk-rollout.types.ts
+  11:5  error  Replace `|·'success'⏎····|·'warning'⏎····|·'rejected'⏎····|·'conflict'⏎····|·'unknown'⏎····|·'queued'⏎····|·'pending'⏎···` with `'success'·|·'warning'·|·'rejected'·|·'conflict'·|·'unknown'·|·'queued'·|·'pending'`  prettier/prettier
+
+/home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/app/optional/ab-testing/types/registry.types.ts
+  16:3  error  Replace `|·{·search:·AbTestingSearch;·error?:·never·}⏎·` with `{·search:·AbTestingSearch;·error?:·never·}`  prettier/prettier
+
+/home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/app/optional/ab-testing/ui/registry/registry-filters.tsx
+  26:7  error  Replace `|·RegistryQueryDraftNavigation⏎·····` with `RegistryQueryDraftNavigation`  prettier/prettier
+
+/home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/app/optional/feedback/model/use-feedback-registry-query-draft.ts
+  17:7  error  Replace `|·FeedbackRegistryQueryDraft⏎·····` with `FeedbackRegistryQueryDraft`  prettier/prettier
+
+/home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/app/optional/knowledge-base/types/registry.types.ts
+  15:3  error  Replace `|·{·search:·KnowledgeBaseSearch;·error?:·never·}⏎·` with `{·search:·KnowledgeBaseSearch;·error?:·never·}`  prettier/prettier
+
+/home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/app/optional/knowledge-base/ui/registry/registry-filters.tsx
+  25:7  error  Replace `|·RegistryQueryDraftNavigation⏎·····` with `RegistryQueryDraftNavigation`  prettier/prettier
+
+/home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/app/optional/reference-dictionaries/types/dictionary-lifecycle.types.ts
+  4:3  error  Replace `|·{·kind:·'status';·target:·'active'·|·'paused'·}⏎·` with `{·kind:·'status';·target:·'active'·|·'paused'·}`  prettier/prettier
+
+/home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/app/optional/system-state/model/use-system-state-query-draft.ts
+  13:7  error  Replace `|·SystemStateQueryDraftNavigation⏎·····` with `SystemStateQueryDraftNavigation`  prettier/prettier
+
+/home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/app/optional/system-state/types/export.types.ts
+  11:3  error  Replace `|·{·kind:·'list';·search:·SystemStateSearch;·total:·number·}⏎·` with `{·kind:·'list';·search:·SystemStateSearch;·total:·number·}`  prettier/prettier
+
+/home/user/my/work/codesrc/projects/CAM/worktrees/tsam-admin-front/optimize-lint-and-tests/app/optional/system-state/types/system-state.types.ts
+  25:3  error  Replace `|·{·selection:·SystemStateSelection;·error?:·never·}⏎·` with `{·selection:·SystemStateSelection;·error?:·never·}`  prettier/prettier
+  28:3  error  Replace `|·{·search:·SystemStateSearch;·empty:·false·}⏎·` with `{·search:·SystemStateSearch;·empty:·false·}`                prettier/prettier
+
+✖ 12 problems (12 errors, 0 warnings)
+  12 errors and 0 warnings potentially fixable with the `--fix` option.
+

@@ -1,0 +1,28 @@
+{
+  "revision": 12,
+  "supplements": "coverage-partial-r11.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "chains": [
+    {
+      "issue": "MOS-1145-testplan",
+      "report": "reports/DELTA-MOS-1145-TESTPLAN.md",
+      "review": "reviews/R-DELTA-MOS-1145-TESTPLAN.md",
+      "disposition": "D-030",
+      "scope": "Ten documentary candidates accepted; task/version-scoped integration and replay limits not verified current architecture; approvals preserved"
+    }
+  ],
+  "pendingScopeDecision": {
+    "source": "reports/G1-WIKI-ROOT-REGISTRY.md",
+    "rootLinks": "sources/wiki-238324523/r2/links.txt",
+    "pageIds": ["241082618", "241085260", "241085256", "241092173", "241076726", "245678373", "241085263", "238324852", "243761671", "243765248"],
+    "requestedPermission": "Read only named bodies/metadata/attachment indexes to classify Control Center relevance, no recursive traversal or implementation",
+    "untilAnswered": "Unresolved, not excluded or inaccessible; no navigation"
+  },
+  "limitations": [
+    "Other already authorized source collection and global coverage remain incomplete",
+    "Refreshed apply instructions confirm6/28; no global checkboxes changed",
+    "No runtime, deployment, SQL/HTTP scenario or pipeline verification",
+    "No product/main-spec/archive changes; known format failure unresolved"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "pointer": "#/components/schemas/SaveBoardRequest",
+  "value": {
+    "properties": {
+      "version": {
+        "type": "integer",
+        "minimum": 0.0,
+        "title": "Version"
+      },
+      "widgets": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array",
+        "title": "Widgets"
+      }
+    },
+    "type": "object",
+    "required": [
+      "version",
+      "widgets"
+    ],
+    "title": "SaveBoardRequest"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "authorization": "D-031",
+  "completeNamedPageCapture": true,
+  "globalCollectionComplete": false,
+  "pages": [
+    {
+      "pageId": "241082618",
+      "title": "Декомпозиция",
+      "metadata": "sources/wiki-241082618/r1/metadata.json",
+      "readableMetadata": "sources/wiki-241082618-readable/r1/metadata.json",
+      "retrievedAt": "2026-10-19T09:36:51.968Z",
+      "version": {
+        "number": 3,
+        "when": "2026-09-11T18:09:42.166+08:00"
+      },
+      "status": 200,
+      "attachmentIndex": {
+        "status": 200,
+        "count": 0,
+        "next": null
+      },
+      "relevance": "pending independent classification",
+      "attachmentBodies": "unread"
+    },
+    {
+      "pageId": "241085260",
+      "title": "Системный анализ",
+      "metadata": "sources/wiki-241085260/r1/metadata.json",
+      "readableMetadata": "sources/wiki-241085260-readable/r1/metadata.json",
+      "retrievedAt": "2026-10-19T09:36:52.127Z",
+      "version": {
+        "number": 2,
+        "when": "2026-09-09T12:51:49.608+08:00"
+      },
+      "status": 200,
+      "attachmentIndex": {
+        "status": 200,
+        "count": 0,
+        "next": null
+      },
+      "relevance": "pending independent classification",
+      "attachmentBodies": "unread"
+    },
+    {
+      "pageId": "241085256",
+      "title": "API",
+      "metadata": "sources/wiki-241085256/r1/metadata.json",
+      "readableMetadata": "sources/wiki-241085256-readable/r1/metadata.json",
+      "retrievedAt": "2026-10-19T09:36:52.261Z",
+      "version": {
+        "number": 2,
+        "when": "2026-09-09T12:45:48.652+08:00"
+      },
+      "status": 200,
+      "attachmentIndex": {
+        "status": 200,
+        "count": 0,
+        "next": null
+      },
+      "relevance": "pending independent classification",
+      "attachmentBodies": "unread"
+    },
+    {
+      "pageId": "241092173",
+      "title": "Группы данных",
+      "metadata": "sources/wiki-241092173/r1/metadata.json",
+      "readableMetadata": "sources/wiki-241092173-readable/r1/metadata.json",
+      "retrievedAt": "2026-10-19T09:37:05.459Z",
+      "version": {
+        "number": 17,
+        "when": "2026-09-23T16:42:09.540+08:00"
+      },
+      "status": 200,
+      "attachmentIndex": {
+        "status": 200,
+        "count": 8,
+        "next": null
+      },
+      "relevance": "pending independent classification",
+      "attachmentBodies": "unread"
+    },
+    {
+      "pageId": "241076726",
+      "title": "Модель данных",
+      "metadata": "sources/wiki-241076726/r1/metadata.json",
+      "readableMetadata": "sources/wiki-241076726-readable/r1/metadata.json",
+      "retrievedAt": "2026-10-19T09:37:07.198Z",
+      "version": {
+        "number": 20,
+        "when": "2026-09-09T19:42:42.531+08:00"
+      },
+      "status": 200,
+      "attachmentIndex": {
+        "status": 200,
+        "count": 2,
+        "next": null
+      },
+      "relevance": "pending independent classification",
+      "attachmentBodies": "unread"
+    },
+    {
+      "pageId": "241085263",
+      "title": "Черновые документы/заметки",
+      "metadata": "sources/wiki-241085263/r1/metadata.json",
+      "readableMetadata": "sources/wiki-241085263-readable/r1/metadata.json",
+      "retrievedAt": "2026-10-19T09:37:07.403Z",
+      "version": {
+        "number": 4,
+        "when": "2026-09-09T13:18:42.839+08:00"
+      },
+      "status": 200,
+      "attachmentIndex": {
+        "status": 200,
+        "count": 0,
+        "next": null
+      },
+      "relevance": "pending independent classification",
+      "attachmentBodies": "unread"
+    },
+    {
+      "pageId": "245678373",
+      "title": "Ролевая модель МПММ",
+      "metadata": "sources/wiki-245678373/r1/metadata.json",
+      "readableMetadata": "sources/wiki-245678373-readable/r1/metadata.json",
+      "retrievedAt": "2026-10-19T09:37:20.568Z",
+      "version": {
+        "number": 1,
+        "when": "2026-09-25T15:37:42.484+08:00"
+      },
+      "status": 200,
+      "attachmentIndex": {
+        "status": 200,
+        "count": 1,
+        "next": null
+      },
+      "relevance": "pending independent classification",
+      "attachmentBodies": "unread"
+    },
+    {
+      "pageId": "238324852",
+      "title": "Ассессмент навыков",
+      "metadata": "sources/wiki-238324852/r1/metadata.json",
+      "readableMetadata": "sources/wiki-238324852-readable/r1/metadata.json",
+      "retrievedAt": "2026-10-19T09:37:20.708Z",
+      "version": {
+        "number": 8,
+        "when": "2026-08-28T21:00:58.218+08:00"
+      },
+      "status": 200,
+      "attachmentIndex": {
+        "status": 200,
+        "count": 0,
+        "next": null
+      },
+      "relevance": "pending independent classification",
+      "attachmentBodies": "unread"
+    },
+    {
+      "pageId": "243761671",
+      "title": "Аналитическая справка по существующей админке МПММ",
+      "metadata": "sources/wiki-243761671/r1/metadata.json",
+      "readableMetadata": "sources/wiki-243761671-readable/r1/metadata.json",
+      "retrievedAt": "2026-10-19T09:37:21.097Z",
+      "version": {
+        "number": 3,
+        "when": "2026-09-17T21:14:13.972+08:00"
+      },
+      "status": 200,
+      "attachmentIndex": {
+        "status": 200,
+        "count": 0,
+        "next": null
+      },
+      "relevance": "pending independent classification",
+      "attachmentBodies": "unread"
+    },
+    {
+      "pageId": "243765248",
+      "title": "Бизнес-анализ. МПММ",
+      "metadata": "sources/wiki-243765248/r1/metadata.json",
+      "readableMetadata": "sources/wiki-243765248-readable/r1/metadata.json",
+      "retrievedAt": "2026-10-19T09:37:21.481Z",
+      "version": {
+        "number": 8,
+        "when": "2026-09-25T16:20:43.504+08:00"
+      },
+      "status": 200,
+      "attachmentIndex": {
+        "status": 200,
+        "count": 7,
+        "next": null
+      },
+      "relevance": "pending independent classification",
+      "attachmentBodies": "unread"
+    }
+  ],
+  "checks": "Parent verified ten saved content hashes, all derivative hashes, exact chunk concatenation; no origin authenticity/runtime claim",
+  "limitations": [
+    "Bodies and returned indexes captured only;18 attachment bodies unread",
+    "No child/link/Jira traversal; semantic relevance review pending",
+    "Other authorized collection remains incomplete;6/28 unchanged"
+  ]
+}

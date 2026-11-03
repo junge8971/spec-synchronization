@@ -1,0 +1,338 @@
+{
+  "sourceId": "jira-subtasks",
+  "retrievedAt": "2026-10-16T11:23:01.951Z",
+  "scope": "16 subtasks explicitly observed in saved jira-member-index; no arbitrary links followed",
+  "items": [
+    {
+      "key": "MOS-1053",
+      "summary": "Ошибка 404 при открытии разделов админки по прямой ссылке",
+      "type": "Dev-bug (sub-task)",
+      "status": "CLOSED",
+      "updated": "2026-10-09T15:05:26.189+0800",
+      "parent": "MOS-666",
+      "subtasks": [],
+      "description": "Воспроизводится на контуре: [https://mobile-a-tech.mos.ru/tsam-panel]\r\n\r\n1.Перейти по ссылке: [https://mobile-a-tech.mos.ru/tsam-panel/skills]\r\n\r\n*ФР:*\r\nОшибка 404\r\n*ОР:* \r\nОткрывается раздел навыков",
+      "attachments": [
+        {
+          "id": "826713",
+          "filename": "404.png",
+          "mimeType": "image/png",
+          "size": 9096,
+          "content": "https://task.mos-team.ru/secure/attachment/826713/404.png"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1150",
+      "summary": "data.items возвращает данные только по одному модулю при запросе реестра модулей",
+      "type": "Dev-bug (sub-task)",
+      "status": "Ready for test",
+      "updated": "2026-10-09T15:06:03.028+0800",
+      "parent": "MOS-816",
+      "subtasks": [],
+      "description": "Воспроизводится на контуре: [https://mobile-a-tech.mos.ru/tsam-panel/]\r\n\r\n1. Отправить запрос типа:\r\ncurl -X 'GET' \\ 'https://nchat-a-tech.mos.ru/api/control/api/assistant-modules/v1/modules?limit=20&offset=0' \\ -H 'accept: */*' \\ -H 'Authorization: Bearer [REDACTED]'\r\n\r\n*ФР:*\r\nВ \"pagination\" указано \"total_items\": 6, в data.items данные только по одному модулю\r\n*ОР:*\r\nВ data.items данные по 6ти найденным модулям\r\n\r\n\r\nx-request-id: d25144135c46c57e0c040f5d1fccd1ff ",
+      "attachments": [
+        {
+          "id": "831194",
+          "filename": "response_1790844958023 (1).json",
+          "mimeType": "application/json",
+          "size": 1038,
+          "content": "https://task.mos-team.ru/secure/attachment/831194/response_1790844958023+%281%29.json"
+        },
+        {
+          "id": "831195",
+          "filename": "Screenshot_4.png",
+          "mimeType": "image/png",
+          "size": 40788,
+          "content": "https://task.mos-team.ru/secure/attachment/831195/Screenshot_4.png"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1411",
+      "summary": "Отображение кнопки \"Сбросить\" по дефолту",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-16T15:21:18.530+0800",
+      "parent": "MOS-1037",
+      "subtasks": [],
+      "description": "Воспроизводится на [https://mobile-a-tech.mos.ru/tsam-panel/dialogs]\r\n\r\n*Шаги:*\r\n # Перейти в раздел \"Диалоги\"\r\n # Осуществить поиск по запросу, фильтрацию\r\n # Нажать кнопку \"Сбросить\"\r\n\r\n*ОР:* Кнопка \"Сбросить\" отображается только при активной фильтрации, поиску по запросу, по дефолту не отображается\r\n\r\n*ФР:* Кнопка \"Сбросить\" отображается всегда\r\n\r\n{*}Требование СПС-25{*}: Сброс снимает весь отбор сразу: поиск, период, поверхности, навыки и условия. Доступен в строке фильтров и скрыт, когда сбрасывать нечего\r\n\r\n*Окружение:* Windows 11 Google Chrome 155.0.8059.80",
+      "attachments": [
+        {
+          "id": "839653",
+          "filename": "Видео-16-10-2026 07_13_49.mp4",
+          "mimeType": "video/mp4",
+          "size": 1418775,
+          "content": "https://task.mos-team.ru/secure/attachment/839653/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE-16-10-2026+07_13_49.mp4"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1412",
+      "summary": "Отсутствует красная точка перед обращением со сбоем обработки",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-16T15:30:12.067+0800",
+      "parent": "MOS-1037",
+      "subtasks": [],
+      "description": "Воспроизводится на [https://mobile-a-tech.mos.ru/tsam-panel/dialogs]\r\n\r\n*Шаги:*\r\n # Перейти в раздел \"Диалоги\"\r\n # Осуществить поиск диалога со сбоем обработки\r\n\r\n*ОР:* Перед первой репликой диалога отображается красная точка\r\n\r\n*ФР:* Отображается тег \"Сбой\" под первой репликой, красная точка отсутствует\r\n\r\n*Окружение:* Windows 11 Google Chrome 155.0.8059.80",
+      "attachments": [
+        {
+          "id": "839662",
+          "filename": "Скриншот-20261016-102707.jpg",
+          "mimeType": "image/jpeg",
+          "size": 239197,
+          "content": "https://task.mos-team.ru/secure/attachment/839662/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-20261016-102707.jpg"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1414",
+      "summary": "Отсутствует текст \"и идёт\" при незавершенном диалоге в столбце \"Время\" ",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-16T18:15:19.233+0800",
+      "parent": "MOS-1037",
+      "subtasks": [],
+      "description": "Воспроизводится на [https://mobile-a-tech.mos.ru/tsam-panel/dialogs]\r\n\r\n*Шаги:*\r\n # Перейти в раздел \"Диалоги\"\r\n # Осуществить поиск незавершенного диалога\r\n\r\n*ОР:* В столбце \"Время\" у незавершенного диалога отображается длительность на момент ответа источника, интерфейс дополняет её словами \"и идёт\"\r\n\r\n*ФР:* Отображается только время диалога\r\n\r\n*Окружение:* Windows 11 Google Chrome 155.0.8059.80",
+      "attachments": [
+        {
+          "id": "839675",
+          "filename": "Скриншот-20261016-103607.jpg",
+          "mimeType": "image/jpeg",
+          "size": 238648,
+          "content": "https://task.mos-team.ru/secure/attachment/839675/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-20261016-103607.jpg"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1419",
+      "summary": "Текст \"Нет оценки\" при отсутствии оценки работы оператора",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-16T18:18:36.194+0800",
+      "parent": "MOS-1037",
+      "subtasks": [],
+      "description": "Воспроизводится на [https://mobile-a-tech.mos.ru/tsam-panel/dialogs]\r\n\r\n*Шаги:*\r\n # Перейти в раздел \"Диалоги\"\r\n # Осуществить поиск диалога без оценки, operator_rating: null\r\n\r\n*ОР:* В столбце \"Оценка работы оператора\"отображается прочерк\r\n\r\n*ФР:* Отображается текст \"Нет оценки\"\r\n\r\n*Окружение:* Windows 11 Google Chrome 155.0.8059.80",
+      "attachments": [
+        {
+          "id": "839862",
+          "filename": "Скриншот-20261016-131035.jpg",
+          "mimeType": "image/jpeg",
+          "size": 270038,
+          "content": "https://task.mos-team.ru/secure/attachment/839862/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-20261016-131035.jpg"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1422",
+      "summary": "Отсутствуют кнопки сортировки по завершению, поверхности, оценки, времени",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-16T18:39:35.845+0800",
+      "parent": "MOS-1037",
+      "subtasks": [],
+      "description": "Воспроизводится на [https://mobile-a-tech.mos.ru/tsam-panel/dialogs]\r\n\r\n*Шаги:*\r\n # Перейти в раздел \"Диалоги\"\r\n # Проверить наличие кнопок сортировки в таблице\r\n\r\n*ОР:* Отображаются кнопки сортировки в столбцах \"Начало\", \"Завершение\", \"Поверхность\", \"Оценка работы оператора\", \"Время\"\r\n\r\n*ФР:* Отсутствуют кнопки сортировки в столбцах \"Завершение\", \"Поверхность\", \"Оценка работы оператора\", \"Время\"\r\n\r\n*Требование:* https://wiki.mos-team.ru/spaces/KR/pages/241085439/API-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82+%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F+%D0%B4%D0%B8%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%B2#API%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F%D0%B4%D0%B8%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%B2-3.1.3%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0\r\n\r\n*Окружение:* Windows 11 Google Chrome 155.0.8059.80",
+      "attachments": [
+        {
+          "id": "839906",
+          "filename": "Скриншот-20261016-133606.jpg",
+          "mimeType": "image/jpeg",
+          "size": 165409,
+          "content": "https://task.mos-team.ru/secure/attachment/839906/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-20261016-133606.jpg"
+        },
+        {
+          "id": "839905",
+          "filename": "Скриншот-20261016-133703.jpg",
+          "mimeType": "image/jpeg",
+          "size": 325845,
+          "content": "https://task.mos-team.ru/secure/attachment/839905/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%D1%88%D0%BE%D1%82-20261016-133703.jpg"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1050",
+      "summary": "Выпадающий список фильтра навыков смещается относительно поля фильтра при раскрытии",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:08:56.135+0800",
+      "parent": "MOS-676",
+      "subtasks": [],
+      "description": "Воспроизводится на контуре: [https://mobile-a-tech.mos.ru/tsam-panel]\r\n\r\n1. Перейти в раздел навыков\r\n\r\n2. Раскрыть выпадающий список фильтра по статусу/домену\r\n\r\n*ФР:*\r\nСписок смещен относительно поля фильтра\r\n*!image-2026-09-23-12-34-20-553.png|width=216,height=166!!image-2026-09-23-12-34-42-299.png|width=266,height=170!*\r\n*ОР:*\r\nСмещения нет",
+      "attachments": [
+        {
+          "id": "826531",
+          "filename": "image-2026-09-23-12-34-20-553.png",
+          "mimeType": "image/png",
+          "size": 13892,
+          "content": "https://task.mos-team.ru/secure/attachment/826531/image-2026-09-23-12-34-20-553.png"
+        },
+        {
+          "id": "826530",
+          "filename": "image-2026-09-23-12-34-42-299.png",
+          "mimeType": "image/png",
+          "size": 15112,
+          "content": "https://task.mos-team.ru/secure/attachment/826530/image-2026-09-23-12-34-42-299.png"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1051",
+      "summary": "Неверное склонение количества отфильтрованных навыков",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:03:34.094+0800",
+      "parent": "MOS-676",
+      "subtasks": [],
+      "description": "Воспроизводится на контуре: [https://mobile-a-tech.mos.ru/tsam-panel]\r\n # Перейти в раздел навыков\r\n # Активировать фильтр по статусу -> обучение модели\r\n\r\n\r\n*ФР:*\r\nНеверное склонение слова \"навыков\" при количестве результатов 1,2,3 и т.д.\r\n!image-2026-09-23-12-45-54-705.png|width=388,height=55!\r\n*ОР:*\r\nСклонение слова верное",
+      "attachments": [
+        {
+          "id": "826544",
+          "filename": "image-2026-09-23-12-45-54-705.png",
+          "mimeType": "image/png",
+          "size": 45116,
+          "content": "https://task.mos-team.ru/secure/attachment/826544/image-2026-09-23-12-45-54-705.png"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1052",
+      "summary": "Нет сортировки реестра навыков по названию, домену, количеству и дате",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:04:29.040+0800",
+      "parent": "MOS-677",
+      "subtasks": [],
+      "description": "Воспроизводится на контуре: [https://mobile-a-tech.mos.ru/tsam-panel]\r\n\r\n1. Перейти в раздел навыков\r\n2. Кликнуть по заголовку столбца: Навык/Домен и команда/Диалогов/Изменен\r\n\r\n*ФР:*\r\nСортировка по данных признакам не предусмотрена\r\n\r\n*ОР:*\r\nТребование из раздела \"Навык\"\r\nРЕЕ-12 Реестр сортируется по названию, домену, статусу, числу диалогов и дате изменения",
+      "attachments": []
+    },
+    {
+      "key": "MOS-1110",
+      "summary": "Выпадающий список типа поверхности смещается относительно поля фильтра при раскрытии",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:06:06.973+0800",
+      "parent": "MOS-709",
+      "subtasks": [],
+      "description": "Воспроизводится на контуре: [https://mobile-a-tech.mos.ru/tsam-panel]\r\n\r\n1. Перейти в раздел Поверхности -> Добавление поверхности\r\n\r\n2. Раскрыть выпадающий список Тип поверхности\r\n*ФР:*\r\nСписок смещен относительно поля фильтра\r\n*ОР:*\r\nСмещения нет",
+      "attachments": [
+        {
+          "id": "829292",
+          "filename": "2909.png",
+          "mimeType": "image/png",
+          "size": 34151,
+          "content": "https://task.mos-team.ru/secure/attachment/829292/2909.png"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1164",
+      "summary": "Не обрезается длинный идентификатор поверхности в разделе добавления поверхности",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:06:35.325+0800",
+      "parent": "MOS-709",
+      "subtasks": [],
+      "description": "Воспроизводится на контуре: [https://mobile-a-tech.mos.ru/tsam-panel]\r\n # Перейти в раздел добавления поверхности\r\n # Ввести в поле Домены длинный домен (~200 символов)\r\n\r\n*ФР:*\r\nИдентификатор канала не обрезается, появляется горизонтальный сколл страницы\r\n*ОР:*\r\nДлинное название обрезается",
+      "attachments": [
+        {
+          "id": "832277",
+          "filename": "1.png",
+          "mimeType": "image/png",
+          "size": 110915,
+          "content": "https://task.mos-team.ru/secure/attachment/832277/1.png"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1165",
+      "summary": "Выпадающий список выбора владельца поверхности смещается относительно поля  при раскрытии",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:06:55.903+0800",
+      "parent": "MOS-709",
+      "subtasks": [],
+      "description": "Воспроизводится на контуре: [https://mobile-a-tech.mos.ru/tsam-panel/]\r\n\r\n1. Перейти в раздел добавления поверхности -> Таб Ответственные\r\n2. Раскрыть выпадающий список Владелец поверхности\r\n\r\n*ФР:*\r\nРаскрытый список смещен относительно поля выбора владельца\r\n*ОР:*\r\nСмещения нет",
+      "attachments": [
+        {
+          "id": "832288",
+          "filename": "2.png",
+          "mimeType": "image/png",
+          "size": 49032,
+          "content": "https://task.mos-team.ru/secure/attachment/832288/2.png"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1166",
+      "summary": "Не обрезается длинное описание навыка в разделе добавления поверхности",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:07:28.233+0800",
+      "parent": "MOS-709",
+      "subtasks": [],
+      "description": "Воспроизводится на контуре: [https://mobile-a-tech.mos.ru/tsam-panel]\r\n\r\nПредусловие:\r\nВ реестре навыков есть навык с длинным описанием (~200 символов)\r\n\r\n1. Перейти в раздел добавления поверхности -> Сценарии\r\n\r\n*ФР:*\r\nДлинное описание навыка не обрезается, появляется горизонтальный скролл\r\n\r\n*ОР:*\r\nДлинное описание навыка обрезается",
+      "attachments": [
+        {
+          "id": "832305",
+          "filename": "3.png",
+          "mimeType": "image/png",
+          "size": 120531,
+          "content": "https://task.mos-team.ru/secure/attachment/832305/3.png"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1167",
+      "summary": "Не появляются адреса канала при вводе домена в разделе добавления поверхности",
+      "type": "Dev-bug (sub-task)",
+      "status": "Backlog",
+      "updated": "2026-10-09T15:08:08.485+0800",
+      "parent": "MOS-709",
+      "subtasks": [],
+      "description": "Воспроизводится на контуре: [https://mobile-a-tech.mos.ru/tsam-panel]\r\n # Перейти в раздел добавления поверхности\r\n # Ввести валидные данные в поле Домены\r\n\r\n*ФР:*\r\nСтрочка с адресами с введенными данными не появляется\r\n*ОР:*\r\nАдреса появляются",
+      "attachments": [
+        {
+          "id": "832324",
+          "filename": "4.png",
+          "mimeType": "image/png",
+          "size": 68070,
+          "content": "https://task.mos-team.ru/secure/attachment/832324/4.png"
+        },
+        {
+          "id": "832323",
+          "filename": "5.png",
+          "mimeType": "image/png",
+          "size": 59585,
+          "content": "https://task.mos-team.ru/secure/attachment/832323/5.png"
+        }
+      ]
+    },
+    {
+      "key": "MOS-1054",
+      "summary": "Нет автоскролла к статье после ее выбора из списка в разделе документации на мобильном разрешении",
+      "type": "Dev-bug (sub-task)",
+      "status": "CLOSED",
+      "updated": "2026-10-09T21:44:15.111+0800",
+      "parent": "MOS-705",
+      "subtasks": [],
+      "description": "Воспроизводится на контуре: [https://mobile-a-tech.mos.ru/tsam-panel]\r\n\r\n1. Перейти в раздел документации с моб. устройства \r\n\r\n2. Выбрать статью из списка\r\n\r\n*ФР:* \r\nАвтоскролла к началу статьи нет\r\n*ОР:* \r\nАвтоскролл есть",
+      "attachments": [
+        {
+          "id": "835960",
+          "filename": "EditTools_TrimVideo1791551349542.MOV",
+          "mimeType": "video/quicktime",
+          "size": 35879862,
+          "content": "https://task.mos-team.ru/secure/attachment/835960/EditTools_TrimVideo1791551349542.MOV"
+        },
+        {
+          "id": "835961",
+          "filename": "XRecorder_20261009_01.mp4",
+          "mimeType": "video/mp4",
+          "size": 13280707,
+          "content": "https://task.mos-team.ru/secure/attachment/835961/XRecorder_20261009_01.mp4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "sourceId": "wiki-241092173",
+  "revision": 1,
+  "url": "https://wiki.mos-team.ru/spaces/KR/pages/241092173/%D0%93%D1%80%D1%83%D0%BF%D0%BF%D1%8B+%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85",
+  "retrievedAt": "2026-10-19T09:37:05.459Z",
+  "status": 200,
+  "version": {
+    "number": 17,
+    "when": "2026-09-23T16:42:09.540+08:00"
+  },
+  "content": "content.json",
+  "sha256": "44ff0867d1da5a60f09412e1d757f03b6b7b8b8b735c6e677e897d71ca6bed48",
+  "method": "User-approved D031 same-origin read-only exact root-linked bodies and attachment indexes; no recursion or execution",
+  "authorization": "D-031 user approval of ten named relevance reads",
+  "discovery": "sources/wiki-238324523/r2/links.txt; exact root DOM href reconfirmed before request",
+  "redactions": 0,
+  "limitations": [
+    "Relevance classification pending; no scope/precedence/implementation approval",
+    "Attachment index fetched separately; bytes and child pages not visited",
+    "Any next index link remains uncollected; HTML saved inertly, not rendered or executed"
+  ]
+}

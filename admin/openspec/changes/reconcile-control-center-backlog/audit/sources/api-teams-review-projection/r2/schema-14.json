@@ -1,0 +1,26 @@
+{
+  "pointer": "#/components/schemas/TeamMemberMutationResponse",
+  "value": {
+    "properties": {
+      "id": {
+        "type": "string",
+        "title": "Id"
+      },
+      "membership_role": {
+        "$ref": "#/components/schemas/TeamMemberRole"
+      },
+      "valid_from": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Valid From"
+      }
+    },
+    "type": "object",
+    "required": [
+      "id",
+      "membership_role",
+      "valid_from"
+    ],
+    "title": "TeamMemberMutationResponse"
+  }
+}

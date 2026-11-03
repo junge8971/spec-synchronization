@@ -1,0 +1,20 @@
+{
+  "sourceId": "api-docs",
+  "revision": 1,
+  "url": "https://nchat-a-tech.mos.ru/api/control/docs",
+  "retrievedAt": "2026-10-19T08:10:46.142Z",
+  "status": 200,
+  "contentType": "text/html; charset=utf-8",
+  "content": "content.html",
+  "sha256": "02aecc4a486cd3b697887ca917500e2cbd031ee9e1177dfba17c1bf588873ece",
+  "format": "full-decoded-response-text-inert",
+  "discovery": {"locator": "SwaggerUIBundle configuration url", "value": "/api/control/openapi.json", "resolvedUrl": "https://nchat-a-tech.mos.ru/api/control/openapi.json"},
+  "linkedResources": [
+    {"url": "https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css", "disposition": "UI asset, not business explanatory document; not fetched"},
+    {"url": "https://fastapi.tiangolo.com/img/favicon.png", "disposition": "UI icon, not explanatory document; not fetched"},
+    {"url": "https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js", "disposition": "UI runtime asset; not fetched or executed from saved evidence"},
+    {"url": "https://nchat-a-tech.mos.ru/api/control/docs/oauth2-redirect", "disposition": "OAuth callback configuration, not business explanatory document; not visited"}
+  ],
+  "provenance": "Parent browser origin-guarded documentation GET with credentials omitted; full inline HTML retained, not rendered/executed locally. API r2 retrieved from the observed configuration URL.",
+  "limitations": "New discovery receipt does not retroactively verify api-live/r1 acquisition. No additional explanatory-document links in this saved HTML; wiki API page relevance remains unassessed. No Try it out or business operations."
+}

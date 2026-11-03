@@ -1,0 +1,54 @@
+{
+  "sourceId": "wiki-241085838",
+  "retrievedAt": "2026-10-16T13:31:51.607Z",
+  "sha256": "797051024d296c8233d998d15894eaf35b6c6a02980fa37670430d0ae5da2d74",
+  "bytes": 37238,
+  "redactions": {
+    "bearerExamples": 0
+  },
+  "collection": "parent verified-origin GET; inert evidence; no business calls",
+  "membership": "jira-reports-details/r1 items1/description and items2..5 descriptions",
+  "limitations": [
+    "custom fields/attachment bodies uncollected",
+    "publication not runtime/approval"
+  ],
+  "version": {
+    "by": {
+      "email": "haritonov@codesrc.ru",
+      "type": "known",
+      "username": "haritonov",
+      "userKey": "2c9280839ef994b0019f18ec280b0009",
+      "profilePicture": {
+        "path": "/images/icons/profilepics/default.svg",
+        "width": 48,
+        "height": 48,
+        "isDefault": true
+      },
+      "displayName": "Глеб Харитонов",
+      "_links": {
+        "self": "https://wiki.mos-team.ru/rest/api/user?key=2c9280839ef994b0019f18ec280b0009"
+      },
+      "_expandable": {
+        "status": ""
+      }
+    },
+    "when": "2026-09-09T17:12:02.625+08:00",
+    "message": "",
+    "number": 3,
+    "minorEdit": false,
+    "hidden": false,
+    "_links": {
+      "self": "https://wiki.mos-team.ru/rest/experimental/content/241085838/version/3"
+    },
+    "_expandable": {
+      "content": "/rest/api/content/241085838"
+    }
+  },
+  "status": 200,
+  "url": "https://wiki.mos-team.ru/rest/api/content/241085838?expand=body.view,version",
+  "attachments": {
+    "status": 200,
+    "count": 0,
+    "next": null
+  }
+}

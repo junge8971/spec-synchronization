@@ -1,0 +1,20 @@
+{
+  "sourceId": "jira-MOS-1386",
+  "revision": 1,
+  "url": "https://task.mos-team.ru/browse/MOS-1386",
+  "retrievedAt": "2026-10-19T08:52:34.342Z",
+  "updated": "2026-10-16T19:23:54.084+0800",
+  "content": "content.json",
+  "sha256": "25faae6338d2fb4be09763d392ad167a253326df47654495a6768cf31d8a4e59",
+  "method": "Parent origin-guarded read-only Jira GET; existing scoped members only; identities omitted; attachment metadata only",
+  "provenance": "Exact authorized-page tool-result packet recovered from local parent transcript; only scoped issue fields persisted, no transcript dump or credentials.",
+  "omittedAutomatedMentionBodies": [
+    "1131237"
+  ],
+  "limitations": [
+    "Selected issue fields, not full Jira export",
+    "All returned comments accounted for; automated MR mention body intentionally omitted",
+    "Done/test-with-frontend comment and Hold status are documentary statements, not runtime proof",
+    "No attachment bodies, external links, business operations or tests accessed"
+  ]
+}

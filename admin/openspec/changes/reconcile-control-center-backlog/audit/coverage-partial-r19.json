@@ -1,0 +1,47 @@
+{
+  "revision": 19,
+  "supplements": "coverage-partial-r18.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [
+    {
+      "report": "reports/DELTA-SYSTEM-STATE-ROOT-DOCS.md",
+      "candidates": "SYSROOT-01–12",
+      "review": "reviews/R-DELTA-SYSTEM-STATE-ROOT-DOCS.md",
+      "verdict": "ACCEPT",
+      "decision": "D-037"
+    }
+  ],
+  "sourceAdditions": [
+    "sources/wiki-247744768/r1/metadata.json",
+    "sources/wiki-241080097/r1/metadata.json"
+  ],
+  "capture": {
+    "authority": "Existing root templates/stubs batch; D-037 continuation",
+    "transport": "Fresh browser discovery and root href/origin/absent-packet checks",
+    "versions": [5, 1],
+    "httpStatuses": [200, 200],
+    "bodyFormat": "Full bodyView plus separately returned attachment indexes",
+    "attachmentCounts": [2, 0],
+    "nextPointers": [null, null],
+    "redactions": [0, 0],
+    "integrity": "Parent canonical/derived SHA256 and exact chunk roundtrip",
+    "semanticAcceptance": "pending",
+    "attachmentBodies": "Two newly indexed entries unread/not downloaded"
+  },
+  "parentComputedRootCounts": {
+    "capturedBodyOrExtraction": 31,
+    "withoutCanonicalPacket": 11,
+    "returnedIndexes": 30,
+    "knownIndexedAttachments": 29,
+    "knownIndexedUnreadBodies": 25,
+    "note": "Two new pages plus two attachment-index entries; four saved prototype texts unchanged; feedback index missing"
+  },
+  "pendingAnalysis": ["work-items/DELTA-TEMPLATES-STUBS-ROOT-DOCS.md"],
+  "limits": [
+    "Documentary acceptance only; no source precedence, runtime, auth or current API claim",
+    "No mutation, business call, attachment download or prototype execution",
+    "Remaining source/attachment/explanatory-document, owner and implementation gates unresolved",
+    "Historical formatting failure remains unresolved; no global task closure"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "sourceId": "jira-surface-details-d095",
+  "revision": 1,
+  "retrievedAt": "2026-10-20T16:56:26.589Z",
+  "method": "Parent-owned browser MCP page6 same-origin read-only GET /rest/api/2/issue/{key}, selected fields; no issue mutations or business API calls",
+  "membershipEvidence": "../../jira-hierarchy/r1/content.json: results entry key MOS-783 children; all ten verified",
+  "keys": ["MOS-707", "MOS-708", "MOS-709", "MOS-712", "MOS-901", "MOS-910", "MOS-911", "MOS-913", "MOS-914", "MOS-958"],
+  "contentFile": "content.json",
+  "bytes": 32961,
+  "sha256": "7f03f2bbb04798d98bab8bc12a1c4b16511d26112f56da4378f5e0ae5796f62a",
+  "commentsCompleteness": "Every selected item's returned comment count equals reported total",
+  "limitations": ["Custom fields and attachment bodies not collected", "parent:null does not negate saved module membership", "Status/comments are source-attributed, not delivery or test acceptance", "Linked MRs/issues not traversed", "Restored Jira access for this packet does not clear other publication freshness gates"]
+}

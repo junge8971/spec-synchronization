@@ -1,0 +1,27 @@
+{
+  "pointer": "#/components/schemas/AddTeamMemberRequest",
+  "value": {
+    "properties": {
+      "user_id": {
+        "type": "string",
+        "title": "User Id"
+      },
+      "membership_role": {
+        "$ref": "#/components/schemas/TeamMemberRole"
+      },
+      "reason": {
+        "type": "string",
+        "maxLength": 1000,
+        "minLength": 1,
+        "title": "Reason"
+      }
+    },
+    "type": "object",
+    "required": [
+      "user_id",
+      "membership_role",
+      "reason"
+    ],
+    "title": "AddTeamMemberRequest"
+  }
+}

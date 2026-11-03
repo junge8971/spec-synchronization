@@ -1,0 +1,47 @@
+{
+  "revision": 18,
+  "supplements": "coverage-partial-r17.json",
+  "complete": false,
+  "globalProgress": "6/28",
+  "acceptedChains": [
+    {
+      "report": "reports/DELTA-REPORTS-ROOT-DOCS.md",
+      "candidates": "RRD-01–08",
+      "review": "reviews/R-DELTA-REPORTS-ROOT-DOCS.md",
+      "verdict": "ACCEPT",
+      "decision": "D-036"
+    }
+  ],
+  "sourceAdditions": [
+    "sources/wiki-247747489/r1/metadata.json",
+    "sources/wiki-241080088/r1/metadata.json"
+  ],
+  "capture": {
+    "authority": "Existing two-page system-state batch in accepted root ledger; D-036 continuation",
+    "transport": "Fresh browser discovery, exact root href/origin guard and absent-packet check",
+    "versions": [6, 2],
+    "httpStatuses": [200, 200],
+    "bodyFormat": "Full bodyView plus separately returned attachment indexes",
+    "attachmentCounts": [2, 0],
+    "nextPointers": [null, null],
+    "redactions": [0, 0],
+    "integrity": "Parent canonical/derived SHA256 and exact HTML chunk roundtrip",
+    "semanticAcceptance": "pending",
+    "attachmentBodies": "Two new entries indexed only, not downloaded, rendered or inspected"
+  },
+  "parentComputedRootCounts": {
+    "capturedBodyOrExtraction": 29,
+    "withoutCanonicalPacket": 13,
+    "returnedIndexes": 28,
+    "knownIndexedAttachments": 27,
+    "knownIndexedUnreadBodies": 23,
+    "note": "Two pages plus two unread indexed attachments appended; four previous prototype texts retained; feedback index still missing"
+  },
+  "pendingAnalysis": ["work-items/DELTA-SYSTEM-STATE-ROOT-DOCS.md"],
+  "limits": [
+    "No module toggle, business request or audience-visible runtime verification",
+    "Historical MOS1027 approval and MOS1145 evidence limits retained, no new auth or source precedence",
+    "Root captures are not full semantic reconciliation",
+    "Remaining collection/attachment/explanatory-document, owner and implementation gates and formatting failure unresolved"
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "sourceId": "jira-monitoring-details",
+  "revision": 1,
+  "retrievedAt": "2026-10-16T13:48:06.559Z",
+  "origin": "https://task.mos-team.ru",
+  "fields": "summary,description,issuetype,status,subtasks,parent,updated,attachment,comment",
+  "items": [
+    {
+      "key": "MOS-775",
+      "summary": "[KR] Модуль \"Мониторинг навыков\"",
+      "issuetype": {
+        "self": "https://task.mos-team.ru/rest/api/2/issuetype/16622",
+        "id": "16622",
+        "description": "",
+        "iconUrl": "https://task.mos-team.ru/secure/viewavatar?size=xsmall&avatarId=23735&avatarType=issuetype",
+        "name": "Q key result",
+        "subtask": false,
+        "avatarId": 23735
+      },
+      "attachment": [],
+      "subtasks": [],
+      "description": "|*Что будет сделано*|Показатели и пороги, зависимости, инциденты со сроками, ответственные, плановые окна|\r\n|*Результат для пользователя*|Работа с мониторингом навыков|\r\n|*Заказчики (Стейкхолдеры)*|Катков Д.\r\nПопова Л.|\r\n|*Проблема*|Пользователи центра управления должны иметь возможность вести мониторинг навыков для управления составом и качеством ассистента|\r\n|*Решение (Acceptance criteria)* |Цикл разработки задачи:\r\n * продуктовая постановка\r\n * системный анализ\r\n * разработка\r\n * тестирование\r\n * релиз|\r\n|*Целевая аудитория*|-|\r\n|*Сценарий использования (для разработчиков)*|-|\r\n|*Предпосылки*|-|\r\n|*Гипотеза*|-|\r\n|*Документация*|-|\r\n|*SEO*|-|\r\n|*Макеты*|-|",
+      "comment": {
+        "comments": [],
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "updated": "2026-10-09T15:04:19.959+0800",
+      "status": {
+        "self": "https://task.mos-team.ru/rest/api/2/status/16813",
+        "description": "",
+        "iconUrl": "https://task.mos-team.ru/",
+        "name": "Backlog",
+        "id": "16813",
+        "statusCategory": {
+          "self": "https://task.mos-team.ru/rest/api/2/statuscategory/2",
+          "id": 2,
+          "key": "new",
+          "colorName": "default",
+          "name": "К выполнению"
+        }
+      }
+    },
+    {
+      "key": "MOS-1146",
+      "summary": "[B] Добавить хранение и отображение инцидентов навыка",
+      "issuetype": {
+        "self": "https://task.mos-team.ru/rest/api/2/issuetype/16617",
+        "id": "16617",
+        "description": "",
+        "iconUrl": "https://task.mos-team.ru/secure/viewavatar?size=xsmall&avatarId=23731&avatarType=issuetype",
+        "name": "Development task",
+        "subtask": false,
+        "avatarId": 23731
+      },
+      "attachment": [],
+      "subtasks": [],
+      "description": "h3. Цель\r\n\r\nДобавить новую сущность и таблицу {{{}skill_incidents{}}}, синхронизацию инцидентов из внешней системы и их отображение на вкладке \"Мониторинг\" навыка.\r\n\r\nВ центре управления инциденты доступны только для просмотра.\r\n\r\nПеречислимые значения критичности, стороны устранения и статуса инцидента должны храниться в отдельных таблицах-справочниках. Тип enum не используется.\r\nh3. Справочники\r\n\r\nСоздать таблицы:\r\n * {{incident_levels}} - уровни критичности инцидента;\r\n * {{incident_sides}} - стороны устранения инцидента;\r\n * {{incident_statuses}} - статусы инцидента.\r\n\r\nВсе справочники имеют одинаковую структуру:\r\n||Поле||Тип||Ограничения||Описание||\r\n|{{code}}|varchar(32)|PK, NOT NULL|Стабильный системный код|\r\n|{{display_name}}|varchar(100)|NOT NULL|Отображаемое название|\r\n|{{sort_order}}|smallint|NOT NULL|Порядок отображения|\r\n|{{is_active}}|boolean|NOT NULL, DEFAULT true|Доступность значения для новых записей|\r\n\r\nЗаполнить справочники начальными значениями:\r\n||Справочник||Код||Отображаемое название||Порядок||\r\n|{{incident_levels}}|{{p0}}|Критический|10|\r\n|{{incident_levels}}|{{p1}}|Высокий|20|\r\n|{{incident_levels}}|{{p2}}|Средний|30|\r\n|{{incident_levels}}|{{p3}}|Низкий|40|\r\n|{{incident_sides}}|{{platform}}|Команда ЦАМ|10|\r\n|{{incident_sides}}|{{team}}|Команда навыка|20|\r\n|{{incident_statuses}}|{{open}}|Открыт|10|\r\n|{{incident_statuses}}|{{acknowledged}}|Подтверждён|20|\r\n|{{incident_statuses}}|{{resolved}}|Устранён|30|\r\n\r\nСистемные коды справочников передаются через API в нижнем регистре.\r\n\r\nИспользуемые значения справочников не должны удаляться физически. Для вывода значения из эксплуатации используется {{{}is_active = false{}}}.\r\nh3. Таблица {{skill_incidents}}\r\n\r\nСоздать таблицу:\r\n||Поле||Тип||Ограничения||Описание||\r\n|{{id}}|UUID|PK, NOT NULL|Идентификатор записи|\r\n|{{skill_id}}|UUID|FK -> {{{}skills.id{}}}, NOT NULL|Связанный навык|\r\n|{{external_id}}|varchar(64)|NOT NULL, UNIQUE|Идентификатор во внешней системе|\r\n|{{level}}|varchar(32)|FK -> {{{}incident_levels.code{}}}, NOT NULL|Код критичности|\r\n|{{title}}|varchar|NOT NULL|Заголовок|\r\n|{{cause}}|text|NULL|Причина|\r\n|{{side}}|varchar(32)|FK -> {{{}incident_sides.code{}}}, NOT NULL|Код стороны устранения|\r\n|{{message}}|text|NOT NULL|Описание|\r\n|{{detected_at}}|datetime|NOT NULL|Время обнаружения|\r\n|{{acknowledged_at}}|datetime|NULL|Время подтверждения|\r\n|{{resolved_at}}|datetime|NULL|Время устранения|\r\n|{{affected_percent}}|decimal|NULL|Процент затронутых запросов|\r\n|{{postmortem_done}}|boolean|NOT NULL|Признак завершения постмортема|\r\n|{{postmortem_due_at}}|datetime|NULL|Дедлайн постмортема|\r\n|{{status}}|varchar(32)|FK → {{{}incident_statuses.code{}}}, NOT NULL|Код статуса инцидента|\r\n\r\nДобавить:\r\n * внешний ключ {{skill_id}} на {{{}skills.id{}}};\r\n * внешний ключ {{level}} на {{{}incident_levels.code{}}};\r\n * внешний ключ {{side}} на {{{}incident_sides.code{}}};\r\n * внешний ключ {{status}} на {{{}incident_statuses.code{}}};\r\n * индекс по {{{}skill_id{}}};\r\n * уникальное ограничение по {{{}external_id{}}}.\r\n\r\nh3. Доменная модель\r\n\r\nДобавить:\r\n * {{{}SkillIncidentId{}}};\r\n * сущность {{{}SkillIncident{}}};\r\n * типы кодов {{{}IncidentLevelCode{}}}, {{IncidentSideCode}} и {{{}IncidentStatusCode{}}};\r\n * связь инцидента с {{{}Skill{}}};\r\n * порт чтения справочников инцидентов;\r\n * проверку существования и активности значений справочников при синхронизации.\r\n\r\nPython enum не должен быть источником допустимых значений. Допустимость кодов определяется содержимым соответствующих таблиц-справочников.\r\n\r\nВ бизнес-логике допускается использовать именованные константы для кодов, поведение которых требует отдельной обработки.\r\n\r\nИнциденты не должны создаваться или редактироваться через обычные команды управления навыком.\r\nh3. Синхронизация\r\n\r\nНа текущем этапе добавить внутренний эндпоинт, позволяющий создать или обновить фейковый инцидент в навыке:\r\n{code:java}\r\nPUT /internal/incidents/{external_id}\r\n\r\n{\r\n  \"skill_id\": \"UUID\",\r\n  \"level\": \"p1\",\r\n  \"title\": \"Ошибки в 7% запросов\",\r\n  \"cause\": \"Недоступность внешнего сервиса\",\r\n  \"side\": \"team\",\r\n  \"message\": \"Ответы дольше трёх секунд\",\r\n  \"detected_at\": \"2026-08-14T08:05:00Z\",\r\n  \"acknowledged_at\": null,\r\n  \"resolved_at\": null,\r\n  \"affected_percent\": 7,\r\n  \"postmortem_done\": false,\r\n  \"postmortem_due_at\": \"2026-08-19T00:00:00Z\",\r\n  \"status\": \"open\"\r\n}\r\n{code}\r\nЭндпоинт работает как upsert по {{{}external_id{}}}:\r\n * если инцидент с таким {{external_id}} отсутствует — создаётся новая запись;\r\n * если инцидент существует — его данные обновляются;\r\n * изменение {{external_id}} не поддерживается;\r\n * указанный {{skill_id}} должен существовать;\r\n * {{{}level{}}}, {{side}} и {{status}} должны существовать в соответствующих справочниках и иметь {{{}is_active = true{}}};\r\n * при передаче неизвестного или неактивного кода возвращается ошибка валидации;\r\n * ошибка FK базы данных не должна использоваться как пользовательская ошибка валидации.\r\n\r\nh3. API\r\n\r\nДобавить публичный эндпоинт для получения инцидентов по навыку.\r\n\r\nВ ответе для {{{}level{}}}, {{side}} и {{status}} возвращаются системные коды справочников.\r\n\r\nОперации создания, редактирования и удаления инцидентов через публичный API не требуются.\r\n\r\nПри отсутствии инцидентов возвращается пустой список.\r\n\r\nПорядок выдачи:\r\n # сначала инциденты со статусом {{{}open{}}};\r\n # затем со статусом {{{}acknowledged{}}};\r\n # затем со статусом {{{}resolved{}}};\r\n # внутри одной группы - по {{detected_at}} от новых к старым.\r\n\r\nh3. Миграция\r\n\r\nAlembic-миграция должна:\r\n # создать {{{}incident_levels{}}}, {{incident_sides}} и {{{}incident_statuses{}}};\r\n # заполнить справочники начальными значениями;\r\n # создать {{{}skill_incidents{}}};\r\n # создать внешние ключи, индекс и уникальное ограничение.\r\n\r\nh3. Критерии приёмки\r\n * Созданы таблицы {{{}incident_levels{}}}, {{incident_sides}} и {{{}incident_statuses{}}}.\r\n * Справочники заполнены установленными начальными значениями.\r\n * Создана таблица {{{}skill_incidents{}}}.\r\n * Поля {{{}level{}}}, {{side}} и {{status}} имеют внешние ключи на справочники.\r\n * Для инцидентов нельзя сохранить неизвестные коды справочников.\r\n * Через внутренний эндпоинт нельзя сохранить неактивное значение справочника.\r\n * Добавлен эндпоинт получения инцидентов по навыку.\r\n * Незакрытые инциденты отображаются первыми.\r\n * Внутри одной группы инциденты отсортированы по времени обнаружения от новых к старым.\r\n * При отсутствии инцидентов возвращается пустой список.",
+      "comment": {
+        "comments": [
+          {
+            "self": "https://task.mos-team.ru/rest/api/2/issue/530980/comment/1126159",
+            "id": "1126159",
+            "author": {
+              "self": "https://task.mos-team.ru/rest/api/2/user?username=gitlab",
+              "name": "gitlab",
+              "key": "gitlab",
+              "emailAddress": "gitlab@mos-team.ru",
+              "avatarUrls": {
+                "48x48": "https://task.mos-team.ru/secure/useravatar?ownerId=gitlab&avatarId=16714",
+                "24x24": "https://task.mos-team.ru/secure/useravatar?size=small&ownerId=gitlab&avatarId=16714",
+                "16x16": "https://task.mos-team.ru/secure/useravatar?size=xsmall&ownerId=gitlab&avatarId=16714",
+                "32x32": "https://task.mos-team.ru/secure/useravatar?size=medium&ownerId=gitlab&avatarId=16714"
+              },
+              "displayName": "Gitlab",
+              "active": true,
+              "timeZone": "Europe/Moscow"
+            },
+            "body": "[Иннокентий Ким|https://gitlab.mos-team.ru/kim] mentioned this issue in [a merge request|https://gitlab.mos-team.ru/tsam/back/tsam-assistant-management-service-back/-/merge_requests/19] of [tsam / back / tsam-assistant-management-service-back|https://gitlab.mos-team.ru/tsam/back/tsam-assistant-management-service-back] on branch [MOS-1146|https://gitlab.mos-team.ru/tsam/back/tsam-assistant-management-service-back/-/tree/MOS-1146]:{quote}feat: MOS-1146 Добавить хранение и отображение инцидентов навыка{quote}",
+            "updateAuthor": {
+              "self": "https://task.mos-team.ru/rest/api/2/user?username=gitlab",
+              "name": "gitlab",
+              "key": "gitlab",
+              "emailAddress": "gitlab@mos-team.ru",
+              "avatarUrls": {
+                "48x48": "https://task.mos-team.ru/secure/useravatar?ownerId=gitlab&avatarId=16714",
+                "24x24": "https://task.mos-team.ru/secure/useravatar?size=small&ownerId=gitlab&avatarId=16714",
+                "16x16": "https://task.mos-team.ru/secure/useravatar?size=xsmall&ownerId=gitlab&avatarId=16714",
+                "32x32": "https://task.mos-team.ru/secure/useravatar?size=medium&ownerId=gitlab&avatarId=16714"
+              },
+              "displayName": "Gitlab",
+              "active": true,
+              "timeZone": "Europe/Moscow"
+            },
+            "created": "2026-10-07T18:58:39.581+0800",
+            "updated": "2026-10-07T18:58:39.581+0800"
+          }
+        ],
+        "maxResults": 1,
+        "total": 1,
+        "startAt": 0
+      },
+      "updated": "2026-10-16T19:22:41.378+0800",
+      "status": {
+        "self": "https://task.mos-team.ru/rest/api/2/status/14115",
+        "description": "",
+        "iconUrl": "https://task.mos-team.ru/images/icons/statuses/generic.png",
+        "name": "Ready for test",
+        "id": "14115",
+        "statusCategory": {
+          "self": "https://task.mos-team.ru/rest/api/2/statuscategory/2",
+          "id": 2,
+          "key": "new",
+          "colorName": "default",
+          "name": "К выполнению"
+        }
+      }
+    },
+    {
+      "key": "MOS-1397",
+      "summary": "[B] Мониторинг навыка",
+      "issuetype": {
+        "self": "https://task.mos-team.ru/rest/api/2/issuetype/16617",
+        "id": "16617",
+        "description": "",
+        "iconUrl": "https://task.mos-team.ru/secure/viewavatar?size=xsmall&avatarId=23731&avatarType=issuetype",
+        "name": "Development task",
+        "subtask": false,
+        "avatarId": 23731
+      },
+      "attachment": [],
+      "subtasks": [],
+      "description": "h2. Описание\r\n\r\nДобавить хранение настроек мониторинга и внешних зависимостей навыка, API чтения показателей и расчёт отклонений от порогов. Показатели и состояния внешних систем предоставляет mock-провайдер с воспроизводимыми данными.\r\n\r\nОперации сохранения настроек и обновления зависимостей описаны отдельным разделом и требуют подтверждения сценария подключения мониторинга.\r\n\r\nh2. Технические требования\r\n\r\nh3. Хранение\r\n\r\nСоздать три таблицы.\r\n\r\n{{skill\\_monitoring}}:\r\n\r\n||Поле||Тип||Ограничения||\r\n|{{id}}|UUID|PK|\r\n|{{skill\\_id}}|UUID|NOT NULL, UNIQUE, FK {{skills.id}}|\r\n|{{threshold\\_availability}}|decimal(5,2)|NOT NULL, от 0 до 100|\r\n|{{threshold\\_rating}}|decimal(5,2)|NOT NULL, от 0 до 100|\r\n|{{threshold\\_response\\_seconds}}|decimal(6,2)|NOT NULL, больше 0|\r\n|{{threshold\\_data\\_age\\_days}}|integer|NOT NULL, не меньше 0|\r\n|{{fallback\\_text}}|text|NULL|\r\n|{{maintenance\\_starts\\_at}}|timestamp without time zone|NULL|\r\n|{{maintenance\\_ends\\_at}}|timestamp without time zone|NULL|\r\n|{{maintenance\\_reason}}|text|NULL|\r\n|{{created\\_at}}|timestamp without time zone|NOT NULL|\r\n|{{updated\\_at}}|timestamp without time zone|NOT NULL|\r\n\r\nДля навыка допускается одна запись настроек. Окно обслуживания задаётся двумя датами и непустой причиной; начало раньше окончания. Без окна все три поля равны {{null}}. Диапазоны порогов и согласованность окна закрепить CHECK-ограничениями.\r\n\r\n{{skill\\_monitoring\\_dependencies}}:\r\n\r\n||Поле||Тип||Ограничения||\r\n|{{id}}|UUID|PK|\r\n|{{skill\\_id}}|UUID|NOT NULL, FK {{skills.id}}|\r\n|{{name}}|varchar(255)|NOT NULL|\r\n|{{owner}}|varchar(255)|NOT NULL|\r\n|{{status}}|varchar(32)|NOT NULL, FK {{skill\\_dependency\\_statuses.code}}|\r\n|{{checked\\_at}}|timestamp without time zone|NOT NULL|\r\n|{{created\\_at}}|timestamp without time zone|NOT NULL|\r\n|{{updated\\_at}}|timestamp without time zone|NOT NULL|\r\n\r\nДобавить {{UNIQUE (skill\\_id, name)}} с поддержкой выборки по навыку. Убирать пробелы по краям {{name}} и {{owner}}, отклонять пустые значения. Имя после обработки служит ключом зависимости внутри навыка; сравнение учитывает регистр. {{checked\\_at}} содержит время проверки из источника, остальные даты заполняет backend.\r\n\r\nh3. Справочник состояний зависимостей\r\n\r\nСоздать {{skill\\_dependency\\_statuses}}:\r\n\r\n||Поле||Тип||Ограничения||\r\n|{{code}}|varchar(50)|PK|\r\n|{{display\\_name}}|varchar(150)|NOT NULL|\r\n|{{description}}|text|NULL|\r\n|{{sort\\_order}}|smallint|NOT NULL|\r\n|{{is\\_default}}|boolean|NULL|\r\n|{{is\\_active}}|boolean|NOT NULL|\r\n|{{deleted\\_at}}|timestamp without time zone|NULL|\r\n|{{created\\_at}}|timestamp without time zone|NOT NULL|\r\n|{{updated\\_at}}|timestamp without time zone|NOT NULL|\r\n\r\nНачальные значения:\r\n\r\n||Код||Название||Порядок||\r\n|{{ok}}|Доступна|10|\r\n|{{degraded}}|Деградация|20|\r\n|{{down}}|Недоступна|30|\r\n\r\nУстановить {{is\\_active=true}}, {{is\\_default=false}}, {{deleted\\_at=null}}, заполнить даты. Применить общие ограничения значения по умолчанию: не более одного, только активное и не удалённое.\r\n\r\nЗарегистрировать справочник в {{ref\\_dictionary}} и {{CATALOG\\_SOURCES}}: {{code=storage\\_table=\"skill\\_dependency\\_statuses\"}}, {{name=\"Состояния зависимостей навыков\"}}, {{owner=\"Навыки\"}}, {{kind=\"list\"}}, {{status=\"active\"}}, {{group=\"system\"}}, {{values\\_required=true}}, {{public\\_api=false}}, {{cache\\_seconds=0}}. В SQLAlchemy установить {{managed\\_catalog=true}}.\r\n\r\nДополнить секцию {{SKILLS}} в {{CATALOG\\_LOOKUP\\_SECTIONS}} соответствием {{\"dependency\\_statuses\": \"skill\\_dependency\\_statuses\"}}. Сохранить существующие соответствия и право {{TSAM.Skill:view}}.\r\n\r\nLookup возвращает активные неудалённые значения по {{sort\\_order}}, затем {{code}}. Новое назначение неизвестного, неактивного или мягко удалённого статуса запрещено. Сохранённые ссылки продолжают читаться; физическое удаление используемого значения запрещено FK.\r\n\r\nh3. Mock-провайдер и показатели\r\n\r\nДобавить интерфейс провайдера и mock-реализацию. Снимок содержит {{source=\"mock\"}}, {{observed\\_at}}, {{metrics}} и полный список зависимостей. Значения и время снимка задаются фикстурой и не меняются случайно при чтении.\r\n\r\nМетрики содержат {{availability}} и {{rating}} в процентах, {{response\\_seconds}} в секундах, {{data\\_age\\_days}} в днях. Показатели не сохраняются в отдельной таблице. При отсутствии данных возвращать {{metrics=null}}.\r\n\r\nПредусмотреть сценарии нормальных показателей, отклонений и отсутствия данных. Фикстуры зависимостей должны покрывать {{ok}}, {{degraded}}, {{down}}. Сценарий выбирается конфигурацией приложения или подменой провайдера в тесте.\r\n\r\nОтклонения рассчитывать по сохранённым порогам:\r\n\r\n||Показатель||Нарушение||Величина отклонения||\r\n|Доступность|Факт ниже {{threshold\\_availability}}|Порог минус факт, процентные пункты|\r\n|Хорошие оценки|Факт ниже {{threshold\\_rating}}|Порог минус факт, процентные пункты|\r\n|Время ответа|Факт выше {{threshold\\_response\\_seconds}}|Факт минус порог, секунды|\r\n|Давность данных|Факт выше {{threshold\\_data\\_age\\_days}}|Факт минус порог, дни|\r\n\r\nРавенство порогу не является нарушением. Для каждого отклонения возвращать код показателя, факт, порог, разницу и единицу измерения.\r\n\r\nАктивное окно обслуживания включает начало и исключает окончание. При отсутствии настроек возвращать {{evaluation\\_status=\"not\\_configured\"}}. При активном окне возвращать {{evaluation\\_status=\"maintenance\"}}. В остальных случаях использовать {{no\\_data}} при отсутствии метрик и {{evaluated}} при наличии метрик. Для всех состояний кроме {{evaluated}} возвращать {{deviations=\\[\\]}}. Истечение окна не удаляет сохранённые даты.\r\n\r\nh3. API чтения\r\n\r\nБазовый путь {{/api/control/api/skills/v1/skills}}.\r\n\r\nДобавить {{GET /\\{skill\\_id\\}/monitoring}}. Ответ содержит {{settings}}, сохранённые {{dependencies}}, {{metrics}}, {{source}}, {{observed\\_at}}, {{deviations}}, {{evaluation\\_status}}, {{maintenance\\_active}}.\r\n\r\nБез сохранённых настроек возвращать {{settings=null}}, без зависимостей возвращать {{dependencies=\\[\\]}}. Чтение не создаёт записи и не синхронизирует зависимости. Метрики поступают от mock-провайдера; время показателей и время сохранённых зависимостей возвращаются отдельно.\r\n\r\nЗависимость содержит {{id}}, {{name}}, {{owner}}, {{status}}, {{checked\\_at}}. Сортировать по имени, затем идентификатору. Справочник состояний получать через lookup, не дублировать его в ответе мониторинга.\r\n\r\nТребовать {{TSAM.Skill:view}}, проверять доступ к навыку и ограничения по команде. Несуществующие и мягко удалённые навыки обрабатывать по правилам API навыков.\r\n\r\nh3. Операции записи после подтверждения сценария подключения\r\n\r\n{{PUT /\\{skill\\_id\\}/monitoring/settings}} полностью заменяет настройки и возвращает сохранённые значения. Все четыре порога обязательны. Пропущенные необязательные поля сохраняются как {{null}}. Первое сохранение создаёт запись, последующие сохраняют её {{id}} и {{created\\_at}}.\r\n\r\nДля десятичных порогов допускать не более двух знаков после запятой и значения в пределах SQL-типа. Даты в запросе должны содержать часовой пояс. Пустой {{fallback\\_text}} сохранять как {{null}}. Очистка окна требует {{null}} во всех трёх полях.\r\n\r\n{{POST /\\{skill\\_id\\}/monitoring/refresh}} без тела получает снимок mock-провайдера и синхронизирует зависимости в одной транзакции. Создавать новые записи, обновлять изменённые и удалять отсутствующие в полном снимке. Сохранять идентификаторы существующих зависимостей. Повтор идентичного снимка не меняет даты. Дубли имён после нормализации и неизвестные статусы отклонять до записи.\r\n\r\nКонкурентные refresh выполнять последовательно под блокировкой навыка. Ошибка откатывает обновление и не очищает данные. Успешный пустой снимок очищает список. Ответ содержит представление мониторинга с метриками того же снимка. {{checked\\_at}} зависимостей mock-снимка совпадает с {{observed\\_at}}.\r\n\r\nДля обеих операций применять действующее право изменения навыка и ограничения по команде. Пользователь не передаёт статусы зависимостей напрямую. Ошибки полей возвращать в принятом формате {{422 VALIDATION\\_ERROR}}; использовать действующие ответы {{401}}, {{403}}, {{404}}.\r\n\r\nh3. Миграция и реализация\r\n\r\nДобавить модели, DTO, ORM-маппинг, репозитории, HTTP-схемы, провайдер и внедрение зависимостей. Обновить OpenAPI.\r\n\r\nМиграция создаёт три таблицы, начальные значения справочника, запись реестра, ограничения и индексы. Существующим навыкам не создавать произвольные настройки и демонстрационные зависимости. Демонстрационные настройки и зависимости предоставляются отдельными тестовыми фикстурами. Откат удаляет запись реестра и таблицы в порядке FK.\r\n\r\nh2. Критерии приёмки\r\n\r\n* Созданы три таблицы, справочник подключён к общему реестру и lookup навыков.\r\n* API чтения возвращает настройки, зависимости, mock-метрики и отклонения с проверкой доступа.\r\n* Отсутствующие настройки и метрики представлены как {{null}}; демонстрационный источник указан явно.\r\n* Отклонения и активность окна обслуживания рассчитаны по указанным правилам.\r\n* После подтверждения операций записи настройки сохраняются с валидацией, refresh синхронизирует полный список атомарно и сохраняет идентификаторы.\r\n* OpenAPI описывает поля и ошибки; SQLAlchemy metadata соответствует Alembic DDL.\r\n\r\n\r\n",
+      "comment": {
+        "comments": [],
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "updated": "2026-10-16T19:24:19.539+0800",
+      "status": {
+        "self": "https://task.mos-team.ru/rest/api/2/status/12408",
+        "description": "",
+        "iconUrl": "https://task.mos-team.ru/images/icons/statuses/generic.png",
+        "name": "Development",
+        "id": "12408",
+        "statusCategory": {
+          "self": "https://task.mos-team.ru/rest/api/2/statuscategory/4",
+          "id": 4,
+          "key": "indeterminate",
+          "colorName": "inprogress",
+          "name": "В работе"
+        }
+      }
+    },
+    {
+      "key": "MOS-1398",
+      "summary": "[B] Ответственные по навыку",
+      "issuetype": {
+        "self": "https://task.mos-team.ru/rest/api/2/issuetype/16617",
+        "id": "16617",
+        "description": "",
+        "iconUrl": "https://task.mos-team.ru/secure/viewavatar?size=xsmall&avatarId=23731&avatarType=issuetype",
+        "name": "Development task",
+        "subtask": false,
+        "avatarId": 23731
+      },
+      "attachment": [],
+      "subtasks": [],
+      "description": "h2. Описание\r\n\r\nДобавить хранение ответственных по навыку и API чтения назначений с контактами пользователей. Поддержать роли владельца, технического представителя и заместителя.\r\n\r\nОперация назначения описана отдельным разделом и требует подтверждения сценария редактирования ответственных. Обязательность ролей перед переходом в {{prod}} этой задачей не устанавливается.\r\n\r\nh2. Технические требования\r\n\r\nh3. Хранение\r\n\r\nСоздать {{skill\\_responsibles}}:\r\n\r\n||Поле||Тип||Ограничения||\r\n|{{id}}|UUID|PK|\r\n|{{skill\\_id}}|UUID|NOT NULL, FK {{skills.id}}|\r\n|{{user\\_id}}|text|NOT NULL, внешний идентификатор СУДИР|\r\n|{{role}}|varchar(32)|NOT NULL, FK {{skill\\_responsible\\_roles.code}}|\r\n|{{created\\_at}}|timestamp without time zone|NOT NULL|\r\n\r\nДобавить {{UNIQUE (skill\\_id, role)}} с поддержкой выборки по навыку. Для одной роли допускается один ответственный. Один пользователь может занимать несколько ролей.\r\n\r\n{{user\\_id}} соответствует действующему строковому типу {{UserId}}. Пустые идентификаторы и строки из пробелов запрещены. Локальный FK на пользователя не добавлять. Контакты в таблице назначений не хранить.\r\n\r\nДля дат использовать {{UTCDateTime}}, значения в UTC. Физическое удаление навыка удаляет назначения каскадно. Мягкое удаление сохраняет назначения и исключает их из публичного чтения.\r\n\r\nh3. Справочник ролей\r\n\r\nСоздать {{skill\\_responsible\\_roles}}:\r\n\r\n||Поле||Тип||Ограничения||\r\n|{{code}}|varchar(50)|PK|\r\n|{{display\\_name}}|varchar(150)|NOT NULL|\r\n|{{description}}|text|NULL|\r\n|{{sort\\_order}}|smallint|NOT NULL|\r\n|{{is\\_default}}|boolean|NULL|\r\n|{{is\\_active}}|boolean|NOT NULL|\r\n|{{deleted\\_at}}|timestamp without time zone|NULL|\r\n|{{created\\_at}}|timestamp without time zone|NOT NULL|\r\n|{{updated\\_at}}|timestamp without time zone|NOT NULL|\r\n\r\nНачальные значения:\r\n\r\n||Код||Название||Порядок||\r\n|{{owner}}|Владелец навыка|10|\r\n|{{tech}}|Технический представитель|20|\r\n|{{backup}}|Заместитель|30|\r\n\r\nУстановить {{is\\_active=true}}, {{is\\_default=false}}, {{deleted\\_at=null}}, заполнить даты. Применить общие ограничения значения по умолчанию: не более одного, только активное и не удалённое.\r\n\r\nЗарегистрировать справочник в {{ref\\_dictionary}} и {{CATALOG\\_SOURCES}}: {{code=storage\\_table=\"skill\\_responsible\\_roles\"}}, {{name=\"Роли ответственных по навыкам\"}}, {{owner=\"Навыки\"}}, {{kind=\"list\"}}, {{status=\"active\"}}, {{group=\"system\"}}, {{values\\_required=true}}, {{public\\_api=false}}, {{cache\\_seconds=0}}. В SQLAlchemy установить {{managed\\_catalog=true}}.\r\n\r\nДополнить секцию {{SKILLS}} в {{CATALOG\\_LOOKUP\\_SECTIONS}} соответствием {{\"responsible\\_roles\": \"skill\\_responsible\\_roles\"}}. Сохранить существующие соответствия и право {{TSAM.Skill:view}}.\r\n\r\nLookup возвращает активные неудалённые значения по {{sort\\_order}}, затем {{code}}. Используемые роли защищены от физического удаления FK. Существующие назначения с неактивными или мягко удалёнными ролями продолжают читаться.\r\n\r\nh3. Сведения о пользователях\r\n\r\nПолучать имя и контакты через существующий сервис пользователей. Для каждого уникального {{user\\_id}} выполнять не более одного запроса в рамках чтения назначений.\r\n\r\nВозвращать {{user}} с именем и доступными полями {{email}}, {{position}}, {{phone}}, {{messenger}}. Недоступные поля равны {{null}}. Если пользователь не найден или сервис недоступен, возвращать {{user=null}}, сохраняя назначение и {{user\\_id}}.\r\n\r\nПоле {{user\\_data\\_source}} принимает {{external}}, {{mock}} или {{unavailable}}. В демонстрационном режиме использовать существующий fake-адаптер с воспроизводимыми профилями и адресами {{example.invalid}}.\r\n\r\nh3. API чтения\r\n\r\nБазовый путь {{/api/control/api/skills/v1/skills}}.\r\n\r\nДобавить {{GET /\\{skill\\_id\\}/responsibles}}. Ответ содержит {{items}}. Назначение содержит {{id}}, {{role}}, {{user\\_id}}, {{created\\_at}}, {{user}}, {{user\\_data\\_source}}.\r\n\r\nСортировать назначения по {{sort\\_order}} роли, затем по коду. Без назначений возвращать {{items=\\[\\]}}. Справочник ролей получать через lookup, не дублировать его в ответе. Чтение не создаёт назначения и работает независимо от наличия настроек мониторинга.\r\n\r\nТребовать {{TSAM.Skill:view}}, проверять доступ к навыку и ограничения по команде. Несуществующие и мягко удалённые навыки обрабатывать по действующим правилам API навыков.\r\n\r\nh3. Назначение после подтверждения сценария редактирования\r\n\r\nДобавить {{PUT /\\{skill\\_id\\}/responsibles}}. Запрос содержит {{items}} с полным списком пар {{role}}, {{user\\_id}}. Ответ соответствует GET. Пустой список удаляет все назначения.\r\n\r\nПроверять существование роли и пользователя. Новое назначение допускается только для активной неудалённой роли. Неизменившееся назначение неактивной или мягко удалённой роли разрешено сохранять. Замена пользователя в такой роли запрещена. Повторяющиеся роли отклоняются.\r\n\r\nНового пользователя и замену проверять через сервис пользователей. Если пользователь не найден или сервис недоступен, не сохранять изменения. Неизменившиеся назначения не требуют повторной проверки пользователя.\r\n\r\nСохранение атомарно заменяет список под блокировкой навыка:\r\n\r\n* Новая роль создаёт назначение.\r\n* Неизменившаяся пара сохраняет {{id}} и {{created\\_at}}.\r\n* Замена пользователя создаёт новое назначение этой роли с новым идентификатором и датой.\r\n* Отсутствующая в запросе роль удаляется.\r\n* Повтор идентичного списка не меняет идентификаторы и даты.\r\n\r\nТребовать {{TSAM.Skill:update}} и действующий доступ к навыку. Назначение не меняет права пользователя, команду навыка, {{contact\\_user\\_id}} или статус. Действующие проверки перехода в {{prod}} не менять.\r\n\r\nОшибки полей возвращать в принятом формате {{422 VALIDATION\\_ERROR}} с полем или индексом назначения. Ошибка сервиса пользователей не должна обозначаться как отсутствие пользователя. Использовать действующие ответы {{401}}, {{403}}, {{404}}.\r\n\r\nh3. Миграция и реализация\r\n\r\nДобавить модели, идентификаторы, DTO, ORM-маппинг, репозитории, HTTP-схемы и внедрение зависимостей. Обновить OpenAPI и тестовые фабрики.\r\n\r\nМиграция создаёт две таблицы, начальные роли, запись реестра, ограничения и индексы. Существующим навыкам не назначать пользователей автоматически. Демонстрационные назначения предоставляются отдельными тестовыми фикстурами. Откат удаляет запись реестра и таблицы в порядке FK.\r\n\r\nh2. Критерии приёмки\r\n\r\n* Созданы две таблицы, роли подключены к общему реестру и lookup навыков.\r\n* БД запрещает повтор роли для одного навыка и неизвестные коды ролей.\r\n* API чтения возвращает назначения и доступные контакты с проверкой доступа. Отсутствие пользователя не скрывает назначение.\r\n* Mock-данные обозначены явно; контакты не сохраняются в таблице назначений.\r\n* После подтверждения операции назначения PUT атомарно заменяет список, проверяет роли и пользователей, сохраняет неизменившиеся записи.\r\n* Назначения не меняют права, контактное лицо, команду или жизненный цикл навыка.\r\n* OpenAPI описывает поля и ошибки; SQLAlchemy metadata соответствует Alembic DDL.\r\n\r\n",
+      "comment": {
+        "comments": [],
+        "maxResults": 0,
+        "total": 0,
+        "startAt": 0
+      },
+      "updated": "2026-10-16T19:24:17.680+0800",
+      "status": {
+        "self": "https://task.mos-team.ru/rest/api/2/status/16813",
+        "description": "",
+        "iconUrl": "https://task.mos-team.ru/",
+        "name": "Backlog",
+        "id": "16813",
+        "statusCategory": {
+          "self": "https://task.mos-team.ru/rest/api/2/statuscategory/2",
+          "id": 2,
+          "key": "new",
+          "colorName": "default",
+          "name": "К выполнению"
+        }
+      }
+    }
+  ]
+}
