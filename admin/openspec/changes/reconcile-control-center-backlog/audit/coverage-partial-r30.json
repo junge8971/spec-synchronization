@@ -3,7 +3,13 @@
   "supplements": "coverage-partial-r29.json",
   "complete": false,
   "globalProgress": "6/28",
-  "sourceAdditions": ["sources/wiki-241080659/r1/content.json", "sources/wiki-241080659/r1/metadata.json", "sources/wiki-241080659-readable/r1/content.txt", "sources/wiki-241080659-readable/r1/body-view-chunks.json", "sources/wiki-241080659-readable/r1/metadata.json"],
+  "sourceAdditions": [
+    "sources/wiki-241080659/r1/content.json",
+    "sources/wiki-241080659/r1/metadata.json",
+    "sources/wiki-241080659-readable/r1/content.txt",
+    "sources/wiki-241080659-readable/r1/body-view-chunks.json",
+    "sources/wiki-241080659-readable/r1/metadata.json"
+  ],
   "capture": {
     "authority": "D-046, relevant exact contract from allowed MOS-944/1031/905; user resumed after transport failures",
     "id": "241080659",
@@ -22,6 +28,18 @@
   },
   "teamCollectionState": "Fresh browser discovery recovered on wiki root page7; exact saved MOS905 href and local absence checked; prior timeouts historical",
   "semanticReview": "pending DELTA-TEAMS-API-CONTRACT and independent review",
-  "rootAccountingUnchanged": {"packets": 42, "indexes": 42, "entries": 39, "savedTexts": 4, "unreadBodies": 35},
-  "limits": ["Off-root Jira-linked packet adds no root member", "Historical accepted nine-bundle gap snapshot unchanged; this is additive collection", "No policy/source precedence/runtime acceptance", "Other contract and ambiguous-shell dispositions separate; global tasks open", "Historical formatting failure unresolved"]
+  "rootAccountingUnchanged": {
+    "packets": 42,
+    "indexes": 42,
+    "entries": 39,
+    "savedTexts": 4,
+    "unreadBodies": 35
+  },
+  "limits": [
+    "Off-root Jira-linked packet adds no root member",
+    "Historical accepted nine-bundle gap snapshot unchanged; this is additive collection",
+    "No policy/source precedence/runtime acceptance",
+    "Other contract and ambiguous-shell dispositions separate; global tasks open",
+    "Historical formatting failure unresolved"
+  ]
 }

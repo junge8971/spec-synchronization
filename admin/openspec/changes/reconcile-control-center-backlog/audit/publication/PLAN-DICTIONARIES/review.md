@@ -43,10 +43,10 @@ Read the supplied author and both analytical handoffs, the entry plan/config, an
 
 Source root: `openspec/changes/reconcile-control-center-backlog/audit/sources/`
 
-| Source | Reported SHA-256 |
-|---|---|
-| `wiki-247751846/r2/readable.txt` | `002d6b34375939d9f8847350ef0cdf9ff6db8f151028f297da6750ba0d1c0957` |
-| `wiki-247751846/r2/content.json` | `6f4a85bf911634a724e3411138c517fe3ce295d2036e09d573444dc9d6d04588` |
+| Source                                         | Reported SHA-256                                                   |
+| ---------------------------------------------- | ------------------------------------------------------------------ |
+| `wiki-247751846/r2/readable.txt`               | `002d6b34375939d9f8847350ef0cdf9ff6db8f151028f297da6750ba0d1c0957` |
+| `wiki-247751846/r2/content.json`               | `6f4a85bf911634a724e3411138c517fe3ce295d2036e09d573444dc9d6d04588` |
 | `local-dictionaries-prototype/r1/content.html` | `385f230467db6b8b2fdf26dbc08f9154ca7fd1651db037c6227eccc9fc8fa310` |
 
 Wiki metadata confirms version 10 and the supplied page identity, https://wiki.mos-team.ru/spaces/KR/pages/247751846/. JSON/prototype hashes match their recorded metadata; **hashes were not independently recomputed** because available review tools provide no hashing execution. No output artifact hashes or strict validation results exist. The companion lane’s exhaustive OpenAPI comparison was not independently repeated.

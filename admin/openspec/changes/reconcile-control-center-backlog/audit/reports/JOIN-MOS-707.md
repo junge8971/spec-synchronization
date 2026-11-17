@@ -31,9 +31,9 @@ Paths below are repository-relative:
 
 Attachment metadata:
 
-| Pointer | Attachment |
-|---|---|
-| `/items/0/attachments/0` | **818849**, `image-2026-09-07-17-22-47-896.png`, PNG, 80,697 bytes; source URL `https://task.mos-team.ru/secure/attachment/818849/image-2026-09-07-17-22-47-896.png` |
+| Pointer                  | Attachment                                                                                                                                                            |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/items/0/attachments/0` | **818849**, `image-2026-09-07-17-22-47-896.png`, PNG, 80,697 bytes; source URL `https://task.mos-team.ru/secure/attachment/818849/image-2026-09-07-17-22-47-896.png`  |
 | `/items/0/attachments/1` | **827197**, `image-2026-09-24-12-14-22-259.png`, PNG, 122,827 bytes; source URL `https://task.mos-team.ru/secure/attachment/827197/image-2026-09-24-12-14-22-259.png` |
 
 Neither attachment body was collected. Exact visual equivalence cannot be inspected.
@@ -53,16 +53,16 @@ These were used as scope maps, not repeated as fresh neighboring audits. No MOS-
 
 ## Expected / observed / unknown
 
-| MOS-707 expectation | Observed local implementation and test locator | Remaining uncertainty |
-|---|---|---|
-| Surfaces page with header | `app/pages/surfaces/ui/surfaces-page.tsx`, `SurfacesPage`, renders `SurfacesRegistry`. `W/surfaces-registry.tsx`, header JSX, renders “Подключение” and H1 “Поверхности”. | No actual route/deployment execution. |
-| Documentation and connection entry | Same header links to `/docs?article=surface-register` and `/surfaces/new`. Creation uses `PermissionButton` with `surfaceView` and `surfaceCreate`. | Historical unconditional wording does not override current permission control. No auth-policy audit or policy replacement is made. |
-| Name/domains, type, owner, status, dialog count, updated date | `W/surfaces-registry-table.tsx`, `SurfacesRegistryTable`, renders all six semantic columns, plus an open indicator. Name links to detail; domains are joined; owner and channel ID displayed; date formatted with `Intl.DateTimeFormat('ru-RU')`. | Historical screenshot styling, exact sizes, typography and row content unavailable. |
-| Sortable columns | Table instantiates sortable headers for `name`, `type`, `owner`, `dialogs`, `updated_at`; status is a plain header. `W/surfaces-registry-sortable-header.tsx` supplies button labels and active `aria-sort`. | Source does not require every column to sort. No unsupported status-sort defect inferred. Server sort correctness belongs to MOS-910. |
-| Reflow above table at smaller widths | Registry header uses `flex flex-wrap … gap-4`; action group uses `max-sm:flex-row-reverse`; filters/count wrapper changes from column to row at `sm`. | CSS intent is not measured reflow. Narrow-screen overlap, clipping and visual fidelity remain unknown. |
-| Horizontal table scrolling on mobile | Table wrapper uses `overflow-x-auto`; table uses `w-full min-w-[1000px] table-fixed`. | Presence of classes is not proof of working scroll geometry or absence of outer-page overflow. |
-| Temporary mock data in historical implementation | Current widget obtains data through `useSurfacesRegistryQuery`, not an inline historical mock list. | Mock-era comment is historical, not a requirement to restore client-local data. Production and mock runtime behavior were not exercised. |
-| Successful historical test comment | Exact comment and contour URL are preserved above. | Cannot verify deployed revision, credentials, data, browser dimensions, test procedure or result. `CLOSED` is not closure evidence for current code. |
+| MOS-707 expectation                                           | Observed local implementation and test locator                                                                                                                                                                                                    | Remaining uncertainty                                                                                                                                |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Surfaces page with header                                     | `app/pages/surfaces/ui/surfaces-page.tsx`, `SurfacesPage`, renders `SurfacesRegistry`. `W/surfaces-registry.tsx`, header JSX, renders “Подключение” and H1 “Поверхности”.                                                                         | No actual route/deployment execution.                                                                                                                |
+| Documentation and connection entry                            | Same header links to `/docs?article=surface-register` and `/surfaces/new`. Creation uses `PermissionButton` with `surfaceView` and `surfaceCreate`.                                                                                               | Historical unconditional wording does not override current permission control. No auth-policy audit or policy replacement is made.                   |
+| Name/domains, type, owner, status, dialog count, updated date | `W/surfaces-registry-table.tsx`, `SurfacesRegistryTable`, renders all six semantic columns, plus an open indicator. Name links to detail; domains are joined; owner and channel ID displayed; date formatted with `Intl.DateTimeFormat('ru-RU')`. | Historical screenshot styling, exact sizes, typography and row content unavailable.                                                                  |
+| Sortable columns                                              | Table instantiates sortable headers for `name`, `type`, `owner`, `dialogs`, `updated_at`; status is a plain header. `W/surfaces-registry-sortable-header.tsx` supplies button labels and active `aria-sort`.                                      | Source does not require every column to sort. No unsupported status-sort defect inferred. Server sort correctness belongs to MOS-910.                |
+| Reflow above table at smaller widths                          | Registry header uses `flex flex-wrap … gap-4`; action group uses `max-sm:flex-row-reverse`; filters/count wrapper changes from column to row at `sm`.                                                                                             | CSS intent is not measured reflow. Narrow-screen overlap, clipping and visual fidelity remain unknown.                                               |
+| Horizontal table scrolling on mobile                          | Table wrapper uses `overflow-x-auto`; table uses `w-full min-w-[1000px] table-fixed`.                                                                                                                                                             | Presence of classes is not proof of working scroll geometry or absence of outer-page overflow.                                                       |
+| Temporary mock data in historical implementation              | Current widget obtains data through `useSurfacesRegistryQuery`, not an inline historical mock list.                                                                                                                                               | Mock-era comment is historical, not a requirement to restore client-local data. Production and mock runtime behavior were not exercised.             |
+| Successful historical test comment                            | Exact comment and contour URL are preserved above.                                                                                                                                                                                                | Cannot verify deployed revision, credentials, data, browser dimensions, test procedure or result. `CLOSED` is not closure evidence for current code. |
 
 ### Test evidence, read only
 
@@ -110,24 +110,24 @@ Any coverage change is parent-owned and limited to **MOS-707 analytical partial 
 
 SHA-256 values were freshly calculated with read-only `sha256sum`.
 
-| Input | SHA-256 |
-|---|---|
+| Input                                                 | SHA-256                                                            |
+| ----------------------------------------------------- | ------------------------------------------------------------------ |
 | `A/sources/jira-surface-details-d095/r1/content.json` | `7f03f2bbb04798d98bab8bc12a1c4b16511d26112f56da4378f5e0ae5796f62a` |
-| Adjacent `metadata.json` | `508b6ea6333bda12d26e3d828ceeca071ecf5fd9ee2042406ecf1b992f4d931a` |
-| `W/surfaces-registry.tsx` | `56f3348b48ee5e0cbaf85c6533389649935f4775642826d2abb065f4cf56b779` |
-| `W/surfaces-registry-table.tsx` | `00e15f25c4a3d6c52f050ddac427bdf88ac1c3f7843cc76a316d03e872150824` |
-| `W/surfaces-registry-sortable-header.tsx` | `afebb1a99104d3c51c2b7ff6f82bef068639d0615f4e6fda7582e27a1b2f582a` |
-| `W/surfaces-registry.test.tsx` | `dc780c80f7f731076e667d57174313d1d1242222c655e8a36d4c3ba52865015e` |
+| Adjacent `metadata.json`                              | `508b6ea6333bda12d26e3d828ceeca071ecf5fd9ee2042406ecf1b992f4d931a` |
+| `W/surfaces-registry.tsx`                             | `56f3348b48ee5e0cbaf85c6533389649935f4775642826d2abb065f4cf56b779` |
+| `W/surfaces-registry-table.tsx`                       | `00e15f25c4a3d6c52f050ddac427bdf88ac1c3f7843cc76a316d03e872150824` |
+| `W/surfaces-registry-sortable-header.tsx`             | `afebb1a99104d3c51c2b7ff6f82bef068639d0615f4e6fda7582e27a1b2f582a` |
+| `W/surfaces-registry.test.tsx`                        | `dc780c80f7f731076e667d57174313d1d1242222c655e8a36d4c3ba52865015e` |
 | `app/entities/surface/api/surface-registry-client.ts` | `de2e6b1c1ef909dd21d0744f64d3371a456bb4c8997b658e98cfe2abdfe4ac05` |
-| `H/proposal.md` | `9785022b4382ac10469754fc49799021684e5ff7956b23fe6a543540dd10a8de` |
-| `H/design.md` | `2968bf34ebd61cc2d861b129e080512843f0718b08ba796ab3049dc714644681` |
-| `H/tasks.md` | `a1ad5429920f771dc04d8a8ff218fed59f9ff7dbda244a242f22aa3a3a69d6b2` |
-| `H/specs/surface-registry/spec.md` | `7895c5b5e6e66f066138b541eb16b3a1dde760c591f92e3c82f2d919dd1bccdf` |
-| `A/decisions.md` | `7f2e819f00420b8de338453c8844b9138958ca44e2046740db25b004cff46e3e` |
-| `A/reports/SCENARIO-SURFACE-CONFIG-r2.md` | `0f197edbb0c24ca779a05b00fe091fa909d174b5db7dd926a9aa948c217d7910` |
-| `A/reports/JIRA-MOS-783.md` | `4088bb978c718cee5104e570f42ab0b99191a4035f5f9752a80e098153b56354` |
-| `A/publication/DRAFT-SURFACE-D091.md` | `de98a82303e6a4ff8b673583b6c2a18a36864d90a1d91b478bfa19fd1d7da77f` |
-| `A/reviews/R-D093-EIGHT.md` | `aee6c464b24662ed9e5396e382ca2e35a3add12ffe47a6c452178f847084e2bc` |
+| `H/proposal.md`                                       | `9785022b4382ac10469754fc49799021684e5ff7956b23fe6a543540dd10a8de` |
+| `H/design.md`                                         | `2968bf34ebd61cc2d861b129e080512843f0718b08ba796ab3049dc714644681` |
+| `H/tasks.md`                                          | `a1ad5429920f771dc04d8a8ff218fed59f9ff7dbda244a242f22aa3a3a69d6b2` |
+| `H/specs/surface-registry/spec.md`                    | `7895c5b5e6e66f066138b541eb16b3a1dde760c591f92e3c82f2d919dd1bccdf` |
+| `A/decisions.md`                                      | `7f2e819f00420b8de338453c8844b9138958ca44e2046740db25b004cff46e3e` |
+| `A/reports/SCENARIO-SURFACE-CONFIG-r2.md`             | `0f197edbb0c24ca779a05b00fe091fa909d174b5db7dd926a9aa948c217d7910` |
+| `A/reports/JIRA-MOS-783.md`                           | `4088bb978c718cee5104e570f42ab0b99191a4035f5f9752a80e098153b56354` |
+| `A/publication/DRAFT-SURFACE-D091.md`                 | `de98a82303e6a4ff8b673583b6c2a18a36864d90a1d91b478bfa19fd1d7da77f` |
+| `A/reviews/R-D093-EIGHT.md`                           | `aee6c464b24662ed9e5396e382ca2e35a3add12ffe47a6c452178f847084e2bc` |
 
 The packet hash matches its metadata and assignment. Hashes establish local byte identity, not remote authenticity or deployment freshness.
 

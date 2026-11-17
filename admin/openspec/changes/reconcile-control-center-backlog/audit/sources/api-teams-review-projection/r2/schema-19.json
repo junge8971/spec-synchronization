@@ -13,10 +13,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "id",
-      "name"
-    ],
+    "required": ["id", "name"],
     "title": "TeamSkillResponse"
   }
 }

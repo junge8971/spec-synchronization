@@ -21,11 +21,11 @@ Repository-relative aliases:
 
 Read both reports and their original work-items completely. Independently read all three complete readable bodies, all ordered entries of their exact `body-view-chunks.json` files, and all six original/derived metadata files.
 
-| Source | Metadata version | Complete body | Exact chunks |
-|---|---|---|---|
-| wiki238347066, r1 | v8, `2026-09-08T17:40:36.272+08:00` | L:1–175 | `$[0]`–`$[2]` |
-| wiki238352321, r1 | v2, `2026-09-08T17:40:50.253+08:00` | C:1–141 | `$[0]`–`$[4]` |
-| wiki241074633, r1 | v4, `2026-09-08T17:41:04.581+08:00` | B:1–136 | `$[0]`–`$[6]` |
+| Source            | Metadata version                    | Complete body | Exact chunks  |
+| ----------------- | ----------------------------------- | ------------- | ------------- |
+| wiki238347066, r1 | v8, `2026-09-08T17:40:36.272+08:00` | L:1–175       | `$[0]`–`$[2]` |
+| wiki238352321, r1 | v2, `2026-09-08T17:40:50.253+08:00` | C:1–141       | `$[0]`–`$[4]` |
+| wiki241074633, r1 | v4, `2026-09-08T17:41:04.581+08:00` | B:1–136       | `$[0]`–`$[6]` |
 
 The reports’ source versions, substantive locators and table/example distinctions are supported. Metadata hashes and body roundtrip statements remain parent-attributed; neither hashes nor original-byte equivalence were independently recomputed.
 
@@ -33,13 +33,13 @@ The reports’ source versions, substantive locators and table/example distincti
 
 All five `DELTA-SKILL-LIST-CARD-EXAMPLES-01`–`05` candidates were checked.
 
-| Candidate | Independent verification |
-|---|---|
-| **01 — search/filter** | L:6–46 expressly supplies optional `query`, `status`, `domain`, `offset`, `limit`; L:16 names name, purpose and serviceId. The complete example supplies no team parameter, sort order, matching/case rules or domain value type. The report correctly limits these negative claims to this document and preserves accepted team filtering and contract parameter names. |
-| **02 — pagination** | L:114–118 shows total/offset/limit `15/0/15`; L:62–113 contains three illustrative rows. L:175 explicitly describes additional requests on «Показать ещё». The report does not infer response invalidity, default limits, ordering guarantees or replacement of accepted page/history navigation. |
-| **03 — counts/alerts** | L:72–79,90–94,105–110 gives conflict counts `1/2/0` against `allerts` array lengths `2/0/1`. L:161–174 defines 30-day dialogs, labels `conflictsCount` «Количество аллармов», and preserves the spelling `allerts`. The ambiguity is accurately recorded without deriving phrase cardinality, readiness or a new implementation defect. |
-| **04 — questionnaire** | C:31–50 and skill-table rows 1–17 support the stated vocabulary. C:43–45 versus107–110 confirms object-array versus string-like material examples; C:46,111 gives string version `2.4`. Optional descriptions do not establish complete null/empty rules, display names do not establish IDs, and singular zone does not settle array cardinality. No DTO conversion is authorized. |
-| **05 — status/capability** | L:71,89,104 shows `rejected`, `checking`, `in_review`; C:51,116 shows localized `Прод`. C:53–77,117–141 contains separate 30-day metrics. The report correctly avoids turning these examples into filter enums, relaxed card validation, lifecycle actions or connected monitoring evidence. |
+| Candidate                  | Independent verification                                                                                                                                                                                                                                                                                                                                                            |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **01 — search/filter**     | L:6–46 expressly supplies optional `query`, `status`, `domain`, `offset`, `limit`; L:16 names name, purpose and serviceId. The complete example supplies no team parameter, sort order, matching/case rules or domain value type. The report correctly limits these negative claims to this document and preserves accepted team filtering and contract parameter names.            |
+| **02 — pagination**        | L:114–118 shows total/offset/limit `15/0/15`; L:62–113 contains three illustrative rows. L:175 explicitly describes additional requests on «Показать ещё». The report does not infer response invalidity, default limits, ordering guarantees or replacement of accepted page/history navigation.                                                                                   |
+| **03 — counts/alerts**     | L:72–79,90–94,105–110 gives conflict counts `1/2/0` against `allerts` array lengths `2/0/1`. L:161–174 defines 30-day dialogs, labels `conflictsCount` «Количество аллармов», and preserves the spelling `allerts`. The ambiguity is accurately recorded without deriving phrase cardinality, readiness or a new implementation defect.                                             |
+| **04 — questionnaire**     | C:31–50 and skill-table rows 1–17 support the stated vocabulary. C:43–45 versus107–110 confirms object-array versus string-like material examples; C:46,111 gives string version `2.4`. Optional descriptions do not establish complete null/empty rules, display names do not establish IDs, and singular zone does not settle array cardinality. No DTO conversion is authorized. |
+| **05 — status/capability** | L:71,89,104 shows `rejected`, `checking`, `in_review`; C:51,116 shows localized `Прод`. C:53–77,117–141 contains separate 30-day metrics. The report correctly avoids turning these examples into filter enums, relaxed card validation, lifecycle actions or connected monitoring evidence.                                                                                        |
 
 ### Accepted owner-chain checks
 
@@ -59,14 +59,14 @@ The MOS-1018 comparison was checked against `REQ-MOS-1018` R08, `RECON-MOS-1018`
 
 All six SME candidates were checked.
 
-| Candidate | Independent verification |
-|---|---|
-| **SME-01 — status** | B:31–32 places `status` and `statusDescription` at response top level. B:96–99 uses `monitoringStatus` as a table heading, not demonstrated wrapper syntax. A healthy example supplies no complete enum or evaluation policy. |
-| **SME-02 — daily metrics** | B:33–40,100–107 explicitly supports daily scope, availability/rating fractions 0..1 and response seconds. `SCENARIO-MOS-1397` C02 records prior requested settings as 0–100. The report preserves this representation difference without adopting conversion or inventing window boundaries, denominators, sample sufficiency or maintenance treatment. |
-| **SME-03 — freshness** | B:41–47,108–114 distinguishes data update, age, schedule, invocation and resident-facing failure message. No as-of timestamp explains age24 alongside the healthy prose. The report appropriately records unresolved sample context, not a demonstrated stale incident or active failure. |
-| **SME-04 — people/dependencies** | B:48–66,115–125 supports the illustrative people, dependency names/team/status and separate `checkedAt`. These names do not identify project implementation owners or permission grants. The complete body supplies no contact IDs/channels, missing-deputy policy or checking cadence. |
-| **SME-05 — incident** | B:67–79,126–136 supports occurrence, resolution, side and impact fraction. Example `postmortem` versus table-row9 `condition` is a real internal mismatch. Resolution time is not a deadline; side is not an individual; no incident ID or external incident URL is supplied here. No schema rename or editor activation follows. |
-| **SME-06 — envelope/failures** | B:1–29,80–94 supports documentary POST, required path ID, anonymous-null request comments and 200/422/500 examples. Error examples do not establish retries or complete source-state behavior. Request-field null comments do not establish monitoring-result nullability. |
+| Candidate                        | Independent verification                                                                                                                                                                                                                                                                                                                                |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **SME-01 — status**              | B:31–32 places `status` and `statusDescription` at response top level. B:96–99 uses `monitoringStatus` as a table heading, not demonstrated wrapper syntax. A healthy example supplies no complete enum or evaluation policy.                                                                                                                           |
+| **SME-02 — daily metrics**       | B:33–40,100–107 explicitly supports daily scope, availability/rating fractions 0..1 and response seconds. `SCENARIO-MOS-1397` C02 records prior requested settings as 0–100. The report preserves this representation difference without adopting conversion or inventing window boundaries, denominators, sample sufficiency or maintenance treatment. |
+| **SME-03 — freshness**           | B:41–47,108–114 distinguishes data update, age, schedule, invocation and resident-facing failure message. No as-of timestamp explains age24 alongside the healthy prose. The report appropriately records unresolved sample context, not a demonstrated stale incident or active failure.                                                               |
+| **SME-04 — people/dependencies** | B:48–66,115–125 supports the illustrative people, dependency names/team/status and separate `checkedAt`. These names do not identify project implementation owners or permission grants. The complete body supplies no contact IDs/channels, missing-deputy policy or checking cadence.                                                                 |
+| **SME-05 — incident**            | B:67–79,126–136 supports occurrence, resolution, side and impact fraction. Example `postmortem` versus table-row9 `condition` is a real internal mismatch. Resolution time is not a deadline; side is not an individual; no incident ID or external incident URL is supplied here. No schema rename or editor activation follows.                       |
+| **SME-06 — envelope/failures**   | B:1–29,80–94 supports documentary POST, required path ID, anonymous-null request comments and 200/422/500 examples. Error examples do not establish retries or complete source-state behavior. Request-field null comments do not establish monitoring-result nullability.                                                                              |
 
 The three timestamp purposes—external-data update, skill invocation and dependency check—remain distinct. Card modification timestamps are not substituted for any of them.
 

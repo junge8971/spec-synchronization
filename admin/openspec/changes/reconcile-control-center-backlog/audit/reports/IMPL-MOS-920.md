@@ -28,24 +28,24 @@
 
 Локально пересчитаны SHA-256:
 
-| Вход | SHA-256 |
-|---|---|
-| WAVE-D093-LOCAL-EIGHT.md | `bfed26db7f9865a85e19e0cdfbeb0b92fc7b2b16999be3dac4d1cb92bd5eaf4e` |
-| reports/SCENARIO-MOS-920.md | `d1587adf7b366f8c03ac97197f978ca7fab114515d47fb9c80d32571ecfe9883` |
-| reviews/R-SCENARIO-MOS-920.md | `d1efb5f0b29510b6961d04185899c5b92532ff636ee24db3edf18824d8de11a9` |
-| Jira r1 content.json, 9933 байта | `ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f` |
-| Jira r1 metadata.json | `73e55adae262fba4222f1a701fe3152b001503ff5c0b3c10988a65bc575bbf8e` |
-| app/pages/operations/ui/operations-page.tsx | `6100902a8833602c9d6fcc461429b9185079b7cdb6893829f30d588ee74753e9` |
-| app/routes/entry-points.test.tsx | `3c6e58565c0f38e15452ab4487fa0f193ae07fa98a8cd6083300229c4dc654aa` |
-| app/shared/api/http-client.ts | `e3ca2dbf67139ed26e86220a44dc18503068835d390f659c0eb2577fed5f1514` |
-| app/shared/api/types/http-client.types.ts | `19a47a1a17c2d67a87b0b83366f441307d746bf026deba75d7131140f2cc3aee` |
-| app/shared/api/schema.d.ts | `394a55fc0bd646a9a3c81dace045d89f53505fc40bc4cb0902cb1492b638092d` |
-| mocks/assistant-modules.mjs | `0694eaff9bc872fc1fcd252d4fe76bbf7edd158c4495f78d402b311201f9ef23` |
-| mocks/assistant-modules.test.mjs | `10f817be8e813fa4a03b50fdbbe6e471d0c4cabd729c932e612c816f8cbf5242` |
-| mocks/app.mjs | `b3dd41cc09a6aac9f6ffa023d4cd048fef75735926e1a8efa21b567c46d7efd0` |
-| mocks/contract.mjs | `ffca4d574568b6f81791279af6022a98077ac82f4e4ec90a672406261a383371` |
-| mocks/seed.json | `916f455f01ed4e106f85cf5b2224e7dbb653f559d4e72b722fd0845e4375763f` |
-| docs/api/contracts/openapi.json | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
+| Вход                                              | SHA-256                                                            |
+| ------------------------------------------------- | ------------------------------------------------------------------ |
+| WAVE-D093-LOCAL-EIGHT.md                          | `bfed26db7f9865a85e19e0cdfbeb0b92fc7b2b16999be3dac4d1cb92bd5eaf4e` |
+| reports/SCENARIO-MOS-920.md                       | `d1587adf7b366f8c03ac97197f978ca7fab114515d47fb9c80d32571ecfe9883` |
+| reviews/R-SCENARIO-MOS-920.md                     | `d1efb5f0b29510b6961d04185899c5b92532ff636ee24db3edf18824d8de11a9` |
+| Jira r1 content.json, 9933 байта                  | `ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f` |
+| Jira r1 metadata.json                             | `73e55adae262fba4222f1a701fe3152b001503ff5c0b3c10988a65bc575bbf8e` |
+| app/pages/operations/ui/operations-page.tsx       | `6100902a8833602c9d6fcc461429b9185079b7cdb6893829f30d588ee74753e9` |
+| app/routes/entry-points.test.tsx                  | `3c6e58565c0f38e15452ab4487fa0f193ae07fa98a8cd6083300229c4dc654aa` |
+| app/shared/api/http-client.ts                     | `e3ca2dbf67139ed26e86220a44dc18503068835d390f659c0eb2577fed5f1514` |
+| app/shared/api/types/http-client.types.ts         | `19a47a1a17c2d67a87b0b83366f441307d746bf026deba75d7131140f2cc3aee` |
+| app/shared/api/schema.d.ts                        | `394a55fc0bd646a9a3c81dace045d89f53505fc40bc4cb0902cb1492b638092d` |
+| mocks/assistant-modules.mjs                       | `0694eaff9bc872fc1fcd252d4fe76bbf7edd158c4495f78d402b311201f9ef23` |
+| mocks/assistant-modules.test.mjs                  | `10f817be8e813fa4a03b50fdbbe6e471d0c4cabd729c932e612c816f8cbf5242` |
+| mocks/app.mjs                                     | `b3dd41cc09a6aac9f6ffa023d4cd048fef75735926e1a8efa21b567c46d7efd0` |
+| mocks/contract.mjs                                | `ffca4d574568b6f81791279af6022a98077ac82f4e4ec90a672406261a383371` |
+| mocks/seed.json                                   | `916f455f01ed4e106f85cf5b2224e7dbb653f559d4e72b722fd0845e4375763f` |
+| docs/api/contracts/openapi.json                   | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
 | openspec/specs/control-center-mock-server/spec.md | `54cd451a911c13129fbf8be64b06f920a837d4c816255f6ee6f5ee65f4406588` |
 
 Хеш текущего объединённого контракта — не хеш исторического `api-live/r1`. Их тождество не заявляется.
@@ -100,12 +100,12 @@
 
 ### 4. Список / summary / preview: реализации и конкретные assertions
 
-| Expected, существующий owner | Observed implementation | Прочитанные tests |
-|---|---|---|
-| Mock list: поиск, фильтр, сортировки до пагинации; spec `:138–155` | `mocks/assistant-modules.mjs:4–14`: поиск по code/name/description без учёта регистра, точный status, default name, затем page | `assistant-modules.test.mjs:35–92`: одиночный и повторённый sort, регистр поиска, limit/offset, unknown/empty status, отсутствующий результат, offset за концом |
-| Coherent summary; spec `:157–176` | `assistant-modules.mjs:16–36`: totals по коллекции, healthy/degraded, banner, disabled ids | `test.mjs:102–131`: totals, state, tone, множество disabled ids |
-| Preview «Что видит пользователь» как локальная модель; spec `:168–176` | `assistant-modules.mjs:38–51`: одна fallback-card на disabled module, сохранённый текст либо локальный default | `test.mjs:102–131`: ids, число cards, type, name, message, sample |
-| Все представления после мутаций и restart | Общий `state.modules`; `mocks/state.mjs:11–16` клонирует seed | `test.mjs:133–180`: disable/enable, повторные переходы, healthy/degraded, новый server восстанавливает исходные views |
+| Expected, существующий owner                                           | Observed implementation                                                                                                        | Прочитанные tests                                                                                                                                               |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mock list: поиск, фильтр, сортировки до пагинации; spec `:138–155`     | `mocks/assistant-modules.mjs:4–14`: поиск по code/name/description без учёта регистра, точный status, default name, затем page | `assistant-modules.test.mjs:35–92`: одиночный и повторённый sort, регистр поиска, limit/offset, unknown/empty status, отсутствующий результат, offset за концом |
+| Coherent summary; spec `:157–176`                                      | `assistant-modules.mjs:16–36`: totals по коллекции, healthy/degraded, banner, disabled ids                                     | `test.mjs:102–131`: totals, state, tone, множество disabled ids                                                                                                 |
+| Preview «Что видит пользователь» как локальная модель; spec `:168–176` | `assistant-modules.mjs:38–51`: одна fallback-card на disabled module, сохранённый текст либо локальный default                 | `test.mjs:102–131`: ids, число cards, type, name, message, sample                                                                                               |
+| Все представления после мутаций и restart                              | Общий `state.modules`; `mocks/state.mjs:11–16` клонирует seed                                                                  | `test.mjs:133–180`: disable/enable, повторные переходы, healthy/degraded, новый server восстанавливает исходные views                                           |
 
 **Unknown:** реальные пользовательские ответы ассистента и глобальная доставка состояния на поверхности. Согласованность трёх mock views этого не доказывает.
 
@@ -143,13 +143,13 @@
 
 ## Минимальные решения для очереди родителя
 
-| Решение | Кандидат и основание |
-|---|---|
-| **keep** | Сохранить MOS-920 Backlog/draft gate как исторически зафиксированный статус; не закрывать по наличию пяти mock handlers или generated types. Свежего Jira/approval нет. |
-| **update** | Дополнить evidence MOS-920 точной формулировкой: «UI остаётся заглушкой без запросов; локальные list/summary/preview/enable/disable зарегистрированы и имеют предметные тесты, прочитанные, но не запущенные». Anchors — разделы 1–5. |
-| **update** | Уточнить прежний вопрос C07/C08: conditional confirmation/empty message подтверждены текущим mock-кодом и тестами `:157–177`; это принятая локальная конвенция, не доказанная production-семантика. |
-| **question** | Перед будущим предметным подключением уточнить утверждённые disable semantics и способ сериализации multi-sort; существующий scalar query transport не доказывает поддержку повторённых параметров. Политику здесь не выбирать. |
-| **new: нет** | Отдельная новая задача/смена owner не обоснована: MOS-920 уже содержит недостающий UI, mock-конвенции имеют существующего владельца. Новое здесь — evidence, не новый business scope. |
+| Решение      | Кандидат и основание                                                                                                                                                                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **keep**     | Сохранить MOS-920 Backlog/draft gate как исторически зафиксированный статус; не закрывать по наличию пяти mock handlers или generated types. Свежего Jira/approval нет.                                                               |
+| **update**   | Дополнить evidence MOS-920 точной формулировкой: «UI остаётся заглушкой без запросов; локальные list/summary/preview/enable/disable зарегистрированы и имеют предметные тесты, прочитанные, но не запущенные». Anchors — разделы 1–5. |
+| **update**   | Уточнить прежний вопрос C07/C08: conditional confirmation/empty message подтверждены текущим mock-кодом и тестами `:157–177`; это принятая локальная конвенция, не доказанная production-семантика.                                   |
+| **question** | Перед будущим предметным подключением уточнить утверждённые disable semantics и способ сериализации multi-sort; существующий scalar query transport не доказывает поддержку повторённых параметров. Политику здесь не выбирать.       |
+| **new: нет** | Отдельная новая задача/смена owner не обоснована: MOS-920 уже содержит недостающий UI, mock-конвенции имеют существующего владельца. Новое здесь — evidence, не новый business scope.                                                 |
 
 Кандидаты **не опубликованы и не записаны в очередь** этим агентом. Переход U→P и повторный зачёт ранее установленного P не заявляются.
 

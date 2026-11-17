@@ -4,8 +4,22 @@
   "complete": false,
   "globalProgress": "6/28",
   "acceptedChains": [
-    {"report": "reports/DELTA-AUTH-SESSION-ROOT-DOC.md", "review": "reviews/R-DELTA-AUTH-SESSION-ROOT-DOC.md", "candidates": "ASR01–07", "reviewVerdict": "REVISE", "parentDisposition": "accepted after directly verified ASR-04 row-level qualifier correction; original review preserved", "decision": "D-042"},
-    {"report": "reports/DELTA-ACCESS-ROLES-ROOT-DOCS.md", "review": "reviews/R-DELTA-ACCESS-ROLES-ROOT-DOCS.md", "candidates": "ACCESS-ROOT01–11", "reviewVerdict": "ACCEPT", "parentDisposition": "accepted without fixes", "decision": "D-042"}
+    {
+      "report": "reports/DELTA-AUTH-SESSION-ROOT-DOC.md",
+      "review": "reviews/R-DELTA-AUTH-SESSION-ROOT-DOC.md",
+      "candidates": "ASR01–07",
+      "reviewVerdict": "REVISE",
+      "parentDisposition": "accepted after directly verified ASR-04 row-level qualifier correction; original review preserved",
+      "decision": "D-042"
+    },
+    {
+      "report": "reports/DELTA-ACCESS-ROLES-ROOT-DOCS.md",
+      "review": "reviews/R-DELTA-ACCESS-ROLES-ROOT-DOCS.md",
+      "candidates": "ACCESS-ROOT01–11",
+      "reviewVerdict": "ACCEPT",
+      "parentDisposition": "accepted without fixes",
+      "decision": "D-042"
+    }
   ],
   "sourceAdditions": [],
   "rootCountsInheritedFromR23PendingIndependentLedgerReview": {

@@ -21,6 +21,7 @@ Verified the registration chain once:
 The connected report leaf contains only generic headings. It supplies neither constructor settings nor explicitly unavailable results/export/save UI. No report draft, action, transport or scheduler follows from that leaf. This is conditional on existing shell access, not an unconditional-visibility finding.
 
 Written assertions independently checked:
+
 - Navigation/config tests establish report link, active state and title—not report behavior.
 - `app/application/ui/application-layout.test.tsx:49–57` mounts synthetic `Page content`; its no-fetch assertion at lines 15–30 is not report or application-bootstrap coverage.
 - Candidate search-based absence claims remain bounded and attributed; this review did not repeat their inventories or establish repository-wide absence.
@@ -77,13 +78,13 @@ MOS-1016 `tasks.md:3–9` explicitly requires the MOS-1015 base and component ev
 
 ## Existing-owner documentary disposition
 
-| Clause | Smallest safe disposition |
-|---|---|
+| Clause                                                                                                                                  | Smallest safe disposition                                                                                                                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | MOS-1015 `tasks.md:9–11`, especially “Создать управляемый `features/dialog-selection`”; `design.md:23` describing its own types/catalog | **Update through existing owner:** reconcile reuse/adaptation of the existing feature and entity-owned condition model. Retain unmet report integration/tests and particular-skill semantics. Do not recreate the builder or mark these tasks complete. |
-| MOS-1015 `proposal.md:16`: blanket assertion that reports/dialogs documents report no operations | **Update factual rationale:** accepted documentary review establishes dialog contracts and published report documentation; saved report-schema absence and unapproved report integration remain separate. No activation follows. |
-| MOS-1015 report spec `:9–14`, `design.md:53`, `tasks.md:15`: blanket no-profile/no-auth wording | **Carry forward the already accepted correction:** preserve normal application session/access boundary; do not interpret these clauses as a bypass. No new auth interpretation performed here. |
-| MOS-919 `design.md:3` versus scoped `:23` | **Update only the overbroad rationale**, using the correction above. **Keep** the scoped no-handler/helper restriction and prohibition on speculative infrastructure. |
-| MOS-1016 write/execution/timezone language | **Keep.** Published read metadata does not establish write/run policy. No additional plan correction is demonstrated by this implementation review. |
+| MOS-1015 `proposal.md:16`: blanket assertion that reports/dialogs documents report no operations                                        | **Update factual rationale:** accepted documentary review establishes dialog contracts and published report documentation; saved report-schema absence and unapproved report integration remain separate. No activation follows.                        |
+| MOS-1015 report spec `:9–14`, `design.md:53`, `tasks.md:15`: blanket no-profile/no-auth wording                                         | **Carry forward the already accepted correction:** preserve normal application session/access boundary; do not interpret these clauses as a bypass. No new auth interpretation performed here.                                                          |
+| MOS-919 `design.md:3` versus scoped `:23`                                                                                               | **Update only the overbroad rationale**, using the correction above. **Keep** the scoped no-handler/helper restriction and prohibition on speculative infrastructure.                                                                                   |
+| MOS-1016 write/execution/timezone language                                                                                              | **Keep.** Published read metadata does not establish write/run policy. No additional plan correction is demonstrated by this implementation review.                                                                                                     |
 
 ## Consolidated tasks and gates
 

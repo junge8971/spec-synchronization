@@ -4,19 +4,19 @@
 
 Inventory only; no business-semantic, scenario or implementation assessment. Applied `work-items/JIRA-MOS-781.md` and supplemental `work-items/JIRA-INVENTORY-HANDOFF.md`; the latter supersedes the pending detail-packet dependency. Paths below are relative to `openspec/changes/reconcile-control-center-backlog/audit/`. JSON array indices are zero-based.
 
-| Saved source | Retrieval timestamp | Exact locator / use |
-| --- | --- | --- |
-| `sources/jira-hierarchy/r1/content.json` | `2026-10-16T11:08:08.629Z` | `$.results[15]`: MOS-781, type `Q key result`; `$.results[15].children[0]`: MOS-890. Collection method and limitations: `$.method`, `$.classification`, `$.pagination`. |
-| `sources/jira-member-index/r1/content.json` | `2026-10-16T11:20:38.570Z` | `$.items[90]` (lines 781–788): sole assigned member record. |
-| `sources/jira-member-index/r1/metadata.json` | `2026-10-16T11:20:38.570Z` | `$.fields`, `$.limitations`: selected-field coverage, not full issue details. |
-| `sources/jira-subtasks/r1/content.json` | `2026-10-16T11:23:01.951Z` | Checked `$.items[*].key` and `$.items[*].parent` against assigned keys; no MOS-890 child record. |
-| `sources/jira-subtasks/r1/metadata.json` | `2026-10-16T11:23:01.951Z` | `$.scope` is in content; metadata `$.limitations` establishes attachment metadata only, no comments/custom acceptance fields. |
+| Saved source                                 | Retrieval timestamp        | Exact locator / use                                                                                                                                                     |
+| -------------------------------------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sources/jira-hierarchy/r1/content.json`     | `2026-10-16T11:08:08.629Z` | `$.results[15]`: MOS-781, type `Q key result`; `$.results[15].children[0]`: MOS-890. Collection method and limitations: `$.method`, `$.classification`, `$.pagination`. |
+| `sources/jira-member-index/r1/content.json`  | `2026-10-16T11:20:38.570Z` | `$.items[90]` (lines 781–788): sole assigned member record.                                                                                                             |
+| `sources/jira-member-index/r1/metadata.json` | `2026-10-16T11:20:38.570Z` | `$.fields`, `$.limitations`: selected-field coverage, not full issue details.                                                                                           |
+| `sources/jira-subtasks/r1/content.json`      | `2026-10-16T11:23:01.951Z` | Checked `$.items[*].key` and `$.items[*].parent` against assigned keys; no MOS-890 child record.                                                                        |
+| `sources/jira-subtasks/r1/metadata.json`     | `2026-10-16T11:23:01.951Z` | `$.scope` is in content; metadata `$.limitations` establishes attachment metadata only, no comments/custom acceptance fields.                                           |
 
 ## Assigned member
 
-| Key | Observed summary | Type | Status (snapshot only) | Issue update timestamp | Evidence |
-| --- | --- | --- | --- | --- | --- |
-| MOS-890 | [B] Реализовать модуль "Технические работы" | Development task | Ready for test | `2026-10-13T14:18:08.905+0800` | Hierarchy `$.results[15].children[0]`; member index `$.items[90]` |
+| Key     | Observed summary                            | Type             | Status (snapshot only) | Issue update timestamp         | Evidence                                                          |
+| ------- | ------------------------------------------- | ---------------- | ---------------------- | ------------------------------ | ----------------------------------------------------------------- |
+| MOS-890 | [B] Реализовать модуль "Технические работы" | Development task | Ready for test         | `2026-10-13T14:18:08.905+0800` | Hierarchy `$.results[15].children[0]`; member index `$.items[90]` |
 
 MOS-890 is present once in the assigned hierarchy children and once in the member index. Its index record contains `key`, `summary`, `type`, `status`, `updated`, `subtasks`; it does **not** contain `parent`, description, attachments, comments or custom acceptance fields. Membership is therefore supported by the hierarchy, not by an independently collected issue parent field. Full description, attachment enumeration/content, comments and custom acceptance coverage are unavailable for this member, not established empty. None of the supplemental description allowlist keys belongs to this module; that packet is not applicable.
 

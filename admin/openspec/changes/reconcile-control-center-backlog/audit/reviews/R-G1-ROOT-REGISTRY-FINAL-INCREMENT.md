@@ -17,17 +17,17 @@ Paths below are relative to `openspec/changes/reconcile-control-center-backlog/a
 
 Read the complete target report and both work-items, the historical delta report/review, root r2 hrefs/metadata, decisions D027–D042 and coverage r13–r24. Compared all 42 ordered ledger IDs against `sources/wiki-238324523/r2/links.txt:1–42`, and their versions against actual canonical metadata fields.
 
-| Check | Result |
-|---|---|
-| Ordered membership | All 42 ledger IDs match the existing root href ordering; no substitution by similar title. |
-| Canonical packets | 42 present, zero absent; local r1 distinguished from external wiki version. |
-| Historical D033 snapshot | Preserved: 18 captured, 24 absent, 17 indexes, 25 entries = four saved + 21 unread. |
-| Subsequent increments | 24 packets and 24 indexes across nine increments. |
-| Current indexes | 41; feedback 247734813 remains without an index. |
-| Indexed entries | 34 across twelve nonempty parents. |
-| Saved versus unread | Four saved inert prototype texts; 30 indexed bodies without matching canonical attachment content files in the inspected namespace. |
-| Body formats | 40 `bodyView` packets, including three accepted containers; one selected image-only extraction and one flattened feedback extraction. |
-| Readable derivatives | 37 exact root-member derivative metadata references; zero additional pages. |
+| Check                    | Result                                                                                                                                |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Ordered membership       | All 42 ledger IDs match the existing root href ordering; no substitution by similar title.                                            |
+| Canonical packets        | 42 present, zero absent; local r1 distinguished from external wiki version.                                                           |
+| Historical D033 snapshot | Preserved: 18 captured, 24 absent, 17 indexes, 25 entries = four saved + 21 unread.                                                   |
+| Subsequent increments    | 24 packets and 24 indexes across nine increments.                                                                                     |
+| Current indexes          | 41; feedback 247734813 remains without an index.                                                                                      |
+| Indexed entries          | 34 across twelve nonempty parents.                                                                                                    |
+| Saved versus unread      | Four saved inert prototype texts; 30 indexed bodies without matching canonical attachment content files in the inspected namespace.   |
+| Body formats             | 40 `bodyView` packets, including three accepted containers; one selected image-only extraction and one flattened feedback extraction. |
+| Readable derivatives     | 37 exact root-member derivative metadata references; zero additional pages.                                                           |
 
 For body/index totals, direct canonical field inspection covers 37 `bodyView` packets and their applicable indexes. Three older single-line packets use the separately supplied parent projection, as disclosed below.
 
@@ -35,17 +35,17 @@ For body/index totals, direct canonical field inspection covers 37 `bodyView` pa
 
 Each increment’s IDs, versions and index counts agree with its canonical records and coverage receipt.
 
-| Receipt | Added IDs | Packets/indexes added | Entries added |
-|---|---|---:|---:|
-| r14 | 238347066, 238352321, 241074633 | 3/3 | 0 |
-| r16 | 245670575, 241080643, 241083649, 241080071 | 4/4 | 0 |
-| r17 | 238350232, 241080082 | 2/2 | 0 |
-| r18 | 247747489, 241080088 | 2/2 | 2 |
-| r19 | 247744768, 241080097 | 2/2 | 2 |
-| r20 | 247728705, 241080065 | 2/2 | 0 |
-| r21 | 250794931, 241080068, 241080080 | 3/3 | 0 |
-| r22 | 247737907, 247742436 | 2/2 | 5 |
-| r23 | 241102892, 238329164, 238333356, 241080100 | 4/4 | 0 |
+| Receipt | Added IDs                                  | Packets/indexes added | Entries added |
+| ------- | ------------------------------------------ | --------------------: | ------------: |
+| r14     | 238347066, 238352321, 241074633            |                   3/3 |             0 |
+| r16     | 245670575, 241080643, 241083649, 241080071 |                   4/4 |             0 |
+| r17     | 238350232, 241080082                       |                   2/2 |             0 |
+| r18     | 247747489, 241080088                       |                   2/2 |             2 |
+| r19     | 247744768, 241080097                       |                   2/2 |             2 |
+| r20     | 247728705, 241080065                       |                   2/2 |             0 |
+| r21     | 250794931, 241080068, 241080080            |                   3/3 |             0 |
+| r22     | 247737907, 247742436                       |                   2/2 |             5 |
+| r23     | 241102892, 238329164, 238333356, 241080100 |                   4/4 |             0 |
 
 Thus **18+24=42 packets; 17+24=41 indexes; 25+9=34 entries; 21+9=30 unread**. r15 and r24 supply dispositions, not additional packets. No historical count needs correction.
 
@@ -53,20 +53,20 @@ Thus **18+24=42 packets; 17+24=41 indexes; 25+9=34 entries; 21+9=30 unread**. r1
 
 Directly inspected the ten nonempty ordinary JSON indexes at their cited `content.json:13–69` or shorter ranges, the overview Markdown index, and the parent-projected legacy skills index.
 
-| Parent | Verified indexed IDs |
-|---|---|
+| Parent    | Verified indexed IDs                                                                   |
+| --------- | -------------------------------------------------------------------------------------- |
 | 241092173 | 241105744, 241105743, 243764790, 243764789, 243764775, 243764773, 243764772, 243764759 |
-| 241076726 | 241078199, 241078198 |
-| 245678373 | 245678191 |
-| 241077052 | 241080074, 241080073 |
-| 241080062 | 245672060 — parent-projected legacy index |
-| 243765248 | 245678564, 245678561, 245678560, 245678554, 245678553, 245678547, 245678536 |
-| 247747489 | 250803776, 247747482 |
-| 247744768 | 250800324, 247744753 |
-| 247737907 | 250792853, 247746706, 247737899 |
-| 247742436 | 250800308, 247742415 |
-| 247751846 | 250805153, 247751845 |
-| 247747363 | 250800526, 247747361 |
+| 241076726 | 241078199, 241078198                                                                   |
+| 245678373 | 245678191                                                                              |
+| 241077052 | 241080074, 241080073                                                                   |
+| 241080062 | 245672060 — parent-projected legacy index                                              |
+| 243765248 | 245678564, 245678561, 245678560, 245678554, 245678553, 245678547, 245678536            |
+| 247747489 | 250803776, 247747482                                                                   |
+| 247744768 | 250800324, 247744753                                                                   |
+| 247737907 | 250792853, 247746706, 247737899                                                        |
+| 247742436 | 250800308, 247742415                                                                   |
+| 247751846 | 250805153, 247751845                                                                   |
+| 247747363 | 250800526, 247747361                                                                   |
 
 Enumerated results agree with saved sizes; all 41 saved indexes indicate `next: null`. This establishes no indicated continuation in those responses, not present external completeness.
 
@@ -76,12 +76,12 @@ Feedback’s canonical top-level fields contain flattened text and links, not an
 
 Directly read all four attachment metadata objects and checked content-file existence:
 
-| Attachment | Parent | Version | Saved decoded-text bytes |
-|---|---|---:|---:|
-| 250805153 | 247751846 | 1 | 121187 |
-| 247751845 | 247751846 | 1 | 77132 |
-| 250800526 | 247747363 | 2 | 106202 |
-| 247747361 | 247747363 | 1 | 249285 |
+| Attachment | Parent    | Version | Saved decoded-text bytes |
+| ---------- | --------- | ------: | -----------------------: |
+| 250805153  | 247751846 |       1 |                   121187 |
+| 247751845  | 247751846 |       1 |                    77132 |
+| 250800526  | 247747363 |       2 |                   106202 |
+| 247747361  | 247747363 |       1 |                   249285 |
 
 **Byte measurements are parent-attributed.** They match the supplied measurement artifact, not a reviewer recomputation or wire-byte certification.
 

@@ -14,31 +14,31 @@ These are distinct snapshots; issue update timestamps below are preserved verbat
 
 All rows have observed type **Development task**. Each is present exactly once in M. **Index-only** means description, attachments, comments and custom acceptance fields are all uncollected in the selected record—not confirmed absent in Jira.
 
-| Member | Status | Updated | Exact membership / record locator | Nested keys | Coverage |
-|---|---|---|---|---|---|
-| MOS-703 | Review | 2026-10-09T15:04:01.076+0800 | H `$.results[8].children[0]`; M `$.items[45]` | `[]` | Index-only |
-| MOS-889 | Ready for test | 2026-10-09T15:08:46.969+0800 | H `$.results[8].children[1]`; M `$.items[46]` | `[]` | Index-only |
-| MOS-1037 | Testing | 2026-10-16T18:15:19.254+0800 | H `$.results[8].children[2]`; M `$.items[47]` | MOS-1411, MOS-1412, MOS-1414, MOS-1419, MOS-1422 | Index-only |
-| MOS-1038 | Ready for test | 2026-10-09T15:06:43.227+0800 | H `$.results[8].children[3]`; M `$.items[48]` | `[]` | Index-only |
-| MOS-1040 | Ready for test | 2026-10-09T15:06:48.818+0800 | H `$.results[8].children[4]`; M `$.items[49]` | `[]` | Index-only |
-| MOS-1041 | Ready for test | 2026-10-09T15:06:14.020+0800 | H `$.results[8].children[5]`; M `$.items[50]` | `[]` | Index-only |
-| MOS-1042 | Ready for test | 2026-10-09T15:06:21.500+0800 | H `$.results[8].children[6]`; M `$.items[51]` | `[]` | Index-only |
-| MOS-1043 | Ready for test | 2026-10-09T15:06:23.498+0800 | H `$.results[8].children[7]`; M `$.items[52]` | `[]` | Index-only |
-| MOS-1044 | Ready for test | 2026-10-09T15:07:03.053+0800 | H `$.results[8].children[8]`; M `$.items[53]` | `[]` | Index-only |
-| MOS-1045 | Ready for test | 2026-10-09T15:07:08.524+0800 | H `$.results[8].children[9]`; M `$.items[54]` | `[]` | Index-only |
-| MOS-1211 | Ready for test | 2026-10-15T15:49:54.949+0800 | H `$.results[8].children[10]`; M `$.items[55]` | `[]` | Index-only |
+| Member   | Status         | Updated                      | Exact membership / record locator              | Nested keys                                      | Coverage   |
+| -------- | -------------- | ---------------------------- | ---------------------------------------------- | ------------------------------------------------ | ---------- |
+| MOS-703  | Review         | 2026-10-09T15:04:01.076+0800 | H `$.results[8].children[0]`; M `$.items[45]`  | `[]`                                             | Index-only |
+| MOS-889  | Ready for test | 2026-10-09T15:08:46.969+0800 | H `$.results[8].children[1]`; M `$.items[46]`  | `[]`                                             | Index-only |
+| MOS-1037 | Testing        | 2026-10-16T18:15:19.254+0800 | H `$.results[8].children[2]`; M `$.items[47]`  | MOS-1411, MOS-1412, MOS-1414, MOS-1419, MOS-1422 | Index-only |
+| MOS-1038 | Ready for test | 2026-10-09T15:06:43.227+0800 | H `$.results[8].children[3]`; M `$.items[48]`  | `[]`                                             | Index-only |
+| MOS-1040 | Ready for test | 2026-10-09T15:06:48.818+0800 | H `$.results[8].children[4]`; M `$.items[49]`  | `[]`                                             | Index-only |
+| MOS-1041 | Ready for test | 2026-10-09T15:06:14.020+0800 | H `$.results[8].children[5]`; M `$.items[50]`  | `[]`                                             | Index-only |
+| MOS-1042 | Ready for test | 2026-10-09T15:06:21.500+0800 | H `$.results[8].children[6]`; M `$.items[51]`  | `[]`                                             | Index-only |
+| MOS-1043 | Ready for test | 2026-10-09T15:06:23.498+0800 | H `$.results[8].children[7]`; M `$.items[52]`  | `[]`                                             | Index-only |
+| MOS-1044 | Ready for test | 2026-10-09T15:07:03.053+0800 | H `$.results[8].children[8]`; M `$.items[53]`  | `[]`                                             | Index-only |
+| MOS-1045 | Ready for test | 2026-10-09T15:07:08.524+0800 | H `$.results[8].children[9]`; M `$.items[54]`  | `[]`                                             | Index-only |
+| MOS-1211 | Ready for test | 2026-10-15T15:49:54.949+0800 | H `$.results[8].children[10]`; M `$.items[55]` | `[]`                                             | Index-only |
 
 ## Nested-subtask reconciliation
 
 All five have observed type **Dev-bug (sub-task)** and status **Backlog**, matching the corresponding M subtask stub status. Each occurs exactly once in S; each S `.parent` equals `MOS-1037`. Each S `.subtasks` is `[]`. Description text is present at each S record's `.description`; attachment metadata is present at `.attachments`; comments and custom acceptance fields are uncollected for every row.
 
-| Subtask | Updated | Index stub → detail locator | Attachment metadata IDs |
-|---|---|---|---|
-| MOS-1411 | 2026-10-16T15:21:18.530+0800 | M `$.items[47].subtasks[0]` → S `$.items[2]` | `839653` |
-| MOS-1412 | 2026-10-16T15:30:12.067+0800 | M `$.items[47].subtasks[1]` → S `$.items[3]` | `839662` |
-| MOS-1414 | 2026-10-16T18:15:19.233+0800 | M `$.items[47].subtasks[2]` → S `$.items[4]` | `839675` |
-| MOS-1419 | 2026-10-16T18:18:36.194+0800 | M `$.items[47].subtasks[3]` → S `$.items[5]` | `839862` |
-| MOS-1422 | 2026-10-16T18:39:35.845+0800 | M `$.items[47].subtasks[4]` → S `$.items[6]` | `839906`, `839905` |
+| Subtask  | Updated                      | Index stub → detail locator                  | Attachment metadata IDs |
+| -------- | ---------------------------- | -------------------------------------------- | ----------------------- |
+| MOS-1411 | 2026-10-16T15:21:18.530+0800 | M `$.items[47].subtasks[0]` → S `$.items[2]` | `839653`                |
+| MOS-1412 | 2026-10-16T15:30:12.067+0800 | M `$.items[47].subtasks[1]` → S `$.items[3]` | `839662`                |
+| MOS-1414 | 2026-10-16T18:15:19.233+0800 | M `$.items[47].subtasks[2]` → S `$.items[4]` | `839675`                |
+| MOS-1419 | 2026-10-16T18:18:36.194+0800 | M `$.items[47].subtasks[3]` → S `$.items[5]` | `839862`                |
+| MOS-1422 | 2026-10-16T18:39:35.845+0800 | M `$.items[47].subtasks[4]` → S `$.items[6]` | `839906`, `839905`      |
 
 ## Result and next collection gaps
 

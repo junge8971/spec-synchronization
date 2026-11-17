@@ -26,11 +26,11 @@ HEAD matches assignment: `bc0d9800f25a90989b9c73c76f91996f8300f1d3`.
 SHA-256 of reviewed `A/reports/WRITE-G2-MOS-1254.md`: `064d7d7ce43e61c2663356a0a7e77f6c98f995453b1f2c41a4b71f06c752e23c`.
 Extracted fenced diff (including trailing newline): `7fe603dce2bef0991c466c747b21eb037a6041b367907b4468c0ee277d0ad9dd`.
 
-| Target under O | Baseline SHA-256 (matches report) | In-memory candidate SHA-256 |
-|---|---|---|
-| design.md | 181f2800f8e8f359147ef9c9d3a6eb4f3d4daafa20324dd3b8e1cf0c23d54e10 | cb891fc3bdd717c065a93b3b853429079b77081778f3f4657e5f05d832baf101 |
+| Target under O                   | Baseline SHA-256 (matches report)                                | In-memory candidate SHA-256                                      |
+| -------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
+| design.md                        | 181f2800f8e8f359147ef9c9d3a6eb4f3d4daafa20324dd3b8e1cf0c23d54e10 | cb891fc3bdd717c065a93b3b853429079b77081778f3f4657e5f05d832baf101 |
 | specs/feedback-questions/spec.md | eeb2d92c74667f09a97d933390176b2771d39a1596a4f0c21cf0e23e39c9d27c | 35e1558375dea280c906f547c7c1234d13bb1023c00f2e3427cd40fe7f06367a |
-| tasks.md | 2920f54aba3994e856679db78d4706c553e7a97be0c17d420643b7f3d72fba65 | 8279fa1cd82bb872dae3e3c0a8048325cfa930a458838a8acbcf7056d811e8f6 |
+| tasks.md                         | 2920f54aba3994e856679db78d4706c553e7a97be0c17d420643b7f3d72fba65 | 8279fa1cd82bb872dae3e3c0a8048325cfa930a458838a8acbcf7056d811e8f6 |
 
 Independently verified every old/context line and hunk count against current bytes, reconstructed candidates only in memory, and confirmed five unchecked tasks. `git apply --check -` exited0; no patch applied. Staged-file listing empty.
 

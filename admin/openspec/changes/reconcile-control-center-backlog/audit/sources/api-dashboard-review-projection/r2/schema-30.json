@@ -11,9 +11,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "items"
-    ],
+    "required": ["items"],
     "title": "WidgetCatalogResponse"
   }
 }

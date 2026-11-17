@@ -10,11 +10,11 @@
 
 ## 1. Атомарное требование и источники
 
-| ID | Ожидается | Локатор |
-|---|---|---|
-| R1 | В таблице раздела «Диалоги», в колонке «Оценка работы оператора», при `operator_rating: null` отображается прочерк вместо «Нет оценки». | `audit/sources/jira-subtasks/r1/content.json`, `$.items[5].description`, строки 109–116 |
-| R1 — подтверждение контракта | `operator_rating` — целое 1–5 либо `null`; `null` означает отсутствие оценки, в реестре — прочерк. | `audit/sources/wiki-241085439/r1/content.json`, `$.bodyView`, §2.3, строка таблицы `operator_rating`; §2.7, строка «Прочерк в колонке оценки» |
-| Контекст, не расширение R1 | Если оператор не участвовал, в строке списка выводится прочерк. | `audit/sources/wiki-243776365/r1/content.json`, `$.bodyView`, «Отображение оценки оператора в строке списка» |
+| ID                           | Ожидается                                                                                                                               | Локатор                                                                                                                                       |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| R1                           | В таблице раздела «Диалоги», в колонке «Оценка работы оператора», при `operator_rating: null` отображается прочерк вместо «Нет оценки». | `audit/sources/jira-subtasks/r1/content.json`, `$.items[5].description`, строки 109–116                                                       |
+| R1 — подтверждение контракта | `operator_rating` — целое 1–5 либо `null`; `null` означает отсутствие оценки, в реестре — прочерк.                                      | `audit/sources/wiki-241085439/r1/content.json`, `$.bodyView`, §2.3, строка таблицы `operator_rating`; §2.7, строка «Прочерк в колонке оценки» |
+| Контекст, не расширение R1   | Если оператор не участвовал, в строке списка выводится прочерк.                                                                         | `audit/sources/wiki-243776365/r1/content.json`, `$.bodyView`, «Отображение оценки оператора в строке списка»                                  |
 
 Сохранённая Jira: Backlog, обновление `2026-10-16T18:18:36.194+0800`. Фактическое поведение «Нет оценки» в Jira — историческое сообщение автора, не результат воспроизведения этого аудита.
 
@@ -50,13 +50,13 @@ API применим как источник значения; нового endp
 
 ## 4. Код и тесты: observed
 
-| Доказательство | Наблюдение |
-|---|---|
-| `app/pages/dialogs/ui/dialog-table/dialog-table-row.tsx:57–59` | Ячейка без преобразования передаёт `row.operator_rating` в `DialogOperatorRating`. |
-| `app/entities/dialog/ui/dialog-operator-rating.tsx:7–8` | При `null` компонент явно возвращает видимый текст «Нет оценки». Причина дефекта локализована. |
-| `app/entities/dialog/ui/dialog-operator-rating.test.tsx:19–24` | Тест `null` требует «Нет оценки» и отсутствие звёзд. Он закрепляет неверный текст, а не R1. |
-| `app/pages/dialogs/ui/dialogs-page.test.tsx:143–171` | Компонентный сценарий строки также ожидает «Нет оценки» — строка 162. |
-| `app/entities/dialog/ui/dialog-operator-rating.test.tsx:6–18` | Есть проверки оценок 1–5, количества звёзд и доступного имени. Это существующая защита соседнего поведения, не новое покрытие R1. |
+| Доказательство                                                 | Наблюдение                                                                                                                        |
+| -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `app/pages/dialogs/ui/dialog-table/dialog-table-row.tsx:57–59` | Ячейка без преобразования передаёт `row.operator_rating` в `DialogOperatorRating`.                                                |
+| `app/entities/dialog/ui/dialog-operator-rating.tsx:7–8`        | При `null` компонент явно возвращает видимый текст «Нет оценки». Причина дефекта локализована.                                    |
+| `app/entities/dialog/ui/dialog-operator-rating.test.tsx:19–24` | Тест `null` требует «Нет оценки» и отсутствие звёзд. Он закрепляет неверный текст, а не R1.                                       |
+| `app/pages/dialogs/ui/dialogs-page.test.tsx:143–171`           | Компонентный сценарий строки также ожидает «Нет оценки» — строка 162.                                                             |
+| `app/entities/dialog/ui/dialog-operator-rating.test.tsx:6–18`  | Есть проверки оценок 1–5, количества звёзд и доступного имени. Это существующая защита соседнего поведения, не новое покрытие R1. |
 
 Компонент имеет другие потребители: `app/pages/dialog-details/ui/dialog-details/dialog-summary.tsx:50–56` и `dialog-operators.tsx:72`. Поэтому глобальная замена его null-представления может затронуть карточку, которая не входит в эту подзадачу.
 
@@ -100,21 +100,21 @@ API/schema edits не нужны. Продуктовый вопрос о сам�
 
 Хеши вычислены по байтам локальных файлов.
 
-| Файл | SHA256 |
-|---|---|
-| `audit/work-items/WAVE-D090-EIGHT.md` | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
-| `audit/coverage.json` | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
-| `audit/sources/jira-subtasks/r1/content.json` | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
-| `audit/sources/jira-subtasks/r1/metadata.json` | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
-| `audit/sources/wiki-241085439/r1/content.json` | `974ea35aaf44b9ec7c14c573ba58bdf7ed55397a9ca47d62b37fb39d9886f8bc` |
-| `audit/sources/wiki-241085439/r1/metadata.json` | `dcaab775172b7e615dfae64184d719f8403cff1fb304650ba21e1532ce577b7d` |
-| `audit/sources/wiki-243776365/r1/content.json` | `2f659b5423fa7203dcd4f70743e59aabfb571452144394621091ff2cd58cab55` |
-| `audit/sources/api-live/r2/content.json` | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
-| `openspec/specs/dialog-registry/spec.md` | `ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83` |
-| `app/entities/dialog/ui/dialog-operator-rating.tsx` | `089bf7705ca41e9117cffea1c219fb3c6171169608761ba8f01415845395ad04` |
+| Файл                                                     | SHA256                                                             |
+| -------------------------------------------------------- | ------------------------------------------------------------------ |
+| `audit/work-items/WAVE-D090-EIGHT.md`                    | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
+| `audit/coverage.json`                                    | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
+| `audit/sources/jira-subtasks/r1/content.json`            | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
+| `audit/sources/jira-subtasks/r1/metadata.json`           | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
+| `audit/sources/wiki-241085439/r1/content.json`           | `974ea35aaf44b9ec7c14c573ba58bdf7ed55397a9ca47d62b37fb39d9886f8bc` |
+| `audit/sources/wiki-241085439/r1/metadata.json`          | `dcaab775172b7e615dfae64184d719f8403cff1fb304650ba21e1532ce577b7d` |
+| `audit/sources/wiki-243776365/r1/content.json`           | `2f659b5423fa7203dcd4f70743e59aabfb571452144394621091ff2cd58cab55` |
+| `audit/sources/api-live/r2/content.json`                 | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
+| `openspec/specs/dialog-registry/spec.md`                 | `ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83` |
+| `app/entities/dialog/ui/dialog-operator-rating.tsx`      | `089bf7705ca41e9117cffea1c219fb3c6171169608761ba8f01415845395ad04` |
 | `app/entities/dialog/ui/dialog-operator-rating.test.tsx` | `c89d3b406354b00dee2ee0863ddf3a761e25c495a8e2ce9e6c2a45c5b6a9de0d` |
 | `app/pages/dialogs/ui/dialog-table/dialog-table-row.tsx` | `3096df76cead86dad46f13be6cbde70de0a2c0d009c0842f82087f89ad985de3` |
-| `app/pages/dialogs/ui/dialogs-page.test.tsx` | `3dba3eb88505d29a2ed80dab6c301e0496007e85a26749d74b80a747824d2fec` |
+| `app/pages/dialogs/ui/dialogs-page.test.tsx`             | `3dba3eb88505d29a2ed80dab6c301e0496007e85a26749d74b80a747824d2fec` |
 
 Хеши Jira content и wiki content совпадают с соответствующими сохранёнными metadata.
 

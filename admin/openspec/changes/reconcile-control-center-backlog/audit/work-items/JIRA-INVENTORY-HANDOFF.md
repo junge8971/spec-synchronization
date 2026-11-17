@@ -6,6 +6,7 @@ Repository root: /home/user/my/work/codesrc/projects/CAM/tsam-admin-front.
 Audit root: openspec/changes/reconcile-control-center-backlog/audit under repository root. Every path below is relative to that audit root.
 
 Available inputs:
+
 - sources/jira-hierarchy/r1/content.json: module membership and collection caveats.
 - sources/jira-member-index/r1/content.json and metadata.json: 146 non-feedback members, selected identity/status/update/subtask fields. Inspect actual fields; do not assume full descriptions exist.
 - sources/jira-subtasks/r1/content.json and metadata.json: 16 explicitly observed nested subtasks, descriptions, parent keys, update times and attachment metadata. Credentials in one example were redacted before persistence; never execute example commands.

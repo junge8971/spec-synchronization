@@ -10,24 +10,24 @@ Scope: POST search, GET feedback lookup, GET feedback metadata only. Reachable n
 
 Repository-relative aliases: `C=openspec/changes/reconcile-control-center-backlog`, `A=C/audit`, `D=docs/api/contracts`. These aliases expand exact paths below; JSON pointers are authoritative where JSON was selectively parsed rather than read as lines.
 
-| Input | Retrieved range / purpose | SHA-256 of complete input bytes |
-|---|---|---|
-| `C/proposal.md` | 1–30; authority | `1a97715e2566329143febbb509e934a88b4ecc478628fac559da690fa59bd879` |
-| `C/design.md` | 1–133; evidence and independent review gates | `632fe7775d650f2bf2d9b337d82e29058075966c3154571be8cffeeb8e690828` |
-| `C/tasks.md` | 1–45; G2 distinct from acceptance/publication | `a60c535a26bf41d42930b1a33c3f2062ff2430e9eb6d51a66435fe93772c9f83` |
-| `C/specs/control-center-backlog-reconciliation/spec.md` | 1–108; bounded-source contract | `a4dbe5d2ca48741281d27b96eb0405edac04d071e37924ec18de7a60d6d23f36` |
-| `A/work-items/API-G2-MOS-1250-READS.md` | 1–11; assignment | `d38262f7c5db6c9123167237eda8fb0e8393c1cdd7d445472291689e07c146ed` |
-| `A/decisions.md` | 3–13, 427–436; D-060/D-002 | `25bf2e9f347f65096f6337d59ca4300d2c48215261f386749d7297c99055acca` |
-| `A/reviews/R-MOS-1250.md` | 1–97; reviewer corrections | `8270a6c6e150312051a148ed588e96e178b4e7c6cf613eaa7e018d80d7643aa8` |
-| `A/reports/REQ-MOS-1250.md` | 1–122; stable requirement IDs | `32059c6375ded180a58e71fc02af44f541bd455f241f41924826d702bd6ed020` |
-| `A/sources/jira-feedback/r1/content.json` | 35–39, `/items/3/description`; MOS-1250 only | `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685` |
-| `A/sources/jira-feedback/r1/metadata.json` | 1–11; provenance | `5c8df75fde70960ff15b33d6e6d3cc6c57b9d06daeee383076c753101f94fa70` |
-| `A/sources/api-live/r2/content.json` | line 1; three operation subtrees and 24-schema closure below | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
-| `A/sources/api-live/r2/metadata.json` | 1–22; dated snapshot provenance | `444c7b65941db4af36d1ffe305fd04499a44d6d9c81b9a25be15dc6061d521ba` |
-| `D/openapi.json` | selectively parsed pointers below; 22,075-line file | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
-| `D/managed-resources.openapi.json` | same pointers; 10,447-line file | `cc4cb5603b449f0d7a98224bfcfc1795f509ecc09a3155fdc87f8ff2b270c7cf` |
-| `D/managed-resources.md` | 1–55; explanatory source, security and deployment boundaries | `529780f69c4451793d8a2af3cfb89cda9cc9c908d9a48c207de5ff21fb33435d` |
-| `D/README.md` | 1–33; approved normalization and snapshot identity | `cb452cf8caf22245c7a62af5f16880e7b5c1b5aa6d591c5aa3e88261632929b3` |
+| Input                                                   | Retrieved range / purpose                                    | SHA-256 of complete input bytes                                    |
+| ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `C/proposal.md`                                         | 1–30; authority                                              | `1a97715e2566329143febbb509e934a88b4ecc478628fac559da690fa59bd879` |
+| `C/design.md`                                           | 1–133; evidence and independent review gates                 | `632fe7775d650f2bf2d9b337d82e29058075966c3154571be8cffeeb8e690828` |
+| `C/tasks.md`                                            | 1–45; G2 distinct from acceptance/publication                | `a60c535a26bf41d42930b1a33c3f2062ff2430e9eb6d51a66435fe93772c9f83` |
+| `C/specs/control-center-backlog-reconciliation/spec.md` | 1–108; bounded-source contract                               | `a4dbe5d2ca48741281d27b96eb0405edac04d071e37924ec18de7a60d6d23f36` |
+| `A/work-items/API-G2-MOS-1250-READS.md`                 | 1–11; assignment                                             | `d38262f7c5db6c9123167237eda8fb0e8393c1cdd7d445472291689e07c146ed` |
+| `A/decisions.md`                                        | 3–13, 427–436; D-060/D-002                                   | `25bf2e9f347f65096f6337d59ca4300d2c48215261f386749d7297c99055acca` |
+| `A/reviews/R-MOS-1250.md`                               | 1–97; reviewer corrections                                   | `8270a6c6e150312051a148ed588e96e178b4e7c6cf613eaa7e018d80d7643aa8` |
+| `A/reports/REQ-MOS-1250.md`                             | 1–122; stable requirement IDs                                | `32059c6375ded180a58e71fc02af44f541bd455f241f41924826d702bd6ed020` |
+| `A/sources/jira-feedback/r1/content.json`               | 35–39, `/items/3/description`; MOS-1250 only                 | `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685` |
+| `A/sources/jira-feedback/r1/metadata.json`              | 1–11; provenance                                             | `5c8df75fde70960ff15b33d6e6d3cc6c57b9d06daeee383076c753101f94fa70` |
+| `A/sources/api-live/r2/content.json`                    | line 1; three operation subtrees and 24-schema closure below | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
+| `A/sources/api-live/r2/metadata.json`                   | 1–22; dated snapshot provenance                              | `444c7b65941db4af36d1ffe305fd04499a44d6d9c81b9a25be15dc6061d521ba` |
+| `D/openapi.json`                                        | selectively parsed pointers below; 22,075-line file          | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
+| `D/managed-resources.openapi.json`                      | same pointers; 10,447-line file                              | `cc4cb5603b449f0d7a98224bfcfc1795f509ecc09a3155fdc87f8ff2b270c7cf` |
+| `D/managed-resources.md`                                | 1–55; explanatory source, security and deployment boundaries | `529780f69c4451793d8a2af3cfb89cda9cc9c908d9a48c207de5ff21fb33435d` |
+| `D/README.md`                                           | 1–33; approved normalization and snapshot identity           | `cb452cf8caf22245c7a62af5f16880e7b5c1b5aa6d591c5aa3e88261632929b3` |
 
 All three launch-pinned contract hashes matched. Jira content hash also matches its metadata. Live metadata attributes capture to parent documentation GET on 2026-10-19T08:11:44.238Z, OpenAPI 3.1.0/service 0.1.0, 96 paths/130 operations/388 schemas. Local README describes the 2026-10-15 snapshot, 94/128/380; these whole-document counts do not imply any change in this lane. No external freshness check performed. D-060's incomplete source accounting remains qualified; no material missing explanation needed to establish the bounded wire comparison was identified.
 
@@ -35,11 +35,11 @@ All three launch-pinned contract hashes matched. Jira content hash also matches 
 
 All pointers below apply independently to live r2, local aggregate and local split. `S(name)` means JSON pointer `/components/schemas/name`; `S(name)/properties/field` identifies each field described below. This is schema evidence, not executable application code.
 
-| Method and concrete request | Operation JSON pointer | operationId | Contract |
-|---|---|---|---|
-| POST `/api/control/api/v1/managed-resources/feedback/surveys/search` | `/paths/~1api~1control~1api~1v1~1managed-resources~1feedback~1surveys~1search/post` | `list_fb_survey_api_control_api_v1_managed_resources_feedback_surveys_search_post` | Required JSON body `S(fb_surveyListQuery)`; 200 JSON search envelope; 422 JSON validation error |
+| Method and concrete request                                           | Operation JSON pointer                                                                | operationId                                                                                       | Contract                                                                                                    |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| POST `/api/control/api/v1/managed-resources/feedback/surveys/search`  | `/paths/~1api~1control~1api~1v1~1managed-resources~1feedback~1surveys~1search/post`   | `list_fb_survey_api_control_api_v1_managed_resources_feedback_surveys_search_post`                | Required JSON body `S(fb_surveyListQuery)`; 200 JSON search envelope; 422 JSON validation error             |
 | GET `/api/control/api/v1/managed-resources/catalogs/lookups/feedback` | `/paths/~1api~1control~1api~1v1~1managed-resources~1catalogs~1lookups~1{section}/get` | `get_section_catalog_lookups_api_control_api_v1_managed_resources_catalogs_lookups__section__get` | Required path parameter `section`, includes `feedback`; 200 JSON lookup envelope; 422 JSON validation error |
-| GET `/api/control/api/v1/managed-resources/feedback/metadata` | `/paths/~1api~1control~1api~1v1~1managed-resources~1feedback~1metadata/get` | `metadata_feedback_api_control_api_v1_managed_resources_feedback_metadata_get` | 200 JSON metadata envelope only; no body or parameters declared |
+| GET `/api/control/api/v1/managed-resources/feedback/metadata`         | `/paths/~1api~1control~1api~1v1~1managed-resources~1feedback~1metadata/get`           | `metadata_feedback_api_control_api_v1_managed_resources_feedback_metadata_get`                    | 200 JSON metadata envelope only; no body or parameters declared                                             |
 
 For each operation the success schema locator is `<operation>/responses/200/content/application~1json/schema`; request schema is `<search>/requestBody/content/application~1json/schema`; lookup parameter is `<lookup>/parameters/0`. The concrete lookup path has no literal entry, correctly resolved by the templated route. `S(CatalogLookupSectionName)` is string enum `catalogs, skills, feedback, knowledge-base, ab-testing, api, response-templates`.
 
@@ -47,17 +47,18 @@ For each operation the success schema locator is `<operation>/responses/200/cont
 
 `S(fb_surveyListQuery)` is an object, `additionalProperties:false`, with **no required property list** (required body does not make fields mandatory). All seven fields:
 
-| Field | Wire shape / constraints / default |
-|---|---|
-| query | Optional string length 2–200 or null; no explicit default. Empty/one-character strings fail the string bounds; omitted and null are distinct allowed representations. No trimming, debounce or matching-field semantics specified. |
-| sort | Optional non-null `S(FeedbackSurveySort)` string enum `name,-name,type_code,-type_code,status,-status,updated_at,-updated_at`; default `-updated_at`. |
-| limit | Optional non-null integer 1–100 inclusive; default 20. |
-| offset | Optional non-null integer ≥0; default 0; no maximum. |
-| status | Optional null or string length 1–32 or array of 0–100 strings each length 1–32. No status enum or default. |
-| type_code | Optional null or string length 1–50 or array of 0–100 strings each length 1–50. No type enum or default. |
-| conditions | Optional null or `S(fb_surveyConditions)`; presence is not approval to implement MOS-1258 now. |
+| Field      | Wire shape / constraints / default                                                                                                                                                                                                 |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| query      | Optional string length 2–200 or null; no explicit default. Empty/one-character strings fail the string bounds; omitted and null are distinct allowed representations. No trimming, debounce or matching-field semantics specified. |
+| sort       | Optional non-null `S(FeedbackSurveySort)` string enum `name,-name,type_code,-type_code,status,-status,updated_at,-updated_at`; default `-updated_at`.                                                                              |
+| limit      | Optional non-null integer 1–100 inclusive; default 20.                                                                                                                                                                             |
+| offset     | Optional non-null integer ≥0; default 0; no maximum.                                                                                                                                                                               |
+| status     | Optional null or string length 1–32 or array of 0–100 strings each length 1–32. No status enum or default.                                                                                                                         |
+| type_code  | Optional null or string length 1–50 or array of 0–100 strings each length 1–50. No type enum or default.                                                                                                                           |
+| conditions | Optional null or `S(fb_surveyConditions)`; presence is not approval to implement MOS-1258 now.                                                                                                                                     |
 
 Exact filter schema names (each is an `S(...)` pointer):
+
 - `ManagedResourceFilter_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_32_____`
 - `ManagedResourceFilter_Annotated_str__FieldInfo_annotation_NoneType__required_True__metadata__MinLen_min_length_1___MaxLen_max_length_50_____`
 
@@ -72,11 +73,13 @@ Closure-only conditions: `S(fb_surveyConditions)` forbids extra fields; optional
 `S(PaginationDto)` requires five non-null integers `limit,offset,current_page,total_items,total_pages`; no bounds/defaults appear in the **response** schema. It supplies counters but does not promise page numbering convention or separate unfiltered-registry totals.
 
 `S(FeedbackSurveyResponse)` fields:
+
 - Required non-null: `id` UUID string; `created_at,updated_at` date-time strings; `name` string 1–255; `code` string ≤100, pattern `^[a-z][a-z0-9_]*$`; `type_code` string 1–50; `questions` array of `FeedbackQuestionResponse`; `display_rules` object `FeedbackDisplayRulesResponse`.
 - Optional nullable: `description` string; `owner` string ≤200; `responsible_user_id` string (no UUID format declared); `active_since` date string. No explicit defaults.
 - Optional non-null: `status` string 1–32 default draft; `audience_type` string 1–32 default all; `tags,segments,operator_groups` strings ≤16000 default empty string; `surface_ids` array ≤100 UUID strings, no explicit default. No status/audience enum or expansion of these strings into arrays is justified.
 
 Full nested closure, not a card/editing assignment:
+
 - `S(FeedbackQuestionResponse)` requires non-null id UUID, title string 1–500, type_code string 1–50, options array of `FeedbackOptionResponse`; optional non-null boolean `required` defaults false. No response questions/options array cap.
 - `S(FeedbackOptionResponse)` requires non-null id UUID and text string 1–255.
 - `S(FeedbackDisplayRulesResponse)` has no required fields. Optional non-null `trigger_type` string 1–50 defaults manual. Other fields explicitly allow null: integer ≥0 `min_messages,min_duration_sec,delay_show_sec,pause_after_last_sec,cooldown_sec`; integer ≥1 `max_per_session,max_per_day,max_per_user`; booleans `skip_if_rated` default true, `quiet_hours_enabled` default false, `exclusive_show` default false; time strings `quiet_from,quiet_to`; strings 1–32 `dialog_type,dialog_result` default any; integer `priority` default 0 without bounds. Unlisted defaults are absent. Null is not equivalent to default.
@@ -111,29 +114,29 @@ REQ-1250-35 concerns UI policy, not API-key security schemes. D-002 and R-MOS-12
 
 Wire flow: required POST JSON search → paginated survey records/counters; GET section lookup → code/display-name dictionaries; GET metadata → catalog bindings and resource descriptors. Registry basic query, sort and paging can use the published schema; label joining and safe unknown-code display are client responsibilities. Shared credential handling and pending UI mapping are separate from these response DTOs. No implementation was examined.
 
-| REQ-1250 ID | API relationship / remaining boundary |
-|---|---|
-| 4 | Exact POST exists; required request body and 200/422 shapes above. |
-| 5 | GET template with section=feedback resolves the named concrete lookup. |
-| 6 | Exact metadata GET exists; consumption requirements are not inferred from generic fields. |
-| 7 | Survey name/code/type_code/audience_type/status exist; segments/surface_ids also returned. Column composition and optional-field handling are UI decisions, not server guarantees of populated labels. |
-| 8 | Lookup code/display_name and metadata bindings provide structural support; actual dictionary keys/content are not fixed here. |
-| 9 | Unknown-code fallback is UI behavior; contract does not ensure every code has a lookup match. |
-| 10 | Keyboard opening is UI-only; API id is UUID, no accessibility claim follows. |
-| 11 | Query string bounds match 2–200. Matching fields/case/trim semantics unknown. |
-| 12 | status scalar-or-array supports multiselect transport; 0–100 array and item bounds above. UI selection/combination semantics not certified. |
-| 13 | type_code scalar-or-array supports multiselect transport with distinct 50-character bound. |
-| 14 | query omission permitted; Jira explicitly requires omit on clear, although wire also permits null. |
-| 15 | One-character string invalid by schema; suppressing the request is UI behavior, not established by 422 presence. |
-| 16 | Applied-search presentation is UI-only. |
-| 17 | All eight required sort variants exactly present. |
-| 18 | Request default is -updated_at. |
-| 19 | Server sort input exists; absence of page-local substitution requires implementation evidence, not schema inspection. |
-| 20 | Request limit 1–100/default20, offset ≥0/default0; response includes limit/offset and page counters. |
-| 21 | API pagination provides total_items/total_pages/current_page; no separate global unfiltered count asserted. |
-| 22 | Reset offset on changed selection is UI logic, not automatic schema behavior. |
-| 23 | Late-response protection is client concurrency behavior; no version/correlation guarantee declared by these operations. |
-| 35 | Existing UI-policy plus pending MOS-1249 mapping retained per D-002; raw-header security is separate. |
+| REQ-1250 ID | API relationship / remaining boundary                                                                                                                                                                  |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 4           | Exact POST exists; required request body and 200/422 shapes above.                                                                                                                                     |
+| 5           | GET template with section=feedback resolves the named concrete lookup.                                                                                                                                 |
+| 6           | Exact metadata GET exists; consumption requirements are not inferred from generic fields.                                                                                                              |
+| 7           | Survey name/code/type_code/audience_type/status exist; segments/surface_ids also returned. Column composition and optional-field handling are UI decisions, not server guarantees of populated labels. |
+| 8           | Lookup code/display_name and metadata bindings provide structural support; actual dictionary keys/content are not fixed here.                                                                          |
+| 9           | Unknown-code fallback is UI behavior; contract does not ensure every code has a lookup match.                                                                                                          |
+| 10          | Keyboard opening is UI-only; API id is UUID, no accessibility claim follows.                                                                                                                           |
+| 11          | Query string bounds match 2–200. Matching fields/case/trim semantics unknown.                                                                                                                          |
+| 12          | status scalar-or-array supports multiselect transport; 0–100 array and item bounds above. UI selection/combination semantics not certified.                                                            |
+| 13          | type_code scalar-or-array supports multiselect transport with distinct 50-character bound.                                                                                                             |
+| 14          | query omission permitted; Jira explicitly requires omit on clear, although wire also permits null.                                                                                                     |
+| 15          | One-character string invalid by schema; suppressing the request is UI behavior, not established by 422 presence.                                                                                       |
+| 16          | Applied-search presentation is UI-only.                                                                                                                                                                |
+| 17          | All eight required sort variants exactly present.                                                                                                                                                      |
+| 18          | Request default is -updated_at.                                                                                                                                                                        |
+| 19          | Server sort input exists; absence of page-local substitution requires implementation evidence, not schema inspection.                                                                                  |
+| 20          | Request limit 1–100/default20, offset ≥0/default0; response includes limit/offset and page counters.                                                                                                   |
+| 21          | API pagination provides total_items/total_pages/current_page; no separate global unfiltered count asserted.                                                                                            |
+| 22          | Reset offset on changed selection is UI logic, not automatic schema behavior.                                                                                                                          |
+| 23          | Late-response protection is client concurrency behavior; no version/correlation guarantee declared by these operations.                                                                                |
+| 35          | Existing UI-policy plus pending MOS-1249 mapping retained per D-002; raw-header security is separate.                                                                                                  |
 
 REQ-1250-24 onward other than 35, deferred filter/editor/export work and adjacent write/card scenarios are not expanded by this report.
 
@@ -142,6 +145,7 @@ REQ-1250-24 onward other than 35, deferred filter/editor/export work and adjacen
 Inspection traversed all `$ref` links from exactly three operation objects: **24 distinct schemas**, all present and structurally equal live/local aggregate/local split. Removing only operation `security` made all three operation objects structurally equal; security schemes themselves match. Thus there is no scoped DTO, requiredness, nullable/default/bounds/error/operationId drift to correct. This comparison does not certify unrelated paths or entire files as equal.
 
 Proposed parent dispositions (not applied or accepted here):
+
 1. **Keep/no-op contracts:** preserve current local aggregate/split and security normalization. No API absence blocker for these reads.
 2. **Narrow planning clarification:** use the concrete lookup URL with its `{section}=feedback` identity; explicitly identify POST/GET methods and link MOS-1249 dependency, consistent with R-MOS-1250 finding 2. Explain registry-relevant metadata verification ownership without requiring all metadata fields to drive UI.
 3. **Keep boundaries:** one-character suppression, omission on clear, server-sort use, offset reset, races, unknown-code fallback and keyboard access need UI evidence. Contract existence alone cannot close these tasks. Conditions/export data in reachable schemas remains future/out-of-scope consumption.

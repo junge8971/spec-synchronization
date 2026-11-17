@@ -40,11 +40,11 @@ Report lines 102 and 107 are acceptable only with their discovery qualifier. Fre
 
 Read-only Python recomputation matched supplied assignment hashes and local metadata:
 
-| Source | Bytes | SHA-256 |
-| --- | ---: | --- |
-| J | 9933 | `ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f` |
-| W | 36471 | `e1d5f5320e05d1e65354f2523341cab788adfacac8ac5acf6aaabf31003c18fc` |
-| O | 413007 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
+| Source |  Bytes | SHA-256                                                            |
+| ------ | -----: | ------------------------------------------------------------------ |
+| J      |   9933 | `ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f` |
+| W      |  36471 | `e1d5f5320e05d1e65354f2523341cab788adfacac8ac5acf6aaabf31003c18fc` |
+| O      | 413007 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
 
 O hash is a local fingerprint only; its metadata was not independently attested. J retrieval `2026-10-16T13:02:57.872Z`; W retrieval `2026-10-16T13:03:14.658Z`. Metadata's verified-origin collection statement is recorded provenance, not a new external-origin verification.
 
@@ -56,13 +56,13 @@ W `/version/number` = 4, `/version/when` = `2026-09-25T19:33:43.672+08:00`; body
 
 Let B = `/api/control/api/assistant-modules/v1/modules`. O `#/paths` and W `/bodyView` §§2.1–2.5 agree:
 
-| Operation | 200 data schema | Other declared responses |
-| --- | --- | --- |
-| GET B | ModuleListResponse | 422 HTTPValidationError |
-| GET B/summary | ModuleSummaryResponse | none |
-| GET B/preview | ModulePreviewResponse | none |
-| POST B/{module_id}/disable | ModuleResponse | 422 HTTPValidationError |
-| POST B/{module_id}/enable | ModuleResponse | 422 HTTPValidationError |
+| Operation                  | 200 data schema       | Other declared responses |
+| -------------------------- | --------------------- | ------------------------ |
+| GET B                      | ModuleListResponse    | 422 HTTPValidationError  |
+| GET B/summary              | ModuleSummaryResponse | none                     |
+| GET B/preview              | ModulePreviewResponse | none                     |
+| POST B/{module_id}/disable | ModuleResponse        | 422 HTTPValidationError  |
+| POST B/{module_id}/enable  | ModuleResponse        | 422 HTTPValidationError  |
 
 Each 200 uses the corresponding `TsamResponseSchema_*` wrapper. No extra method appeared under this saved module path family; this is not universal API absence. Wiki §1 assigns history to audit Query API without specifying an endpoint here.
 
@@ -74,20 +74,20 @@ Each 200 uses the corresponding `TsamResponseSchema_*` wrapper. No extra method 
 
 ### All twelve candidates checked
 
-| Candidate | Review result and primary anchor |
-| --- | --- |
-| C01 summary | Supported: J items2 description; W §2.2; O GET summary. Mock 157–191 is local coverage only. |
-| C02 registry/search/filter/sort/page | Supported: J items0 description; W §§1,2.1; O GET B. Retain serialization/default questions above. |
-| C03 state/eligibility/message/actor/time | Supported: J items0 description; W §§1.1–1.2; O ModuleResponse. Preserve optional actor and formats. |
-| C04 user-facing preview | Supported: J items2 description; W §2.3; O GET preview. No new message-authoring endpoint implied. |
-| C05 global disable | Supported intent: J items0 description; W business rule 1. Mock coherence does not prove propagation to real surfaces. |
-| C06 disable_allowed | Supported: both selected Jira descriptions; W business rule 2; O required boolean. No core/classifier name-based allowlist. |
-| C07 nonempty user_message | Supported intent: J items0, W business rule 3/§2.4; J items2 requires field. Apply R1; mock distinction is explicit. |
-| C08 confirm_impact=true | Supported: J items2; J items0 consequences; W business rule 3/§§1.2,2.4. Apply R1; mock conditional requirement differs. |
-| C09 expected_version / enable input | Supported: W business rules 4–5/§§2.4–2.5; O both request schemas. Enable is not an empty-body call; no invented idempotency header. |
-| C10 metadata/failures | Supported: J items0; W business rule 6/§2.6; mock 161,178–186. Error and repeat-transition semantics require clarification, not inferred production behavior. |
-| C11 draft gate | Supported: J items2 description and unresolved items0 comment. Remains separate from auth release confirmation. Apply R3 to owner statement. |
-| C12 common rights ownership | Supported: J items2; W §2.7; main permissions 9–37,60–91. Role prose is evidence, not authority to invent UI grants or backend ACL. |
+| Candidate                                | Review result and primary anchor                                                                                                                              |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C01 summary                              | Supported: J items2 description; W §2.2; O GET summary. Mock 157–191 is local coverage only.                                                                  |
+| C02 registry/search/filter/sort/page     | Supported: J items0 description; W §§1,2.1; O GET B. Retain serialization/default questions above.                                                            |
+| C03 state/eligibility/message/actor/time | Supported: J items0 description; W §§1.1–1.2; O ModuleResponse. Preserve optional actor and formats.                                                          |
+| C04 user-facing preview                  | Supported: J items2 description; W §2.3; O GET preview. No new message-authoring endpoint implied.                                                            |
+| C05 global disable                       | Supported intent: J items0 description; W business rule 1. Mock coherence does not prove propagation to real surfaces.                                        |
+| C06 disable_allowed                      | Supported: both selected Jira descriptions; W business rule 2; O required boolean. No core/classifier name-based allowlist.                                   |
+| C07 nonempty user_message                | Supported intent: J items0, W business rule 3/§2.4; J items2 requires field. Apply R1; mock distinction is explicit.                                          |
+| C08 confirm_impact=true                  | Supported: J items2; J items0 consequences; W business rule 3/§§1.2,2.4. Apply R1; mock conditional requirement differs.                                      |
+| C09 expected_version / enable input      | Supported: W business rules 4–5/§§2.4–2.5; O both request schemas. Enable is not an empty-body call; no invented idempotency header.                          |
+| C10 metadata/failures                    | Supported: J items0; W business rule 6/§2.6; mock 161,178–186. Error and repeat-transition semantics require clarification, not inferred production behavior. |
+| C11 draft gate                           | Supported: J items2 description and unresolved items0 comment. Remains separate from auth release confirmation. Apply R3 to owner statement.                  |
+| C12 common rights ownership              | Supported: J items2; W §2.7; main permissions 9–37,60–91. Role prose is evidence, not authority to invent UI grants or backend ACL.                           |
 
 ## Architecture / approval boundary
 

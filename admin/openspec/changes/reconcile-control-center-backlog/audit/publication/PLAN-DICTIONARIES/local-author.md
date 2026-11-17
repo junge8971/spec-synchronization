@@ -6,13 +6,13 @@ Created **one** `openspec/changes/add-reference-dictionaries/` change through na
 
 All paths below are relative to `openspec/changes/add-reference-dictionaries/`:
 
-| Artifact | SHA-256 |
-| --- | --- |
-| `.openspec.yaml` | `30cfdee007123f96b2ab27ca107e406084602caf445d6b7cd2130ab329668ed3` |
-| `proposal.md` | `14c73e5253e202bf9635774e5b9089a339523ede7654c40db856b7ee8cc764a9` |
-| `design.md` | `7332651660a07eec6de670da0a2ef588a3de29b99c731833990690935887e58c` |
-| `evidence.md` | `471fe1ac3c8cb997c7a0ec403846a520b1727ba562f9217a4d1c572038132a11` |
-| `tasks.md` | `1d555d76dc9beb2aba6cdd70f6b1998ba0815ccee15892747b976efb5d5f5394` |
+| Artifact                               | SHA-256                                                            |
+| -------------------------------------- | ------------------------------------------------------------------ |
+| `.openspec.yaml`                       | `30cfdee007123f96b2ab27ca107e406084602caf445d6b7cd2130ab329668ed3` |
+| `proposal.md`                          | `14c73e5253e202bf9635774e5b9089a339523ede7654c40db856b7ee8cc764a9` |
+| `design.md`                            | `7332651660a07eec6de670da0a2ef588a3de29b99c731833990690935887e58c` |
+| `evidence.md`                          | `471fe1ac3c8cb997c7a0ec403846a520b1727ba562f9217a4d1c572038132a11` |
+| `tasks.md`                             | `1d555d76dc9beb2aba6cdd70f6b1998ba0815ccee15892747b976efb5d5f5394` |
 | `specs/reference-dictionaries/spec.md` | `38f2a37272f7267fb78719bda46d3e78e2a78cb1479348f2bff9667699ea0a0e` |
 
 15 requirements, 22 scenarios, 34 unchecked tasks, zero checked feature tasks. Native status's four checked **artifact** entries indicate file completeness only, not feature delivery or gate closure. OpenSpec files are ignored by Git; clean status is not proof of no planning writes. Explicit file manifest/hashes provide evidence instead.

@@ -31,12 +31,12 @@ Start at `A/sources/jira-feedback/r1/content.json:84`: card edits → unified sa
 
 ## SHA-256 (complete saved bytes)
 
-| File under A | Hash |
-|---|---|
-| `reports/REQ-G2-MOS-1257.md` | `bab215846ec9451dfe979865097509f2b5adce9cfd683d454bf63047e8d9979d` |
-| `sources/jira-feedback/r1/content.json` | `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685` |
-| `sources/jira-feedback/r1/metadata.json` | `5c8df75fde70960ff15b33d6e6d3cc6c57b9d06daeee383076c753101f94fa70` |
-| `sources/wiki-247734813/r1/content.json` | `d47db6bfc15f5f4a881c777ec78892161ed6be000c6cdf1c5c61ab4c7030c7d7` |
+| File under A                              | Hash                                                               |
+| ----------------------------------------- | ------------------------------------------------------------------ |
+| `reports/REQ-G2-MOS-1257.md`              | `bab215846ec9451dfe979865097509f2b5adce9cfd683d454bf63047e8d9979d` |
+| `sources/jira-feedback/r1/content.json`   | `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685` |
+| `sources/jira-feedback/r1/metadata.json`  | `5c8df75fde70960ff15b33d6e6d3cc6c57b9d06daeee383076c753101f94fa70` |
+| `sources/wiki-247734813/r1/content.json`  | `d47db6bfc15f5f4a881c777ec78892161ed6be000c6cdf1c5c61ab4c7030c7d7` |
 | `sources/wiki-247734813/r1/metadata.json` | `b71995990f608abc716382b67f54a812322da9c4d2b62c8a78ee1835cdc0e49e` |
 
 Both content hashes match metadata; Jira also matches the assignment's expected hash. Hashing whole bytes does not imply semantic reading of all source content.

@@ -16,12 +16,12 @@ HEAD из контракта: `bc0d9800f25a90989b9c73c76f91996f8300f1d3` (сам
 
 ## Expected / observed / unknown
 
-| Атом / граница | Expected | Observed | Unknown |
-|---|---|---|---|
-| R1054-1, ручной выбор другой статьи на мобильном | Прокрутка к началу выбранной статьи | `W/documentation-catalog.tsx:43–56`: кнопка передаёт ID. `W/handlers/documentation.handlers.ts:24–35`: смена article через штатный router без сброса прокрутки. `W/documentation.tsx:37–66`: после изменения ID при узком экране requestAnimationFrame, focus с preventScroll и `scrollIntoView({ behavior: 'smooth', block: 'start' })`. Область статьи расположена после каталога, имеет ref/id/tabIndex и scroll-mt-4 (`:76–103`). | Реальная геометрия и завершение smooth scroll на исходном устройстве/контуре, перекрытие начальной части статьи оболочкой не проверены. |
-| Точное тестовое свидетельство R1054-1 | Выбор статьи приводит к вызову прокрутки к началу | `W/documentation.test.tsx:14–68`: matchMedia=true, клик «Порядок заведения навыка», выбранная статья/aria-current/aria-controls, один scrollIntoView с block:start и фокус области. Это прочитанные assertions, не результат запуска. | Тест подменяет matchMedia и scrollIntoView, не измеряет пиксели и не проверяет фактический breakpoint браузера. |
-| Ограничение мобильной компоновки | Jira говорит только о мобильном устройстве | `W/constants/documentation.constants.ts:1`: max-width 1023px; layout в `documentation.tsx:76` переключается через lg. Desktop-тест `documentation.test.tsx:70–98` ожидает отсутствие scroll; первый URL-вход `:100–121` также без scroll. | Jira не задаёт численную ширину или начальный scroll offset. Это существующие решения, не извлечённые требования MOS-1054. |
-| Повторный выбор уже открытой статьи | В теле не уточнён | Handler `:28–30` делает no-op; effect `documentation.tsx:38–40` требует смены ID. Текущая spec явно говорит о другой статье. | Нельзя из общей формулировки Jira объявить этот край дефектом либо потребовать новую прокрутку; видео недоступны. |
+| Атом / граница                                   | Expected                                          | Observed                                                                                                                                                                                                                                                                                                                                                                                                                              | Unknown                                                                                                                                 |
+| ------------------------------------------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| R1054-1, ручной выбор другой статьи на мобильном | Прокрутка к началу выбранной статьи               | `W/documentation-catalog.tsx:43–56`: кнопка передаёт ID. `W/handlers/documentation.handlers.ts:24–35`: смена article через штатный router без сброса прокрутки. `W/documentation.tsx:37–66`: после изменения ID при узком экране requestAnimationFrame, focus с preventScroll и `scrollIntoView({ behavior: 'smooth', block: 'start' })`. Область статьи расположена после каталога, имеет ref/id/tabIndex и scroll-mt-4 (`:76–103`). | Реальная геометрия и завершение smooth scroll на исходном устройстве/контуре, перекрытие начальной части статьи оболочкой не проверены. |
+| Точное тестовое свидетельство R1054-1            | Выбор статьи приводит к вызову прокрутки к началу | `W/documentation.test.tsx:14–68`: matchMedia=true, клик «Порядок заведения навыка», выбранная статья/aria-current/aria-controls, один scrollIntoView с block:start и фокус области. Это прочитанные assertions, не результат запуска.                                                                                                                                                                                                 | Тест подменяет matchMedia и scrollIntoView, не измеряет пиксели и не проверяет фактический breakpoint браузера.                         |
+| Ограничение мобильной компоновки                 | Jira говорит только о мобильном устройстве        | `W/constants/documentation.constants.ts:1`: max-width 1023px; layout в `documentation.tsx:76` переключается через lg. Desktop-тест `documentation.test.tsx:70–98` ожидает отсутствие scroll; первый URL-вход `:100–121` также без scroll.                                                                                                                                                                                             | Jira не задаёт численную ширину или начальный scroll offset. Это существующие решения, не извлечённые требования MOS-1054.              |
+| Повторный выбор уже открытой статьи              | В теле не уточнён                                 | Handler `:28–30` делает no-op; effect `documentation.tsx:38–40` требует смены ID. Текущая spec явно говорит о другой статье.                                                                                                                                                                                                                                                                                                          | Нельзя из общей формулировки Jira объявить этот край дефектом либо потребовать новую прокрутку; видео недоступны.                       |
 
 ## Main / delta / archive / API
 
@@ -44,23 +44,23 @@ HEAD из контракта: `bc0d9800f25a90989b9c73c76f91996f8300f1d3` (сам
 
 Хешированы полные файлы локально; это не означает полного семантического чтения всех строк теста/реестра.
 
-| Файл | SHA256 |
-|---|---|
-| `A/work-items/WAVE-D090-EIGHT.md` | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
-| `A/work-items/WAVE-D090-REVIEW-NEXT.md` | `fdf9ed7a57cc427bf9feb58639fe976fb2f76fb1bd9082c0f1626649cfdfcc72` |
-| `A/sources/jira-subtasks/r1/content.json` | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
-| `A/sources/jira-subtasks/r1/metadata.json` | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
+| Файл                                          | SHA256                                                             |
+| --------------------------------------------- | ------------------------------------------------------------------ |
+| `A/work-items/WAVE-D090-EIGHT.md`             | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
+| `A/work-items/WAVE-D090-REVIEW-NEXT.md`       | `fdf9ed7a57cc427bf9feb58639fe976fb2f76fb1bd9082c0f1626649cfdfcc72` |
+| `A/sources/jira-subtasks/r1/content.json`     | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
+| `A/sources/jira-subtasks/r1/metadata.json`    | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
 | `A/sources/jira-member-index/r1/content.json` | `dba6cffa66e0aef23e9ef34c4a52215a5c02d31e7da1dca87888e821198b8043` |
-| `A/coverage.json` | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
-| `A/reports/JIRA-MOS-784.md` | `5ce6b6eed5e0c9590a7b6c9e738d0bf8a2626651e91a95a54a4c9525257b1120` |
-| `A/reports/SPEC-G2-DOCUMENTATION-SEARCH.md` | `003bfd5a6d6bc4b8fec05df512af67006bd4117dab87c9672749b3a982809e64` |
+| `A/coverage.json`                             | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
+| `A/reports/JIRA-MOS-784.md`                   | `5ce6b6eed5e0c9590a7b6c9e738d0bf8a2626651e91a95a54a4c9525257b1120` |
+| `A/reports/SPEC-G2-DOCUMENTATION-SEARCH.md`   | `003bfd5a6d6bc4b8fec05df512af67006bd4117dab87c9672749b3a982809e64` |
 | `openspec/specs/documentation-search/spec.md` | `f9b88a2c524c152a4817b5e05861bb6c6e2ef3a9debf548e5b7a852135bb0c6f` |
-| `O/design.md` | `849aca071ad4123c133979fbbec0c721fe3f7a71e31dd5954bc2fad0ebb5619b` |
-| `W/documentation.tsx` | `727e8c68c75582aa488bbdc7f260275f66629431e5fc4b4bbd175a2a369d15a8` |
-| `W/documentation.test.tsx` | `68aa39885304fc883a3121a312b8b3d32cf03e51449155b2ec07b21ecb603942` |
-| `W/handlers/documentation.handlers.ts` | `abff5fd987916ece1c0de3daf532592bc0067fe63dedb3274ebe773731dffc6f` |
-| `W/constants/documentation.constants.ts` | `f876ccaf09532ca06344085f7358c4e165a5ec367e01e37684ba94c351acc48e` |
-| `W/documentation-catalog.tsx` | `f74df62d973fac36f65a8873fb943be8248f2b647abb044b4661f4ac96c297f4` |
+| `O/design.md`                                 | `849aca071ad4123c133979fbbec0c721fe3f7a71e31dd5954bc2fad0ebb5619b` |
+| `W/documentation.tsx`                         | `727e8c68c75582aa488bbdc7f260275f66629431e5fc4b4bbd175a2a369d15a8` |
+| `W/documentation.test.tsx`                    | `68aa39885304fc883a3121a312b8b3d32cf03e51449155b2ec07b21ecb603942` |
+| `W/handlers/documentation.handlers.ts`        | `abff5fd987916ece1c0de3daf532592bc0067fe63dedb3274ebe773731dffc6f` |
+| `W/constants/documentation.constants.ts`      | `f876ccaf09532ca06344085f7358c4e165a5ec367e01e37684ba94c351acc48e` |
+| `W/documentation-catalog.tsx`                 | `f74df62d973fac36f65a8873fb943be8248f2b647abb044b4661f4ac96c297f4` |
 
 ```acceptance-report
 {

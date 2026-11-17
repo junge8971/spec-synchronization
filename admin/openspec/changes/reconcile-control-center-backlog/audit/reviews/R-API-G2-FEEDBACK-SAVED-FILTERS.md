@@ -34,19 +34,19 @@ Literal aliases: `C = openspec/changes/reconcile-control-center-backlog`; `A = o
 
 SHA-256 computed over complete bytes; hashing is not semantic reading. All recorded report/source hashes match. Paths use the literal aliases above.
 
-| File | SHA-256 |
-|---|---|
-| `A/sources/api-live/r2/content.json` | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
+| File                                  | SHA-256                                                            |
+| ------------------------------------- | ------------------------------------------------------------------ |
+| `A/sources/api-live/r2/content.json`  | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
 | `A/sources/api-live/r2/metadata.json` | `444c7b65941db4af36d1ffe305fd04499a44d6d9c81b9a25be15dc6061d521ba` |
-| `D/openapi.json` | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
-| `D/managed-resources.openapi.json` | `cc4cb5603b449f0d7a98224bfcfc1795f509ecc09a3155fdc87f8ff2b270c7cf` |
-| `D/crud-api.md` | `4dde67125d36692cb05fcbb9b9b6e842f95717118f999c471cb5e2b393907058` |
-| `D/crud-api-2026-10-15.raw` | `91c8dc68fc1b602a64428d1d6f1d9c44a0e6a89eced226e4773853badf13954a` |
-| `A/reports/REQ-G2-MOS-1259.md` | `b928122009f79f48b4789fadcd476bbd1a8bdf669fc438b4cceacd7b3197bd25` |
-| `A/reports/SPEC-G2-MOS-1259.md` | `cdbde326a62a7996ed5adc07faaab46a7587ea81dde685425eec0955f594e62a` |
-| `A/reviews/R-REQ-G2-MOS-1259.md` | `b0287c540b7222d1860f90a72e396960f645d184a12a3f82e8b6cc76d01bbbc2` |
-| `A/reviews/R-SPEC-G2-MOS-1259.md` | `c5abce85f35cc51b2c75c60c70b37fc10f8d1749f4aedd573de1d10cc5eb1538` |
-| `F/design.md` | `0b15bcebfea15e35aca35a90c835a00efd892bb9a962fc16401892ca6017d91d` |
+| `D/openapi.json`                      | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
+| `D/managed-resources.openapi.json`    | `cc4cb5603b449f0d7a98224bfcfc1795f509ecc09a3155fdc87f8ff2b270c7cf` |
+| `D/crud-api.md`                       | `4dde67125d36692cb05fcbb9b9b6e842f95717118f999c471cb5e2b393907058` |
+| `D/crud-api-2026-10-15.raw`           | `91c8dc68fc1b602a64428d1d6f1d9c44a0e6a89eced226e4773853badf13954a` |
+| `A/reports/REQ-G2-MOS-1259.md`        | `b928122009f79f48b4789fadcd476bbd1a8bdf669fc438b4cceacd7b3197bd25` |
+| `A/reports/SPEC-G2-MOS-1259.md`       | `cdbde326a62a7996ed5adc07faaab46a7587ea81dde685425eec0955f594e62a` |
+| `A/reviews/R-REQ-G2-MOS-1259.md`      | `b0287c540b7222d1860f90a72e396960f645d184a12a3f82e8b6cc76d01bbbc2` |
+| `A/reviews/R-SPEC-G2-MOS-1259.md`     | `c5abce85f35cc51b2c75c60c70b37fc10f8d1749f4aedd573de1d10cc5eb1538` |
+| `F/design.md`                         | `0b15bcebfea15e35aca35a90c835a00efd892bb9a962fc16401892ca6017d91d` |
 
 Metadata records saved documentation retrieval `2026-10-19T08:11:44.238Z`,420099 bytes, discovered Swagger URL `https://nchat-a-tech.mos.ru/api/control/openapi.json`. No fresh network verification or metadata-wide census. Historical SPEC review's old target hash intentionally differs from corrected SPEC; D-065 explains parent revision, not a fresh independent ACCEPT of that entire report.
 

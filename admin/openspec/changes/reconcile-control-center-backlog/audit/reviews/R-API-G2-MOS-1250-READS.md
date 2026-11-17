@@ -25,11 +25,11 @@ Markdown contents were read with the read tool; non-interactive Python performed
 
 All pointers apply independently to each of the three JSON inputs above. Let `S(X) = /components/schemas/X`.
 
-| Request identity | Operation pointer | Independent result |
-|---|---|---|
-| POST `/api/control/api/v1/managed-resources/feedback/surveys/search` | `/paths/~1api~1control~1api~1v1~1managed-resources~1feedback~1surveys~1search/post` | Required JSON body referencing `fb_surveyListQuery`; 200 paginated envelope, 422 validation envelope. Original operationId exact. |
+| Request identity                                                      | Operation pointer                                                                     | Independent result                                                                                                                                            |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| POST `/api/control/api/v1/managed-resources/feedback/surveys/search`  | `/paths/~1api~1control~1api~1v1~1managed-resources~1feedback~1surveys~1search/post`   | Required JSON body referencing `fb_surveyListQuery`; 200 paginated envelope, 422 validation envelope. Original operationId exact.                             |
 | GET `/api/control/api/v1/managed-resources/catalogs/lookups/feedback` | `/paths/~1api~1control~1api~1v1~1managed-resources~1catalogs~1lookups~1{section}/get` | Required path `section`, enum includes `feedback`; 200 lookup envelope and 422. This is template instantiation, not a substitute. Original operationId exact. |
-| GET `/api/control/api/v1/managed-resources/feedback/metadata` | `/paths/~1api~1control~1api~1v1~1managed-resources~1feedback~1metadata/get` | No request body/parameters; 200 metadata envelope only. Original operationId exact. |
+| GET `/api/control/api/v1/managed-resources/feedback/metadata`         | `/paths/~1api~1control~1api~1v1~1managed-resources~1feedback~1metadata/get`           | No request body/parameters; 200 metadata envelope only. Original operationId exact.                                                                           |
 
 For each operation, success schema is `/responses/200/content/application~1json/schema`; search request is `/requestBody/content/application~1json/schema`; lookup identity is `/parameters/0`. The original report's locators resolve correctly.
 
@@ -90,16 +90,16 @@ POST search supplies records/counters; GET lookup supplies code-label dictionari
 
 Checked each original mapping against MOS-1250 `/items/3/description` and the scoped schemas:
 
-| REQ-1250 IDs | Review result |
-|---|---|
-| 4, 5, 6 | All three named operations resolve with correct methods. Metadata remains a named read dependency; schema existence alone neither fulfills its required integration nor prescribes consumption of every field. |
-| 7, 8, 9, 10 | Survey fields and lookup code/display_name support columns/labels. Actual joined labels, unknown-code fallback and keyboard opening remain client evidence, not API acceptance. |
-| 11, 12, 13 | Query bounds and status/type multiselect transport accurately mapped; filter combination/matching semantics not established. |
-| 14, 15, 16 | Wire allows omission/null, but Jira specifically requires query omission on clear and no one-character request/applied-search representation. The report preserves this stricter UI distinction. |
-| 17, 18, 19 | Eight server sort tokens/default match; absence of page-local substitution needs implementation evidence. |
-| 20, 21 | Request paging bounds/defaults and response counters match; no extra unfiltered total or page numbering convention inferred. |
-| 22, 23 | Offset reset and stale-response protection are client requirements, not schema guarantees. |
-| 35 | Existing UI-policy remains distinct from raw-header authentication. Accepted R-MOS-1250 finding 3 and current D-002 retain the pending MOS-1249 ManagedResource mapping; no fresh wildcard choice or mandatory main-spec-sync blocker. |
+| REQ-1250 IDs | Review result                                                                                                                                                                                                                          |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 4, 5, 6      | All three named operations resolve with correct methods. Metadata remains a named read dependency; schema existence alone neither fulfills its required integration nor prescribes consumption of every field.                         |
+| 7, 8, 9, 10  | Survey fields and lookup code/display_name support columns/labels. Actual joined labels, unknown-code fallback and keyboard opening remain client evidence, not API acceptance.                                                        |
+| 11, 12, 13   | Query bounds and status/type multiselect transport accurately mapped; filter combination/matching semantics not established.                                                                                                           |
+| 14, 15, 16   | Wire allows omission/null, but Jira specifically requires query omission on clear and no one-character request/applied-search representation. The report preserves this stricter UI distinction.                                       |
+| 17, 18, 19   | Eight server sort tokens/default match; absence of page-local substitution needs implementation evidence.                                                                                                                              |
+| 20, 21       | Request paging bounds/defaults and response counters match; no extra unfiltered total or page numbering convention inferred.                                                                                                           |
+| 22, 23       | Offset reset and stale-response protection are client requirements, not schema guarantees.                                                                                                                                             |
+| 35           | Existing UI-policy remains distinct from raw-header authentication. Accepted R-MOS-1250 finding 3 and current D-002 retain the pending MOS-1249 ManagedResource mapping; no fresh wildcard choice or mandatory main-spec-sync blocker. |
 
 D-061 concerns narrow MOS1249 task wording, not wire changes. Current primary hashes corroborate unchanged wire inputs. No implementation, permission code, optional visual requirement or broader requirement set was re-audited.
 
@@ -107,16 +107,16 @@ D-061 concerns narrow MOS1249 task wording, not wire changes. Current primary ha
 
 Current SHA-256 of complete bytes:
 
-| Input | Current digest |
-|---|---|
-| `A/sources/api-live/r2/content.json` | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
-| `D/openapi.json` | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
-| `D/managed-resources.openapi.json` | `cc4cb5603b449f0d7a98224bfcfc1795f509ecc09a3155fdc87f8ff2b270c7cf` |
-| `A/reports/API-G2-MOS-1250-READS.md` | `9d9d08e81c103e245956b0504321453757aa77dc99d9dd2697201cd40416009a` |
+| Input                                         | Current digest                                                     |
+| --------------------------------------------- | ------------------------------------------------------------------ |
+| `A/sources/api-live/r2/content.json`          | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
+| `D/openapi.json`                              | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
+| `D/managed-resources.openapi.json`            | `cc4cb5603b449f0d7a98224bfcfc1795f509ecc09a3155fdc87f8ff2b270c7cf` |
+| `A/reports/API-G2-MOS-1250-READS.md`          | `9d9d08e81c103e245956b0504321453757aa77dc99d9dd2697201cd40416009a` |
 | `A/reports/API-G2-MOS-1250-READS.recovery.md` | `447a17480c796a57a810e0e299a20b8181b2e3d40e7b417f38f976175ad6b248` |
-| `A/decisions.md` | `9a9d9807feff011cec95eff8888b4c1cdbe1b94bd3b2ae1235a7962539c81707` |
-| `A/work-items/API-G2-MOS-1250-READS.md` | `6ba584c26d2090208cea1ca456ecde1c6e91bbfc75799b9ab3ad4dbce4a69957` |
-| `A/work-items/R-G2-RECOVERED-REPORTS.md` | `54e60fb3cecbceae47181653f51094184d02071b013c0c59d3ae69df2fe6918f` |
+| `A/decisions.md`                              | `9a9d9807feff011cec95eff8888b4c1cdbe1b94bd3b2ae1235a7962539c81707` |
+| `A/work-items/API-G2-MOS-1250-READS.md`       | `6ba584c26d2090208cea1ca456ecde1c6e91bbfc75799b9ab3ad4dbce4a69957` |
+| `A/work-items/R-G2-RECOVERED-REPORTS.md`      | `54e60fb3cecbceae47181653f51094184d02071b013c0c59d3ae69df2fe6918f` |
 
 Independently recomputed **all 14 nonadministrative source hashes** in the original report's lines 13–30: governing proposal/design/tasks/spec, accepted R-MOS-1250, REQ-MOS-1250, Jira content/metadata, live content/metadata, aggregate/split JSON, README and managed-resources Markdown. Every value matches the original table and the recovery assertion. Jira/live content digests also match their metadata. Original report remains 24,465 bytes and its digest matches recovery.
 

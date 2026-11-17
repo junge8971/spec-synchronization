@@ -22,11 +22,11 @@ Fresh bounded discovery of active proposals identified the same four report owne
 
 ## Independently verified primary evidence
 
-| Saved source | SHA-256 / bytes | Version |
-| --- | --- | --- |
-| Jira reports details r1 | `c69d3aeaef6121d67440c61f06a0c8cb6b3c8ad605c7cfcec0653e7f7e5f234c` / 12996 | Items 1 and 5 Backlog; no comments or attachments for either |
-| Wiki 241085838 r1 | `797051024d296c8233d998d15894eaf35b6c6a02980fa37670430d0ae5da2d74` / 37238 | Page revision 3, 2026-09-09T17:12:02.625+08:00; body v1.0, history 08.09.2026 |
-| API live r1 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` / 413007 | OpenAPI 3.1.0, info.version 0.1.0; no ETag/Last-Modified |
+| Saved source            | SHA-256 / bytes                                                             | Version                                                                       |
+| ----------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Jira reports details r1 | `c69d3aeaef6121d67440c61f06a0c8cb6b3c8ad605c7cfcec0653e7f7e5f234c` / 12996  | Items 1 and 5 Backlog; no comments or attachments for either                  |
+| Wiki 241085838 r1       | `797051024d296c8233d998d15894eaf35b6c6a02980fa37670430d0ae5da2d74` / 37238  | Page revision 3, 2026-09-09T17:12:02.625+08:00; body v1.0, history 08.09.2026 |
+| API live r1             | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` / 413007 | OpenAPI 3.1.0, info.version 0.1.0; no ETag/Last-Modified                      |
 
 All hashes and lengths matched saved metadata. Nothing here establishes the current remote publication or runtime.
 
@@ -49,16 +49,16 @@ The five published analytics operations are dashboard GET, dashboard refresh POS
 
 All eleven original IDs are supported as extracted candidates, not new approvals:
 
-| IDs | Verified coverage and limit |
-| --- | --- |
-| MOS1016-01 | Name: S01/S03, B16.1/B16.5; local validation does not enable save. |
-| MOS1016-02–04 | Ordered fields, surface and complex selection: S03/S05, B16.2. Wiki's 18-field parameters do not establish a 24-field mapping, surface-ID/channel-ID equivalence or condition serialization. |
-| MOS1016-05 | Four intentions: S02/S07, B16.3; no agreed execution timezone/default or weekly/monthly time follows from read cron. |
-| MOS1016-06 | Per-run period: S06/S07, B16.3; local monthly selection preserves absolute dates without promising their repetition or choosing “previous month.” |
-| MOS1016-07 | Durable complete save/reread: S03–S05, B16.1/B16.2. Successful write followed by failed GET must not duplicate creation. |
-| MOS1016-08–09 | Visibility/ownership and background result: S08/B16.4. Accessible-only reads and launching actor do not settle creation/sharing/edit rights, scheduled principal, failures or result storage. |
-| MOS1016-10 | Settings-only frontend: S09/B16.3/B16.4; no browser timer authority. |
-| MOS1016-11 | Jira `/items/1/description` requests an isolated fake backend provider for preview/metrics/CSV, validation/scope and template reads. Backlog/DoD is not delivery evidence; no scheduler delivery is specified or proven. |
+| IDs           | Verified coverage and limit                                                                                                                                                                                              |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| MOS1016-01    | Name: S01/S03, B16.1/B16.5; local validation does not enable save.                                                                                                                                                       |
+| MOS1016-02–04 | Ordered fields, surface and complex selection: S03/S05, B16.2. Wiki's 18-field parameters do not establish a 24-field mapping, surface-ID/channel-ID equivalence or condition serialization.                             |
+| MOS1016-05    | Four intentions: S02/S07, B16.3; no agreed execution timezone/default or weekly/monthly time follows from read cron.                                                                                                     |
+| MOS1016-06    | Per-run period: S06/S07, B16.3; local monthly selection preserves absolute dates without promising their repetition or choosing “previous month.”                                                                        |
+| MOS1016-07    | Durable complete save/reread: S03–S05, B16.1/B16.2. Successful write followed by failed GET must not duplicate creation.                                                                                                 |
+| MOS1016-08–09 | Visibility/ownership and background result: S08/B16.4. Accessible-only reads and launching actor do not settle creation/sharing/edit rights, scheduled principal, failures or result storage.                            |
+| MOS1016-10    | Settings-only frontend: S09/B16.3/B16.4; no browser timer authority.                                                                                                                                                     |
+| MOS1016-11    | Jira `/items/1/description` requests an isolated fake backend provider for preview/metrics/CSV, validation/scope and template reads. Backlog/DoD is not delivery evidence; no scheduler delivery is specified or proven. |
 
 Exact local acceptance: `mos-1016-report-template-scheduling/design.md` 55–74; active delta spec 7–51; six unchecked tasks at `tasks.md` 3–14. S10/B16.5 already preserves input/error/conflict/idempotency acceptance. **There is an existing plan and preserved continuation, not a missing-plan finding.** No duplicate plan is justified.
 

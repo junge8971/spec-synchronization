@@ -2,11 +2,11 @@
 
 ## Separate verdicts
 
-| Evaluated report | Verdict | Mandatory corrections |
-|---|---|---|
-| `reports/SPEC-G2-CODE-QUALITY.md` | **ACCEPT — bounded ownership evidence** | None |
-| `reports/SPEC-G2-DOCUMENTATION-SEARCH.md` | **ACCEPT — bounded ownership and navigation-evidence joins** | None |
-| `reports/SPEC-G2-DIALOG-CATEGORY.md` | **ACCEPT — ownership with unresolved source applicability** | None |
+| Evaluated report                          | Verdict                                                      | Mandatory corrections |
+| ----------------------------------------- | ------------------------------------------------------------ | --------------------- |
+| `reports/SPEC-G2-CODE-QUALITY.md`         | **ACCEPT — bounded ownership evidence**                      | None                  |
+| `reports/SPEC-G2-DOCUMENTATION-SEARCH.md` | **ACCEPT — bounded ownership and navigation-evidence joins** | None                  |
+| `reports/SPEC-G2-DIALOG-CATEGORY.md`      | **ACCEPT — ownership with unresolved source applicability**  | None                  |
 
 Acceptance is of these three reports, not capability delivery, current gate success, complete independent evidence lanes, or G2–G5 completion. No product-plan change is justified. Category applicability remains a question, not a reason to revoke the explicitly recorded local approval. No escalation is necessary to accept that bounded result.
 
@@ -15,6 +15,7 @@ Acceptance is of these three reports, not capability delivery, current gate succ
 ## Files Retrieved
 
 Aliases below expand literally to exact repository-relative paths:
+
 - C = `openspec/changes/reconcile-control-center-backlog`
 - A = `openspec/changes/reconcile-control-center-backlog/audit`
 - Q = `openspec/changes/archive/2026-09-23-improve-code-quality`
@@ -60,6 +61,7 @@ This is selective review, not repetition of the authors' entire semantic read se
 Exact final ownership: F owns guidance, verification, declarations, components, whole-tree structural checks and migration preservation; Q owns warning failure and no-bypass requirements; B owns the final FSD requirement, explicitly modifying K's first optional exception and F's original boundary. The report retains the intermediate lineage rather than attributing all quality work to B. Numbered tasks in all four owners support the reported mapping.
 
 Required qualifications verified directly:
+
 - Q delta `:44–56`, design `:79–88` and task5.2 (`:29`) contain the historical unqualified E2E request. F design `:1–17` explicitly identifies the mismatch; F delta `:22–40` and current main `:51–69` require separate authorization. This is an explicit correction, not precedence inferred from dates.
 - Q task1.3 (`:5`) and design `:67` really contain empty inline tokens; design `:35` names `eslint .` without the zero-warning flag. F design `:85–107` supplies `--max-warnings 0` and full-tree staged checks. Preserve the historical omission; do not edit the archive or infer today's gate behavior.
 - Q proposal `:20–28`, F proposal `:11,27–31`, and main `:178–200` support **no standalone business endpoint**, but an applicable API/generated/framework preservation obligation. Module public API is not REST applicability.
@@ -109,6 +111,7 @@ Quality is a technical policy/execution capability with preservation obligations
 Read-only Python recomputed every listed input digest: **28/28 quality, 26/26 documentation, 24/24 category matched** (78 table entries, including shared duplicates). Both Jira content digests also match their metadata. This proves current local byte agreement only, not remote freshness, historical HEAD equality, authors' actual read activity or original approval authenticity.
 
 Evaluated report SHA-256:
+
 - Quality: `fa043cb83dbe1c5e037c65e8cc209887b3419d3a615c9d82273c9453120fa8ea`
 - Documentation: `003bfd5a6d6bc4b8fec05df512af67006bd4117dab87c9672749b3a982809e64`
 - Category: `e008a97b02f1aad8ab64b03555a1d3924e8a5ba00c616d93e270b970e331a55e`

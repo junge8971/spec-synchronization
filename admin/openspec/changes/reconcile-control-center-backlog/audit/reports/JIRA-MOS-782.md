@@ -13,33 +13,33 @@ Inventory only; no scenario, requirement or implementation assessment. The suppl
 
 Every row is present exactly once in I and has type **Development task**, `subtasks: []`, and no saved parent field. H child position gives the exact membership locator `H/children/<position>`. Membership therefore comes from H, not a claimed member-side parent object. `Index only` means full description, attachments, comments and custom acceptance coverage are all uncollected. `D detail` means description and attachment metadata additionally present; comments/custom acceptance fields and attachment bodies still uncollected.
 
-| Key | H child position | I locator | Observed status (I) | Updated (I; verbatim) | Detail coverage |
-|---|---:|---|---|---|---|
-| MOS-802 | 0 | I#/items/91 | CLOSED | 2026-09-16T18:08:11.814+0800 | Index only |
-| MOS-803 | 1 | I#/items/92 | CLOSED | 2026-09-16T18:08:14.028+0800 | Index only |
-| MOS-804 | 2 | I#/items/93 | CLOSED | 2026-09-16T18:08:20.184+0800 | Index only |
-| MOS-805 | 3 | I#/items/94 | CLOSED | 2026-09-16T18:08:26.665+0800 | Index only |
-| MOS-806 | 4 | I#/items/95 | CLOSED | 2026-09-16T18:08:31.129+0800 | Index only |
-| MOS-811 | 5 | I#/items/96 | Backlog | 2026-10-09T15:08:19.171+0800 | Index only |
-| MOS-809 | 6 | I#/items/97 | Ready for test | 2026-10-09T15:08:35.352+0800 | Index only |
-| MOS-808 | 7 | I#/items/98 | CLOSED | 2026-10-16T14:16:08.544+0800 | Index only |
-| MOS-807 | 8 | I#/items/99 | Backlog | 2026-10-15T14:38:33.569+0800 | Index only |
-| MOS-810 | 9 | I#/items/100 | Hold | 2026-10-09T15:08:24.131+0800 | Index only |
-| MOS-859 | 10 | I#/items/101 | CLOSED | 2026-10-13T21:35:28.306+0800 | Index only |
-| MOS-907 | 11 | I#/items/102 | Ready for test | 2026-10-09T15:03:47.700+0800 | Index only |
-| MOS-909 | 12 | I#/items/103 | Ready for test | 2026-10-09T15:03:58.003+0800 | Index only |
-| MOS-935 | 13 | I#/items/104 | Ready for test | 2026-10-09T15:05:45.382+0800 | Index only |
-| MOS-942 | 14 | I#/items/105 | Ready for test | 2026-10-09T15:05:48.352+0800 | Index only |
-| MOS-929 | 15 | I#/items/106 | Ready for test | 2026-10-09T15:05:22.114+0800 | Index only |
-| MOS-933 | 16 | I#/items/107 | Ready for test | 2026-10-09T15:05:40.689+0800 | Index only |
-| MOS-1119 | 17 | I#/items/108 | Ready for test | 2026-10-09T15:04:31.809+0800 | Index only |
-| MOS-1120 | 18 | I#/items/109 | CLOSED | 2026-10-09T15:04:35.341+0800 | Index only |
-| MOS-1141 | 19 | I#/items/110 | Ready for test | 2026-10-12T20:10:06.627+0800 | Index only |
-| MOS-1153 | 20 | I#/items/111 | Review | 2026-10-12T16:03:02.851+0800 | Index only |
-| MOS-1157 | 21 | I#/items/112 | Ready for test | 2026-10-13T18:05:35.223+0800 | Index only |
-| MOS-1245 | 22 | I#/items/113 | Ready for test | 2026-10-16T15:32:20.848+0800 | D detail: D#/items/0 |
-| MOS-1306 | 23 | I#/items/114 | Ready for test | 2026-10-16T17:06:48.457+0800 | D detail: D#/items/1 |
-| MOS-1381 | 24 | I#/items/115 | Development | 2026-10-16T19:20:14.172+0800 | Index only |
+| Key      | H child position | I locator    | Observed status (I) | Updated (I; verbatim)        | Detail coverage      |
+| -------- | ---------------: | ------------ | ------------------- | ---------------------------- | -------------------- |
+| MOS-802  |                0 | I#/items/91  | CLOSED              | 2026-09-16T18:08:11.814+0800 | Index only           |
+| MOS-803  |                1 | I#/items/92  | CLOSED              | 2026-09-16T18:08:14.028+0800 | Index only           |
+| MOS-804  |                2 | I#/items/93  | CLOSED              | 2026-09-16T18:08:20.184+0800 | Index only           |
+| MOS-805  |                3 | I#/items/94  | CLOSED              | 2026-09-16T18:08:26.665+0800 | Index only           |
+| MOS-806  |                4 | I#/items/95  | CLOSED              | 2026-09-16T18:08:31.129+0800 | Index only           |
+| MOS-811  |                5 | I#/items/96  | Backlog             | 2026-10-09T15:08:19.171+0800 | Index only           |
+| MOS-809  |                6 | I#/items/97  | Ready for test      | 2026-10-09T15:08:35.352+0800 | Index only           |
+| MOS-808  |                7 | I#/items/98  | CLOSED              | 2026-10-16T14:16:08.544+0800 | Index only           |
+| MOS-807  |                8 | I#/items/99  | Backlog             | 2026-10-15T14:38:33.569+0800 | Index only           |
+| MOS-810  |                9 | I#/items/100 | Hold                | 2026-10-09T15:08:24.131+0800 | Index only           |
+| MOS-859  |               10 | I#/items/101 | CLOSED              | 2026-10-13T21:35:28.306+0800 | Index only           |
+| MOS-907  |               11 | I#/items/102 | Ready for test      | 2026-10-09T15:03:47.700+0800 | Index only           |
+| MOS-909  |               12 | I#/items/103 | Ready for test      | 2026-10-09T15:03:58.003+0800 | Index only           |
+| MOS-935  |               13 | I#/items/104 | Ready for test      | 2026-10-09T15:05:45.382+0800 | Index only           |
+| MOS-942  |               14 | I#/items/105 | Ready for test      | 2026-10-09T15:05:48.352+0800 | Index only           |
+| MOS-929  |               15 | I#/items/106 | Ready for test      | 2026-10-09T15:05:22.114+0800 | Index only           |
+| MOS-933  |               16 | I#/items/107 | Ready for test      | 2026-10-09T15:05:40.689+0800 | Index only           |
+| MOS-1119 |               17 | I#/items/108 | Ready for test      | 2026-10-09T15:04:31.809+0800 | Index only           |
+| MOS-1120 |               18 | I#/items/109 | CLOSED              | 2026-10-09T15:04:35.341+0800 | Index only           |
+| MOS-1141 |               19 | I#/items/110 | Ready for test      | 2026-10-12T20:10:06.627+0800 | Index only           |
+| MOS-1153 |               20 | I#/items/111 | Review              | 2026-10-12T16:03:02.851+0800 | Index only           |
+| MOS-1157 |               21 | I#/items/112 | Ready for test      | 2026-10-13T18:05:35.223+0800 | Index only           |
+| MOS-1245 |               22 | I#/items/113 | Ready for test      | 2026-10-16T15:32:20.848+0800 | D detail: D#/items/0 |
+| MOS-1306 |               23 | I#/items/114 | Ready for test      | 2026-10-16T17:06:48.457+0800 | D detail: D#/items/1 |
+| MOS-1381 |               24 | I#/items/115 | Development         | 2026-10-16T19:20:14.172+0800 | Index only           |
 
 ### Supplementary snapshots (not replacements for I)
 

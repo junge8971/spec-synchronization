@@ -67,14 +67,14 @@ The report wiki §1.2 publishes exactly:
 
 Exactly six UI rows lack report-field rows:
 
-| UI row | Missing concept | Dialog-only evidence |
-|---|---|---|
-| 4 | Authorization | `UserResponse.authorization`, `authorized_at` |
-| 6 | Participants | `DialogCardResponse.participants` |
-| 13 | Dialog steps | `step_count`, distinct from `skill_step_count` |
-| 14 | Attachments | `attachment_counts.total` |
-| 15 | Attachments to operator | `attachment_counts.to_operator` |
-| 18 | Assistant answer ratings | `messages[].rating`, skill/subsystem authors |
+| UI row | Missing concept          | Dialog-only evidence                           |
+| ------ | ------------------------ | ---------------------------------------------- |
+| 4      | Authorization            | `UserResponse.authorization`, `authorized_at`  |
+| 6      | Participants             | `DialogCardResponse.participants`              |
+| 13     | Dialog steps             | `step_count`, distinct from `skill_step_count` |
+| 14     | Attachments              | `attachment_counts.total`                      |
+| 15     | Attachments to operator  | `attachment_counts.to_operator`                |
+| 18     | Assistant answer ratings | `messages[].rating`, skill/subsystem authors   |
 
 These are **six absent rows, not six sufficient additions**:
 

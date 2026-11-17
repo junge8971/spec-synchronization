@@ -1,9 +1,11 @@
 # SKILL-DOMAINS — bounded implementation audit
 
 ## Result
+
 HEAD verified: `bc0d9800f25a90989b9c73c76f91996f8300f1d3` (matches assignment). Existing domain CRUD has mounted implementation and written tests; this is not feature completion, executed-test or deployment evidence. **Necessary correction: attach the concrete read-adapter/label discrepancy below to the existing domain-zone reconciliation handoff, not a duplicate CRUD plan.** Keep fixed selection, uniqueness/address deferrals and PUT/session boundaries unchanged.
 
 ## Scenario → implementation → mock/tests → planning
+
 Paths below are repository-relative; named functions/test titles are exact locators.
 
 - **Server registry/count/navigation; main spec `Server-backed domain registry` and its two scenarios:** `app/pages/skills/ui/skills-page.tsx:31–34` mounts `SkillDomainsRegistry`; `app/application/constants/route-access.constants.ts:17` requires domain-view for the tab. `app/widgets/skill-domains-registry/ui/skill-domains-registry.tsx` uses `domain_page`, server pagination/skills_count, separate error/retry and empty display, and clean `/skills?domain_id=<id>` links. `getSkillDomains` in `app/entities/skill-domain/api/skill-domain-client.ts` requests limit 10/offset and validates response; `mocks/domains-skills.mjs#get_domain_list_api_control_api_skills_v1_domains_get` filters before server-style paging. Written `skill-domains-registry.test.tsx` tests “shows server totals, both zones and full long data; links to a clean skills filter”, page/back navigation, error→retry→empty; client tests cover empty pages, detail and invalid counts. Existing archive `2026-10-01-skills-prototype-alignment/tasks.md` 9.1–9.3 already owns these requirements: **no new baseline task**.
@@ -23,11 +25,13 @@ Accepted documentary inputs plus their reviews establish string wire representat
 Recommended planning delta is only this implementation/test mapping and read-boundary regression candidate attached to the accepted domain-zone continuation candidate. Prior accepted report's no-active-owner finding remains bounded to its inventory; this audit does not claim universal task absence. Capability-owner/backend clarification remains required for selector expansion and inactive updates; known read/validation/no-loss planning need not wait for it. Main/archived specs and all checkboxes unchanged.
 
 ## Authority and current local input hashes
+
 Current local SHA256 only; OpenSpec is Git-ignored, no git-show or historical byte-equality claim. Complete main spec, both relevant archive proposal/design/tasks/domain deltas read; broader archive material was not used for decisions.
 
 `openspec/specs/skill-domain-management/spec.md`: `b5f3ffc7329e9315b94484b0ce0333711634708779cd3b07fba734fdbbb66f25`
 
 Under `openspec/changes/reconcile-control-center-backlog/audit/`:
+
 - `work-items/G2-OPTIONAL-DOMAINS-SEVEN.md`: `9720c147622d55b007071126202799405226f607c8935d431761f980c476e89a`
 - `reports/SCENARIO-DOMAIN-ZONES.md`: `69fa428e5903a3412f51effc093537edf17f73f5457882f73c58c8144ecf7b77`
 - `reviews/R-DOMAIN-ZONES.md`: `88926fed85c6104f0f865cb672f1a0f609db3c98146d307d7c3edcad369552db`
@@ -35,12 +39,14 @@ Under `openspec/changes/reconcile-control-center-backlog/audit/`:
 - `reviews/R-DELTA-DOMAIN-ZONES-LINKED-CONTRACT.md`: `82f601ab7de1ecfa165c522ecbe77bb844a1394904be95f89ccd63bb92f0e2b3`
 
 Under `openspec/changes/archive/2026-10-01-skills-prototype-alignment/`:
+
 - `proposal.md`: `f7b33ba61bdc76155bbc19b27b5d2dc9038444839e432939f868a77e841bbe10`
 - `design.md`: `f7d7a35a618667b3e1945022610cd3d95e3ae341d84ef889f351ad861aa9e29f`
 - `tasks.md`: `fca3825b59ad64394fc0714e8cb22cc3934eb8e2c7ec73bd9c587d393295e1b2`
 - `specs/skill-domain-management/spec.md`: `1bd93c7d9f69e900e93c075c4f000ab23eed8229255491065c532cf254e08f2e`
 
 Under `openspec/changes/archive/2026-10-13-update-control-center-contracts-put/`:
+
 - `proposal.md`: `513e4dada738d4fe889144aad9b4f06c796279a0dae251f5b283a47a199f0a3d`
 - `design.md`: `1fc1af4a37931abb995788bdb4509d4e1b252b9ba84315f96fe9eb3e729aa4e2`
 - `tasks.md`: `98c6c15e913ab1c221493ec8969c76360e65db3189c71e250570bbc2ab2e1c1f`
@@ -49,6 +55,7 @@ Under `openspec/changes/archive/2026-10-13-update-control-center-contracts-put/`
 Reviews' corrections retained: do not block known read/validation planning on lookup approval; linked-report D-002 locator is corrected by its review to decisions.md:25–34, especially 31 (not independently re-read here). No uninspected index attestation: `git diff --cached --name-only` returned empty in this audit.
 
 ## Limits
+
 Only mounted domain CRUD and connected tests/mock portions assessed. No skill registry-wide or optional KB/AB audit, no global FSD/session review. Shared transport internals, actual backend responses, migration/inactive fixtures, zone directory contents and deployment unverified. Tests are written and read, never run; archive pass claims are historical documentary statements only. No network/browser/build/typegen/tests/credentials/commits/nested agents or project edits. Only this external report written.
 
 ```acceptance-report

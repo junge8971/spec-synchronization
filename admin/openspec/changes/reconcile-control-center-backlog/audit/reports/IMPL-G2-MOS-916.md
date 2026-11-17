@@ -61,17 +61,17 @@ export default function ReportsRoute() {
 
 States mean static local source coverage, not passing tests/deployment.
 
-| Active obligation | State | Evidence / distinction |
-| --- | --- | --- |
-| Section entry/link/title | Implemented, shell only | Descriptor 104–113, framework route 6–9, navigation entry 36–46; navigation test 26–28 and config test 52,71,88. |
-| Templates default, builder explicit, missing/empty/unknown fallback; history/query/keyboard | Absent from mounted reports | Active spec 7–24; leaf/placeholder contain no tabs; tab registry 1–27 contains only skills/teams/operations. |
-| Builder breadcrumb/direct link | Absent; base section crumb exists | Spec 11–19; breadcrumb function 42–46 requires missing report tabs. Layout test 33–41 expects one `Отчёты` crumb only. |
-| Explicit unavailable catalog/explanation | Absent | Spec 26–33 requires `Не поддерживается текущим API` and list/open/export limitations; generic heading is not this state. |
-| Accessible “Открыть конструктор” transition without execution | Absent | Spec 35–38; complete leaf has no action/builder. Opening must not be credited as execution. |
-| Draft survives tabs; no early constructor-directory loading | Absent in mounted page; integration unverified | Spec 40–47, tasks 1.1/2.2; no draft or panels here. No positive persistence/lazy-loading assurance from a missing implementation. |
-| No fake cards/count/last-run, template requests or browser scheduling | Locally preserved by absence, not feature delivery | Complete leaf/import path contains none. Not a whole-app request/timer or backend claim. |
-| Report-specific component assertions | Absent in stated search boundaries | Existing tests cover shell/neighboring sections, not unavailable catalog or draft. |
-| Runtime/deployment | Unknown | No execution evidence; implementation checks unrun. |
+| Active obligation                                                                           | State                                              | Evidence / distinction                                                                                                            |
+| ------------------------------------------------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Section entry/link/title                                                                    | Implemented, shell only                            | Descriptor 104–113, framework route 6–9, navigation entry 36–46; navigation test 26–28 and config test 52,71,88.                  |
+| Templates default, builder explicit, missing/empty/unknown fallback; history/query/keyboard | Absent from mounted reports                        | Active spec 7–24; leaf/placeholder contain no tabs; tab registry 1–27 contains only skills/teams/operations.                      |
+| Builder breadcrumb/direct link                                                              | Absent; base section crumb exists                  | Spec 11–19; breadcrumb function 42–46 requires missing report tabs. Layout test 33–41 expects one `Отчёты` crumb only.            |
+| Explicit unavailable catalog/explanation                                                    | Absent                                             | Spec 26–33 requires `Не поддерживается текущим API` and list/open/export limitations; generic heading is not this state.          |
+| Accessible “Открыть конструктор” transition without execution                               | Absent                                             | Spec 35–38; complete leaf has no action/builder. Opening must not be credited as execution.                                       |
+| Draft survives tabs; no early constructor-directory loading                                 | Absent in mounted page; integration unverified     | Spec 40–47, tasks 1.1/2.2; no draft or panels here. No positive persistence/lazy-loading assurance from a missing implementation. |
+| No fake cards/count/last-run, template requests or browser scheduling                       | Locally preserved by absence, not feature delivery | Complete leaf/import path contains none. Not a whole-app request/timer or backend claim.                                          |
+| Report-specific component assertions                                                        | Absent in stated search boundaries                 | Existing tests cover shell/neighboring sections, not unavailable catalog or draft.                                                |
+| Runtime/deployment                                                                          | Unknown                                            | No execution evidence; implementation checks unrun.                                                                               |
 
 **Prerequisite gate:** `openspec/changes/mos-916-report-templates/tasks.md:3` says stop implementation if MOS-1015 page/draft base is missing. The mounted placeholder demonstrates that base is not wired here. Person/team owner unknown; prerequisite owner is the MOS-1015 change, dependent owner MOS-916. Unblock with the agreed base mounted in the target branch and component evidence, then separately scoped MOS-916 work. This is an implementation gate, not a blocker to this static report. No constructor internals audited.
 
@@ -79,16 +79,16 @@ States mean static local source coverage, not passing tests/deployment.
 
 Candidate meanings/limits are inherited from `SCENARIO-MOS-916.md:42–51,57–85` and `R-SCENARIO-MOS-916.md:25–34,48–68` under the audit paths above. Requirements/API extraction was not repeated.
 
-| Candidate | Blocked criteria | Mounted implementation state |
-| --- | --- | --- |
-| C916-01 available catalog | B916.1 | Absent: no list/cards/loading/success-empty/retry. Active unavailable UI is a separate absent obligation. |
-| C916-02 schedule/manual metadata | B916.2 | Absent: no template metadata rendering. |
-| C916-03 actual last-run actor/date/rows | B916.2 | Absent: no last-run data/display in mounted path. |
-| C916-04 never run versus zero rows | B916.2 | Absent: no null/zero distinction exercised by UI or located report assertions. |
-| C916-05 selected-template open, not execute | B916.3 | Absent: no selected ID/detail/parameter transfer. Even active tab-only transition absent. Opening must not manufacture last_run. |
-| C916-06 selected-template export | B916.4 | Absent from mounted path; CSV transport/backend not inspected. |
-| C916-07 no browser scheduler | B916.2 + active task 3.2 | No report scheduler in complete mounted leaf. Negative constraint locally preserved, not scheduling-service delivery or whole-app timer absence. |
-| C916-08 object/error boundary | B916.5 | Absent: no template detail/export/error/draft preservation. Shell denial is not object 404. |
+| Candidate                                   | Blocked criteria         | Mounted implementation state                                                                                                                     |
+| ------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| C916-01 available catalog                   | B916.1                   | Absent: no list/cards/loading/success-empty/retry. Active unavailable UI is a separate absent obligation.                                        |
+| C916-02 schedule/manual metadata            | B916.2                   | Absent: no template metadata rendering.                                                                                                          |
+| C916-03 actual last-run actor/date/rows     | B916.2                   | Absent: no last-run data/display in mounted path.                                                                                                |
+| C916-04 never run versus zero rows          | B916.2                   | Absent: no null/zero distinction exercised by UI or located report assertions.                                                                   |
+| C916-05 selected-template open, not execute | B916.3                   | Absent: no selected ID/detail/parameter transfer. Even active tab-only transition absent. Opening must not manufacture last_run.                 |
+| C916-06 selected-template export            | B916.4                   | Absent from mounted path; CSV transport/backend not inspected.                                                                                   |
+| C916-07 no browser scheduler                | B916.2 + active task 3.2 | No report scheduler in complete mounted leaf. Negative constraint locally preserved, not scheduling-service delivery or whole-app timer absence. |
+| C916-08 object/error boundary               | B916.5                   | Absent: no template detail/export/error/draft preservation. Shell denial is not object 404.                                                      |
 
 B916.1–5 remain blocked pending agreed integration operations/DTO/error/access semantics and separate spec/tasks extension (`design.md:64–74`, `tasks.md:16–18`). Product/API/delivery individuals unknown. Documentary reports record a wiki publication, absent operations in their saved OpenAPI snapshot and richer B916.3 parameters needing owner reconciliation. These remain attributed documentary findings, not new API/server checks. Do not invent requests, derive grants from roles, substitute response templates, activate scope, reopen historical auth approval, or infer demo/fake-provider delivery. Even a completed unavailable UI would not satisfy B916.1–5.
 

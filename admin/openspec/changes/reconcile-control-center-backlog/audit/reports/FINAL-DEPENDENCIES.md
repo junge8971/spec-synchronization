@@ -26,26 +26,242 @@ Finite ledger of **17 established open/conditional gate groups**. Groups deliber
   "status": "candidate-partial",
   "referenceBase": "openspec/changes/reconcile-control-center-backlog/audit",
   "decisionFile": "decisions.md",
-  "cutoff": {"head": "bc0d9800f25a90989b9c73c76f91996f8300f1d3", "lastDecision": "D-068", "coverageRevision": 46, "externalFreshness": "unverified; manifest sourceCutoff null"},
+  "cutoff": {
+    "head": "bc0d9800f25a90989b9c73c76f91996f8300f1d3",
+    "lastDecision": "D-068",
+    "coverageRevision": 46,
+    "externalFreshness": "unverified; manifest sourceCutoff null"
+  },
   "coverageCountsAreNotBlockerCounts": true,
   "edges": [
-    {"id":"DEP-01","prerequisite":"Explicit approved Q1 answer: unknown question type with nonempty options","dependent":"MOS-1254 opaque-options serialization and dependent planning conclusions","scope":["planning","implementation"],"kind":"product-policy","status":"open","owner":"unknown product decision owner; user ruling required","removalCondition":"Record preserve/omit/block policy or existing approved ruling, then separately verify backend compatibility; retain-draft-and-block is only an unadopted candidate","evidence":["decisions.md#D-066","decisions.md#D-067","decisions.md#D-068"]},
-    {"id":"DEP-02","prerequisite":"Reconcile brief manual-tagging WON'T applicability with recorded MOS-1044 approval","dependent":"Only changes relying on that source reconciliation","scope":["planning"],"kind":"documentary-applicability","status":"open","owner":"unknown product/document owner","removalCondition":"Evidence explicit exception, supersession or distinct-stage applicability; do not disable feature or reopen local write-contract approval meanwhile","evidence":["decisions.md#D-063","reports/SPEC-G2-DIALOG-CATEGORY.md:59–69 (SPEC-G2-DC-02)"]},
-    {"id":"DEP-03","prerequisite":"Whole-current-input binding, disclosure/normalization and agreed-send validation decision","dependent":"MOS-1018 gate 1.1 and phrase-conflict activation","scope":["implementation","integration"],"kind":"existing-consumer-contract-gate","status":"open","owner":"mos-1018-skill-phrase-conflicts; backend/product counterparts unknown","removalCondition":"Satisfy existing gate 1.1 with accepted consumer semantics; generic version/idempotency and single-phrase preflight do not suffice","evidence":["decisions.md#D-002","decisions.md#D-003","decisions.md#D-006","publication/WRITE-MOS-1018/acceptance.json#/limitations"]},
-    {"id":"DEP-04","prerequisite":"Authoritative domain-zone lookup and inactive-code resubmission semantics","dependent":"New dynamic domain-zone selections and update acceptance","scope":["implementation","integration"],"kind":"contract","status":"open","owner":"domain-zone owner; exact accountable person unknown","removalCondition":"Identify exact lookup/inactive policy and accepted update behavior; truthful display of returned inactive codes remains independent","evidence":["decisions.md#D-002","decisions.md#D-007"]},
-    {"id":"DEP-05","prerequisite":"Existing configurator activation agreement and reconciliation of wiki versus published contracts","dependent":"Future MOS-959 configurator activation","scope":["planning","implementation","integration"],"kind":"existing-scope-and-contract-gate","status":"open","owner":"unknown configurator product/contract owner","removalCondition":"Resolve enums/fallback/defaults/combined-versus-separate persistence and outstanding UI choices through existing scope process; explicit existing configurator deferral unchanged","evidence":["decisions.md#D-004","decisions.md#D-005"]},
-    {"id":"DEP-06","prerequisite":"Agreed token lifecycle/disclosure semantics and sandbox binding/sync evidence","dependent":"MOS-1023 token actions and MOS-960/961/962 sandbox continuation","scope":["implementation","integration"],"kind":"existing-token-and-sandbox-gates","status":"open","owner":"MOS-1023 token owner; sandbox counterpart unknown","removalCondition":"Meet existing token gate and separately establish tested session/revision binding, readiness and sync/revocation semantics; published reissue/revoke operations alone do not establish them","evidence":["decisions.md#D-012","decisions.md#D-023","decisions.md#D-040"]},
-    {"id":"DEP-07","prerequisite":"Agreed history Query API reader contract","dependent":"MOS-1031 skill audit-history reader","scope":["implementation","integration"],"kind":"reader-contract","status":"open","owner":"mos-1031-skill-audit-history","removalCondition":"Meet reader criteria for stable object identity, routing/credentials, DTO/redaction/event projection, pagination/retention/consistency; publication service contract or action receipt is not history read acceptance","evidence":["decisions.md#D-015","decisions.md#D-016","decisions.md#D-050"]},
-    {"id":"DEP-08","prerequisite":"Report contract/publication reconciliation and accepted field/selection/preview/metrics mappings","dependent":"MOS-916 B916, MOS-919 export, MOS-1015 backend builder and MOS-1016 persistence/schedule continuations","scope":["implementation","integration"],"kind":"existing-report-contract-gates","status":"open","owner":"respective MOS-916/919/1015/1016 owners; backend counterpart unknown","removalCondition":"Resolve wiki six-operation versus saved OpenAPI disagreement, 24-UI/18-wire mappings and semantics, richer roundtrip, preview limits and actual write/scheduler contract; retain unavailable/local-draft scope until existing criteria met","evidence":["decisions.md#D-013","decisions.md#D-036","reports/SCENARIO-MOS-916.md:44–59","reports/SCENARIO-MOS-1015.md:83–112","reports/SCENARIO-MOS-1016.md:107"]},
-    {"id":"DEP-09","prerequisite":"MOS-1015 mounted report page/local draft entry","dependent":"MOS-916 active unavailable-template navigation","scope":["implementation"],"kind":"local-implementation-prerequisite","status":"open","owner":"MOS-1015 and MOS-916 implementation owners","removalCondition":"Provide the existing planned mounted page/draft entry and unavailable-template UI; static shell/generic placeholder is insufficient; distinct from full B916 continuation","evidence":["decisions.md#D-061","reports/IMPL-G2-MOS-916.md"]},
-    {"id":"DEP-10","prerequisite":"Accepted consumer semantics and published operational/responsible contracts where still missing","dependent":"MOS-1025/MOS-1026 monitoring and operational-information integration","scope":["implementation","integration"],"kind":"existing-read-integration-gates","status":"open","owner":"MOS-1025/MOS-1026","removalCondition":"Resolve existing consumer mapping and read criteria; incident GET is already published and must not be called absent; dashboard metrics are not substitutes for per-skill monitoring; conditional writes/editors remain outside approved read-only scope","evidence":["decisions.md#D-014","decisions.md#D-034","decisions.md#D-049"]},
-    {"id":"DEP-11","prerequisite":"Owning product/contract reconciliation for operation-specific unresolved semantics","dependent":"Future MOS-920/922/923 operations activation","scope":["planning","implementation","integration"],"kind":"existing-owner-contract-boundary","status":"open","owner":"unknown accountable owner; MOS-922 frontend/MOS-754 contract roles referenced","removalCondition":"Resolve published namespace/consumer semantics, validation and applicable ownership without client priority invention; author 'defer' means no action authorized, not approved postponement","evidence":["decisions.md#D-011","decisions.md#D-040","reports/SCENARIO-MOS-922.md:88–104"]},
-    {"id":"DEP-12","prerequisite":"Separate explicit implementation/apply authorization","dependent":"Execution of integrated mos-909-restore-approved-lifecycle-actions plan","scope":["implementation"],"kind":"implementation-authority","status":"open","owner":"user; existing corrective-change owner","removalCondition":"Explicit apply request within approved three-command plan; do not reopen already resolved three-versus-seven policy question","evidence":["decisions.md#D-020","decisions.md#D-021","publication/WRITE-MOS-909-RESTORE/acceptance.json#/implementationAuthorized"]},
-    {"id":"DEP-13","prerequisite":"Missing material source explanation, if required by the specific claim","dependent":"Only corresponding source-dependent verification","scope":["planning"],"kind":"availability-limit","status":"conditional","owner":"supervisor/source owner; underlying document owner unknown","removalCondition":"Resolve exact material question within authority or retain explicit unknown; D-060 accepted bounded G1 limitations, not requirement exclusions or a universal collection queue","evidence":["decisions.md#D-056","decisions.md#D-059","decisions.md#D-060","reports/G1-DISPOSITION-RECEIPT.md (E01–E13)"]},
-    {"id":"DEP-14","prerequisite":"Current input versions/hashes and applicable external freshness check","dependent":"Source-sensitive publication/reuse of accepted findings","scope":["planning","integration"],"kind":"freshness","status":"conditional","owner":"integration owner","removalCondition":"Compare current inputs; recheck affected stale decisions; if external freshness cannot be verified, record inability and keep dependent change blocked rather than treat old source as current","evidence":["../design.md:111–117 (Publication isolation and resume)","manifest.json#/sourceCutoff","decisions.md#D-060","decisions.md#D-068"]},
-    {"id":"DEP-15","prerequisite":"Passing formatting gate with honest baseline separation","dependent":"Unqualified audit publication/delivery gate acceptance","scope":["integration","release"],"kind":"validation","status":"open","owner":"integration owner","removalCondition":"Resolve/revalidate applicable format failure without mass rewriting hashed evidence or suppressing rules; latest recorded failure 382 files, prior 337 and 149 retained; no claim all pre-existed","evidence":["decisions.md#D-021","decisions.md#D-062","decisions.md#D-068","publication/WRITE-G2-FEEDBACK/acceptance.json#/checks/formatCheck"]},
-    {"id":"DEP-16","prerequisite":"Scenario-specific actual real-environment acceptance evidence","dependent":"Claims of working integration or released business behavior","scope":["integration","release"],"kind":"deployment-evidence","status":"open","owner":"respective feature/release owners; named persons unknown","removalCondition":"Meet existing scenario acceptance with authorized evidence; published API, local mocks, static tests, Jira status and historical approvals are not current deployment verification; not a blanket new product-approval gate","evidence":["../specs/control-center-backlog-reconciliation/spec.md:55–64","decisions.md#D-011","decisions.md#D-013","decisions.md#D-066","decisions.md#D-067"]},
-    {"id":"DEP-17","prerequisite":"Complete required evidence joins/dispositions and accepted combined audit publication","dependent":"Global G2–G5/full-backlog-completion claim","scope":["planning","integration","release"],"kind":"audit-coverage","status":"open","owner":"supervisor/integration owner","removalCondition":"Meet governing tasks against actual finite populations; preserve unexamined and partial labels until supported; this candidate and local publication receipts alone do not close global tasks","evidence":["../tasks.md:18–45","coverage-partial-r46.json","decisions.md#D-063","decisions.md#D-068"]}
+    {
+      "id": "DEP-01",
+      "prerequisite": "Explicit approved Q1 answer: unknown question type with nonempty options",
+      "dependent": "MOS-1254 opaque-options serialization and dependent planning conclusions",
+      "scope": ["planning", "implementation"],
+      "kind": "product-policy",
+      "status": "open",
+      "owner": "unknown product decision owner; user ruling required",
+      "removalCondition": "Record preserve/omit/block policy or existing approved ruling, then separately verify backend compatibility; retain-draft-and-block is only an unadopted candidate",
+      "evidence": ["decisions.md#D-066", "decisions.md#D-067", "decisions.md#D-068"]
+    },
+    {
+      "id": "DEP-02",
+      "prerequisite": "Reconcile brief manual-tagging WON'T applicability with recorded MOS-1044 approval",
+      "dependent": "Only changes relying on that source reconciliation",
+      "scope": ["planning"],
+      "kind": "documentary-applicability",
+      "status": "open",
+      "owner": "unknown product/document owner",
+      "removalCondition": "Evidence explicit exception, supersession or distinct-stage applicability; do not disable feature or reopen local write-contract approval meanwhile",
+      "evidence": ["decisions.md#D-063", "reports/SPEC-G2-DIALOG-CATEGORY.md:59–69 (SPEC-G2-DC-02)"]
+    },
+    {
+      "id": "DEP-03",
+      "prerequisite": "Whole-current-input binding, disclosure/normalization and agreed-send validation decision",
+      "dependent": "MOS-1018 gate 1.1 and phrase-conflict activation",
+      "scope": ["implementation", "integration"],
+      "kind": "existing-consumer-contract-gate",
+      "status": "open",
+      "owner": "mos-1018-skill-phrase-conflicts; backend/product counterparts unknown",
+      "removalCondition": "Satisfy existing gate 1.1 with accepted consumer semantics; generic version/idempotency and single-phrase preflight do not suffice",
+      "evidence": [
+        "decisions.md#D-002",
+        "decisions.md#D-003",
+        "decisions.md#D-006",
+        "publication/WRITE-MOS-1018/acceptance.json#/limitations"
+      ]
+    },
+    {
+      "id": "DEP-04",
+      "prerequisite": "Authoritative domain-zone lookup and inactive-code resubmission semantics",
+      "dependent": "New dynamic domain-zone selections and update acceptance",
+      "scope": ["implementation", "integration"],
+      "kind": "contract",
+      "status": "open",
+      "owner": "domain-zone owner; exact accountable person unknown",
+      "removalCondition": "Identify exact lookup/inactive policy and accepted update behavior; truthful display of returned inactive codes remains independent",
+      "evidence": ["decisions.md#D-002", "decisions.md#D-007"]
+    },
+    {
+      "id": "DEP-05",
+      "prerequisite": "Existing configurator activation agreement and reconciliation of wiki versus published contracts",
+      "dependent": "Future MOS-959 configurator activation",
+      "scope": ["planning", "implementation", "integration"],
+      "kind": "existing-scope-and-contract-gate",
+      "status": "open",
+      "owner": "unknown configurator product/contract owner",
+      "removalCondition": "Resolve enums/fallback/defaults/combined-versus-separate persistence and outstanding UI choices through existing scope process; explicit existing configurator deferral unchanged",
+      "evidence": ["decisions.md#D-004", "decisions.md#D-005"]
+    },
+    {
+      "id": "DEP-06",
+      "prerequisite": "Agreed token lifecycle/disclosure semantics and sandbox binding/sync evidence",
+      "dependent": "MOS-1023 token actions and MOS-960/961/962 sandbox continuation",
+      "scope": ["implementation", "integration"],
+      "kind": "existing-token-and-sandbox-gates",
+      "status": "open",
+      "owner": "MOS-1023 token owner; sandbox counterpart unknown",
+      "removalCondition": "Meet existing token gate and separately establish tested session/revision binding, readiness and sync/revocation semantics; published reissue/revoke operations alone do not establish them",
+      "evidence": ["decisions.md#D-012", "decisions.md#D-023", "decisions.md#D-040"]
+    },
+    {
+      "id": "DEP-07",
+      "prerequisite": "Agreed history Query API reader contract",
+      "dependent": "MOS-1031 skill audit-history reader",
+      "scope": ["implementation", "integration"],
+      "kind": "reader-contract",
+      "status": "open",
+      "owner": "mos-1031-skill-audit-history",
+      "removalCondition": "Meet reader criteria for stable object identity, routing/credentials, DTO/redaction/event projection, pagination/retention/consistency; publication service contract or action receipt is not history read acceptance",
+      "evidence": ["decisions.md#D-015", "decisions.md#D-016", "decisions.md#D-050"]
+    },
+    {
+      "id": "DEP-08",
+      "prerequisite": "Report contract/publication reconciliation and accepted field/selection/preview/metrics mappings",
+      "dependent": "MOS-916 B916, MOS-919 export, MOS-1015 backend builder and MOS-1016 persistence/schedule continuations",
+      "scope": ["implementation", "integration"],
+      "kind": "existing-report-contract-gates",
+      "status": "open",
+      "owner": "respective MOS-916/919/1015/1016 owners; backend counterpart unknown",
+      "removalCondition": "Resolve wiki six-operation versus saved OpenAPI disagreement, 24-UI/18-wire mappings and semantics, richer roundtrip, preview limits and actual write/scheduler contract; retain unavailable/local-draft scope until existing criteria met",
+      "evidence": [
+        "decisions.md#D-013",
+        "decisions.md#D-036",
+        "reports/SCENARIO-MOS-916.md:44–59",
+        "reports/SCENARIO-MOS-1015.md:83–112",
+        "reports/SCENARIO-MOS-1016.md:107"
+      ]
+    },
+    {
+      "id": "DEP-09",
+      "prerequisite": "MOS-1015 mounted report page/local draft entry",
+      "dependent": "MOS-916 active unavailable-template navigation",
+      "scope": ["implementation"],
+      "kind": "local-implementation-prerequisite",
+      "status": "open",
+      "owner": "MOS-1015 and MOS-916 implementation owners",
+      "removalCondition": "Provide the existing planned mounted page/draft entry and unavailable-template UI; static shell/generic placeholder is insufficient; distinct from full B916 continuation",
+      "evidence": ["decisions.md#D-061", "reports/IMPL-G2-MOS-916.md"]
+    },
+    {
+      "id": "DEP-10",
+      "prerequisite": "Accepted consumer semantics and published operational/responsible contracts where still missing",
+      "dependent": "MOS-1025/MOS-1026 monitoring and operational-information integration",
+      "scope": ["implementation", "integration"],
+      "kind": "existing-read-integration-gates",
+      "status": "open",
+      "owner": "MOS-1025/MOS-1026",
+      "removalCondition": "Resolve existing consumer mapping and read criteria; incident GET is already published and must not be called absent; dashboard metrics are not substitutes for per-skill monitoring; conditional writes/editors remain outside approved read-only scope",
+      "evidence": ["decisions.md#D-014", "decisions.md#D-034", "decisions.md#D-049"]
+    },
+    {
+      "id": "DEP-11",
+      "prerequisite": "Owning product/contract reconciliation for operation-specific unresolved semantics",
+      "dependent": "Future MOS-920/922/923 operations activation",
+      "scope": ["planning", "implementation", "integration"],
+      "kind": "existing-owner-contract-boundary",
+      "status": "open",
+      "owner": "unknown accountable owner; MOS-922 frontend/MOS-754 contract roles referenced",
+      "removalCondition": "Resolve published namespace/consumer semantics, validation and applicable ownership without client priority invention; author 'defer' means no action authorized, not approved postponement",
+      "evidence": ["decisions.md#D-011", "decisions.md#D-040", "reports/SCENARIO-MOS-922.md:88–104"]
+    },
+    {
+      "id": "DEP-12",
+      "prerequisite": "Separate explicit implementation/apply authorization",
+      "dependent": "Execution of integrated mos-909-restore-approved-lifecycle-actions plan",
+      "scope": ["implementation"],
+      "kind": "implementation-authority",
+      "status": "open",
+      "owner": "user; existing corrective-change owner",
+      "removalCondition": "Explicit apply request within approved three-command plan; do not reopen already resolved three-versus-seven policy question",
+      "evidence": [
+        "decisions.md#D-020",
+        "decisions.md#D-021",
+        "publication/WRITE-MOS-909-RESTORE/acceptance.json#/implementationAuthorized"
+      ]
+    },
+    {
+      "id": "DEP-13",
+      "prerequisite": "Missing material source explanation, if required by the specific claim",
+      "dependent": "Only corresponding source-dependent verification",
+      "scope": ["planning"],
+      "kind": "availability-limit",
+      "status": "conditional",
+      "owner": "supervisor/source owner; underlying document owner unknown",
+      "removalCondition": "Resolve exact material question within authority or retain explicit unknown; D-060 accepted bounded G1 limitations, not requirement exclusions or a universal collection queue",
+      "evidence": [
+        "decisions.md#D-056",
+        "decisions.md#D-059",
+        "decisions.md#D-060",
+        "reports/G1-DISPOSITION-RECEIPT.md (E01–E13)"
+      ]
+    },
+    {
+      "id": "DEP-14",
+      "prerequisite": "Current input versions/hashes and applicable external freshness check",
+      "dependent": "Source-sensitive publication/reuse of accepted findings",
+      "scope": ["planning", "integration"],
+      "kind": "freshness",
+      "status": "conditional",
+      "owner": "integration owner",
+      "removalCondition": "Compare current inputs; recheck affected stale decisions; if external freshness cannot be verified, record inability and keep dependent change blocked rather than treat old source as current",
+      "evidence": [
+        "../design.md:111–117 (Publication isolation and resume)",
+        "manifest.json#/sourceCutoff",
+        "decisions.md#D-060",
+        "decisions.md#D-068"
+      ]
+    },
+    {
+      "id": "DEP-15",
+      "prerequisite": "Passing formatting gate with honest baseline separation",
+      "dependent": "Unqualified audit publication/delivery gate acceptance",
+      "scope": ["integration", "release"],
+      "kind": "validation",
+      "status": "open",
+      "owner": "integration owner",
+      "removalCondition": "Resolve/revalidate applicable format failure without mass rewriting hashed evidence or suppressing rules; latest recorded failure 382 files, prior 337 and 149 retained; no claim all pre-existed",
+      "evidence": [
+        "decisions.md#D-021",
+        "decisions.md#D-062",
+        "decisions.md#D-068",
+        "publication/WRITE-G2-FEEDBACK/acceptance.json#/checks/formatCheck"
+      ]
+    },
+    {
+      "id": "DEP-16",
+      "prerequisite": "Scenario-specific actual real-environment acceptance evidence",
+      "dependent": "Claims of working integration or released business behavior",
+      "scope": ["integration", "release"],
+      "kind": "deployment-evidence",
+      "status": "open",
+      "owner": "respective feature/release owners; named persons unknown",
+      "removalCondition": "Meet existing scenario acceptance with authorized evidence; published API, local mocks, static tests, Jira status and historical approvals are not current deployment verification; not a blanket new product-approval gate",
+      "evidence": [
+        "../specs/control-center-backlog-reconciliation/spec.md:55–64",
+        "decisions.md#D-011",
+        "decisions.md#D-013",
+        "decisions.md#D-066",
+        "decisions.md#D-067"
+      ]
+    },
+    {
+      "id": "DEP-17",
+      "prerequisite": "Complete required evidence joins/dispositions and accepted combined audit publication",
+      "dependent": "Global G2–G5/full-backlog-completion claim",
+      "scope": ["planning", "integration", "release"],
+      "kind": "audit-coverage",
+      "status": "open",
+      "owner": "supervisor/integration owner",
+      "removalCondition": "Meet governing tasks against actual finite populations; preserve unexamined and partial labels until supported; this candidate and local publication receipts alone do not close global tasks",
+      "evidence": [
+        "../tasks.md:18–45",
+        "coverage-partial-r46.json",
+        "decisions.md#D-063",
+        "decisions.md#D-068"
+      ]
+    }
   ],
   "cycles": [],
   "cycleAssessment": "No actual prerequisite cycle established in accepted rulings; unexamined graph not certified acyclic.",
@@ -65,12 +281,12 @@ Finite ledger of **17 established open/conditional gate groups**. Groups deliber
 
 Four receipt-backed packages are integrated, affecting **seven business changes** (one new, six existing); these are planning artifacts only:
 
-| Accepted package | Actual integration | Evidence / retained limit |
-|---|---|---|
-| MOS-1018 | Four-artifact documentation correction, historical preflight precision and single-phrase freshness scenario | D-003; `A/publication/WRITE-MOS-1018/acceptance.json`; eight tasks unchecked, gate1.1 open. |
-| MOS-909 restore | New `mos-909-restore-approved-lifecycle-actions` planning package, native metadata plus four artifacts | D-020/D-021; `A/publication/WRITE-MOS-909-RESTORE/acceptance.json`; six tasks unchecked, implementation not authorized. |
-| MOS-1249 | `tasks.md` only, three lines (3,6,14): current export/security, existing handlers, successor baseline | D-061/D-062; `A/publication/WRITE-G2-MOS-1249/acceptance.json`; seven tasks unchecked. |
-| MOS-1254/1255/1257/1259 | Nine files: active-only new type selections/nested errors; preview component suite; label omission/trim/distinct/parsed segments; title/two-level update semantics | D-068; `A/publication/WRITE-G2-FEEDBACK/acceptance.json`; 20 tasks unchecked, Q1 excluded, PUT retained. |
+| Accepted package        | Actual integration                                                                                                                                                 | Evidence / retained limit                                                                                               |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| MOS-1018                | Four-artifact documentation correction, historical preflight precision and single-phrase freshness scenario                                                        | D-003; `A/publication/WRITE-MOS-1018/acceptance.json`; eight tasks unchecked, gate1.1 open.                             |
+| MOS-909 restore         | New `mos-909-restore-approved-lifecycle-actions` planning package, native metadata plus four artifacts                                                             | D-020/D-021; `A/publication/WRITE-MOS-909-RESTORE/acceptance.json`; six tasks unchecked, implementation not authorized. |
+| MOS-1249                | `tasks.md` only, three lines (3,6,14): current export/security, existing handlers, successor baseline                                                              | D-061/D-062; `A/publication/WRITE-G2-MOS-1249/acceptance.json`; seven tasks unchecked.                                  |
+| MOS-1254/1255/1257/1259 | Nine files: active-only new type selections/nested errors; preview component suite; label omission/trim/distinct/parsed segments; title/two-level update semantics | D-068; `A/publication/WRITE-G2-FEEDBACK/acceptance.json`; 20 tasks unchecked, Q1 excluded, PUT retained.                |
 
 Thus **41 feature tasks remain unchecked across those receipts** (8+6+7+20), not 41 newly created tasks. Recorded strict checks passed per receipt; no checks were rerun here. D-065's “not yet integrated” status is superseded only for the exact D-068 package; D-061's recovery-pending statements are superseded by D-062, not erased historically. D-001 also records an already integrated governing design browser-owner adjustment, not a business feature publication.
 

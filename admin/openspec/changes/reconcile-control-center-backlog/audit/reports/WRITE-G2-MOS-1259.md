@@ -33,20 +33,20 @@ Open `O/specs/feedback-saved-filters/spec.md:9` alongside `docs/api/contracts/cr
 
 Computed over complete target bytes; every proposed target is listed. Recheck before integration.
 
-| Repository-relative target | SHA-256 |
-|---|---|
-| `openspec/changes/mos-1259-feedback-saved-filters/design.md` | `ffd8b183f81be81aee20d199b76cc7ad73ad196b604a41ead9d56019778b8e08` |
+| Repository-relative target                                                              | SHA-256                                                            |
+| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `openspec/changes/mos-1259-feedback-saved-filters/design.md`                            | `ffd8b183f81be81aee20d199b76cc7ad73ad196b604a41ead9d56019778b8e08` |
 | `openspec/changes/mos-1259-feedback-saved-filters/specs/feedback-saved-filters/spec.md` | `4e9aee0264a677b7dd13a6d4a3bb2eb2bd648b52be1b877a19e86bc33e36655f` |
 
 Directly inspected CRUD source SHA-256: `4dde67125d36692cb05fcbb9b9b6e842f95717118f999c471cb5e2b393907058`, matching accepted API evidence. Hashing does not establish live freshness.
 
 ## Changed-clause / source / decision mapping
 
-| Candidate clause | Exact evidence and disposition |
-|---|---|
-| Design27: replace “1–150 непробельных символов” with length1–150/not whitespace-only | REQ R02, Jira AC1 (`/items/10/description`, physical102); CRUD747–748; corrected SPEC F2 and original review finding2 support narrow correction without an internal-space ban. D-065 and D-067 authorize this. No trimming, Unicode counting, normalization or new fixtures selected. Existing spec title wording stays unchanged. |
-| Design27: clarify that complete-search submission is the UI update | REQ R15–R16, Jira AC3; existing spec18–19 and design27. API report/review distinguish server optional top-level fields from UI complete-search input. D-066/067 retain both. Only “в UI” is added; no new interaction. |
-| Spec9: top-level omitted `name`/`search` retained; supplied search replaced; omitted nested values default; resource immutable | Direct CRUD827–850, accepted API report semantic joins and review finding2. D-066 resolves the earlier source-only uncertainty; D-067 authorizes exact semantic clarification. Preserves PUT and search replacement rather than treating PUT as whole-resource replacement. |
+| Candidate clause                                                                                                               | Exact evidence and disposition                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Design27: replace “1–150 непробельных символов” with length1–150/not whitespace-only                                           | REQ R02, Jira AC1 (`/items/10/description`, physical102); CRUD747–748; corrected SPEC F2 and original review finding2 support narrow correction without an internal-space ban. D-065 and D-067 authorize this. No trimming, Unicode counting, normalization or new fixtures selected. Existing spec title wording stays unchanged. |
+| Design27: clarify that complete-search submission is the UI update                                                             | REQ R15–R16, Jira AC3; existing spec18–19 and design27. API report/review distinguish server optional top-level fields from UI complete-search input. D-066/067 retain both. Only “в UI” is added; no new interaction.                                                                                                             |
+| Spec9: top-level omitted `name`/`search` retained; supplied search replaced; omitted nested values default; resource immutable | Direct CRUD827–850, accepted API report semantic joins and review finding2. D-066 resolves the earlier source-only uncertainty; D-067 authorizes exact semantic clarification. Preserves PUT and search replacement rather than treating PUT as whole-resource replacement.                                                        |
 
 No proposal/task edits: all five owner tasks remain unchecked. Existing duplicate-name/new-ID, selected-ID targeting, full restoration, no-partial-apply, independent pagination, errors, permissions and release evidence clauses suffice and remain intact. No repeated fixtures/error/pagination tasks, mock task queue, endpoints, Jira edits, Q1 policy, answer API, role-enforced mocks or global closure.
 
@@ -57,19 +57,19 @@ No proposal/task edits: all five owner tasks remain unchecked. Existing duplicat
 +++ b/openspec/changes/mos-1259-feedback-saved-filters/design.md
 @@ -25,5 +25,5 @@
  ### Implementation decisions
- 
+
 -MOS-1259: серверные персональные filters с `resource=feedback-surveys`, именем 1–150 непробельных символов и search. Список имеет собственную пагинацию, не совпадает с пагинацией опросников. Создать новый фильтр и обновить выбранный по ID — разные действия; одинаковое имя не вызывает автоматический PUT. Обновление передаёт полный search, resource неизменяем. Применение сохраняет настройки и limit, начинает с offset=0. Неизвестный/чужой ID одинаково 404; показать недоступность без предположений о владельце. Ошибки не заменяются localStorage fallback.
 +MOS-1259: серверные персональные filters с `resource=feedback-surveys`, именем длиной 1–150 символов, не состоящим только из пробельных символов, и search. Список имеет собственную пагинацию, не совпадает с пагинацией опросников. Создать новый фильтр и обновить выбранный по ID — разные действия; одинаковое имя не вызывает автоматический PUT. Обновление в UI передаёт полный search, resource неизменяем. Применение сохраняет настройки и limit, начинает с offset=0. Неизвестный/чужой ID одинаково 404; показать недоступность без предположений о владельце. Ошибки не заменяются localStorage fallback.
- 
+
  ### Existing safety and verification
 --- a/openspec/changes/mos-1259-feedback-saved-filters/specs/feedback-saved-filters/spec.md
 +++ b/openspec/changes/mos-1259-feedback-saved-filters/specs/feedback-saved-filters/spec.md
 @@ -7,5 +7,5 @@
  ### Requirement: Personal saved searches
- 
+
 -Фильтры SHALL храниться сервером через /saved-filters с resource=feedback-surveys и полным search. Имя SHALL иметь 1–150 символов и не состоять из пробелов. UI SHALL предоставлять создание, постраничный список, применение, явное обновление выбранного по ID и удаление. Одинаковые имена SHALL допускаться и MUST NOT вызывать автоматическую перезапись. PUT search SHALL заменять объект целиком; resource MUST NOT изменяться. При применении SHALL восстанавливаться query, обычные фильтры, conditions, sort, limit с offset=0. Недоступный фильтр SHALL обрабатываться как 404; устаревший search SHALL показывать ошибку без молчаливого частичного применения/localStorage fallback.
 +Фильтры SHALL храниться сервером через /saved-filters с resource=feedback-surveys и полным search. Имя SHALL иметь 1–150 символов и не состоять из пробелов. UI SHALL предоставлять создание, постраничный список, применение, явное обновление выбранного по ID и удаление. Одинаковые имена SHALL допускаться и MUST NOT вызывать автоматическую перезапись. PUT SHALL частично обновлять поля верхнего уровня name и search: пропущенное поле SHALL сохранять прежнее значение; переданный search SHALL целиком заменять прежний search, а пропущенные внутри него параметры SHALL получать значения по умолчанию, не значения предыдущего поиска; resource MUST NOT изменяться. При применении SHALL восстанавливаться query, обычные фильтры, conditions, sort, limit с offset=0. Недоступный фильтр SHALL обрабатываться как 404; устаревший search SHALL показывать ошибку без молчаливого частичного применения/localStorage fallback.
- 
+
  #### Scenario: Duplicate names
 ```
 

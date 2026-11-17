@@ -4,9 +4,7 @@
     "method": "get",
     "path": "/api/control/api/teams/v1/teams",
     "value": {
-      "tags": [
-        "Teams"
-      ],
+      "tags": ["Teams"],
       "summary": "Get Team List",
       "operationId": "get_team_list_api_control_api_teams_v1_teams_get",
       "security": [
@@ -98,9 +96,7 @@
     "method": "get",
     "path": "/api/control/api/teams/v1/teams/{team_id}",
     "value": {
-      "tags": [
-        "Teams"
-      ],
+      "tags": ["Teams"],
       "summary": "Get Team Detail",
       "operationId": "get_team_detail_api_control_api_teams_v1_teams__team_id__get",
       "security": [
@@ -153,9 +149,7 @@
     "method": "get",
     "path": "/api/control/api/teams/v1/teams/{team_id}/members",
     "value": {
-      "tags": [
-        "Teams"
-      ],
+      "tags": ["Teams"],
       "summary": "Get Team Members",
       "operationId": "get_team_members_api_control_api_teams_v1_teams__team_id__members_get",
       "security": [
@@ -273,9 +267,7 @@
     "method": "post",
     "path": "/api/control/api/teams/v1/teams",
     "value": {
-      "tags": [
-        "Teams"
-      ],
+      "tags": ["Teams"],
       "summary": "Create Team",
       "operationId": "create_team_api_control_api_teams_v1_teams_post",
       "security": [
@@ -326,9 +318,7 @@
     "method": "patch",
     "path": "/api/control/api/teams/v1/teams/{team_id}",
     "value": {
-      "tags": [
-        "Teams"
-      ],
+      "tags": ["Teams"],
       "summary": "Update Team",
       "operationId": "update_team_api_control_api_teams_v1_teams__team_id__patch",
       "security": [
@@ -391,9 +381,7 @@
     "method": "post",
     "path": "/api/control/api/teams/v1/teams/{team_id}/members",
     "value": {
-      "tags": [
-        "Teams"
-      ],
+      "tags": ["Teams"],
       "summary": "Add Team Member",
       "operationId": "add_team_member_api_control_api_teams_v1_teams__team_id__members_post",
       "security": [
@@ -456,9 +444,7 @@
     "method": "patch",
     "path": "/api/control/api/teams/v1/teams/{team_id}/members/{user_id}",
     "value": {
-      "tags": [
-        "Teams"
-      ],
+      "tags": ["Teams"],
       "summary": "Update Team Member",
       "operationId": "update_team_member_api_control_api_teams_v1_teams__team_id__members__user_id__patch",
       "security": [
@@ -530,9 +516,7 @@
     "method": "post",
     "path": "/api/control/api/teams/v1/teams/{team_id}/members/{user_id}/actions/remove",
     "value": {
-      "tags": [
-        "Teams"
-      ],
+      "tags": ["Teams"],
       "summary": "Remove Team Member",
       "operationId": "remove_team_member_api_control_api_teams_v1_teams__team_id__members__user_id__actions_remove_post",
       "security": [

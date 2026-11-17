@@ -45,9 +45,12 @@ This is the assignment-permitted **exact artifact source mapping**, avoiding dup
     "currentFilesystemRecensusPerformed": false
   },
   "stateSemantics": {
-    "P": {"disposition":"partial","evidenceClass":"substantive-bounded"},
-    "B": {"disposition":"partial","evidenceClass":"boundary-only-not-blocked"},
-    "U": {"disposition":"unexamined","evidenceClass":"unresolved-in-accepted-index-not-absent-functionality"}
+    "P": { "disposition": "partial", "evidenceClass": "substantive-bounded" },
+    "B": { "disposition": "partial", "evidenceClass": "boundary-only-not-blocked" },
+    "U": {
+      "disposition": "unexamined",
+      "evidenceClass": "unresolved-in-accepted-index-not-absent-functionality"
+    }
   },
   "defaults": {
     "fullLaneSetCertified": false,
@@ -58,110 +61,243 @@ This is the assignment-permitted **exact artifact source mapping**, avoiding dup
   "memberPopulation": {
     "source": "reports/G2-JIRA-MEMBER-JOINS.md",
     "sha256": "dc9b199c2a9500b2ff1857de1feaec9282e8130fa1b78720f551913907618b44",
-    "direct": {"lines":[130,286],"count":157,"columns":["moduleNumericId","id","sourcePointer","state","scenarioEvidenceAndGap"]},
-    "nested": {"lines":[296,311],"count":16,"columns":["moduleNumericId","id","immediateParent","sourcePointer","state","scenarioEvidenceAndGap"]},
-    "moduleIdTransform":"prefix moduleNumericId with MOS-",
-    "evidenceDictionary":{"source":"reports/G2-JIRA-MEMBER-JOINS.md","lines":[44,85]},
-    "sourcePointerDictionary":{"source":"reports/G2-JIRA-MEMBER-JOINS.md","lines":[21,42]},
-    "acceptance":["decisions.md#D-063","reviews/R-G2-JIRA-MEMBER-JOINS.md"],
-    "historicalCounts":{"P":47,"B":7,"U":119},
-    "overlays":[
-      {"id":"MOS-906","from":"U","to":"P","evidence":["reports/SPEC-G2-DOCUMENTATION-SEARCH.md","reviews/R-G2-THREE-OWNERSHIP-JOINS.md","decisions.md#D-063"]},
-      {"id":"MOS-1044","from":"B","to":"P","evidence":["reports/SPEC-G2-DIALOG-CATEGORY.md","reviews/R-G2-THREE-OWNERSHIP-JOINS.md","decisions.md#D-063"],"gap":"Category brief applicability unresolved; existing local approval preserved"},
-      {"id":"MOS-1254","from":"U","to":"P","evidence":["reports/REQ-G2-MOS-1254.md","reviews/R-REQ-G2-MOS-1254.md","decisions.md#D-064"]},
-      {"id":"MOS-1255","from":"U","to":"P","evidence":["reports/REQ-G2-MOS-1255.md","reviews/R-REQ-G2-MOS-1255.md","decisions.md#D-064"]},
-      {"id":"MOS-1257","from":"U","to":"P","evidence":["reports/REQ-G2-MOS-1257.md","reviews/R-REQ-G2-MOS-1257.md","decisions.md#D-064"]},
-      {"id":"MOS-1259","from":"U","to":"P","evidence":["reports/REQ-G2-MOS-1259.md","reviews/R-REQ-G2-MOS-1259.md","decisions.md#D-064"]}
+    "direct": {
+      "lines": [130, 286],
+      "count": 157,
+      "columns": ["moduleNumericId", "id", "sourcePointer", "state", "scenarioEvidenceAndGap"]
+    },
+    "nested": {
+      "lines": [296, 311],
+      "count": 16,
+      "columns": [
+        "moduleNumericId",
+        "id",
+        "immediateParent",
+        "sourcePointer",
+        "state",
+        "scenarioEvidenceAndGap"
+      ]
+    },
+    "moduleIdTransform": "prefix moduleNumericId with MOS-",
+    "evidenceDictionary": { "source": "reports/G2-JIRA-MEMBER-JOINS.md", "lines": [44, 85] },
+    "sourcePointerDictionary": { "source": "reports/G2-JIRA-MEMBER-JOINS.md", "lines": [21, 42] },
+    "acceptance": ["decisions.md#D-063", "reviews/R-G2-JIRA-MEMBER-JOINS.md"],
+    "historicalCounts": { "P": 47, "B": 7, "U": 119 },
+    "overlays": [
+      {
+        "id": "MOS-906",
+        "from": "U",
+        "to": "P",
+        "evidence": [
+          "reports/SPEC-G2-DOCUMENTATION-SEARCH.md",
+          "reviews/R-G2-THREE-OWNERSHIP-JOINS.md",
+          "decisions.md#D-063"
+        ]
+      },
+      {
+        "id": "MOS-1044",
+        "from": "B",
+        "to": "P",
+        "evidence": [
+          "reports/SPEC-G2-DIALOG-CATEGORY.md",
+          "reviews/R-G2-THREE-OWNERSHIP-JOINS.md",
+          "decisions.md#D-063"
+        ],
+        "gap": "Category brief applicability unresolved; existing local approval preserved"
+      },
+      {
+        "id": "MOS-1254",
+        "from": "U",
+        "to": "P",
+        "evidence": [
+          "reports/REQ-G2-MOS-1254.md",
+          "reviews/R-REQ-G2-MOS-1254.md",
+          "decisions.md#D-064"
+        ]
+      },
+      {
+        "id": "MOS-1255",
+        "from": "U",
+        "to": "P",
+        "evidence": [
+          "reports/REQ-G2-MOS-1255.md",
+          "reviews/R-REQ-G2-MOS-1255.md",
+          "decisions.md#D-064"
+        ]
+      },
+      {
+        "id": "MOS-1257",
+        "from": "U",
+        "to": "P",
+        "evidence": [
+          "reports/REQ-G2-MOS-1257.md",
+          "reviews/R-REQ-G2-MOS-1257.md",
+          "decisions.md#D-064"
+        ]
+      },
+      {
+        "id": "MOS-1259",
+        "from": "U",
+        "to": "P",
+        "evidence": [
+          "reports/REQ-G2-MOS-1259.md",
+          "reviews/R-REQ-G2-MOS-1259.md",
+          "decisions.md#D-064"
+        ]
+      }
     ],
-    "additionalEvidenceMap":{"source":"coverage-partial-r46.json","pointer":"/additionalEvidence","acceptance":["decisions.md#D-065","decisions.md#D-066","decisions.md#D-067"],"rule":"Append referenced reports to matching IDs; matching R-<report basename> reviews retain original verdicts and parent corrections; do not change counts"},
-    "publicationOverlay":{"ids":["MOS-1254","MOS-1255","MOS-1257","MOS-1259"],"evidence":["decisions.md#D-068","publication/WRITE-G2-FEEDBACK/acceptance.json"],"scope":"documentary patches only; no lane or feature completion"},
-    "currentCounts":{"P":53,"B":6,"U":114,"total":173},
-    "boundaryOnlyIds":["MOS-659","MOS-1019","MOS-1020","MOS-1021","MOS-1030","MOS-1258"]
+    "additionalEvidenceMap": {
+      "source": "coverage-partial-r46.json",
+      "pointer": "/additionalEvidence",
+      "acceptance": ["decisions.md#D-065", "decisions.md#D-066", "decisions.md#D-067"],
+      "rule": "Append referenced reports to matching IDs; matching R-<report basename> reviews retain original verdicts and parent corrections; do not change counts"
+    },
+    "publicationOverlay": {
+      "ids": ["MOS-1254", "MOS-1255", "MOS-1257", "MOS-1259"],
+      "evidence": ["decisions.md#D-068", "publication/WRITE-G2-FEEDBACK/acceptance.json"],
+      "scope": "documentary patches only; no lane or feature completion"
+    },
+    "currentCounts": { "P": 53, "B": 6, "U": 114, "total": 173 },
+    "boundaryOnlyIds": ["MOS-659", "MOS-1019", "MOS-1020", "MOS-1021", "MOS-1030", "MOS-1258"]
   },
   "modulePopulation": {
-    "source":"inventory-acceptance.json",
-    "pointer":"/accepted",
-    "count":26,
-    "identityField":"module",
-    "evidenceField":"report",
-    "counterFields":["members","nested"],
-    "disposition":"partial",
-    "evidenceClass":"observed-membership-only",
-    "gap":"No complete module semantic coverage inherited from child evidence",
-    "crosscheck":{"source":"reports/G2-JIRA-MEMBER-JOINS.md","lines":[97,122]},
-    "rootExcludedFromMembersAndModules":"MOS-623"
+    "source": "inventory-acceptance.json",
+    "pointer": "/accepted",
+    "count": 26,
+    "identityField": "module",
+    "evidenceField": "report",
+    "counterFields": ["members", "nested"],
+    "disposition": "partial",
+    "evidenceClass": "observed-membership-only",
+    "gap": "No complete module semantic coverage inherited from child evidence",
+    "crosscheck": { "source": "reports/G2-JIRA-MEMBER-JOINS.md", "lines": [97, 122] },
+    "rootExcludedFromMembersAndModules": "MOS-623"
   },
   "capabilityPopulation": {
-    "source":"reports/G2-MAIN-CAPABILITY-JOINS.md",
-    "sha256":"58912cbe79aeaa7b72273215dc84f26c9a1fcd86366de04b189893ec87f036b0",
-    "lines":[87,126],
-    "count":40,
-    "columns":["ordinal","id","evidenceJoin","historicalLaneTuple","residualGap"],
-    "laneOrder":["requirements","api","spec","implementation","reconciliation"],
-    "evidenceDictionary":{"source":"reports/G2-MAIN-CAPABILITY-JOINS.md","lines":[52,79]},
-    "acceptance":["reviews/R-G2-MAIN-CAPABILITY-JOINS.md","decisions.md#D-062"],
-    "normalization":"AC shorthand ACCESS findings resolve to literal ACCESS-ROOT-01 through ACCESS-ROOT-09",
-    "dispositionAfterOverlays":"partial",
-    "overlays":[
-      {"id":"code-quality-gates","evidence":["reports/SPEC-G2-CODE-QUALITY.md","reviews/R-G2-THREE-OWNERSHIP-JOINS.md","decisions.md#D-063"],"scope":"9 requirements/31 scenarios normative ownership/spec evidence; no current gate execution","jira":null},
-      {"id":"documentation-search","evidence":["reports/SPEC-G2-DOCUMENTATION-SEARCH.md","reviews/R-G2-THREE-OWNERSHIP-JOINS.md","decisions.md#D-063"],"scope":"5 requirements/12 scenarios ownership/spec mapping; bounded SH011/RT009 evidence","jira":"MOS-906"},
-      {"id":"dialog-category-addition","evidence":["reports/SPEC-G2-DIALOG-CATEGORY.md","reviews/R-G2-THREE-OWNERSHIP-JOINS.md","decisions.md#D-063"],"scope":"4 requirements/7 scenarios ownership/spec mapping; contrary-brief applicability unresolved","jira":"MOS-1044"}
+    "source": "reports/G2-MAIN-CAPABILITY-JOINS.md",
+    "sha256": "58912cbe79aeaa7b72273215dc84f26c9a1fcd86366de04b189893ec87f036b0",
+    "lines": [87, 126],
+    "count": 40,
+    "columns": ["ordinal", "id", "evidenceJoin", "historicalLaneTuple", "residualGap"],
+    "laneOrder": ["requirements", "api", "spec", "implementation", "reconciliation"],
+    "evidenceDictionary": { "source": "reports/G2-MAIN-CAPABILITY-JOINS.md", "lines": [52, 79] },
+    "acceptance": ["reviews/R-G2-MAIN-CAPABILITY-JOINS.md", "decisions.md#D-062"],
+    "normalization": "AC shorthand ACCESS findings resolve to literal ACCESS-ROOT-01 through ACCESS-ROOT-09",
+    "dispositionAfterOverlays": "partial",
+    "overlays": [
+      {
+        "id": "code-quality-gates",
+        "evidence": [
+          "reports/SPEC-G2-CODE-QUALITY.md",
+          "reviews/R-G2-THREE-OWNERSHIP-JOINS.md",
+          "decisions.md#D-063"
+        ],
+        "scope": "9 requirements/31 scenarios normative ownership/spec evidence; no current gate execution",
+        "jira": null
+      },
+      {
+        "id": "documentation-search",
+        "evidence": [
+          "reports/SPEC-G2-DOCUMENTATION-SEARCH.md",
+          "reviews/R-G2-THREE-OWNERSHIP-JOINS.md",
+          "decisions.md#D-063"
+        ],
+        "scope": "5 requirements/12 scenarios ownership/spec mapping; bounded SH011/RT009 evidence",
+        "jira": "MOS-906"
+      },
+      {
+        "id": "dialog-category-addition",
+        "evidence": [
+          "reports/SPEC-G2-DIALOG-CATEGORY.md",
+          "reviews/R-G2-THREE-OWNERSHIP-JOINS.md",
+          "decisions.md#D-063"
+        ],
+        "scope": "4 requirements/7 scenarios ownership/spec mapping; contrary-brief applicability unresolved",
+        "jira": "MOS-1044"
+      }
     ],
-    "overlayRule":"Keep original lane tuple historical; append bounded accepted ownership/spec evidence, never replace it with complete R/A/S/I/X"
+    "overlayRule": "Keep original lane tuple historical; append bounded accepted ownership/spec evidence, never replace it with complete R/A/S/I/X"
   },
   "activeChangePopulation": {
-    "baselineIdentitySource":{"source":"inventory.json","pointer":"/local","filter":{"kind":"active-change"}},
-    "baselineCount":21,
-    "acceptedAdditionCount":1,
-    "acceptedEventCount":22,
-    "rowColumns":["id","jira","state","memberEvidenceLine"],
-    "rows":[
-      ["mos-1015-report-constructor","MOS-1015","P",211],
-      ["mos-1016-report-template-scheduling","MOS-1016","P",212],
-      ["mos-1018-skill-phrase-conflicts","MOS-1018","P",192],
-      ["mos-1023-skill-environment-tokens","MOS-1023","P",197],
-      ["mos-1025-skill-monitoring","MOS-1025","P",198],
-      ["mos-1026-skill-operations-info","MOS-1026","P",199],
-      ["mos-1030-skill-result-analytics","MOS-1030","B",201],
-      ["mos-1031-skill-audit-history","MOS-1031","P",202],
-      ["mos-1249-feedback-api","MOS-1249","P",277],
-      ["mos-1250-feedback-registry","MOS-1250","P",278],
-      ["mos-1251-feedback-editor","MOS-1251","P",279],
-      ["mos-1254-feedback-questions","MOS-1254","P",280],
-      ["mos-1255-feedback-preview","MOS-1255","P",281],
-      ["mos-1256-feedback-lifecycle","MOS-1256","U",282],
-      ["mos-1257-feedback-labels","MOS-1257","P",283],
-      ["mos-1258-feedback-conditions","MOS-1258","B",284],
-      ["mos-1259-feedback-saved-filters","MOS-1259","P",285],
-      ["mos-1260-feedback-export","MOS-1260","U",286],
-      ["mos-916-report-templates","MOS-916","P",209],
-      ["mos-919-report-csv-export","MOS-919","P",210],
-      ["reconcile-control-center-backlog",null,"process-partial",null],
-      ["mos-909-restore-approved-lifecycle-actions","MOS-909","P",233]
+    "baselineIdentitySource": {
+      "source": "inventory.json",
+      "pointer": "/local",
+      "filter": { "kind": "active-change" }
+    },
+    "baselineCount": 21,
+    "acceptedAdditionCount": 1,
+    "acceptedEventCount": 22,
+    "rowColumns": ["id", "jira", "state", "memberEvidenceLine"],
+    "rows": [
+      ["mos-1015-report-constructor", "MOS-1015", "P", 211],
+      ["mos-1016-report-template-scheduling", "MOS-1016", "P", 212],
+      ["mos-1018-skill-phrase-conflicts", "MOS-1018", "P", 192],
+      ["mos-1023-skill-environment-tokens", "MOS-1023", "P", 197],
+      ["mos-1025-skill-monitoring", "MOS-1025", "P", 198],
+      ["mos-1026-skill-operations-info", "MOS-1026", "P", 199],
+      ["mos-1030-skill-result-analytics", "MOS-1030", "B", 201],
+      ["mos-1031-skill-audit-history", "MOS-1031", "P", 202],
+      ["mos-1249-feedback-api", "MOS-1249", "P", 277],
+      ["mos-1250-feedback-registry", "MOS-1250", "P", 278],
+      ["mos-1251-feedback-editor", "MOS-1251", "P", 279],
+      ["mos-1254-feedback-questions", "MOS-1254", "P", 280],
+      ["mos-1255-feedback-preview", "MOS-1255", "P", 281],
+      ["mos-1256-feedback-lifecycle", "MOS-1256", "U", 282],
+      ["mos-1257-feedback-labels", "MOS-1257", "P", 283],
+      ["mos-1258-feedback-conditions", "MOS-1258", "B", 284],
+      ["mos-1259-feedback-saved-filters", "MOS-1259", "P", 285],
+      ["mos-1260-feedback-export", "MOS-1260", "U", 286],
+      ["mos-916-report-templates", "MOS-916", "P", 209],
+      ["mos-919-report-csv-export", "MOS-919", "P", 210],
+      ["reconcile-control-center-backlog", null, "process-partial", null],
+      ["mos-909-restore-approved-lifecycle-actions", "MOS-909", "P", 233]
     ],
-    "rowEvidenceSource":"reports/G2-JIRA-MEMBER-JOINS.md",
-    "routingEvidence":"reports/LOCAL-001.md:79-119",
-    "joinRule":"Join memberEvidenceLine plus accepted member overlays; this is an owner/member seam, not acceptance of all active-change artifacts",
-    "commonGap":"Complete per-change requirement/scenario/API/code/test/finding/task reconciliation not certified",
-    "processEvidence":["../tasks.md","decisions.md#D-068"],
-    "additionEvidence":["decisions.md#D-020","decisions.md#D-021","publication/WRITE-MOS-909-RESTORE/acceptance.json"],
-    "publicationsById":{
-      "mos-1018-skill-phrase-conflicts":["decisions.md#D-003","publication/WRITE-MOS-1018/acceptance.json"],
-      "mos-1249-feedback-api":["decisions.md#D-061","decisions.md#D-062","publication/WRITE-G2-MOS-1249/acceptance.json"],
-      "mos-1254-feedback-questions":["decisions.md#D-068","publication/WRITE-G2-FEEDBACK/acceptance.json"],
-      "mos-1255-feedback-preview":["decisions.md#D-068","publication/WRITE-G2-FEEDBACK/acceptance.json"],
-      "mos-1257-feedback-labels":["decisions.md#D-068","publication/WRITE-G2-FEEDBACK/acceptance.json"],
-      "mos-1259-feedback-saved-filters":["decisions.md#D-068","publication/WRITE-G2-FEEDBACK/acceptance.json"]
+    "rowEvidenceSource": "reports/G2-JIRA-MEMBER-JOINS.md",
+    "routingEvidence": "reports/LOCAL-001.md:79-119",
+    "joinRule": "Join memberEvidenceLine plus accepted member overlays; this is an owner/member seam, not acceptance of all active-change artifacts",
+    "commonGap": "Complete per-change requirement/scenario/API/code/test/finding/task reconciliation not certified",
+    "processEvidence": ["../tasks.md", "decisions.md#D-068"],
+    "additionEvidence": [
+      "decisions.md#D-020",
+      "decisions.md#D-021",
+      "publication/WRITE-MOS-909-RESTORE/acceptance.json"
+    ],
+    "publicationsById": {
+      "mos-1018-skill-phrase-conflicts": [
+        "decisions.md#D-003",
+        "publication/WRITE-MOS-1018/acceptance.json"
+      ],
+      "mos-1249-feedback-api": [
+        "decisions.md#D-061",
+        "decisions.md#D-062",
+        "publication/WRITE-G2-MOS-1249/acceptance.json"
+      ],
+      "mos-1254-feedback-questions": [
+        "decisions.md#D-068",
+        "publication/WRITE-G2-FEEDBACK/acceptance.json"
+      ],
+      "mos-1255-feedback-preview": [
+        "decisions.md#D-068",
+        "publication/WRITE-G2-FEEDBACK/acceptance.json"
+      ],
+      "mos-1257-feedback-labels": [
+        "decisions.md#D-068",
+        "publication/WRITE-G2-FEEDBACK/acceptance.json"
+      ],
+      "mos-1259-feedback-saved-filters": [
+        "decisions.md#D-068",
+        "publication/WRITE-G2-FEEDBACK/acceptance.json"
+      ]
     }
   },
-  "blockedSeamNotWholeMember":{
-    "id":"MOS-1254",
-    "disposition":"blocked",
-    "seam":"Q1 serialization of existing unknown question type with nonempty options",
-    "reason":"No approved preserve/omit/block policy; continuation is not approval",
-    "evidence":["decisions.md#D-066","decisions.md#D-067","decisions.md#D-068"]
+  "blockedSeamNotWholeMember": {
+    "id": "MOS-1254",
+    "disposition": "blocked",
+    "seam": "Q1 serialization of existing unknown question type with nonempty options",
+    "reason": "No approved preserve/omit/block policy; continuation is not approval",
+    "evidence": ["decisions.md#D-066", "decisions.md#D-067", "decisions.md#D-068"]
   },
-  "sourceLimits":[
+  "sourceLimits": [
     "manifest.json /sourceCutoff remains null; versions and freshness are packet-specific",
     "D-060 bounded G1 acceptance is not exhaustive discovery or semantic coverage",
     "Root35, finite-Jira21, session4 and nested20 no-body populations are separate; do not sum or deduplicate by inference",

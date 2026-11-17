@@ -27,68 +27,68 @@ No other mandatory row/locator correction found in the inspected evidence.
 
 ### Complete reads
 
-| Exact path | Lines read | Purpose |
-|---|---:|---|
-| `A/work-items/R-G2-OWNERSHIP-WAVE.md` | complete | Full common review contract; only Jira section executed |
-| `A/work-items/G2-OWNERSHIP-WAVE.md` | complete | Full original contract, including common constraints |
-| `C/proposal.md` |1–30| Process authority |
-| `C/design.md` |1–133| Evidence/gate/publication rules |
-| `C/tasks.md` |1–45| G2 remains open |
-| `C/specs/control-center-backlog-reconciliation/spec.md` |1–108| Honest incomplete coverage |
-| `A/reports/G2-JIRA-MEMBER-JOINS.md` | complete | Evaluated register, chains, counts and fingerprints |
-| `A/inventory-acceptance.json` |1–33| Accepted26 module counters |
-| `A/inventory-reconciliation.json` |1–49| Accepted population and limits |
-| `A/reports/G1-INVENTORY-SOURCE-CROSSWALK.md` |1–363| Corrected ordered membership/pointers/parents |
-| `A/reviews/R-G1-INVENTORY-SOURCE-CROSSWALK.md` |1–176| Original REVISE and precise feedback exemption |
-| `A/decisions.md` |1–464| Full D001–062; read1–180,181–340,341–464 |
-| `A/reports/G2-MAIN-CAPABILITY-JOINS.md` |1–204| Separate baseline40 and qualified chains |
-| `A/reviews/R-G2-MAIN-CAPABILITY-JOINS.md` |1–251| Accepted corrected baseline, recovery/nonduplication qualifications |
+| Exact path                                              | Lines read | Purpose                                                             |
+| ------------------------------------------------------- | ---------: | ------------------------------------------------------------------- |
+| `A/work-items/R-G2-OWNERSHIP-WAVE.md`                   |   complete | Full common review contract; only Jira section executed             |
+| `A/work-items/G2-OWNERSHIP-WAVE.md`                     |   complete | Full original contract, including common constraints                |
+| `C/proposal.md`                                         |       1–30 | Process authority                                                   |
+| `C/design.md`                                           |      1–133 | Evidence/gate/publication rules                                     |
+| `C/tasks.md`                                            |       1–45 | G2 remains open                                                     |
+| `C/specs/control-center-backlog-reconciliation/spec.md` |      1–108 | Honest incomplete coverage                                          |
+| `A/reports/G2-JIRA-MEMBER-JOINS.md`                     |   complete | Evaluated register, chains, counts and fingerprints                 |
+| `A/inventory-acceptance.json`                           |       1–33 | Accepted26 module counters                                          |
+| `A/inventory-reconciliation.json`                       |       1–49 | Accepted population and limits                                      |
+| `A/reports/G1-INVENTORY-SOURCE-CROSSWALK.md`            |      1–363 | Corrected ordered membership/pointers/parents                       |
+| `A/reviews/R-G1-INVENTORY-SOURCE-CROSSWALK.md`          |      1–176 | Original REVISE and precise feedback exemption                      |
+| `A/decisions.md`                                        |      1–464 | Full D001–062; read1–180,181–340,341–464                            |
+| `A/reports/G2-MAIN-CAPABILITY-JOINS.md`                 |      1–204 | Separate baseline40 and qualified chains                            |
+| `A/reviews/R-G2-MAIN-CAPABILITY-JOINS.md`               |      1–251 | Accepted corrected baseline, recovery/nonduplication qualifications |
 
 ### Focused evidence passages actually read
 
 These are report contents, not fresh inspection of quoted primary sources or application paths. Each entry is an exact path under A. These reads cover every positive P/B chain in the evaluated table, including additive D061/062 evidence.
 
-| Path under A | Lines | Join checked |
-|---|---:|---|
-| `reports/IMPL-MOS-904.md` |30–71| SH /904 |
-| `reports/IMPL-MOS-905.md` |30–74| RT /905 |
-| `reports/SCENARIO-MOS-920.md` |86–104| OP /920 and explicitly attributed717 |
-| `reports/SCENARIO-MOS-922.md` |21–55| ST /922 and754 |
-| `reports/SCENARIO-MOS-923.md` |21–45| MT /923 |
-| `reports/SCENARIO-MOS-960.md` |66–83| SB0 /960 |
-| `reports/SCENARIO-MOS-961.md` |80–93| SB1 /961 |
-| `reports/SCENARIO-MOS-962.md` |39–52| SB2 /962; exact1023 no-op/gate |
-| `reports/SCENARIO-MOS-916.md` |38–66| RP0 /916 and885 requested fake provider |
-| `reports/SCENARIO-MOS-919.md` |39–62| RP1 /919 |
-| `reports/SCENARIO-MOS-1015.md` |81–95| RP2 /1015 |
-| `reports/SCENARIO-MOS-1016.md` |80–99| RP3 /1016 and885 |
-| `reports/SCENARIO-MOS-1146.md` |128–147| MN0 /1146 and1026 |
-| `reports/SCENARIO-MOS-1397.md` |137–159| MN1 /1397,1025,1026 |
-| `reports/SCENARIO-MOS-1398.md` |90–108| MN2 /1398,1026 |
-| `reports/DELTA-SKILL-MONITORING-EXAMPLE.md` |20–44| SME /1025,1026 |
-| `reports/SCENARIO-MOS-1145.md` |139–157| TG /1145,1027,1031 |
-| `reports/SCENARIO-MOS-909.md` |49–95| LC /909 and1019/1020/1021 boundaries |
-| `reports/IMPL-MOS-909.md` |40–99| LC corrected static seams |
-| `reports/API-R2-STATUS-DELTA.md` |1–12| SD result; detailed acceptance via D023 |
-| `reports/DELTA-MOS-1119.md` |41–55| PS /1119,1031 |
-| `reports/SCENARIO-SKILL-CHECKS.md` |20–104| CK /1245,1018 |
-| `reports/REQ-MOS-1018.md` |1–60| PC R01–10 |
-| `reports/REQ-MOS-1023.md` |1–55| TK R01–22 |
-| `reports/API-R2-TOKEN-DELTA.md` |1–12| TK publication result; detailed acceptance via D023 |
-| `reports/SCENARIO-DOMAIN-ZONES.md` |38–66| DZ /1306 |
-| `reports/SCENARIO-SURFACE-CONFIG-r2.md` |20–104| SF /959,1237 |
-| `reports/DELTA-DIALOG-BUSINESS-PLAN.md` |15–34| DB /1037,1038,1040–1045;1044 boundary |
-| `reports/DELTA-SKILL-LIST-CARD-EXAMPLES.md` |25–68| SK /929,933,944 |
-| `reports/DELTA-MANAGED-RESOURCE-MEMBERS.md` |20–90 (EOF)| MR /1321,1399,1386 |
-| `reports/JOURNAL-FEEDBACK-AUDIENCE.md` |15–69| FB /1251 substantive;1258 boundary |
-| `reviews/R-JOURNAL-SUPPLEMENTS.md` |1–85| Independent classification of FB03 |
-| `reports/IMPL-MOS-1250.md` |20–55| F0 /1250 |
-| `reports/SPEC-G2-MOS-1249.md` |60–73| F1 /1249 R1–9 |
-| `reports/API-G2-MOS-1250-READS.md` |118–140| F2 /1250 |
-| `reports/IMPL-G2-MOS-916.md` |65–94| RI /916 active versus continuation |
-| `reports/DELTA-USER-SESSION-CONTRACTS.md` |58–62| US SES01 /659 boundary |
-| `reports/DELTA-DASHBOARD-METRICS-CONTRACT.md` |136–143| DM DMC12 /1030 boundary |
-| `reports/DELTA-AUDIT-SERVICE-CONTRACT.md` |44–55| AH AUDIT06 /1031 |
+| Path under A                                  |       Lines | Join checked                                        |
+| --------------------------------------------- | ----------: | --------------------------------------------------- |
+| `reports/IMPL-MOS-904.md`                     |       30–71 | SH /904                                             |
+| `reports/IMPL-MOS-905.md`                     |       30–74 | RT /905                                             |
+| `reports/SCENARIO-MOS-920.md`                 |      86–104 | OP /920 and explicitly attributed717                |
+| `reports/SCENARIO-MOS-922.md`                 |       21–55 | ST /922 and754                                      |
+| `reports/SCENARIO-MOS-923.md`                 |       21–45 | MT /923                                             |
+| `reports/SCENARIO-MOS-960.md`                 |       66–83 | SB0 /960                                            |
+| `reports/SCENARIO-MOS-961.md`                 |       80–93 | SB1 /961                                            |
+| `reports/SCENARIO-MOS-962.md`                 |       39–52 | SB2 /962; exact1023 no-op/gate                      |
+| `reports/SCENARIO-MOS-916.md`                 |       38–66 | RP0 /916 and885 requested fake provider             |
+| `reports/SCENARIO-MOS-919.md`                 |       39–62 | RP1 /919                                            |
+| `reports/SCENARIO-MOS-1015.md`                |       81–95 | RP2 /1015                                           |
+| `reports/SCENARIO-MOS-1016.md`                |       80–99 | RP3 /1016 and885                                    |
+| `reports/SCENARIO-MOS-1146.md`                |     128–147 | MN0 /1146 and1026                                   |
+| `reports/SCENARIO-MOS-1397.md`                |     137–159 | MN1 /1397,1025,1026                                 |
+| `reports/SCENARIO-MOS-1398.md`                |      90–108 | MN2 /1398,1026                                      |
+| `reports/DELTA-SKILL-MONITORING-EXAMPLE.md`   |       20–44 | SME /1025,1026                                      |
+| `reports/SCENARIO-MOS-1145.md`                |     139–157 | TG /1145,1027,1031                                  |
+| `reports/SCENARIO-MOS-909.md`                 |       49–95 | LC /909 and1019/1020/1021 boundaries                |
+| `reports/IMPL-MOS-909.md`                     |       40–99 | LC corrected static seams                           |
+| `reports/API-R2-STATUS-DELTA.md`              |        1–12 | SD result; detailed acceptance via D023             |
+| `reports/DELTA-MOS-1119.md`                   |       41–55 | PS /1119,1031                                       |
+| `reports/SCENARIO-SKILL-CHECKS.md`            |      20–104 | CK /1245,1018                                       |
+| `reports/REQ-MOS-1018.md`                     |        1–60 | PC R01–10                                           |
+| `reports/REQ-MOS-1023.md`                     |        1–55 | TK R01–22                                           |
+| `reports/API-R2-TOKEN-DELTA.md`               |        1–12 | TK publication result; detailed acceptance via D023 |
+| `reports/SCENARIO-DOMAIN-ZONES.md`            |       38–66 | DZ /1306                                            |
+| `reports/SCENARIO-SURFACE-CONFIG-r2.md`       |      20–104 | SF /959,1237                                        |
+| `reports/DELTA-DIALOG-BUSINESS-PLAN.md`       |       15–34 | DB /1037,1038,1040–1045;1044 boundary               |
+| `reports/DELTA-SKILL-LIST-CARD-EXAMPLES.md`   |       25–68 | SK /929,933,944                                     |
+| `reports/DELTA-MANAGED-RESOURCE-MEMBERS.md`   | 20–90 (EOF) | MR /1321,1399,1386                                  |
+| `reports/JOURNAL-FEEDBACK-AUDIENCE.md`        |       15–69 | FB /1251 substantive;1258 boundary                  |
+| `reviews/R-JOURNAL-SUPPLEMENTS.md`            |        1–85 | Independent classification of FB03                  |
+| `reports/IMPL-MOS-1250.md`                    |       20–55 | F0 /1250                                            |
+| `reports/SPEC-G2-MOS-1249.md`                 |       60–73 | F1 /1249 R1–9                                       |
+| `reports/API-G2-MOS-1250-READS.md`            |     118–140 | F2 /1250                                            |
+| `reports/IMPL-G2-MOS-916.md`                  |       65–94 | RI /916 active versus continuation                  |
+| `reports/DELTA-USER-SESSION-CONTRACTS.md`     |       58–62 | US SES01 /659 boundary                              |
+| `reports/DELTA-DASHBOARD-METRICS-CONTRACT.md` |     136–143 | DM DMC12 /1030 boundary                             |
+| `reports/DELTA-AUDIT-SERVICE-CONTRACT.md`     |       44–55 | AH AUDIT06 /1031                                    |
 
 The MR requested read20–109 reached EOF; it is not a claim that109 physical lines exist. The evaluated report's broader locator still includes the actual table45–59, so no broken identity results.
 

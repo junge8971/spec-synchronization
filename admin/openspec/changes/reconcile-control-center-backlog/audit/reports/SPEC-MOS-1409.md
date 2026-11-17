@@ -28,6 +28,7 @@
 ## Actual read boundary
 
 Fully read:
+
 - Assignment work-item (tool returned the complete file; only common contract and SPEC lane used as authority).
 - The three main specs named above.
 - Both named archives' `proposal.md`, `design.md`, `tasks.md`, and `specs/control-center-api-integration/spec.md`.
@@ -35,6 +36,7 @@ Fully read:
 - Prototype design initially truncated at line 147; continued with lines 148–175, completing it.
 
 Search-only:
+
 - Initial export-term ripgrep over change Markdown used an ineffective archive exclusion and `head -180`; returned incidental unrelated archive excerpts and was truncated. Those incidental results are not evidence for this report; no unrelated capability was followed or assessed.
 - Corrected bounded search: `rg -n -i '(skill.{0,70}export|export.{0,70}skill|экспорт.{0,70}навык|навык.{0,70}экспорт|MOS-1409)' openspec/changes --glob '*.md' --glob '!**/archive/**' --glob '!**/audit/**'` returned no matches. This is same-line lexical absence only, not exhaustive semantic absence across active changes.
 - Targeted search of proposal/design/tasks in the two named archives located the evidence above before complete reads.

@@ -2,10 +2,10 @@
 
 ## Disposition
 
-| Package | Verdict |
-|---|---|
+| Package                                      | Verdict                                                                                           |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | `fix-dialog-registry-presentation-and-reset` | **revise** — reset design masks a concrete behavior change behind an unresolved-policy exclusion. |
-| `fix-surface-registration-text-feedback` | **accept** — coherent bounded planning package; no mandatory correction identified. |
+| `fix-surface-registration-text-feedback`     | **accept** — coherent bounded planning package; no mandatory correction identified.               |
 
 **Publication remains held for both packages.** The latest external freshness attempt failed with `Failed to fetch`. This local review does not satisfy or bypass that gate. Publication requires a successful explicit source check or an authorized scope decision. No implementation, deployment, or backend acceptance is implied.
 
@@ -90,37 +90,37 @@ SHA256 of exact local bytes.
 
 Paths relative to `openspec/changes/reconcile-control-center-backlog/audit/publication/`:
 
-| File | SHA256 |
-|---|---|
-| `DRAFT-DIALOG-D090.md` | `dfbabb417f41bb580a7ad793d298524bac856f4929de71f027c0da4a7733e319` |
+| File                    | SHA256                                                             |
+| ----------------------- | ------------------------------------------------------------------ |
+| `DRAFT-DIALOG-D090.md`  | `dfbabb417f41bb580a7ad793d298524bac856f4929de71f027c0da4a7733e319` |
 | `DRAFT-SURFACE-D091.md` | `de98a82303e6a4ff8b673583b6c2a18a36864d90a1d91b478bfa19fd1d7da77f` |
 
 ### Exact proposed artifact contents
 
 Hashes cover the UTF-8 content inside each `markdown` fence, including its trailing newline and excluding fence delimiters.
 
-| Package / artifact | SHA256 |
-|---|---|
-| Dialog `proposal.md` | `532b304ada9946f3c94834d3074e46af23f60f07da6b7ee5db90cd0ec17b78a6` |
-| Dialog `design.md` | `72f59c94e598a752cd91d50d1eed8b3959b6d514288124beaf8c85f25fc3e3df` |
-| Dialog `tasks.md` | `25ef487f42f367e6821896c6d5002db53668289994bcdcb45c59b9e340ccc4a3` |
-| Dialog `specs/dialog-registry/spec.md` | `8aff75feebe0a55441c17b0ecfdb216c8f57e759b9c8aeae09ba3303ff66ed31` |
-| Surface `proposal.md` | `2304598677031fca36387dc0d43f72f1e97bd504c0d0869f3632029867d70de4` |
-| Surface `design.md` | `eacdf4c563752554f3222c4c06c8736b9e1bf68a58a8db3792a4ca0c684fb387` |
-| Surface `tasks.md` | `9fdbbbc3042f59493bc1bb0d55812aafffdc5faef53005753126e5120df2b36e` |
+| Package / artifact                              | SHA256                                                             |
+| ----------------------------------------------- | ------------------------------------------------------------------ |
+| Dialog `proposal.md`                            | `532b304ada9946f3c94834d3074e46af23f60f07da6b7ee5db90cd0ec17b78a6` |
+| Dialog `design.md`                              | `72f59c94e598a752cd91d50d1eed8b3959b6d514288124beaf8c85f25fc3e3df` |
+| Dialog `tasks.md`                               | `25ef487f42f367e6821896c6d5002db53668289994bcdcb45c59b9e340ccc4a3` |
+| Dialog `specs/dialog-registry/spec.md`          | `8aff75feebe0a55441c17b0ecfdb216c8f57e759b9c8aeae09ba3303ff66ed31` |
+| Surface `proposal.md`                           | `2304598677031fca36387dc0d43f72f1e97bd504c0d0869f3632029867d70de4` |
+| Surface `design.md`                             | `eacdf4c563752554f3222c4c06c8736b9e1bf68a58a8db3792a4ca0c684fb387` |
+| Surface `tasks.md`                              | `9fdbbbc3042f59493bc1bb0d55812aafffdc5faef53005753126e5120df2b36e` |
 | Surface `specs/surface-skill-selection/spec.md` | `314e658faf05d1daeda2545e342480ed37fcfbd4ed1af5d21933dff29a237094` |
-| Surface `specs/surface-registration/spec.md` | `16f3e95d00b92ce85e987092651280c94e82c8e0ca04f6a3a09f5ed3fa50b534` |
+| Surface `specs/surface-registration/spec.md`    | `16f3e95d00b92ce85e987092651280c94e82c8e0ca04f6a3a09f5ed3fa50b534` |
 
 ### Independently recomputed main baselines
 
 Paths relative to `openspec/specs/`:
 
-| File | SHA256 |
-|---|---|
-| `dialog-registry/spec.md` | `ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83` |
-| `dialog-selection-builder/spec.md` | `87d9ad1687832a1f1eb54a69b65d168cfe04a94fdc5bed1f95ea25983afc8ca6` |
-| `surface-skill-selection/spec.md` | `e27eb8b354e4370da3519b5387cff5369a2f083e6c3be05f82d8631746c19ee0` |
-| `surface-registration/spec.md` | `31928d907bfff75eca61d2efe176879e3c7f4d3e0029dbe6bb97258b8d00f9a5` |
+| File                                  | SHA256                                                             |
+| ------------------------------------- | ------------------------------------------------------------------ |
+| `dialog-registry/spec.md`             | `ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83` |
+| `dialog-selection-builder/spec.md`    | `87d9ad1687832a1f1eb54a69b65d168cfe04a94fdc5bed1f95ea25983afc8ca6` |
+| `surface-skill-selection/spec.md`     | `e27eb8b354e4370da3519b5387cff5369a2f083e6c3be05f82d8631746c19ee0` |
+| `surface-registration/spec.md`        | `31928d907bfff75eca61d2efe176879e3c7f4d3e0029dbe6bb97258b8d00f9a5` |
 | `surface-overview-connection/spec.md` | `51f9dc1a1d7b92ccdb059b7fda0117bf6c898378fa9a9fe185c7e2045044d193` |
 
 Original complete row requirement, including trailing blank line: `19e49512a8bbef7aaa16288958d6284406e82b320fd975ef2406910d01db7526`.

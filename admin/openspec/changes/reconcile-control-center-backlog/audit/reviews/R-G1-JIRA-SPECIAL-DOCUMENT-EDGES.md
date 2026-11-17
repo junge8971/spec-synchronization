@@ -17,24 +17,24 @@ No issues found.
 
 Read the complete target report and both assignments. Scoped file discovery returned only one retained r1 content/metadata pair for each assigned bundle. Read all ten files completely, without remaining truncation.
 
-| Source under `sources/` | Complete content / metadata | Issue records | Comments | Attachment evidence |
-|---|---|---:|---|---|
-| `jira-feedback/r1` | `content.json:1–114`; `metadata.json:1–11` | 12 | Fields absent | Index fields absent |
-| `jira-MOS-909/r1` | `content.md:1–25`; `metadata.json:1–14` | 1 | Two selected records | Explicit extraction statement: returned array empty |
-| `jira-MOS-1321/r1` | `content.json:1–31`; `metadata.json:1–20` | 1 | Two records, including omitted-body placeholder | `/attachments: []`, line10 |
-| `jira-MOS-1386/r1` | Same ranges | 1 | Two records, including omitted-body placeholder | `/attachments: []`, line10 |
-| `jira-MOS-1399/r1` | Same ranges | 1 | Two records, including omitted-body placeholder | `/attachments: []`, line10 |
+| Source under `sources/` | Complete content / metadata                | Issue records | Comments                                        | Attachment evidence                                 |
+| ----------------------- | ------------------------------------------ | ------------: | ----------------------------------------------- | --------------------------------------------------- |
+| `jira-feedback/r1`      | `content.json:1–114`; `metadata.json:1–11` |            12 | Fields absent                                   | Index fields absent                                 |
+| `jira-MOS-909/r1`       | `content.md:1–25`; `metadata.json:1–14`    |             1 | Two selected records                            | Explicit extraction statement: returned array empty |
+| `jira-MOS-1321/r1`      | `content.json:1–31`; `metadata.json:1–20`  |             1 | Two records, including omitted-body placeholder | `/attachments: []`, line10                          |
+| `jira-MOS-1386/r1`      | Same ranges                                |             1 | Two records, including omitted-body placeholder | `/attachments: []`, line10                          |
+| `jira-MOS-1399/r1`      | Same ranges                                |             1 | Two records, including omitted-body placeholder | `/attachments: []`, line10                          |
 
 Verified **12+1+1+1+1=16 records**. Feedback contains MOS-1246,1231,1249,1250,1251,1254,1255,1256,1257,1258,1259,1260, in that order.
 
 The eight saved comment records/excerpts/placeholders are:
 
-| Issue | IDs and exact content locators |
-|---|---|
-| MOS-909 | 1122872 at `content.md:20`;1122881 at line21 |
+| Issue    | IDs and exact content locators                                                                |
+| -------- | --------------------------------------------------------------------------------------------- |
+| MOS-909  | 1122872 at `content.md:20`;1122881 at line21                                                  |
 | MOS-1321 | 1129117 and1129414; `/comments/items/0/body` at line21 and `/comments/items/1/body` at line27 |
-| MOS-1386 | 1131237 and1131540; same pointers/lines |
-| MOS-1399 | 1131561 and1131702; same pointers/lines |
+| MOS-1386 | 1131237 and1131540; same pointers/lines                                                       |
+| MOS-1399 | 1131561 and1131702; same pointers/lines                                                       |
 
 Each of these four issues records startAt0/maxResults2/total2. MOS-909 retains one reduced MR excerpt and one verbatim comment; the other three retain one omitted automated-MR-body placeholder each. Thus four records have reduced/omitted MR wording.
 
@@ -82,12 +82,12 @@ Therefore this lane adds **one carrying occurrence, zero distinct wiki targets a
 
 Used only the specified accepted rows and necessary table context:
 
-| Inspected carriers | Accepted report evidence |
-|---|---|
-| Feedback module and11 members | `reports/JIRA-MOS-1246.md:15–34` |
-| MOS-909 | `reports/JIRA-MOS-782.md:14–17,30`: child12/member-index103 |
-| MOS-1321 and MOS-1399 | `reports/JIRA-MOS-1327.md:18–23`: children0/1, indices138/139 |
-| MOS-1386 | `reports/JIRA-MOS-1403.md:10–14`: index145 |
+| Inspected carriers            | Accepted report evidence                                      |
+| ----------------------------- | ------------------------------------------------------------- |
+| Feedback module and11 members | `reports/JIRA-MOS-1246.md:15–34`                              |
+| MOS-909                       | `reports/JIRA-MOS-782.md:14–17,30`: child12/member-index103   |
+| MOS-1321 and MOS-1399         | `reports/JIRA-MOS-1327.md:18–23`: children0/1, indices138/139 |
+| MOS-1386                      | `reports/JIRA-MOS-1403.md:10–14`: index145                    |
 
 All16 identities match. No hierarchy/member-index source or additional issue body was opened, and no membership census or graph was constructed. Carrying-issue membership does not determine requirements ownership. Historical “Index only/uncollected” wording remains historical; the specialized packets now supply only their explicitly retained fields.
 

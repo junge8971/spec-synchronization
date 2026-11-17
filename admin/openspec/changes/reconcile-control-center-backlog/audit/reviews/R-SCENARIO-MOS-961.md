@@ -35,28 +35,28 @@ No application code was inspected.
 
 Fresh local SHA-256/byte calculation matched each accompanying metadata value and the author's table:
 
-| Content under S | Bytes | SHA-256 |
-|---|---:|---|
-| jira-sandbox-details/r1/content.json | 4826 | 4f6db63102f34912d4c50dc39d9f936635054dc805ddfbcf086414d5fe268cb8 |
-| wiki-241080062/r1/content.json | 481595 | 4920e62124826b90c86ae1d6ec520f49f52a4d381334c94867864c1f218c3ab2 |
-| wiki-245673187/r1/content.json | 319614 | d539752b3e0f424d0a251426a490319b07d03f4ff8dfdcf3074a62ee53d34eaa |
-| wiki-241097511/r2/content.json | 73058 | 710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47 |
-| wiki-241082009/r2/content.json | 56040 | 13ff11a35b27fe17db263039ba4c9a2b5c335728bad7615d06aed3d94ab2d86b |
-| api-live/r1/content.json | 413007 | 549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06 |
+| Content under S                      |  Bytes | SHA-256                                                          |
+| ------------------------------------ | -----: | ---------------------------------------------------------------- |
+| jira-sandbox-details/r1/content.json |   4826 | 4f6db63102f34912d4c50dc39d9f936635054dc805ddfbcf086414d5fe268cb8 |
+| wiki-241080062/r1/content.json       | 481595 | 4920e62124826b90c86ae1d6ec520f49f52a4d381334c94867864c1f218c3ab2 |
+| wiki-245673187/r1/content.json       | 319614 | d539752b3e0f424d0a251426a490319b07d03f4ff8dfdcf3074a62ee53d34eaa |
+| wiki-241097511/r2/content.json       |  73058 | 710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47 |
+| wiki-241082009/r2/content.json       |  56040 | 13ff11a35b27fe17db263039ba4c9a2b5c335728bad7615d06aed3d94ab2d86b |
+| api-live/r1/content.json             | 413007 | 549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06 |
 
 Wiki metadata versions are respectively 17/2026-10-09, 18/2026-10-09, 6/2026-10-13, 5/2026-09-08. API info.version is 0.1.0, captured 2026-10-16T11:13:29.451Z from Swagger-discovered nchat-a documentation, with no ETag/Last-Modified. Jira item retrieval is 2026-10-16T13:18:06.118Z; updated 2026-10-15T14:47:13.597+0800; status Backlog. `parent:null`, zero returned comments/total and empty attachments do not prove missing hierarchy, global discussion or unavailable backend. Membership is metadata attribution; custom fields and attachment bodies were not collected. Capture methods and earlier failed r1 attempts are recorded provenance, not independently reproduced access or explained failures. Hash agreement proves saved-byte consistency, not live freshness, deployment, or approval.
 
 ### Seven candidates
 
-| Candidate | Independent result / exact primary basis |
-|---|---|
-| C01 chat/examples/send-reply | Supported: Jira `/items/1/description`; skills ПЕС-1, ПРТ-ПЕС-1, T-74. No conversation identity, send contract, or event state machine established. |
-| C02 group/intent/domain/skill/confidence/ethics | Supported as candidate fields: Jira description, skills ПРТ-ПЕС-2 and §6.3. §6.3 gives intent/domain/skill strings, confidence float, ethics boolean; it does not establish a separate group or group↔intent identity, range, or API nullability. Preserve those known analytics types rather than claiming all typing is absent. |
-| C03 timings/calls | Supported: ПЕС-4, ПРТ-ПЕС-3, §6.3, T-76. Four timing members are `pre_router`, `domain_classifier`, `skill_service`, `total`; calls contain `system,url,code,duration_ms`. Calls explicitly identify milliseconds; timing-member units/correlation are not established by a sandbox API. Ordinary route totals in seconds are not substitutes. |
-| C04 error | Supported: ПРТ-ПЕС-4, §6.3 `error {stage,code,message}`, T-77. Processing failure versus transport failure and terminal/partial event handling remain unagreed. |
-| C05 history/version | Supported: Jira explicitly demands time/author/result/version; ПЕС-6–7, ПРТ-ПЕС-7 and T-78 support history and trace navigation. §6.3 lists required id, skill_id, author_user_id (СУДИР), result, created_at and optional trace; no version. Do not substitute message author or updated_at. T-78's `GET /api/v1/skills/{id}/sandbox/history` is analytics decomposition, not a published/agreed operation. |
-| C06 transport/no synthetic answers | Explicit Jira gate. No HTTP/WS/SSE choice, local three-string answer selection, runtime call, or synthetic completion is justified. Demo fixed HTTP responses do not supply missing business APIs. |
-| C07 isolation/readiness | Supported: ПЕС-8–9 require completed classifier training and separate contour without user impact. Surface card common row 9 explicitly leaves replacement for all users/sender/status-only unresolved. Main skill-checks-training 63–70 forbids readiness from status alone. Preserve ambiguity, not a deployment guarantee. |
+| Candidate                                       | Independent result / exact primary basis                                                                                                                                                                                                                                                                                                                                                                     |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| C01 chat/examples/send-reply                    | Supported: Jira `/items/1/description`; skills ПЕС-1, ПРТ-ПЕС-1, T-74. No conversation identity, send contract, or event state machine established.                                                                                                                                                                                                                                                          |
+| C02 group/intent/domain/skill/confidence/ethics | Supported as candidate fields: Jira description, skills ПРТ-ПЕС-2 and §6.3. §6.3 gives intent/domain/skill strings, confidence float, ethics boolean; it does not establish a separate group or group↔intent identity, range, or API nullability. Preserve those known analytics types rather than claiming all typing is absent.                                                                            |
+| C03 timings/calls                               | Supported: ПЕС-4, ПРТ-ПЕС-3, §6.3, T-76. Four timing members are `pre_router`, `domain_classifier`, `skill_service`, `total`; calls contain `system,url,code,duration_ms`. Calls explicitly identify milliseconds; timing-member units/correlation are not established by a sandbox API. Ordinary route totals in seconds are not substitutes.                                                               |
+| C04 error                                       | Supported: ПРТ-ПЕС-4, §6.3 `error {stage,code,message}`, T-77. Processing failure versus transport failure and terminal/partial event handling remain unagreed.                                                                                                                                                                                                                                              |
+| C05 history/version                             | Supported: Jira explicitly demands time/author/result/version; ПЕС-6–7, ПРТ-ПЕС-7 and T-78 support history and trace navigation. §6.3 lists required id, skill_id, author_user_id (СУДИР), result, created_at and optional trace; no version. Do not substitute message author or updated_at. T-78's `GET /api/v1/skills/{id}/sandbox/history` is analytics decomposition, not a published/agreed operation. |
+| C06 transport/no synthetic answers              | Explicit Jira gate. No HTTP/WS/SSE choice, local three-string answer selection, runtime call, or synthetic completion is justified. Demo fixed HTTP responses do not supply missing business APIs.                                                                                                                                                                                                           |
+| C07 isolation/readiness                         | Supported: ПЕС-8–9 require completed classifier training and separate contour without user impact. Surface card common row 9 explicitly leaves replacement for all users/sender/status-only unresolved. Main skill-checks-training 63–70 forbids readiness from status alone. Preserve ambiguity, not a deployment guarantee.                                                                                |
 
 ### Schema/status challenge
 

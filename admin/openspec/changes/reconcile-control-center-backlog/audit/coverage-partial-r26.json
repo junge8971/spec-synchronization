@@ -3,7 +3,15 @@
   "supplements": "coverage-partial-r25.json",
   "complete": false,
   "globalProgress": "6/28",
-  "acceptedChains": [{"source": "sources/wiki-247734813-attachment-index/r1/content.json", "review": "reviews/R-FEEDBACK-INDEX-REPAIR.md", "verdict": "ACCEPT", "decision": "D-044", "limits": "Selected projection only; acquisition/hash parent-attributed, historical byte identity not reviewer-certified"}],
+  "acceptedChains": [
+    {
+      "source": "sources/wiki-247734813-attachment-index/r1/content.json",
+      "review": "reviews/R-FEEDBACK-INDEX-REPAIR.md",
+      "verdict": "ACCEPT",
+      "decision": "D-044",
+      "limits": "Selected projection only; acquisition/hash parent-attributed, historical byte identity not reviewer-certified"
+    }
+  ],
   "sourceAdditions": [],
   "acceptedRootAccountingAfterIndexRepair": {
     "rootBodyOrExtractionPackets": 42,

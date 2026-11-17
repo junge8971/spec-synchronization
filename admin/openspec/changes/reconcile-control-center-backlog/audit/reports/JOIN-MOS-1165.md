@@ -18,11 +18,11 @@ HEAD: `bc0d9800f25a90989b9c73c76f91996f8300f1d3`. `git status --short` не вы
 - статус сохранённого снимка: `Backlog`;
 - updated: `2026-10-09T15:06:55.903+0800`.
 
-| ID | Требование / контекст | Точный locator |
-|---|---|---|
-| R1 | При раскрытии списка «Владелец поверхности» на шаге «Ответственные» добавления поверхности список не должен смещаться относительно поля выбора. | `/items/12/description`: шаги 1–2, ФР и ОР «Смещения нет» |
-| C1 | В сохранённом описании дефект наблюдался на `https://mobile-a-tech.mos.ru/tsam-panel/`. Это исторический контекст, не результат текущей проверки. | `/items/12/description`, вводная строка |
-| E1 | Приложен файл `2.png`, attachment ID `832288`, размер 49032. Доступны только метаданные. | `/items/12/attachments/0` |
+| ID  | Требование / контекст                                                                                                                             | Точный locator                                            |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| R1  | При раскрытии списка «Владелец поверхности» на шаге «Ответственные» добавления поверхности список не должен смещаться относительно поля выбора.   | `/items/12/description`: шаги 1–2, ФР и ОР «Смещения нет» |
+| C1  | В сохранённом описании дефект наблюдался на `https://mobile-a-tech.mos.ru/tsam-panel/`. Это исторический контекст, не результат текущей проверки. | `/items/12/description`, вводная строка                   |
+| E1  | Приложен файл `2.png`, attachment ID `832288`, размер 49032. Доступны только метаданные.                                                          | `/items/12/attachments/0`                                 |
 
 Не выделяю искусственных отдельных требований о ширине, точном отступе, направлении раскрытия или выбранном элементе: источник их не задаёт.
 
@@ -131,20 +131,20 @@ HEAD: `bc0d9800f25a90989b9c73c76f91996f8300f1d3`. `git status --short` не вы
 
 Пути ниже однозначно соответствуют прочитанным файлам; `A` определён выше.
 
-| Вход | SHA256 |
-|---|---|
-| `A/work-items/WAVE-D090-EIGHT.md` | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
-| `A/sources/jira-subtasks/r1/content.json` | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
-| `A/sources/jira-subtasks/r1/metadata.json` | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
-| `A/coverage.json` | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
-| `A/sources/wiki-241080065-readable/r1/content.txt` | `265c282d02fa14d85ad28b13a4fb5dd5d2e73573d2c2b7d652311c369acd7f25` |
-| `openspec/specs/surface-registration/spec.md` | `31928d907bfff75eca61d2efe176879e3c7f4d3e0029dbe6bb97258b8d00f9a5` |
+| Вход                                                                                               | SHA256                                                             |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `A/work-items/WAVE-D090-EIGHT.md`                                                                  | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
+| `A/sources/jira-subtasks/r1/content.json`                                                          | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
+| `A/sources/jira-subtasks/r1/metadata.json`                                                         | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
+| `A/coverage.json`                                                                                  | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
+| `A/sources/wiki-241080065-readable/r1/content.txt`                                                 | `265c282d02fa14d85ad28b13a4fb5dd5d2e73573d2c2b7d652311c369acd7f25` |
+| `openspec/specs/surface-registration/spec.md`                                                      | `31928d907bfff75eca61d2efe176879e3c7f4d3e0029dbe6bb97258b8d00f9a5` |
 | Архивная delta `2026-10-15-update-control-center-api-contracts/specs/surface-registration/spec.md` | `20183114e812bea2bd54cd2c4f54b49277f9c485bb68fbbe9032d948c3a1e047` |
 | Архивная delta `2026-10-16-fix-existing-scenarios-test-contour/specs/surface-registration/spec.md` | `cbf6470a59c038b83faefe9df58aac4b3f935d5ee6ae2e2cfcaebdab4c9b8ed7` |
-| `app/features/surface-registration/ui/steps/owner-team-field.tsx` | `210c9a4166bfac16fb6e06ad77f696c7a2f4ab5d0bd0157bd10f12512dcc9058` |
-| `app/features/surface-registration/ui/steps/responsibles-step.tsx` | `9369174cce262cc69eddfb9984c0f67702dd854c16bd2b74f660459b2527ba4b` |
-| `app/shared/ui/select.tsx` | `87858971de8d53f575fcea4c524c2dfd9009ff5ea0a31103f6ca9cfc90d12e04` |
-| `app/widgets/surface-registration/ui/tests/surface-registration.test.tsx` | `c50563fcaf2ce4ea6844a38c8805675922c3169a1ecc2ebdfc0d655ea4976c53` |
+| `app/features/surface-registration/ui/steps/owner-team-field.tsx`                                  | `210c9a4166bfac16fb6e06ad77f696c7a2f4ab5d0bd0157bd10f12512dcc9058` |
+| `app/features/surface-registration/ui/steps/responsibles-step.tsx`                                 | `9369174cce262cc69eddfb9984c0f67702dd854c16bd2b74f660459b2527ba4b` |
+| `app/shared/ui/select.tsx`                                                                         | `87858971de8d53f575fcea4c524c2dfd9009ff5ea0a31103f6ca9cfc90d12e04` |
+| `app/widgets/surface-registration/ui/tests/surface-registration.test.tsx`                          | `c50563fcaf2ce4ea6844a38c8805675922c3169a1ecc2ebdfc0d655ea4976c53` |
 
 ## Ограничения процедуры
 

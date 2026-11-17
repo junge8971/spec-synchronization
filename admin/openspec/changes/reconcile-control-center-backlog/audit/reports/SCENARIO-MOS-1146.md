@@ -19,6 +19,7 @@ Paths below are repository-relative. JSON evidence is cited by exact pointers ra
 ### Plans and main specifications
 
 Fully read:
+
 - `openspec/changes/mos-1026-skill-operations-info/proposal.md` (1–27), `design.md` (1–26), `tasks.md` (1–18), `specs/skill-operations-info/spec.md` (1–47): existing incident owner and blocked continuation.
 - `openspec/changes/mos-1025-skill-monitoring/proposal.md` (1–27), `design.md` (1–26), `tasks.md` (1–17), `specs/skill-monitoring/spec.md` (1–47): adjacent metrics owner explicitly excludes MOS-1026 incidents.
 - `openspec/specs/skill-catalog-experience/spec.md` (1–112): truthful warnings and source-failure safeguards.
@@ -31,6 +32,7 @@ Fully read:
 ### Mandatory auth/demo prerequisites
 
 Fully read under `openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions/`:
+
 - `proposal.md` (1–38), `design.md` (1–171), `tasks.md` (1–52).
 - `specs/control-center-api-integration/spec.md` (1–64).
 - `specs/control-center-http/spec.md` (1–71).
@@ -40,6 +42,7 @@ Fully read under `openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permis
 - `specs/mpmm-session/spec.md` (1–138).
 
 Fully read under `openspec/changes/archive/2026-10-09-add-local-session-demo/`:
+
 - `proposal.md` (1–28), `design.md` (1–70), `tasks.md` (1–26).
 - `specs/control-center-mock-server/spec.md` (1–106).
 - `specs/control-center-shell/spec.md` (1–55).
@@ -60,14 +63,14 @@ Also fully read `docs/mpmm-auth-rollout.md` (1–58). Truncated tool output was 
 
 SHA-256 was recomputed from local saved bytes.
 
-| Evidence | Verified SHA-256 | Version/capture |
-|---|---|---|
-| Jira monitoring r1 | `6dc8925cbbb1cfcd3a4179db720d38a72d9436926f7df3b73e612eb528c84c73` | Revision 1; 44,254 bytes; captured `2026-10-16T13:48:06.559Z` |
-| API live r1 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` | OpenAPI 3.1.0; service version 0.1.0; captured `2026-10-16T11:13:29.451Z` |
-| Skills wiki r1 | `4920e62124826b90c86ae1d6ec520f49f52a4d381334c94867864c1f218c3ab2` | Page version 17; modified `2026-10-09T23:32:41.029+08:00`; captured `2026-10-16T11:48:21.710Z` |
-| Catalog wiki r2 | `710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47` | Page version 6; modified `2026-10-13T17:56:19.256+08:00`; captured `2026-10-16T12:37:03.295Z` |
-| Local internal contract | `3752ad6ac5058d888f75942bccde7487dc340caac1726e4707c0e01d73aaf425` | OpenAPI 3.1.0; service version 0.1.0 |
-| Local aggregate | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` | OpenAPI 3.1.0; service version 0.1.0 |
+| Evidence                | Verified SHA-256                                                   | Version/capture                                                                                |
+| ----------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| Jira monitoring r1      | `6dc8925cbbb1cfcd3a4179db720d38a72d9436926f7df3b73e612eb528c84c73` | Revision 1; 44,254 bytes; captured `2026-10-16T13:48:06.559Z`                                  |
+| API live r1             | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` | OpenAPI 3.1.0; service version 0.1.0; captured `2026-10-16T11:13:29.451Z`                      |
+| Skills wiki r1          | `4920e62124826b90c86ae1d6ec520f49f52a4d381334c94867864c1f218c3ab2` | Page version 17; modified `2026-10-09T23:32:41.029+08:00`; captured `2026-10-16T11:48:21.710Z` |
+| Catalog wiki r2         | `710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47` | Page version 6; modified `2026-10-13T17:56:19.256+08:00`; captured `2026-10-16T12:37:03.295Z`  |
+| Local internal contract | `3752ad6ac5058d888f75942bccde7487dc340caac1726e4707c0e01d73aaf425` | OpenAPI 3.1.0; service version 0.1.0                                                           |
+| Local aggregate         | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` | OpenAPI 3.1.0; service version 0.1.0                                                           |
 
 The four source-content hashes match their metadata. Local contract hashes are observations, not assertions of equality to the entire saved API.
 
@@ -94,11 +97,11 @@ Exact pointer:
 
 `P#/components/schemas/SkillIncidentResponse`:
 
-| Shape | Fields |
-|---|---|
-| Required, non-null | `id`, `skill_id`, `external_id`, `level`, `title`, `side`, `message`, `detected_at`, `postmortem_done`, `status` |
-| Required but nullable | `cause`, `acknowledged_at`, `resolved_at`, `postmortem_due_at` |
-| Optional and nullable | `affected_percent` |
+| Shape                 | Fields                                                                                                           |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Required, non-null    | `id`, `skill_id`, `external_id`, `level`, `title`, `side`, `message`, `detected_at`, `postmortem_done`, `status` |
+| Required but nullable | `cause`, `acknowledged_at`, `resolved_at`, `postmortem_due_at`                                                   |
+| Optional and nullable | `affected_percent`                                                                                               |
 
 `id` and response `skill_id` are UUID strings. `level`, `side`, `status`, and `external_id` are strings, not enums. Timestamp fields use `date-time`.
 
@@ -129,25 +132,26 @@ Local `UpsertSkillIncidentRequest` exactly matches the saved schema. Local aggre
 
 These stable IDs are audit candidates, not activated requirements.
 
-| ID | Primary locator | Coverage / discrepancy | Narrow recommendation |
-|---|---|---|---|
-| **MON1146-001** | Jira `/items/1/description`, headings «Цель», «API»; wiki `/bodyView`, МОН-14 | Incidents are view-only in Control Center; no public create/edit/delete required. MOS-1026 spec 35–47 and proposal 7–10 already agree. | **No-op** on read-only scope. Never expose internal upsert through a UI editor. |
-| **MON1146-002** | Jira «API»; public GET pointer above | GET and DTO are published and present locally. MOS-1026 proposal:25 says incidents absent; design:13/tasks:5 retain an undifferentiated API gate. | Candidate documentation correction: distinguish **published read contract** from unresolved consumer semantics and unverified integration. Do not close task 1.1 wholesale. |
-| **MON1146-003** | Jira «Справочники», «Доменная модель» | Database dictionaries, not Python enums, define codes. Seeds: levels p0–p3; sides platform/team; statuses open/acknowledged/resolved. Codes lowercase; used values retained via inactive flag. DTO strings agree with extensibility. | Record dictionary-backed string handling; do not turn seeds into an exhaustive transport enum. DB/model implementation remains backend scope. |
-| **MON1146-004** | Jira «Синхронизация» and «Справочники» | Upsert must reject unknown/inactive level/side/status. Existing historical references must not be physically deleted. This is not permission to filter incident reads to active codes. | Preserve historical rows and returned codes. Clarify label resolution/inactive inclusion separately; no frontend mutation selector is needed for this seam. |
-| **MON1146-005** | `P#/components/schemas/SkillCatalogsResponse`; catalog lookup paths | `/skills/v1/catalogs` declares only skill_types/training_states/autotest_states. Generic managed-resource lookup supports section `skills` and dictionary-shaped results, but inspected schemas do not name incident keys or establish inactive inclusion. | Ask API/catalog owner for exact incident lookup keys and historical-label behavior. Do not claim dictionaries universally absent or invent keys from table names. |
-| **MON1146-006** | Jira «Таблица skill_incidents»; `SkillIncidentResponse` | Published field presence/nullability is precise. MOS-1026's generic incident wording does not yet capture required-nullable versus optional-nullable fields, percent string/number, or false/zero distinctions. | Candidate DTO acceptance examples: null cause/timestamps, absent/null/zero percent, false postmortem flag, malformed required fields. No defaults that fabricate measurements. |
-| **MON1146-007** | Jira «Таблица skill_incidents», «Синхронизация» | Internal upsert keyed by unique immutable external_id; skill must exist. Public DTO has both UUID record ID and external ID, but no URL. MOS-1026 design:16 already calls for stable source IDs, not titles. | Preserve both identities; clarify stable row-key choice and future link source. Never construct external URLs from an unspecified external-ID format. |
-| **MON1146-008** | Jira «API», ordered list | Required order is open → acknowledged → resolved; detected_at descending within each group. Schema alone does not state order. Existing MOS-1026 delta lacks this precise acceptance scenario. | Candidate ordering scenario for future approved plan update. Do not substitute level sort, resolved_at sort or client status inference. Tie-breaking and additional statuses remain unspecified. |
-| **MON1146-009** | Jira «API», empty-list paragraph; public array envelope | Successful no-incidents result is an empty list. MOS-1026 spec 35–47 already distinguishes empty/error/unconnected/unavailable. GET publishes 200/422 only, not a source-status discriminator. | **No-op** on error isolation; record wire shape. Empty array must not be reinterpreted as “not connected”; missing endpoint, malformed success and request failure are not empty success. |
-| **MON1146-010** | Jira «Миграция», «Критерии приёмки», «Синхронизация» | Tables, seeds, FKs/indexes, uniqueness, validation and upsert are requested backend acceptance. FK failure must not substitute for user-facing validation. No backend code inspected. | Keep separate from frontend acceptance. Do not declare migration, synchronization, validation or real external ingestion delivered. |
-| **MON1146-011** | wiki skills `/bodyView`, §4.7 and §7 dictionary rows versus Jira «Справочники»/table | Wiki uses `skill_incident_*` names and side `owner` (“Владелец навыка”); Jira uses `incident_*` and `team` (“Команда навыка”). Wiki message is optional, level varchar(8), title string(500), and includes created/updated timestamps; Jira/published DTO differ. | Explicit source-reconciliation item. No silent `owner`↔`team` alias, timestamp synthesis or wiki length cap imposed on published DTO. |
-| **MON1146-012** | wiki МОН-13/ПРТ-МОН-6/T-59; MOS-1026 spec:23–28/tasks:12; `SkillIncidentResponse` | UI prose requests resolution deadline, responsible party and links. DTO supplies side, resolution timestamp and **postmortem** deadline, but no resolution deadline, contact identity or URL. | Clarify presentation mapping. `postmortem_due_at` is not resolution due time; `resolved_at` is not a deadline; side is not an assigned person. Retain narrower truthful display while decisions remain open. |
-| **MON1146-013** | Jira `/items/1/status`, `/comment/comments/0`; auth tasks:52; rollout:5 | Ready-for-test/MR mention is not completion. Historical auth release approval exists independently of incident integration. | No task closure, runtime attestation, reopened general auth gate or extended approval. Backend fake-incident upsert is separate from frontend local demo. |
+| ID              | Primary locator                                                                      | Coverage / discrepancy                                                                                                                                                                                                                                            | Narrow recommendation                                                                                                                                                                                        |
+| --------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **MON1146-001** | Jira `/items/1/description`, headings «Цель», «API»; wiki `/bodyView`, МОН-14        | Incidents are view-only in Control Center; no public create/edit/delete required. MOS-1026 spec 35–47 and proposal 7–10 already agree.                                                                                                                            | **No-op** on read-only scope. Never expose internal upsert through a UI editor.                                                                                                                              |
+| **MON1146-002** | Jira «API»; public GET pointer above                                                 | GET and DTO are published and present locally. MOS-1026 proposal:25 says incidents absent; design:13/tasks:5 retain an undifferentiated API gate.                                                                                                                 | Candidate documentation correction: distinguish **published read contract** from unresolved consumer semantics and unverified integration. Do not close task 1.1 wholesale.                                  |
+| **MON1146-003** | Jira «Справочники», «Доменная модель»                                                | Database dictionaries, not Python enums, define codes. Seeds: levels p0–p3; sides platform/team; statuses open/acknowledged/resolved. Codes lowercase; used values retained via inactive flag. DTO strings agree with extensibility.                              | Record dictionary-backed string handling; do not turn seeds into an exhaustive transport enum. DB/model implementation remains backend scope.                                                                |
+| **MON1146-004** | Jira «Синхронизация» and «Справочники»                                               | Upsert must reject unknown/inactive level/side/status. Existing historical references must not be physically deleted. This is not permission to filter incident reads to active codes.                                                                            | Preserve historical rows and returned codes. Clarify label resolution/inactive inclusion separately; no frontend mutation selector is needed for this seam.                                                  |
+| **MON1146-005** | `P#/components/schemas/SkillCatalogsResponse`; catalog lookup paths                  | `/skills/v1/catalogs` declares only skill_types/training_states/autotest_states. Generic managed-resource lookup supports section `skills` and dictionary-shaped results, but inspected schemas do not name incident keys or establish inactive inclusion.        | Ask API/catalog owner for exact incident lookup keys and historical-label behavior. Do not claim dictionaries universally absent or invent keys from table names.                                            |
+| **MON1146-006** | Jira «Таблица skill_incidents»; `SkillIncidentResponse`                              | Published field presence/nullability is precise. MOS-1026's generic incident wording does not yet capture required-nullable versus optional-nullable fields, percent string/number, or false/zero distinctions.                                                   | Candidate DTO acceptance examples: null cause/timestamps, absent/null/zero percent, false postmortem flag, malformed required fields. No defaults that fabricate measurements.                               |
+| **MON1146-007** | Jira «Таблица skill_incidents», «Синхронизация»                                      | Internal upsert keyed by unique immutable external_id; skill must exist. Public DTO has both UUID record ID and external ID, but no URL. MOS-1026 design:16 already calls for stable source IDs, not titles.                                                      | Preserve both identities; clarify stable row-key choice and future link source. Never construct external URLs from an unspecified external-ID format.                                                        |
+| **MON1146-008** | Jira «API», ordered list                                                             | Required order is open → acknowledged → resolved; detected_at descending within each group. Schema alone does not state order. Existing MOS-1026 delta lacks this precise acceptance scenario.                                                                    | Candidate ordering scenario for future approved plan update. Do not substitute level sort, resolved_at sort or client status inference. Tie-breaking and additional statuses remain unspecified.             |
+| **MON1146-009** | Jira «API», empty-list paragraph; public array envelope                              | Successful no-incidents result is an empty list. MOS-1026 spec 35–47 already distinguishes empty/error/unconnected/unavailable. GET publishes 200/422 only, not a source-status discriminator.                                                                    | **No-op** on error isolation; record wire shape. Empty array must not be reinterpreted as “not connected”; missing endpoint, malformed success and request failure are not empty success.                    |
+| **MON1146-010** | Jira «Миграция», «Критерии приёмки», «Синхронизация»                                 | Tables, seeds, FKs/indexes, uniqueness, validation and upsert are requested backend acceptance. FK failure must not substitute for user-facing validation. No backend code inspected.                                                                             | Keep separate from frontend acceptance. Do not declare migration, synchronization, validation or real external ingestion delivered.                                                                          |
+| **MON1146-011** | wiki skills `/bodyView`, §4.7 and §7 dictionary rows versus Jira «Справочники»/table | Wiki uses `skill_incident_*` names and side `owner` (“Владелец навыка”); Jira uses `incident_*` and `team` (“Команда навыка”). Wiki message is optional, level varchar(8), title string(500), and includes created/updated timestamps; Jira/published DTO differ. | Explicit source-reconciliation item. No silent `owner`↔`team` alias, timestamp synthesis or wiki length cap imposed on published DTO.                                                                        |
+| **MON1146-012** | wiki МОН-13/ПРТ-МОН-6/T-59; MOS-1026 spec:23–28/tasks:12; `SkillIncidentResponse`    | UI prose requests resolution deadline, responsible party and links. DTO supplies side, resolution timestamp and **postmortem** deadline, but no resolution deadline, contact identity or URL.                                                                     | Clarify presentation mapping. `postmortem_due_at` is not resolution due time; `resolved_at` is not a deadline; side is not an assigned person. Retain narrower truthful display while decisions remain open. |
+| **MON1146-013** | Jira `/items/1/status`, `/comment/comments/0`; auth tasks:52; rollout:5              | Ready-for-test/MR mention is not completion. Historical auth release approval exists independently of incident integration.                                                                                                                                       | No task closure, runtime attestation, reopened general auth gate or extended approval. Backend fake-incident upsert is separate from frontend local demo.                                                    |
 
 ### Dictionary seed detail
 
 Jira specifies:
+
 - `p0` Критический/10, `p1` Высокий/20, `p2` Средний/30, `p3` Низкий/40.
 - `platform` Команда ЦАМ/10, `team` Команда навыка/20.
 - `open` Открыт/10, `acknowledged` Подтверждён/20, `resolved` Устранён/30.
@@ -159,6 +163,7 @@ Each requested dictionary has code varchar(32) PK, display_name varchar(100), so
 The existing plan composes incident and operational read blocks inside `skill-details`, independently of MOS-1025 metrics. Each source retains its own loading/error/retry; failure must not hide the skill questionnaire or other successful blocks.
 
 Data boundaries:
+
 1. Public per-skill GET → validated envelope and incident read model → read-only presentation.
 2. Catalog lookup, once agreed → labels without discarding historical incident codes.
 3. Internal upsert → backend synchronization/testing boundary, **not** a frontend business editor.
@@ -179,6 +184,7 @@ Specs establish agreed behavior and ownership, not inspected implementation.
 Open **`openspec/changes/mos-1026-skill-operations-info/proposal.md:24–27`**, then its complete design/spec/tasks. This is the existing owner whose blanket incident-API absence statement can be narrowly reconciled without creating a duplicate plan.
 
 A future explicitly authorized documentation package could:
+
 1. Correct publication traceability in proposal/design/tasks.
 2. Add incident field/nullability, ordering and dictionary-preservation scenarios.
 3. Keep external URL/deadline/label and source-status questions explicit.
@@ -189,6 +195,7 @@ No such edits are authorized by this report.
 ## Open questions and limits
 
 For future product/API-owner reconciliation—not execution blockers:
+
 - Which lookup keys resolve incident dictionaries, and how are inactive historical values returned?
 - Is `team` or `owner` the agreed side code, and is any migration/compatibility behavior intended?
 - What supplies a resolution deadline, external URL and any person-level responsibility?

@@ -8,13 +8,13 @@
 
 ## Атомарные источники: expected / observed / unknown
 
-| Локатор | Expected для точного join | Observed | Unknown |
-|---|---|---|---|
-| `audit/sources/jira-member-index/r1/content.json:1214`, `$.items[140]` | Запись именно MOS-1322 и её тело | `key=MOS-1322`, summary выше, type `Development task`, status `Hold`, updated `2026-10-14T14:03:51.688+0800`, subtasks `[]`; только шесть полей | Description, критерии приёмки, комментарии, вложения и точный backend/frontend scope отсутствуют |
-| `audit/sources/jira-member-index/r1/metadata.json`, `$.fields`, `$.limitations`, `$.retrievedAt` | Происхождение и полнота | Снимок `2026-10-16T11:20:38.570Z`; явно не собраны descriptions/comments/attachments/custom acceptance | Пустой subtasks не доказывает отсутствие скрытых задач; Hold не доказывает реализацию либо её отсутствие |
-| `audit/sources/jira-hierarchy/r1/content.json:30`, `$.results[22].children[0]` | Точная принадлежность | MOS-1322 — ребёнок MOS-1328; сосед MOS-1362 — другая задача | Parent отсутствует в самой записи index; тело/приёмка не следуют из иерархии |
-| `audit/sources/jira-subtasks/r1/content.json`, `$.items[*]` | Точный detail либо связанный subtask | Во всех 16 элементах нет key MOS-1322 и нет parent MOS-1322/MOS-1328 | Никакого требования этого member из пакета извлечь нельзя |
-| Все файлы `audit/sources/**` — локальный поиск точной строки `MOS-1322` | Другой сохранённый detail-пакет | Только hierarchy и member-index содержат ключ | Связь без ключа не заменяет exact-member evidence; внешнее получение запрещено |
+| Локатор                                                                                          | Expected для точного join            | Observed                                                                                                                                        | Unknown                                                                                                  |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `audit/sources/jira-member-index/r1/content.json:1214`, `$.items[140]`                           | Запись именно MOS-1322 и её тело     | `key=MOS-1322`, summary выше, type `Development task`, status `Hold`, updated `2026-10-14T14:03:51.688+0800`, subtasks `[]`; только шесть полей | Description, критерии приёмки, комментарии, вложения и точный backend/frontend scope отсутствуют         |
+| `audit/sources/jira-member-index/r1/metadata.json`, `$.fields`, `$.limitations`, `$.retrievedAt` | Происхождение и полнота              | Снимок `2026-10-16T11:20:38.570Z`; явно не собраны descriptions/comments/attachments/custom acceptance                                          | Пустой subtasks не доказывает отсутствие скрытых задач; Hold не доказывает реализацию либо её отсутствие |
+| `audit/sources/jira-hierarchy/r1/content.json:30`, `$.results[22].children[0]`                   | Точная принадлежность                | MOS-1322 — ребёнок MOS-1328; сосед MOS-1362 — другая задача                                                                                     | Parent отсутствует в самой записи index; тело/приёмка не следуют из иерархии                             |
+| `audit/sources/jira-subtasks/r1/content.json`, `$.items[*]`                                      | Точный detail либо связанный subtask | Во всех 16 элементах нет key MOS-1322 и нет parent MOS-1322/MOS-1328                                                                            | Никакого требования этого member из пакета извлечь нельзя                                                |
+| Все файлы `audit/sources/**` — локальный поиск точной строки `MOS-1322`                          | Другой сохранённый detail-пакет      | Только hierarchy и member-index содержат ключ                                                                                                   | Связь без ключа не заменяет exact-member evidence; внешнее получение запрещено                           |
 
 **Число извлечённых атомарных бизнес-требований: 0.** Это ограниченный source gap, не обнаруженный дефект приложения. Перечисленные поля — атомарные факты источника, а не acceptance criteria.
 
@@ -50,24 +50,24 @@ Expected для MOS-1322: сопоставить **каждую явно сфо�
 
 Пути с префиксом `audit/` раскрываются как выше; SHA вычислены локально по байтам.
 
-| Вход | SHA256 |
-|---|---|
-| `audit/work-items/WAVE-D090-EIGHT.md` | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
-| `audit/work-items/WAVE-D090-REVIEW-NEXT.md` | `fdf9ed7a57cc427bf9feb58639fe976fb2f76fb1bd9082c0f1626649cfdfcc72` |
-| `audit/sources/jira-member-index/r1/content.json` | `dba6cffa66e0aef23e9ef34c4a52215a5c02d31e7da1dca87888e821198b8043` |
-| `audit/sources/jira-member-index/r1/metadata.json` | `6c93c19217dacdc18fbdffc95ecc2eaa326494a49eeab99559eca3b04647c89d` |
-| `audit/sources/jira-subtasks/r1/content.json` | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
-| `audit/sources/jira-subtasks/r1/metadata.json` | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
-| `audit/sources/jira-hierarchy/r1/content.json` | `4d1881959ecbe13e4c2d4c27903b63a4ba71e1cba38e349dc33855a7e605fb77` |
-| `audit/sources/api-live/r2/content.json` | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
-| `audit/coverage.json` | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
-| `audit/reports/JIRA-MOS-1328.md` | `e6bfae6a94f97c057b0e02ec87872d2fc5a8ce26bd74b4a2c1f3b26766e5c9d6` |
-| `audit/reviews/R-OPTIONAL-DOMAINS-SEVEN.md` | `89358bd6009f0ca666439097083ff6aa24cd9acb858b7f09a3dc35e47b53a494` |
-| `openspec/specs/knowledge-base-module/spec.md` | `7e9d5498dd603b9ef5e7b241f81857dc767c3532009fa68ede116f4e496809f0` |
+| Вход                                                                                            | SHA256                                                             |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `audit/work-items/WAVE-D090-EIGHT.md`                                                           | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
+| `audit/work-items/WAVE-D090-REVIEW-NEXT.md`                                                     | `fdf9ed7a57cc427bf9feb58639fe976fb2f76fb1bd9082c0f1626649cfdfcc72` |
+| `audit/sources/jira-member-index/r1/content.json`                                               | `dba6cffa66e0aef23e9ef34c4a52215a5c02d31e7da1dca87888e821198b8043` |
+| `audit/sources/jira-member-index/r1/metadata.json`                                              | `6c93c19217dacdc18fbdffc95ecc2eaa326494a49eeab99559eca3b04647c89d` |
+| `audit/sources/jira-subtasks/r1/content.json`                                                   | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
+| `audit/sources/jira-subtasks/r1/metadata.json`                                                  | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
+| `audit/sources/jira-hierarchy/r1/content.json`                                                  | `4d1881959ecbe13e4c2d4c27903b63a4ba71e1cba38e349dc33855a7e605fb77` |
+| `audit/sources/api-live/r2/content.json`                                                        | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
+| `audit/coverage.json`                                                                           | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
+| `audit/reports/JIRA-MOS-1328.md`                                                                | `e6bfae6a94f97c057b0e02ec87872d2fc5a8ce26bd74b4a2c1f3b26766e5c9d6` |
+| `audit/reviews/R-OPTIONAL-DOMAINS-SEVEN.md`                                                     | `89358bd6009f0ca666439097083ff6aa24cd9acb858b7f09a3dc35e47b53a494` |
+| `openspec/specs/knowledge-base-module/spec.md`                                                  | `7e9d5498dd603b9ef5e7b241f81857dc767c3532009fa68ede116f4e496809f0` |
 | `openspec/changes/fix-knowledge-base-export-limit-feedback/specs/knowledge-base-export/spec.md` | `d811d2612b24415e32074c60397cf3d73b7669c6e1499f6f9e010fa170baded3` |
-| `app/optional/knowledge-base/api/knowledge-base-client.ts` | `5d2301ed88ce900d775a9c6a6da559b4c45810b7703576ed022c3a75f1cb8971` |
-| `app/optional/knowledge-base/api/knowledge-base-client.test.ts` | `9fc8a1824ad44bd17c02d6548ecc5aec5eddc1bda777f853a4d837d12fafab75` |
-| `app/shared/api/schema.d.ts` | `394a55fc0bd646a9a3c81dace045d89f53505fc40bc4cb0902cb1492b638092d` |
+| `app/optional/knowledge-base/api/knowledge-base-client.ts`                                      | `5d2301ed88ce900d775a9c6a6da559b4c45810b7703576ed022c3a75f1cb8971` |
+| `app/optional/knowledge-base/api/knowledge-base-client.test.ts`                                 | `9fc8a1824ad44bd17c02d6548ecc5aec5eddc1bda777f853a4d837d12fafab75` |
+| `app/shared/api/schema.d.ts`                                                                    | `394a55fc0bd646a9a3c81dace045d89f53505fc40bc4cb0902cb1492b638092d` |
 
 ```acceptance-report
 {

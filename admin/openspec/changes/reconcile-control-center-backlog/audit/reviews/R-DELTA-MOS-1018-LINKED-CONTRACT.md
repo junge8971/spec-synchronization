@@ -26,10 +26,10 @@ Repository-relative prefixes: `A = openspec/changes/reconcile-control-center-bac
 
 Independently recomputed SHA-256 from local bytes:
 
-| File under `A/sources/wiki-241097511/r2/` | Bytes | SHA-256 |
-|---|---:|---|
-| `content.json` | 73058 | `710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47` |
-| `attachments.json` | 372 | `dce4311f74a29968dec10bca60a9caa34892ddc093647a099efe9a893d121812` |
+| File under `A/sources/wiki-241097511/r2/` | Bytes | SHA-256                                                            |
+| ----------------------------------------- | ----: | ------------------------------------------------------------------ |
+| `content.json`                            | 73058 | `710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47` |
+| `attachments.json`                        |   372 | `dce4311f74a29968dec10bca60a9caa34892ddc093647a099efe9a893d121812` |
 
 Both match metadata; content also matches the assignment. Content/metadata agree on source ID, URL, HTTP 200, capture `2026-10-16T12:37:03.295Z`, revision `$.version.number = 6`, and revision timestamp `2026-10-13T17:56:19.256+08:00`. Attachment record is HTTP 200, capture `2026-10-16T12:37:36.819Z`, `$.data.results = []`, `$.data.size = 0`, with no `$.data._links.next`; metadata records count 0 / next null. No attachment traversal warranted.
 
@@ -41,15 +41,15 @@ Revision 6 is a page revision, not contract version: new `$.bodyView` → “О�
 
 All headings in this table refer to `A/sources/wiki-241097511/r2/content.json`, `$.bodyView`.
 
-| Exact primary locator | Independent finding |
-|---|---|
-| “Общая информация”; “1. Цель задачи” | Catalog viewing/creation/card modification and concurrent/repeat-write protection, not a phrase-conflict command contract. |
-| “1.3 Модель навыка” / “Поля навыка”; “2.6 Получить карточку навыка” | Integer object version and catalog Skill response. No phrase-input certificate or persisted conflict-check model specified here. This omission does not erase checks in the saved API. |
-| “2.8 Изменить карточку навыка” / “Изменяемые поля” | PATCH field list contains neither intents nor a send/status command. Do not substitute this PATCH for phrase save or agreed send. |
-| “2.9 Обработка конкурентных и повторных команд” / “Версия объекта” | `expected_version` equality guards PATCH; success increments version; mismatch returns 409. It does not bind a preflight result to all current unsaved phrases. |
-| Same heading / “Идемпотентность” | Key identifies method/URI/body in user context; repeat returns original result without another mutation. Duplicate suppression is not certification of whole-input readiness or fresh server validation at send. |
-| “2.5 Получить список навыков”; “2.6 Получить карточку навыка”; “2.8 Изменить карточку навыка” | Visibility is delegated to another authorization contract. No cross-team conflict-name disclosure approval or permission to fetch hidden details. |
-| “2.10 Формат ошибок”; “4. Открытые вопросы” | Generic business-validation errors/catalog questions, not phrase normalization examples, phrase-specific send-blocking semantics or send revalidation policy. |
+| Exact primary locator                                                                         | Independent finding                                                                                                                                                                                              |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| “Общая информация”; “1. Цель задачи”                                                          | Catalog viewing/creation/card modification and concurrent/repeat-write protection, not a phrase-conflict command contract.                                                                                       |
+| “1.3 Модель навыка” / “Поля навыка”; “2.6 Получить карточку навыка”                           | Integer object version and catalog Skill response. No phrase-input certificate or persisted conflict-check model specified here. This omission does not erase checks in the saved API.                           |
+| “2.8 Изменить карточку навыка” / “Изменяемые поля”                                            | PATCH field list contains neither intents nor a send/status command. Do not substitute this PATCH for phrase save or agreed send.                                                                                |
+| “2.9 Обработка конкурентных и повторных команд” / “Версия объекта”                            | `expected_version` equality guards PATCH; success increments version; mismatch returns 409. It does not bind a preflight result to all current unsaved phrases.                                                  |
+| Same heading / “Идемпотентность”                                                              | Key identifies method/URI/body in user context; repeat returns original result without another mutation. Duplicate suppression is not certification of whole-input readiness or fresh server validation at send. |
+| “2.5 Получить список навыков”; “2.6 Получить карточку навыка”; “2.8 Изменить карточку навыка” | Visibility is delegated to another authorization contract. No cross-team conflict-name disclosure approval or permission to fetch hidden details.                                                                |
+| “2.10 Формат ошибок”; “4. Открытые вопросы”                                                   | Generic business-validation errors/catalog questions, not phrase normalization examples, phrase-specific send-blocking semantics or send revalidation policy.                                                    |
 
 The full body contains no pertinent phrase-conflict/preflight/whole-input/send rule overturning these conclusions. Absence is bounded to **this document**, not the API or all evidence. Catalog uniqueness normalization proposals cannot settle phrase normalization.
 

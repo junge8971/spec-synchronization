@@ -1,14 +1,7 @@
 {
   "sourceId": "jira-shell-details",
   "retrievedAt": "2026-10-16T12:45:22.199Z",
-  "allowlist": [
-    "MOS-624",
-    "MOS-672",
-    "MOS-673",
-    "MOS-674",
-    "MOS-904",
-    "MOS-905"
-  ],
+  "allowlist": ["MOS-624", "MOS-672", "MOS-673", "MOS-674", "MOS-904", "MOS-905"],
   "items": [
     {
       "key": "MOS-624",

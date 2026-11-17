@@ -143,6 +143,7 @@ Parent-only browser GET evidence collection approved by D-001 after child MCP/to
 Saved hierarchy: MOS-623 → 26 Q key result module parents → 157 unique task members. Membership and issue details are separate snapshots, not proof of hidden/permission-filtered completeness. Feedback has 11 members plus parent and no observed nested subtasks. Remaining member-index exposes 16 nested subtasks.
 
 New sources:
+
 - `sources/jira-subtasks/r1/`: all 16 observed subtasks, descriptions, parent keys, statuses/update times, attachment metadata; no further nested keys. An Authorization bearer value appearing in a Jira example was redacted before persistence. No example command was executed.
 - `sources/jira-api-delta-scenarios/r1/`: descriptions and attachment metadata for MOS-1245, MOS-1306, MOS-1237, MOS-959, selected from the saved member index. Updated timestamps may be newer than initial index; do not silently substitute old metadata for newer content.
 - Each packet has SHA-256 metadata. Attachments are listed but bodies remain uncollected. Comments/custom acceptance fields remain uninspected. Remaining module descriptions and relevant Confluence evidence still need collection.

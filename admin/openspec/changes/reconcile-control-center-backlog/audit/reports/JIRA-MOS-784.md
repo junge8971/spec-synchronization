@@ -14,12 +14,12 @@ All paths below are relative to `openspec/changes/reconcile-control-center-backl
 
 Observed assigned set: **MOS-704, MOS-705, MOS-706, MOS-906** (four entries, four unique keys). Each occurs once in the hierarchy child arrays and once in the member index. No missing indexed member, duplicate member record, or conflicting hierarchy assignment observed. Unrelated index records are outside scope, not extra module members.
 
-| Member | Exact hierarchy / index locator | Observed type | Observed status | Exact updated timestamp | Saved nested references | Detail coverage |
-|---|---|---|---|---|---|---|
-| MOS-704 | H `$.results[18].children[0]`; I `$.items[134]` | Development task | CLOSED | `2026-10-14T13:51:02.451+0800` | `subtasks: []` | Index present; description, attachments, comments, custom acceptance fields uncollected |
-| MOS-705 | H `$.results[18].children[1]`; I `$.items[135]` | Development task | CLOSED | `2026-10-14T14:31:18.164+0800` | One: `$.items[135].subtasks[0].key = MOS-1054` | Index present; description, attachments, comments, custom acceptance fields uncollected |
-| MOS-706 | H `$.results[18].children[2]`; I `$.items[136]` | Development task | CLOSED | `2026-09-24T14:50:23.637+0800` | `subtasks: []` | Index present; description, attachments, comments, custom acceptance fields uncollected |
-| MOS-906 | H `$.results[18].children[3]`; I `$.items[137]` | Development task | Ready for test | `2026-10-13T21:33:56.235+0800` | `subtasks: []` | Index present; description, attachments, comments, custom acceptance fields uncollected |
+| Member  | Exact hierarchy / index locator                 | Observed type    | Observed status | Exact updated timestamp        | Saved nested references                        | Detail coverage                                                                         |
+| ------- | ----------------------------------------------- | ---------------- | --------------- | ------------------------------ | ---------------------------------------------- | --------------------------------------------------------------------------------------- |
+| MOS-704 | H `$.results[18].children[0]`; I `$.items[134]` | Development task | CLOSED          | `2026-10-14T13:51:02.451+0800` | `subtasks: []`                                 | Index present; description, attachments, comments, custom acceptance fields uncollected |
+| MOS-705 | H `$.results[18].children[1]`; I `$.items[135]` | Development task | CLOSED          | `2026-10-14T14:31:18.164+0800` | One: `$.items[135].subtasks[0].key = MOS-1054` | Index present; description, attachments, comments, custom acceptance fields uncollected |
+| MOS-706 | H `$.results[18].children[2]`; I `$.items[136]` | Development task | CLOSED          | `2026-09-24T14:50:23.637+0800` | `subtasks: []`                                 | Index present; description, attachments, comments, custom acceptance fields uncollected |
+| MOS-906 | H `$.results[18].children[3]`; I `$.items[137]` | Development task | Ready for test  | `2026-10-13T21:33:56.235+0800` | `subtasks: []`                                 | Index present; description, attachments, comments, custom acceptance fields uncollected |
 
 Module-parent links are evidenced by H, not by member REST parent fields. MOS-784 has no issue-detail object in I or S; its status, update time and full detail coverage are unavailable in these packets.
 

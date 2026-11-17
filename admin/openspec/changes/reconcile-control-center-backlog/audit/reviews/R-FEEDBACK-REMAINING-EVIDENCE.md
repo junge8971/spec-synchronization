@@ -1,17 +1,18 @@
 # Consolidated Feedback evidence review
 
 ## Review
+
 - **Correct:** The candidates distinguish published schema, business prose, connected mock behavior, written assertions and deployed behavior. Their principal implementation findings are supported.
 - **Fixed:** None; review-only.
 - **Merge verdict:** **OK with notes for evidence consolidation**, subject to the small report corrections below. This is not feature acceptance or global G2 completion.
 
 ## Per-report disposition
 
-| Candidate | ACCEPT | REVISE | ESCALATE |
-|---|---|---|---|
-| `api-read-export.md` | Local CSV operation identity, binary success, schema/prose distinctions, operator semantics, and existing-owner/no-new-plan disposition. | Attribute cross-document equality to the analyst’s comparison, not this independent review. | Independent certification of saved-r2 equality remains limited: its single 410KB line exceeds the reader’s 50KB limit. Metadata was read; snapshot operation/schema content was not independently retrieved. Parent notified. No new product decision needed. |
-| `impl-read-export.md` | Actual Feedback options, permissive membership, CSV defaults, test limitations and bounded consumer absence. | Resolve the metadata join explicitly; remove stale suggestions that C9/R02 remain pending planning corrections. Exact replacements below. | None beyond existing real-API release checks. |
-| `impl-editor-lifecycle.md` | Replacement/null behavior, missing quiet-hour dependency, released codes after deletion, and carefully bounded assertions. | No material correction required. Treat candidate source/hash checks as candidate-attributed, not independently reproduced here. | None. Q1 remains untouched. |
+| Candidate                  | ACCEPT                                                                                                                                   | REVISE                                                                                                                                    | ESCALATE                                                                                                                                                                                                                                                      |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `api-read-export.md`       | Local CSV operation identity, binary success, schema/prose distinctions, operator semantics, and existing-owner/no-new-plan disposition. | Attribute cross-document equality to the analyst’s comparison, not this independent review.                                               | Independent certification of saved-r2 equality remains limited: its single 410KB line exceeds the reader’s 50KB limit. Metadata was read; snapshot operation/schema content was not independently retrieved. Parent notified. No new product decision needed. |
+| `impl-read-export.md`      | Actual Feedback options, permissive membership, CSV defaults, test limitations and bounded consumer absence.                             | Resolve the metadata join explicitly; remove stale suggestions that C9/R02 remain pending planning corrections. Exact replacements below. | None beyond existing real-API release checks.                                                                                                                                                                                                                 |
+| `impl-editor-lifecycle.md` | Replacement/null behavior, missing quiet-hour dependency, released codes after deletion, and carefully bounded assertions.               | No material correction required. Treat candidate source/hash checks as candidate-attributed, not independently reproduced here.           | None. Q1 remains untouched.                                                                                                                                                                                                                                   |
 
 ## Independently verified joins
 
@@ -76,12 +77,12 @@ CRUD supplies the richer envelope/status/header behavior (`crud-api.md:901–993
 
 Their current clauses are present in MOS-1258 spec line 15 and MOS-1260 spec line 9. Lifecycle status-pending is also already present in MOS-1256 task 1.1.
 
-| Existing owner/task | Consolidated remaining implementation/evidence work |
-|---|---|
-| MOS-1258 tasks 1.1–1.2, 2.3; MOS-1250 shared selection | Metadata fidelity, operator-specific validation/case semantics, discriminating composition tests and connected draft/applied UI. |
-| MOS-1260 tasks 1.1–1.2, 2.3–2.4 | Feedback-specific CSV options/field validation, endpoint/header/beyond-page assertions, download/session behavior and real CSV gates. Do not change shared defaults indiscriminately. |
-| MOS-1251 tasks 1.3–1.4, 2.3 | Quiet-hour dependency, full nullable/replacement regression and editor/error/unknown-outcome behavior. |
-| MOS-1256 tasks 1.1–1.2, 2.3 | Preserve occupied codes after deletion; test recreate/update conflicts, repeated DELETE404 and disabled-record retention. |
+| Existing owner/task                                    | Consolidated remaining implementation/evidence work                                                                                                                                   |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MOS-1258 tasks 1.1–1.2, 2.3; MOS-1250 shared selection | Metadata fidelity, operator-specific validation/case semantics, discriminating composition tests and connected draft/applied UI.                                                      |
+| MOS-1260 tasks 1.1–1.2, 2.3–2.4                        | Feedback-specific CSV options/field validation, endpoint/header/beyond-page assertions, download/session behavior and real CSV gates. Do not change shared defaults indiscriminately. |
+| MOS-1251 tasks 1.3–1.4, 2.3                            | Quiet-hour dependency, full nullable/replacement regression and editor/error/unknown-outcome behavior.                                                                                |
+| MOS-1256 tasks 1.1–1.2, 2.3                            | Preserve occupied codes after deletion; test recreate/update conflicts, repeated DELETE404 and disabled-record retention.                                                             |
 
 **No genuinely missing planning change established.** No mock role enforcement, feature closure, Q1 choice or global G2 closure is proposed.
 

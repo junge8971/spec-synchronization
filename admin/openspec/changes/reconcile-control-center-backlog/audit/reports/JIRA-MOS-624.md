@@ -15,37 +15,37 @@ H contains 29 child occurrences, 29 distinct member keys. Each appears exactly o
 
 For every row below, hierarchy locator is `H:$.results[0].children[n]`, and index locator is `I:$.items[n]`, where n is the first column. Multiplicity is **1 hierarchy / 1 index** for every row. `D` means exact observed type `Development task`; `SA` means `System Analytics`. **All rows have selected index coverage only: full description, attachments, comments and custom acceptance coverage are absent.** This is an expected collection gap, not a blocker.
 
-| n | Member | Type | Observed status | Exact updated timestamp | Saved subtasks |
-|---|---|---|---|---|---|
-| 0 | MOS-668 | D | Ready for review | 2026-10-09T15:03:44.887+0800 | [] |
-| 1 | MOS-659 | D | CLOSED | 2026-09-17T15:04:02.420+0800 | [] |
-| 2 | MOS-660 | D | CLOSED | 2026-09-17T15:17:20.428+0800 | [] |
-| 3 | MOS-661 | D | CLOSED | 2026-10-09T15:03:30.348+0800 | [] |
-| 4 | MOS-664 | D | CLOSED | 2026-09-17T23:08:13.111+0800 | [] |
-| 5 | MOS-666 | D | CLOSED | 2026-10-09T15:06:51.629+0800 | MOS-1053 |
-| 6 | MOS-665 | D | CLOSED | 2026-09-10T13:55:20.628+0800 | [] |
-| 7 | MOS-663 | D | CLOSED | 2026-09-10T13:55:32.794+0800 | [] |
-| 8 | MOS-646 | D | CLOSED | 2026-09-03T20:20:07.101+0800 | [] |
-| 9 | MOS-669 | D | CLOSED | 2026-10-09T15:05:39.908+0800 | [] |
-| 10 | MOS-672 | D | CLOSED | 2026-09-22T21:33:47.993+0800 | [] |
-| 11 | MOS-673 | D | CLOSED | 2026-09-23T17:21:47.836+0800 | [] |
-| 12 | MOS-674 | D | CLOSED | 2026-09-22T21:44:47.949+0800 | [] |
-| 13 | MOS-685 | D | Review | 2026-10-09T15:05:05.177+0800 | [] |
-| 14 | MOS-699 | D | CLOSED | 2026-10-09T15:04:23.208+0800 | [] |
-| 15 | MOS-717 | D | CLOSED | 2026-10-15T15:13:58.701+0800 | [] |
-| 16 | MOS-754 | D | Review | 2026-10-09T15:06:44.968+0800 | [] |
-| 17 | MOS-755 | D | CLOSED | 2026-10-13T14:16:29.221+0800 | [] |
-| 18 | MOS-767 | SA | Draft is Ready | 2026-10-09T15:03:48.868+0800 | [] |
-| 19 | MOS-904 | D | Ready for test | 2026-10-09T15:04:05.422+0800 | [] |
-| 20 | MOS-905 | D | Ready for test | 2026-10-09T15:04:08.569+0800 | [] |
-| 21 | MOS-923 | D | Backlog | 2026-10-15T14:46:40.107+0800 | [] |
-| 22 | MOS-961 | D | Backlog | 2026-10-15T14:47:13.597+0800 | [] |
-| 23 | MOS-922 | D | Backlog | 2026-10-15T14:46:44.693+0800 | [] |
-| 24 | MOS-962 | D | Backlog | 2026-10-15T14:46:47.097+0800 | [] |
-| 25 | MOS-960 | D | Backlog | 2026-10-15T14:46:55.374+0800 | [] |
-| 26 | MOS-920 | D | Backlog | 2026-10-15T14:46:59.601+0800 | [] |
-| 27 | MOS-1049 | D | CLOSED | 2026-10-09T15:03:56.427+0800 | [] |
-| 28 | MOS-1142 | D | Hold | 2026-10-13T14:28:14.573+0800 | [] |
+| n   | Member   | Type | Observed status  | Exact updated timestamp      | Saved subtasks |
+| --- | -------- | ---- | ---------------- | ---------------------------- | -------------- |
+| 0   | MOS-668  | D    | Ready for review | 2026-10-09T15:03:44.887+0800 | []             |
+| 1   | MOS-659  | D    | CLOSED           | 2026-09-17T15:04:02.420+0800 | []             |
+| 2   | MOS-660  | D    | CLOSED           | 2026-09-17T15:17:20.428+0800 | []             |
+| 3   | MOS-661  | D    | CLOSED           | 2026-10-09T15:03:30.348+0800 | []             |
+| 4   | MOS-664  | D    | CLOSED           | 2026-09-17T23:08:13.111+0800 | []             |
+| 5   | MOS-666  | D    | CLOSED           | 2026-10-09T15:06:51.629+0800 | MOS-1053       |
+| 6   | MOS-665  | D    | CLOSED           | 2026-09-10T13:55:20.628+0800 | []             |
+| 7   | MOS-663  | D    | CLOSED           | 2026-09-10T13:55:32.794+0800 | []             |
+| 8   | MOS-646  | D    | CLOSED           | 2026-09-03T20:20:07.101+0800 | []             |
+| 9   | MOS-669  | D    | CLOSED           | 2026-10-09T15:05:39.908+0800 | []             |
+| 10  | MOS-672  | D    | CLOSED           | 2026-09-22T21:33:47.993+0800 | []             |
+| 11  | MOS-673  | D    | CLOSED           | 2026-09-23T17:21:47.836+0800 | []             |
+| 12  | MOS-674  | D    | CLOSED           | 2026-09-22T21:44:47.949+0800 | []             |
+| 13  | MOS-685  | D    | Review           | 2026-10-09T15:05:05.177+0800 | []             |
+| 14  | MOS-699  | D    | CLOSED           | 2026-10-09T15:04:23.208+0800 | []             |
+| 15  | MOS-717  | D    | CLOSED           | 2026-10-15T15:13:58.701+0800 | []             |
+| 16  | MOS-754  | D    | Review           | 2026-10-09T15:06:44.968+0800 | []             |
+| 17  | MOS-755  | D    | CLOSED           | 2026-10-13T14:16:29.221+0800 | []             |
+| 18  | MOS-767  | SA   | Draft is Ready   | 2026-10-09T15:03:48.868+0800 | []             |
+| 19  | MOS-904  | D    | Ready for test   | 2026-10-09T15:04:05.422+0800 | []             |
+| 20  | MOS-905  | D    | Ready for test   | 2026-10-09T15:04:08.569+0800 | []             |
+| 21  | MOS-923  | D    | Backlog          | 2026-10-15T14:46:40.107+0800 | []             |
+| 22  | MOS-961  | D    | Backlog          | 2026-10-15T14:47:13.597+0800 | []             |
+| 23  | MOS-922  | D    | Backlog          | 2026-10-15T14:46:44.693+0800 | []             |
+| 24  | MOS-962  | D    | Backlog          | 2026-10-15T14:46:47.097+0800 | []             |
+| 25  | MOS-960  | D    | Backlog          | 2026-10-15T14:46:55.374+0800 | []             |
+| 26  | MOS-920  | D    | Backlog          | 2026-10-15T14:46:59.601+0800 | []             |
+| 27  | MOS-1049 | D    | CLOSED           | 2026-10-09T15:03:56.427+0800 | []             |
+| 28  | MOS-1142 | D    | Hold             | 2026-10-13T14:28:14.573+0800 | []             |
 
 ## Nested subtask reconciliation
 

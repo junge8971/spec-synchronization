@@ -15,7 +15,18 @@
   "pendingScopeDecision": {
     "source": "reports/G1-WIKI-ROOT-REGISTRY.md",
     "rootLinks": "sources/wiki-238324523/r2/links.txt",
-    "pageIds": ["241082618", "241085260", "241085256", "241092173", "241076726", "245678373", "241085263", "238324852", "243761671", "243765248"],
+    "pageIds": [
+      "241082618",
+      "241085260",
+      "241085256",
+      "241092173",
+      "241076726",
+      "245678373",
+      "241085263",
+      "238324852",
+      "243761671",
+      "243765248"
+    ],
     "requestedPermission": "Read only named bodies/metadata/attachment indexes to classify Control Center relevance, no recursive traversal or implementation",
     "untilAnswered": "Unresolved, not excluded or inaccessible; no navigation"
   },

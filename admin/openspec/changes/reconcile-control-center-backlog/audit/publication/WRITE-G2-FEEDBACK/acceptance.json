@@ -5,7 +5,7 @@
   "reviewWorkflow": "74bc6dd6-9269-4000-bf37-ff9f6935f926",
   "head": "bc0d9800f25a90989b9c73c76f91996f8300f1d3",
   "baselineDirectory": "baseline",
-  "reviewVerdicts": {"1254": "ACCEPT", "1255": "ACCEPT", "1257": "ACCEPT", "1259": "ACCEPT"},
+  "reviewVerdicts": { "1254": "ACCEPT", "1255": "ACCEPT", "1257": "ACCEPT", "1259": "ACCEPT" },
   "versionChecks": "All writer artifact hashes matched independent reviews; all9target baseline hashes matched before edits; every resulting byte reconstructed from reviewed unified diff and compared equal after edits",
   "integratedSha256": {
     "mos-1254-feedback-questions/design.md": "cb891fc3bdd717c065a93b3b853429079b77081778f3f4657e5f05d832baf101",
@@ -26,5 +26,11 @@
     "applicationChecks": "typecheck/lint/test/api:check/build not run: documentary-only changes; no code, API types or build config modified",
     "browserE2E": "not run, prohibited"
   },
-  "limits": ["Formatting gate remains open", "Q1 unknown-type options unselected and excluded", "No runtime/deployment evidence", "No main-spec/archive/external/code edits", "Global9/28 and53P/6B/114U unchanged"]
+  "limits": [
+    "Formatting gate remains open",
+    "Q1 unknown-type options unselected and excluded",
+    "No runtime/deployment evidence",
+    "No main-spec/archive/external/code edits",
+    "Global9/28 and53P/6B/114U unchanged"
+  ]
 }

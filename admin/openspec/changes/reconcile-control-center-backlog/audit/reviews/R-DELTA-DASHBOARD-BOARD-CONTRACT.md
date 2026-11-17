@@ -42,21 +42,21 @@ Original saved-source operation pointers:
 
 Independently inspected complete projected objects:
 
-| File | Original pointer suffix under `#/components/schemas/` |
-|---|---|
-| `schema-01.json:1–29` | `BoardResponse` |
-| `schema-08.json:1–51` | `ErrorItem` |
-| `schema-10.json:1–16` | `HTTPValidationError` |
-| `schema-16.json:1–6` | `ResponseCode` |
-| `schema-18.json:1–25` | `SaveBoardRequest` |
-| `schema-23.json:1–31` | `TsamResponseSchema_BoardResponse_` |
-| `schema-26.json:1–31` | `TsamResponseSchema_WidgetCatalogResponse_` |
-| `schema-27.json:1–11` | `UnavailableReasonCode` |
-| `schema-28.json:1–43` | `ValidationError` |
-| `schema-29.json:1–74` | `WidgetCatalogItemResponse` |
-| `schema-30.json:1–19` | `WidgetCatalogResponse` |
-| `schema-32.json:1–11` | `WidgetGroup` |
-| `schema-34.json:1–11` | `WidgetType` |
+| File                  | Original pointer suffix under `#/components/schemas/` |
+| --------------------- | ----------------------------------------------------- |
+| `schema-01.json:1–29` | `BoardResponse`                                       |
+| `schema-08.json:1–51` | `ErrorItem`                                           |
+| `schema-10.json:1–16` | `HTTPValidationError`                                 |
+| `schema-16.json:1–6`  | `ResponseCode`                                        |
+| `schema-18.json:1–25` | `SaveBoardRequest`                                    |
+| `schema-23.json:1–31` | `TsamResponseSchema_BoardResponse_`                   |
+| `schema-26.json:1–31` | `TsamResponseSchema_WidgetCatalogResponse_`           |
+| `schema-27.json:1–11` | `UnavailableReasonCode`                               |
+| `schema-28.json:1–43` | `ValidationError`                                     |
+| `schema-29.json:1–74` | `WidgetCatalogItemResponse`                           |
+| `schema-30.json:1–19` | `WidgetCatalogResponse`                               |
+| `schema-32.json:1–11` | `WidgetGroup`                                         |
+| `schema-34.json:1–11` | `WidgetType`                                          |
 
 The selected closure has **16 reference edges**: five operation roots, six references from the two success envelopes, one HTTPValidationError→ValidationError reference, one catalog→item reference and three item→enum references. Security-scheme definitions are outside this schema closure.
 
@@ -64,16 +64,16 @@ Required/nonnullable request fields are integer `version` with minimum0 and stri
 
 ## Candidate verification
 
-| Candidate | Result and evidence |
-|---|---|
+| Candidate    | Result and evidence                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **BOARD-01** | **Supported.** `W160–213,533–594`, chunks10–14,23–24 and WG distinguish full catalog, visible personal `on_board`, and measurements. Independently counted **17 KPI +17 diagnostic rows**: KPI11 available/6 unavailable; diagnostic9 available/8 unavailable; total **20 available/14 unavailable**, including **10 markup/4 Writer**. Catalog order is table order, KPI then diagnostic, not client sorting. IDs/forms remain working values under question7.1, not a frozen enum. `W30–60`, chunks2–4 distinguish data type from slot-dependent display; no layout/display payload is invented. |
-| **BOARD-02** | **Supported.** `W595–629`, chunks24–25 and BG establish employee-context ownership, no supplied identity, default version0 and saved-empty versus default distinction. Verified nominal default order: `unique_users`, `dau`, `operator_handoff_rate`, `resolved_without_operator`, `bot_response_time_avg`, `user_rating_avg`, `domain_distribution`, `operator_rating_distribution`, `session_duration_avg`, `platform_distribution`, `technical_failure_points`, `nlp_errors`. Unavailable defaults are filtered; twelve is not a minimum response length. |
-| **BOARD-03** | **Supported.** `W625–663,844`, chunks25–26,33 and BP establish full replacement, local edit/cancel, and valid explicit empty board—not reset. Hidden saved widgets remain stored and can return before a replacement omits them. **Question7.11 remains unresolved** despite matching API prose; no decision to preserve or permanently discard hidden selections is newly authorized. |
-| **BOARD-04** | **Supported.** `W650–672`, chunks25–26, BP description and request schema establish first0→1 and increments on every accepted save, including unchanged composition. Stale version gives409 `BOARD_VERSION_CONFLICT`; reread and explicit resolution are required, not automatic overwrite/rebase/replay. Network failure does not establish noncommit. Same-user operation preservation/account isolation comes from approved auth requirements, not a newly invented board idempotency guarantee. |
-| **BOARD-05** | **Supported.** `W673–714`, chunks26–28 and BP specify format422→version409→duplicates422→availability400. Every second/later duplicate gets its own index error; unknown/unavailable entries get NOT_FOUND/UNAVAILABLE under400, not endpoint404 or success-empty. Server availability recheck covers catalog races. No board-size limit is inferred from catalog/default counts. Permissive parsing/ignored extras are historical source details, not identity authority or permission to send undeclared types. |
-| **BOARD-06** | **Supported conflict.** `BP/responses/422/content/application~1json/schema` references HTTPValidationError, whose optional `detail[]` references ValidationError with required `loc/msg/type`; prose instead describes VALIDATION_ERROR envelope and JSON-Pointer errors. WG/BG formally list200; BP lists200/422, without disproving prose errors. ErrorItem requires only message; field/code/details are optional nullable. ResponseCode is unrestricted string. The report neither chooses precedence nor tightens approved success parsing. |
-| **BOARD-07** | **Supported conflict and boundary.** `W13–17,720–743`, chunks1,28–29 contain Bearer/session-only/no403 claims. WG/BG require Analytics:view and BP configure in prose; operation security arrays retain formal OR. Approved archive requires both raw X headers, Analytics:view/refresh/configure UI gates, backend request/data authorization and session/owner isolation without automatic replay. No role grant, frontend method/path ACL, synthetic403 or service credentials follow. |
-| **BOARD-08** | **Supported.** `W801–854`, chunks31–34 and BP support save-audit intent, not delivery certification. Verified action `control.dashboard_board.updated`, employee subject, explicit dashboard_board object, result and correlation fields. No selection/widget list/old-new values: “who/when,” not widget diff. Questions7.12,7.15,7.16 retain audit-model, storage-confirmation and reset uncertainties. No audit-reader availability, retention, transactionality, deployment or reset authority is inferred. |
+| **BOARD-02** | **Supported.** `W595–629`, chunks24–25 and BG establish employee-context ownership, no supplied identity, default version0 and saved-empty versus default distinction. Verified nominal default order: `unique_users`, `dau`, `operator_handoff_rate`, `resolved_without_operator`, `bot_response_time_avg`, `user_rating_avg`, `domain_distribution`, `operator_rating_distribution`, `session_duration_avg`, `platform_distribution`, `technical_failure_points`, `nlp_errors`. Unavailable defaults are filtered; twelve is not a minimum response length.                                      |
+| **BOARD-03** | **Supported.** `W625–663,844`, chunks25–26,33 and BP establish full replacement, local edit/cancel, and valid explicit empty board—not reset. Hidden saved widgets remain stored and can return before a replacement omits them. **Question7.11 remains unresolved** despite matching API prose; no decision to preserve or permanently discard hidden selections is newly authorized.                                                                                                                                                                                                             |
+| **BOARD-04** | **Supported.** `W650–672`, chunks25–26, BP description and request schema establish first0→1 and increments on every accepted save, including unchanged composition. Stale version gives409 `BOARD_VERSION_CONFLICT`; reread and explicit resolution are required, not automatic overwrite/rebase/replay. Network failure does not establish noncommit. Same-user operation preservation/account isolation comes from approved auth requirements, not a newly invented board idempotency guarantee.                                                                                                |
+| **BOARD-05** | **Supported.** `W673–714`, chunks26–28 and BP specify format422→version409→duplicates422→availability400. Every second/later duplicate gets its own index error; unknown/unavailable entries get NOT_FOUND/UNAVAILABLE under400, not endpoint404 or success-empty. Server availability recheck covers catalog races. No board-size limit is inferred from catalog/default counts. Permissive parsing/ignored extras are historical source details, not identity authority or permission to send undeclared types.                                                                                  |
+| **BOARD-06** | **Supported conflict.** `BP/responses/422/content/application~1json/schema` references HTTPValidationError, whose optional `detail[]` references ValidationError with required `loc/msg/type`; prose instead describes VALIDATION_ERROR envelope and JSON-Pointer errors. WG/BG formally list200; BP lists200/422, without disproving prose errors. ErrorItem requires only message; field/code/details are optional nullable. ResponseCode is unrestricted string. The report neither chooses precedence nor tightens approved success parsing.                                                   |
+| **BOARD-07** | **Supported conflict and boundary.** `W13–17,720–743`, chunks1,28–29 contain Bearer/session-only/no403 claims. WG/BG require Analytics:view and BP configure in prose; operation security arrays retain formal OR. Approved archive requires both raw X headers, Analytics:view/refresh/configure UI gates, backend request/data authorization and session/owner isolation without automatic replay. No role grant, frontend method/path ACL, synthetic403 or service credentials follow.                                                                                                          |
+| **BOARD-08** | **Supported.** `W801–854`, chunks31–34 and BP support save-audit intent, not delivery certification. Verified action `control.dashboard_board.updated`, employee subject, explicit dashboard_board object, result and correlation fields. No selection/widget list/old-new values: “who/when,” not widget diff. Questions7.12,7.15,7.16 retain audit-model, storage-confirmation and reset uncertainties. No audit-reader availability, retention, transactionality, deployment or reset authority is inferred.                                                                                    |
 
 ## Lineage, attribution and limits
 

@@ -18,13 +18,13 @@ Candidate JSON: `98a343996c649755433b06f11a9a066406e9a677eac9cf006fae44bc85daf4d
 
 Paths below are relative to `openspec/changes/`.
 
-| Target | Before SHA-256 |
-|---|---|
-| mos-1023-skill-environment-tokens/design.md | d2944e6cf270a88f90ddfb57d0d69669e28620942ee86fceff681bda0e9c04c8 |
-| mos-1023-skill-environment-tokens/tasks.md | 8da3635da6e0aa46ea45b20f321b44ecce816c6dcaeec568856b011df1492c75 |
+| Target                                                                   | Before SHA-256                                                   |
+| ------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| mos-1023-skill-environment-tokens/design.md                              | d2944e6cf270a88f90ddfb57d0d69669e28620942ee86fceff681bda0e9c04c8 |
+| mos-1023-skill-environment-tokens/tasks.md                               | 8da3635da6e0aa46ea45b20f321b44ecce816c6dcaeec568856b011df1492c75 |
 | mos-1023-skill-environment-tokens/specs/skill-environment-tokens/spec.md | 130aa7f19daa88428808af5ccd717482308318029a30764ecedc7985ac760ace |
-| mos-1031-skill-audit-history/proposal.md | 59785c7c1d12d1619322c6e1af8451fa1b983193bd7ad1ff1ef9b92384fe3a8e |
-| mos-1031-skill-audit-history/design.md | 3e5b5e3f5130035ea501bbce273388fbd9ac3990cba5d82c2244b6088ffd53db |
+| mos-1031-skill-audit-history/proposal.md                                 | 59785c7c1d12d1619322c6e1af8451fa1b983193bd7ad1ff1ef9b92384fe3a8e |
+| mos-1031-skill-audit-history/design.md                                   | 3e5b5e3f5130035ea501bbce273388fbd9ac3990cba5d82c2244b6088ffd53db |
 
 ## Limits
 

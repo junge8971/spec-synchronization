@@ -59,16 +59,16 @@ Unlike the earlier scenario report/review, this inspection establishes:
 
 ## Expected / observed / unknown
 
-| Boundary | Expected evidence | Observed current evidence | Unknown or limit |
-|---|---|---|---|
-| Catalog and targets | J754 first catalog bullet; four target types and three texts | `mocks/stubs.mjs:4–26` constructs assistant ID `assistant` plus current modules, skills and surfaces; initializes nullable texts and false flag; preserves existing settings and refreshes target names. `:49–59` filters before `page()`. | No backend catalog population, target visibility or external freshness established. |
-| Read and save | J754 second bullet; GET settings and PUT existing target | `mocks/stubs.mjs:28–35,60–79`: lookup returns 404 when missing; GET includes nested preview; PUT changes only present text properties, assigns required flag, updates timestamp and returns summary. | Local null clears and omission preserves are local conventions, not owner resolution of production semantics. No real durable storage established. |
-| Input validation | Required body/flag, enum and query types from current schema | `mocks/app.mjs:62–79` installs contract validation before handlers. `mocks/contract.mjs:84–120,140–177` coerces booleans, validates parameters and body, returns 422 detail errors. | No new empty-string business prohibition exists in inspected stub handler/schema. Whitespace/clearing and previous live-text behavior remain owner questions. |
-| Effective preview | Accepted prior source interpretation: server-effective output including applicable maintenance priority | `mocks/stubs.mjs:37–45,80–93`: applied flag selects `full_stub_text ?? substitute_response_text` and banner; otherwise null result/banner. Card source is explicitly `local-mock`; state is flag-derived normal/warning. | This is not production-effective priority resolution. It neither consults maintenance windows nor accepts unsaved editor input. |
-| Audit metadata | Target relationship and change metadata | Initial `by.id` comes from `state.users[0]`; PUT updates `updated_at` but not `by`. Existing summary schema carries both. | Not evidence of authenticated editor attribution or “what changed” history. No backend audit-storage absence inferred. |
-| Concurrency | Preserve unresolved prior contract questions | No stub version/precondition field appears in unchanged DTO. `mocks/app.mjs:85–99` excludes stub PUT from its selected idempotency operations. | No stale-write protection, idempotency or uncertain-result recovery guarantee established for backend. |
-| Contract versus UI | Publication must not activate screens | `docs/api/contracts/assistant-operations.md` describes API, while `mocks/README.md:176–183` explicitly calls these HTTP mocks, not new UI integration. | Editor/client implementation is assigned to IMPL-MOS-922 and not audited here. |
-| Scheduler | Maintenance and effective-output behavior are separate responsibilities | `mocks/README.md:182–183` expressly says no background scheduler and no production priority/inheritance simulation. | No scheduler or maintenance lifecycle implementation audit; no full MOS-754 DoD closure. |
+| Boundary            | Expected evidence                                                                                       | Observed current evidence                                                                                                                                                                                                                  | Unknown or limit                                                                                                                                              |
+| ------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Catalog and targets | J754 first catalog bullet; four target types and three texts                                            | `mocks/stubs.mjs:4–26` constructs assistant ID `assistant` plus current modules, skills and surfaces; initializes nullable texts and false flag; preserves existing settings and refreshes target names. `:49–59` filters before `page()`. | No backend catalog population, target visibility or external freshness established.                                                                           |
+| Read and save       | J754 second bullet; GET settings and PUT existing target                                                | `mocks/stubs.mjs:28–35,60–79`: lookup returns 404 when missing; GET includes nested preview; PUT changes only present text properties, assigns required flag, updates timestamp and returns summary.                                       | Local null clears and omission preserves are local conventions, not owner resolution of production semantics. No real durable storage established.            |
+| Input validation    | Required body/flag, enum and query types from current schema                                            | `mocks/app.mjs:62–79` installs contract validation before handlers. `mocks/contract.mjs:84–120,140–177` coerces booleans, validates parameters and body, returns 422 detail errors.                                                        | No new empty-string business prohibition exists in inspected stub handler/schema. Whitespace/clearing and previous live-text behavior remain owner questions. |
+| Effective preview   | Accepted prior source interpretation: server-effective output including applicable maintenance priority | `mocks/stubs.mjs:37–45,80–93`: applied flag selects `full_stub_text ?? substitute_response_text` and banner; otherwise null result/banner. Card source is explicitly `local-mock`; state is flag-derived normal/warning.                   | This is not production-effective priority resolution. It neither consults maintenance windows nor accepts unsaved editor input.                               |
+| Audit metadata      | Target relationship and change metadata                                                                 | Initial `by.id` comes from `state.users[0]`; PUT updates `updated_at` but not `by`. Existing summary schema carries both.                                                                                                                  | Not evidence of authenticated editor attribution or “what changed” history. No backend audit-storage absence inferred.                                        |
+| Concurrency         | Preserve unresolved prior contract questions                                                            | No stub version/precondition field appears in unchanged DTO. `mocks/app.mjs:85–99` excludes stub PUT from its selected idempotency operations.                                                                                             | No stale-write protection, idempotency or uncertain-result recovery guarantee established for backend.                                                        |
+| Contract versus UI  | Publication must not activate screens                                                                   | `docs/api/contracts/assistant-operations.md` describes API, while `mocks/README.md:176–183` explicitly calls these HTTP mocks, not new UI integration.                                                                                     | Editor/client implementation is assigned to IMPL-MOS-922 and not audited here.                                                                                |
+| Scheduler           | Maintenance and effective-output behavior are separate responsibilities                                 | `mocks/README.md:182–183` expressly says no background scheduler and no production priority/inheritance simulation.                                                                                                                        | No scheduler or maintenance lifecycle implementation audit; no full MOS-754 DoD closure.                                                                      |
 
 **Important preview edge:** nullish selection means an empty full-stub string would take precedence over substitute text in this local handler. The schema has no minimum string length, and the handler adds no empty-string guard. This is a static local observation, not a recommendation to weaken the published empty-string rule or a claim that production accepts such input.
 
@@ -122,14 +122,14 @@ These are bounded observations about the inspected assertions, not a repository-
 
 ## Bounded candidate dispositions
 
-| Candidate | Disposition proposed to parent | Reason and ownership boundary |
-|---|---|---|
-| API754-r2-C01 — catalog/read/save publication | **Keep; update evidence** | Preserve existing source candidates. Add current combined/sectional equivalence, unchanged schema closure and handler/test locators. Publication is not backend acceptance. |
-| API754-r2-C02 — preview authority | **Keep; update evidence** | Retain server-effective requirement. Record that local output is explicitly `local-mock`, not a maintenance-aware resolver or unsaved editor preview. |
-| API754-r2-C03 — local update semantics | **Update existing question** | Null clears, omission preserves and false suppresses local output in concrete code/tests. These observations do not settle production draft/live-version semantics or authorize clearing policy. |
-| API754-r2-C04 — provenance and edge assertions | **New bounded evidence note**, not a new product requirement | Record unchanged fixture `by.id`, nullish text selection, and the specific assertion gaps above. Parent may attach this to existing API-owner questions; do not infer a new audit endpoint. |
-| API754-r2-C05 — prefix/errors/concurrency | **Keep questions open** | Current schemas and paths do not resolve previously accepted wiki-prefix, error-envelope or stale-write questions. No fallback, precedence or new protocol selected. |
-| API754-r2-C06 — task completion | **No-op on closure/status** | J754 combines stub/banner and scheduler requirements. This seam is insufficient to accept its entire DoD; Review status is not acceptance. |
+| Candidate                                      | Disposition proposed to parent                               | Reason and ownership boundary                                                                                                                                                                    |
+| ---------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| API754-r2-C01 — catalog/read/save publication  | **Keep; update evidence**                                    | Preserve existing source candidates. Add current combined/sectional equivalence, unchanged schema closure and handler/test locators. Publication is not backend acceptance.                      |
+| API754-r2-C02 — preview authority              | **Keep; update evidence**                                    | Retain server-effective requirement. Record that local output is explicitly `local-mock`, not a maintenance-aware resolver or unsaved editor preview.                                            |
+| API754-r2-C03 — local update semantics         | **Update existing question**                                 | Null clears, omission preserves and false suppresses local output in concrete code/tests. These observations do not settle production draft/live-version semantics or authorize clearing policy. |
+| API754-r2-C04 — provenance and edge assertions | **New bounded evidence note**, not a new product requirement | Record unchanged fixture `by.id`, nullish text selection, and the specific assertion gaps above. Parent may attach this to existing API-owner questions; do not infer a new audit endpoint.      |
+| API754-r2-C05 — prefix/errors/concurrency      | **Keep questions open**                                      | Current schemas and paths do not resolve previously accepted wiki-prefix, error-envelope or stale-write questions. No fallback, precedence or new protocol selected.                             |
+| API754-r2-C06 — task completion                | **No-op on closure/status**                                  | J754 combines stub/banner and scheduler requirements. This seam is insufficient to accept its entire DoD; Review status is not acceptance.                                                       |
 
 Only the parent may accept, queue or publish these dispositions. No candidate was registered or published by this run.
 
@@ -137,26 +137,26 @@ Only the parent may accept, queue or publish these dispositions. No candidate wa
 
 SHA-256 computed from local bytes; hashes establish inspected inputs, not external freshness.
 
-| Input | Bytes | SHA-256 |
-|---|---:|---|
-| `A/work-items/WAVE-D094-LOCAL-EIGHT.md` | 4247 | `da5e3681c7b882ef8fc6a44a50e7dd8562068f43ac4a74c71a8f5b82e61fd0e0` |
-| `A/reports/SCENARIO-MOS-922.md` | 20266 | `705c767c60fba8e40bbb21de13fda1f2cf5ca6c22b4d03153a09923b1d31ff61` |
-| `A/reviews/R-SCENARIO-MOS-922.md` | 14428 | `89620a68ccc0644948f33b7105c2122ca9a3dcbaad7f78e9462f8989a9f38d12` |
-| `A/decisions.md` | 143407 | `dbf814a620a9ee1ff1435e912db50efb4672c3e40712f684855a14cc91df796e` |
-| Jira operations r1 content | 9933 | `ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f` |
-| Wiki 241092242 r1 content | 68316 | `e7b78965be979f2bd450b25881574cf7e8b94cf424be5d052bb2be9df1995158` |
-| API live r1 content | 413007 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
-| `docs/api/contracts/openapi.json` | 642329 | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
-| `docs/api/contracts/assistant-operations.openapi.json` | 48374 | `08a20a68c35caa2ea3e136edcc6e928387978fbdcf1c4833bfc0d290be72cb4c` |
-| `docs/api/contracts/assistant-operations.md` | 3058 | `94abf436ea63e56a584264721d4fa243c00e09eac7c1ab2780f0637008df879f` |
-| `app/shared/api/schema.d.ts` | 424097 | `394a55fc0bd646a9a3c81dace045d89f53505fc40bc4cb0902cb1492b638092d` |
-| `mocks/stubs.mjs` | 3356 | `766968f8229d564747bbc00251fcc8bb2d35963fb5dce37a26aae4de9f71aaf3` |
-| `mocks/app.mjs` | 4866 | `b3dd41cc09a6aac9f6ffa023d4cd048fef75735926e1a8efa21b567c46d7efd0` |
-| `mocks/contract.mjs` | 7223 | `ffca4d574568b6f81791279af6022a98077ac82f4e4ec90a672406261a383371` |
-| `mocks/list.mjs` | 950 | `e1af394687dd92e656f0e0def06e3206a9eb217a43a5f366e6d410d622a34b7c` |
-| `mocks/api-update.test.mjs` | 12330 | `793fb807cae6203c3d1336c15be1fd0b09d785b949e601a7dca75ee9c1e74ddb` |
-| `mocks/contract.test.mjs` | 25896 | `a7096b8cf8ff74a162245ae96260cb282b09cdb21e278ccafaca298406c441d0` |
-| `mocks/README.md` | 49365 | `ee00f203531ca8d30d2736d46919740e344b3d0fa2298235eeee4c6c69710259` |
+| Input                                                  |  Bytes | SHA-256                                                            |
+| ------------------------------------------------------ | -----: | ------------------------------------------------------------------ |
+| `A/work-items/WAVE-D094-LOCAL-EIGHT.md`                |   4247 | `da5e3681c7b882ef8fc6a44a50e7dd8562068f43ac4a74c71a8f5b82e61fd0e0` |
+| `A/reports/SCENARIO-MOS-922.md`                        |  20266 | `705c767c60fba8e40bbb21de13fda1f2cf5ca6c22b4d03153a09923b1d31ff61` |
+| `A/reviews/R-SCENARIO-MOS-922.md`                      |  14428 | `89620a68ccc0644948f33b7105c2122ca9a3dcbaad7f78e9462f8989a9f38d12` |
+| `A/decisions.md`                                       | 143407 | `dbf814a620a9ee1ff1435e912db50efb4672c3e40712f684855a14cc91df796e` |
+| Jira operations r1 content                             |   9933 | `ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f` |
+| Wiki 241092242 r1 content                              |  68316 | `e7b78965be979f2bd450b25881574cf7e8b94cf424be5d052bb2be9df1995158` |
+| API live r1 content                                    | 413007 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
+| `docs/api/contracts/openapi.json`                      | 642329 | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
+| `docs/api/contracts/assistant-operations.openapi.json` |  48374 | `08a20a68c35caa2ea3e136edcc6e928387978fbdcf1c4833bfc0d290be72cb4c` |
+| `docs/api/contracts/assistant-operations.md`           |   3058 | `94abf436ea63e56a584264721d4fa243c00e09eac7c1ab2780f0637008df879f` |
+| `app/shared/api/schema.d.ts`                           | 424097 | `394a55fc0bd646a9a3c81dace045d89f53505fc40bc4cb0902cb1492b638092d` |
+| `mocks/stubs.mjs`                                      |   3356 | `766968f8229d564747bbc00251fcc8bb2d35963fb5dce37a26aae4de9f71aaf3` |
+| `mocks/app.mjs`                                        |   4866 | `b3dd41cc09a6aac9f6ffa023d4cd048fef75735926e1a8efa21b567c46d7efd0` |
+| `mocks/contract.mjs`                                   |   7223 | `ffca4d574568b6f81791279af6022a98077ac82f4e4ec90a672406261a383371` |
+| `mocks/list.mjs`                                       |    950 | `e1af394687dd92e656f0e0def06e3206a9eb217a43a5f366e6d410d622a34b7c` |
+| `mocks/api-update.test.mjs`                            |  12330 | `793fb807cae6203c3d1336c15be1fd0b09d785b949e601a7dca75ee9c1e74ddb` |
+| `mocks/contract.test.mjs`                              |  25896 | `a7096b8cf8ff74a162245ae96260cb282b09cdb21e278ccafaca298406c441d0` |
+| `mocks/README.md`                                      |  49365 | `ee00f203531ca8d30d2736d46919740e344b3d0fa2298235eeee4c6c69710259` |
 
 ## Historical, deployment and validation limits
 

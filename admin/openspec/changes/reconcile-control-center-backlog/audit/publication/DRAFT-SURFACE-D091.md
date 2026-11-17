@@ -18,19 +18,19 @@ HEAD: `bc0d9800f25a90989b9c73c76f91996f8300f1d3`. Рабочее дерево и
 
 Источники и решения:
 
-| Источник | Применение |
-|---|---|
-| `A/decisions.md`, **D-091** | Разрешены два узких surface-кандидата; публикация удерживается до freshness и review. Принятие аналитики не означает реализацию. |
-| `A/decisions.md`, **D-090** | MOS-1110/1165 geometry и MOS-1164 truncation target остаются вопросами; сюда не переносятся. |
-| `A/work-items/WAVE-D092-REVIEW-AND-DRAFTS.md`, **DRAFT-SURFACE-D091** | Текущее задание, точное имя change, два отдельных capability owners. |
-| `A/reviews/R-D091-RECOVERY.md` | Независимое принятие ограниченных результатов MOS-1166/1167 с обязательными ограничениями интеграции. |
-| `A/reports/JOIN-MOS-1166.md` | Статическая связь требования, каталога, отображаемого `purpose` и accessibility. |
-| `A/reports/JOIN-MOS-1167.md` | Статическая связь требования с первым шагом, существующей нормализацией и отсутствием отдельного отражения ввода. |
-| `A/sources/jira-subtasks/r1/content.json#/items/13/description` | MOS-1166: длинный текст обрезается на шаге «Сценарии»; около 200 символов — пример, не лимит. |
-| `A/sources/jira-subtasks/r1/content.json#/items/14/description` | MOS-1167: после валидного ввода доменов появляются адреса из введённых данных. |
-| `A/sources/jira-subtasks/r1/metadata.json` | Snapshot retrievedAt `2026-10-16T11:23:01.951Z`; вложения, comments/custom acceptance fields не получены. |
-| Текущие main `surface-skill-selection`, `surface-registration` | Раздельные владельцы двух ADDED requirements; существующие требования и сценарии не заменяются. |
-| Текущий main `surface-overview-connection` | Серверные сведения подключения не синтезируются из локального ввода. |
+| Источник                                                              | Применение                                                                                                                       |
+| --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `A/decisions.md`, **D-091**                                           | Разрешены два узких surface-кандидата; публикация удерживается до freshness и review. Принятие аналитики не означает реализацию. |
+| `A/decisions.md`, **D-090**                                           | MOS-1110/1165 geometry и MOS-1164 truncation target остаются вопросами; сюда не переносятся.                                     |
+| `A/work-items/WAVE-D092-REVIEW-AND-DRAFTS.md`, **DRAFT-SURFACE-D091** | Текущее задание, точное имя change, два отдельных capability owners.                                                             |
+| `A/reviews/R-D091-RECOVERY.md`                                        | Независимое принятие ограниченных результатов MOS-1166/1167 с обязательными ограничениями интеграции.                            |
+| `A/reports/JOIN-MOS-1166.md`                                          | Статическая связь требования, каталога, отображаемого `purpose` и accessibility.                                                 |
+| `A/reports/JOIN-MOS-1167.md`                                          | Статическая связь требования с первым шагом, существующей нормализацией и отсутствием отдельного отражения ввода.                |
+| `A/sources/jira-subtasks/r1/content.json#/items/13/description`       | MOS-1166: длинный текст обрезается на шаге «Сценарии»; около 200 символов — пример, не лимит.                                    |
+| `A/sources/jira-subtasks/r1/content.json#/items/14/description`       | MOS-1167: после валидного ввода доменов появляются адреса из введённых данных.                                                   |
+| `A/sources/jira-subtasks/r1/metadata.json`                            | Snapshot retrievedAt `2026-10-16T11:23:01.951Z`; вложения, comments/custom acceptance fields не получены.                        |
+| Текущие main `surface-skill-selection`, `surface-registration`        | Раздельные владельцы двух ADDED requirements; существующие требования и сценарии не заменяются.                                  |
+| Текущий main `surface-overview-connection`                            | Серверные сведения подключения не синтезируются из локального ввода.                                                             |
 
 Сохранённые timestamps: MOS-1166 — `2026-10-09T15:07:28.233+0800`; MOS-1167 — `2026-10-09T15:08:08.485+0800`. Они характеризуют прочитанный snapshot, не доказывают текущую внешнюю свежесть. D-091 фиксирует последующее перечитывание источников parent; явное сравнение перед публикацией этим draft не заменяется.
 
@@ -238,27 +238,27 @@ DOM/styles assertions не измеряют реальную браузерну�
 
 Хеши вычислены локально по полным байтам файлов. Они не заменяют проверку внешней свежести. Сокращения путей раскрыты выше.
 
-| Путь | SHA256 |
-|---|---|
-| `openspec/specs/surface-skill-selection/spec.md` | `e27eb8b354e4370da3519b5387cff5369a2f083e6c3be05f82d8631746c19ee0` |
-| `openspec/specs/surface-registration/spec.md` | `31928d907bfff75eca61d2efe176879e3c7f4d3e0029dbe6bb97258b8d00f9a5` |
-| `openspec/specs/surface-overview-connection/spec.md` | `51f9dc1a1d7b92ccdb059b7fda0117bf6c898378fa9a9fe185c7e2045044d193` |
-| `openspec/config.yaml` | `07a48798af3c9a8fa9e7b857c0747de7ddc9603d3f6fe1530dc6cdd5f58f2201` |
-| `A/decisions.md` | `fa7cffedb00f4d481efa2b523e8f1a1b4991b2750022c823c30c5370ab5cf945` |
-| `A/work-items/WAVE-D092-REVIEW-AND-DRAFTS.md` | `a397d1cfc2441cb0c4d44183878917b5dd5e80bbe292ca0220871afed68451ee` |
-| `A/reviews/R-D091-RECOVERY.md` | `f6fb801733ee223979debb0277de15e8f97448a3a69db6a2fb0f42f35c03e45d` |
-| `A/reports/JOIN-MOS-1166.md` | `189133673f38f2a34c5f4e2b5b6c75993775e592ca59ec90dd52fc6866a92bb5` |
-| `A/reports/JOIN-MOS-1167.md` | `aff85d24d35b98621db8a2fbabcc74fc16dfa3ca1aa2c04a73a09594cc6eb980` |
-| `A/sources/jira-subtasks/r1/content.json` | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
-| `A/sources/jira-subtasks/r1/metadata.json` | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
+| Путь                                                                                              | SHA256                                                             |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `openspec/specs/surface-skill-selection/spec.md`                                                  | `e27eb8b354e4370da3519b5387cff5369a2f083e6c3be05f82d8631746c19ee0` |
+| `openspec/specs/surface-registration/spec.md`                                                     | `31928d907bfff75eca61d2efe176879e3c7f4d3e0029dbe6bb97258b8d00f9a5` |
+| `openspec/specs/surface-overview-connection/spec.md`                                              | `51f9dc1a1d7b92ccdb059b7fda0117bf6c898378fa9a9fe185c7e2045044d193` |
+| `openspec/config.yaml`                                                                            | `07a48798af3c9a8fa9e7b857c0747de7ddc9603d3f6fe1530dc6cdd5f58f2201` |
+| `A/decisions.md`                                                                                  | `fa7cffedb00f4d481efa2b523e8f1a1b4991b2750022c823c30c5370ab5cf945` |
+| `A/work-items/WAVE-D092-REVIEW-AND-DRAFTS.md`                                                     | `a397d1cfc2441cb0c4d44183878917b5dd5e80bbe292ca0220871afed68451ee` |
+| `A/reviews/R-D091-RECOVERY.md`                                                                    | `f6fb801733ee223979debb0277de15e8f97448a3a69db6a2fb0f42f35c03e45d` |
+| `A/reports/JOIN-MOS-1166.md`                                                                      | `189133673f38f2a34c5f4e2b5b6c75993775e592ca59ec90dd52fc6866a92bb5` |
+| `A/reports/JOIN-MOS-1167.md`                                                                      | `aff85d24d35b98621db8a2fbabcc74fc16dfa3ca1aa2c04a73a09594cc6eb980` |
+| `A/sources/jira-subtasks/r1/content.json`                                                         | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
+| `A/sources/jira-subtasks/r1/metadata.json`                                                        | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
 | `app/features/surface-skill-selection/ui/surface-skill-selection-editor/skill-selection-item.tsx` | `8651038c1d4bc340d8763db4ed45b607c27dcddaa6371a7a1c43187eaa7496af` |
-| `F/ui/steps/surface-details-step.tsx` | `22d151070d49763e756e8f9bb4bde445b1d0fd448256a15d4be2468b30962953` |
-| `F/ui/surface-registration-step-content.tsx` | `43455d674c1049bb92d1a7cc07372323625cfe35e645fa35a2f915fe0718635f` |
-| `F/model/parse-domains.ts` | `5f5c20e127f98fb8296456420f3ba0644d5296f5a1f2077945c5d725785dbcd2` |
-| `F/model/use-surface-registration.ts` | `4a5ee2fcb09f6cbcdbc063653d1dbaad10956a8a54fa7944a61865857adaa8c4` |
-| `F/model/schemas/surface-registration.schema.ts` | `50246d8b313b95782e59161e90bd77ea89ce1d6d7f33b3f168206d450bf6eef9` |
-| `F/model/tests/surface-registration.test.ts` | `3186703cc7c35ee464516fc8883c20576efe4361b45a1aeaa84c565505250f31` |
-| `app/widgets/surface-registration/ui/tests/surface-registration.test.tsx` | `c50563fcaf2ce4ea6844a38c8805675922c3169a1ecc2ebdfc0d655ea4976c53` |
+| `F/ui/steps/surface-details-step.tsx`                                                             | `22d151070d49763e756e8f9bb4bde445b1d0fd448256a15d4be2468b30962953` |
+| `F/ui/surface-registration-step-content.tsx`                                                      | `43455d674c1049bb92d1a7cc07372323625cfe35e645fa35a2f915fe0718635f` |
+| `F/model/parse-domains.ts`                                                                        | `5f5c20e127f98fb8296456420f3ba0644d5296f5a1f2077945c5d725785dbcd2` |
+| `F/model/use-surface-registration.ts`                                                             | `4a5ee2fcb09f6cbcdbc063653d1dbaad10956a8a54fa7944a61865857adaa8c4` |
+| `F/model/schemas/surface-registration.schema.ts`                                                  | `50246d8b313b95782e59161e90bd77ea89ce1d6d7f33b3f168206d450bf6eef9` |
+| `F/model/tests/surface-registration.test.ts`                                                      | `3186703cc7c35ee464516fc8883c20576efe4361b45a1aeaa84c565505250f31` |
+| `app/widgets/surface-registration/ui/tests/surface-registration.test.tsx`                         | `c50563fcaf2ce4ea6844a38c8805675922c3169a1ecc2ebdfc0d655ea4976c53` |
 
 ## Остаточные ограничения
 

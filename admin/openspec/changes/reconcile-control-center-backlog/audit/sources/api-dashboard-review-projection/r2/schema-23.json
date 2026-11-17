@@ -21,11 +21,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "code",
-      "data",
-      "message"
-    ],
+    "required": ["code", "data", "message"],
     "title": "TsamResponseSchema[BoardResponse]"
   }
 }

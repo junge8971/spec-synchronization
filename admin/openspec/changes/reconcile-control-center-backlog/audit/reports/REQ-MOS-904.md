@@ -21,12 +21,12 @@ All paths below are repository-relative. `J` means `openspec/changes/reconcile-c
 
 ### Counts verified against metadata
 
-| Issue pointer | Key | Comments startAt / maxResults / total / actual items | Attachment metadata count | Recorded status |
-|---|---|---|---|---|
-| `/items/0` | MOS-624 | 0 / 0 / 0 / 0 | 0 | Backlog |
-| `/items/1` | MOS-672 | 0 / 1 / 1 / 1 | 3 | CLOSED |
-| `/items/2` | MOS-673 | 0 / 1 / 1 / 1 | 3 | CLOSED |
-| `/items/4` | MOS-904 | 0 / 2 / 2 / 2 | 0 | Ready for test |
+| Issue pointer | Key     | Comments startAt / maxResults / total / actual items | Attachment metadata count | Recorded status |
+| ------------- | ------- | ---------------------------------------------------- | ------------------------- | --------------- |
+| `/items/0`    | MOS-624 | 0 / 0 / 0 / 0                                        | 0                         | Backlog         |
+| `/items/1`    | MOS-672 | 0 / 1 / 1 / 1                                        | 3                         | CLOSED          |
+| `/items/2`    | MOS-673 | 0 / 1 / 1 / 1                                        | 3                         | CLOSED          |
+| `/items/4`    | MOS-904 | 0 / 2 / 2 / 2                                        | 0                         | Ready for test  |
 
 Corresponding `M` `/comments/0`, `/comments/1`, `/comments/2`, `/comments/4` report matching counts/totals and `complete: true`. Completeness is as reported for this capture, not a claim about later comments. No custom fields or attachment bodies were collected. Comment objects contain id/body/created/updated but no author identity; author attribution cannot be verified.
 
@@ -34,21 +34,21 @@ Corresponding `M` `/comments/0`, `/comments/1`, `/comments/2`, `/comments/4` rep
 
 Prefix `AUTH` = `openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions`; prefix `DEMO` = `openspec/changes/archive/2026-10-09-add-local-session-demo`. These aliases expand to exact paths for all citations below. Complete proposal/design/spec files were read before scope comparison:
 
-| File | Lines read | Relevance |
-|---|---:|---|
-| `AUTH/proposal.md` | 1–38 | Approved real-session scope, no logout UI/new OIDC |
-| `AUTH/design.md` | 1–171 | Session ownership, mode selection, unresolved deployment gates |
-| `AUTH/specs/control-center-api-integration/spec.md` | 1–64 | Bootstrap/error boundaries, no fixture success inference |
-| `AUTH/specs/control-center-http/spec.md` | 1–71 | Credentials and backend authorization boundaries |
-| `AUTH/specs/control-center-mock-server/spec.md` | 1–27 | Preserve credential-free business mocks |
-| `AUTH/specs/control-center-permissions/spec.md` | 1–89 | UI policy and documentation access |
-| `AUTH/specs/control-center-shell/spec.md` | 1–101 | Navigation ownership, route availability and deferrals |
-| `AUTH/specs/mpmm-session/spec.md` | 1–138 | Confirmed principal, shared-session limits |
-| `DEMO/proposal.md` | 1–28 | Approved local controls and confirmed header |
-| `DEMO/design.md` | 1–70 | Fixed fixtures, separate panel, no logout |
-| `DEMO/specs/control-center-mock-server/spec.md` | 1–106 | Production isolation and no mock RBAC |
-| `DEMO/specs/control-center-shell/spec.md` | 1–55 | Branding, profile presentation, accessibility |
-| `DEMO/specs/local-session-demo/spec.md` | 1–123 | Mode configuration, profiles, response scenarios |
+| File                                                | Lines read | Relevance                                                      |
+| --------------------------------------------------- | ---------: | -------------------------------------------------------------- |
+| `AUTH/proposal.md`                                  |       1–38 | Approved real-session scope, no logout UI/new OIDC             |
+| `AUTH/design.md`                                    |      1–171 | Session ownership, mode selection, unresolved deployment gates |
+| `AUTH/specs/control-center-api-integration/spec.md` |       1–64 | Bootstrap/error boundaries, no fixture success inference       |
+| `AUTH/specs/control-center-http/spec.md`            |       1–71 | Credentials and backend authorization boundaries               |
+| `AUTH/specs/control-center-mock-server/spec.md`     |       1–27 | Preserve credential-free business mocks                        |
+| `AUTH/specs/control-center-permissions/spec.md`     |       1–89 | UI policy and documentation access                             |
+| `AUTH/specs/control-center-shell/spec.md`           |      1–101 | Navigation ownership, route availability and deferrals         |
+| `AUTH/specs/mpmm-session/spec.md`                   |      1–138 | Confirmed principal, shared-session limits                     |
+| `DEMO/proposal.md`                                  |       1–28 | Approved local controls and confirmed header                   |
+| `DEMO/design.md`                                    |       1–70 | Fixed fixtures, separate panel, no logout                      |
+| `DEMO/specs/control-center-mock-server/spec.md`     |      1–106 | Production isolation and no mock RBAC                          |
+| `DEMO/specs/control-center-shell/spec.md`           |       1–55 | Branding, profile presentation, accessibility                  |
+| `DEMO/specs/local-session-demo/spec.md`             |      1–123 | Mode configuration, profiles, response scenarios               |
 
 These are scope constraints, not evidence that their implementation or integration gates passed. Archived location is not used as deployment proof.
 
@@ -56,22 +56,22 @@ These are scope constraints, not evidence that their implementation or integrati
 
 All IDs are stable within this report. Rows 001–014 come exclusively from primary MOS-904 description, `J` **`/items/4/description`**, not from comments or approved-scope text. All remain candidates for reconciliation, with no completion assessment.
 
-| ID | Exact source fragment | Atomic candidate / unresolved detail |
-|---|---|---|
-| REQ-MOS-904-001 | «Заменить старый бренд» | Replace old branding. Jira does not specify the replacement mark or exact label here. |
-| REQ-MOS-904-002 | «жёстко заданные ФИО» | Remove hardcoded personal name; approved confirmed-principal presentation constrains the replacement. |
-| REQ-MOS-904-003 | «/роль» | Remove hardcoded role display; this does not authorize a role editor or grant permissions from a label. |
-| REQ-MOS-904-004 | «Доработать существующие header» | Update existing header. Component name is Jira's target wording, not verified source architecture. |
-| REQ-MOS-904-005 | «SidebarHeader» | Update sidebar header. Exact visual change unspecified here. |
-| REQ-MOS-904-006 | «SidebarContent» | Update sidebar content. Exact visual change unspecified here. |
-| REQ-MOS-904-007 | «SidebarFooter» | Update sidebar footer. Exact visual change unspecified here. |
-| REQ-MOS-904-008 | «Добавить профиль» | Add profile UI; precise content/interaction comes from separately approved scope, not this phrase. |
-| REQ-MOS-904-009 | «с выходом» | Requested exit action associated with profile. **Unresolved scope conflict:** no approved logout UI or global MPMM logout is authorized. Do not invent local logout semantics. |
-| REQ-MOS-904-010 | «переход к командам» | Provide navigation to teams, subject to confirmed permissions and actual route availability. No team-management expansion implied. |
-| REQ-MOS-904-011 | «контекстное меню статей документации» | Provide contextual article menu. Article inventory, placement and target behavior are unspecified in the description. |
-| REQ-MOS-904-012 | «Доступность разделов брать из auth-контекста» | Derive section availability from confirmed access context, within the already approved UI-only permissions policy; no new auth policy/API inferred. |
+| ID              | Exact source fragment                                                                                     | Atomic candidate / unresolved detail                                                                                                                                                          |
+| --------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| REQ-MOS-904-001 | «Заменить старый бренд»                                                                                   | Replace old branding. Jira does not specify the replacement mark or exact label here.                                                                                                         |
+| REQ-MOS-904-002 | «жёстко заданные ФИО»                                                                                     | Remove hardcoded personal name; approved confirmed-principal presentation constrains the replacement.                                                                                         |
+| REQ-MOS-904-003 | «/роль»                                                                                                   | Remove hardcoded role display; this does not authorize a role editor or grant permissions from a label.                                                                                       |
+| REQ-MOS-904-004 | «Доработать существующие header»                                                                          | Update existing header. Component name is Jira's target wording, not verified source architecture.                                                                                            |
+| REQ-MOS-904-005 | «SidebarHeader»                                                                                           | Update sidebar header. Exact visual change unspecified here.                                                                                                                                  |
+| REQ-MOS-904-006 | «SidebarContent»                                                                                          | Update sidebar content. Exact visual change unspecified here.                                                                                                                                 |
+| REQ-MOS-904-007 | «SidebarFooter»                                                                                           | Update sidebar footer. Exact visual change unspecified here.                                                                                                                                  |
+| REQ-MOS-904-008 | «Добавить профиль»                                                                                        | Add profile UI; precise content/interaction comes from separately approved scope, not this phrase.                                                                                            |
+| REQ-MOS-904-009 | «с выходом»                                                                                               | Requested exit action associated with profile. **Unresolved scope conflict:** no approved logout UI or global MPMM logout is authorized. Do not invent local logout semantics.                |
+| REQ-MOS-904-010 | «переход к командам»                                                                                      | Provide navigation to teams, subject to confirmed permissions and actual route availability. No team-management expansion implied.                                                            |
+| REQ-MOS-904-011 | «контекстное меню статей документации»                                                                    | Provide contextual article menu. Article inventory, placement and target behavior are unspecified in the description.                                                                         |
+| REQ-MOS-904-012 | «Доступность разделов брать из auth-контекста»                                                            | Derive section availability from confirmed access context, within the already approved UI-only permissions policy; no new auth policy/API inferred.                                           |
 | REQ-MOS-904-013 | «Демонстрационные reset, переключение произвольной роли и сценарии показа не переносить в рабочий контур» | Exclude demo reset, arbitrary-role switching and show scenarios from the working environment. The three excluded controls share one explicit boundary; approved local demo remains permitted. |
-| REQ-MOS-904-014 | «Подсказки первого входа и повторное открытие справки оставить как справочную UI-функцию» | Retain first-entry hints and repeatable help as informational UI, not a demo/auth workflow. First-entry persistence and help content need decisions. |
+| REQ-MOS-904-014 | «Подсказки первого входа и повторное открытие справки оставить как справочную UI-функцию»                 | Retain first-entry hints and repeatable help as informational UI, not a demo/auth workflow. First-entry persistence and help content need decisions.                                          |
 
 For independent reconciliation of the compound prohibitions/help clause without changing the parent IDs: REQ-MOS-904-013 covers three separately verifiable prohibitions (reset; arbitrary role switch; show scenarios), and REQ-MOS-904-014 covers two separately verifiable behaviors (first-entry hints; reopening help). These are not extra requirements from another source.
 

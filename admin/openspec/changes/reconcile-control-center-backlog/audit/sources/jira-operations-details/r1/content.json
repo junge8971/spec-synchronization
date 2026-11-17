@@ -1,13 +1,7 @@
 {
   "sourceId": "jira-operations-details",
   "retrievedAt": "2026-10-16T13:02:57.872Z",
-  "allowlist": [
-    "MOS-717",
-    "MOS-754",
-    "MOS-920",
-    "MOS-922",
-    "MOS-923"
-  ],
+  "allowlist": ["MOS-717", "MOS-754", "MOS-920", "MOS-922", "MOS-923"],
   "items": [
     {
       "key": "MOS-717",

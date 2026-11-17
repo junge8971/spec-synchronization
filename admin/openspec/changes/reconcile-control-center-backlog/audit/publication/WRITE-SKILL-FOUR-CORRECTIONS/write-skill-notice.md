@@ -30,13 +30,13 @@ Own copied main spec before and after has the same digest.
 
 Output paths relative to the change root:
 
-| File | SHA256 |
-| --- | --- |
-| `.openspec.yaml` | `ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b` |
-| `proposal.md` | `36b7986f55f36d4f682957b1c8c72dff7a9c92fc1037eb621c761c1315434685` |
-| `design.md` | `33712a3025e094cfbf4e90025f95d76f5680b5ce5b2e631ad0a50a1760a1a4bb` |
+| File                                   | SHA256                                                             |
+| -------------------------------------- | ------------------------------------------------------------------ |
+| `.openspec.yaml`                       | `ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b` |
+| `proposal.md`                          | `36b7986f55f36d4f682957b1c8c72dff7a9c92fc1037eb621c761c1315434685` |
+| `design.md`                            | `33712a3025e094cfbf4e90025f95d76f5680b5ce5b2e631ad0a50a1760a1a4bb` |
 | `specs/skill-training-phrases/spec.md` | `ba89406cbd6191cea2f17498695d16880a2c22574800be7c6b176a5df5975cf8` |
-| `tasks.md` | `09aa698007bd4969679e70cb3d062d5e742cf464466618fa83f84e236f52455a` |
+| `tasks.md`                             | `09aa698007bd4969679e70cb3d062d5e742cf464466618fa83f84e236f52455a` |
 
 ## Residual limits
 

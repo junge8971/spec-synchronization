@@ -1,9 +1,11 @@
 # Code Context
 
 ## Result
+
 REQ-G2-MOS-1258 only: all seven embedded Jira acceptance criteria mapped below. Requirements extraction, not implementation acceptance. No materially missing input blocks this bounded extraction.
 
 ## Files Retrieved / actual read scope
+
 All relative paths below start at `openspec/changes/reconcile-control-center-backlog/audit/` (A).
 
 - `A/work-items/G2-FEEDBACK-EDITOR-CONDITIONS.md`: complete assignment (all sections).
@@ -16,22 +18,24 @@ All relative paths below start at `openspec/changes/reconcile-control-center-bac
 J is revision 1 captured 2026-10-16T11:17:16.813Z; target updated 2026-10-12T21:16:28.873+0800, Backlog. W is version 11, updated 2026-10-12T17:21:31.204+08:00, captured 2026-10-16T11:17:53.564Z. Assignment/metadata hashes are parent-attributed, not independently computed: J `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685`; W `d47db6bfc15f5f4a881c777ec78892161ed6be000c6cdf1c5c61ab4c7030c7d7`.
 
 ## Key requirements (not code)
+
 **Locator convention:** J ACn means the nth `#` paragraph under `h3. Критерии приёмки` within the single JSON string `/items/9/description` (line 93), not an invented nested JSON pointer. Quotes below are verbatim source fragments.
 
-| ID / AC | Atomic requirement or inseparable clause | Exact evidence |
-|---|---|---|
-| C1 / AC1 | Build field/operator choices from metadata; supported fields are name, code, description, type_code, status, audience_type, owner. Exactly one flat and/or group, at most 50 rows; no nested-group requirement. | “Поля/операторы строятся по metadata: name/code/description/type_code/status/audience_type/owner; одна плоская and/or группа до 50 строк.” |
-| C2 / AC2,7 | in/not_in uses 1–100 unique lookup codes, each a string of 1–1000 characters; inactive codes remain usable for search. Removing the last code removes the condition, never sends an empty array. | AC2: “1–100 уникальных кодов справочника”; “Неактивные коды допустимы в поиске.” AC7: “1–100 уникальных строк по 1–1000 символов”; “Удаление последнего кода in/not_in удаляет условие; пустой массив не отправляется.” |
-| C3 / AC2,7 | is_empty/is_not_empty needs no value: value may be absent or null. | AC2: “значение не требуется”; AC7: “value отсутствует либо null.” |
-| C4 / AC7 | contains/not_contains/eq/ne/starts_with/ends_with requires string value length 1–1000; preserve whitespace, including whitespace-only strings as nonempty. | “value — строка 1–1000 символов”; “Пробелы не обрезаются, строка из пробелов не пуста.” |
-| C5 / AC3 | Combine query and ordinary status/type_code with the group using AND, without silently changing group logic. Audience is an explicit condition inside that group, not an independent filter. | “query и обычные status/type_code объединяются с группой через AND; логика группы не меняется скрыто”; “Аудитория доступна как явное условие внутри группы, отдельного независимого фильтра нет.” |
-| C6 / AC4 | Offer add/remove/apply/clear, an active-condition badge and active-condition panel. Keep unapplied condition draft out of search, export and saved filters. | “Есть добавление/удаление, применение, очистка, badge и панель активных условий”; “Неприменённый draft не попадает в поиск/экспорт/сохранённый фильтр.” |
-| C7 / AC5 | Server evaluates conditions across the whole selection; counts/pagination correspond to search; changed selection resets offset. This is not local filtering of the current page. | “Условия исполняет сервер по всей выборке; counts/pagination соответствуют search, смена отбора сбрасывает offset.” AC6: “отсутствие локальной фильтрации страницы”. |
-| C8 / AC5 | Restore complete conditions through URL/history/copy, integrated with registry-owned applied-search state. No wire encoding specified here. | “URL/history/copy полностью восстанавливают conditions.” |
-| C9 / AC6 | Show a 422 JSON Pointer error at the affected condition while preserving input. | “422 с JSON Pointer отображается у условия без потери ввода.” |
-| C10 / AC6,7 | Required unit/component coverage: status AND (A OR B), empty/invalid values, limit, URL, no local page filtering; 1/1000/1001 characters, whitespace without trim and clearing last value. These are required test scenarios, not claims of executed tests. | AC6: “Unit/component-тесты: status AND (A OR B), пустые/невалидные значения, лимит, URL и отсутствие локальной фильтрации страницы.” AC7: “Тесты: 1/1000/1001 символ, пробелы без trim и очистка последнего значения.” |
+| ID / AC     | Atomic requirement or inseparable clause                                                                                                                                                                                                                    | Exact evidence                                                                                                                                                                                                          |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C1 / AC1    | Build field/operator choices from metadata; supported fields are name, code, description, type_code, status, audience_type, owner. Exactly one flat and/or group, at most 50 rows; no nested-group requirement.                                             | “Поля/операторы строятся по metadata: name/code/description/type_code/status/audience_type/owner; одна плоская and/or группа до 50 строк.”                                                                              |
+| C2 / AC2,7  | in/not_in uses 1–100 unique lookup codes, each a string of 1–1000 characters; inactive codes remain usable for search. Removing the last code removes the condition, never sends an empty array.                                                            | AC2: “1–100 уникальных кодов справочника”; “Неактивные коды допустимы в поиске.” AC7: “1–100 уникальных строк по 1–1000 символов”; “Удаление последнего кода in/not_in удаляет условие; пустой массив не отправляется.” |
+| C3 / AC2,7  | is_empty/is_not_empty needs no value: value may be absent or null.                                                                                                                                                                                          | AC2: “значение не требуется”; AC7: “value отсутствует либо null.”                                                                                                                                                       |
+| C4 / AC7    | contains/not_contains/eq/ne/starts_with/ends_with requires string value length 1–1000; preserve whitespace, including whitespace-only strings as nonempty.                                                                                                  | “value — строка 1–1000 символов”; “Пробелы не обрезаются, строка из пробелов не пуста.”                                                                                                                                 |
+| C5 / AC3    | Combine query and ordinary status/type_code with the group using AND, without silently changing group logic. Audience is an explicit condition inside that group, not an independent filter.                                                                | “query и обычные status/type_code объединяются с группой через AND; логика группы не меняется скрыто”; “Аудитория доступна как явное условие внутри группы, отдельного независимого фильтра нет.”                       |
+| C6 / AC4    | Offer add/remove/apply/clear, an active-condition badge and active-condition panel. Keep unapplied condition draft out of search, export and saved filters.                                                                                                 | “Есть добавление/удаление, применение, очистка, badge и панель активных условий”; “Неприменённый draft не попадает в поиск/экспорт/сохранённый фильтр.”                                                                 |
+| C7 / AC5    | Server evaluates conditions across the whole selection; counts/pagination correspond to search; changed selection resets offset. This is not local filtering of the current page.                                                                           | “Условия исполняет сервер по всей выборке; counts/pagination соответствуют search, смена отбора сбрасывает offset.” AC6: “отсутствие локальной фильтрации страницы”.                                                    |
+| C8 / AC5    | Restore complete conditions through URL/history/copy, integrated with registry-owned applied-search state. No wire encoding specified here.                                                                                                                 | “URL/history/copy полностью восстанавливают conditions.”                                                                                                                                                                |
+| C9 / AC6    | Show a 422 JSON Pointer error at the affected condition while preserving input.                                                                                                                                                                             | “422 с JSON Pointer отображается у условия без потери ввода.”                                                                                                                                                           |
+| C10 / AC6,7 | Required unit/component coverage: status AND (A OR B), empty/invalid values, limit, URL, no local page filtering; 1/1000/1001 characters, whitespace without trim and clearing last value. These are required test scenarios, not claims of executed tests. | AC6: “Unit/component-тесты: status AND (A OR B), пустые/невалидные значения, лимит, URL и отсутствие локальной фильтрации страницы.” AC7: “Тесты: 1/1000/1001 символ, пробелы без trim и очистка последнего значения.”  |
 
 ### Relevant wiki corroboration and differences
+
 All W locators are `/text` (line 8), named heading plus exact quote:
 
 - §3.4 `Расширенный фильтр «⚙ Условия»`: “Логика: И (все условия) / ИЛИ (любое условие).” Text operators “содержит, не содержит, равно, не равно, начинается с, заканчивается на, пусто, не пусто”; enum “входит в, не входит в (с чипсами-значениями)”. Corroborates builder semantics, not a JSON grammar or exhaustive per-field operator matrix.
@@ -42,6 +46,7 @@ All W locators are `/text` (line 8), named heading plus exact quote:
 - §4.4 “Условия” means “Тип диалога… Результат диалога… Приоритет… Эксклюзивный показ” on the card, with fields bound to `fb_display_rule`; model §3.4 calls these “настройки показа опросника”. These are NOT registry search conditions.
 
 ## Architecture / ownership boundaries (requirements only)
+
 - **MOS-1258:** condition editing and its applied-search contribution, as C1–C10. J description: “Добавить конструктор условий И/ИЛИ к общей модели search реестра.” Description names conditions in search/export search and metadata `condition_fields`; no endpoint/schema analysis performed.
 - **MOS-1250:** base status/type_code multiselects and shared registry search/URL application. J explicitly says these “принадлежат MOS-1250 и здесь не дублируются”. C5/C7/C8 describe integration obligations, not a second registry owner.
 - **MOS-1249:** declared dependency for shared integration/metadata; no transport or permission policy re-extracted.
@@ -50,9 +55,11 @@ All W locators are `/text` (line 8), named heading plus exact quote:
 - Explicit deferrals in J description: “Независимый фильтр аудитории одновременно с OR-группой, условия tags и сортировка аудитории отложены.” No product choice made to reverse them. No DSL, nesting, serializer, trigger execution or UI-role policy invented.
 
 ## Start Here
+
 Read J `/items/9/description` (physical line 93) alongside W `/text` §3.4. Those are the direct builder evidence; retain the owner boundaries above rather than reopening accepted registry/saved-filter extraction.
 
 ## Genuine unknowns / residual limits
+
 - Exact metadata field/operator compatibility matrix and wire/URL serialization are not defined in these retained prose clauses; no schema or implementation was inspected. No conclusion on their shape, normalization beyond explicit no-trim, uniqueness comparison rules, or error-pointer syntax is made.
 - Empty-group representation and whether clear immediately applies versus edits a draft are not specified here. Preserve the explicit unapplied-draft boundary without choosing a product interaction.
 - Jira capture omits comments, attachments and custom acceptance fields. Wiki is flattened textContent; original attachment was not fetched/executed. No live-source freshness claim or prototype visual behavior verification.

@@ -24,12 +24,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "started_from",
-      "started_to",
-      "comparison_from",
-      "comparison_to"
-    ],
+    "required": ["started_from", "started_to", "comparison_from", "comparison_to"],
     "title": "PeriodResponse"
   }
 }

@@ -11,18 +11,19 @@
 ## 1. Источник и атомарные требования
 
 Обозначения:
+
 - **S**: `audit/sources/jira-subtasks/r1/content.json`, относительно `openspec/changes/reconcile-control-center-backlog/`.
 - **W**: `audit/sources/wiki-241085439/r1/content.json`.
 
 S `$.items[6]`, строки 128–152: статус `Backlog`, обновление `2026-10-16T18:39:35.845+0800`; описание — строка 135. Шаги: открыть «Диалоги», проверить кнопки сортировки таблицы. Заявленный ФР: отсутствуют четыре кнопки, кроме «Начало».
 
-| Атом | Expected — S `$.items[6].description`, ОР | Уточнение W `$.bodyView`, §3.1.3 | Observed |
-|---|---|---|---|
-| R1 | Кнопка «Начало» | `started_at`, `-started_at`; default `-started_at` | Есть в конфигурации колонок |
-| R2 | Кнопка «Завершение» | `ended_at`, `-ended_at` | Есть |
-| R3 | Кнопка «Поверхность» | `channel`, `-channel`; по отображаемому названию | Есть |
-| R4 | Кнопка «Оценка работы оператора» | `operator_rating`, `-operator_rating`; числовая оценка | Есть |
-| R5 | Кнопка «Время» | `duration`, `-duration`; по `duration_sec` | Есть |
+| Атом | Expected — S `$.items[6].description`, ОР | Уточнение W `$.bodyView`, §3.1.3                       | Observed                    |
+| ---- | ----------------------------------------- | ------------------------------------------------------ | --------------------------- |
+| R1   | Кнопка «Начало»                           | `started_at`, `-started_at`; default `-started_at`     | Есть в конфигурации колонок |
+| R2   | Кнопка «Завершение»                       | `ended_at`, `-ended_at`                                | Есть                        |
+| R3   | Кнопка «Поверхность»                      | `channel`, `-channel`; по отображаемому названию       | Есть                        |
+| R4   | Кнопка «Оценка работы оператора»          | `operator_rating`, `-operator_rating`; числовая оценка | Есть                        |
+| R5   | Кнопка «Время»                            | `duration`, `-duration`; по `duration_sec`             | Есть                        |
 
 Общий точный кодовый локатор: `app/pages/dialogs/constants/dialogs.constants.ts:19–25`, массив `dialogColumns`. Для каждой записи `app/pages/dialogs/ui/dialog-table.tsx:49–68` создаёт `Button` с соответствующим текстом и обработчиком `onSort`.
 
@@ -97,19 +98,19 @@ Requirement **“Registry represents server rows faithfully”** определ�
 
 Префикс `A` = `openspec/changes/reconcile-control-center-backlog/audit/`.
 
-| Вход | SHA256 |
-|---|---|
-| `A/work-items/WAVE-D090-EIGHT.md` | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
-| `A/sources/jira-subtasks/r1/content.json` | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
-| `A/sources/jira-subtasks/r1/metadata.json` | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
-| `A/sources/wiki-241085439/r1/content.json` | `974ea35aaf44b9ec7c14c573ba58bdf7ed55397a9ca47d62b37fb39d9886f8bc` |
-| `A/sources/wiki-241085439/r1/metadata.json` | `dcaab775172b7e615dfae64184d719f8403cff1fb304650ba21e1532ce577b7d` |
-| `A/coverage.json` | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
-| `openspec/specs/dialog-registry/spec.md` | `ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83` |
+| Вход                                                                                         | SHA256                                                             |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `A/work-items/WAVE-D090-EIGHT.md`                                                            | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
+| `A/sources/jira-subtasks/r1/content.json`                                                    | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
+| `A/sources/jira-subtasks/r1/metadata.json`                                                   | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
+| `A/sources/wiki-241085439/r1/content.json`                                                   | `974ea35aaf44b9ec7c14c573ba58bdf7ed55397a9ca47d62b37fb39d9886f8bc` |
+| `A/sources/wiki-241085439/r1/metadata.json`                                                  | `dcaab775172b7e615dfae64184d719f8403cff1fb304650ba21e1532ce577b7d` |
+| `A/coverage.json`                                                                            | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
+| `openspec/specs/dialog-registry/spec.md`                                                     | `ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83` |
 | `openspec/changes/archive/2026-10-05-mos-1037-dialog-registry/specs/dialog-registry/spec.md` | `742762a4b4565370424c79645372cfdfe46007423842d88eba20a3376fc1d17d` |
-| `docs/api/contracts/dialogs.openapi.json` | `a0d798f7647f7ed5c66bdf9a39113ab4da25d5d358311068d34baaef5f9ab648` |
-| `app/pages/dialogs/constants/dialogs.constants.ts` | `ff44d72901017a14b4271601c080fa98c7cbc51026a4fa4b896fc7ce4cf315f9` |
-| `app/pages/dialogs/ui/dialog-table.tsx` | `c0a286d80894f7591bcd9882d25cc8ae87a80faddbe150f26f6f0597588366f3` |
-| `app/pages/dialogs/ui/dialogs-page.test.tsx` | `3dba3eb88505d29a2ed80dab6c301e0496007e85a26749d74b80a747824d2fec` |
+| `docs/api/contracts/dialogs.openapi.json`                                                    | `a0d798f7647f7ed5c66bdf9a39113ab4da25d5d358311068d34baaef5f9ab648` |
+| `app/pages/dialogs/constants/dialogs.constants.ts`                                           | `ff44d72901017a14b4271601c080fa98c7cbc51026a4fa4b896fc7ce4cf315f9` |
+| `app/pages/dialogs/ui/dialog-table.tsx`                                                      | `c0a286d80894f7591bcd9882d25cc8ae87a80faddbe150f26f6f0597588366f3` |
+| `app/pages/dialogs/ui/dialogs-page.test.tsx`                                                 | `3dba3eb88505d29a2ed80dab6c301e0496007e85a26749d74b80a747824d2fec` |
 
 Хеши content совпали с сохранёнными metadata. Jira-вложения `839906`, `839905` представлены только метаданными: содержимое не скачано и не исследовано. Комментарии/custom acceptance fields отсутствуют в сохранённой выборке. Свежесть внешних источников не проверялась.

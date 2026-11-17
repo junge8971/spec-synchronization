@@ -79,25 +79,25 @@ Read complete decision entries D-055/D-054 at A/decisions.md:3–9 and D-042 at 
 
 ## Verification of all 18 findings
 
-| Finding | Verification |
-|---|---|
-| **USR-01** | U:6–7,27–37,119–139; UC:0,2–3 support cookie-authenticated administrative profiles, local UUID/subject, nullable fields, role codes and administrative state. Correctly distinct from approved `/me`, contacts and team membership. |
-| **USR-02** | U:35–71,108–139,167–181; UC:0–3 support prefix search, any-of roles, date boundaries, stable sorting, pagination and card behavior. Empty success is not missing/concealed access. No deployment inference. |
-| **USR-03** | U:58–68,127; UC:1,3 contain exactly **nine preliminary role codes**, with empty assignments allowed. No hierarchy or production grants are inferred; fixed demo profiles remain separate. |
-| **USR-04** | U:182–215; UC:3–4 support `users.activate`, pending/suspended→active, required UUID key, positive int64 version, reason length and new-login requirement. |
-| **USR-05** | U:216–247; UC:4–5 support `users.block`, active→suspended and invalidation of application sessions—not global СУДИР blocking or token changes. |
-| **USR-06** | U:248–287; UC:5 preserve version increment, original status/body replay for identical commands, method/URI/body key conflicts and explicit prohibition of automatic retry after version conflict. |
-| **USR-07** | U:8–26,33,288–310; UC:0,5–6 support correlation, error-envelope details, concealed404, inactive403 and authorization503. Audit Query API delegation does not grant reader access or frontend publication authority. |
-| **SES-01** | S:1–10,33–41,421–445 confirms paused DRAFT status, unagreed frontend/provider parameters, backend cookie architecture and MOS-659’s contract-only scope. No replacement of approved MPMM integration follows. |
-| **SES-02** | S:43–80; SC:2–3 preserve proposed302, normalized same-origin return path, transaction/browser binding, PKCE and proposed600-second duration. Example addresses are not registered endpoints. |
-| **SES-03** | S:81–128; SC:3–5 support callback validation, atomic transaction consumption, OIDC identity assurance, active-profile checks and successful-browser-session replacement. Failed callback does not revoke an existing valid session. |
-| **SES-04** | S:129–187,295–313; SC:5–7,13–14 support current-session fields, nullable absolute expiry, backend checks and separation of functional permissions, provider scopes and object authorization. No DTO conversion is authorized. |
-| **SES-05** | S:18–32,188–201,244–273 preserve redirect-versus-JSON errors, configuration503, invalid-session401 and proposed inactive-profile403 cleanup. The report expressly prevents importing that cleanup into approved generic business403. |
-| **SES-06** | S:202–243; SC:8–9 preserve own-session logout, validation/CSRF without cookie, null redirect, no fabricated audit event, store-outage behavior and unresolved key applicability. No frontend logout or automatic replay is approved. |
-| **SES-07** | S:274–293; SC:11–12 support proposed cookie attributes, distinct Lax binding cookie, exact Origin/Referer rules and unresolved CORS/CSRF decisions. Browser close is not reliable logout. |
-| **SES-08** | S:170,187,314–321,440 support illustrative15 minutes, preliminary15–60-minute range, unresolved defaults/activity/absolute limits and locally recorded unlimited parallel sessions. No chronology precedence or adopted timeout is asserted. |
-| **SES-09** | S:295–334; SC:12–16 support secret/public-ID separation, conditional activity, concurrent mass revocation, index limitations, restart/eviction and unconfirmed external propagation. Backend requirements are not delivered SPA capabilities. |
-| **SES-10** | S:109–110,215–236,335–354,409–420 support source-owned synchronous fail-open audit publication, alerts/retries, proposed catalog and observed-expiry limitation. Correct except the action-name abbreviation identified above. |
+| Finding    | Verification                                                                                                                                                                                                                                                             |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **USR-01** | U:6–7,27–37,119–139; UC:0,2–3 support cookie-authenticated administrative profiles, local UUID/subject, nullable fields, role codes and administrative state. Correctly distinct from approved `/me`, contacts and team membership.                                      |
+| **USR-02** | U:35–71,108–139,167–181; UC:0–3 support prefix search, any-of roles, date boundaries, stable sorting, pagination and card behavior. Empty success is not missing/concealed access. No deployment inference.                                                              |
+| **USR-03** | U:58–68,127; UC:1,3 contain exactly **nine preliminary role codes**, with empty assignments allowed. No hierarchy or production grants are inferred; fixed demo profiles remain separate.                                                                                |
+| **USR-04** | U:182–215; UC:3–4 support `users.activate`, pending/suspended→active, required UUID key, positive int64 version, reason length and new-login requirement.                                                                                                                |
+| **USR-05** | U:216–247; UC:4–5 support `users.block`, active→suspended and invalidation of application sessions—not global СУДИР blocking or token changes.                                                                                                                           |
+| **USR-06** | U:248–287; UC:5 preserve version increment, original status/body replay for identical commands, method/URI/body key conflicts and explicit prohibition of automatic retry after version conflict.                                                                        |
+| **USR-07** | U:8–26,33,288–310; UC:0,5–6 support correlation, error-envelope details, concealed404, inactive403 and authorization503. Audit Query API delegation does not grant reader access or frontend publication authority.                                                      |
+| **SES-01** | S:1–10,33–41,421–445 confirms paused DRAFT status, unagreed frontend/provider parameters, backend cookie architecture and MOS-659’s contract-only scope. No replacement of approved MPMM integration follows.                                                            |
+| **SES-02** | S:43–80; SC:2–3 preserve proposed302, normalized same-origin return path, transaction/browser binding, PKCE and proposed600-second duration. Example addresses are not registered endpoints.                                                                             |
+| **SES-03** | S:81–128; SC:3–5 support callback validation, atomic transaction consumption, OIDC identity assurance, active-profile checks and successful-browser-session replacement. Failed callback does not revoke an existing valid session.                                      |
+| **SES-04** | S:129–187,295–313; SC:5–7,13–14 support current-session fields, nullable absolute expiry, backend checks and separation of functional permissions, provider scopes and object authorization. No DTO conversion is authorized.                                            |
+| **SES-05** | S:18–32,188–201,244–273 preserve redirect-versus-JSON errors, configuration503, invalid-session401 and proposed inactive-profile403 cleanup. The report expressly prevents importing that cleanup into approved generic business403.                                     |
+| **SES-06** | S:202–243; SC:8–9 preserve own-session logout, validation/CSRF without cookie, null redirect, no fabricated audit event, store-outage behavior and unresolved key applicability. No frontend logout or automatic replay is approved.                                     |
+| **SES-07** | S:274–293; SC:11–12 support proposed cookie attributes, distinct Lax binding cookie, exact Origin/Referer rules and unresolved CORS/CSRF decisions. Browser close is not reliable logout.                                                                                |
+| **SES-08** | S:170,187,314–321,440 support illustrative15 minutes, preliminary15–60-minute range, unresolved defaults/activity/absolute limits and locally recorded unlimited parallel sessions. No chronology precedence or adopted timeout is asserted.                             |
+| **SES-09** | S:295–334; SC:12–16 support secret/public-ID separation, conditional activity, concurrent mass revocation, index limitations, restart/eviction and unconfirmed external propagation. Backend requirements are not delivered SPA capabilities.                            |
+| **SES-10** | S:109–110,215–236,335–354,409–420 support source-owned synchronous fail-open audit publication, alerts/retries, proposed catalog and observed-expiry limitation. Correct except the action-name abbreviation identified above.                                           |
 | **SES-11** | S:411–445 supports publication idempotency/conflicts, preserved auth outcome, no exactly-once guarantee and provider TBDs. Transport-derived identity is also correct but needs the additional locator above. Backend audit retry remains distinct from frontend replay. |
 
 ## Provenance, lineage and attachment boundaries
@@ -113,12 +113,12 @@ D-042 accepts the parent-corrected ASR findings while preserving the original in
 
 UP records an empty returned attachment index. SP records exactly four `image/png` entries:
 
-| ID | Exact title |
-|---|---|
+| ID        | Exact title                   |
+| --------- | ----------------------------- |
 | 241079265 | image-2026-9-7_16-29-13-1.png |
-| 241079264 | image-2026-9-7_16-29-13.png |
-| 241078912 | image-2026-9-7_16-9-47-1.png |
-| 241078911 | image-2026-9-7_16-9-47.png |
+| 241079264 | image-2026-9-7_16-29-13.png   |
+| 241078912 | image-2026-9-7_16-9-47-1.png  |
+| 241078911 | image-2026-9-7_16-9-47.png    |
 
 Both indexes report status200, start0, limit100 and next null. SC:16 contains the two stated login/logout image references with empty `alt` values. No Mermaid diagram body or image semantics were recovered from those references.
 

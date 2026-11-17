@@ -17,18 +17,18 @@ Paths below are repository-relative:
 
 Primary source: `A/sources/jira-surface-details-d095/r1/content.json#/items/7`.
 
-| Pointer | Evidence |
-|---|---|
-| `/key` | `MOS-913` |
-| `/status` | `Ready for test`; not acceptance evidence |
-| `/updated` | `2026-10-19T17:47:47.953+0800` |
-| `/retrievedAt` | `2026-10-20T16:56:26.509Z` |
-| `/description` | Overview/connection tabs; server embed_code, channel_id, domains and authorization; saved descriptive fields, responsible people, status/dates and metrics; no fabricated data-token; truthful checklist; read errors must not clear configuration |
-| `/comments/items/1` | Comment `1124934`, updated `2026-10-06T15:57:49.248+0800`: older request for code generation, copying/modal and publication modal |
-| `/comments/items/3` | Comment `1126400`, updated `2026-10-07T21:27:44.116+0800`: implementation claim and proposed checks for unchanged copy, documentation, null/zero and refresh recovery |
-| `/comments/items/2` | MR reference only; linked MR not traversed |
-| `/attachments` | Empty |
-| `/comments/total` | Four; all four returned |
+| Pointer             | Evidence                                                                                                                                                                                                                                           |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/key`              | `MOS-913`                                                                                                                                                                                                                                          |
+| `/status`           | `Ready for test`; not acceptance evidence                                                                                                                                                                                                          |
+| `/updated`          | `2026-10-19T17:47:47.953+0800`                                                                                                                                                                                                                     |
+| `/retrievedAt`      | `2026-10-20T16:56:26.509Z`                                                                                                                                                                                                                         |
+| `/description`      | Overview/connection tabs; server embed_code, channel_id, domains and authorization; saved descriptive fields, responsible people, status/dates and metrics; no fabricated data-token; truthful checklist; read errors must not clear configuration |
+| `/comments/items/1` | Comment `1124934`, updated `2026-10-06T15:57:49.248+0800`: older request for code generation, copying/modal and publication modal                                                                                                                  |
+| `/comments/items/3` | Comment `1126400`, updated `2026-10-07T21:27:44.116+0800`: implementation claim and proposed checks for unchanged copy, documentation, null/zero and refresh recovery                                                                              |
+| `/comments/items/2` | MR reference only; linked MR not traversed                                                                                                                                                                                                         |
+| `/attachments`      | Empty                                                                                                                                                                                                                                              |
+| `/comments/total`   | Four; all four returned                                                                                                                                                                                                                            |
 
 Packet metadata records collection cutoff `2026-10-20T16:56:26.589Z`, distinct from the item timestamp. It records parent verification against saved MOS-783 membership. This analyst did not independently re-audit the hierarchy.
 
@@ -66,16 +66,16 @@ Also inspected `O/proposal.md`, design and tasks, plus proposal/design/tasks of 
 
 ## 3. Expected / observed / unknown
 
-| Seam | Expected | Observed static evidence | Unknown / qualification |
-|---|---|---|---|
-| Detail source | Read saved detail by ID; do not synthesize connection fields | `E/api/surface-registry-client.ts:55–90,151–161`: required detail fields, nullable connection values, ID-match refinement; `W/surface-details.tsx` owns the query and keyed editor snapshot | No live response or deployment checked |
-| Connection display | Server embed code as text, all domains, channel and authorization; null is absence of information | `W/surface-details/surface-details-connection.tsx`: React `pre/code` text, server props, null labels; no HTML execution or generation | Does not establish production token issuance or authorization behavior |
-| Exact copying | Copy original string, including whitespace and genuine server attributes; truthful success/failure | Same component uses trim only to determine availability; `handlers/surface-details.handlers.ts:13–19` forwards the original string to `navigator.clipboard.writeText`; success follows resolution, failure keeps manual copy available | Actual browser clipboard permissions not exercised |
-| Overview | Saved configuration name, purpose/context, owner, responsible people, status/dates and metrics | `surface-details-overview.tsx`: fields read from `surface`, localized dates/numbers, React text; responsible formatting through entity public API | Not proof of historical screenshot parity or backend normalization |
-| Null versus zero | Each metric independently distinguishes null from 0 | `formatMetric`: `value === null ? 'Нет данных' : ...`; zero retained, including `0%` | Inspected component regression explicitly covers dialogs=null/share=0, not the reverse combination |
-| Checklist | Facts from saved fields, no permanent green validation | `surface-details-publication-checklist.tsx`: saved domains/skills and trimmed greeting; mandatory parameters and uniqueness remain unconfirmed; no sandbox item | No server readiness results inferred; lifecycle policy remains MOS-914 |
-| Read failure | Preserve last successful information/configuration and draft; separate successful write from failed read | `E/model/use-update-surface-enabled-skills-mutation.ts`: spread merge updates only enabled_skills/status/updated_at and tracks refresh error separately. `W/surface-details.tsx` keys state by surface ID | Static assertions, not an executed outage experiment |
-| Embedding help | Open `/docs`, respecting basename, even with no code | **Mismatch:** `surface-details-connection/instruction-toast.tsx` opens a five-second placeholder toast; no navigation. Existing test explicitly requires unchanged route | Parent must determine whether an uninspected later approval exists before corrective publication |
+| Seam               | Expected                                                                                                 | Observed static evidence                                                                                                                                                                                                               | Unknown / qualification                                                                            |
+| ------------------ | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Detail source      | Read saved detail by ID; do not synthesize connection fields                                             | `E/api/surface-registry-client.ts:55–90,151–161`: required detail fields, nullable connection values, ID-match refinement; `W/surface-details.tsx` owns the query and keyed editor snapshot                                            | No live response or deployment checked                                                             |
+| Connection display | Server embed code as text, all domains, channel and authorization; null is absence of information        | `W/surface-details/surface-details-connection.tsx`: React `pre/code` text, server props, null labels; no HTML execution or generation                                                                                                  | Does not establish production token issuance or authorization behavior                             |
+| Exact copying      | Copy original string, including whitespace and genuine server attributes; truthful success/failure       | Same component uses trim only to determine availability; `handlers/surface-details.handlers.ts:13–19` forwards the original string to `navigator.clipboard.writeText`; success follows resolution, failure keeps manual copy available | Actual browser clipboard permissions not exercised                                                 |
+| Overview           | Saved configuration name, purpose/context, owner, responsible people, status/dates and metrics           | `surface-details-overview.tsx`: fields read from `surface`, localized dates/numbers, React text; responsible formatting through entity public API                                                                                      | Not proof of historical screenshot parity or backend normalization                                 |
+| Null versus zero   | Each metric independently distinguishes null from 0                                                      | `formatMetric`: `value === null ? 'Нет данных' : ...`; zero retained, including `0%`                                                                                                                                                   | Inspected component regression explicitly covers dialogs=null/share=0, not the reverse combination |
+| Checklist          | Facts from saved fields, no permanent green validation                                                   | `surface-details-publication-checklist.tsx`: saved domains/skills and trimmed greeting; mandatory parameters and uniqueness remain unconfirmed; no sandbox item                                                                        | No server readiness results inferred; lifecycle policy remains MOS-914                             |
+| Read failure       | Preserve last successful information/configuration and draft; separate successful write from failed read | `E/model/use-update-surface-enabled-skills-mutation.ts`: spread merge updates only enabled_skills/status/updated_at and tracks refresh error separately. `W/surface-details.tsx` keys state by surface ID                              | Static assertions, not an executed outage experiment                                               |
+| Embedding help     | Open `/docs`, respecting basename, even with no code                                                     | **Mismatch:** `surface-details-connection/instruction-toast.tsx` opens a five-second placeholder toast; no navigation. Existing test explicitly requires unchanged route                                                               | Parent must determine whether an uninspected later approval exists before corrective publication   |
 
 ### Detail statistics boundary
 
@@ -160,21 +160,21 @@ These are assertion locators, not claims that tests currently pass. The inspecte
 
 Computed from complete local bytes during this inspection.
 
-| Input | SHA-256 |
-|---|---|
-| `A/sources/jira-surface-details-d095/r1/content.json` | `7f03f2bbb04798d98bab8bc12a1c4b16511d26112f56da4378f5e0ae5796f62a` |
-| Same directory `metadata.json` | `508b6ea6333bda12d26e3d828ceeca071ecf5fd9ee2042406ecf1b992f4d931a` |
-| `A/sources/api-live/r1/content.json` | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
-| `openspec/specs/surface-overview-connection/spec.md` | `51f9dc1a1d7b92ccdb059b7fda0117bf6c898378fa9a9fe185c7e2045044d193` |
-| `docs/api/contracts/surfaces.openapi.json` | `9d8ef7ff68e187cebb051e6ee85a9ad333f0af903537a5e181425694c48d9758` |
-| `E/api/surface-registry-client.ts` | `de2e6b1c1ef909dd21d0744f64d3371a456bb4c8997b658e98cfe2abdfe4ac05` |
-| `E/api/surface-registry-client.test.ts` | `4d5f93269521aedb76ce4dd722390c92dfa06e86b63af622f952146ef105c886` |
-| `W/surface-details.test.tsx` | `5ff98d3c6e74786075c2060fb207171f56be28a70a9802e13d0fb6e50b9def3c` |
-| `W/surface-details/surface-details-connection.tsx` | `142a62351c26c9b17be609ecef9db5024a7a0b245c8af04530728ce7a820e85c` |
-| `W/surface-details/surface-details-overview.tsx` | `b99e696ca0ef79d943bd719ac9b402d784a547be2c4ee3d2a1901d2a05e55f56` |
-| `W/surface-details/surface-details-publication-checklist.tsx` | `b816776a78093e295b1282653ab63b91bd1d6d8d0c33c7ac623893cf10fe48e6` |
+| Input                                                                | SHA-256                                                            |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `A/sources/jira-surface-details-d095/r1/content.json`                | `7f03f2bbb04798d98bab8bc12a1c4b16511d26112f56da4378f5e0ae5796f62a` |
+| Same directory `metadata.json`                                       | `508b6ea6333bda12d26e3d828ceeca071ecf5fd9ee2042406ecf1b992f4d931a` |
+| `A/sources/api-live/r1/content.json`                                 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
+| `openspec/specs/surface-overview-connection/spec.md`                 | `51f9dc1a1d7b92ccdb059b7fda0117bf6c898378fa9a9fe185c7e2045044d193` |
+| `docs/api/contracts/surfaces.openapi.json`                           | `9d8ef7ff68e187cebb051e6ee85a9ad333f0af903537a5e181425694c48d9758` |
+| `E/api/surface-registry-client.ts`                                   | `de2e6b1c1ef909dd21d0744f64d3371a456bb4c8997b658e98cfe2abdfe4ac05` |
+| `E/api/surface-registry-client.test.ts`                              | `4d5f93269521aedb76ce4dd722390c92dfa06e86b63af622f952146ef105c886` |
+| `W/surface-details.test.tsx`                                         | `5ff98d3c6e74786075c2060fb207171f56be28a70a9802e13d0fb6e50b9def3c` |
+| `W/surface-details/surface-details-connection.tsx`                   | `142a62351c26c9b17be609ecef9db5024a7a0b245c8af04530728ce7a820e85c` |
+| `W/surface-details/surface-details-overview.tsx`                     | `b99e696ca0ef79d943bd719ac9b402d784a547be2c4ee3d2a1901d2a05e55f56` |
+| `W/surface-details/surface-details-publication-checklist.tsx`        | `b816776a78093e295b1282653ab63b91bd1d6d8d0c33c7ac623893cf10fe48e6` |
 | `W/surface-details/surface-details-connection/instruction-toast.tsx` | `23304d552033c8442773ef94104ef484ab54a2afc30c70dbe4f3e80ff884991a` |
-| `E/model/use-update-surface-enabled-skills-mutation.ts` | `3ea725ae29d746a428e5dcc816ed8a08a846b27c77bcfa62be34ed2762812b9c` |
+| `E/model/use-update-surface-enabled-skills-mutation.ts`              | `3ea725ae29d746a428e5dcc816ed8a08a846b27c77bcfa62be34ed2762812b9c` |
 
 ## 8. Historical and deployment limitations
 

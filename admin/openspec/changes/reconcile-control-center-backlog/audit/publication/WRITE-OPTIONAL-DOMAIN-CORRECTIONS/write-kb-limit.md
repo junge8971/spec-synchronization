@@ -20,25 +20,25 @@ Source main spec `openspec/specs/knowledge-base-export/spec.md`, before and afte
 
 Relevant source paths relative to `/home/user/my/work/codesrc/projects/CAM/tsam-admin-front`:
 
-| Path | SHA-256 |
-| --- | --- |
-| app/optional/knowledge-base/ui/knowledge-base-export.tsx | 4c18dadd5a05cd6804b887a5ba51455103fc23debd326916812943761c3ee676 |
+| Path                                                                 | SHA-256                                                          |
+| -------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| app/optional/knowledge-base/ui/knowledge-base-export.tsx             | 4c18dadd5a05cd6804b887a5ba51455103fc23debd326916812943761c3ee676 |
 | app/optional/knowledge-base/ui/export/knowledge-base-export.test.tsx | 24257fa7a2b5e0028c27c49be2837c1f5a689db2ec7782b91cfb40ceef2a4878 |
-| mocks/managed-search.mjs | 6cdfee3328c75152e18ca7bdf26cdac39652bcc6b122cf182e4c54ab8850d444 |
-| mocks/knowledge-base/handlers.mjs | e7fa15ce533690bea5d5a0c506012fa4cf06ca3b3da62e5b09c10b770b2fc497 |
-| app/shared/api/http-client.ts | e3ca2dbf67139ed26e86220a44dc18503068835d390f659c0eb2577fed5f1514 |
+| mocks/managed-search.mjs                                             | 6cdfee3328c75152e18ca7bdf26cdac39652bcc6b122cf182e4c54ab8850d444 |
+| mocks/knowledge-base/handlers.mjs                                    | e7fa15ce533690bea5d5a0c506012fa4cf06ca3b3da62e5b09c10b770b2fc497 |
+| app/shared/api/http-client.ts                                        | e3ca2dbf67139ed26e86220a44dc18503068835d390f659c0eb2577fed5f1514 |
 
 ## Output hashes (SHA-256)
 
 Paths relative to the change directory above; includes native scaffold metadata and all deliverable artifacts. This report is excluded from its own hash manifest.
 
-| Path | SHA-256 |
-| --- | --- |
-| .openspec.yaml | ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b |
-| proposal.md | 8aac481ba21906ae1df106d3d4a65c0740d090ff4be503724edc99a068d998c8 |
-| design.md | 7fc0c3ce641d76d24006590749d95ff458f236b33abc4b9bede66eebe9e5f7d4 |
+| Path                                | SHA-256                                                          |
+| ----------------------------------- | ---------------------------------------------------------------- |
+| .openspec.yaml                      | ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b |
+| proposal.md                         | 8aac481ba21906ae1df106d3d4a65c0740d090ff4be503724edc99a068d998c8 |
+| design.md                           | 7fc0c3ce641d76d24006590749d95ff458f236b33abc4b9bede66eebe9e5f7d4 |
 | specs/knowledge-base-export/spec.md | d811d2612b24415e32074c60397cf3d73b7669c6e1499f6f9e010fa170baded3 |
-| tasks.md | 0e3cf32ae03d54915f15618663ad4bbece0f7dbecbf159d35a80287efa26e95b |
+| tasks.md                            | 0e3cf32ae03d54915f15618663ad4bbece0f7dbecbf159d35a80287efa26e95b |
 
 ## Residual risks
 

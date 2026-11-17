@@ -139,9 +139,7 @@
       "id": "dialog-route",
       "kind": "main-spec",
       "path": "openspec/specs/dialog-route",
-      "jiraReferences": [
-        "MOS-1041"
-      ],
+      "jiraReferences": ["MOS-1041"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -159,9 +157,7 @@
       "id": "dialog-selection-builder",
       "kind": "main-spec",
       "path": "openspec/specs/dialog-selection-builder",
-      "jiraReferences": [
-        "MOS-1037"
-      ],
+      "jiraReferences": ["MOS-1037"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -233,9 +229,7 @@
       "id": "skill-bulk-rollout",
       "kind": "main-spec",
       "path": "openspec/specs/skill-bulk-rollout",
-      "jiraReferences": [
-        "MOS-1021"
-      ],
+      "jiraReferences": ["MOS-1021"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -262,9 +256,7 @@
       "id": "skill-checks-training",
       "kind": "main-spec",
       "path": "openspec/specs/skill-checks-training",
-      "jiraReferences": [
-        "MOS-909"
-      ],
+      "jiraReferences": ["MOS-909"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -300,9 +292,7 @@
       "id": "skill-lifecycle",
       "kind": "main-spec",
       "path": "openspec/specs/skill-lifecycle",
-      "jiraReferences": [
-        "MOS-909"
-      ],
+      "jiraReferences": ["MOS-909"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -329,9 +319,7 @@
       "id": "skill-training-phrases",
       "kind": "main-spec",
       "path": "openspec/specs/skill-training-phrases",
-      "jiraReferences": [
-        "MOS-809"
-      ],
+      "jiraReferences": ["MOS-809"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -376,12 +364,7 @@
       "id": "mos-1015-report-constructor",
       "kind": "active-change",
       "path": "openspec/changes/mos-1015-report-constructor",
-      "jiraReferences": [
-        "MOS-1015",
-        "MOS-1016",
-        "MOS-916",
-        "MOS-919"
-      ],
+      "jiraReferences": ["MOS-1015", "MOS-1016", "MOS-916", "MOS-919"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -390,12 +373,7 @@
       "id": "mos-1016-report-template-scheduling",
       "kind": "active-change",
       "path": "openspec/changes/mos-1016-report-template-scheduling",
-      "jiraReferences": [
-        "MOS-1015",
-        "MOS-1016",
-        "MOS-916",
-        "MOS-919"
-      ],
+      "jiraReferences": ["MOS-1015", "MOS-1016", "MOS-916", "MOS-919"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -404,12 +382,7 @@
       "id": "mos-1018-skill-phrase-conflicts",
       "kind": "active-change",
       "path": "openspec/changes/mos-1018-skill-phrase-conflicts",
-      "jiraReferences": [
-        "MOS-1018",
-        "MOS-1019",
-        "MOS-942",
-        "MOS-945"
-      ],
+      "jiraReferences": ["MOS-1018", "MOS-1019", "MOS-942", "MOS-945"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -418,10 +391,7 @@
       "id": "mos-1023-skill-environment-tokens",
       "kind": "active-change",
       "path": "openspec/changes/mos-1023-skill-environment-tokens",
-      "jiraReferences": [
-        "MOS-1019",
-        "MOS-1023"
-      ],
+      "jiraReferences": ["MOS-1019", "MOS-1023"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -430,11 +400,7 @@
       "id": "mos-1025-skill-monitoring",
       "kind": "active-change",
       "path": "openspec/changes/mos-1025-skill-monitoring",
-      "jiraReferences": [
-        "MOS-1025",
-        "MOS-1026",
-        "MOS-1030"
-      ],
+      "jiraReferences": ["MOS-1025", "MOS-1026", "MOS-1030"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -443,10 +409,7 @@
       "id": "mos-1026-skill-operations-info",
       "kind": "active-change",
       "path": "openspec/changes/mos-1026-skill-operations-info",
-      "jiraReferences": [
-        "MOS-1025",
-        "MOS-1026"
-      ],
+      "jiraReferences": ["MOS-1025", "MOS-1026"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -455,10 +418,7 @@
       "id": "mos-1030-skill-result-analytics",
       "kind": "active-change",
       "path": "openspec/changes/mos-1030-skill-result-analytics",
-      "jiraReferences": [
-        "MOS-1025",
-        "MOS-1030"
-      ],
+      "jiraReferences": ["MOS-1025", "MOS-1030"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -467,9 +427,7 @@
       "id": "mos-1031-skill-audit-history",
       "kind": "active-change",
       "path": "openspec/changes/mos-1031-skill-audit-history",
-      "jiraReferences": [
-        "MOS-1031"
-      ],
+      "jiraReferences": ["MOS-1031"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -478,12 +436,7 @@
       "id": "mos-1249-feedback-api",
       "kind": "active-change",
       "path": "openspec/changes/mos-1249-feedback-api",
-      "jiraReferences": [
-        "MOS-1246",
-        "MOS-1249",
-        "MOS-1259",
-        "MOS-1260"
-      ],
+      "jiraReferences": ["MOS-1246", "MOS-1249", "MOS-1259", "MOS-1260"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -492,12 +445,7 @@
       "id": "mos-1250-feedback-registry",
       "kind": "active-change",
       "path": "openspec/changes/mos-1250-feedback-registry",
-      "jiraReferences": [
-        "MOS-1246",
-        "MOS-1249",
-        "MOS-1250",
-        "MOS-1258"
-      ],
+      "jiraReferences": ["MOS-1246", "MOS-1249", "MOS-1250", "MOS-1258"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -506,13 +454,7 @@
       "id": "mos-1251-feedback-editor",
       "kind": "active-change",
       "path": "openspec/changes/mos-1251-feedback-editor",
-      "jiraReferences": [
-        "MOS-1246",
-        "MOS-1249",
-        "MOS-1251",
-        "MOS-1254",
-        "MOS-1257"
-      ],
+      "jiraReferences": ["MOS-1246", "MOS-1249", "MOS-1251", "MOS-1254", "MOS-1257"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -521,13 +463,7 @@
       "id": "mos-1254-feedback-questions",
       "kind": "active-change",
       "path": "openspec/changes/mos-1254-feedback-questions",
-      "jiraReferences": [
-        "MOS-1246",
-        "MOS-1249",
-        "MOS-1251",
-        "MOS-1254",
-        "MOS-1255"
-      ],
+      "jiraReferences": ["MOS-1246", "MOS-1249", "MOS-1251", "MOS-1254", "MOS-1255"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -536,12 +472,7 @@
       "id": "mos-1255-feedback-preview",
       "kind": "active-change",
       "path": "openspec/changes/mos-1255-feedback-preview",
-      "jiraReferences": [
-        "MOS-1246",
-        "MOS-1251",
-        "MOS-1254",
-        "MOS-1255"
-      ],
+      "jiraReferences": ["MOS-1246", "MOS-1251", "MOS-1254", "MOS-1255"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -550,12 +481,7 @@
       "id": "mos-1256-feedback-lifecycle",
       "kind": "active-change",
       "path": "openspec/changes/mos-1256-feedback-lifecycle",
-      "jiraReferences": [
-        "MOS-1246",
-        "MOS-1250",
-        "MOS-1251",
-        "MOS-1256"
-      ],
+      "jiraReferences": ["MOS-1246", "MOS-1250", "MOS-1251", "MOS-1256"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -564,11 +490,7 @@
       "id": "mos-1257-feedback-labels",
       "kind": "active-change",
       "path": "openspec/changes/mos-1257-feedback-labels",
-      "jiraReferences": [
-        "MOS-1246",
-        "MOS-1251",
-        "MOS-1257"
-      ],
+      "jiraReferences": ["MOS-1246", "MOS-1251", "MOS-1257"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -577,12 +499,7 @@
       "id": "mos-1258-feedback-conditions",
       "kind": "active-change",
       "path": "openspec/changes/mos-1258-feedback-conditions",
-      "jiraReferences": [
-        "MOS-1246",
-        "MOS-1249",
-        "MOS-1250",
-        "MOS-1258"
-      ],
+      "jiraReferences": ["MOS-1246", "MOS-1249", "MOS-1250", "MOS-1258"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -591,12 +508,7 @@
       "id": "mos-1259-feedback-saved-filters",
       "kind": "active-change",
       "path": "openspec/changes/mos-1259-feedback-saved-filters",
-      "jiraReferences": [
-        "MOS-1246",
-        "MOS-1250",
-        "MOS-1258",
-        "MOS-1259"
-      ],
+      "jiraReferences": ["MOS-1246", "MOS-1250", "MOS-1258", "MOS-1259"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -605,14 +517,7 @@
       "id": "mos-1260-feedback-export",
       "kind": "active-change",
       "path": "openspec/changes/mos-1260-feedback-export",
-      "jiraReferences": [
-        "MOS-1246",
-        "MOS-1249",
-        "MOS-1250",
-        "MOS-1251",
-        "MOS-1258",
-        "MOS-1260"
-      ],
+      "jiraReferences": ["MOS-1246", "MOS-1249", "MOS-1250", "MOS-1251", "MOS-1258", "MOS-1260"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -621,10 +526,7 @@
       "id": "mos-916-report-templates",
       "kind": "active-change",
       "path": "openspec/changes/mos-916-report-templates",
-      "jiraReferences": [
-        "MOS-916",
-        "MOS-919"
-      ],
+      "jiraReferences": ["MOS-916", "MOS-919"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -633,12 +535,7 @@
       "id": "mos-919-report-csv-export",
       "kind": "active-change",
       "path": "openspec/changes/mos-919-report-csv-export",
-      "jiraReferences": [
-        "MOS-1015",
-        "MOS-1016",
-        "MOS-916",
-        "MOS-919"
-      ],
+      "jiraReferences": ["MOS-1015", "MOS-1016", "MOS-916", "MOS-919"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -647,9 +544,7 @@
       "id": "reconcile-control-center-backlog",
       "kind": "active-change",
       "path": "openspec/changes/reconcile-control-center-backlog",
-      "jiraReferences": [
-        "MOS-623"
-      ],
+      "jiraReferences": ["MOS-623"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": true
@@ -676,9 +571,7 @@
       "id": "2026-09-24-update-control-center-shell",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-09-24-update-control-center-shell",
-      "jiraReferences": [
-        "MOS-904"
-      ],
+      "jiraReferences": ["MOS-904"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -705,10 +598,7 @@
       "id": "2026-09-28-surface-registry",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-09-28-surface-registry",
-      "jiraReferences": [
-        "MOS-707",
-        "MOS-910"
-      ],
+      "jiraReferences": ["MOS-707", "MOS-910"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -726,9 +616,7 @@
       "id": "2026-09-28-update-control-center-routing",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-09-28-update-control-center-routing",
-      "jiraReferences": [
-        "MOS-905"
-      ],
+      "jiraReferences": ["MOS-905"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -737,10 +625,7 @@
       "id": "2026-09-29-mos-944-skill-card-editing",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-09-29-mos-944-skill-card-editing",
-      "jiraReferences": [
-        "MOS-1022",
-        "MOS-944"
-      ],
+      "jiraReferences": ["MOS-1022", "MOS-944"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -758,10 +643,7 @@
       "id": "2026-09-30-mos-1022-skill-connection-settings",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-09-30-mos-1022-skill-connection-settings",
-      "jiraReferences": [
-        "MOS-1022",
-        "MOS-944"
-      ],
+      "jiraReferences": ["MOS-1022", "MOS-944"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -770,9 +652,7 @@
       "id": "2026-09-30-mos-911-surface-skill-selection",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-09-30-mos-911-surface-skill-selection",
-      "jiraReferences": [
-        "MOS-911"
-      ],
+      "jiraReferences": ["MOS-911"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -781,11 +661,7 @@
       "id": "2026-09-30-mos-945-skill-training-phrases",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-09-30-mos-945-skill-training-phrases",
-      "jiraReferences": [
-        "MOS-1018",
-        "MOS-1019",
-        "MOS-945"
-      ],
+      "jiraReferences": ["MOS-1018", "MOS-1019", "MOS-945"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -821,13 +697,7 @@
       "id": "2026-10-02-mos-1019-skill-checks-training",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-02-mos-1019-skill-checks-training",
-      "jiraReferences": [
-        "MOS-1018",
-        "MOS-1019",
-        "MOS-1020",
-        "MOS-1023",
-        "MOS-909"
-      ],
+      "jiraReferences": ["MOS-1018", "MOS-1019", "MOS-1020", "MOS-1023", "MOS-909"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -836,12 +706,7 @@
       "id": "2026-10-02-mos-1020-skill-review",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-02-mos-1020-skill-review",
-      "jiraReferences": [
-        "MOS-1019",
-        "MOS-1020",
-        "MOS-1021",
-        "MOS-909"
-      ],
+      "jiraReferences": ["MOS-1019", "MOS-1020", "MOS-1021", "MOS-909"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -850,9 +715,7 @@
       "id": "2026-10-02-mos-909-skill-current-status",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-02-mos-909-skill-current-status",
-      "jiraReferences": [
-        "MOS-909"
-      ],
+      "jiraReferences": ["MOS-909"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -861,10 +724,7 @@
       "id": "2026-10-02-mos-909-skill-lifecycle-rollout",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-02-mos-909-skill-lifecycle-rollout",
-      "jiraReferences": [
-        "MOS-1019",
-        "MOS-909"
-      ],
+      "jiraReferences": ["MOS-1019", "MOS-909"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -873,9 +733,7 @@
       "id": "2026-10-02-mos-911-prod-skill-selection",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-02-mos-911-prod-skill-selection",
-      "jiraReferences": [
-        "MOS-911"
-      ],
+      "jiraReferences": ["MOS-911"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -884,11 +742,7 @@
       "id": "2026-10-05-mos-1021-skill-bulk-rollout",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-05-mos-1021-skill-bulk-rollout",
-      "jiraReferences": [
-        "MOS-1020",
-        "MOS-1021",
-        "MOS-909"
-      ],
+      "jiraReferences": ["MOS-1020", "MOS-1021", "MOS-909"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -897,13 +751,7 @@
       "id": "2026-10-05-mos-1037-dialog-registry",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-05-mos-1037-dialog-registry",
-      "jiraReferences": [
-        "MOS-1037",
-        "MOS-1038",
-        "MOS-1040",
-        "MOS-1041",
-        "MOS-1045"
-      ],
+      "jiraReferences": ["MOS-1037", "MOS-1038", "MOS-1040", "MOS-1041", "MOS-1045"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -912,10 +760,7 @@
       "id": "2026-10-05-mos-1038-dialog-selection-builder",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-05-mos-1038-dialog-selection-builder",
-      "jiraReferences": [
-        "MOS-1037",
-        "MOS-1038"
-      ],
+      "jiraReferences": ["MOS-1037", "MOS-1038"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -924,11 +769,7 @@
       "id": "2026-10-06-mos-1040-dialog-saved-filters",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-06-mos-1040-dialog-saved-filters",
-      "jiraReferences": [
-        "MOS-1037",
-        "MOS-1038",
-        "MOS-1040"
-      ],
+      "jiraReferences": ["MOS-1037", "MOS-1038", "MOS-1040"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -937,14 +778,7 @@
       "id": "2026-10-06-mos-1041-dialog-details",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-06-mos-1041-dialog-details",
-      "jiraReferences": [
-        "MOS-1037",
-        "MOS-1041",
-        "MOS-1042",
-        "MOS-1043",
-        "MOS-1044",
-        "MOS-1045"
-      ],
+      "jiraReferences": ["MOS-1037", "MOS-1041", "MOS-1042", "MOS-1043", "MOS-1044", "MOS-1045"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -953,11 +787,7 @@
       "id": "2026-10-06-mos-1042-dialog-answer-insights",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-06-mos-1042-dialog-answer-insights",
-      "jiraReferences": [
-        "MOS-1041",
-        "MOS-1042",
-        "MOS-1043"
-      ],
+      "jiraReferences": ["MOS-1041", "MOS-1042", "MOS-1043"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -966,11 +796,7 @@
       "id": "2026-10-07-mos-1044-dialog-category-addition",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-07-mos-1044-dialog-category-addition",
-      "jiraReferences": [
-        "MOS-1037",
-        "MOS-1041",
-        "MOS-1044"
-      ],
+      "jiraReferences": ["MOS-1037", "MOS-1041", "MOS-1044"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -979,9 +805,7 @@
       "id": "2026-10-07-mos-913-surface-lifecycle-publication",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-07-mos-913-surface-lifecycle-publication",
-      "jiraReferences": [
-        "MOS-913"
-      ],
+      "jiraReferences": ["MOS-913"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -990,9 +814,7 @@
       "id": "2026-10-07-mos-913-surface-overview-connection",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-07-mos-913-surface-overview-connection",
-      "jiraReferences": [
-        "MOS-913"
-      ],
+      "jiraReferences": ["MOS-913"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -1019,9 +841,7 @@
       "id": "2026-10-12-mos-914-surface-lifecycle-mvp",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-12-mos-914-surface-lifecycle-mvp",
-      "jiraReferences": [
-        "MOS-914"
-      ],
+      "jiraReferences": ["MOS-914"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -1030,9 +850,7 @@
       "id": "2026-10-13-mos-1027-skill-global-toggle",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-13-mos-1027-skill-global-toggle",
-      "jiraReferences": [
-        "MOS-1027"
-      ],
+      "jiraReferences": ["MOS-1027"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -1041,11 +859,7 @@
       "id": "2026-10-13-mos-1043-dialog-route",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-13-mos-1043-dialog-route",
-      "jiraReferences": [
-        "MOS-1041",
-        "MOS-1042",
-        "MOS-1043"
-      ],
+      "jiraReferences": ["MOS-1041", "MOS-1042", "MOS-1043"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -1054,10 +868,7 @@
       "id": "2026-10-13-mos-1045-dialog-export",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-13-mos-1045-dialog-export",
-      "jiraReferences": [
-        "MOS-1045",
-        "MOS-919"
-      ],
+      "jiraReferences": ["MOS-1045", "MOS-919"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -1066,9 +877,7 @@
       "id": "2026-10-13-mos-906-documentation-search-url",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-13-mos-906-documentation-search-url",
-      "jiraReferences": [
-        "MOS-906"
-      ],
+      "jiraReferences": ["MOS-906"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -1113,10 +922,7 @@
       "id": "2026-10-16-fix-existing-scenarios-test-contour",
       "kind": "archived-change",
       "path": "openspec/changes/archive/2026-10-16-fix-existing-scenarios-test-contour",
-      "jiraReferences": [
-        "MOS-1407",
-        "MOS-1409"
-      ],
+      "jiraReferences": ["MOS-1407", "MOS-1409"],
       "status": "inventoried",
       "semanticReview": "pending",
       "processOnly": false
@@ -1124,8 +930,5 @@
   ],
   "jiraHierarchySource": "sources/jira-hierarchy/r1/content.json",
   "externalContentCoverage": "partial",
-  "reports": [
-    "reports/LOCAL-001.md",
-    "reports/LOCAL-002.md"
-  ]
+  "reports": ["reports/LOCAL-001.md", "reports/LOCAL-002.md"]
 }

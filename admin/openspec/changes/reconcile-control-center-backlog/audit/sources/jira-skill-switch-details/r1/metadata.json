@@ -5,10 +5,7 @@
   "sha256": "2f2bd86c7a59b0e8232d0e5eb4f3dd6829f3860619374835a79f287b0e2a50be",
   "bytes": 20499,
   "collection": "Parent verified-origin GET, exact corresponding MCP result extracted without unrelated transcript.",
-  "keys": [
-    "MOS-776",
-    "MOS-1145"
-  ],
+  "keys": ["MOS-776", "MOS-1145"],
   "fields": "summary,description,issuetype,status,subtasks,parent,updated,attachment,comment",
   "comments": [
     {

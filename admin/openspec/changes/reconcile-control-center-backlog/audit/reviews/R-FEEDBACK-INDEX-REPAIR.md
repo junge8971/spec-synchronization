@@ -16,6 +16,7 @@ Paths below are relative to `openspec/changes/reconcile-control-center-backlog/a
 ## Evidence checked
 
 Read completely:
+
 - `sources/wiki-247734813-attachment-index/r1/content.json`
 - Its `metadata.json`
 - `coverage-partial-r25.json`
@@ -27,13 +28,13 @@ Also inspected D-043 (`decisions.md:3–9`), existing root href (`sources/wiki-2
 
 `content.json:2–24` records parent **247734813**, HTTP **200**, capture **2026-10-19T12:13:31.104Z**, start **0**, limit **100**, size **5**, and `next: null`. Its five distinct IDs are:
 
-| ID | Recorded title |
-|---|---|
-| 250790182 | ПротоОбратнаяСвязь.html |
-| 247746709 | Прототипчик.html |
-| 247739129 | База знаний.html |
+| ID        | Recorded title               |
+| --------- | ---------------------------- |
+| 250790182 | ПротоОбратнаяСвязь.html      |
+| 247746709 | Прототипчик.html             |
+| 247739129 | База знаний.html             |
 | 247737143 | Прототип обратной связи.html |
-| 247734812 | новый 5.html |
+| 247734812 | новый 5.html                 |
 
 All five entries have `text/html` media types and ID-consistent self links. The parent’s root href matches saved root line19.
 
@@ -47,13 +48,13 @@ D-043 and the accepted report/review establish the historical **42 packets / 41 
 
 `coverage-partial-r25.json:8–25` adds only the separate index:
 
-| Measure | Accepted prior | Addition | After repair |
-|---|---:|---:|---:|
-| Root body/extraction packets | 42 | 0 | **42** |
-| Root pages with returned indexes | 41 | 1 | **42** |
-| Known indexed entries | 34 | 5 | **39** |
-| Saved prototype texts | 4 | 0 | **4** |
-| Unread indexed bodies | 30 | 5 | **35** |
+| Measure                          | Accepted prior | Addition | After repair |
+| -------------------------------- | -------------: | -------: | -----------: |
+| Root body/extraction packets     |             42 |        0 |       **42** |
+| Root pages with returned indexes |             41 |        1 |       **42** |
+| Known indexed entries            |             34 |        5 |       **39** |
+| Saved prototype texts            |              4 |        0 |        **4** |
+| Unread indexed bodies            |             30 |        5 |       **35** |
 
 Thus **39 = 4 + 35**. The five IDs are distinct from the prior report’s enumerated attachment population.
 

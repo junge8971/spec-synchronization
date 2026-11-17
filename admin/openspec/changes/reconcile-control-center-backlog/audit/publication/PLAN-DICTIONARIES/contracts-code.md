@@ -6,16 +6,16 @@ Read-only planning analysis for **one `add-reference-dictionaries` change**, not
 
 Paths below are repository-relative. `S` = `openspec/changes/reconcile-control-center-backlog/audit/sources/`.
 
-| Source | SHA-256 |
-|---|---|
-| `S/wiki-247751846/r2/content.json` | `6f4a85bf911634a724e3411138c517fe3ce295d2036e09d573444dc9d6d04588` |
-| `S/wiki-247751846/r2/readable.txt` | `002d6b34375939d9f8847350ef0cdf9ff6db8f151028f297da6750ba0d1c0957` |
-| `S/local-dictionaries-prototype/r1/content.html` | `385f230467db6b8b2fdf26dbc08f9154ca7fd1651db037c6227eccc9fc8fa310` |
-| `S/api-live/r2/content.json` | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
-| `docs/api/contracts/openapi.json` | `c19ff30e53a8705629bc11d51a25b3a2019ef641340348a7f2e985088127fe3d` |
+| Source                                              | SHA-256                                                            |
+| --------------------------------------------------- | ------------------------------------------------------------------ |
+| `S/wiki-247751846/r2/content.json`                  | `6f4a85bf911634a724e3411138c517fe3ce295d2036e09d573444dc9d6d04588` |
+| `S/wiki-247751846/r2/readable.txt`                  | `002d6b34375939d9f8847350ef0cdf9ff6db8f151028f297da6750ba0d1c0957` |
+| `S/local-dictionaries-prototype/r1/content.html`    | `385f230467db6b8b2fdf26dbc08f9154ca7fd1651db037c6227eccc9fc8fa310` |
+| `S/api-live/r2/content.json`                        | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
+| `docs/api/contracts/openapi.json`                   | `c19ff30e53a8705629bc11d51a25b3a2019ef641340348a7f2e985088127fe3d` |
 | `docs/api/contracts/managed-resources.openapi.json` | `cc4cb5603b449f0d7a98224bfcfc1795f509ecc09a3155fdc87f8ff2b270c7cf` |
-| `docs/api/contracts/crud-api.md` | `4dde67125d36692cb05fcbb9b9b6e842f95717118f999c471cb5e2b393907058` |
-| `docs/api/contracts/crud-api-2026-10-15.raw` | `91c8dc68fc1b602a64428d1d6f1d9c44a0e6a89eced226e4773853badf13954a` |
+| `docs/api/contracts/crud-api.md`                    | `4dde67125d36692cb05fcbb9b9b6e842f95717118f999c471cb5e2b393907058` |
+| `docs/api/contracts/crud-api-2026-10-15.raw`        | `91c8dc68fc1b602a64428d1d6f1d9c44a0e6a89eced226e4773853badf13954a` |
 
 Wiki authority is the exact user URL `https://wiki.mos-team.ru/spaces/KR/pages/247751846/`, saved version 10. API r2 metadata identifies `https://nchat-a-tech.mos.ru/api/control/openapi.json`, retrieved 2026-10-19T08:11:44.238Z. This lane did not refresh either source. Wiki headings/anchor IDs in readable.txt are stable locators; prototype function names are static-code locators, not executed evidence.
 
@@ -27,20 +27,20 @@ Offline JSON comparison traversed **all 19 relevant operations and their 48-sche
 
 Base `B = /api/control/api/v1/managed-resources`; generic dictionary base `C = B/catalogs`. Existing shared transport uses relative `/v1/managed-resources`, not the UI basename.
 
-| Methods / path | Exact payload or output seam |
-|---|---|
-| GET `C/metadata` | `data.catalogs`: condition fields/operators, catalog bindings, export fields/max rows (`ManagedResourceMetadata`) |
-| POST `C/search` | `ref_dictionaryListQuery`; envelope with items/pagination of `CatalogResponse` |
-| POST `C` | `CatalogCreate`, required code/name; 201 `data.id` UUID |
-| GET / PUT / DELETE `C/{entity_id}` | UUID; PUT `CatalogPatch`; GET/PUT 200 full `CatalogResponse`; DELETE 200 `data.id` |
-| GET `C/lookups/{section}` | `CatalogLookupSectionName`; keyed arrays of `ManagedResourceCatalogItem` |
-| GET / POST `C/{entity_id}/values` | GET array in data; POST union `ManagedCatalogCreate` / `AttachmentRuleCreate`, 201 `data.code` |
+| Methods / path                                   | Exact payload or output seam                                                                                                        |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| GET `C/metadata`                                 | `data.catalogs`: condition fields/operators, catalog bindings, export fields/max rows (`ManagedResourceMetadata`)                   |
+| POST `C/search`                                  | `ref_dictionaryListQuery`; envelope with items/pagination of `CatalogResponse`                                                      |
+| POST `C`                                         | `CatalogCreate`, required code/name; 201 `data.id` UUID                                                                             |
+| GET / PUT / DELETE `C/{entity_id}`               | UUID; PUT `CatalogPatch`; GET/PUT 200 full `CatalogResponse`; DELETE 200 `data.id`                                                  |
+| GET `C/lookups/{section}`                        | `CatalogLookupSectionName`; keyed arrays of `ManagedResourceCatalogItem`                                                            |
+| GET / POST `C/{entity_id}/values`                | GET array in data; POST union `ManagedCatalogCreate` / `AttachmentRuleCreate`, 201 `data.code`                                      |
 | PUT / DELETE `C/{entity_id}/values/{value_code}` | PUT union `ManagedCatalogPatch` / `AttachmentRulePatch`, 200 value; DELETE 200 `data.code`; address by current code, not value UUID |
-| POST `C/export` | `ref_dictionaryExportRequest`: required ordered `fields`, optional `search` |
-| POST `C/{entity_id}/export` | `ref_dictionaryDetailExportRequest`: required `fields`, no search |
-| POST `C/{entity_id}/values/export` | **No request body**; ordinary/rules CSV schema selected by dictionary kind |
-| POST / GET `B/saved-filters` | POST required resource=`catalogs`, name, search; 201 ID. GET resource query + limit 1–100 (default 20), offset >=0 (default 0) |
-| GET / PUT / DELETE `B/saved-filters/{filter_id}` | UUID; PUT optional name/search; full search replacement; GET/PUT full saved record, DELETE ID |
+| POST `C/export`                                  | `ref_dictionaryExportRequest`: required ordered `fields`, optional `search`                                                         |
+| POST `C/{entity_id}/export`                      | `ref_dictionaryDetailExportRequest`: required `fields`, no search                                                                   |
+| POST `C/{entity_id}/values/export`               | **No request body**; ordinary/rules CSV schema selected by dictionary kind                                                          |
+| POST / GET `B/saved-filters`                     | POST required resource=`catalogs`, name, search; 201 ID. GET resource query + limit 1–100 (default 20), offset >=0 (default 0)      |
+| GET / PUT / DELETE `B/saved-filters/{filter_id}` | UUID; PUT optional name/search; full search replacement; GET/PUT full saved record, DELETE ID                                       |
 
 These are 14 catalogs + 5 saved-filter operations, no PATCH. Locate each under `/paths` and named DTO under `/components/schemas` in r2/local JSON. `docs/api/contracts/crud-api.md` §§4, 9–10, 14, 18 supplies semantics not fully expressed by JSON Schema; `managed-resources.md` documents precedence/conflicts and release gates.
 

@@ -14,7 +14,7 @@
 ## 3. Поверхности: отказы и атомарные моки
 
 - [x] 3.1 Получить из backend-документации/команды точные примеры HTTP status/envelope/field pointer для DOMAIN_ALREADY_IN_USE, неизвестного ответственного и ошибки конфигурации; записать подтверждённые формы или явно незакрытый интеграционный gate. Проверка: provenance каждого примера указан, предположения не добавлены в OpenAPI. Без примера зависимая real-error классификация 3.2 остаётся незавершённой, а остальные задачи продолжаются.
-- [ ] 3.2 Расширить классификацию подтверждённых отказов и mapping ошибок на поля согласно 3.1, сохранив unknown outcome/no replay. Проверка: tests domain/user/config rejection -> сохранённый ввод и исправление; неизвестный формат/потерянный ответ -> без слепого POST; успех POST + ошибка GET -> повтор только GET.
+- [x] 3.2 Расширить классификацию подтверждённых отказов и mapping ошибок на поля согласно 3.1, сохранив unknown outcome/no replay. Проверка: tests domain/user/config rejection -> сохранённый ввод и исправление; неизвестный формат/потерянный ответ -> без слепого POST; успех POST + ошибка GET -> повтор только GET.
 - [x] 3.3 Обновить surface seed/handlers: назначения по ID, разрешение сведений при чтении, все проверки до фиксации state, optional configuration/defaults, согласованные локальные embed/authorization без реальных секретов. Проверка: HTTP-тесты create/get, null сведений старого пользователя, unknown user, domain conflict, невалидной конфигурации, неизменности team relations и двух конкурирующих созданий на один домен.
 - [x] 3.4 Сохранить отображение embed code как текста и точное копирование, проверить nullable connection. Проверка: существующие surface-details component-тесты плюс новый серверный multiline fixture, без исполнения script и без генерации кода клиентом.
 
@@ -46,3 +46,7 @@
 - [x] 7.2 Адресно актуализировать provenance/counts и outdated unavailable/export assumptions активного `mos-1249-feedback-api`, не отмечая feature tasks выполненными и не переписывая архив. Проверка: OpenSpec validation и diff подтверждают согласованность ссылок; новый TSAM.Dialog UI permission mapping записан как отдельно согласуемый follow-up, не внедрён скрыто.
 - [x] 7.3 Запустить `yarn typecheck`, `yarn lint`, `yarn test`, `yarn format:check`, `yarn api:check`, `yarn build` и существующие KB/A/B isolation/build-graph проверки. Проверка: все результаты зафиксированы раздельно; lint без предупреждений, нет ослабленных правил/утверждений или mock fixtures в production, browser/E2E не созданы/изменены/запущены.
 - [x] 7.4 Выполнить `openspec validate update-control-center-api-contracts --strict`, просмотреть полный diff и составить итоговый отчёт. Проверка: изменения ограничены задачей, перечислены выполненные проверки и незакрытые real integration gates (surface error samples/старые назначения, новые saved filters, экспортные заголовки); неподтверждённые gates не объявлены пройденными, rollout/rollback учитывает несовместимость старого responsible DTO.
+
+## Сверка архива 17.11.2026
+
+- **3.2** — перенесён и выполнен в [mos-958-registration-api-followup](../2026-11-16-mos-958-registration-api-followup/tasks.md), пункты 2.1–2.2 и 3.2. Локальные тесты подтверждают привязку подтверждённых отказов к полям, сохранение ввода, блокировку повторного POST при неизвестном исходе и повтор только GET при полученном ID.

@@ -29,9 +29,9 @@ Observed HEAD: `bc0d9800f25a90989b9c73c76f91996f8300f1d3`. Hash, not Git visibil
 --- a/openspec/changes/mos-1255-feedback-preview/tasks.md
 +++ b/openspec/changes/mos-1255-feedback-preview/tasks.md
 @@ -5,6 +5,6 @@
- 
+
  ## 2. Приёмка подзадачи
- 
+
 -- [ ] 2.1 Проверить FSD/public APIs, размещение declarations, доступность клавиатуры/ошибок/фокуса в затронутом UI и отсутствие небезопасного HTML/production mocks. Проверка: diff review и целевые unit/component-тесты, без browser/E2E.
 +- [ ] 2.1 Проверить FSD/public APIs, размещение declarations, доступность клавиатуры/ошибок/фокуса в затронутом UI и отсутствие небезопасного HTML/production mocks. Проверка: diff review и целевые unit/component-тесты; component-тесты покрывают все семь типов, required без ответа и с ответом (включая 0 для scale/NPS и false для boolean), живые изменения draft и отсутствие сетевых запросов отправки пробных ответов; без browser/E2E.
  - [ ] 2.2 Выполнить `yarn typecheck`, `yarn lint`, `yarn test`, `yarn format:check`; при изменении API-типов — `yarn api:check`, при изменении сборки — `yarn build`. Проверка: записать реальные результаты; environment failures не считать успехом.
@@ -42,12 +42,12 @@ Observed HEAD: `bc0d9800f25a90989b9c73c76f91996f8300f1d3`. Hash, not Git visibil
 
 All clauses modify only `O/tasks.md:8`; none add runtime behavior or named scenarios. Authority for each is D-065's supported suite clarification, D-067's explicit AC6-suite-only authorization and the MOS-1255 common-contract unit.
 
-| Candidate clause | Exact accepted evidence / existing owner |
-|---|---|
-| Explicit **component** coverage of all seven types | Jira `/items/6/description` AC6; `A/reports/REQ-G2-MOS-1255.md:48–54,70` (R09–15,R31); `O/specs/feedback-preview/spec.md:9` already lists the types. Scale and NPS are distinct types. |
+| Candidate clause                                                     | Exact accepted evidence / existing owner                                                                                                                                                      |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Explicit **component** coverage of all seven types                   | Jira `/items/6/description` AC6; `A/reports/REQ-G2-MOS-1255.md:48–54,70` (R09–15,R31); `O/specs/feedback-preview/spec.md:9` already lists the types. Scale and NPS are distinct types.        |
 | required without/with answer, including scale/NPS0 and boolean false | Jira AC4/AC6; REQ report60–62,70 (R21–23,R31); owner delta9,11–14. `A/reviews/R-SPEC-G2-MOS-1255.md:11` explicitly supports unanswered-versus-answered coverage, not a new validation policy. |
-| Live draft changes | Jira AC1/AC6; REQ report41–47,70 (R02–08,R31); owner delta9 and task1.1. No placement/layout change. |
-| Absence of network requests sending **trial answers** | Jira description D2 and AC3/AC6; REQ report58–59,70 (R19–20,R31); owner tasks1.2/2.3 and delta9. No prohibition of unrelated editor transport or real-answer API/staging requirement. |
+| Live draft changes                                                   | Jira AC1/AC6; REQ report41–47,70 (R02–08,R31); owner delta9 and task1.1. No placement/layout change.                                                                                          |
+| Absence of network requests sending **trial answers**                | Jira description D2 and AC3/AC6; REQ report58–59,70 (R19–20,R31); owner tasks1.2/2.3 and delta9. No prohibition of unrelated editor transport or real-answer API/staging requirement.         |
 
 `A/reports/SPEC-G2-MOS-1255.md:44–46,62–64` and independent `A/reviews/R-SPEC-G2-MOS-1255.md:11–15` establish why generic unit/component wording under-specifies AC6 while optional scenario repetition, exact toast copy and staging expansion are unnecessary. D-067 excludes those optional additions from candidate scope.
 
@@ -55,13 +55,13 @@ All clauses modify only `O/tasks.md:8`; none add runtime behavior or named scena
 
 Freshly recomputed full-byte hashes; accepted report/source hashes match recorded review evidence:
 
-| File under A | SHA-256 |
-|---|---|
-| `reports/REQ-G2-MOS-1255.md` | `61207d52e321907edca1799a165a3e26ead9ea9b372395cb7100ffe12e65a065` |
-| `reports/SPEC-G2-MOS-1255.md` | `0487438ca9dfae7b512c996439095254bcbf9e3a1d9ec5ba83e5d3f5f70d36a6` |
-| `reviews/R-REQ-G2-MOS-1255.md` | `c76592a768b0a70167499572b97e638e803beca1583866748554e1c441b9a554` |
-| `reviews/R-SPEC-G2-MOS-1255.md` | `9dc06d6372a5f8f72d3efd58468418b3e4102167d6d74e510800686f9b430b1e` |
-| `sources/jira-feedback/r1/content.json` | `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685` |
+| File under A                             | SHA-256                                                            |
+| ---------------------------------------- | ------------------------------------------------------------------ |
+| `reports/REQ-G2-MOS-1255.md`             | `61207d52e321907edca1799a165a3e26ead9ea9b372395cb7100ffe12e65a065` |
+| `reports/SPEC-G2-MOS-1255.md`            | `0487438ca9dfae7b512c996439095254bcbf9e3a1d9ec5ba83e5d3f5f70d36a6` |
+| `reviews/R-REQ-G2-MOS-1255.md`           | `c76592a768b0a70167499572b97e638e803beca1583866748554e1c441b9a554` |
+| `reviews/R-SPEC-G2-MOS-1255.md`          | `9dc06d6372a5f8f72d3efd58468418b3e4102167d6d74e510800686f9b430b1e` |
+| `sources/jira-feedback/r1/content.json`  | `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685` |
 | `sources/wiki-247734813/r1/content.json` | `d47db6bfc15f5f4a881c777ec78892161ed6be000c6cdf1c5c61ab4c7030c7d7` |
 
 ## Architecture

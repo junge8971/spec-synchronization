@@ -8,12 +8,12 @@
 
 ## Точные источники: expected / observed / unknown
 
-| Атом доказательства | Expected | Observed | Unknown |
-|---|---|---|---|
-| Идентичность member | Найти точный ключ, не соседнюю FE-задачу | `audit/sources/jira-member-index/r1/content.json:$.items[142]`, строки 1229–1236: MOS-1323, Development task, Hold, updated `2026-10-14T14:03:53.543+0800`, subtasks=[] | Hold не доказывает состояние кода или развёртывания |
-| Принадлежность | Установить родительский контекст независимо от summary | `audit/sources/jira-hierarchy/r1/content.json:$.results[23].children[0]`, строка 31: MOS-1329 → MOS-1323; children[1] — отдельный MOS-1384 | Полнота видимости Jira не установлена |
-| Тело и acceptance | Прочитать description и извлечь атомарные требования | У `$.items[142]` отсутствует description; `jira-member-index/r1/metadata.json:$.fields,$.limitations` прямо исключает descriptions/comments/attachments/custom acceptance | Все предметные acceptance MOS-1323, связанные вложения, комментарии и критерии backend неизвестны; отсутствие поля не означает пустое тело в Jira |
-| Дополнительный exact-body | Проверить subtask и прочие сохранённые пакеты | Все 16 `jira-subtasks/r1/content.json:$.items[*]` проверены: нет key или parent MOS-1323. Поиск `MOS-1323` во всех сохранённых `.json/.txt/.md` в sources дал только member-index и hierarchy | Не заявляется просмотр бинарных вложений; нет доказательства, что безымянные материалы являются телом MOS-1323 |
+| Атом доказательства       | Expected                                               | Observed                                                                                                                                                                                      | Unknown                                                                                                                                           |
+| ------------------------- | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Идентичность member       | Найти точный ключ, не соседнюю FE-задачу               | `audit/sources/jira-member-index/r1/content.json:$.items[142]`, строки 1229–1236: MOS-1323, Development task, Hold, updated `2026-10-14T14:03:53.543+0800`, subtasks=[]                       | Hold не доказывает состояние кода или развёртывания                                                                                               |
+| Принадлежность            | Установить родительский контекст независимо от summary | `audit/sources/jira-hierarchy/r1/content.json:$.results[23].children[0]`, строка 31: MOS-1329 → MOS-1323; children[1] — отдельный MOS-1384                                                    | Полнота видимости Jira не установлена                                                                                                             |
+| Тело и acceptance         | Прочитать description и извлечь атомарные требования   | У `$.items[142]` отсутствует description; `jira-member-index/r1/metadata.json:$.fields,$.limitations` прямо исключает descriptions/comments/attachments/custom acceptance                     | Все предметные acceptance MOS-1323, связанные вложения, комментарии и критерии backend неизвестны; отсутствие поля не означает пустое тело в Jira |
+| Дополнительный exact-body | Проверить subtask и прочие сохранённые пакеты          | Все 16 `jira-subtasks/r1/content.json:$.items[*]` проверены: нет key или parent MOS-1323. Поиск `MOS-1323` во всех сохранённых `.json/.txt/.md` в sources дал только member-index и hierarchy | Не заявляется просмотр бинарных вложений; нет доказательства, что безымянные материалы являются телом MOS-1323                                    |
 
 Итог: **0 доступных атомарных требований задачи**, а не «0 невыполненных требований». Нет основания приписать MOS-1323 CRUD, CSV, статистику, распределение трафика или конкретные поля DTO.
 
@@ -39,21 +39,21 @@
 
 Вычислены локально по байтам Python hashlib; первые пять источников и coverage расположены под `audit/`.
 
-| Вход | SHA256 |
-|---|---|
-| sources/jira-member-index/r1/content.json | dba6cffa66e0aef23e9ef34c4a52215a5c02d31e7da1dca87888e821198b8043 |
-| sources/jira-member-index/r1/metadata.json | 6c93c19217dacdc18fbdffc95ecc2eaa326494a49eeab99559eca3b04647c89d |
-| sources/jira-subtasks/r1/content.json | c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e |
-| sources/jira-subtasks/r1/metadata.json | d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20 |
-| sources/jira-hierarchy/r1/content.json | 4d1881959ecbe13e4c2d4c27903b63a4ba71e1cba38e349dc33855a7e605fb77 |
-| coverage.json | e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b |
-| audit/reports/DELTA-AB-TESTING-ROOT-DOC.md | cd8cb41cc08c0f2400a03dc842f089eec3f1c393e8db8070ffc11f65f91fea69 |
-| audit/reviews/R-DELTA-AB-TESTING-ROOT-DOC.md | 3db6568ae32989577ee8271a092d41c44abf9fd2c1bb6e3f705c10ceb2b9ce82 |
-| openspec/specs/ab-testing-module/spec.md | 0013ea05d4c913d321baae18dca1076029792bf58ffc06e6a1715d53eca60366 |
+| Вход                                                                            | SHA256                                                           |
+| ------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| sources/jira-member-index/r1/content.json                                       | dba6cffa66e0aef23e9ef34c4a52215a5c02d31e7da1dca87888e821198b8043 |
+| sources/jira-member-index/r1/metadata.json                                      | 6c93c19217dacdc18fbdffc95ecc2eaa326494a49eeab99559eca3b04647c89d |
+| sources/jira-subtasks/r1/content.json                                           | c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e |
+| sources/jira-subtasks/r1/metadata.json                                          | d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20 |
+| sources/jira-hierarchy/r1/content.json                                          | 4d1881959ecbe13e4c2d4c27903b63a4ba71e1cba38e349dc33855a7e605fb77 |
+| coverage.json                                                                   | e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b |
+| audit/reports/DELTA-AB-TESTING-ROOT-DOC.md                                      | cd8cb41cc08c0f2400a03dc842f089eec3f1c393e8db8070ffc11f65f91fea69 |
+| audit/reviews/R-DELTA-AB-TESTING-ROOT-DOC.md                                    | 3db6568ae32989577ee8271a092d41c44abf9fd2c1bb6e3f705c10ceb2b9ce82 |
+| openspec/specs/ab-testing-module/spec.md                                        | 0013ea05d4c913d321baae18dca1076029792bf58ffc06e6a1715d53eca60366 |
 | openspec/changes/clarify-ab-testing-sample-size/specs/ab-testing-editor/spec.md | b1741fd5bde9283f4cdccf85078f8f09e0b4d223c145b5b217fac0980e2508fe |
-| app/optional/ab-testing/model/ab-testing-queries.ts | b547e01fd47b3e6e2be26ecdd070ca9be5377117a50b82687009392f147afbca |
-| app/optional/ab-testing/api/ab-testing-client.test.ts | 7cb9da6526132daf9a744b4d9c529de1105a4fe8d6bdd527edadcb61a466dc9d |
-| app/shared/api/schema.d.ts | 394a55fc0bd646a9a3c81dace045d89f53505fc40bc4cb0902cb1492b638092d |
+| app/optional/ab-testing/model/ab-testing-queries.ts                             | b547e01fd47b3e6e2be26ecdd070ca9be5377117a50b82687009392f147afbca |
+| app/optional/ab-testing/api/ab-testing-client.test.ts                           | 7cb9da6526132daf9a744b4d9c529de1105a4fe8d6bdd527edadcb61a466dc9d |
+| app/shared/api/schema.d.ts                                                      | 394a55fc0bd646a9a3c81dace045d89f53505fc40bc4cb0902cb1492b638092d |
 
 ## Проверки и риски
 

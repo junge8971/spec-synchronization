@@ -17,8 +17,8 @@ Read the assignment, source-project openspec-propose skill, complete IMPL-AB-EDI
 
 Source prefix: `/home/user/my/work/codesrc/projects/CAM/tsam-admin-front/`.
 
-| Source file | SHA256 |
-| --- | --- |
+| Source file                              | SHA256                                                             |
+| ---------------------------------------- | ------------------------------------------------------------------ |
 | openspec/specs/ab-testing-editor/spec.md | `7cffebc09d33477bc300ec9c76f2989c9e095846e2a90fc74747b3393c2d13e9` |
 | openspec/specs/ab-testing-module/spec.md | `0013ea05d4c913d321baae18dca1076029792bf58ffc06e6a1715d53eca60366` |
 
@@ -28,12 +28,12 @@ Both isolated main-spec copies matched these source bytes before drafting. Paren
 
 Paths relative to the new change directory above; all five package outputs included.
 
-| Output | SHA256 |
-| --- | --- |
-| .openspec.yaml | `ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b` |
-| proposal.md | `954782185e03b5e6395f149c295a539a3157262d3ff2cebd8bb8441760945ec1` |
-| design.md | `7cfeb9eb60671afa465c6a29024c35b259f3595d6654aaa191e1e6da86a6e360` |
-| tasks.md | `cbf39a5ca1a4a2067cae448e9b68d762e342484377a8bdeb5146894a80a9ed27` |
+| Output                          | SHA256                                                             |
+| ------------------------------- | ------------------------------------------------------------------ |
+| .openspec.yaml                  | `ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b` |
+| proposal.md                     | `954782185e03b5e6395f149c295a539a3157262d3ff2cebd8bb8441760945ec1` |
+| design.md                       | `7cfeb9eb60671afa465c6a29024c35b259f3595d6654aaa191e1e6da86a6e360` |
+| tasks.md                        | `cbf39a5ca1a4a2067cae448e9b68d762e342484377a8bdeb5146894a80a9ed27` |
 | specs/ab-testing-editor/spec.md | `b1741fd5bde9283f4cdccf85078f8f09e0b4d223c145b5b217fac0980e2508fe` |
 
 ## Residual risks

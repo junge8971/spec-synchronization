@@ -13,6 +13,7 @@ Literal bases: `C = openspec/changes/reconcile-control-center-backlog`; `A = C/a
 `A/reports/SPEC-G2-MOS-1259.md:45–49` correctly identifies Jira PATCH versus owner PUT, but incorrectly recommends replacing PUT now. Its “no automatic precedence” disclaimer does not neutralize that instruction. Propagate the correction to Result, matrix method dispositions, Start Here and acceptance summary so they do not independently authorize replacement.
 
 Evidence boundary:
+
 - `A/sources/jira-feedback/r1/content.json:102`, `/items/10/description`, description paragraph2 and AC3/5/6 explicitly require PATCH. Accepted extraction `A/reports/REQ-G2-MOS-1259.md:39–66` explicitly does **not** verify published transport.
 - `S:9,14`, `O/tasks.md:3–4`, `O/design.md:27` explicitly use PUT.
 - `O/design.md:5–7` delegates source precedence to `F/design.md:5–10`: wire paths/DTOs come from OpenAPI and operation business semantics from CRUD documentation. Moreover `F/design.md:21–23` already instructs use of published **PUT** operations following the contract update. This is directly relevant existing planning evidence, not a newly verified API fact.
@@ -47,17 +48,17 @@ The proposed title wording alignment is supported as a narrow documentary correc
 
 ## SHA-256 — recomputed complete file bytes
 
-| Input | SHA-256 |
-|---|---|
-| `A/reports/SPEC-G2-MOS-1259.md` | `6fb75adc59f208118bc4394edaf83b988312dfd1398ea3a00e8d5707afacff50` |
-| `A/reports/REQ-G2-MOS-1259.md` | `b928122009f79f48b4789fadcd476bbd1a8bdf669fc438b4cceacd7b3197bd25` |
-| `A/reviews/R-REQ-G2-MOS-1259.md` | `b0287c540b7222d1860f90a72e396960f645d184a12a3f82e8b6cc76d01bbbc2` |
-| `O/proposal.md` | `c955adf218151450f06e1260040fd65dff6cf8905ca49eb2720b8d5908da983b` |
-| `O/design.md` | `ffd8b183f81be81aee20d199b76cc7ad73ad196b604a41ead9d56019778b8e08` |
-| `O/tasks.md` | `029e84d2fb5fad51da26bf567325709055405101a5c91cebddbf9159f04b3b5a` |
-| `S` | `4e9aee0264a677b7dd13a6d4a3bb2eb2bd648b52be1b877a19e86bc33e36655f` |
-| `F/design.md` | `0b15bcebfea15e35aca35a90c835a00efd892bb9a962fc16401892ca6017d91d` |
-| `A/sources/jira-feedback/r1/content.json` | `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685` |
+| Input                                      | SHA-256                                                            |
+| ------------------------------------------ | ------------------------------------------------------------------ |
+| `A/reports/SPEC-G2-MOS-1259.md`            | `6fb75adc59f208118bc4394edaf83b988312dfd1398ea3a00e8d5707afacff50` |
+| `A/reports/REQ-G2-MOS-1259.md`             | `b928122009f79f48b4789fadcd476bbd1a8bdf669fc438b4cceacd7b3197bd25` |
+| `A/reviews/R-REQ-G2-MOS-1259.md`           | `b0287c540b7222d1860f90a72e396960f645d184a12a3f82e8b6cc76d01bbbc2` |
+| `O/proposal.md`                            | `c955adf218151450f06e1260040fd65dff6cf8905ca49eb2720b8d5908da983b` |
+| `O/design.md`                              | `ffd8b183f81be81aee20d199b76cc7ad73ad196b604a41ead9d56019778b8e08` |
+| `O/tasks.md`                               | `029e84d2fb5fad51da26bf567325709055405101a5c91cebddbf9159f04b3b5a` |
+| `S`                                        | `4e9aee0264a677b7dd13a6d4a3bb2eb2bd648b52be1b877a19e86bc33e36655f` |
+| `F/design.md`                              | `0b15bcebfea15e35aca35a90c835a00efd892bb9a962fc16401892ca6017d91d` |
+| `A/sources/jira-feedback/r1/content.json`  | `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685` |
 | `A/sources/wiki-247734813/r1/content.json` | `d47db6bfc15f5f4a881c777ec78892161ed6be000c6cdf1c5c61ab4c7030c7d7` |
 
 Hashes match the author's recorded shared inputs. They prove retained-byte identity, not live freshness or complete original sources.

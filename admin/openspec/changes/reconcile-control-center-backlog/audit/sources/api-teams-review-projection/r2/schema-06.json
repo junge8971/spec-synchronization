@@ -14,10 +14,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "items",
-      "pagination"
-    ],
+    "required": ["items", "pagination"],
     "title": "PaginatedResponseSchema[list[TeamMemberResponse]]"
   }
 }

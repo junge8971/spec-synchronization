@@ -37,14 +37,14 @@ Filename discovery was restricted to the assigned audit root (160-result limit r
 
 Recomputed full-byte SHA-256 for **all28 rows** in the target report's provenance table: **28 match, zero mismatches**. This verifies the exact named inputs without duplicating its hash inventory; hashing is not semantic reading. API report's corrected hash matches D066 disposition rather than its original review target. Supplemental review inputs:
 
-| Path | SHA-256 |
-|---|---|
+| Path                                                 | SHA-256                                                            |
+| ---------------------------------------------------- | ------------------------------------------------------------------ |
 | `A/work-items/R-G2-FEEDBACK-IMPLEMENTATION-SEAMS.md` | `e0fd68cad1734a5897110a6427b5112dd8a2eadaef8f945bbead1eb576f51f35` |
-| `mocks/managed-registry-handlers.mjs` | `20cc8eeb909ab7c525fbe002f55d59425c031da17dfd66c975a159bfd19611de` |
-| `mocks/knowledge-base/handlers.mjs` | `e7fa15ce533690bea5d5a0c506012fa4cf06ca3b3da62e5b09c10b770b2fc497` |
-| `mocks/ab-testing/handlers.mjs` | `93f4ab0853c27c2084cb8b6a655665db324074488e04ce86fc5822572c5d25cf` |
-| `mocks/response-scenarios.mjs` | `a0377e7a883374f597d280b33df979d99d11b6f26bfef5497f6a44847d56d367` |
-| `mocks/local-only.mjs` | `564cd3eb848cd2a490e10713a4178b4ce3d24d255c131b9ee120f128e31fab7e` |
+| `mocks/managed-registry-handlers.mjs`                | `20cc8eeb909ab7c525fbe002f55d59425c031da17dfd66c975a159bfd19611de` |
+| `mocks/knowledge-base/handlers.mjs`                  | `e7fa15ce533690bea5d5a0c506012fa4cf06ca3b3da62e5b09c10b770b2fc497` |
+| `mocks/ab-testing/handlers.mjs`                      | `93f4ab0853c27c2084cb8b6a655665db324074488e04ce86fc5822572c5d25cf` |
+| `mocks/response-scenarios.mjs`                       | `a0377e7a883374f597d280b33df979d99d11b6f26bfef5497f6a44847d56d367` |
+| `mocks/local-only.mjs`                               | `564cd3eb848cd2a490e10713a4178b4ce3d24d255c131b9ee120f128e31fab7e` |
 
 ## Start Here
 

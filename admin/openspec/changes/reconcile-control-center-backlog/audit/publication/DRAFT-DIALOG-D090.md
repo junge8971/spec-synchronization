@@ -14,17 +14,17 @@
 
 ### Основные baselines
 
-| Файл | SHA256 |
-|---|---|
-| `openspec/specs/dialog-registry/spec.md` | `ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83` |
+| Файл                                              | SHA256                                                             |
+| ------------------------------------------------- | ------------------------------------------------------------------ |
+| `openspec/specs/dialog-registry/spec.md`          | `ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83` |
 | `openspec/specs/dialog-selection-builder/spec.md` | `87d9ad1687832a1f1eb54a69b65d168cfe04a94fdc5bed1f95ea25983afc8ca6` |
-| `A/decisions.md` | `fa7cffedb00f4d481efa2b523e8f1a1b4991b2750022c823c30c5370ab5cf945` |
-| `A/work-items/WAVE-D092-REVIEW-AND-DRAFTS.md` | `a397d1cfc2441cb0c4d44183878917b5dd5e80bbe292ca0220871afed68451ee` |
-| `A/reviews/R-D090-EIGHT.md` | `2df7b2655f9fb3ffac901f2b8a946e336579e0ab72a50be49a0223a6d8342a6f` |
-| `A/reports/JOIN-MOS-1411.md` | `a5641af49c067fb64358ea1a23b8f39405aaa2268946bb328f2bf9e1eb7879f9` |
-| `A/reports/JOIN-MOS-1412.md` | `b037676ea37fbcd839a2a5e776b4bf038a2011996af1c369723fd98d2f61bc9e` |
-| `A/reports/JOIN-MOS-1414.md` | `325aaae186c680ced84f29d7b96ad957e234aa717895105c2751b5a6a9db7cd4` |
-| `A/reports/JOIN-MOS-1419.md` | `c99a68e4e50e9241ba6fe795d34c6e6f2a21dd643e15b8467a9db728faa08745` |
+| `A/decisions.md`                                  | `fa7cffedb00f4d481efa2b523e8f1a1b4991b2750022c823c30c5370ab5cf945` |
+| `A/work-items/WAVE-D092-REVIEW-AND-DRAFTS.md`     | `a397d1cfc2441cb0c4d44183878917b5dd5e80bbe292ca0220871afed68451ee` |
+| `A/reviews/R-D090-EIGHT.md`                       | `2df7b2655f9fb3ffac901f2b8a946e336579e0ab72a50be49a0223a6d8342a6f` |
+| `A/reports/JOIN-MOS-1411.md`                      | `a5641af49c067fb64358ea1a23b8f39405aaa2268946bb328f2bf9e1eb7879f9` |
+| `A/reports/JOIN-MOS-1412.md`                      | `b037676ea37fbcd839a2a5e776b4bf038a2011996af1c369723fd98d2f61bc9e` |
+| `A/reports/JOIN-MOS-1414.md`                      | `325aaae186c680ced84f29d7b96ad957e234aa717895105c2751b5a6a9db7cd4` |
+| `A/reports/JOIN-MOS-1419.md`                      | `c99a68e4e50e9241ba6fe795d34c6e6f2a21dd643e15b8467a9db728faa08745` |
 
 Точный исходный блок `Registry represents server rows faithfully`, от его `### Requirement` до следующего requirement, включая завершающую пустую строку: `19e49512a8bbef7aaa16288958d6284406e82b320fd975ef2406910d01db7526`.
 
@@ -34,38 +34,38 @@
 
 Локаторы основаны на четырёх принятых JOIN-отчётах и независимом review; повторная внешняя проверка не выполнялась.
 
-| Источник | Использование |
-|---|---|
-| `A/sources/jira-subtasks/r1/content.json#/items/2/description` | MOS-1411: исходное скрытие, общий сброс, повторное скрытие |
-| Тот же файл, `/items/3/description` | MOS-1412: красная точка перед первой репликой |
-| Тот же файл, `/items/4/description` | MOS-1414: серверная длительность и «и идёт» |
-| Тот же файл, `/items/5/description` | MOS-1419: прочерк при null rating |
-| `A/sources/wiki-243776365/r1/content.json`, `bodyView`, СПС-25 и «Сценарий 1. Сброс отбора» | Пять частей сбрасываемого отбора, условная видимость |
-| Тот же источник, СПС-32 и состав строки | Независимое отображение сбоя |
-| `A/sources/wiki-241085439/r1/content.json`, `bodyView`, §§2.3, 2.5.1, 2.7 | `has_failure`, `ended_at`, `duration_sec`, `operator_rating` |
-| Тот же источник, §7, §8.6, §8.11 | Ограничения происхождения серверных признаков и длительности; не клиентская реконструкция |
-| `A/sources/api-live/r1/content.json`, search POST | Существующий selection/reset contract |
-| `A/sources/api-live/r2/content.json`, search POST и `components.schemas.DialogListItemResponse.properties.operator_rating` | Nullable rating в существующем ответе |
-| Main `dialog-registry`: `Quick filter application is visibly explicit` | Сохранение pending quick draft, validation и явного submit |
-| Main `dialog-selection-builder`: `Draft changes require explicit application` | Сохранение редактора, отдельной очистки draft и общего сброса |
+| Источник                                                                                                                   | Использование                                                                             |
+| -------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `A/sources/jira-subtasks/r1/content.json#/items/2/description`                                                             | MOS-1411: исходное скрытие, общий сброс, повторное скрытие                                |
+| Тот же файл, `/items/3/description`                                                                                        | MOS-1412: красная точка перед первой репликой                                             |
+| Тот же файл, `/items/4/description`                                                                                        | MOS-1414: серверная длительность и «и идёт»                                               |
+| Тот же файл, `/items/5/description`                                                                                        | MOS-1419: прочерк при null rating                                                         |
+| `A/sources/wiki-243776365/r1/content.json`, `bodyView`, СПС-25 и «Сценарий 1. Сброс отбора»                                | Пять частей сбрасываемого отбора, условная видимость                                      |
+| Тот же источник, СПС-32 и состав строки                                                                                    | Независимое отображение сбоя                                                              |
+| `A/sources/wiki-241085439/r1/content.json`, `bodyView`, §§2.3, 2.5.1, 2.7                                                  | `has_failure`, `ended_at`, `duration_sec`, `operator_rating`                              |
+| Тот же источник, §7, §8.6, §8.11                                                                                           | Ограничения происхождения серверных признаков и длительности; не клиентская реконструкция |
+| `A/sources/api-live/r1/content.json`, search POST                                                                          | Существующий selection/reset contract                                                     |
+| `A/sources/api-live/r2/content.json`, search POST и `components.schemas.DialogListItemResponse.properties.operator_rating` | Nullable rating в существующем ответе                                                     |
+| Main `dialog-registry`: `Quick filter application is visibly explicit`                                                     | Сохранение pending quick draft, validation и явного submit                                |
+| Main `dialog-selection-builder`: `Draft changes require explicit application`                                              | Сохранение редактора, отдельной очистки draft и общего сброса                             |
 
-| Сохранённый источник | SHA256 content / metadata |
-|---|---|
-| `jira-subtasks/r1` | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` / `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
-| `wiki-241085439/r1` | `974ea35aaf44b9ec7c14c573ba58bdf7ed55397a9ca47d62b37fb39d9886f8bc` / `dcaab775172b7e615dfae64184d719f8403cff1fb304650ba21e1532ce577b7d` |
-| `wiki-243776365/r1` | `2f659b5423fa7203dcd4f70743e59aabfb571452144394621091ff2cd58cab55` / `fc250c2633f28f6a8f408835145a59aa4cb8612606b40cb8bf79cf088ea256b8` |
-| `api-live/r1` | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` / `3d92a2024209edecf98eaa1095e40a565611c9eb6ccc4de312ed900165b9f8ff` |
-| `api-live/r2` | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` / `444c7b65941db4af36d1ffe305fd04499a44d6d9c81b9a25be15dc6061d521ba` |
+| Сохранённый источник | SHA256 content / metadata                                                                                                               |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `jira-subtasks/r1`   | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` / `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
+| `wiki-241085439/r1`  | `974ea35aaf44b9ec7c14c573ba58bdf7ed55397a9ca47d62b37fb39d9886f8bc` / `dcaab775172b7e615dfae64184d719f8403cff1fb304650ba21e1532ce577b7d` |
+| `wiki-243776365/r1`  | `2f659b5423fa7203dcd4f70743e59aabfb571452144394621091ff2cd58cab55` / `fc250c2633f28f6a8f408835145a59aa4cb8612606b40cb8bf79cf088ea256b8` |
+| `api-live/r1`        | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` / `3d92a2024209edecf98eaa1095e40a565611c9eb6ccc4de312ed900165b9f8ff` |
+| `api-live/r2`        | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` / `444c7b65941db4af36d1ffe305fd04499a44d6d9c81b9a25be15dc6061d521ba` |
 
 ### Проверенные implementation baselines
 
-| Файл | SHA256 |
-|---|---|
-| `app/pages/dialogs/ui/dialog-filters.tsx` | `72d95c6383ec7ffc36a7fa638f8fc3b2fa562008bea94e0c9c0fd13d6fb0f66d` |
-| `app/pages/dialogs/ui/dialog-registry.tsx` | `5e487284416e43ae82a20fe43a20546bb327e44e8c8f0f95e77ba427b52aa801` |
-| `app/pages/dialogs/model/quick-filter-key.ts` | `e78ec79cd89688b765ffcece2189b25309359db59ff3de29dba26aeb0e399757` |
+| Файл                                                     | SHA256                                                             |
+| -------------------------------------------------------- | ------------------------------------------------------------------ |
+| `app/pages/dialogs/ui/dialog-filters.tsx`                | `72d95c6383ec7ffc36a7fa638f8fc3b2fa562008bea94e0c9c0fd13d6fb0f66d` |
+| `app/pages/dialogs/ui/dialog-registry.tsx`               | `5e487284416e43ae82a20fe43a20546bb327e44e8c8f0f95e77ba427b52aa801` |
+| `app/pages/dialogs/model/quick-filter-key.ts`            | `e78ec79cd89688b765ffcece2189b25309359db59ff3de29dba26aeb0e399757` |
 | `app/pages/dialogs/ui/dialog-table/dialog-table-row.tsx` | `3096df76cead86dad46f13be6cbde70de0a2c0d009c0842f82087f89ad985de3` |
-| `app/entities/dialog/ui/dialog-operator-rating.tsx` | `089bf7705ca41e9117cffea1c219fb3c6171169608761ba8f01415845395ad04` |
+| `app/entities/dialog/ui/dialog-operator-rating.tsx`      | `089bf7705ca41e9117cffea1c219fb3c6171169608761ba8f01415845395ad04` |
 
 Дополнительно прочитаны релевантные тесты `dialogs-page.test.tsx`, `dialog-operator-rating.test.tsx` и композиция `app/features/dialog-selection/ui/dialog-selection.tsx`. Тесты не запускались.
 
@@ -128,12 +128,14 @@ D-091 сохраняет publication hold: timestamps четырёх Jira-зад
 ## Goals / Non-Goals
 
 Goals:
+
 - Исправить только MOS-1411, MOS-1412, MOS-1414 и MOS-1419.
 - Сохранить полный существующий row requirement и все его сценарии в одной MODIFIED delta.
 - Сохранить явное применение быстрых и сложных условий, validation, ошибки, доступность и cursor identity.
 - Проверить исправления unit/component-тестами.
 
 Non-Goals:
+
 - Изменение API/schema, auth, карточки, сортировки, поверхностей или backend-алгоритмов.
 - Клиентские часы, пересчёт длительности или polling.
 - Новый продуктовый policy для exclusively unapplied complex-condition draft.
@@ -151,6 +153,7 @@ Reset оформляется одним ADDED requirement. Существующ�
 ### 2. Предикат видимости общего сброса
 
 Для согласованных состояний учитываются два независимых основания:
+
 - применённый отбор отличается от исходного по q, period, channel_ids, skill_ids либо содержит применённые условия;
 - быстрый draft отличается от применённых быстрых значений.
 
@@ -205,6 +208,7 @@ Reset оформляется одним ADDED requirement. Существующ�
 ## Validation Strategy
 
 Unit/component-проверки:
+
 - начальное и post-reset скрытие, каждый из пяти применённых критериев отдельно;
 - simultaneous reset всех пяти непустых частей, не очищая группу заранее;
 - pending quick draft, invalid custom draft, pending возврат к default и доступность при ошибке справочников;

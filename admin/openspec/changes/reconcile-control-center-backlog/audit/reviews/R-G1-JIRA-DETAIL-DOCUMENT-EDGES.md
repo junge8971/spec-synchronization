@@ -17,18 +17,18 @@ No issues found.
 
 Read the complete target report and both assignments. Read all nine content packets below without remaining output truncation, including the single-line SK packet. Read every adjacent metadata file and lifecycle r1’s complete failure receipt.
 
-| Alias / source under `A/sources/` | Content inspected | Saved issues | Comments/excerpts | Indexed attachments |
-|---|---|---:|---:|---:|
-| AD `jira-api-delta-scenarios/r1` | `content.json:1–71` | 4 | Fields absent | 3 |
-| SK `jira-details-MOS-774/r1` | Complete `content.json:1` | 19 | Fields absent | 9 |
-| LC `jira-lifecycle-details` | `r1/access-result.json`; `r2/content.md:1–67` | 1 | 2 selected excerpts | 1 |
-| MN `jira-monitoring-details/r1` | `content.json:1–195` | 4 | 1 | 0 |
-| OP `jira-operations-details/r1` | `content.json:1–121` | 5 | 2 | 0 |
-| RP `jira-reports-details/r1` | `content.json:1–134` | 6 | 1 | 0 |
-| SB `jira-sandbox-details/r1` | `content.json:1–70` | 3 | 0 | 0 |
-| SH `jira-shell-details/r1` | `content.json:1–240` | 6 | 7 | 9 |
-| SW `jira-skill-switch-details/r1` | `content.json:1–183` | 2 | 2 | 1 |
-| **Total** | **Nine bundles, ten revisions** | **50** | **15 retained records/excerpts** | **23** |
+| Alias / source under `A/sources/` | Content inspected                             | Saved issues |                Comments/excerpts | Indexed attachments |
+| --------------------------------- | --------------------------------------------- | -----------: | -------------------------------: | ------------------: |
+| AD `jira-api-delta-scenarios/r1`  | `content.json:1–71`                           |            4 |                    Fields absent |                   3 |
+| SK `jira-details-MOS-774/r1`      | Complete `content.json:1`                     |           19 |                    Fields absent |                   9 |
+| LC `jira-lifecycle-details`       | `r1/access-result.json`; `r2/content.md:1–67` |            1 |              2 selected excerpts |                   1 |
+| MN `jira-monitoring-details/r1`   | `content.json:1–195`                          |            4 |                                1 |                   0 |
+| OP `jira-operations-details/r1`   | `content.json:1–121`                          |            5 |                                2 |                   0 |
+| RP `jira-reports-details/r1`      | `content.json:1–134`                          |            6 |                                1 |                   0 |
+| SB `jira-sandbox-details/r1`      | `content.json:1–70`                           |            3 |                                0 |                   0 |
+| SH `jira-shell-details/r1`        | `content.json:1–240`                          |            6 |                                7 |                   9 |
+| SW `jira-skill-switch-details/r1` | `content.json:1–183`                          |            2 |                                2 |                   1 |
+| **Total**                         | **Nine bundles, ten revisions**               |       **50** | **15 retained records/excerpts** |              **23** |
 
 Verified qualifications:
 
@@ -56,22 +56,22 @@ These support all **50 carrying-issue identities**. No hierarchy/member-index so
 
 `D(n)` means `/items/n/description` in the indicated source alias. Each listed index represents an individually checked occurrence.
 
-| Exact wiki ID | Verified locators | Occurrences | Canonical disposition |
-|---|---|---:|---|
-| 241082009 | AD D(3); SK D(17); SB D(0); SH D(5) | 4 | Retained r2, v5 |
-| 241097511 | SK D(5–17); SB D(0); SH D(5) | 15 | Retained r2, v6 |
-| 241085439 | SK D(16); RP D(4) | 2 | Retained r1, v15 |
-| 241085838 | RP D(1–5) | 5 | Retained r1, v3 |
-| 241088180 | OP `/items/0/comments/items/0/body`, comment1131251 | 1 | Retained r1, v4 |
-| 241092242 | SK D(15); OP D(3,4) | 3 | Retained r1, v4 |
-| 238347672 | SK D(5), MOS-944 | 1 | Scoped canonical gap |
-| 241080659 | SK D(5,17), MOS-944/1031; SH D(5), MOS-905 | 3 | Scoped canonical gap |
-| 241095761 | SK D(13,16), MOS-1025/1030 | 2 | Scoped canonical gap |
-| 241077434 | SK D(17), MOS-1031 | 1 | Scoped canonical gap |
-| 241079770 | SH D(4), MOS-904 | 1 | Scoped canonical gap |
-| 223087110 | SH D(0), MOS-624 Documentation cell | 1 | Scoped canonical gap; relevance unknown |
-| 222659162 | SH D(0), same cell | 1 | Scoped canonical gap; relevance unknown |
-| **Total** | | **40** | **Six retained / seven gaps** |
+| Exact wiki ID | Verified locators                                   | Occurrences | Canonical disposition                   |
+| ------------- | --------------------------------------------------- | ----------: | --------------------------------------- |
+| 241082009     | AD D(3); SK D(17); SB D(0); SH D(5)                 |           4 | Retained r2, v5                         |
+| 241097511     | SK D(5–17); SB D(0); SH D(5)                        |          15 | Retained r2, v6                         |
+| 241085439     | SK D(16); RP D(4)                                   |           2 | Retained r1, v15                        |
+| 241085838     | RP D(1–5)                                           |           5 | Retained r1, v3                         |
+| 241088180     | OP `/items/0/comments/items/0/body`, comment1131251 |           1 | Retained r1, v4                         |
+| 241092242     | SK D(15); OP D(3,4)                                 |           3 | Retained r1, v4                         |
+| 238347672     | SK D(5), MOS-944                                    |           1 | Scoped canonical gap                    |
+| 241080659     | SK D(5,17), MOS-944/1031; SH D(5), MOS-905          |           3 | Scoped canonical gap                    |
+| 241095761     | SK D(13,16), MOS-1025/1030                          |           2 | Scoped canonical gap                    |
+| 241077434     | SK D(17), MOS-1031                                  |           1 | Scoped canonical gap                    |
+| 241079770     | SH D(4), MOS-904                                    |           1 | Scoped canonical gap                    |
+| 223087110     | SH D(0), MOS-624 Documentation cell                 |           1 | Scoped canonical gap; relevance unknown |
+| 222659162     | SH D(0), same cell                                  |           1 | Scoped canonical gap; relevance unknown |
+| **Total**     |                                                     |      **40** | **Six retained / seven gaps**           |
 
 The full saved hrefs and carrying issues agree with the target ledger. The last two IDs use `pages/viewpage.action?pageId=…`; the other eleven use the saved `/spaces/KR/pages/<ID>/…` form.
 
@@ -85,19 +85,19 @@ The five explicit contract gaps remain distinct from the two unknown-relevance s
 
 Checked every indexed ID, filename, content URL, carrying issue and array position against the report.
 
-| Source / pointer | Owner | Verified attachment IDs |
-|---|---|---|
-| AD `/items/0/attachments/0` | MOS-1245 | 839666 |
-| AD `/items/1/attachments/0` | MOS-1306 | 839773 |
-| AD `/items/2/attachments/0` | MOS-1237 | 839665 |
-| LC `r2/content.md:59–63` | MOS-1119 | 833803 |
-| SW `/items/1/attachment/0` | MOS-1145 | 835759 |
-| SK `/items/1/attachments/0–2` | MOS-675 | 817149,825983,817148 |
-| SK `/items/2/attachments/0–3` | MOS-676 | 817153,817152,826603,817151 |
-| SK `/items/3/attachments/0–1` | MOS-677 | 817155,817154 |
-| SH `/items/1/attachments/0–2` | MOS-672 | 817138,825952,817137 |
-| SH `/items/2/attachments/0–2` | MOS-673 | 817141,826497,817140 |
-| SH `/items/3/attachments/0–2` | MOS-674 | 817144,825968,817143 |
+| Source / pointer              | Owner    | Verified attachment IDs     |
+| ----------------------------- | -------- | --------------------------- |
+| AD `/items/0/attachments/0`   | MOS-1245 | 839666                      |
+| AD `/items/1/attachments/0`   | MOS-1306 | 839773                      |
+| AD `/items/2/attachments/0`   | MOS-1237 | 839665                      |
+| LC `r2/content.md:59–63`      | MOS-1119 | 833803                      |
+| SW `/items/1/attachment/0`    | MOS-1145 | 835759                      |
+| SK `/items/1/attachments/0–2` | MOS-675  | 817149,825983,817148        |
+| SK `/items/2/attachments/0–3` | MOS-676  | 817153,817152,826603,817151 |
+| SK `/items/3/attachments/0–1` | MOS-677  | 817155,817154               |
+| SH `/items/1/attachments/0–2` | MOS-672  | 817138,825952,817137        |
+| SH `/items/2/attachments/0–2` | MOS-673  | 817141,826497,817140        |
+| SH `/items/3/attachments/0–2` | MOS-674  | 817144,825968,817143        |
 
 Confirmed **5 Markdown + 6 HTML + 12 PNG = 23**. Repeated image markup and test-plan comment references do not add attachment IDs.
 

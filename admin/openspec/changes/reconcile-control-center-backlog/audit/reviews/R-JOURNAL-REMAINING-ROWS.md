@@ -31,23 +31,23 @@ OPEN does not erase definite wording or select offered alternatives. CLOSED reco
 
 All locators below use J `/bodyStorage`, content cell `td[2]/div`.
 
-| ID | Verdict | Independently checked substance and retained qualification |
-|---|---|---|
-| JR-02-01 | ACCEPT | Row2 `ol/li[1]`: definite dictionary-list sorting request; unspecified fields/order remain unspecified. Generic dictionary routing is supported, not skill-transition dictionary coverage. |
-| JR-02-02 | ACCEPT | `li[2]`: complex filtering excluded now, with future marker retained. No invented removal of ordinary sorting/search or activation of filters. |
-| JR-02-03 | ACCEPT | `li[3]`: create modal → card page → tabs, not steps; conditional page-accounting remark preserved. No replacement of the separately approved skill wizard. |
-| JR-02-04 | ACCEPT | `li[4]`: distinct Latin-character and uniqueness errors preserved without inventing regex, preflight or domain-field requirements. |
-| JR-02-05 | ACCEPT | `li[5]`: separate activation toggle versus dynamic button label remains a genuine choice; neither OPEN nor “Учесть всё” selects one. |
-| JR-02-06 | ACCEPT | `li[6]`: export-selection and completion modals retained; payload and completion semantics are not invented. |
-| JR-02-07 | ACCEPT | `li[7]`: widget experiment and uncertain acceptance remain conditional, not mandatory approved widgets. |
-| JR-02-08 | ACCEPT | `li[8]`: developer-entered-data storage/accounting question remains pending meeting outcome. Ruslan is not promoted to implementation owner. |
-| JR-02-09 | ACCEPT | `li[9]`: separate conceptual discussion and possible later recommendations remain unresolved within inspected evidence. Skill persistence details do not settle generic dictionary accounting. |
-| JR-02-10 | ACCEPT | `li[10]`: physical-table naming latitude corroborates row5 without waiving fields, behavior, FKs or wire contracts. |
-| JR-02-11 | ACCEPT | `li[11]`: all-creation departure-modal request retained with known partial specification coverage and unverified breadth. No unsupported runtime defect or global owner asserted. |
-| JR-02-12 | ACCEPT | `li[12]`: historical positive observation about stars/validation and the specific other-tab discoverability concern both retained. No claim that required-field validation is universally missing. |
-| JR-02-13 | ACCEPT | `li[13]`: Save-only creation versus four card actions faithfully represented. API-module inventory is a routing candidate, not feedback API ownership or approved frontend execution. |
-| JR-04-01 | ACCEPT | Row4 `p[2],p[4],p[6]`: integration target and Gleb’s attributed temporary generation statement both retained. No algorithm, permanent generation policy or new UI-field approval inferred. |
-| JR-05-01 | ACCEPT | Row5 `p[2],p[3]`: accepted physical-name latitude preserved as historical clarification/no-op, not a newly approved global policy or API-renaming permission. |
+| ID       | Verdict | Independently checked substance and retained qualification                                                                                                                                         |
+| -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| JR-02-01 | ACCEPT  | Row2 `ol/li[1]`: definite dictionary-list sorting request; unspecified fields/order remain unspecified. Generic dictionary routing is supported, not skill-transition dictionary coverage.         |
+| JR-02-02 | ACCEPT  | `li[2]`: complex filtering excluded now, with future marker retained. No invented removal of ordinary sorting/search or activation of filters.                                                     |
+| JR-02-03 | ACCEPT  | `li[3]`: create modal → card page → tabs, not steps; conditional page-accounting remark preserved. No replacement of the separately approved skill wizard.                                         |
+| JR-02-04 | ACCEPT  | `li[4]`: distinct Latin-character and uniqueness errors preserved without inventing regex, preflight or domain-field requirements.                                                                 |
+| JR-02-05 | ACCEPT  | `li[5]`: separate activation toggle versus dynamic button label remains a genuine choice; neither OPEN nor “Учесть всё” selects one.                                                               |
+| JR-02-06 | ACCEPT  | `li[6]`: export-selection and completion modals retained; payload and completion semantics are not invented.                                                                                       |
+| JR-02-07 | ACCEPT  | `li[7]`: widget experiment and uncertain acceptance remain conditional, not mandatory approved widgets.                                                                                            |
+| JR-02-08 | ACCEPT  | `li[8]`: developer-entered-data storage/accounting question remains pending meeting outcome. Ruslan is not promoted to implementation owner.                                                       |
+| JR-02-09 | ACCEPT  | `li[9]`: separate conceptual discussion and possible later recommendations remain unresolved within inspected evidence. Skill persistence details do not settle generic dictionary accounting.     |
+| JR-02-10 | ACCEPT  | `li[10]`: physical-table naming latitude corroborates row5 without waiving fields, behavior, FKs or wire contracts.                                                                                |
+| JR-02-11 | ACCEPT  | `li[11]`: all-creation departure-modal request retained with known partial specification coverage and unverified breadth. No unsupported runtime defect or global owner asserted.                  |
+| JR-02-12 | ACCEPT  | `li[12]`: historical positive observation about stars/validation and the specific other-tab discoverability concern both retained. No claim that required-field validation is universally missing. |
+| JR-02-13 | ACCEPT  | `li[13]`: Save-only creation versus four card actions faithfully represented. API-module inventory is a routing candidate, not feedback API ownership or approved frontend execution.              |
+| JR-04-01 | ACCEPT  | Row4 `p[2],p[4],p[6]`: integration target and Gleb’s attributed temporary generation statement both retained. No algorithm, permanent generation policy or new UI-field approval inferred.         |
+| JR-05-01 | ACCEPT  | Row5 `p[2],p[3]`: accepted physical-name latitude preserved as historical clarification/no-op, not a newly approved global policy or API-renaming permission.                                      |
 
 **Per-ID exceptions: none.**
 

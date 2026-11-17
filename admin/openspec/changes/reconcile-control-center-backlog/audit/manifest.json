@@ -20,13 +20,43 @@
     "confluenceRoot": "https://wiki.mos-team.ru/spaces/KR/pages/238324523/",
     "confluenceTraversal": "Relevant admin requirements and attachments; clarify ambiguous scope before reading.",
     "apiDocs": "https://nchat-a-tech.mos.ru/api/control/docs",
-    "localRead": ["openspec", "docs/api/contracts", "app", "mocks", "scripts", "project configuration and tests"],
-    "localWrite": ["openspec/changes/reconcile-control-center-backlog/audit", "assigned active OpenSpec change artifacts", "new product changes through OpenSpec scaffold"],
-    "forbidden": ["application code edits", "external writes without separate explicit action approval", "main-spec sync", "archive edits or automatic archive", "arbitrary Jira traversal", "business endpoint calls", "browser/E2E tests", "credential extraction", "workflow configuration edits"]
+    "localRead": [
+      "openspec",
+      "docs/api/contracts",
+      "app",
+      "mocks",
+      "scripts",
+      "project configuration and tests"
+    ],
+    "localWrite": [
+      "openspec/changes/reconcile-control-center-backlog/audit",
+      "assigned active OpenSpec change artifacts",
+      "new product changes through OpenSpec scaffold"
+    ],
+    "forbidden": [
+      "application code edits",
+      "external writes without separate explicit action approval",
+      "main-spec sync",
+      "archive edits or automatic archive",
+      "arbitrary Jira traversal",
+      "business endpoint calls",
+      "browser/E2E tests",
+      "credential extraction",
+      "workflow configuration edits"
+    ]
   },
-  "workers": {"model": "openai-codex/gpt-6-astra", "thinking": "medium", "registryVerified": true, "runtimeVerified": true},
-  "concurrency": {"analysts": 4, "browserOwners": 1},
-  "browser": {"preflight": "parent list_pages succeeded", "owner": "parent-session", "parentAccessAfterHandoff": true},
+  "workers": {
+    "model": "openai-codex/gpt-6-astra",
+    "thinking": "medium",
+    "registryVerified": true,
+    "runtimeVerified": true
+  },
+  "concurrency": { "analysts": 4, "browserOwners": 1 },
+  "browser": {
+    "preflight": "parent list_pages succeeded",
+    "owner": "parent-session",
+    "parentAccessAfterHandoff": true
+  },
   "sourceCutoff": null,
   "status": "iterative-scenario-audit-in-progress",
   "blocker": {

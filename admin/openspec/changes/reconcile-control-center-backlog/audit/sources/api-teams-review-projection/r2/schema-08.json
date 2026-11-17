@@ -24,13 +24,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "limit",
-      "offset",
-      "current_page",
-      "total_items",
-      "total_pages"
-    ],
+    "required": ["limit", "offset", "current_page", "total_items", "total_pages"],
     "title": "PaginationDto"
   }
 }

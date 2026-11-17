@@ -10,12 +10,12 @@
 
 Здесь `A` = `openspec/changes/reconcile-control-center-backlog/audit`.
 
-| ID | Требование / граница | Точный источник |
-|---|---|---|
-| R1 | Диалог со сбоем обработки обозначается признаком в строке реестра. | `A/sources/wiki-243776365/r1/content.json`, `$.bodyView`, «Функциональные требования», **СПС-32**; User Story таблицы диалогов, «Сценарий 1. Состав строки». |
-| R2 | Индикатор — **красная точка**. | `A/sources/jira-subtasks/r1/content.json:71–87`, `$.items[3]`, `key=MOS-1412`, `description`, ОР; `A/sources/wiki-241085439/r1/content.json`, `$.bodyView`, §§2.3, 2.5.1, 2.7, строка `has_failure`. |
-| R3 | Точка расположена **перед первой репликой / текстом обращения**, а не заменяется тегом под ней. | Те же Jira ОР/ФР; API §2.7: «Красная точка перед текстом обращения». |
-| R4 | Условие отображения определяется серверным boolean `has_failure`, независимо от участия оператора и навыков. При `false` индикатор сбоя отсутствует. | API §§2.3, 2.5.1: тип диалога не задаётся одним значением; признаки независимы. Отрицательный случай — граница отображения признака, не отдельная дословная цитата Jira. |
+| ID  | Требование / граница                                                                                                                                 | Точный источник                                                                                                                                                                                      |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| R1  | Диалог со сбоем обработки обозначается признаком в строке реестра.                                                                                   | `A/sources/wiki-243776365/r1/content.json`, `$.bodyView`, «Функциональные требования», **СПС-32**; User Story таблицы диалогов, «Сценарий 1. Состав строки».                                         |
+| R2  | Индикатор — **красная точка**.                                                                                                                       | `A/sources/jira-subtasks/r1/content.json:71–87`, `$.items[3]`, `key=MOS-1412`, `description`, ОР; `A/sources/wiki-241085439/r1/content.json`, `$.bodyView`, §§2.3, 2.5.1, 2.7, строка `has_failure`. |
+| R3  | Точка расположена **перед первой репликой / текстом обращения**, а не заменяется тегом под ней.                                                      | Те же Jira ОР/ФР; API §2.7: «Красная точка перед текстом обращения».                                                                                                                                 |
+| R4  | Условие отображения определяется серверным boolean `has_failure`, независимо от участия оператора и навыков. При `false` индикатор сбоя отсутствует. | API §§2.3, 2.5.1: тип диалога не задаётся одним значением; признаки независимы. Отрицательный случай — граница отображения признака, не отдельная дословная цитата Jira.                             |
 
 Jira: parent `MOS-1037`, status `Backlog`, updated `2026-10-16T15:30:12.067+0800`. Сохранённый ФР: «Отображается тег "Сбой" под первой репликой, красная точка отсутствует». Это историческое описание, а не результат воспроизведения в данном аудите.
 
@@ -53,14 +53,14 @@ API применим напрямую:
 
 ## 4. Код и тесты: expected / observed / unknown
 
-| Область | Expected | Observed |
-|---|---|---|
-| Источник признака | Серверный boolean | `app/entities/dialog/api/dialog-client.ts:19`: `has_failure: z.boolean()`; `:48–51`: POST поиска. |
-| Расположение | Перед первой репликой | `app/pages/dialogs/ui/dialog-table/dialog-table-row.tsx:23–29`: ссылка содержит `DialogText` и скрытый chat ID, без точки. |
-| Визуальная форма | Красная точка | Там же `:30–38`: отдельная строка бейджей, `{row.has_failure && <Badge variant="destructive">Сбой</Badge>}`. Требуемая точка отсутствует. |
-| Независимость признаков | Сбой не зависит от оператора | Там же `:37–38`: два независимых условия. |
-| Положительный тест | Точка перед обращением, доступное обозначение | `app/pages/dialogs/ui/dialogs-page.test.tsx:12–24,143–171`: fixture `has_failure:true`; проверяется текст «Сбой», но не точка, цвет и положение. |
-| Отрицательный тест | Нет индикатора при `false` | Там же `:311–340`: fixture `has_failure:false`, проверяется отсутствие текста «Сбой». Проверки отсутствия точки нет. |
+| Область                 | Expected                                      | Observed                                                                                                                                         |
+| ----------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Источник признака       | Серверный boolean                             | `app/entities/dialog/api/dialog-client.ts:19`: `has_failure: z.boolean()`; `:48–51`: POST поиска.                                                |
+| Расположение            | Перед первой репликой                         | `app/pages/dialogs/ui/dialog-table/dialog-table-row.tsx:23–29`: ссылка содержит `DialogText` и скрытый chat ID, без точки.                       |
+| Визуальная форма        | Красная точка                                 | Там же `:30–38`: отдельная строка бейджей, `{row.has_failure && <Badge variant="destructive">Сбой</Badge>}`. Требуемая точка отсутствует.        |
+| Независимость признаков | Сбой не зависит от оператора                  | Там же `:37–38`: два независимых условия.                                                                                                        |
+| Положительный тест      | Точка перед обращением, доступное обозначение | `app/pages/dialogs/ui/dialogs-page.test.tsx:12–24,143–171`: fixture `has_failure:true`; проверяется текст «Сбой», но не точка, цвет и положение. |
+| Отрицательный тест      | Нет индикатора при `false`                    | Там же `:311–340`: fixture `has_failure:false`, проверяется отсутствие текста «Сбой». Проверки отсутствия точки нет.                             |
 
 **Unknown:** фактический рендер в браузере, состояние развёрнутого контура, актуальность внешних источников и прохождение тестов сейчас. Тесты прочитаны, но не запускались.
 
@@ -103,20 +103,20 @@ API применим напрямую:
 
 Хеши вычислены по байтам локальных файлов.
 
-| Путь | SHA256 |
-|---|---|
-| `A/work-items/WAVE-D090-EIGHT.md` | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
-| `A/sources/jira-subtasks/r1/content.json` | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
-| `A/sources/jira-subtasks/r1/metadata.json` | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
-| `A/sources/wiki-243776365/r1/content.json` | `2f659b5423fa7203dcd4f70743e59aabfb571452144394621091ff2cd58cab55` |
-| `A/sources/wiki-241085439/r1/content.json` | `974ea35aaf44b9ec7c14c573ba58bdf7ed55397a9ca47d62b37fb39d9886f8bc` |
-| `A/coverage.json` | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
-| `openspec/specs/dialog-registry/spec.md` | `ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83` |
-| `openspec/changes/archive/2026-10-05-mos-1037-dialog-registry/specs/dialog-registry/spec.md` | `742762a4b4565370424c79645372cfdfe46007423842d88eba20a3376fc1d17d` |
+| Путь                                                                                                    | SHA256                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `A/work-items/WAVE-D090-EIGHT.md`                                                                       | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
+| `A/sources/jira-subtasks/r1/content.json`                                                               | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
+| `A/sources/jira-subtasks/r1/metadata.json`                                                              | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
+| `A/sources/wiki-243776365/r1/content.json`                                                              | `2f659b5423fa7203dcd4f70743e59aabfb571452144394621091ff2cd58cab55` |
+| `A/sources/wiki-241085439/r1/content.json`                                                              | `974ea35aaf44b9ec7c14c573ba58bdf7ed55397a9ca47d62b37fb39d9886f8bc` |
+| `A/coverage.json`                                                                                       | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
+| `openspec/specs/dialog-registry/spec.md`                                                                | `ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83` |
+| `openspec/changes/archive/2026-10-05-mos-1037-dialog-registry/specs/dialog-registry/spec.md`            | `742762a4b4565370424c79645372cfdfe46007423842d88eba20a3376fc1d17d` |
 | `openspec/changes/archive/2026-10-16-fix-existing-scenarios-test-contour/specs/dialog-registry/spec.md` | `3590e25793853406e9b0fd6ff9c4c094d4c4f7f8cd52f0dd119c96527ad8ed24` |
-| `app/pages/dialogs/ui/dialog-table/dialog-table-row.tsx` | `3096df76cead86dad46f13be6cbde70de0a2c0d009c0842f82087f89ad985de3` |
-| `app/pages/dialogs/ui/dialogs-page.test.tsx` | `3dba3eb88505d29a2ed80dab6c301e0496007e85a26749d74b80a747824d2fec` |
-| `app/entities/dialog/api/dialog-client.ts` | `cbcf7ab8deebf1dd6dc211042d3fb0e820a36bb99081e93596138e1a087484b1` |
+| `app/pages/dialogs/ui/dialog-table/dialog-table-row.tsx`                                                | `3096df76cead86dad46f13be6cbde70de0a2c0d009c0842f82087f89ad985de3` |
+| `app/pages/dialogs/ui/dialogs-page.test.tsx`                                                            | `3dba3eb88505d29a2ed80dab6c301e0496007e85a26749d74b80a747824d2fec` |
+| `app/entities/dialog/api/dialog-client.ts`                                                              | `cbcf7ab8deebf1dd6dc211042d3fb0e820a36bb99081e93596138e1a087484b1` |
 
 ## 7. Ограничения
 

@@ -1,11 +1,7 @@
 {
   "sourceId": "jira-sandbox-details",
   "retrievedAt": "2026-10-16T13:18:06.195Z",
-  "allowlist": [
-    "MOS-960",
-    "MOS-961",
-    "MOS-962"
-  ],
+  "allowlist": ["MOS-960", "MOS-961", "MOS-962"],
   "items": [
     {
       "key": "MOS-960",

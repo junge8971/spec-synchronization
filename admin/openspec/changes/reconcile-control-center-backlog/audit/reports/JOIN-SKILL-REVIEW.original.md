@@ -13,6 +13,7 @@ Reused first: `A/reports/SCENARIO-MOS-909.md:55–61` C02 and `A/reviews/R-SCENA
 Linked saved catalog wiki is historical CRUD context: `A/sources/wiki-241097511-readable/r1/readable-text.txt:418–490` §§2.5–2.6 supplies list/detail but list table omits status. Saved API independently publishes status filtering. This discrepancy does not mean the queue API is absent or select a source-precedence rule.
 
 API locators below use JSON Pointer with slash escaping:
+
 - **L** `/paths/~1api~1control~1api~1skills~1v1~1skills/get`
 - **D** `/paths/~1api~1control~1api~1skills~1v1~1skills~1{skill_id}/get`
 - **P** `/paths/~1api~1control~1api~1skills~1v1~1skills~1{skill_id}~1status/post`

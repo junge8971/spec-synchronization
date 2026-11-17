@@ -19,11 +19,11 @@ Initial metadata read incorrectly resolved `sources/` relative to the change roo
 
 ## Integrity evidence
 
-| Input | Bytes | SHA-256 | Validation |
-|---|---:|---|---|
-| Current | 413007 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` | Matches saved metadata digest and byte count |
-| Historical | 354412 | `2f3c48d3542e4486f7c1a501c4a1a4a0b813c662af26079a1e98c9f09d6ea26d` | Matches README digest |
-| Aggregate | 642329 | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` | Computed fingerprint; no independent expected digest in supplied metadata/README |
+| Input      |  Bytes | SHA-256                                                            | Validation                                                                       |
+| ---------- | -----: | ------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| Current    | 413007 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` | Matches saved metadata digest and byte count                                     |
+| Historical | 354412 | `2f3c48d3542e4486f7c1a501c4a1a4a0b813c662af26079a1e98c9f09d6ea26d` | Matches README digest                                                            |
+| Aggregate  | 642329 | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` | Computed fingerprint; no independent expected digest in supplied metadata/README |
 
 Metadata records retrieval `2026-10-16T11:13:29.451Z`, source URL `https://nchat-a-tech.mos.ru/api/control/openapi.json`; no ETag/Last-Modified. These are saved provenance statements, not a new retrieval.
 
@@ -45,63 +45,146 @@ All before values apply to both historical and aggregate; all after values refer
 ### Added components (3)
 
 `/components/schemas/SkillCheckResponse`: ABSENT →
+
 ```json
-{"properties":{"check_type":{"$ref":"#/components/schemas/SkillCheckType"},"status":{"$ref":"#/components/schemas/SkillCheckStatus"},"blocking":{"type":"boolean","title":"Blocking"},"message":{"anyOf":[{"type":"string"},{"type":"null"}],"title":"Message"},"checked_at":{"type":"string","format":"date-time","title":"Checked At"}},"type":"object","required":["check_type","status","blocking","message","checked_at"],"title":"SkillCheckResponse"}
+{
+  "properties": {
+    "check_type": { "$ref": "#/components/schemas/SkillCheckType" },
+    "status": { "$ref": "#/components/schemas/SkillCheckStatus" },
+    "blocking": { "type": "boolean", "title": "Blocking" },
+    "message": { "anyOf": [{ "type": "string" }, { "type": "null" }], "title": "Message" },
+    "checked_at": { "type": "string", "format": "date-time", "title": "Checked At" }
+  },
+  "type": "object",
+  "required": ["check_type", "status", "blocking", "message", "checked_at"],
+  "title": "SkillCheckResponse"
+}
 ```
 
 `/components/schemas/SkillCheckStatus`: ABSENT →
+
 ```json
-{"type":"string","enum":["passed","failed","warning","blocked"],"title":"SkillCheckStatus"}
+{
+  "type": "string",
+  "enum": ["passed", "failed", "warning", "blocked"],
+  "title": "SkillCheckStatus"
+}
 ```
 
 `/components/schemas/SkillCheckType`: ABSENT →
+
 ```json
-{"type":"string","enum":["anketa","phrases","exact_conflicts","semantic_conflicts","endpoint"],"title":"SkillCheckType","description":"Порядок объявления - порядок вывода проверок."}
+{
+  "type": "string",
+  "enum": ["anketa", "phrases", "exact_conflicts", "semantic_conflicts", "endpoint"],
+  "title": "SkillCheckType",
+  "description": "Порядок объявления - порядок вывода проверок."
+}
 ```
 
 ### Removed component (1)
 
 `/components/schemas/SkillZone`:
+
 ```json
-{"type":"string","enum":["authenticated","anonymous"],"title":"SkillZone"}
+{ "type": "string", "enum": ["authenticated", "anonymous"], "title": "SkillZone" }
 ```
+
 → ABSENT.
 
 ### Changed existing components (8)
 
 Every changed pointer is listed; no other existing components change structurally.
 
-| Exact pointer | Before | After |
-|---|---|---|
-| `/components/schemas/CreateDomainRequest/properties/zones/items/$ref` | `"#/components/schemas/SkillZone"` | ABSENT |
-| `/components/schemas/CreateDomainRequest/properties/zones/items/type` | ABSENT | `"string"` |
-| `/components/schemas/DomainResponse/properties/zones/items/$ref` | `"#/components/schemas/SkillZone"` | ABSENT |
-| `/components/schemas/DomainResponse/properties/zones/items/type` | ABSENT | `"string"` |
-| `/components/schemas/UpdateDomainRequest/properties/zones/anyOf` | `[{"items":{"$ref":"#/components/schemas/SkillZone"},"type":"array"},{"type":"null"}]` | `[{"items":{"type":"string"},"type":"array"},{"type":"null"}]` |
-| `/components/schemas/SurfaceCardActionRequest/properties/value/minLength` | ABSENT | `1` |
-| `/components/schemas/SurfaceCardActionType/enum` | `["message","skill"]` | `["message","skill","link"]` |
-| `/components/schemas/SurfaceCardRequest/properties/subtitle/maxLength` | ABSENT | `200` |
-| `/components/schemas/SurfaceCardRequest/properties/subtitle/minLength` | ABSENT | `1` |
-| `/components/schemas/SurfaceCardRequest/properties/title/maxLength` | ABSENT | `100` |
-| `/components/schemas/SurfaceCardRequest/properties/title/minLength` | ABSENT | `1` |
-| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/cards/maxItems` | ABSENT | `4` |
-| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/greeting/maxLength` | ABSENT | `500` |
-| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/greeting/minLength` | ABSENT | `1` |
-| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/greeting_fallback/maxLength` | ABSENT | `500` |
-| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/suggestions/items/maxLength` | ABSENT | `100` |
-| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/suggestions/items/minLength` | ABSENT | `1` |
-| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/suggestions/maxItems` | ABSENT | `5` |
-| `/components/schemas/tsam__assistant_management__skills__endpoints__http__schemas__SkillResponse/properties/checks` | ABSENT | `{"items":{"$ref":"#/components/schemas/SkillCheckResponse"},"type":"array","title":"Checks"}` |
+| Exact pointer                                                                                                       | Before                                                                                 | After                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `/components/schemas/CreateDomainRequest/properties/zones/items/$ref`                                               | `"#/components/schemas/SkillZone"`                                                     | ABSENT                                                                                         |
+| `/components/schemas/CreateDomainRequest/properties/zones/items/type`                                               | ABSENT                                                                                 | `"string"`                                                                                     |
+| `/components/schemas/DomainResponse/properties/zones/items/$ref`                                                    | `"#/components/schemas/SkillZone"`                                                     | ABSENT                                                                                         |
+| `/components/schemas/DomainResponse/properties/zones/items/type`                                                    | ABSENT                                                                                 | `"string"`                                                                                     |
+| `/components/schemas/UpdateDomainRequest/properties/zones/anyOf`                                                    | `[{"items":{"$ref":"#/components/schemas/SkillZone"},"type":"array"},{"type":"null"}]` | `[{"items":{"type":"string"},"type":"array"},{"type":"null"}]`                                 |
+| `/components/schemas/SurfaceCardActionRequest/properties/value/minLength`                                           | ABSENT                                                                                 | `1`                                                                                            |
+| `/components/schemas/SurfaceCardActionType/enum`                                                                    | `["message","skill"]`                                                                  | `["message","skill","link"]`                                                                   |
+| `/components/schemas/SurfaceCardRequest/properties/subtitle/maxLength`                                              | ABSENT                                                                                 | `200`                                                                                          |
+| `/components/schemas/SurfaceCardRequest/properties/subtitle/minLength`                                              | ABSENT                                                                                 | `1`                                                                                            |
+| `/components/schemas/SurfaceCardRequest/properties/title/maxLength`                                                 | ABSENT                                                                                 | `100`                                                                                          |
+| `/components/schemas/SurfaceCardRequest/properties/title/minLength`                                                 | ABSENT                                                                                 | `1`                                                                                            |
+| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/cards/maxItems`                                   | ABSENT                                                                                 | `4`                                                                                            |
+| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/greeting/maxLength`                               | ABSENT                                                                                 | `500`                                                                                          |
+| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/greeting/minLength`                               | ABSENT                                                                                 | `1`                                                                                            |
+| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/greeting_fallback/maxLength`                      | ABSENT                                                                                 | `500`                                                                                          |
+| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/suggestions/items/maxLength`                      | ABSENT                                                                                 | `100`                                                                                          |
+| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/suggestions/items/minLength`                      | ABSENT                                                                                 | `1`                                                                                            |
+| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/suggestions/maxItems`                             | ABSENT                                                                                 | `5`                                                                                            |
+| `/components/schemas/tsam__assistant_management__skills__endpoints__http__schemas__SkillResponse/properties/checks` | ABSENT                                                                                 | `{"items":{"$ref":"#/components/schemas/SkillCheckResponse"},"type":"array","title":"Checks"}` |
 
 Final replacement pointer: `/components/schemas/tsam__assistant_management__skills__endpoints__http__schemas__SkillResponse/required`.
 
 Before:
+
 ```json
-["id","code","service_id","name","types","display_version","purpose","expected_result","description","domain","team","contact","author_user_id","limitations","comments","related_materials","connection","intents","status","training","training_eta","autotest","autotest_note","version","created_at","updated_at"]
+[
+  "id",
+  "code",
+  "service_id",
+  "name",
+  "types",
+  "display_version",
+  "purpose",
+  "expected_result",
+  "description",
+  "domain",
+  "team",
+  "contact",
+  "author_user_id",
+  "limitations",
+  "comments",
+  "related_materials",
+  "connection",
+  "intents",
+  "status",
+  "training",
+  "training_eta",
+  "autotest",
+  "autotest_note",
+  "version",
+  "created_at",
+  "updated_at"
+]
 ```
+
 After:
+
 ```json
-["id","code","service_id","name","types","display_version","purpose","expected_result","description","domain","team","contact","author_user_id","limitations","comments","related_materials","connection","intents","status","training","training_eta","autotest","autotest_note","version","created_at","updated_at","checks"]
+[
+  "id",
+  "code",
+  "service_id",
+  "name",
+  "types",
+  "display_version",
+  "purpose",
+  "expected_result",
+  "description",
+  "domain",
+  "team",
+  "contact",
+  "author_user_id",
+  "limitations",
+  "comments",
+  "related_materials",
+  "connection",
+  "intents",
+  "status",
+  "training",
+  "training_eta",
+  "autotest",
+  "autotest_note",
+  "version",
+  "created_at",
+  "updated_at",
+  "checks"
+]
 ```
 
 ## Reference routing to operations
@@ -112,37 +195,37 @@ Traversal follows `$ref` recursively, resolves RFC 6901 tokens, and uses a visit
 
 Labels are local report shorthand, not API identifiers.
 
-| Label | Method/path | Exact operationId |
-|---|---|---|
-| D1 | GET `/api/control/api/skills/v1/domains` | `get_domain_list_api_control_api_skills_v1_domains_get` |
-| D2 | POST `/api/control/api/skills/v1/domains` | `create_domain_api_control_api_skills_v1_domains_post` |
-| D3 | GET `/api/control/api/skills/v1/domains/{domain_id}` | `get_domain_detail_api_control_api_skills_v1_domains__domain_id__get` |
-| D4 | PUT `/api/control/api/skills/v1/domains/{domain_id}` | `update_domain_api_control_api_skills_v1_domains__domain_id__put` |
-| D5 | PATCH `/api/control/api/skills/v1/domains/{domain_id}` | `update_domain_api_control_api_skills_v1_domains__domain_id__patch` |
-| K1 | GET `/api/control/api/skills/v1/skills/{skill_id}` | `get_skill_detail_api_control_api_skills_v1_skills__skill_id__get` |
-| K2 | PUT `/api/control/api/skills/v1/skills/{skill_id}` | `update_skill_api_control_api_skills_v1_skills__skill_id__put` |
-| K3 | PATCH `/api/control/api/skills/v1/skills/{skill_id}` | `update_skill_api_control_api_skills_v1_skills__skill_id__patch` |
-| K4 | POST `/api/control/api/skills/v1/skills/{skill_id}/status` | `change_skill_status_api_control_api_skills_v1_skills__skill_id__status_post` |
-| U1 | POST `/api/control/api/surfaces/v1/surfaces` | `create_surface_api_control_api_surfaces_v1_surfaces_post` |
-| U2 | PUT `/api/control/api/surfaces/v1/surfaces/{surface_id}/configuration` | `update_surface_configuration_api_control_api_surfaces_v1_surfaces__surface_id__configuration_put` |
-| U3 | GET `/api/control/api/surfaces/v1/surfaces/{surface_id}` | `get_surface_detail_api_control_api_surfaces_v1_surfaces__surface_id__get` |
+| Label | Method/path                                                            | Exact operationId                                                                                  |
+| ----- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| D1    | GET `/api/control/api/skills/v1/domains`                               | `get_domain_list_api_control_api_skills_v1_domains_get`                                            |
+| D2    | POST `/api/control/api/skills/v1/domains`                              | `create_domain_api_control_api_skills_v1_domains_post`                                             |
+| D3    | GET `/api/control/api/skills/v1/domains/{domain_id}`                   | `get_domain_detail_api_control_api_skills_v1_domains__domain_id__get`                              |
+| D4    | PUT `/api/control/api/skills/v1/domains/{domain_id}`                   | `update_domain_api_control_api_skills_v1_domains__domain_id__put`                                  |
+| D5    | PATCH `/api/control/api/skills/v1/domains/{domain_id}`                 | `update_domain_api_control_api_skills_v1_domains__domain_id__patch`                                |
+| K1    | GET `/api/control/api/skills/v1/skills/{skill_id}`                     | `get_skill_detail_api_control_api_skills_v1_skills__skill_id__get`                                 |
+| K2    | PUT `/api/control/api/skills/v1/skills/{skill_id}`                     | `update_skill_api_control_api_skills_v1_skills__skill_id__put`                                     |
+| K3    | PATCH `/api/control/api/skills/v1/skills/{skill_id}`                   | `update_skill_api_control_api_skills_v1_skills__skill_id__patch`                                   |
+| K4    | POST `/api/control/api/skills/v1/skills/{skill_id}/status`             | `change_skill_status_api_control_api_skills_v1_skills__skill_id__status_post`                      |
+| U1    | POST `/api/control/api/surfaces/v1/surfaces`                           | `create_surface_api_control_api_surfaces_v1_surfaces_post`                                         |
+| U2    | PUT `/api/control/api/surfaces/v1/surfaces/{surface_id}/configuration` | `update_surface_configuration_api_control_api_surfaces_v1_surfaces__surface_id__configuration_put` |
+| U3    | GET `/api/control/api/surfaces/v1/surfaces/{surface_id}`               | `get_surface_detail_api_control_api_surfaces_v1_surfaces__surface_id__get`                         |
 
 ### Complete affected-component mapping
 
-| Component | Current operations | Historical/aggregate operations |
-|---|---|---|
-| CreateDomainRequest | D2 | D2 |
-| DomainResponse | D1,D3,D4,D5 | D1,D3,D4,D5 |
-| UpdateDomainRequest | D4,D5 | D4,D5 |
-| SkillZone (removed) | none | D1,D2,D3,D4,D5 |
-| tsam__assistant_management__skills__endpoints__http__schemas__SkillResponse | K1,K2,K3,K4 | K1,K2,K3,K4 |
-| SkillCheckResponse (added) | K1,K2,K3,K4 | none |
-| SkillCheckStatus (added) | K1,K2,K3,K4 | none |
-| SkillCheckType (added) | K1,K2,K3,K4 | none |
-| UpdateSurfaceConfigurationRequest | U1,U2 | U1,U2 |
-| SurfaceCardRequest | U1,U2 | U1,U2 |
-| SurfaceCardActionRequest | U1,U2 | U1,U2 |
-| SurfaceCardActionType | U1,U2,U3 | U1,U2,U3 |
+| Component                                                                   | Current operations | Historical/aggregate operations |
+| --------------------------------------------------------------------------- | ------------------ | ------------------------------- |
+| CreateDomainRequest                                                         | D2                 | D2                              |
+| DomainResponse                                                              | D1,D3,D4,D5        | D1,D3,D4,D5                     |
+| UpdateDomainRequest                                                         | D4,D5              | D4,D5                           |
+| SkillZone (removed)                                                         | none               | D1,D2,D3,D4,D5                  |
+| tsam__assistant_management__skills__endpoints__http__schemas__SkillResponse | K1,K2,K3,K4        | K1,K2,K3,K4                     |
+| SkillCheckResponse (added)                                                  | K1,K2,K3,K4        | none                            |
+| SkillCheckStatus (added)                                                    | K1,K2,K3,K4        | none                            |
+| SkillCheckType (added)                                                      | K1,K2,K3,K4        | none                            |
+| UpdateSurfaceConfigurationRequest                                           | U1,U2              | U1,U2                           |
+| SurfaceCardRequest                                                          | U1,U2              | U1,U2                           |
+| SurfaceCardActionRequest                                                    | U1,U2              | U1,U2                           |
+| SurfaceCardActionType                                                       | U1,U2,U3           | U1,U2,U3                        |
 
 ### Exact ref-edge evidence
 
@@ -161,21 +244,21 @@ Operation roots (all three documents):
 
 Common component edges (all three):
 
-| Ref source pointer | Target component |
-|---|---|
-| `/components/schemas/TsamResponseSchema_DomainListResponse_/properties/data/$ref` | DomainListResponse |
-| `/components/schemas/DomainListResponse/properties/items/items/$ref` | DomainResponse |
-| `/components/schemas/TsamResponseSchema_DomainResponse_/properties/data/$ref` | DomainResponse |
-| `/components/schemas/TsamResponseSchema_SkillResponse_/properties/data/$ref` | tsam__assistant_management__skills__endpoints__http__schemas__SkillResponse |
-| `/components/schemas/CreateSurfaceRequest/properties/configuration/anyOf/0/$ref` | UpdateSurfaceConfigurationRequest |
-| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/cards/items/$ref` | SurfaceCardRequest |
-| `/components/schemas/SurfaceCardRequest/properties/action/$ref` | SurfaceCardActionRequest |
-| `/components/schemas/SurfaceCardActionRequest/properties/type/$ref` | SurfaceCardActionType |
-| `/components/schemas/TsamResponseSchema_SurfaceDetailResponse_/properties/data/$ref` | SurfaceDetailResponse |
-| `/components/schemas/SurfaceDetailResponse/properties/configuration/$ref` | SurfaceConfigurationResponse |
-| `/components/schemas/SurfaceConfigurationResponse/properties/cards/items/$ref` | SurfaceCardResponse |
-| `/components/schemas/SurfaceCardResponse/properties/action/$ref` | SurfaceCardActionResponse |
-| `/components/schemas/SurfaceCardActionResponse/properties/type/$ref` | SurfaceCardActionType |
+| Ref source pointer                                                                   | Target component                                                            |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| `/components/schemas/TsamResponseSchema_DomainListResponse_/properties/data/$ref`    | DomainListResponse                                                          |
+| `/components/schemas/DomainListResponse/properties/items/items/$ref`                 | DomainResponse                                                              |
+| `/components/schemas/TsamResponseSchema_DomainResponse_/properties/data/$ref`        | DomainResponse                                                              |
+| `/components/schemas/TsamResponseSchema_SkillResponse_/properties/data/$ref`         | tsam__assistant_management__skills__endpoints__http__schemas__SkillResponse |
+| `/components/schemas/CreateSurfaceRequest/properties/configuration/anyOf/0/$ref`     | UpdateSurfaceConfigurationRequest                                           |
+| `/components/schemas/UpdateSurfaceConfigurationRequest/properties/cards/items/$ref`  | SurfaceCardRequest                                                          |
+| `/components/schemas/SurfaceCardRequest/properties/action/$ref`                      | SurfaceCardActionRequest                                                    |
+| `/components/schemas/SurfaceCardActionRequest/properties/type/$ref`                  | SurfaceCardActionType                                                       |
+| `/components/schemas/TsamResponseSchema_SurfaceDetailResponse_/properties/data/$ref` | SurfaceDetailResponse                                                       |
+| `/components/schemas/SurfaceDetailResponse/properties/configuration/$ref`            | SurfaceConfigurationResponse                                                |
+| `/components/schemas/SurfaceConfigurationResponse/properties/cards/items/$ref`       | SurfaceCardResponse                                                         |
+| `/components/schemas/SurfaceCardResponse/properties/action/$ref`                     | SurfaceCardActionResponse                                                   |
+| `/components/schemas/SurfaceCardActionResponse/properties/type/$ref`                 | SurfaceCardActionType                                                       |
 
 Current-only edges:
 

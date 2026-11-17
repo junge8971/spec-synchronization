@@ -2,9 +2,7 @@
   "pointer": "#/components/schemas/SeriesGranularity",
   "value": {
     "type": "string",
-    "enum": [
-      "day"
-    ],
+    "enum": ["day"],
     "title": "SeriesGranularity"
   }
 }

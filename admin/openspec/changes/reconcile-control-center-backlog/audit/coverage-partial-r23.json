@@ -4,8 +4,20 @@
   "complete": false,
   "globalProgress": "6/28",
   "acceptedChains": [
-    {"report": "reports/DELTA-KNOWLEDGE-BASE-ROOT-DOC.md", "review": "reviews/R-DELTA-KNOWLEDGE-BASE-ROOT-DOC.md", "candidates": "KBROOT01–07", "verdict": "ACCEPT", "decision": "D-041"},
-    {"report": "reports/DELTA-AB-TESTING-ROOT-DOC.md", "review": "reviews/R-DELTA-AB-TESTING-ROOT-DOC.md", "candidates": "ABROOT01–08", "verdict": "ACCEPT", "decision": "D-041"}
+    {
+      "report": "reports/DELTA-KNOWLEDGE-BASE-ROOT-DOC.md",
+      "review": "reviews/R-DELTA-KNOWLEDGE-BASE-ROOT-DOC.md",
+      "candidates": "KBROOT01–07",
+      "verdict": "ACCEPT",
+      "decision": "D-041"
+    },
+    {
+      "report": "reports/DELTA-AB-TESTING-ROOT-DOC.md",
+      "review": "reviews/R-DELTA-AB-TESTING-ROOT-DOC.md",
+      "candidates": "ABROOT01–08",
+      "verdict": "ACCEPT",
+      "decision": "D-041"
+    }
   ],
   "sourceAdditions": [
     "sources/wiki-241102892/r1/metadata.json",

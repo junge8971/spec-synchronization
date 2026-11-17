@@ -4,11 +4,11 @@
 
 **ACCEPT all three reports and all three exact candidate replacements. Mandatory corrections: none.** Acceptance is bounded evidence/documentation review, not feature delivery, publication authorization, API/write activation or deployment acceptance. Parent decides and publishes.
 
-| Report | Verdict | Necessary correction / disposition |
-|---|---|---|
-| IMPL-SKILL-MONITORING | ACCEPT | Implementation-driven owner-plan no-op is supported. Preserve accepted documentary questions and conditional settings/refresh gates; no-op does not cancel earlier traceability recommendations. |
-| IMPL-SKILL-OPERATIONS-INFO | ACCEPT | Its narrow correction is warranted: incident GET/DTO/local mock exist, but the complete operational UI contract and integration do not. Keep all checkboxes open. |
-| IMPL-SKILL-RESULT-ANALYTICS | ACCEPT | Implementation-driven no-op is supported. General dashboard/catalog/board and ordinary detail metadata do not satisfy per-skill result analytics. Keep existing definition/full-sample/API gates. |
+| Report                      | Verdict | Necessary correction / disposition                                                                                                                                                                |
+| --------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IMPL-SKILL-MONITORING       | ACCEPT  | Implementation-driven owner-plan no-op is supported. Preserve accepted documentary questions and conditional settings/refresh gates; no-op does not cancel earlier traceability recommendations.  |
+| IMPL-SKILL-OPERATIONS-INFO  | ACCEPT  | Its narrow correction is warranted: incident GET/DTO/local mock exist, but the complete operational UI contract and integration do not. Keep all checkboxes open.                                 |
+| IMPL-SKILL-RESULT-ANALYTICS | ACCEPT  | Implementation-driven no-op is supported. General dashboard/catalog/board and ordinary detail metadata do not satisfy per-skill result analytics. Keep existing definition/full-sample/API gates. |
 
 ## Independent verification
 
@@ -45,30 +45,30 @@ SHA-256: `49e80bf0997cafb6381e44789744707ba529bcb5b8d0f874eac54dfc7788b9de`.
 
 Each oldText occurs exactly once in its target. Applied each exact oldText/newText pair only to in-memory strings; reviewed with the full unchanged owner packet. No project files were written. The following verdicts refer to those exact JSON bytes, not a paraphrased alternative patch.
 
-| JSON entry | Target under `openspec/changes/mos-1026-skill-operations-info/` | Verdict | Rationale |
-|---|---|---|---|
-| 0 | proposal.md | ACCEPT | Replaces stale blanket absence with saved GET/DTO/mock availability and missing frontend/complete contract; retains gate 1.1 and unverified deployment. |
-| 1 | design.md | ACCEPT | Correctly distinguishes absent nested SkillResponse content from separate incident GET; enumerates partial fields without claiming completeness, preserves deadline distinction and read-only/internal-upsert boundary. |
-| 2 | tasks.md | ACCEPT | Refines existing 1.1, not a new task or completion. Requires full scenario/field/source-state reconciliation; leaves all checkboxes, subsequent work and acceptance unchanged. |
+| JSON entry | Target under `openspec/changes/mos-1026-skill-operations-info/` | Verdict | Rationale                                                                                                                                                                                                               |
+| ---------- | --------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0          | proposal.md                                                     | ACCEPT  | Replaces stale blanket absence with saved GET/DTO/mock availability and missing frontend/complete contract; retains gate 1.1 and unverified deployment.                                                                 |
+| 1          | design.md                                                       | ACCEPT  | Correctly distinguishes absent nested SkillResponse content from separate incident GET; enumerates partial fields without claiming completeness, preserves deadline distinction and read-only/internal-upsert boundary. |
+| 2          | tasks.md                                                        | ACCEPT  | Refines existing 1.1, not a new task or completion. Requires full scenario/field/source-state reconciliation; leaves all checkboxes, subsequent work and acceptance unchanged.                                          |
 
 All three preserve source-state distinctions, independent reads, safe source links, read-only exclusions, conditional write boundaries, and the unchanged feature spec. No partial UI activation or synthetic fixture is authorized. They are a narrow stale-wording correction, not an exhaustive incorporation or cancellation of earlier accepted documentary enrichments.
 
 ### Target hashes
 
-| Target | Before SHA-256 | Exact in-memory after SHA-256 |
-|---|---|---|
+| Target      | Before SHA-256                                                     | Exact in-memory after SHA-256                                      |
+| ----------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
 | proposal.md | `a2177d7a3dee5836dda19c259612f61019cbf3eabee7a510fbfb86485be2da67` | `424da30a249ec345f8f088e817c0afc277ca5913287fa35de64d35fd1eec0fab` |
-| design.md | `6b3877218cf8a9d3e0ccd63e0eb5a40d623bac80654d41a71bf505c49491cf91` | `ba53d8986784adeb4a7822d552df1c931da6aab4d409599a009036d0fce6ecd0` |
-| tasks.md | `250b6b97a5d70ad1efffae9927063525a710e804b2fd8b0403a7da7fad318553` | `da0ad607376b7e3d7c7f508012f726eecf131f9570cee84c73caa8587e50bf2e` |
+| design.md   | `6b3877218cf8a9d3e0ccd63e0eb5a40d623bac80654d41a71bf505c49491cf91` | `ba53d8986784adeb4a7822d552df1c931da6aab4d409599a009036d0fce6ecd0` |
+| tasks.md    | `250b6b97a5d70ad1efffae9927063525a710e804b2fd8b0403a7da7fad318553` | `da0ad607376b7e3d7c7f508012f726eecf131f9570cee84c73caa8587e50bf2e` |
 
 ### Reviewed report hashes
 
 Under `openspec/changes/reconcile-control-center-backlog/audit/reports/`:
 
-| Report | SHA-256 |
-|---|---|
-| IMPL-SKILL-MONITORING.md | `d2ff692b363d56cc015efb0bd5e8e7b3e5f530f6cbcc9437d9ac2d7cfff3ea92` |
-| IMPL-SKILL-OPERATIONS-INFO.md | `75ee46aae14a4bf5068b623eef1de127b6b9f054cdb67933b6cbb60f8c970f0c` |
+| Report                         | SHA-256                                                            |
+| ------------------------------ | ------------------------------------------------------------------ |
+| IMPL-SKILL-MONITORING.md       | `d2ff692b363d56cc015efb0bd5e8e7b3e5f530f6cbcc9437d9ac2d7cfff3ea92` |
+| IMPL-SKILL-OPERATIONS-INFO.md  | `75ee46aae14a4bf5068b623eef1de127b6b9f054cdb67933b6cbb60f8c970f0c` |
 | IMPL-SKILL-RESULT-ANALYTICS.md | `2c9efda27ce4fe7419ac1622137161f8428b9edd3d1eae6bbeab92534397f5eb` |
 
 Saved local OpenAPI hash independently matched `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7`.

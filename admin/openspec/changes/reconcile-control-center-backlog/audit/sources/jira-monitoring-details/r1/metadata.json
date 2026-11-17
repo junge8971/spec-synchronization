@@ -5,12 +5,7 @@
   "sha256": "6dc8925cbbb1cfcd3a4179db720d38a72d9436926f7df3b73e612eb528c84c73",
   "bytes": 44254,
   "collection": "Parent verified-origin Jira GET, selected issue fields; exact returned payload extracted from matching MCP result only. No external mutation.",
-  "keys": [
-    "MOS-775",
-    "MOS-1146",
-    "MOS-1397",
-    "MOS-1398"
-  ],
+  "keys": ["MOS-775", "MOS-1146", "MOS-1397", "MOS-1398"],
   "fields": "summary,description,issuetype,status,subtasks,parent,updated,attachment,comment",
   "comments": [
     {

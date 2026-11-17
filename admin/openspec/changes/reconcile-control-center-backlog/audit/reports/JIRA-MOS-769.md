@@ -10,10 +10,10 @@ Inventory only; supplemental `work-items/JIRA-INVENTORY-HANDOFF.md` supersedes t
 
 ## Assigned members
 
-| Member | Saved summary | Type | Status (observation only) | Issue updated | Exact membership / index locators |
-| --- | --- | --- | --- | --- | --- |
-| MOS-903 | [B] Реализовать API приема событий в МПММ | Development task | Ready for test | 2026-10-09T15:04:02.033+0800 | hierarchy `$.results[4].children[0]`; member-index `$.items[42]` |
-| MOS-908 | [B] Реализовать отправку событий аудита из ЦАМ в МПММ | Development task | Ready for test | 2026-10-09T15:03:52.967+0800 | hierarchy `$.results[4].children[1]`; member-index `$.items[43]` |
+| Member  | Saved summary                                         | Type             | Status (observation only) | Issue updated                | Exact membership / index locators                                |
+| ------- | ----------------------------------------------------- | ---------------- | ------------------------- | ---------------------------- | ---------------------------------------------------------------- |
+| MOS-903 | [B] Реализовать API приема событий в МПММ             | Development task | Ready for test            | 2026-10-09T15:04:02.033+0800 | hierarchy `$.results[4].children[0]`; member-index `$.items[42]` |
+| MOS-908 | [B] Реализовать отправку событий аудита из ЦАМ в МПММ | Development task | Ready for test            | 2026-10-09T15:03:52.967+0800 | hierarchy `$.results[4].children[1]`; member-index `$.items[43]` |
 
 All field values in the table come from the corresponding index object's `.summary`, `.type`, `.status`, and `.updated`; packet paths and collection times are given above.
 

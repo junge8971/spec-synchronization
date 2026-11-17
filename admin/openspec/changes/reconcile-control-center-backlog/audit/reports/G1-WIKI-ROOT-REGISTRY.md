@@ -25,12 +25,12 @@ Root: observed URL `https://wiki.mos-team.ru/spaces/KR/pages/238324523/`; embedd
 
 All ten saved non-root canonical wiki content hashes recomputed equal their adjacent metadata SHA-256 values. Root comparison to metadata is not applicable (file absent), not a digest mismatch. These checks establish local byte consistency only, not origin authenticity, freshness, semantic completeness or external approval.
 
-| Direct-link packet | External version; saved retrieval time (UTC) | Body / attachment evidence | Remaining need |
-|---|---|---|---|
-| `wiki-243776365/r1` | 13; 2026-10-16T11:51:52.439Z | bodyView + text; attachment index size 0, next null | No missing body/metadata/index for this snapshot; freshness and semantic review separate |
-| `wiki-241080062/r1` | 17; 2026-10-16T11:48:21.710Z | bodyView + text; index size 1, next null; attachment 245672060, `БД-Навыки.svg` | No missing body/metadata/index; SVG body uncollected, relevance review before request |
-| `wiki-245673187/r1` | 18; 2026-10-16T11:45:08.223Z | bodyView + text; index size 0, next null | No missing body/metadata/index for this snapshot |
-| `wiki-247734813/r1` | 11; 2026-10-16T11:17:53.564Z | textContent + links, tables flattened; no bodyView or attachment enumeration | Attachment index; structural bodyView if table-sensitive evidence is required; linked prototype body remains uncollected |
+| Direct-link packet  | External version; saved retrieval time (UTC) | Body / attachment evidence                                                      | Remaining need                                                                                                           |
+| ------------------- | -------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `wiki-243776365/r1` | 13; 2026-10-16T11:51:52.439Z                 | bodyView + text; attachment index size 0, next null                             | No missing body/metadata/index for this snapshot; freshness and semantic review separate                                 |
+| `wiki-241080062/r1` | 17; 2026-10-16T11:48:21.710Z                 | bodyView + text; index size 1, next null; attachment 245672060, `БД-Навыки.svg` | No missing body/metadata/index; SVG body uncollected, relevance review before request                                    |
+| `wiki-245673187/r1` | 18; 2026-10-16T11:45:08.223Z                 | bodyView + text; index size 0, next null                                        | No missing body/metadata/index for this snapshot                                                                         |
+| `wiki-247734813/r1` | 11; 2026-10-16T11:17:53.564Z                 | textContent + links, tables flattened; no bodyView or attachment enumeration    | Attachment index; structural bodyView if table-sensitive evidence is required; linked prototype body remains uncollected |
 
 The first three attachment indexes report exhausted pagination in their saved normalized envelopes; this does not independently verify the live server. Feedback's observed prototype URL is at `sources/wiki-247734813/r1/content.json#/links/0/href` (line 12). It is a discovery edge, not an attachment inventory. No executable HTML was opened. The skills SVG download locator is `sources/wiki-241080062/r1/content.json#/attachments/results/0/links/download`.
 
@@ -38,63 +38,63 @@ The first three attachment indexes report exhausted pagination in their saved no
 
 Locator convention: **P/i** means the exact pointer `sources/wiki-238324523/r1/content.json#/pages/i` (line `8+i`). Every row is included because it occurs there; reason column is only provisional title-based relevance unless saved metadata supports it. **U** = no saved body/access-result/metadata/index under that page ID, historically and currently uncollected; access unknown. **BMA** = need body extraction, metadata (observed URL, actual retrieval time, external version if available, digest/method/limitations) and attachment index with pagination/exact zero or explicit failure. All U rows need BMA, conditional on supervisor scope confirmation. **H** adds a hold for ambiguity, not permission to traverse.
 
-| P/i | Stable ID | Snapshot title | Revision/current state | Inclusion relevance / ambiguity | Exact remaining packet need |
-|---|---|---|---|---|---|
-| P/0 | 241082618 | Декомпозиция | U | Generic planning; admin relevance needs confirmation | H: BMA |
-| P/1 | 245670575 | Декомпозиция задач: диалоги | U | Dialog planning | BMA |
-| P/2 | 241085260 | Системный анализ | U | Generic analysis; boundary unknown | H: BMA |
-| P/3 | 241085256 | API | U | Generic API; boundary unknown | H: BMA |
-| P/4 | 238347066 | /skills - Каталог навыков | U | Skills listing | BMA |
-| P/5 | 238352321 | /skills/{id} - Карточка навыка, описание | U | Skills detail | BMA |
-| P/6 | 241074633 | /skills/{id}/monitoring - Мониторинг навыка | U | Skills monitoring | BMA |
-| P/7 | 241080643 | /dialogs - Список диалогов | U | Dialog listing | BMA |
-| P/8 | 241083649 | /dialogs/{id} - Карточка диалога | U | Dialog detail | BMA |
-| P/9 | 238350232 | /reports и /reports?tab=builder - Шаблон и конструктор отчётов | U | Reports | BMA |
-| P/10 | 241102892 | RBAC - Роли, ресурсы и разрешения | U | Auth/permissions retained, not implementation approval | BMA |
-| P/11 | 241092173 | Группы данных | U | Cross-cutting data; boundary unknown | H: BMA |
-| P/12 | 241076726 | Модель данных | U | Cross-cutting data; boundary unknown | H: BMA |
-| P/13 | 245678373 | Ролевая модель МПММ | U | Broad MPMM roles; establish admin relevance first | H: BMA |
-| P/14 | 241077052 | Бизнес-анализ: Админка | U | Admin overview | BMA |
-| P/15 | 243776365 | Бизнес-анализ: Диалоги | r1 saved, v13 | Metadata ties to MOS-773 | None for body/metadata/index; review separate |
-| P/16 | 241080062 | Админка. Навыки | r1 saved, v17; readable derivative | Metadata ties to MOS-774/MOS-782 | None for body/metadata/index; SVG body uncollected |
-| P/17 | 245673187 | Бизнес-анализ: Поверхности | r1 saved, v18 | Metadata ties to MOS-783 | None for body/metadata/index; review separate |
-| P/18 | 247734813 | Раздел Обратная связь | r1 text extraction, v11 | Explicit feedback section | Attachment index; conditional structural body; prototype body pending |
-| P/19 | 247737907 | Раздел База знаний | U | Optional knowledge base retained | BMA |
-| P/20 | 247747489 | Раздел Состояние системы (рубильники) | U | System controls | BMA |
-| P/21 | 247744768 | Раздел Шаблоны ответов | U | Response templates | BMA |
-| P/22 | 247751846 | Раздел Справочники | U | Dictionaries | BMA |
-| P/23 | 247747363 | Раздел API | U | Admin API section; not necessarily wire contract | BMA |
-| P/24 | 247742436 | Раздел А/В Тестирование | U | Optional A/B testing retained | BMA |
-| P/25 | 250794931 | Фильтрация списков | U | Cross-cutting list filters | BMA |
-| P/26 | 241085263 | Черновые документы/заметки | U | Draft/container relevance unresolved | H: BMA |
-| P/27 | 241080088 | Админка. Состояние системы | U | System state; not interchangeable with P/20 | BMA |
-| P/28 | 247728705 | Бизнес-анализ: Команды | U | Teams | BMA |
-| P/29 | 241080065 | Админка. Поверхности | U | Surfaces; distinct from saved P/17 | BMA |
-| P/30 | 241080071 | Админка. Диалоги | U | Dialogs; distinct from saved P/15 | BMA |
-| P/31 | 241080068 | Админка. Песочница | U | Sandbox | BMA |
-| P/32 | 241080082 | Админка. Отчеты | U | Reports; distinct from P/9 | BMA |
-| P/33 | 241080100 | Админка. Команды и доступ | U | Teams/access | BMA |
-| P/34 | 241080097 | Админка. Заглушки | U | Stub/fallback section | BMA |
-| P/35 | 241080080 | Админка. Дашборд | U | Dashboard | BMA |
-| P/36 | 238329164 | Бизнес-анализ: Аутентификация и сеанс | U | Auth/session retained, not new auth authorization | BMA |
-| P/37 | 238333356 | Бизнес-анализ: Роли и права | U | Roles/permissions retained | BMA |
-| P/38 | 238324852 | Ассессмент навыков | U | Assessment boundary explicitly ambiguous | H: BMA |
-| P/39 | 243761671 | Аналитическая справка по существующей админке МПММ | U | Historical/broad MPMM; relevance needed | H: BMA |
-| P/40 | 243765248 | Бизнес-анализ. МПММ | U | Broad MPMM; relevance needed | H: BMA |
-| P/41 | 250781168 | Журнал вопросов - для админки ЦАМ | U | Admin decision/question context | BMA |
+| P/i  | Stable ID | Snapshot title                                                 | Revision/current state             | Inclusion relevance / ambiguity                        | Exact remaining packet need                                           |
+| ---- | --------- | -------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------ | --------------------------------------------------------------------- |
+| P/0  | 241082618 | Декомпозиция                                                   | U                                  | Generic planning; admin relevance needs confirmation   | H: BMA                                                                |
+| P/1  | 245670575 | Декомпозиция задач: диалоги                                    | U                                  | Dialog planning                                        | BMA                                                                   |
+| P/2  | 241085260 | Системный анализ                                               | U                                  | Generic analysis; boundary unknown                     | H: BMA                                                                |
+| P/3  | 241085256 | API                                                            | U                                  | Generic API; boundary unknown                          | H: BMA                                                                |
+| P/4  | 238347066 | /skills - Каталог навыков                                      | U                                  | Skills listing                                         | BMA                                                                   |
+| P/5  | 238352321 | /skills/{id} - Карточка навыка, описание                       | U                                  | Skills detail                                          | BMA                                                                   |
+| P/6  | 241074633 | /skills/{id}/monitoring - Мониторинг навыка                    | U                                  | Skills monitoring                                      | BMA                                                                   |
+| P/7  | 241080643 | /dialogs - Список диалогов                                     | U                                  | Dialog listing                                         | BMA                                                                   |
+| P/8  | 241083649 | /dialogs/{id} - Карточка диалога                               | U                                  | Dialog detail                                          | BMA                                                                   |
+| P/9  | 238350232 | /reports и /reports?tab=builder - Шаблон и конструктор отчётов | U                                  | Reports                                                | BMA                                                                   |
+| P/10 | 241102892 | RBAC - Роли, ресурсы и разрешения                              | U                                  | Auth/permissions retained, not implementation approval | BMA                                                                   |
+| P/11 | 241092173 | Группы данных                                                  | U                                  | Cross-cutting data; boundary unknown                   | H: BMA                                                                |
+| P/12 | 241076726 | Модель данных                                                  | U                                  | Cross-cutting data; boundary unknown                   | H: BMA                                                                |
+| P/13 | 245678373 | Ролевая модель МПММ                                            | U                                  | Broad MPMM roles; establish admin relevance first      | H: BMA                                                                |
+| P/14 | 241077052 | Бизнес-анализ: Админка                                         | U                                  | Admin overview                                         | BMA                                                                   |
+| P/15 | 243776365 | Бизнес-анализ: Диалоги                                         | r1 saved, v13                      | Metadata ties to MOS-773                               | None for body/metadata/index; review separate                         |
+| P/16 | 241080062 | Админка. Навыки                                                | r1 saved, v17; readable derivative | Metadata ties to MOS-774/MOS-782                       | None for body/metadata/index; SVG body uncollected                    |
+| P/17 | 245673187 | Бизнес-анализ: Поверхности                                     | r1 saved, v18                      | Metadata ties to MOS-783                               | None for body/metadata/index; review separate                         |
+| P/18 | 247734813 | Раздел Обратная связь                                          | r1 text extraction, v11            | Explicit feedback section                              | Attachment index; conditional structural body; prototype body pending |
+| P/19 | 247737907 | Раздел База знаний                                             | U                                  | Optional knowledge base retained                       | BMA                                                                   |
+| P/20 | 247747489 | Раздел Состояние системы (рубильники)                          | U                                  | System controls                                        | BMA                                                                   |
+| P/21 | 247744768 | Раздел Шаблоны ответов                                         | U                                  | Response templates                                     | BMA                                                                   |
+| P/22 | 247751846 | Раздел Справочники                                             | U                                  | Dictionaries                                           | BMA                                                                   |
+| P/23 | 247747363 | Раздел API                                                     | U                                  | Admin API section; not necessarily wire contract       | BMA                                                                   |
+| P/24 | 247742436 | Раздел А/В Тестирование                                        | U                                  | Optional A/B testing retained                          | BMA                                                                   |
+| P/25 | 250794931 | Фильтрация списков                                             | U                                  | Cross-cutting list filters                             | BMA                                                                   |
+| P/26 | 241085263 | Черновые документы/заметки                                     | U                                  | Draft/container relevance unresolved                   | H: BMA                                                                |
+| P/27 | 241080088 | Админка. Состояние системы                                     | U                                  | System state; not interchangeable with P/20            | BMA                                                                   |
+| P/28 | 247728705 | Бизнес-анализ: Команды                                         | U                                  | Teams                                                  | BMA                                                                   |
+| P/29 | 241080065 | Админка. Поверхности                                           | U                                  | Surfaces; distinct from saved P/17                     | BMA                                                                   |
+| P/30 | 241080071 | Админка. Диалоги                                               | U                                  | Dialogs; distinct from saved P/15                      | BMA                                                                   |
+| P/31 | 241080068 | Админка. Песочница                                             | U                                  | Sandbox                                                | BMA                                                                   |
+| P/32 | 241080082 | Админка. Отчеты                                                | U                                  | Reports; distinct from P/9                             | BMA                                                                   |
+| P/33 | 241080100 | Админка. Команды и доступ                                      | U                                  | Teams/access                                           | BMA                                                                   |
+| P/34 | 241080097 | Админка. Заглушки                                              | U                                  | Stub/fallback section                                  | BMA                                                                   |
+| P/35 | 241080080 | Админка. Дашборд                                               | U                                  | Dashboard                                              | BMA                                                                   |
+| P/36 | 238329164 | Бизнес-анализ: Аутентификация и сеанс                          | U                                  | Auth/session retained, not new auth authorization      | BMA                                                                   |
+| P/37 | 238333356 | Бизнес-анализ: Роли и права                                    | U                                  | Roles/permissions retained                             | BMA                                                                   |
+| P/38 | 238324852 | Ассессмент навыков                                             | U                                  | Assessment boundary explicitly ambiguous               | H: BMA                                                                |
+| P/39 | 243761671 | Аналитическая справка по существующей админке МПММ             | U                                  | Historical/broad MPMM; relevance needed                | H: BMA                                                                |
+| P/40 | 243765248 | Бизнес-анализ. МПММ                                            | U                                  | Broad MPMM; relevance needed                           | H: BMA                                                                |
+| P/41 | 250781168 | Журнал вопросов - для админки ЦАМ                              | U                                  | Admin decision/question context                        | BMA                                                                   |
 
 There are 10 H rows and 28 other U rows. H is a proposed prioritization hold, not a claim of irrelevance; all 42 remain in the registry. Similar titles do not establish duplicates, supersession or semantic equivalence. Distinct IDs retain independent dispositions, especially surfaces, dialogs, reports, API, system state and auth families.
 
 ## Later packets and preserved failure history
 
-| ID outside root 42 | Historical → current saved state | Provenance / effect on this registry |
-|---|---|---|
-| 241082009 | r1 collection-failed, `Failed to fetch`, HTTP and retrievedAt null → r2 HTTP 200, v5, 2026-10-16T12:28:15.837Z; body/metadata and zero-item attachment index | MOS-959 description link in metadata. Keep failed record. Later success does not explain failure; zero addition to root coverage |
-| 241097511 | r1 HTTP 404, retrievedAt null → r2 HTTP 200, v6, 2026-10-16T12:37:03.295Z; body/metadata and zero-item attachment index | MOS-1018 description evidence in r1; r2 retains priorAttempt. Keep 404 without inferring deletion/permissions/business API absence; zero addition to root coverage |
-| 241088180 | r1 HTTP 200, v4, 2026-10-16T13:03:14.658Z | Operations Jira comment membership; saved body and zero-item index; outside 42 |
-| 241092242 | r1 HTTP 200, v4, 2026-10-16T13:03:14.883Z | Operations Jira descriptions; saved body and zero-item index; outside 42 |
-| 241085838 | r1 HTTP 200, v3, 2026-10-16T13:31:51.607Z | Reports Jira descriptions; saved body and zero-item index; outside 42 and not in checkpoint r2 |
-| 241085439 | r1 HTTP 200, v15, 2026-10-16T13:31:52.139Z | MOS-1015 description; saved body and zero-item index; outside 42 and not in checkpoint r2 |
+| ID outside root 42 | Historical → current saved state                                                                                                                             | Provenance / effect on this registry                                                                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 241082009          | r1 collection-failed, `Failed to fetch`, HTTP and retrievedAt null → r2 HTTP 200, v5, 2026-10-16T12:28:15.837Z; body/metadata and zero-item attachment index | MOS-959 description link in metadata. Keep failed record. Later success does not explain failure; zero addition to root coverage                                   |
+| 241097511          | r1 HTTP 404, retrievedAt null → r2 HTTP 200, v6, 2026-10-16T12:37:03.295Z; body/metadata and zero-item attachment index                                      | MOS-1018 description evidence in r1; r2 retains priorAttempt. Keep 404 without inferring deletion/permissions/business API absence; zero addition to root coverage |
+| 241088180          | r1 HTTP 200, v4, 2026-10-16T13:03:14.658Z                                                                                                                    | Operations Jira comment membership; saved body and zero-item index; outside 42                                                                                     |
+| 241092242          | r1 HTTP 200, v4, 2026-10-16T13:03:14.883Z                                                                                                                    | Operations Jira descriptions; saved body and zero-item index; outside 42                                                                                           |
+| 241085838          | r1 HTTP 200, v3, 2026-10-16T13:31:51.607Z                                                                                                                    | Reports Jira descriptions; saved body and zero-item index; outside 42 and not in checkpoint r2                                                                     |
+| 241085439          | r1 HTTP 200, v15, 2026-10-16T13:31:52.139Z                                                                                                                   | MOS-1015 description; saved body and zero-item index; outside 42 and not in checkpoint r2                                                                          |
 
 Checkpoint r2 is supplemental, not replacement inventory: its four wiki entries have **zero intersection** with the root 42. Current canonical wiki directories contain root + four root-linked IDs + six additional IDs = 11 unique page IDs. Two `-readable` directories are derivatives, not pages or external revisions. `wiki-241080062-readable/r1` derives from canonical r1/v17; `wiki-241097511-readable/r1` derives from canonical **r2/v6**, not its failed r1. Their 2026-10-19 derivedAt values are not new retrieval dates. Original hash references match the recomputed canonical hashes; chunk/readable integrity was not independently rechecked here.
 

@@ -2,11 +2,11 @@
 
 ## Disposition
 
-| Report | Verdict | Necessary report corrections |
-|---|---|---|
-| IMPL-SKILL-PHRASE-CONFLICTS | **ACCEPT** | None. Justified planning no-op, not implementation acceptance. |
+| Report                        | Verdict    | Necessary report corrections                                                      |
+| ----------------------------- | ---------- | --------------------------------------------------------------------------------- |
+| IMPL-SKILL-PHRASE-CONFLICTS   | **ACCEPT** | None. Justified planning no-op, not implementation acceptance.                    |
 | IMPL-SKILL-ENVIRONMENT-TOKENS | **ACCEPT** | None. IMPL-1023-01 is a scoped refinement of the existing cache/security warning. |
-| IMPL-SKILL-AUDIT-HISTORY | **ACCEPT** | None. IMPL-1031-C01 corrects evidence wording only, preserving reader gates. |
+| IMPL-SKILL-AUDIT-HISTORY      | **ACCEPT** | None. IMPL-1031-C01 corrects evidence wording only, preserving reader gates.      |
 
 Parent retains acceptance/publication authority. No feature checkbox closure, product/auth decision, implementation authorization or runtime certification follows.
 

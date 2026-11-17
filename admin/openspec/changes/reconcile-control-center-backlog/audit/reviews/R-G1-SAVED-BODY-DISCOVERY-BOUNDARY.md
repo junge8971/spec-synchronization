@@ -29,11 +29,11 @@ Direct inspection of the cited accepted coverage sections supports the distincti
 
 Compared the actual accepted edge lists (`A/reports/REL-D031-PLANNING-API.md:50–85`; `A/reports/REL-D031-DATA-DRAFTS.md:77–98`; original planning/data review:25–66) with the accepted42-row ledger:
 
-| Container | Verified retained root rows |
-|---|---|
-|241085260, five targets|L4/L11/L12/L13/L14|
-|241085256, six targets|L5–L10|
-|241085263, twelve targets|L28–L39|
+| Container                 | Verified retained root rows |
+| ------------------------- | --------------------------- |
+| 241085260, five targets   | L4/L11/L12/L13/L14          |
+| 241085256, six targets    | L5–L10                      |
+| 241085263, twelve targets | L28–L39                     |
 
 The exact ID-to-row pairs in target lines70–72 agree, including final draft target238324852. Original lane-local unvisited wording is not current global absence. These are immediate inventories only, not recursive traversal authority or target-descendant completeness.
 

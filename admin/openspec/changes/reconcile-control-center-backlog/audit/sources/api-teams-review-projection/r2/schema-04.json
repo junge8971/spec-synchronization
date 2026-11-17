@@ -23,10 +23,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "family_name",
-      "name"
-    ],
+    "required": ["family_name", "name"],
     "title": "FullName"
   }
 }

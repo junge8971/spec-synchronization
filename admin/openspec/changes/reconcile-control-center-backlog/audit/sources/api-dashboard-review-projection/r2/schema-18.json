@@ -16,10 +16,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "version",
-      "widgets"
-    ],
+    "required": ["version", "widgets"],
     "title": "SaveBoardRequest"
   }
 }

@@ -73,15 +73,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "widget_id",
-      "title",
-      "subtitle",
-      "value",
-      "unit",
-      "delta",
-      "series"
-    ],
+    "required": ["widget_id", "title", "subtitle", "value", "unit", "delta", "series"],
     "title": "MetricWidgetResponse"
   }
 }

@@ -14,6 +14,7 @@ No issues found.
 ## Evidence and coverage
 
 Aliases:
+
 - **A** = `openspec/changes/reconcile-control-center-backlog/audit/`
 - **R** = `A/sources/wiki-241102892-readable/r1/content.txt`
 - **B** = `A/sources/wiki-238333356-readable/r1/content.txt`
@@ -26,6 +27,7 @@ Read the complete assigned reviewer work-item, analyst work-item and `A/reports/
 Before source comparisons, read complete H proposal/design and all six specifications: mpmm-session, control-center-permissions, control-center-http, control-center-api-integration, control-center-mock-server and control-center-shell. Also read complete D proposal/design and all three specifications before evaluating demo switching.
 
 Independently read:
+
 - R **1–146**, r1/v7; all **six** ordered body chunks.
 - B **1–57**, r1/v7; all **three** ordered body chunks.
 - T **1–56**, r1/v1; all **three** ordered body chunks.
@@ -35,19 +37,19 @@ Independently read:
 
 ## Candidate verification
 
-| Candidate | Verified evidence and disposition |
-|---|---|
+| Candidate      | Verified evidence and disposition                                                                                                                                                                                                                                                                                                                                         |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ACCESS-ROOT-01 | R **1–27**, “Роли” and “Ресурсы”; chunk **0** confirms three blank superadministrator cells. The role table has nine role rows, not three; B has eight, T names six. The report correctly describes R as adding the blank superadministrator row, without synthesizing an enum or grant matrix. Only skill-team/surface-owner rows supply explicit own-object scope text. |
-| ACCESS-ROOT-02 | R **28–55**, “Разрешения”, preserves lowercase historical codes, including separate review/rollout entries. They are not TSAM aliases. H permissions **27–28, 38–41** retains the published common `change_status`, not new reviewer/rollout granularity. |
-| ACCESS-ROOT-03 | R **56–128, 141–146** covers the remaining catalog. R **68** combines archive/return under `surface:archive`; H permissions **29** distinguishes archive and restore. Sandbox token labels authorize no inspection. Unmapped business UI remains explicit-`*`-only, subject to availability—not a transport ACL. |
-| ACCESS-ROOT-04 | R **129–135, 137–140** separately names role/user administration and security/object logs. The report does not conflate them with team membership, a delivered audit API or existing reader-service acceptance. |
-| ACCESS-ROOT-05 | R **136**, `users:role_switch`, is explicitly demo prose. D local-session-demo **45–49, 99–103** bounds it to fixed local fixtures and reload; no production switch, arbitrary editor or additional grant follows. |
-| ACCESS-ROOT-06 | B **1–9, 21–23** contains six storage/display tasks and separates administrative interface from Control Center. These do not authorize new role-management storage, APIs or UI. |
-| ACCESS-ROOT-07 | B **11–20**, R **3–13**, T **29** substantiate the different role inventories and security-administrator descriptions. Differences remain attributed, without hierarchy, synonym grants or active-session/logout scope expansion. |
-| ACCESS-ROOT-08 | B **24–57**, chunks **0–2**, confirms empty acceptance and main-scenario content, including collapsed regions. The maintenance heading and Smoke “да” do not supply completed acceptance or approval. |
-| ACCESS-ROOT-09 | T **3–4, 16–18, 25–27, 52–53** describes business ownership, members and contacts. TEAMS-ROOT-02 at the reused report **27** supports only the stated membership-role ambiguity. No authenticated principal, UUID mapping or issue ownership is inferred. |
-| ACCESS-ROOT-10 | T **12–18, 29, 31–38, 45–50** supports historical role-only access and staged integration intent. Neither “authorized” nor platform-admin labels replace permissions. T **38** excludes an object-rights management system, not backend data scoping. |
-| ACCESS-ROOT-11 | T **19–22, 28, 39–46, 48, 54–56** supports audit fields, filters, CSV, failure/retry prose, latency targets and FSTEC wording. These are requirements, not schema delivery, benchmarks or compliance evidence. Team:view does not unlock audit. |
+| ACCESS-ROOT-02 | R **28–55**, “Разрешения”, preserves lowercase historical codes, including separate review/rollout entries. They are not TSAM aliases. H permissions **27–28, 38–41** retains the published common `change_status`, not new reviewer/rollout granularity.                                                                                                                 |
+| ACCESS-ROOT-03 | R **56–128, 141–146** covers the remaining catalog. R **68** combines archive/return under `surface:archive`; H permissions **29** distinguishes archive and restore. Sandbox token labels authorize no inspection. Unmapped business UI remains explicit-`*`-only, subject to availability—not a transport ACL.                                                          |
+| ACCESS-ROOT-04 | R **129–135, 137–140** separately names role/user administration and security/object logs. The report does not conflate them with team membership, a delivered audit API or existing reader-service acceptance.                                                                                                                                                           |
+| ACCESS-ROOT-05 | R **136**, `users:role_switch`, is explicitly demo prose. D local-session-demo **45–49, 99–103** bounds it to fixed local fixtures and reload; no production switch, arbitrary editor or additional grant follows.                                                                                                                                                        |
+| ACCESS-ROOT-06 | B **1–9, 21–23** contains six storage/display tasks and separates administrative interface from Control Center. These do not authorize new role-management storage, APIs or UI.                                                                                                                                                                                           |
+| ACCESS-ROOT-07 | B **11–20**, R **3–13**, T **29** substantiate the different role inventories and security-administrator descriptions. Differences remain attributed, without hierarchy, synonym grants or active-session/logout scope expansion.                                                                                                                                         |
+| ACCESS-ROOT-08 | B **24–57**, chunks **0–2**, confirms empty acceptance and main-scenario content, including collapsed regions. The maintenance heading and Smoke “да” do not supply completed acceptance or approval.                                                                                                                                                                     |
+| ACCESS-ROOT-09 | T **3–4, 16–18, 25–27, 52–53** describes business ownership, members and contacts. TEAMS-ROOT-02 at the reused report **27** supports only the stated membership-role ambiguity. No authenticated principal, UUID mapping or issue ownership is inferred.                                                                                                                 |
+| ACCESS-ROOT-10 | T **12–18, 29, 31–38, 45–50** supports historical role-only access and staged integration intent. Neither “authorized” nor platform-admin labels replace permissions. T **38** excludes an object-rights management system, not backend data scoping.                                                                                                                     |
+| ACCESS-ROOT-11 | T **19–22, 28, 39–46, 48, 54–56** supports audit fields, filters, CSV, failure/retry prose, latency targets and FSTEC wording. These are requirements, not schema delivery, benchmarks or compliance evidence. Team:view does not unlock audit.                                                                                                                           |
 
 ## Policy boundaries
 

@@ -34,17 +34,17 @@ Exact roots: `C=openspec/changes/reconcile-control-center-backlog`, `A=C/audit`,
 
 SHA-256 over complete bytes is not full semantic reading. All **21** hashes listed in the reviewed report were independently recomputed and matched, including the raw CRUD file and prior reports/reviews that were hash-only here. Key reproducibility anchors:
 
-| File | SHA-256 |
-|---|---|
+| File                                          | SHA-256                                                          |
+| --------------------------------------------- | ---------------------------------------------------------------- |
 | A/reports/API-G2-FEEDBACK-SURVEY-MUTATIONS.md | e869082c9e4438c40923871a87707b815cab8d919e56ba05ab0e2598f2c3718f |
-| A/sources/api-live/r2/content.json | ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993 |
-| D/openapi.json | c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7 |
-| D/managed-resources.openapi.json | cc4cb5603b449f0d7a98224bfcfc1795f509ecc09a3155fdc87f8ff2b270c7cf |
-| D/crud-api.md | 4dde67125d36692cb05fcbb9b9b6e842f95717118f999c471cb5e2b393907058 |
-| A/sources/api-live/r2/metadata.json | 444c7b65941db4af36d1ffe305fd04499a44d6d9c81b9a25be15dc6061d521ba |
-| A/decisions.md | 312d45d2eb7d465cf6819b143a1af79cba81ee3956c2785b370019ca2ab63acb |
-| O/design.md | 0b15bcebfea15e35aca35a90c835a00efd892bb9a962fc16401892ca6017d91d |
-| A/sources/jira-feedback/r1/content.json | 890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685 |
+| A/sources/api-live/r2/content.json            | ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993 |
+| D/openapi.json                                | c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7 |
+| D/managed-resources.openapi.json              | cc4cb5603b449f0d7a98224bfcfc1795f509ecc09a3155fdc87f8ff2b270c7cf |
+| D/crud-api.md                                 | 4dde67125d36692cb05fcbb9b9b6e842f95717118f999c471cb5e2b393907058 |
+| A/sources/api-live/r2/metadata.json           | 444c7b65941db4af36d1ffe305fd04499a44d6d9c81b9a25be15dc6061d521ba |
+| A/decisions.md                                | 312d45d2eb7d465cf6819b143a1af79cba81ee3956c2785b370019ca2ab63acb |
+| O/design.md                                   | 0b15bcebfea15e35aca35a90c835a00efd892bb9a962fc16401892ca6017d91d |
+| A/sources/jira-feedback/r1/content.json       | 890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685 |
 
 r2 metadata identifies a saved decoded documentation response from `https://nchat-a-tech.mos.ru/api/control/openapi.json`, retrieved `2026-10-19T08:11:44.238Z`, 420099 bytes, OpenAPI3.1.0/info0.1.0. This review verifies saved bytes and bounded documentary consistency, **not current live freshness, acquisition authenticity beyond the retained receipt, or deployment**.
 
