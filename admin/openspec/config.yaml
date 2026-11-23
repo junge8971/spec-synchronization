@@ -14,8 +14,17 @@ context: |
   confirmed user information in the header. Read its proposal/design/specs for mock changes.
   Keep the existing Express mocks without credentials or role enforcement; omit mocks from production.
   TanStack Devtools is cancelled. Permissions control UI visibility; backend authorizes requests.
-  Keep session ownership, business validation, error handling, accessibility and the prohibition
-  on E2E/browser tests without explicit user permission. Mock checks do not prove real integration.
+  Keep session ownership, business validation, error handling and accessibility.
+  Every UI change must be checked interactively through Playwright MCP (playwright-extension)
+  against the local app with mocks enabled. The user authorizes these local browser checks;
+  limit them to the affected scenarios, including relevant error states and keyboard interaction.
+  This does not authorize creating, editing or running automated E2E/browser test suites.
+  External UI environments and actions affecting external data still require separate explicit
+  approval for the scenario, action, object and environment. Never use real credentials in mocks.
+  If Playwright MCP or the local app is unavailable, report the blocker and leave browser
+  verification incomplete; do not claim success from unit tests or screenshots alone.
+  Report the checked scenarios and results. Keep unit/component checks as well.
+  Mock checks do not prove real integration.
   Removing existing auth dependencies within the agreed change is allowed. Auth-shaped fields
   belonging to business entities remain valid domain data.
 
@@ -24,16 +33,16 @@ rules:
   proposal:
     - Keep scope within agreed business APIs and the explicitly agreed exceptions described in context.
     - Do not propose new authentication, sessions, RBAC, permissions, auth redirects, or user-based UI restrictions without a separate agreement and spec change.
-    - Preserve security, validation, error handling, accessibility, and the E2E/browser-test prohibition.
+    - Preserve security, validation, error handling and accessibility. For UI changes, include the Playwright MCP verification policy from context; automated E2E suites and external environments require separate approval.
   design:
     - Design agreed business behavior and the explicitly agreed exceptions described in context.
     - Other auth/session/RBAC/permissions changes require separate agreement and a new spec change; removing existing auth dependencies is allowed.
-    - Preserve security, validation, error handling, accessibility, and the E2E/browser-test prohibition.
+    - Preserve security, validation, error handling and accessibility. Design affected UI scenarios for local Playwright MCP verification under the context policy.
   specs:
     - Specify agreed business behavior and the explicitly agreed exceptions described in context.
     - Do not require authentication, sessions, RBAC, permissions, auth redirects, or user-based UI restrictions before a separate agreement and spec change.
-    - Preserve security, validation, error handling, accessibility, and the E2E/browser-test prohibition.
+    - Preserve security, validation, error handling and accessibility. Include verifiable UI scenarios for Playwright MCP without treating mocked behavior as backend acceptance.
   tasks:
     - Keep tasks within agreed business APIs and the explicitly agreed exceptions described in context.
     - Do not add auth/session/RBAC/permissions work without a separate agreement and spec change; removing existing auth dependencies is allowed.
-    - Keep security, validation, error handling, accessibility, and the E2E/browser-test prohibition intact.
+    - Keep security, validation, error handling and accessibility intact. For every UI change, add a task to check affected scenarios through Playwright MCP on local mocks and record results or blockers. Retain unit/component tests; automated E2E suites and external environments require separate approval.

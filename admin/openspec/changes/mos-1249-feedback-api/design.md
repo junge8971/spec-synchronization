@@ -18,9 +18,9 @@ SHA-256 входных файлов для воспроизводимости:
 | ПротоОбратнаяСвязь.html | `8f3c162fd20dfd0bfe84f95175eaefdbe3ec613865850afc4f1373ad773ac80f` |
 | PDF аналитика           | `97ee2ee177ca9596e7dfad844d3cb5fe9036b6625e6cb41233a2d4b4ff956e96` |
 
-Контракт обновлён change `update-control-center-contracts-put`: общий OpenAPI содержит 111 операций и 351 схему, managed-resources.openapi.json — 43 операции. Источники и их provenance сохранены в docs/api/contracts; hashes таблицы относятся к входным файлам до форматирования. Не импортировать повторно старый managed-resource.openapi.json и не заменять экспортное дополнение диалогов. `scripts/generate-api-types.mjs` читает общий контракт.
+Контракт обновлён change `update-control-center-api-contracts`: live-снимок 15.10.2026 содержит 94 пути / 128 операций / 380 схем, managed-resources — 59 операций. [Provenance и полная дельта](../../../docs/api/contracts/delta-2026-10-15.md): raw OpenAPI SHA-256 `2f3c48d3542e4486f7c1a501c4a1a4a0b813c662af26079a1e98c9f09d6ea26d`, raw CRUD SHA-256 `91c8dc68fc1b602a64428d1d6f1d9c44a0e6a89eced226e4773853badf13954a`. Таблица выше сохраняет исторические входные файлы, не текущие hashes. Не импортировать старый managed-resource.openapi.json: экспорт диалогов теперь опубликован live, локальное дополнение удалено. `scripts/generate-api-types.mjs` читает aggregate; security AND двух заголовков сохранена явно.
 
-В MOS-1249 использовать опубликованные PUT-операции. Реализуемые здесь feedback CRUD/search/lookup/metadata handlers заменить в явном unavailable-перечне моков; остальные managed-resource операции оставить недоступными до их отдельных задач. Это обновление источника не отмечает клиентскую или mock-реализацию MOS-1249 выполненной.
+В MOS-1249 использовать опубликованные PUT-операции и существующие работающие managed mocks вместо предположения об общем unavailable-перечне. Все 59 managed операций уже имеют локальные handlers; это не отмечает feature tasks MOS-1249 выполненными и не доказывает deployment. Новые saved-filter IDs и справочники требуют внешней проверки. Новый TSAM.Dialog UI permission mapping остаётся отдельно согласуемым follow-up, без изменения текущей policy.
 
 ## Goals / Non-Goals
 
