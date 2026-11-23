@@ -8,9 +8,9 @@ Scope: inventory only. Paths below are relative to the audit root. The supplemen
 - MOS-1388 occurs as a hierarchy entry exactly once. MOS-1387 occurs in hierarchy child arrays exactly once, at `$.results[24].children[0]`; no duplicate or competing module assignment was observed across the 26 entries.
 - `sources/jira-member-index/r1/content.json` `$.items[144]` contains MOS-1387 exactly once across 146 items. Assigned/index reconciliation: 1/1 present, no missing or duplicate assigned records. Other module records are outside this inventory, not extra assigned members.
 
-| Member and exact locator | Observed summary | Type | Status | Issue updated | Nested references |
-| --- | --- | --- | --- | --- | --- |
-| MOS-1387 — `sources/jira-member-index/r1/content.json` `$.items[144]` | [B] Реализовать раздел "Шаблоны ответов" | Development task | Hold | `2026-10-16T19:20:12.207+0800` | `$.items[144].subtasks = []` |
+| Member and exact locator                                              | Observed summary                         | Type             | Status | Issue updated                  | Nested references            |
+| --------------------------------------------------------------------- | ---------------------------------------- | ---------------- | ------ | ------------------------------ | ---------------------------- |
+| MOS-1387 — `sources/jira-member-index/r1/content.json` `$.items[144]` | [B] Реализовать раздел "Шаблоны ответов" | Development task | Hold   | `2026-10-16T19:20:12.207+0800` | `$.items[144].subtasks = []` |
 
 ## Parent links and field coverage
 
@@ -23,11 +23,11 @@ Scope: inventory only. Paths below are relative to the audit root. The supplemen
 
 Exact collection-time locators: each packet's `content.json` `$.retrievedAt`, corroborated by its sibling `metadata.json` `$.retrievedAt`:
 
-| Source directory | Retrieved at |
-| --- | --- |
-| `sources/jira-hierarchy/r1/` | `2026-10-16T11:08:08.629Z` |
-| `sources/jira-member-index/r1/` | `2026-10-16T11:20:38.570Z` |
-| `sources/jira-subtasks/r1/` | `2026-10-16T11:23:01.951Z` |
+| Source directory                       | Retrieved at               |
+| -------------------------------------- | -------------------------- |
+| `sources/jira-hierarchy/r1/`           | `2026-10-16T11:08:08.629Z` |
+| `sources/jira-member-index/r1/`        | `2026-10-16T11:20:38.570Z` |
+| `sources/jira-subtasks/r1/`            | `2026-10-16T11:23:01.951Z` |
 | `sources/jira-api-delta-scenarios/r1/` | `2026-10-16T11:23:51.742Z` |
 
 Hierarchy `$.method` records saved same-origin browser DOM extraction; `$.pagination` says no more/next controls were found, but loaded HTML does not establish completeness against permission-filtered issues. `$.classification` identifies module parents as Q key result, not literal Epic. Packet timestamps remain separate from the member issue's update time; no newer packet overwrites older provenance. Member-index metadata's pending-subtask note is historical: the available subtask packet was checked directly.

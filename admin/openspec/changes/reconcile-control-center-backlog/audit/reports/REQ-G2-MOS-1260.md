@@ -16,10 +16,10 @@ Base `A = openspec/changes/reconcile-control-center-backlog/audit`.
 
 SHA-256 independently computed with `sha256sum`:
 
-| Saved content | Expected | Actual / result |
-|---|---|---|
-| jira-feedback/r1 | `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685` (assignment and metadata) | same — MATCH |
-| wiki-247734813/r1 | `d47db6bfc15f5f4a881c777ec78892161ed6be000c6cdf1c5c61ab4c7030c7d7` (metadata) | same — MATCH |
+| Saved content     | Expected                                                                                     | Actual / result |
+| ----------------- | -------------------------------------------------------------------------------------------- | --------------- |
+| jira-feedback/r1  | `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685` (assignment and metadata) | same — MATCH    |
+| wiki-247734813/r1 | `d47db6bfc15f5f4a881c777ec78892161ed6be000c6cdf1c5c61ab4c7030c7d7` (metadata)                | same — MATCH    |
 
 No missing/changed material input encountered. Snapshot integrity does not establish external freshness.
 
@@ -27,50 +27,50 @@ No missing/changed material input encountered. Snapshot integrity does not estab
 
 IDs are local extraction IDs, not delivered features. Actor is administrative export user unless a row explicitly names frontend/backend. Trigger is list/card export unless narrowed. “Not specified” means no additional error behavior/limit in that clause; shared error requirements R21–R29 still apply. Each locator is within J.
 
-| ID | Actor / trigger → required behavior; error or limit | Exact quoted locator |
-|---|---|---|
-| R01 | User requests export → actual CSV download, not a simulated success. | Description: “Добавить реальное скачивание CSV” |
-| R02 | User selects columns → available columns and labels come from metadata export_fields. | AC1: “Колонки и подписи берутся из metadata export_fields” |
-| R03 | User selects fields → at least one required. | AC1: “Минимум одно поле” |
-| R04 | User selects fields → duplicates prohibited. | AC1: “без дублей” |
-| R05 | User orders fields → fields order determines CSV column order. | AC1: “порядок fields задаёт порядок CSV” |
-| R06 | List export → backend exports entire applied selection. | AC2: “Список выгружается сервером целиком по применённому search” |
-| R07 | Paginated list export → current page and limit/offset do not constrain file. | AC2: “не по текущей странице; limit/offset не ограничивают файл” |
-| R08 | List has unapplied conditions → exclude them from export. | AC2: “Неприменённые условия не попадают в экспорт” |
-| R09 | Saved card export → exactly one saved record, without search. | AC3: “Карточка выгружает одну сохранённую запись без search” |
-| R10 | New card without ID → export unavailable. | AC3: “Для новой без ID export недоступен” |
-| R11 | Dirty draft export → explicitly indicate file contains saved data. | AC3: “при dirty draft явно указано, что файл содержит сохранённые данные” |
-| R12 | Backend produces file → CSV UTF-8 with BOM. | AC4: “Файл — серверный CSV UTF-8 с BOM” |
-| R13 | Backend produces CSV → semicolon separator. | AC4: “разделителем «;»” |
-| R14 | Successful download → filename from Content-Disposition. | AC4: “имя из Content-Disposition” |
-| R15 | Frontend handles export → do not rebuild CSV. | AC4: “Фронтенд не пересобирает CSV” |
-| R16 | Backend produces values → perform escaping. | AC4: “escaping и защита формул выполняются backend” |
-| R17 | Backend produces values → perform formula protection. | AC4: “escaping и защита формул выполняются backend” |
-| R18 | Export size limit → metadata export_max_rows, default 10000. | AC5: “Предел из metadata export_max_rows, по умолчанию 10000” |
-| R19 | Empty selection → header-only file allowed. | AC5: “Пустой отбор допускает файл только с заголовками” |
-| R20 | Limit exceeded → 422 EXPORT_LIMIT_EXCEEDED, no file. | AC5: “превышение — 422 EXPORT_LIMIT_EXCEEDED без файла” |
-| R21 | JSON instead of CSV → handle without false file/success. | AC6: “Обработаны JSON/HTML вместо CSV” + “нет ложного файла/успеха” |
-| R22 | HTML instead of CSV → handle without false file/success. | AC6: “Обработаны JSON/HTML вместо CSV” + “нет ложного файла/успеха” |
-| R23 | Missing valid filename → handle without false file/success. | AC6: “отсутствие корректного имени” + “нет ложного файла/успеха” |
-| R24 | 403 response → handle without false file/success. | AC6: “403/404/422” + “нет ложного файла/успеха” |
-| R25 | 404 response → handle without false file/success. | AC6: “403/404/422” + “нет ложного файла/успеха” |
-| R26 | 422 response → handle without false file/success (specific limit case R20). | AC6: “403/404/422” + “нет ложного файла/успеха” |
-| R27 | Network failure → handle without false file/success. | AC6: “сеть” + “нет ложного файла/успеха” |
-| R28 | Cancellation → handle without false file/success. | AC6: “отмена” + “нет ложного файла/успеха” |
-| R29 | Owner changes → handle without false file/success; exact owner meaning not defined here. | AC6: “смена owner” + “нет ложного файла/успеха” |
-| R30 | Frontend uses Blob URL → release it; timing unspecified. | AC6: “Blob URL освобождается” |
-| R31 | UI export access → requires ManagedResource:export. | AC7: “UI требует ManagedResource:export и read” |
-| R32 | UI export access → also requires read. | AC7: “UI требует ManagedResource:export и read” |
-| R33 | Stage-one scope → nested questions excluded. | Description: “Вложенные вопросы, варианты, правила и ответы пользователей не экспортируются в первом этапе” |
-| R34 | Stage-one scope → options excluded. | Same description quote as R33 |
-| R35 | Stage-one scope → rules excluded. | Same description quote as R33 |
-| R36 | Stage-one scope → user responses excluded. | Same description quote as R33 |
-| R37 | Export scope → do not import unpublished dialog-export headers requirements. | AC7: “Не переносятся непубликуемые требования headers экспорта диалогов” |
-| R38 | Verification obligation → unit/component coverage of entire selection larger than a page. | AC7: “Unit/component-тесты: весь отбор больше страницы” |
-| R39 | Verification obligation → detail/dirty-draft coverage. | AC7: “detail/dirty draft” |
-| R40 | Verification obligation → limit coverage. | AC7: “лимит” |
-| R41 | Verification obligation → malformed-response coverage. | AC7: “malformed response” |
-| R42 | Verification obligation → session-isolation coverage. | AC7: “session isolation” |
+| ID  | Actor / trigger → required behavior; error or limit                                       | Exact quoted locator                                                                                        |
+| --- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| R01 | User requests export → actual CSV download, not a simulated success.                      | Description: “Добавить реальное скачивание CSV”                                                             |
+| R02 | User selects columns → available columns and labels come from metadata export_fields.     | AC1: “Колонки и подписи берутся из metadata export_fields”                                                  |
+| R03 | User selects fields → at least one required.                                              | AC1: “Минимум одно поле”                                                                                    |
+| R04 | User selects fields → duplicates prohibited.                                              | AC1: “без дублей”                                                                                           |
+| R05 | User orders fields → fields order determines CSV column order.                            | AC1: “порядок fields задаёт порядок CSV”                                                                    |
+| R06 | List export → backend exports entire applied selection.                                   | AC2: “Список выгружается сервером целиком по применённому search”                                           |
+| R07 | Paginated list export → current page and limit/offset do not constrain file.              | AC2: “не по текущей странице; limit/offset не ограничивают файл”                                            |
+| R08 | List has unapplied conditions → exclude them from export.                                 | AC2: “Неприменённые условия не попадают в экспорт”                                                          |
+| R09 | Saved card export → exactly one saved record, without search.                             | AC3: “Карточка выгружает одну сохранённую запись без search”                                                |
+| R10 | New card without ID → export unavailable.                                                 | AC3: “Для новой без ID export недоступен”                                                                   |
+| R11 | Dirty draft export → explicitly indicate file contains saved data.                        | AC3: “при dirty draft явно указано, что файл содержит сохранённые данные”                                   |
+| R12 | Backend produces file → CSV UTF-8 with BOM.                                               | AC4: “Файл — серверный CSV UTF-8 с BOM”                                                                     |
+| R13 | Backend produces CSV → semicolon separator.                                               | AC4: “разделителем «;»”                                                                                     |
+| R14 | Successful download → filename from Content-Disposition.                                  | AC4: “имя из Content-Disposition”                                                                           |
+| R15 | Frontend handles export → do not rebuild CSV.                                             | AC4: “Фронтенд не пересобирает CSV”                                                                         |
+| R16 | Backend produces values → perform escaping.                                               | AC4: “escaping и защита формул выполняются backend”                                                         |
+| R17 | Backend produces values → perform formula protection.                                     | AC4: “escaping и защита формул выполняются backend”                                                         |
+| R18 | Export size limit → metadata export_max_rows, default 10000.                              | AC5: “Предел из metadata export_max_rows, по умолчанию 10000”                                               |
+| R19 | Empty selection → header-only file allowed.                                               | AC5: “Пустой отбор допускает файл только с заголовками”                                                     |
+| R20 | Limit exceeded → 422 EXPORT_LIMIT_EXCEEDED, no file.                                      | AC5: “превышение — 422 EXPORT_LIMIT_EXCEEDED без файла”                                                     |
+| R21 | JSON instead of CSV → handle without false file/success.                                  | AC6: “Обработаны JSON/HTML вместо CSV” + “нет ложного файла/успеха”                                         |
+| R22 | HTML instead of CSV → handle without false file/success.                                  | AC6: “Обработаны JSON/HTML вместо CSV” + “нет ложного файла/успеха”                                         |
+| R23 | Missing valid filename → handle without false file/success.                               | AC6: “отсутствие корректного имени” + “нет ложного файла/успеха”                                            |
+| R24 | 403 response → handle without false file/success.                                         | AC6: “403/404/422” + “нет ложного файла/успеха”                                                             |
+| R25 | 404 response → handle without false file/success.                                         | AC6: “403/404/422” + “нет ложного файла/успеха”                                                             |
+| R26 | 422 response → handle without false file/success (specific limit case R20).               | AC6: “403/404/422” + “нет ложного файла/успеха”                                                             |
+| R27 | Network failure → handle without false file/success.                                      | AC6: “сеть” + “нет ложного файла/успеха”                                                                    |
+| R28 | Cancellation → handle without false file/success.                                         | AC6: “отмена” + “нет ложного файла/успеха”                                                                  |
+| R29 | Owner changes → handle without false file/success; exact owner meaning not defined here.  | AC6: “смена owner” + “нет ложного файла/успеха”                                                             |
+| R30 | Frontend uses Blob URL → release it; timing unspecified.                                  | AC6: “Blob URL освобождается”                                                                               |
+| R31 | UI export access → requires ManagedResource:export.                                       | AC7: “UI требует ManagedResource:export и read”                                                             |
+| R32 | UI export access → also requires read.                                                    | AC7: “UI требует ManagedResource:export и read”                                                             |
+| R33 | Stage-one scope → nested questions excluded.                                              | Description: “Вложенные вопросы, варианты, правила и ответы пользователей не экспортируются в первом этапе” |
+| R34 | Stage-one scope → options excluded.                                                       | Same description quote as R33                                                                               |
+| R35 | Stage-one scope → rules excluded.                                                         | Same description quote as R33                                                                               |
+| R36 | Stage-one scope → user responses excluded.                                                | Same description quote as R33                                                                               |
+| R37 | Export scope → do not import unpublished dialog-export headers requirements.              | AC7: “Не переносятся непубликуемые требования headers экспорта диалогов”                                    |
+| R38 | Verification obligation → unit/component coverage of entire selection larger than a page. | AC7: “Unit/component-тесты: весь отбор больше страницы”                                                     |
+| R39 | Verification obligation → detail/dirty-draft coverage.                                    | AC7: “detail/dirty draft”                                                                                   |
+| R40 | Verification obligation → limit coverage.                                                 | AC7: “лимит”                                                                                                |
+| R41 | Verification obligation → malformed-response coverage.                                    | AC7: “malformed response”                                                                                   |
+| R42 | Verification obligation → session-isolation coverage.                                     | AC7: “session isolation”                                                                                    |
 
 Source-only interface statement (not API validation or implementation recommendation): J description says “API prefix /api/control/api/v1/managed-resources: POST /feedback/surveys/export с fields/search; POST /feedback/surveys/{id}/export только с fields. Metadata — GET /feedback/metadata.” Its named dependencies are MOS-1249, MOS-1250, MOS-1251, MOS-1258; their contents were not inspected. Current field inventory “сейчас name/code/type_code/audience_type/status” is a snapshot qualification of metadata, not permission to hard-code a permanent whitelist.
 
@@ -78,16 +78,16 @@ Source-only interface statement (not API validation or implementation recommenda
 
 These are prototype-source requirements/behaviors, not silently merged into Jira AC. All W locators use `/text`.
 
-| ID | Actor / trigger → source behavior; limits/ambiguity | Exact quoted locator |
-|---|---|---|
-| W01 | User clicks list Export → field-selection modal for fb_survey; validation unspecified. | §3.6: “Кнопка «⤓ Экспорт» - открывает модалку выбора полей (fb_survey).” |
+| ID  | Actor / trigger → source behavior; limits/ambiguity                                                               | Exact quoted locator                                                                                                                  |
+| --- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| W01 | User clicks list Export → field-selection modal for fb_survey; validation unspecified.                            | §3.6: “Кнопка «⤓ Экспорт» - открывает модалку выбора полей (fb_survey).”                                                              |
 | W02 | User clicks card Export → section-selection modal, broader than Jira stage one; unresolved mismatch, not adopted. | §4.1: “⤓ ЭкспортМодалка выбора разделов (fb_survey, fb_tag, fb_segment/fb_surface, fb_question, fb_question_option, fb_display_rule)” |
-| W03 | User enters export modal → field/section checkboxes. | §6.2: “Экспорт списка/карточкиЧекбоксы полей/разделов, кнопка «Выгрузить»” |
-| W04 | User enters export modal → “Выгрузить” action. | Same §6.2 quote as W03 |
-| W05 | Export notification → bottom-right toast. | §6.1: “Появляются в правом нижнем углу на 2 секунды.” + “экспорт” in significant-actions list |
-| W06 | Export toast → two-second duration; success timing/copy not defined. | Same §6.1 quote as W05 |
-| W07 | User presses Esc in modal → close modal; in-flight cancellation unspecified. | §6.5: “Esc - закрыть модалку.” |
-| W08 | User clicks backdrop → close modal; in-flight cancellation unspecified. | §6.5: “Клик по бэкдропу - закрыть модалку.” |
+| W03 | User enters export modal → field/section checkboxes.                                                              | §6.2: “Экспорт списка/карточкиЧекбоксы полей/разделов, кнопка «Выгрузить»”                                                            |
+| W04 | User enters export modal → “Выгрузить” action.                                                                    | Same §6.2 quote as W03                                                                                                                |
+| W05 | Export notification → bottom-right toast.                                                                         | §6.1: “Появляются в правом нижнем углу на 2 секунды.” + “экспорт” in significant-actions list                                         |
+| W06 | Export toast → two-second duration; success timing/copy not defined.                                              | Same §6.1 quote as W05                                                                                                                |
+| W07 | User presses Esc in modal → close modal; in-flight cancellation unspecified.                                      | §6.5: “Esc - закрыть модалку.”                                                                                                        |
+| W08 | User clicks backdrop → close modal; in-flight cancellation unspecified.                                           | §6.5: “Клик по бэкдропу - закрыть модалку.”                                                                                           |
 
 Additional boundary evidence: table §3.1 “модалка экспорта - состав полей выгрузки.” confirms survey-field relevance. Table §3.5 mentions “экспорт - выгрузка результатов” but also “Состав полей и перечень статусов подлежат уточнению.” Table §3.6 mentions “экспорт - выгрузки и аналитика ответов.” Those are broader model references, not authorization to add results/report export to this unit; Jira explicitly excludes responses at stage one. Demo arrays, local DATA storage and linked prototype attachment are not production/export implementation requirements.
 

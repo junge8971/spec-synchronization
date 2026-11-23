@@ -18,15 +18,15 @@ Reviewer: отдельный свежий Astra medium пакетный reviewer
 
 ## Отдельные work-items
 
-| ID / owner | Цель | Output относительно audit |
-| --- | --- | --- |
-| JOIN-MOS-1411 / analyst-1 | Видимость и семантика сброса фильтров диалогов | reports/JOIN-MOS-1411.md |
-| JOIN-MOS-1412 / analyst-2 | Индикатор сбоя обработки диалога | reports/JOIN-MOS-1412.md |
-| JOIN-MOS-1414 / analyst-3 | Время незавершённого диалога | reports/JOIN-MOS-1414.md |
-| JOIN-MOS-1419 / analyst-4 | Точный дефект MOS-1419 из сохранённого описания | reports/JOIN-MOS-1419.md |
-| JOIN-MOS-1422 / analyst-5 | Точный дефект MOS-1422 из сохранённого описания | reports/JOIN-MOS-1422.md |
-| JOIN-MOS-1110 / analyst-6 | Точный дефект поверхности MOS-1110 | reports/JOIN-MOS-1110.md |
-| JOIN-MOS-1164 / analyst-7 | Точный дефект поверхности MOS-1164 | reports/JOIN-MOS-1164.md |
-| JOIN-MOS-1165 / analyst-8 | Точный дефект поверхности MOS-1165 | reports/JOIN-MOS-1165.md |
+| ID / owner                | Цель                                            | Output относительно audit |
+| ------------------------- | ----------------------------------------------- | ------------------------- |
+| JOIN-MOS-1411 / analyst-1 | Видимость и семантика сброса фильтров диалогов  | reports/JOIN-MOS-1411.md  |
+| JOIN-MOS-1412 / analyst-2 | Индикатор сбоя обработки диалога                | reports/JOIN-MOS-1412.md  |
+| JOIN-MOS-1414 / analyst-3 | Время незавершённого диалога                    | reports/JOIN-MOS-1414.md  |
+| JOIN-MOS-1419 / analyst-4 | Точный дефект MOS-1419 из сохранённого описания | reports/JOIN-MOS-1419.md  |
+| JOIN-MOS-1422 / analyst-5 | Точный дефект MOS-1422 из сохранённого описания | reports/JOIN-MOS-1422.md  |
+| JOIN-MOS-1110 / analyst-6 | Точный дефект поверхности MOS-1110              | reports/JOIN-MOS-1110.md  |
+| JOIN-MOS-1164 / analyst-7 | Точный дефект поверхности MOS-1164              | reports/JOIN-MOS-1164.md  |
+| JOIN-MOS-1165 / analyst-8 | Точный дефект поверхности MOS-1165              | reports/JOIN-MOS-1165.md  |
 
 Это одна волна, не объявление завершения глобальных 3.1–3.5. Следующие независимые U/P gaps продолжаются после приёмки, пока нет блокировки.

@@ -8,9 +8,7 @@
   "sha256": "25faae6338d2fb4be09763d392ad167a253326df47654495a6768cf31d8a4e59",
   "method": "Parent origin-guarded read-only Jira GET; existing scoped members only; identities omitted; attachment metadata only",
   "provenance": "Exact authorized-page tool-result packet recovered from local parent transcript; only scoped issue fields persisted, no transcript dump or credentials.",
-  "omittedAutomatedMentionBodies": [
-    "1131237"
-  ],
+  "omittedAutomatedMentionBodies": ["1131237"],
   "limitations": [
     "Selected issue fields, not full Jira export",
     "All returned comments accounted for; automated MR mention body intentionally omitted",

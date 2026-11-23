@@ -27,18 +27,18 @@ This is substantive FE/BE planning, not a container. The direct Control Center s
 
 Routing below uses names and product-scenario references **in the body**, not an application inventory or a verified implementation owner. Repository capability/spec ownership remains unverified.
 
-| Body locator | Evidence | Candidate scenario/capability |
-|---|---|---|
+| Body locator                                                                 | Evidence                                                                                                                              | Candidate scenario/capability                                                                                                        |
+| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | Lines 120–159, module 2.1, rows 2.1.22–2.1.25, 2.1.27, 2.1.29–2.1.31, 2.1.35 | “Страница списка диалогов”; “Переписка с авторством”; “UI-конструктор с «И»/«ИЛИ» и группировкой”; “Признак сбоя, фильтр по проблеме” | Dialog registry/card/conversation/timeline, filtering, saved selections and export; body names product scenarios 26–35, 44–45, 48–52 |
-| Lines 160–186, module 2.2, rows 2.2.13–2.2.19 | “Таблица с фильтрами, только свои для team”; overview, intents, checks, connection, monitoring, history | Skill catalog/card; scenarios 23, 24 and 39 explicitly referenced |
-| Lines 187–219, modules 2.3–2.4, rows 2.3.12–2.3.16, 2.4.6–2.4.7 | “Показатели, зависимости, инциденты”; disable/enable modal with reason/text | Skill monitoring, incidents, maintenance windows and skill disablement |
-| Lines 220–251, modules 2.5–2.6, rows 2.5.8–2.5.11, 2.6.7–2.6.11 | Reports templates/builder, preview and aggregates; dashboard grid, editing and widgets | Reports and dashboard; export mappings marked “по аналогии” in BE rows remain analogies, not proven equivalence |
-| Lines 252–284, modules 2.7–2.8, rows 2.7.7–2.7.9, 2.8.11–2.8.14 | Stub/maintenance tabs; four-step skill wizard, sandbox, review and tokens | Stubs/maintenance and skill onboarding |
-| Lines 285–322, modules 2.9–2.10, rows 2.9.12–2.9.19, 2.10.7–2.10.9 | Surface registry, registration wizard/configurator/connection/history; domain registry/create/edit/card | Surfaces and domains; indirect product mappings remain explicitly indirect |
-| Lines 49–64, module 1.4, rows 1.4.8–1.4.11 | Team registry/card, membership and object links | Teams, product scenarios 4–13 |
-| Lines 65–118, modules 1.5–1.8 | Security and object-action journals; “Состояние системы”; parameters and dictionaries | Audit/security journals, platform-module state, settings/dictionaries; body references 14–19 and 39–47 |
-| Lines 2–48, modules 1.1–1.3, rows 1.1.8, 1.1.10, 1.3.9 | User header, access-denied route, “Использование прав для показа/скрытия элементов” | Current profile and permission-aware navigation, scenarios 21, 22, 38; auth/role-management ownership needs separate semantic review |
-| Lines 323–339, modules 3.1–3.2 | `POST /api/v1/demo/reset`; “Страница «Сценарии показа»”; documentation two-column page, scenario 20 “косвенно” | Demo/documentation context; existing owner unknown |
+| Lines 160–186, module 2.2, rows 2.2.13–2.2.19                                | “Таблица с фильтрами, только свои для team”; overview, intents, checks, connection, monitoring, history                               | Skill catalog/card; scenarios 23, 24 and 39 explicitly referenced                                                                    |
+| Lines 187–219, modules 2.3–2.4, rows 2.3.12–2.3.16, 2.4.6–2.4.7              | “Показатели, зависимости, инциденты”; disable/enable modal with reason/text                                                           | Skill monitoring, incidents, maintenance windows and skill disablement                                                               |
+| Lines 220–251, modules 2.5–2.6, rows 2.5.8–2.5.11, 2.6.7–2.6.11              | Reports templates/builder, preview and aggregates; dashboard grid, editing and widgets                                                | Reports and dashboard; export mappings marked “по аналогии” in BE rows remain analogies, not proven equivalence                      |
+| Lines 252–284, modules 2.7–2.8, rows 2.7.7–2.7.9, 2.8.11–2.8.14              | Stub/maintenance tabs; four-step skill wizard, sandbox, review and tokens                                                             | Stubs/maintenance and skill onboarding                                                                                               |
+| Lines 285–322, modules 2.9–2.10, rows 2.9.12–2.9.19, 2.10.7–2.10.9           | Surface registry, registration wizard/configurator/connection/history; domain registry/create/edit/card                               | Surfaces and domains; indirect product mappings remain explicitly indirect                                                           |
+| Lines 49–64, module 1.4, rows 1.4.8–1.4.11                                   | Team registry/card, membership and object links                                                                                       | Teams, product scenarios 4–13                                                                                                        |
+| Lines 65–118, modules 1.5–1.8                                                | Security and object-action journals; “Состояние системы”; parameters and dictionaries                                                 | Audit/security journals, platform-module state, settings/dictionaries; body references 14–19 and 39–47                               |
+| Lines 2–48, modules 1.1–1.3, rows 1.1.8, 1.1.10, 1.3.9                       | User header, access-denied route, “Использование прав для показа/скрытия элементов”                                                   | Current profile and permission-aware navigation, scenarios 21, 22, 38; auth/role-management ownership needs separate semantic review |
+| Lines 323–339, modules 3.1–3.2                                               | `POST /api/v1/demo/reset`; “Страница «Сценарии показа»”; documentation two-column page, scenario 20 “косвенно”                        | Demo/documentation context; existing owner unknown                                                                                   |
 
 Exact-markup corroboration includes anchors `id-Декомпозиция-1.Административныйинтерфейс(Аттестуемаячасть)` and `id-Декомпозиция-2.Центруправленияассистентом`, table headers “№ / Наименование задачи / Описание / Задача продуктолога”, and stable numbered row identifiers above.
 
@@ -64,14 +64,14 @@ Candidate routing: API/navigation index and system-analysis context. No substant
 
 Entire body is a `ul.childpages-macro` with `data-macro-name="children"`, `data-hasbody="false"`, `data-content-id="241085256"`. Exact locator: `sources/wiki-241085256/r1/content.json:11`, also exact chunk JSON line 2. Text lines 1–6 are six child-link labels, not endpoint contracts:
 
-| Line / child ID | Exact label / candidate capability | Coverage |
-|---|---|---|
-| 1 / 238347066 | `/skills - Каталог навыков` / skill catalog | Unvisited reference |
-| 2 / 238352321 | `/skills/{id} - Карточка навыка, описание` / skill card | Unvisited reference |
-| 3 / 241074633 | `/skills/{id}/monitoring - Мониторинг навыка` / skill monitoring | Unvisited reference |
-| 4 / 241080643 | `/dialogs - Список диалогов` / dialog registry | Unvisited reference |
-| 5 / 241083649 | `/dialogs/{id} - Карточка диалога (общая информация, таймлайн, ответы)` / dialog card | Unvisited reference |
-| 6 / 238350232 | `/reports и /reports?tab=builder - Шаблон и конструктор отчётов` / reports | Unvisited reference |
+| Line / child ID | Exact label / candidate capability                                                    | Coverage            |
+| --------------- | ------------------------------------------------------------------------------------- | ------------------- |
+| 1 / 238347066   | `/skills - Каталог навыков` / skill catalog                                           | Unvisited reference |
+| 2 / 238352321   | `/skills/{id} - Карточка навыка, описание` / skill card                               | Unvisited reference |
+| 3 / 241074633   | `/skills/{id}/monitoring - Мониторинг навыка` / skill monitoring                      | Unvisited reference |
+| 4 / 241080643   | `/dialogs - Список диалогов` / dialog registry                                        | Unvisited reference |
+| 5 / 241083649   | `/dialogs/{id} - Карточка диалога (общая информация, таймлайн, ответы)` / dialog card | Unvisited reference |
+| 6 / 238350232   | `/reports и /reports?tab=builder - Шаблон и конструктор отчётов` / reports            | Unvisited reference |
 
 Href targets are the corresponding `/spaces/KR/pages/<ID>/...` links in the exact chunk, not live requests. These labels permit candidate scenario routing but establish no request/response schema, method, permission, validation or error semantics. Existing repository owner remains unverified. Any API-semantic work first checks the global saved-source inventory and existing evidence owners, reusing available bodies/reports. Only established remaining gaps warrant separately bounded authorized child-body collection/inspection; this analyst's unread status does not prove global absence. No source or implementation gap follows merely from absent mappings here.
 

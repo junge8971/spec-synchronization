@@ -7,15 +7,15 @@ A = `openspec/changes/reconcile-control-center-backlog/audit`.
 
 All twelve **coverage transitions ACCEPT** as substantive partial evidence, independently of the small publication corrections below. P is not delivery, test execution, complete requirement coverage or deployment acceptance.
 
-| Report | Decision | Mandatory correction / reason |
-|---|---|---|
-| JOIN-SKILL-REGISTRY | ACCEPT | Documentary domain-sort evidence is valid with the reconciliation below; retain its implementation gate. Independent nested descriptions, not parent/screenshot inference, support 1050–1052. |
-| JOIN-SKILL-CONTRACTS | ACCEPT | Supported subset and incomplete backend DoD are correctly separated; reuse D087, not another domain correction. |
-| JOIN-SKILL-PHRASES | ACCEPT | Missing truthful applied-version notice is independently corroborated; actual training indicator remains deferred. |
-| JOIN-SKILL-IMPLEMENTATION | ACCEPT | Documentation relevance remains unresolved despite correct href; no invented replacement article. |
-| JOIN-SKILL-CHECKS | REVISE | §Minimal planning 1 says to replace the historical ledger rationale. Replace that instruction with: “Append a new reviewed MOS-1019 B→P overlay with this evidence; preserve G2-JIRA-MEMBER-JOINS.md:193 and its recorded hash verbatim.” Substantive findings accepted. |
-| JOIN-SKILL-REVIEW | REVISE | Coverage paragraph proposes B→P in the historical report. Replace destination instruction with: “Append MOS-1020 B→P to the current additive coverage overlay, citing this report/review; do not edit historical member row 194.” Substantive findings accepted. |
-| JOIN-SKILL-ROLLOUT | REVISE | Replace “in ...G2-JIRA-MEMBER-JOINS.md:195” and “replacement evidence wording” with: “Append a MOS-1021 B→P current coverage overlay using the following evidence wording; preserve historical row 195.” Apply capability provenance additively too. Substantive findings accepted. |
+| Report                    | Decision | Mandatory correction / reason                                                                                                                                                                                                                                                       |
+| ------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| JOIN-SKILL-REGISTRY       | ACCEPT   | Documentary domain-sort evidence is valid with the reconciliation below; retain its implementation gate. Independent nested descriptions, not parent/screenshot inference, support 1050–1052.                                                                                       |
+| JOIN-SKILL-CONTRACTS      | ACCEPT   | Supported subset and incomplete backend DoD are correctly separated; reuse D087, not another domain correction.                                                                                                                                                                     |
+| JOIN-SKILL-PHRASES        | ACCEPT   | Missing truthful applied-version notice is independently corroborated; actual training indicator remains deferred.                                                                                                                                                                  |
+| JOIN-SKILL-IMPLEMENTATION | ACCEPT   | Documentation relevance remains unresolved despite correct href; no invented replacement article.                                                                                                                                                                                   |
+| JOIN-SKILL-CHECKS         | REVISE   | §Minimal planning 1 says to replace the historical ledger rationale. Replace that instruction with: “Append a new reviewed MOS-1019 B→P overlay with this evidence; preserve G2-JIRA-MEMBER-JOINS.md:193 and its recorded hash verbatim.” Substantive findings accepted.            |
+| JOIN-SKILL-REVIEW         | REVISE   | Coverage paragraph proposes B→P in the historical report. Replace destination instruction with: “Append MOS-1020 B→P to the current additive coverage overlay, citing this report/review; do not edit historical member row 194.” Substantive findings accepted.                    |
+| JOIN-SKILL-ROLLOUT        | REVISE   | Replace “in ...G2-JIRA-MEMBER-JOINS.md:195” and “replacement evidence wording” with: “Append a MOS-1021 B→P current coverage overlay using the following evidence wording; preserve historical row 195.” Apply capability provenance additively too. Substantive findings accepted. |
 
 These are integration-wording corrections, not requests for another audit or stronger feature coverage. CONTRACTS' “replace ... current ... join” likewise means a current overlay only, never modifying the historical source.
 
@@ -23,20 +23,20 @@ These are integration-wording corrections, not requests for another audit or str
 
 `coverage.json` records 173 members, historical 47P/7B/119U, twelve existing overlays, current **59P/4B/110U**. None of these candidates already appears in its overlays. Historical ledger independently confirms:
 
-| Member | Historical row | Transition | Decision |
-|---|---:|---|---|
-| MOS-675 | 186 | U→P | ACCEPT — header comparison, attachment limitation retained |
-| MOS-676 | 187 | U→P | ACCEPT — filters/notification boundary |
-| MOS-677 | 188 | U→P | ACCEPT — table/sorting comparison |
-| MOS-1050 | 303 | U→P | ACCEPT — independently described positioning, unresolved geometry |
-| MOS-1051 | 304 | U→P | ACCEPT — independent linguistic defect and current fixed suffix |
-| MOS-1052 | 305 | U→P | ACCEPT — independent РЕЕ-12 sorting comparison |
-| MOS-701 | 189 | U→P | ACCEPT — exact contract DoD versus supported subset |
-| MOS-945 | 191 | U→P | ACCEPT — phrase/wizard/save/application distinction |
-| MOS-1022 | 196 | U→P | ACCEPT — connection/parameters/docs comparison |
-| MOS-1019 | 193 | B→P | ACCEPT — direct observation/results/run boundary |
-| MOS-1020 | 194 | B→P | ACCEPT — direct queue/criteria/return/decision attribution |
-| MOS-1021 | 195 | B→P | ACCEPT — selection/eligible sequential commands/outcomes |
+| Member   | Historical row | Transition | Decision                                                          |
+| -------- | -------------: | ---------- | ----------------------------------------------------------------- |
+| MOS-675  |            186 | U→P        | ACCEPT — header comparison, attachment limitation retained        |
+| MOS-676  |            187 | U→P        | ACCEPT — filters/notification boundary                            |
+| MOS-677  |            188 | U→P        | ACCEPT — table/sorting comparison                                 |
+| MOS-1050 |            303 | U→P        | ACCEPT — independently described positioning, unresolved geometry |
+| MOS-1051 |            304 | U→P        | ACCEPT — independent linguistic defect and current fixed suffix   |
+| MOS-1052 |            305 | U→P        | ACCEPT — independent РЕЕ-12 sorting comparison                    |
+| MOS-701  |            189 | U→P        | ACCEPT — exact contract DoD versus supported subset               |
+| MOS-945  |            191 | U→P        | ACCEPT — phrase/wizard/save/application distinction               |
+| MOS-1022 |            196 | U→P        | ACCEPT — connection/parameters/docs comparison                    |
+| MOS-1019 |            193 | B→P        | ACCEPT — direct observation/results/run boundary                  |
+| MOS-1020 |            194 | B→P        | ACCEPT — direct queue/criteria/return/decision attribution        |
+| MOS-1021 |            195 | B→P        | ACCEPT — selection/eligible sequential commands/outcomes          |
 
 Nine U→P and three B→P yield **71P/1B/101U**, total 173. Preserve all historical rows, historical counts and hashes. Append reviewed overlays only. No aggregate capability completion follows.
 

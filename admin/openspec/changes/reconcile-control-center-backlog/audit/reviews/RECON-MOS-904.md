@@ -23,26 +23,26 @@ Paths and aliases below are exact repository-relative locators. Entire required 
 
 `AUTH` = `openspec/changes/archive/2026-10-09-integrate-mpmm-auth-permissions`:
 
-| Exact suffix under AUTH | Complete lines read |
-|---|---:|
-| `proposal.md` | 1–38 |
-| `design.md` | 1–171 |
-| `specs/control-center-api-integration/spec.md` | 1–64 |
-| `specs/control-center-http/spec.md` | 1–71 |
-| `specs/control-center-mock-server/spec.md` | 1–27 |
-| `specs/control-center-permissions/spec.md` | 1–89 |
-| `specs/control-center-shell/spec.md` | 1–101 |
-| `specs/mpmm-session/spec.md` | 1–138 |
+| Exact suffix under AUTH                        | Complete lines read |
+| ---------------------------------------------- | ------------------: |
+| `proposal.md`                                  |                1–38 |
+| `design.md`                                    |               1–171 |
+| `specs/control-center-api-integration/spec.md` |                1–64 |
+| `specs/control-center-http/spec.md`            |                1–71 |
+| `specs/control-center-mock-server/spec.md`     |                1–27 |
+| `specs/control-center-permissions/spec.md`     |                1–89 |
+| `specs/control-center-shell/spec.md`           |               1–101 |
+| `specs/mpmm-session/spec.md`                   |               1–138 |
 
 `DEMO` = `openspec/changes/archive/2026-10-09-add-local-session-demo`:
 
-| Exact suffix under DEMO | Complete lines read |
-|---|---:|
-| `proposal.md` | 1–28 |
-| `design.md` | 1–70 |
-| `specs/control-center-mock-server/spec.md` | 1–106 |
-| `specs/control-center-shell/spec.md` | 1–55 |
-| `specs/local-session-demo/spec.md` | 1–123 |
+| Exact suffix under DEMO                    | Complete lines read |
+| ------------------------------------------ | ------------------: |
+| `proposal.md`                              |                1–28 |
+| `design.md`                                |                1–70 |
+| `specs/control-center-mock-server/spec.md` |               1–106 |
+| `specs/control-center-shell/spec.md`       |                1–55 |
+| `specs/local-session-demo/spec.md`         |               1–123 |
 
 Additional current/route artifacts:
 
@@ -55,12 +55,12 @@ Additional current/route artifacts:
 
 Let **J** denote the exact content.json path above. Independently computed byte length **14311** and SHA256 **30caeb33afa1ae7f9be6c55b9157687174e3bd786dd73a54693e78979b4deef4**, matching metadata and work-item. Root retrieval timestamp is **2026-10-16T12:45:22.199Z**, matching metadata. Collector provenance is recorded, not independently authenticated remote truth.
 
-| J pointer | Key | Comments startAt/maxResults/total/actual | Attachments | Status |
-|---|---|---|---:|---|
-| `/items/0` | MOS-624 | 0/0/0/0 | 0 | Backlog |
-| `/items/1` | MOS-672 | 0/1/1/1 | 3 | CLOSED |
-| `/items/2` | MOS-673 | 0/1/1/1 | 3 | CLOSED |
-| `/items/4` | MOS-904 | 0/2/2/2 | 0 | Ready for test |
+| J pointer  | Key     | Comments startAt/maxResults/total/actual | Attachments | Status         |
+| ---------- | ------- | ---------------------------------------- | ----------: | -------------- |
+| `/items/0` | MOS-624 | 0/0/0/0                                  |           0 | Backlog        |
+| `/items/1` | MOS-672 | 0/1/1/1                                  |           3 | CLOSED         |
+| `/items/2` | MOS-673 | 0/1/1/1                                  |           3 | CLOSED         |
+| `/items/4` | MOS-904 | 0/2/2/2                                  |           0 | Ready for test |
 
 These match corresponding metadata comment counts/totals and recorded completeness. Selected objects have null parent and empty subtasks; membership remains collector-attributed to `jira-hierarchy/r1/content.json results[0]`, not independently established by detail fields. Hierarchy reopening was unnecessary for this candidate/owner mapping; no new hierarchy assertion is made.
 
@@ -75,22 +75,22 @@ These match corresponding metadata comment counts/totals and recorded completene
 
 Every row's primary locator is **J `/items/4/description`**, disambiguated by the quoted fragment. Coverage means accepted specification ownership, not implemented coverage.
 
-| Candidate ID | Primary fragment | Existing accepted owner and disposition |
-|---|---|---|
-| REQ-MOS-904-001 | «Заменить старый бренд» | **S:28–45**, DEMO `specs/control-center-shell/spec.md:3–20`: exact labels «Центр управления» / «Цифровой ассистент», prototype-aligned mark, current section title. Asset-body parity remains a collection gap, not an undecided brand label. |
-| REQ-MOS-904-002 | «жёстко заданные ФИО» | **S:284–306**, DEMO shell `:24–46`: confirmed `/me` name, omitted empty parts, email fallback, stale-data hiding. Accepted. |
-| REQ-MOS-904-003 | «/роль» | Same owner: confirmed roles array, «Роли не назначены» when empty; roles convey information, not grants. **P:9–21**. Accepted. |
-| REQ-MOS-904-004 | «Доработать существующие header» | Shell **S:28–45,120–142,284–306** owns branding, help and confirmed profile. Component-target wording does not itself specify another feature or prove current component architecture. |
-| REQ-MOS-904-005 | «SidebarHeader» | Responsive branding/active-section owner **S:28–45**. Existing scope target; exact component-level visual parity requires the historical bodies, not a fabricated new product plan. |
-| REQ-MOS-904-006 | «SidebarContent» | **S:47–89,179–214** and AUTH shell `:22–101`: grouped navigation, permissions, route availability, selected tabs. Covered behavioral owner; no independent layout inferred. |
-| REQ-MOS-904-007 | «SidebarFooter» | **S:91–118** owns bottom-sidebar documentation dropdown. Shell owns responsive behavior. Jira gives no separate footer behavior beyond the surrounding requirements. |
-| REQ-MOS-904-008 | «Добавить профиль» | **S:284–306**, DEMO shell `:24–46`: accessible confirmed name/email/roles menu, text-only values, keyboard/mobile focus. Accepted, distinct from exit. |
-| REQ-MOS-904-009 | «с выходом» | **Unresolved tension**, AUTH `proposal.md:15`, `design.md:25,98`; DEMO `design.md:46`; **S:11,286**. No accepted exit action; owner reconciliation only, no inferred local/global logout implementation. |
-| REQ-MOS-904-010 | «переход к командам» | **S:47–89,179–214**, R `proposal.md:12`, `design.md:57`: `/teams` in «Эксплуатация», appropriate permissions/tabs, active highlight/mobile closure, honest unfinished content. Profile-menu placement is not required by this phrase. No team-business expansion. |
-| REQ-MOS-904-011 | «контекстное меню статей документации» | **S:91–118**, R shell `:37–54`: bottom button, first six existing catalog articles in catalog order + «Все разделы», `/docs?article=<id>` and `/docs`, basename, closure, legacy redirect, unknown-article fallback; current search-aware fallback is also specified. Behavior is not awaiting a fresh owner decision. Concrete catalog bodies not audited. |
-| REQ-MOS-904-012 | «Доступность разделов брать из auth-контекста» | **P:9–81**, **S:47–89**, **M:47–59**: confirmed permissions drive UI, not role names; backend authorizes requests/object scopes. No new auth context endpoint/model or frontend request ACL. Accepted. |
-| REQ-MOS-904-013 | «Демонстрационные reset, переключение произвольной роли и сценарии показа не переносить в рабочий контур» | **S:28–45**, DEMO mock-server `:3–15`, local-session-demo `:7–28,45–82`: retain all three prohibitions outside configured local demo; separate fixed-profile/scenario «Моки» panel permitted locally, absent in production. No cancellation of local demo. |
-| REQ-MOS-904-014 | «Подсказки первого входа и повторное открытие справки оставить как справочную UI-функцию» | **S:120–142** covers both behaviors: versioned browser-local mark, no user/profile request dependency for that mark, close/completion marks viewed, reopen at step one, accessible header button outside profile menu, focus/Escape, storage-failure fallback. **S:39–41,301–306** retains mobile help. Exact walkthrough copy not audited; persistence/interaction are already specified. |
+| Candidate ID    | Primary fragment                                                                                          | Existing accepted owner and disposition                                                                                                                                                                                                                                                                                                                                                    |
+| --------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| REQ-MOS-904-001 | «Заменить старый бренд»                                                                                   | **S:28–45**, DEMO `specs/control-center-shell/spec.md:3–20`: exact labels «Центр управления» / «Цифровой ассистент», prototype-aligned mark, current section title. Asset-body parity remains a collection gap, not an undecided brand label.                                                                                                                                              |
+| REQ-MOS-904-002 | «жёстко заданные ФИО»                                                                                     | **S:284–306**, DEMO shell `:24–46`: confirmed `/me` name, omitted empty parts, email fallback, stale-data hiding. Accepted.                                                                                                                                                                                                                                                                |
+| REQ-MOS-904-003 | «/роль»                                                                                                   | Same owner: confirmed roles array, «Роли не назначены» when empty; roles convey information, not grants. **P:9–21**. Accepted.                                                                                                                                                                                                                                                             |
+| REQ-MOS-904-004 | «Доработать существующие header»                                                                          | Shell **S:28–45,120–142,284–306** owns branding, help and confirmed profile. Component-target wording does not itself specify another feature or prove current component architecture.                                                                                                                                                                                                     |
+| REQ-MOS-904-005 | «SidebarHeader»                                                                                           | Responsive branding/active-section owner **S:28–45**. Existing scope target; exact component-level visual parity requires the historical bodies, not a fabricated new product plan.                                                                                                                                                                                                        |
+| REQ-MOS-904-006 | «SidebarContent»                                                                                          | **S:47–89,179–214** and AUTH shell `:22–101`: grouped navigation, permissions, route availability, selected tabs. Covered behavioral owner; no independent layout inferred.                                                                                                                                                                                                                |
+| REQ-MOS-904-007 | «SidebarFooter»                                                                                           | **S:91–118** owns bottom-sidebar documentation dropdown. Shell owns responsive behavior. Jira gives no separate footer behavior beyond the surrounding requirements.                                                                                                                                                                                                                       |
+| REQ-MOS-904-008 | «Добавить профиль»                                                                                        | **S:284–306**, DEMO shell `:24–46`: accessible confirmed name/email/roles menu, text-only values, keyboard/mobile focus. Accepted, distinct from exit.                                                                                                                                                                                                                                     |
+| REQ-MOS-904-009 | «с выходом»                                                                                               | **Unresolved tension**, AUTH `proposal.md:15`, `design.md:25,98`; DEMO `design.md:46`; **S:11,286**. No accepted exit action; owner reconciliation only, no inferred local/global logout implementation.                                                                                                                                                                                   |
+| REQ-MOS-904-010 | «переход к командам»                                                                                      | **S:47–89,179–214**, R `proposal.md:12`, `design.md:57`: `/teams` in «Эксплуатация», appropriate permissions/tabs, active highlight/mobile closure, honest unfinished content. Profile-menu placement is not required by this phrase. No team-business expansion.                                                                                                                          |
+| REQ-MOS-904-011 | «контекстное меню статей документации»                                                                    | **S:91–118**, R shell `:37–54`: bottom button, first six existing catalog articles in catalog order + «Все разделы», `/docs?article=<id>` and `/docs`, basename, closure, legacy redirect, unknown-article fallback; current search-aware fallback is also specified. Behavior is not awaiting a fresh owner decision. Concrete catalog bodies not audited.                                |
+| REQ-MOS-904-012 | «Доступность разделов брать из auth-контекста»                                                            | **P:9–81**, **S:47–89**, **M:47–59**: confirmed permissions drive UI, not role names; backend authorizes requests/object scopes. No new auth context endpoint/model or frontend request ACL. Accepted.                                                                                                                                                                                     |
+| REQ-MOS-904-013 | «Демонстрационные reset, переключение произвольной роли и сценарии показа не переносить в рабочий контур» | **S:28–45**, DEMO mock-server `:3–15`, local-session-demo `:7–28,45–82`: retain all three prohibitions outside configured local demo; separate fixed-profile/scenario «Моки» panel permitted locally, absent in production. No cancellation of local demo.                                                                                                                                 |
+| REQ-MOS-904-014 | «Подсказки первого входа и повторное открытие справки оставить как справочную UI-функцию»                 | **S:120–142** covers both behaviors: versioned browser-local mark, no user/profile request dependency for that mark, close/completion marks viewed, reopen at step one, accessible header button outside profile menu, focus/Escape, storage-failure fallback. **S:39–41,301–306** retains mobile help. Exact walkthrough copy not audited; persistence/interaction are already specified. |
 
 Rows 004–007 are structural targets from Jira, not independently testable behavioral detail or proof of implementation. Preserve their IDs without inventing per-component requirements. Row 013 retains reset/role-switch/show-scenario prohibitions; row 014 retains first-entry and reopen behaviors separately within its existing ID.
 

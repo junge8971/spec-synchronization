@@ -14,14 +14,14 @@ This is a selected extraction, not the original JSON or complete issue. Parent r
 
 ## Description — skill_statuses (normalized table)
 
-| Field | Type | Constraints | Description |
-| --- | --- | --- | --- |
-| code | varchar(32) | Primary key | Стабильный системный код статуса: draft, review, prod |
-| display_name | varchar(100) | NOT NULL | Отображаемое название статуса |
-| sort_order | smallint | NOT NULL, UNIQUE | Порядок отображения статусов |
-| is_active | boolean | NOT NULL, default true | Доступен ли статус для использования |
-| created_at | timestamptz | NOT NULL, default now() | Дата создания записи |
-| updated_at | timestamptz | NOT NULL, default now() | Дата последнего изменения |
+| Field        | Type         | Constraints             | Description                                           |
+| ------------ | ------------ | ----------------------- | ----------------------------------------------------- |
+| code         | varchar(32)  | Primary key             | Стабильный системный код статуса: draft, review, prod |
+| display_name | varchar(100) | NOT NULL                | Отображаемое название статуса                         |
+| sort_order   | smallint     | NOT NULL, UNIQUE        | Порядок отображения статусов                          |
+| is_active    | boolean      | NOT NULL, default true  | Доступен ли статус для использования                  |
+| created_at   | timestamptz  | NOT NULL, default now() | Дата создания записи                                  |
+| updated_at   | timestamptz  | NOT NULL, default now() | Дата последнего изменения                             |
 
 Initial rows: draft / Черновик / 10; checking / Проверка / 20; training / Обучение модели / 30; autotest / Автотесты / 40; sandbox / Песочница / 50; review / Ревью / 60; whitelist / Белые списки / 70; prod / Прод / 80.
 
@@ -29,13 +29,13 @@ Initial rows: draft / Черновик / 10; checking / Проверка / 20; t
 
 Справочник разрешённых переходов между статусами.
 
-| Field | Type | Constraints | Description |
-| --- | --- | --- | --- |
-| from_status | varchar(32) | Composite primary key part, FK skill_statuses.code, NOT NULL | Исходный статус |
-| to_status | varchar(32) | Composite primary key part, FK skill_statuses.code, NOT NULL | Разрешённый целевой статус |
-| is_active | boolean | NOT NULL, default true | Активен ли переход |
-| created_at | timestamptz | NOT NULL, default now() | Дата создания перехода |
-| updated_at | timestamptz | NOT NULL, default now() | Дата последнего изменения |
+| Field       | Type        | Constraints                                                  | Description                |
+| ----------- | ----------- | ------------------------------------------------------------ | -------------------------- |
+| from_status | varchar(32) | Composite primary key part, FK skill_statuses.code, NOT NULL | Исходный статус            |
+| to_status   | varchar(32) | Composite primary key part, FK skill_statuses.code, NOT NULL | Разрешённый целевой статус |
+| is_active   | boolean     | NOT NULL, default true                                       | Активен ли переход         |
+| created_at  | timestamptz | NOT NULL, default now()                                      | Дата создания перехода     |
+| updated_at  | timestamptz | NOT NULL, default now()                                      | Дата последнего изменения  |
 
 Composite primary key: (from_status, to_status).
 Initial transitions: draft → checking; checking → training; training → autotest; autotest → sandbox; sandbox → review; review → draft; review → whitelist; whitelist → review; whitelist → prod.
@@ -44,15 +44,15 @@ Initial transitions: draft → checking; checking → training; training → aut
 
 Неизменяемая история фактически выполненных изменений статуса навыка.
 
-| Field | Type | Constraints | Description |
-| --- | --- | --- | --- |
-| id | uuid | Primary key, default gen_random_uuid() | Идентификатор записи истории |
-| skill_id | uuid | NOT NULL, FK skills.id, ON DELETE RESTRICT | Навык, у которого изменился статус |
-| old_status | varchar(32) | FK skill_statuses.code, ON DELETE RESTRICT, nullable | Статус до изменения, NULL при создании навыка |
-| new_status | varchar(32) | NOT NULL, FK skill_statuses.code, ON DELETE RESTRICT | Статус после изменения |
-| changed_at | timestamptz | NOT NULL, default now() | Момент фактического изменения статуса |
-| actor_sso_id | varchar(200) | nullable | Кто изменил статус, NULL для автоматического изменения |
-| reason | text | nullable | Причина изменения, если она предусмотрена сценарием |
+| Field        | Type         | Constraints                                          | Description                                            |
+| ------------ | ------------ | ---------------------------------------------------- | ------------------------------------------------------ |
+| id           | uuid         | Primary key, default gen_random_uuid()               | Идентификатор записи истории                           |
+| skill_id     | uuid         | NOT NULL, FK skills.id, ON DELETE RESTRICT           | Навык, у которого изменился статус                     |
+| old_status   | varchar(32)  | FK skill_statuses.code, ON DELETE RESTRICT, nullable | Статус до изменения, NULL при создании навыка          |
+| new_status   | varchar(32)  | NOT NULL, FK skill_statuses.code, ON DELETE RESTRICT | Статус после изменения                                 |
+| changed_at   | timestamptz  | NOT NULL, default now()                              | Момент фактического изменения статуса                  |
+| actor_sso_id | varchar(200) | nullable                                             | Кто изменил статус, NULL для автоматического изменения |
+| reason       | text         | nullable                                             | Причина изменения, если она предусмотрена сценарием    |
 
 ## Other selected fields
 

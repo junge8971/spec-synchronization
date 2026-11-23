@@ -30,14 +30,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "id",
-      "full_name",
-      "email",
-      "roles",
-      "membership_role",
-      "valid_from"
-    ],
+    "required": ["id", "full_name", "email", "roles", "membership_role", "valid_from"],
     "title": "TeamMemberResponse"
   }
 }

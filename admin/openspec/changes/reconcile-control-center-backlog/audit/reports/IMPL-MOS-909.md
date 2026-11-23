@@ -130,20 +130,20 @@ Concrete findings for independent review: **IMPL909-03** (four additional generi
 
 Independently computed with `sha256sum` over working files:
 
-| File | SHA-256 |
-|---|---|
+| File                                                                  | SHA-256                                                            |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | `app/features/skill-lifecycle/constants/skill-lifecycle.constants.ts` | `d6de7f6bf778308a900e8f99cbe983380019202c18de44803180375313fe4e3e` |
-| `app/features/skill-lifecycle/handlers/skill-lifecycle-handlers.ts` | `acc50ac92ab552659cb8710aa37a46098145607240791b437c357bb4cd2e71e0` |
-| `app/features/skill-lifecycle/model/use-skill-lifecycle.ts` | `8c5a90a1d39522a4d30138677c19da82b1d70577419bc0cf688f5aa8c509ae0d` |
-| `app/features/skill-lifecycle/ui/skill-lifecycle.tsx` | `fe99d1cdc3960e1d5246e147dff47bb7a1129fac74351a7797cd32040c1933e7` |
-| `app/features/skill-lifecycle/ui/skill-lifecycle-confirmation.tsx` | `c6fce92f7d68e2298a4763daac25c63af6a885e296ab3f5a235ec8fb41319db9` |
-| `app/entities/skill/api/skill-details-client.ts` | `de83617451674b4906697a3270c037ae7ff15b3abc0db710c76b3611cb9fd5f6` |
-| `app/entities/skill/api/skill-details-client.test.ts` | `4a0f96da35d60b0a958b27b0ebcafd140ab052d1de1078ec629546f154823762` |
-| `app/entities/skill/model/use-change-skill-status-mutation.ts` | `3a08a27c6a404b824d2a077ba9ef4af5040eb940c17b86f03c991147df0ae10b` |
-| `app/widgets/skill-details/ui/skill-lifecycle.test.tsx` | `32f12cc726f767880c4bb4e34d640c580abe942a5570e295ef4b31e6158a7645` |
-| `app/widgets/skill-details/ui/skill-details.tsx` | `d7a1b1c2f751f4a00170637ae0b5f997be2448d4254b1ea8f5440d899101e067` |
-| `app/widgets/skill-details/ui/skill-details.test.tsx` | `a69b0948e9aecf25618b1db83c27d06a804885b61ab8848e55f84d260f1558a5` |
-| `app/shared/api/schema.d.ts` | `394a55fc0bd646a9a3c81dace045d89f53505fc40bc4cb0902cb1492b638092d` |
+| `app/features/skill-lifecycle/handlers/skill-lifecycle-handlers.ts`   | `acc50ac92ab552659cb8710aa37a46098145607240791b437c357bb4cd2e71e0` |
+| `app/features/skill-lifecycle/model/use-skill-lifecycle.ts`           | `8c5a90a1d39522a4d30138677c19da82b1d70577419bc0cf688f5aa8c509ae0d` |
+| `app/features/skill-lifecycle/ui/skill-lifecycle.tsx`                 | `fe99d1cdc3960e1d5246e147dff47bb7a1129fac74351a7797cd32040c1933e7` |
+| `app/features/skill-lifecycle/ui/skill-lifecycle-confirmation.tsx`    | `c6fce92f7d68e2298a4763daac25c63af6a885e296ab3f5a235ec8fb41319db9` |
+| `app/entities/skill/api/skill-details-client.ts`                      | `de83617451674b4906697a3270c037ae7ff15b3abc0db710c76b3611cb9fd5f6` |
+| `app/entities/skill/api/skill-details-client.test.ts`                 | `4a0f96da35d60b0a958b27b0ebcafd140ab052d1de1078ec629546f154823762` |
+| `app/entities/skill/model/use-change-skill-status-mutation.ts`        | `3a08a27c6a404b824d2a077ba9ef4af5040eb940c17b86f03c991147df0ae10b` |
+| `app/widgets/skill-details/ui/skill-lifecycle.test.tsx`               | `32f12cc726f767880c4bb4e34d640c580abe942a5570e295ef4b31e6158a7645` |
+| `app/widgets/skill-details/ui/skill-details.tsx`                      | `d7a1b1c2f751f4a00170637ae0b5f997be2448d4254b1ea8f5440d899101e067` |
+| `app/widgets/skill-details/ui/skill-details.test.tsx`                 | `a69b0948e9aecf25618b1db83c27d06a804885b61ab8848e55f84d260f1558a5` |
+| `app/shared/api/schema.d.ts`                                          | `394a55fc0bd646a9a3c81dace045d89f53505fc40bc4cb0902cb1492b638092d` |
 
 ## Start Here
 

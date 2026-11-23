@@ -23,11 +23,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "code",
-      "name",
-      "value"
-    ],
+    "required": ["code", "name", "value"],
     "title": "DistributionItemResponse"
   }
 }

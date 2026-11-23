@@ -14,11 +14,36 @@
     "size": 5,
     "next": null,
     "results": [
-      {"id": "250790182", "title": "ПротоОбратнаяСвязь.html", "mediaType": "text/html", "self": "https://wiki.mos-team.ru/rest/api/content/250790182"},
-      {"id": "247746709", "title": "Прототипчик.html", "mediaType": "text/html", "self": "https://wiki.mos-team.ru/rest/api/content/247746709"},
-      {"id": "247739129", "title": "База знаний.html", "mediaType": "text/html", "self": "https://wiki.mos-team.ru/rest/api/content/247739129"},
-      {"id": "247737143", "title": "Прототип обратной связи.html", "mediaType": "text/html", "self": "https://wiki.mos-team.ru/rest/api/content/247737143"},
-      {"id": "247734812", "title": "новый 5.html", "mediaType": "text/html", "self": "https://wiki.mos-team.ru/rest/api/content/247734812"}
+      {
+        "id": "250790182",
+        "title": "ПротоОбратнаяСвязь.html",
+        "mediaType": "text/html",
+        "self": "https://wiki.mos-team.ru/rest/api/content/250790182"
+      },
+      {
+        "id": "247746709",
+        "title": "Прототипчик.html",
+        "mediaType": "text/html",
+        "self": "https://wiki.mos-team.ru/rest/api/content/247746709"
+      },
+      {
+        "id": "247739129",
+        "title": "База знаний.html",
+        "mediaType": "text/html",
+        "self": "https://wiki.mos-team.ru/rest/api/content/247739129"
+      },
+      {
+        "id": "247737143",
+        "title": "Прототип обратной связи.html",
+        "mediaType": "text/html",
+        "self": "https://wiki.mos-team.ru/rest/api/content/247737143"
+      },
+      {
+        "id": "247734812",
+        "title": "новый 5.html",
+        "mediaType": "text/html",
+        "self": "https://wiki.mos-team.ru/rest/api/content/247734812"
+      }
     ]
   }
 }

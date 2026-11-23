@@ -22,11 +22,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "name",
-      "department_name",
-      "reason"
-    ],
+    "required": ["name", "department_name", "reason"],
     "title": "CreateTeamRequest"
   }
 }

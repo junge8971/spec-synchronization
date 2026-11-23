@@ -2,13 +2,7 @@
   "pointer": "#/components/schemas/MetricUnit",
   "value": {
     "type": "string",
-    "enum": [
-      "count",
-      "percent",
-      "seconds",
-      "score",
-      "ratio"
-    ],
+    "enum": ["count", "percent", "seconds", "score", "ratio"],
     "title": "MetricUnit"
   }
 }

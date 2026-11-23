@@ -4,22 +4,22 @@
 
 Inventory only, governed by `work-items/JIRA-MOS-1328.md` and supplemental `work-items/JIRA-INVENTORY-HANDOFF.md`; the latter supersedes the pending detail-packet dependency. Paths below are relative to the audit root. Locators are zero-based JSON paths.
 
-| Packet | Saved retrieval timestamp | Relevant locators |
-| --- | --- | --- |
-| `sources/jira-hierarchy/r1/content.json` | `2026-10-16T11:08:08.629Z` | `$.retrievedAt`, `$.results[22]`, `$.pagination`, `$.method` |
-| `sources/jira-member-index/r1/content.json` | `2026-10-16T11:20:38.570Z` | `$.items[140]`, `$.items[141]` |
-| `sources/jira-member-index/r1/metadata.json` | `2026-10-16T11:20:38.570Z` | `$.retrievedAt`, `$.fields`, `$.limitations` |
-| `sources/jira-subtasks/r1/content.json` | `2026-10-16T11:23:01.951Z` | `$.retrievedAt`, `$.items` (16 records checked for assigned keys and parent references) |
-| `sources/jira-subtasks/r1/metadata.json` | `2026-10-16T11:23:01.951Z` | `$.retrievedAt`, `$.limitations` |
+| Packet                                       | Saved retrieval timestamp  | Relevant locators                                                                       |
+| -------------------------------------------- | -------------------------- | --------------------------------------------------------------------------------------- |
+| `sources/jira-hierarchy/r1/content.json`     | `2026-10-16T11:08:08.629Z` | `$.retrievedAt`, `$.results[22]`, `$.pagination`, `$.method`                            |
+| `sources/jira-member-index/r1/content.json`  | `2026-10-16T11:20:38.570Z` | `$.items[140]`, `$.items[141]`                                                          |
+| `sources/jira-member-index/r1/metadata.json` | `2026-10-16T11:20:38.570Z` | `$.retrievedAt`, `$.fields`, `$.limitations`                                            |
+| `sources/jira-subtasks/r1/content.json`      | `2026-10-16T11:23:01.951Z` | `$.retrievedAt`, `$.items` (16 records checked for assigned keys and parent references) |
+| `sources/jira-subtasks/r1/metadata.json`     | `2026-10-16T11:23:01.951Z` | `$.retrievedAt`, `$.limitations`                                                        |
 
 Hierarchy evidence is saved parent-browser DOM extraction. `$.results[22]` records MOS-1328 as **Q key result**, with exactly two observed child occurrences, both unique. It does not contain the parent's status, update time or full issue detail. MOS-1328 has no issue record in the member-index or subtask packets inspected.
 
 ## Assigned members
 
-| Member / observed summary | Membership locator in hierarchy | Index locator | Observed type | Observed status | Issue update timestamp | Nested evidence |
-| --- | --- | --- | --- | --- | --- | --- |
-| MOS-1322 — [B] Реализовать раздел "База знаний" | `$.results[22].children[0]` | `$.items[140]` | Development task | Hold | `2026-10-14T14:03:51.688+0800` | `$.items[140].subtasks = []` |
-| MOS-1362 — [FE][База знаний] Реализовать раздел управления материалами как отключаемый модуль | `$.results[22].children[1]` | `$.items[141]` | Development task | Ready for test | `2026-10-14T18:14:20.314+0800` | `$.items[141].subtasks = []` |
+| Member / observed summary                                                                     | Membership locator in hierarchy | Index locator  | Observed type    | Observed status | Issue update timestamp         | Nested evidence              |
+| --------------------------------------------------------------------------------------------- | ------------------------------- | -------------- | ---------------- | --------------- | ------------------------------ | ---------------------------- |
+| MOS-1322 — [B] Реализовать раздел "База знаний"                                               | `$.results[22].children[0]`     | `$.items[140]` | Development task | Hold            | `2026-10-14T14:03:51.688+0800` | `$.items[140].subtasks = []` |
+| MOS-1362 — [FE][База знаний] Реализовать раздел управления материалами как отключаемый модуль | `$.results[22].children[1]`     | `$.items[141]` | Development task | Ready for test  | `2026-10-14T18:14:20.314+0800` | `$.items[141].subtasks = []` |
 
 Each index record contains only `key`, `summary`, `type`, `status`, `updated`, and `subtasks`. For **each** member: index presence is verified; full description, attachment metadata/content, comments and custom acceptance fields are not collected in these records. Neither has a `parent` field; the module-to-member relationship is supported by the hierarchy child panel, not independently confirmed by an index parent field. No assigned member is among the four keys eligible for the supplemental API-delta description packet.
 

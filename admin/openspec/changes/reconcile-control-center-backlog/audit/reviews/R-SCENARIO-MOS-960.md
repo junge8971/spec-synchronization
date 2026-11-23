@@ -17,14 +17,14 @@ Read completely:
 
 Primary JSON files are located by exact JSON pointers and document headings, not fictitious line ranges for embedded HTML. For each row, read its complete adjacent `metadata.json`; independently recomputed SHA-256 of the full content bytes and confirmed equality with metadata:
 
-| Exact content path | SHA-256 | Semantic scope |
-|---|---|---|
-| `openspec/changes/reconcile-control-center-backlog/audit/sources/jira-sandbox-details/r1/content.json` | `4f6db63102f34912d4c50dc39d9f936635054dc805ddfbcf086414d5fe268cb8` | `/items/0` only: MOS-960 description and issue metadata |
-| `openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241097511/r2/content.json` | `710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47` | `/bodyView`: introduction, §§1.3–1.5, 2.9, version history; bounded version/context discovery |
-| `openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241082009/r2/content.json` | `13ff11a35b27fe17db263039ba4c9a2b5c335728bad7615d06aed3d94ab2d86b` | `/bodyView`: introduction, §§1.1–1.3, 2.4–2.7, version history |
-| `openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241080062/r1/content.json` | `4920e62124826b90c86ae1d6ec520f49f52a4d381334c94867864c1f218c3ab2` | `/text`: ПОД-8, ПЕС-5/8/9, ПРТ-ПЕС-5/6, tables 5.2 and 6.3, T-79 and adjacent T-81 context |
-| `openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-245673187/r1/content.json` | `d539752b3e0f424d0a251426a490319b07d03f4ff8dfdcf3074a62ee53d34eaa` | `/text`: sandbox story scenarios 1–2, process «3. Проверка в песочнице», `surface_skills` context |
-| `openspec/changes/reconcile-control-center-backlog/audit/sources/api-live/r1/content.json` | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` | Five operations below, all 47 transitively referenced schemas, bounded path-name discovery |
+| Exact content path                                                                                     | SHA-256                                                            | Semantic scope                                                                                    |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| `openspec/changes/reconcile-control-center-backlog/audit/sources/jira-sandbox-details/r1/content.json` | `4f6db63102f34912d4c50dc39d9f936635054dc805ddfbcf086414d5fe268cb8` | `/items/0` only: MOS-960 description and issue metadata                                           |
+| `openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241097511/r2/content.json`       | `710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47` | `/bodyView`: introduction, §§1.3–1.5, 2.9, version history; bounded version/context discovery     |
+| `openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241082009/r2/content.json`       | `13ff11a35b27fe17db263039ba4c9a2b5c335728bad7615d06aed3d94ab2d86b` | `/bodyView`: introduction, §§1.1–1.3, 2.4–2.7, version history                                    |
+| `openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-241080062/r1/content.json`       | `4920e62124826b90c86ae1d6ec520f49f52a4d381334c94867864c1f218c3ab2` | `/text`: ПОД-8, ПЕС-5/8/9, ПРТ-ПЕС-5/6, tables 5.2 and 6.3, T-79 and adjacent T-81 context        |
+| `openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-245673187/r1/content.json`       | `d539752b3e0f424d0a251426a490319b07d03f4ff8dfdcf3074a62ee53d34eaa` | `/text`: sandbox story scenarios 1–2, process «3. Проверка в песочнице», `surface_skills` context |
+| `openspec/changes/reconcile-control-center-backlog/audit/sources/api-live/r1/content.json`             | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` | Five operations below, all 47 transitively referenced schemas, bounded path-name discovery        |
 
 Jira is Backlog, updated 2026-10-15, retrieved 2026-10-16, with zero collected comments. Missing custom fields and uncollected attachment bodies remain collection limitations. None of these metadata facts attests runtime or approval.
 
@@ -43,9 +43,11 @@ All schema references resolved locally, including complete error envelopes and n
 ### Required corrections to the reviewed report
 
 1. **Schema precision — report line 60:** `SurfaceConfigurationResponse` has no `appearance` property. Replace the pseudo-shape with:
+
    ```text
    accent_color, shape, font, greeting, greeting_fallback, suggestions, cards
    ```
+
    These seven properties are required. `UpdateSurfaceConfigurationRequest` declares the same top-level property names, with write constraints. `enabled_skills` is a sibling of `configuration` in `SurfaceDetailResponse`, not a declared property of either configuration DTO. The detail envelope is `data: SurfaceDetailResponse`, not an unwrapped response body. The existing warning against mixing wiki and OpenAPI DTOs is correct; make it exact.
 
 2. **Status identity — report line 87:** the surface UI wiki process says literal Russian labels **«Настроена», «Проверка», «Песочница»**, not literal `configured/review/sandbox`. The surface contract wiki §1.1 maps «Проверка» to **`checking`**, whereas OpenAPI `SurfaceStatus` contains **`review`**, not `checking`. Preserve this published vocabulary difference instead of silently normalizing it. The separate eligibility difference is confirmed: the UI story says not «Прод», its process lists the three labels, and OpenAPI sandbox description explicitly permits any original status, including `prod` and `archived`, subject to its documented validation. No precedence or UI expansion follows.
@@ -67,17 +69,17 @@ All schema references resolved locally, including complete error envelopes and n
 
 All nine candidates are explicitly grounded in Jira `/items/0/description`; IDs below preserve the original report IDs.
 
-| Candidate | Independent disposition |
-|---|---|
-| MOS-960-C01 chosen skill | Supported. Skill detail establishes identity. MOS-1023 delta lines 35–42 covers secret-safe ID navigation, not test-session creation. |
-| MOS-960-C02 chosen surface | Supported. Detail supplies saved identity/configuration; wiki ПРТ-ПЕС-6 and surface_skills usage supply surface context/warnings. Neither establishes the loaded stand snapshot. |
-| MOS-960-C03 endpoint | Supported, ambiguity retained. Catalog §1.5 explicitly calls it the implementation address. No authority to reinterpret it as the chat/stand endpoint. |
-| MOS-960-C04 available contour | Supported. ПЕС-9 explicitly requires isolation; table 5.2 is a token storage model by environment, not an available-contours API or runtime readiness proof. Preserve MOS-1023's documented gate without designing transport. |
-| MOS-960-C05 scenario composition | Supported. Saved enabled skill IDs/parameters and skill intents are published. Effective test composition is not thereby established; apply the DTO corrections above. |
-| MOS-960-C06 greeting | Supported for surface saved content. Required-string versus wiki-nullable fallback difference matters. No skill-only greeting source found in the inspected context models; not-applicable and unknown must remain distinct. |
-| MOS-960-C07 synchronization state | Supported requirement, missing scoped state contract. ПРТ-ПЕС-5/T-79 name synchronization action; that is not a state DTO. MOS-962 is a dependency, not implementation evidence. |
-| MOS-960-C08 server test session | Supported requirement. Table 6.3 `skill_sandbox_checks` models a check/history record (`id`, skill, author, result, trace, created_at), not a declared session lifecycle. T-81 names an analytical sandbox-view integration; it does not provide the missing session DTO. Do not claim no sandbox-related models or integration mentions exist. |
-| MOS-960-C09 tested version binding | Supported requirement and bounded gap. No binding found in the inspected operation/schema closure and context publications. Do not promote metadata/concurrency/check IDs to an immutable tested snapshot. |
+| Candidate                          | Independent disposition                                                                                                                                                                                                                                                                                                                         |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MOS-960-C01 chosen skill           | Supported. Skill detail establishes identity. MOS-1023 delta lines 35–42 covers secret-safe ID navigation, not test-session creation.                                                                                                                                                                                                           |
+| MOS-960-C02 chosen surface         | Supported. Detail supplies saved identity/configuration; wiki ПРТ-ПЕС-6 and surface_skills usage supply surface context/warnings. Neither establishes the loaded stand snapshot.                                                                                                                                                                |
+| MOS-960-C03 endpoint               | Supported, ambiguity retained. Catalog §1.5 explicitly calls it the implementation address. No authority to reinterpret it as the chat/stand endpoint.                                                                                                                                                                                          |
+| MOS-960-C04 available contour      | Supported. ПЕС-9 explicitly requires isolation; table 5.2 is a token storage model by environment, not an available-contours API or runtime readiness proof. Preserve MOS-1023's documented gate without designing transport.                                                                                                                   |
+| MOS-960-C05 scenario composition   | Supported. Saved enabled skill IDs/parameters and skill intents are published. Effective test composition is not thereby established; apply the DTO corrections above.                                                                                                                                                                          |
+| MOS-960-C06 greeting               | Supported for surface saved content. Required-string versus wiki-nullable fallback difference matters. No skill-only greeting source found in the inspected context models; not-applicable and unknown must remain distinct.                                                                                                                    |
+| MOS-960-C07 synchronization state  | Supported requirement, missing scoped state contract. ПРТ-ПЕС-5/T-79 name synchronization action; that is not a state DTO. MOS-962 is a dependency, not implementation evidence.                                                                                                                                                                |
+| MOS-960-C08 server test session    | Supported requirement. Table 6.3 `skill_sandbox_checks` models a check/history record (`id`, skill, author, result, trace, created_at), not a declared session lifecycle. T-81 names an analytical sandbox-view integration; it does not provide the missing session DTO. Do not claim no sandbox-related models or integration mentions exist. |
+| MOS-960-C09 tested version binding | Supported requirement and bounded gap. No binding found in the inspected operation/schema closure and context publications. Do not promote metadata/concurrency/check IDs to an immutable tested snapshot.                                                                                                                                      |
 
 ## Architecture and boundaries
 

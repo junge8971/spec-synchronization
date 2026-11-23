@@ -45,3 +45,7 @@
 
 - [x] 8.1 Исправить обязательные CSV-заголовки в общем mock helper и утечку useBlocker при Activity hide/show; не ослаблять shared file reader, session boundary или assertions. Проверка: реальный HTTP → shared CSV reader, граничные filename/empty export, Activity regression, успешные скачивания списка/карточки на диск и отсутствие warning при tab/Back/Stay/Leave.
 - [x] 8.2 Привести реестр, карточку и связи к композиции переданного прототипа и дизайн-коду соседних разделов через существующие shared Select/Card/Tabs/Bubble/SelectionChip, без импорта KB и собственной темы. Различать одинаковые названия компактным ID, при совпадении суффиксов оставлять полный ID; полный ID также доступен в подсказке и accessible name. Проверка: component tests, keyboard selection/focus, desktop/mobile browser inspection и обновлённые screenshots/acceptance.
+
+## Сверка архива 17.11.2026
+
+- **7.3** остаётся открытым. Исправление блокировщика навигации сделано в [mos-1510-api-registry](../2026-10-30-mos-1510-api-registry/tasks.md); ограниченный повтор проверки записан в [отчёте MOS-1509](../../../../app/optional/response-templates/ACCEPTANCE.md). Чтение буфера, полный клавиатурный обход и выбор связи со второй страницы в браузере этим не закрыты.

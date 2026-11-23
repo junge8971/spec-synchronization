@@ -15,23 +15,23 @@ No issues found.
 
 ## Independently verified dispositions
 
-| Historical request | Verification | Accepted boundary |
-|---|---|---|
-| Original Swagger discovery receipt | `A/sources/api-live/r1/metadata.json:4–18` records discovery attribution and capture **2026-10-16T11:13:29.451Z**. Saved Swagger metadata records **2026-10-19T08:10:46.142Z**; `api-live/r2/metadata.json:4–7` explicitly references that receipt and capture **2026-10-19T08:11:44.238Z**. | **Partial overall:** separately dated r2 discovery is evidenced; original r1 discovery remains independently unverified. This neither proves guessing nor proves an original receipt never existed. Another current request cannot repair historical provenance. |
-| Explanatory documents exposed by the saved Swagger entrypoint | Read all of `A/sources/api-docs/r1/content.html` and adjacent metadata. The exact observed target set is listed below. | **Resolved for this static saved entrypoint.** No additional business-document link occurs there. Broader explanatory-source sufficiency is not thereby certified. |
-| Previously uncollected API container241085256 | Read complete `A/sources/wiki-241085256/r1/content.json`, metadata and complete derivative `body-view-chunks.json`. Primary `/bodyView` contains exactly six children links; `/attachments` records size0, next null. Metadata records v2, HTTP200, **2026-10-19T09:36:52.261Z** and D-031 authority. | **Resolved collection/relevance request:** a navigation container, not an endpoint contract. All six exact children have saved metadata and accepted documentary coverage; no repeat collection is justified. |
+| Historical request                                            | Verification                                                                                                                                                                                                                                                                                          | Accepted boundary                                                                                                                                                                                                                                                |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Original Swagger discovery receipt                            | `A/sources/api-live/r1/metadata.json:4–18` records discovery attribution and capture **2026-10-16T11:13:29.451Z**. Saved Swagger metadata records **2026-10-19T08:10:46.142Z**; `api-live/r2/metadata.json:4–7` explicitly references that receipt and capture **2026-10-19T08:11:44.238Z**.          | **Partial overall:** separately dated r2 discovery is evidenced; original r1 discovery remains independently unverified. This neither proves guessing nor proves an original receipt never existed. Another current request cannot repair historical provenance. |
+| Explanatory documents exposed by the saved Swagger entrypoint | Read all of `A/sources/api-docs/r1/content.html` and adjacent metadata. The exact observed target set is listed below.                                                                                                                                                                                | **Resolved for this static saved entrypoint.** No additional business-document link occurs there. Broader explanatory-source sufficiency is not thereby certified.                                                                                               |
+| Previously uncollected API container241085256                 | Read complete `A/sources/wiki-241085256/r1/content.json`, metadata and complete derivative `body-view-chunks.json`. Primary `/bodyView` contains exactly six children links; `/attachments` records size0, next null. Metadata records v2, HTTP200, **2026-10-19T09:36:52.261Z** and D-031 authority. | **Resolved collection/relevance request:** a navigation container, not an endpoint contract. All six exact children have saved metadata and accepted documentary coverage; no repeat collection is justified.                                                    |
 
 ### Exact Swagger target set
 
 Base: `https://nchat-a-tech.mos.ru/api/control/docs`.
 
-| HTML line | Observed target | Disposition |
-|---|---|---|
-| 17 | `/api/control/openapi.json` | Specification URL, resolving to `https://nchat-a-tech.mos.ru/api/control/openapi.json`; separate r2 capture. |
-| 6 | `https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css` | Stylesheet, not business explanatory documentation. |
-| 7 | `https://fastapi.tiangolo.com/img/favicon.png` | Icon; no documentation-site traversal authority. |
-| 13 | `https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js` | Runtime asset; not fetched or executed by this review. |
-| 23 | `window.location.origin + '/api/control/docs/oauth2-redirect'` | Callback configuration, not explanatory documentation or authorization to exercise authentication. |
+| HTML line | Observed target                                                       | Disposition                                                                                                  |
+| --------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| 17        | `/api/control/openapi.json`                                           | Specification URL, resolving to `https://nchat-a-tech.mos.ru/api/control/openapi.json`; separate r2 capture. |
+| 6         | `https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css`       | Stylesheet, not business explanatory documentation.                                                          |
+| 7         | `https://fastapi.tiangolo.com/img/favicon.png`                        | Icon; no documentation-site traversal authority.                                                             |
+| 13        | `https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js` | Runtime asset; not fetched or executed by this review.                                                       |
+| 23        | `window.location.origin + '/api/control/docs/oauth2-redirect'`        | Callback configuration, not explanatory documentation or authorization to exercise authentication.           |
 
 The DOM selector, presets, layout and extension flags add no document targets. This is a complete inspection of the saved static HTML, **not** runtime-generated-link coverage, external freshness or global documentation completeness. It does not depend on absence of OpenAPI `externalDocs`.
 
@@ -39,14 +39,14 @@ The DOM selector, presets, layout and extension flags add no document targets. T
 
 All six adjacent canonical `metadata.json` files were read completely. Each records HTTP200, full bodyView with a separately returned attachment index, and existing root-linked collection authority—not recursive authority derived from this container.
 
-| Child ID | Container label | External version / capture on 2026-10-19 | Accepted chain reused |
-|---|---|---|---|
-| 238347066 | `/skills` | v8 / 10:18:27.973Z | `DELTA-SKILL-LIST-CARD-EXAMPLES` → `R-DELTA-SKILL-EXAMPLES` → D-034 |
-| 238352321 | `/skills/{id}` | v2 / 10:18:28.161Z | Same chain |
-| 241074633 | `/skills/{id}/monitoring` | v4 / 10:18:28.344Z | `DELTA-SKILL-MONITORING-EXAMPLE` → same review → D-034 |
-| 241080643 | `/dialogs` | v7 / 10:35:01.626Z | `DELTA-DIALOG-LIST-CARD-EXAMPLES` → `R-DELTA-DIALOG-SUPPLEMENTS` → D-035 |
-| 241083649 | `/dialogs/{id}` | v2 / 10:35:01.839Z | Same chain |
-| 238350232 | `/reports` and `/reports?tab=builder` | v33 / 10:44:36.785Z | `DELTA-REPORTS-ROOT-DOCS` → corresponding review → D-036 |
+| Child ID  | Container label                       | External version / capture on 2026-10-19 | Accepted chain reused                                                    |
+| --------- | ------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------ |
+| 238347066 | `/skills`                             | v8 / 10:18:27.973Z                       | `DELTA-SKILL-LIST-CARD-EXAMPLES` → `R-DELTA-SKILL-EXAMPLES` → D-034      |
+| 238352321 | `/skills/{id}`                        | v2 / 10:18:28.161Z                       | Same chain                                                               |
+| 241074633 | `/skills/{id}/monitoring`             | v4 / 10:18:28.344Z                       | `DELTA-SKILL-MONITORING-EXAMPLE` → same review → D-034                   |
+| 241080643 | `/dialogs`                            | v7 / 10:35:01.626Z                       | `DELTA-DIALOG-LIST-CARD-EXAMPLES` → `R-DELTA-DIALOG-SUPPLEMENTS` → D-035 |
+| 241083649 | `/dialogs/{id}`                       | v2 / 10:35:01.839Z                       | Same chain                                                               |
+| 238350232 | `/reports` and `/reports?tab=builder` | v33 / 10:44:36.785Z                      | `DELTA-REPORTS-ROOT-DOCS` → corresponding review → D-036                 |
 
 Report names above resolve under `A/reports/`; review names under `A/reviews/`, with `.md`.
 
@@ -58,18 +58,18 @@ The complete corrected `REL-D031-PLANNING-API` and original `R-REL-D031-PLANNING
 
 Read all ten exact metadata files completely; no original contract/business body was semantically re-audited.
 
-| Canonical packet under `A/sources/` | Verified metadata identity and qualification |
-|---|---|
-| `wiki-241082009/r2` | v5, HTTP200, 2026-10-16; separate attachment index count0/next null; earlier failed attempt retained. |
-| `wiki-241097511/r2` | v6, HTTP200, 2026-10-16; separate index count0/next null; success does not explain earlier404. |
-| `wiki-241085439/r1` | v15, HTTP200; **eight bearer-example redactions**; MOS1015 membership reference; index count0/next null. |
-| `wiki-241085838/r1` | v3, HTTP200; index count0/next null. D-036 retains this prior catalog separately from later report examples. |
-| `wiki-241088180/r1` | v4, HTTP200; index count0/next null; distinct from later system-state root documents. |
-| `wiki-241092242/r1` | v4, HTTP200; index count0/next null; distinct from later templates/admin-stubs root documents. |
-| `wiki-241080062/r1` | v17; body/index acquisition and redaction-policy metadata. SVG245672060 remains an accepted-ledger unread attachment, not an absent page body. |
-| `wiki-245673187/r1` | v18; surfaces business-analysis identity. Empty-index assertion remains attributed to the accepted legacy projection/review, not independently parsed here. |
-| `wiki-243776365/r1` | v13; dialogues business-analysis identity. Same attribution boundary for its empty index. |
-| `wiki-247734813/r1` | v11; explicitly flattened `body.view textContent and links extraction`, not full structural HTML. |
+| Canonical packet under `A/sources/` | Verified metadata identity and qualification                                                                                                                |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `wiki-241082009/r2`                 | v5, HTTP200, 2026-10-16; separate attachment index count0/next null; earlier failed attempt retained.                                                       |
+| `wiki-241097511/r2`                 | v6, HTTP200, 2026-10-16; separate index count0/next null; success does not explain earlier404.                                                              |
+| `wiki-241085439/r1`                 | v15, HTTP200; **eight bearer-example redactions**; MOS1015 membership reference; index count0/next null.                                                    |
+| `wiki-241085838/r1`                 | v3, HTTP200; index count0/next null. D-036 retains this prior catalog separately from later report examples.                                                |
+| `wiki-241088180/r1`                 | v4, HTTP200; index count0/next null; distinct from later system-state root documents.                                                                       |
+| `wiki-241092242/r1`                 | v4, HTTP200; index count0/next null; distinct from later templates/admin-stubs root documents.                                                              |
+| `wiki-241080062/r1`                 | v17; body/index acquisition and redaction-policy metadata. SVG245672060 remains an accepted-ledger unread attachment, not an absent page body.              |
+| `wiki-245673187/r1`                 | v18; surfaces business-analysis identity. Empty-index assertion remains attributed to the accepted legacy projection/review, not independently parsed here. |
+| `wiki-243776365/r1`                 | v13; dialogues business-analysis identity. Same attribution boundary for its empty index.                                                                   |
+| `wiki-247734813/r1`                 | v11; explicitly flattened `body.view textContent and links extraction`, not full structural HTML.                                                           |
 
 The report accurately distinguishes direct metadata reads from accepted legacy projections and prior semantic findings. Capture-time “pending” or “unread” wording is historical evidence, not necessarily current inventory.
 

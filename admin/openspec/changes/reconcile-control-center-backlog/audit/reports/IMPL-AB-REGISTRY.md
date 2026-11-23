@@ -26,19 +26,19 @@ Static local inspection only; no tests/build/typecheck, browser, network, creden
 
 OpenSpec is ignored; these hashes are current filesystem bytes, not historical Git equivalence.
 
-| Input | SHA256 |
-|---|---|
-| openspec/specs/ab-testing-registry/spec.md | f23569188a872ab976bbe1ae8be032a667c854ed4a544404f068e1d6e4a59bd5 |
-| openspec/specs/ab-testing-module/spec.md | 0013ea05d4c913d321baae18dca1076029792bf58ffc06e6a1715d53eca60366 |
+| Input                                         | SHA256                                                           |
+| --------------------------------------------- | ---------------------------------------------------------------- |
+| openspec/specs/ab-testing-registry/spec.md    | f23569188a872ab976bbe1ae8be032a667c854ed4a544404f068e1d6e4a59bd5 |
+| openspec/specs/ab-testing-module/spec.md      | 0013ea05d4c913d321baae18dca1076029792bf58ffc06e6a1715d53eca60366 |
 | audit/work-items/G2-OPTIONAL-DOMAINS-SEVEN.md | 9720c147622d55b007071126202799405226f607c8935d431761f980c476e89a |
-| audit/reports/DELTA-AB-TESTING-ROOT-DOC.md | cd8cb41cc08c0f2400a03dc842f089eec3f1c393e8db8070ffc11f65f91fea69 |
-| audit/reviews/R-DELTA-AB-TESTING-ROOT-DOC.md | 3db6568ae32989577ee8271a092d41c44abf9fd2c1bb6e3f705c10ceb2b9ce82 |
-| A/proposal.md | 93d219f6c749cda697f3b1dcc231e3d4dbf2ea71b99267f7d610b19ba390edfd |
-| A/design.md | fba208c2d27c670ff0e981d5fa17d2121df16ff67ca66d8df0adf255fff2cee6 |
-| A/tasks.md | e005921905e56e00cead68fd3c58d7ae30b9ffb79d6313de3162734ec30f1073 |
-| C/proposal.md | 6ece6e82490038d5ce491f19acf089c10a27dc845f74c2cf035ac37826c13bd8 |
-| C/design.md | 58f8cdbd387508c10285387b3fcdbf208bfdb73559a8243997af676e38df6156 |
-| C/tasks.md | 6002750f35319a52ce0c9fcd50731385ada811844c6edc3499943d87051dd478 |
+| audit/reports/DELTA-AB-TESTING-ROOT-DOC.md    | cd8cb41cc08c0f2400a03dc842f089eec3f1c393e8db8070ffc11f65f91fea69 |
+| audit/reviews/R-DELTA-AB-TESTING-ROOT-DOC.md  | 3db6568ae32989577ee8271a092d41c44abf9fd2c1bb6e3f705c10ceb2b9ce82 |
+| A/proposal.md                                 | 93d219f6c749cda697f3b1dcc231e3d4dbf2ea71b99267f7d610b19ba390edfd |
+| A/design.md                                   | fba208c2d27c670ff0e981d5fa17d2121df16ff67ca66d8df0adf255fff2cee6 |
+| A/tasks.md                                    | e005921905e56e00cead68fd3c58d7ae30b9ffb79d6313de3162734ec30f1073 |
+| C/proposal.md                                 | 6ece6e82490038d5ce491f19acf089c10a27dc845f74c2cf035ac37826c13bd8 |
+| C/design.md                                   | 58f8cdbd387508c10285387b3fcdbf208bfdb73559a8243997af676e38df6156 |
+| C/tasks.md                                    | 6002750f35319a52ce0c9fcd50731385ada811844c6edc3499943d87051dd478 |
 
 `audit/` expands to `openspec/changes/reconcile-control-center-backlog/audit/`; A/C expand to the two archive paths identified above.
 

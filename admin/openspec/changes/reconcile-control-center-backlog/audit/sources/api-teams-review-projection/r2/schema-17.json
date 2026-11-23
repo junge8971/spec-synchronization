@@ -31,14 +31,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "id",
-      "name",
-      "department_name",
-      "member_count",
-      "created_at",
-      "updated_at"
-    ],
+    "required": ["id", "name", "department_name", "member_count", "created_at", "updated_at"],
     "title": "TeamMutationResponse"
   }
 }

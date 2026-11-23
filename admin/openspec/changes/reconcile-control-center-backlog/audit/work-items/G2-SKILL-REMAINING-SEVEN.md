@@ -3,6 +3,7 @@
 Continue audit after D087; user explicitly requests further work, retains seven Astra-low parallel lanes. Parent sole project writer. Each lane produces one bounded requirements/API/spec/code/test/task join, not implementation. Read own exact member description in sources/jira-details-MOS-774/r1/content.json. Reuse accepted reports/reviews and saved wiki/API bodies; do not redo completed optional/domain/token/history/monitoring/export audits. Inspect actual assertion bodies where claiming test coverage. Main specs and archives are read-only, historical task states preserved. Current-local hashes, not git-show baselines for ignored OpenSpec.
 
 Exclusive scenario ownership:
+
 1. registry: MOS675/676/677; header/notification/filter/table/sorting. 1050/1051/1052 only if independently attributable saved descriptions; no infer screenshot content from filename. Record missing attachment bytes as limits, not absent implementation.
 2. contracts: MOS701; exact backend contract DoD versus saved schemas and current frontend consumption; reuse domain read correction D087, never duplicate it. Contract completeness is not frontend implementation/deployment acceptance.
 3. phrases: MOS945 group/line/comma editing, save/cancel, published retraining indication; separate MOS1018 conflict owner and model gates.

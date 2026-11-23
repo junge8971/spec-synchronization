@@ -24,26 +24,26 @@ Every row has index presence = yes and type = `Development task`. Locator `I[n]`
 
 Coverage **G**: description, attachments, comments and custom acceptance fields absent from index and no assigned supplementary description record. **D2/D3**: description and attachment metadata collected in delta `$.items[2]/[3]`, respectively; comments/custom acceptance fields still absent. No attachment bodies collected.
 
-| Member | Index locator | Observed status | Index updated (verbatim) | Subtasks | Coverage |
-|---|---|---|---|---|---|
-| MOS-707 | I[116] | CLOSED | 2026-09-24T17:18:32.529+0800 | 0 | G |
-| MOS-708 | I[117] | CLOSED | 2026-10-09T15:05:07.714+0800 | 0 | G |
-| MOS-709 | I[118] | Require improvement | 2026-10-09T15:05:22.838+0800 | 5 | G |
-| MOS-712 | I[119] | Review | 2026-10-09T15:06:54.796+0800 | 0 | G |
-| MOS-901 | I[120] | Require improvement | 2026-10-16T19:20:13.190+0800 | 0 | G |
-| MOS-910 | I[121] | Testing | 2026-10-09T15:04:29.281+0800 | 0 | G |
-| MOS-911 | I[122] | Ready for test | 2026-10-09T15:04:32.758+0800 | 0 | G |
-| MOS-913 | I[123] | Ready for test | 2026-10-09T15:04:13.786+0800 | 0 | G |
-| MOS-914 | I[124] | Ready for test | 2026-10-14T20:38:47.150+0800 | 0 | G |
-| MOS-958 | I[125] | Hold | 2026-10-14T20:44:01.006+0800 | 0 | G |
-| MOS-959 | I[126] | Backlog | 2026-10-16T19:20:11.528+0800 | 0 | D3 |
-| MOS-976 | I[127] | Ready for test | 2026-10-09T15:08:10.713+0800 | 0 | G |
-| MOS-1130 | I[128] | Backlog | 2026-10-16T19:20:15.049+0800 | 0 | G |
-| MOS-1178 | I[129] | Review | 2026-10-16T15:00:48.479+0800 | 0 | G |
-| MOS-1237 | I[130] | Ready for test | 2026-10-16T15:31:51.977+0800 | 0 | D2 |
-| MOS-1308 | I[131] | Review | 2026-10-16T17:28:19.004+0800 | 0 | G |
-| MOS-1336 | I[132] | Ready for test | 2026-10-15T20:50:28.715+0800 | 0 | G |
-| MOS-1407 | I[133] | Development | 2026-10-16T17:33:09.299+0800 | 0 | G |
+| Member   | Index locator | Observed status     | Index updated (verbatim)     | Subtasks | Coverage |
+| -------- | ------------- | ------------------- | ---------------------------- | -------- | -------- |
+| MOS-707  | I[116]        | CLOSED              | 2026-09-24T17:18:32.529+0800 | 0        | G        |
+| MOS-708  | I[117]        | CLOSED              | 2026-10-09T15:05:07.714+0800 | 0        | G        |
+| MOS-709  | I[118]        | Require improvement | 2026-10-09T15:05:22.838+0800 | 5        | G        |
+| MOS-712  | I[119]        | Review              | 2026-10-09T15:06:54.796+0800 | 0        | G        |
+| MOS-901  | I[120]        | Require improvement | 2026-10-16T19:20:13.190+0800 | 0        | G        |
+| MOS-910  | I[121]        | Testing             | 2026-10-09T15:04:29.281+0800 | 0        | G        |
+| MOS-911  | I[122]        | Ready for test      | 2026-10-09T15:04:32.758+0800 | 0        | G        |
+| MOS-913  | I[123]        | Ready for test      | 2026-10-09T15:04:13.786+0800 | 0        | G        |
+| MOS-914  | I[124]        | Ready for test      | 2026-10-14T20:38:47.150+0800 | 0        | G        |
+| MOS-958  | I[125]        | Hold                | 2026-10-14T20:44:01.006+0800 | 0        | G        |
+| MOS-959  | I[126]        | Backlog             | 2026-10-16T19:20:11.528+0800 | 0        | D3       |
+| MOS-976  | I[127]        | Ready for test      | 2026-10-09T15:08:10.713+0800 | 0        | G        |
+| MOS-1130 | I[128]        | Backlog             | 2026-10-16T19:20:15.049+0800 | 0        | G        |
+| MOS-1178 | I[129]        | Review              | 2026-10-16T15:00:48.479+0800 | 0        | G        |
+| MOS-1237 | I[130]        | Ready for test      | 2026-10-16T15:31:51.977+0800 | 0        | D2       |
+| MOS-1308 | I[131]        | Review              | 2026-10-16T17:28:19.004+0800 | 0        | G        |
+| MOS-1336 | I[132]        | Ready for test      | 2026-10-15T20:50:28.715+0800 | 0        | G        |
+| MOS-1407 | I[133]        | Development         | 2026-10-16T17:33:09.299+0800 | 0        | G        |
 
 Delta supplement: `sources/jira-api-delta-scenarios/r1/content.json#$.items[2]` retains MOS-1237 type/status, but updated = `2026-10-16T19:22:44.086+0800` (does not replace index timestamp). Nonempty description and one attachment metadata entry (`attachments[0]`: ID 839665, `mos-1237-test-plan.md`, text/markdown, 19543 bytes); `subtasks: []`. `$.items[3]` retains MOS-959 type/status and updated = `2026-10-16T19:20:11.528+0800`; nonempty description, `attachments: []`, `subtasks: []`. Empty attachments here is an observed array, unlike absent attachment coverage in G rows.
 
@@ -51,13 +51,13 @@ Delta supplement: `sources/jira-api-delta-scenarios/r1/content.json#$.items[2]` 
 
 Each has type `Dev-bug (sub-task)`, status `Backlog` (also matches its member-index reference), parent `MOS-709`, nonempty saved description, attachment metadata, and no comments/custom acceptance fields. `S[n]` means `sources/jira-subtasks/r1/content.json#$.items[n]`. Reference locators below are within `sources/jira-member-index/r1/content.json#$.items[118]`.
 
-| Key | Reference → detail locator | Detail updated (verbatim) | Attachment metadata IDs / filenames |
-|---|---|---|---|
-| MOS-1110 | `.subtasks[0]` → S[10] | 2026-10-09T15:06:06.973+0800 | 829292 / 2909.png |
-| MOS-1164 | `.subtasks[1]` → S[11] | 2026-10-09T15:06:35.325+0800 | 832277 / 1.png |
-| MOS-1165 | `.subtasks[2]` → S[12] | 2026-10-09T15:06:55.903+0800 | 832288 / 2.png |
-| MOS-1166 | `.subtasks[3]` → S[13] | 2026-10-09T15:07:28.233+0800 | 832305 / 3.png |
-| MOS-1167 | `.subtasks[4]` → S[14] | 2026-10-09T15:08:08.485+0800 | 832324 / 4.png; 832323 / 5.png |
+| Key      | Reference → detail locator | Detail updated (verbatim)    | Attachment metadata IDs / filenames |
+| -------- | -------------------------- | ---------------------------- | ----------------------------------- |
+| MOS-1110 | `.subtasks[0]` → S[10]     | 2026-10-09T15:06:06.973+0800 | 829292 / 2909.png                   |
+| MOS-1164 | `.subtasks[1]` → S[11]     | 2026-10-09T15:06:35.325+0800 | 832277 / 1.png                      |
+| MOS-1165 | `.subtasks[2]` → S[12]     | 2026-10-09T15:06:55.903+0800 | 832288 / 2.png                      |
+| MOS-1166 | `.subtasks[3]` → S[13]     | 2026-10-09T15:07:28.233+0800 | 832305 / 3.png                      |
+| MOS-1167 | `.subtasks[4]` → S[14]     | 2026-10-09T15:08:08.485+0800 | 832324 / 4.png; 832323 / 5.png      |
 
 Parent proof is each S record's `.parent`; attachment locators are `.attachments[0]`, plus S[14]`.attachments[1]`. Six attachment metadata entries, no downloaded bodies.
 

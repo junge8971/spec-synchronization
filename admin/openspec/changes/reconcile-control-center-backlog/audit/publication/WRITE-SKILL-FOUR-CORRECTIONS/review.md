@@ -2,12 +2,12 @@
 
 ## Decisions
 
-| Package | Decision | Unchecked tasks |
-| --- | --- | ---: |
-| fix-skill-registry-count-label | ACCEPT | 5 |
-| add-skill-domain-sorting | ACCEPT (planning only; confirmation gate retained) | 6 |
-| fix-skill-phrase-application-notice | ACCEPT | 4 |
-| add-skill-readiness-results | ACCEPT | 6 |
+| Package                             | Decision                                           | Unchecked tasks |
+| ----------------------------------- | -------------------------------------------------- | --------------: |
+| fix-skill-registry-count-label      | ACCEPT                                             |               5 |
+| add-skill-domain-sorting            | ACCEPT (planning only; confirmation gate retained) |               6 |
+| fix-skill-phrase-application-notice | ACCEPT                                             |               4 |
+| add-skill-readiness-results         | ACCEPT                                             |               6 |
 
 **21 tasks total; zero checked.** No mandatory candidate patches. Parent alone may install accepted planning directories; this is not implementation authorization.
 
@@ -20,7 +20,7 @@ Read all 20 candidate files completely, the assigned work item, remaining-seven 
 
 ### Semantic preservation of older scenarios
 
-Count/sort retain the seven original registry scenarios. Notice preserves the original saved-version scenario. Readiness correctly replaces the blanket “individual results unavailable” and “status only” statements rather than retaining their obsolete prohibition. Its preserved processing-stage scenarios forbid *invented process-stage success*, not display of actual persisted checks. “Sandbox status without readiness API” remains the no-result case: read together with the explicit empty-results scenario, “без данных о проверках” means no computed results (`checks=[]`), not permission to accept an absent required checks field. Missing/malformed fields remain contract errors per design/task 1.1. Its conclusion (no success inferred from status, no sandbox/token) remains valid even with persisted results available elsewhere. No contradictory unavailable-result display mandate remains; cosmetic renaming is unnecessary.
+Count/sort retain the seven original registry scenarios. Notice preserves the original saved-version scenario. Readiness correctly replaces the blanket “individual results unavailable” and “status only” statements rather than retaining their obsolete prohibition. Its preserved processing-stage scenarios forbid _invented process-stage success_, not display of actual persisted checks. “Sandbox status without readiness API” remains the no-result case: read together with the explicit empty-results scenario, “без данных о проверках” means no computed results (`checks=[]`), not permission to accept an absent required checks field. Missing/malformed fields remain contract errors per design/task 1.1. Its conclusion (no success inferred from status, no sandbox/token) remains valid even with persisted results available elsewhere. No contradictory unavailable-result display mandate remains; cosmetic renaming is unnecessary.
 
 ## Mandatory future integration note — no-loss count/sort sync
 

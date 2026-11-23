@@ -16,34 +16,34 @@
 
 Compared every direct and nested row with its complete accepted inventory report, not primary hierarchy/member-index/subtask bodies.
 
-| Module | Accepted report read completely | Direct / nested | Verified baseline records |
-|---|---|---:|---|
-|624|`reports/JIRA-MOS-624.md:1–69`|29/1|I0–28; S0|
-|651|`reports/JIRA-MOS-651.md:1–45`|5/0|I29–33|
-|652|`reports/JIRA-MOS-652.md:1–68`|4/0|I34–37|
-|768|`reports/JIRA-MOS-768.md:1–85`|4/0|I38–41|
-|769|`reports/JIRA-MOS-769.md:1–38`|2/0|I42–43|
-|770|`reports/JIRA-MOS-770.md:1–38`|0/0|Explicit observed empty children|
-|771|`reports/JIRA-MOS-771.md:1–55`|1/1|I44; S1|
-|772|`reports/JIRA-MOS-772.md:1–35`|0/0|Explicit observed empty children|
-|773|`reports/JIRA-MOS-773.md:1–69`|11/5|I45–55; S2–6|
-|774|`reports/JIRA-MOS-774.md:1–55`|18/3|I56–73; S7–9|
-|775|`reports/JIRA-MOS-775.md:1–49`|3/0|I74–76|
-|776|`reports/JIRA-MOS-776.md:1–51`|1/0|I77|
-|777|`reports/JIRA-MOS-777.md:1–46`|5/0|I78–82|
-|778|`reports/JIRA-MOS-778.md:1–39`|6/0|I83–88|
-|780|`reports/JIRA-MOS-780.md:1–59`|1/0|I89|
-|781|`reports/JIRA-MOS-781.md:1–36`|1/0|I90|
-|782|`reports/JIRA-MOS-782.md:1–67`|25/0|I91–115; AD0/1 supplemental|
-|783|`reports/JIRA-MOS-783.md:1–72`|18/5|I116–133; S10–14; AD2/3 supplemental|
-|784|`reports/JIRA-MOS-784.md:1–55`|4/1|I134–137; S15|
-|788|`reports/JIRA-MOS-788.md:1–55`|0/0|Explicit observed empty children|
-|1246|`reports/JIRA-MOS-1246.md:1–52`|11/0|F1–11; F0 separate parent|
-|1327|`reports/JIRA-MOS-1327.md:1–44`|2/0|I138–139|
-|1328|`reports/JIRA-MOS-1328.md:1–57`|2/0|I140–141|
-|1329|`reports/JIRA-MOS-1329.md:1–53`|2/0|I142–143|
-|1388|`reports/JIRA-MOS-1388.md:1–35`|1/0|I144|
-|1403|`reports/JIRA-MOS-1403.md:1–44`|1/0|I145|
+| Module | Accepted report read completely | Direct / nested | Verified baseline records            |
+| ------ | ------------------------------- | --------------: | ------------------------------------ |
+| 624    | `reports/JIRA-MOS-624.md:1–69`  |            29/1 | I0–28; S0                            |
+| 651    | `reports/JIRA-MOS-651.md:1–45`  |             5/0 | I29–33                               |
+| 652    | `reports/JIRA-MOS-652.md:1–68`  |             4/0 | I34–37                               |
+| 768    | `reports/JIRA-MOS-768.md:1–85`  |             4/0 | I38–41                               |
+| 769    | `reports/JIRA-MOS-769.md:1–38`  |             2/0 | I42–43                               |
+| 770    | `reports/JIRA-MOS-770.md:1–38`  |             0/0 | Explicit observed empty children     |
+| 771    | `reports/JIRA-MOS-771.md:1–55`  |             1/1 | I44; S1                              |
+| 772    | `reports/JIRA-MOS-772.md:1–35`  |             0/0 | Explicit observed empty children     |
+| 773    | `reports/JIRA-MOS-773.md:1–69`  |            11/5 | I45–55; S2–6                         |
+| 774    | `reports/JIRA-MOS-774.md:1–55`  |            18/3 | I56–73; S7–9                         |
+| 775    | `reports/JIRA-MOS-775.md:1–49`  |             3/0 | I74–76                               |
+| 776    | `reports/JIRA-MOS-776.md:1–51`  |             1/0 | I77                                  |
+| 777    | `reports/JIRA-MOS-777.md:1–46`  |             5/0 | I78–82                               |
+| 778    | `reports/JIRA-MOS-778.md:1–39`  |             6/0 | I83–88                               |
+| 780    | `reports/JIRA-MOS-780.md:1–59`  |             1/0 | I89                                  |
+| 781    | `reports/JIRA-MOS-781.md:1–36`  |             1/0 | I90                                  |
+| 782    | `reports/JIRA-MOS-782.md:1–67`  |            25/0 | I91–115; AD0/1 supplemental          |
+| 783    | `reports/JIRA-MOS-783.md:1–72`  |            18/5 | I116–133; S10–14; AD2/3 supplemental |
+| 784    | `reports/JIRA-MOS-784.md:1–55`  |             4/1 | I134–137; S15                        |
+| 788    | `reports/JIRA-MOS-788.md:1–55`  |             0/0 | Explicit observed empty children     |
+| 1246   | `reports/JIRA-MOS-1246.md:1–52` |            11/0 | F1–11; F0 separate parent            |
+| 1327   | `reports/JIRA-MOS-1327.md:1–44` |             2/0 | I138–139                             |
+| 1328   | `reports/JIRA-MOS-1328.md:1–57` |             2/0 | I140–141                             |
+| 1329   | `reports/JIRA-MOS-1329.md:1–53` |             2/0 | I142–143                             |
+| 1388   | `reports/JIRA-MOS-1388.md:1–35` |             1/0 | I144                                 |
+| 1403   | `reports/JIRA-MOS-1403.md:1–44` |             1/0 | I145                                 |
 
 The table covers **146 I records +11 F members =157 direct rows**, and **S0–15 =16 nested rows**. All module counts match `inventory-acceptance.json`; complete `inventory-reconciliation.json` supplies accepted aggregate membership verification. These are report comparisons, not independently recomputed primary-source sets or hashes.
 
@@ -102,28 +102,28 @@ In the following table:
 - **J:** no later accepted exact-ID body join identified in the inspected records.
 - **NB:** historical selected metadata-only capture; bodies not acquired there; this assignment provides no body-reading/download authority. Current necessity and semantics remain unknown.
 
-| Owner | S attachment pointer | ID | Accepted identity/type limit | Path / later join / reason |
-|---|---|---|---|---|
-|1053|`/items/0/attachments/0`|826713|404.png; image/png|Q / J / NB|
-|1150|`/items/1/attachments/0`|831194|JSON response; application/json|Q / J / NB|
-|1150|`/items/1/attachments/1`|831195|Screenshot_4.png; image/png|Q / J / NB|
-|1411|`/items/2/attachments/0`|839653|Type not reproduced in accepted report|Q / J / NB|
-|1412|`/items/3/attachments/0`|839662|Same type limit|Q / J / NB|
-|1414|`/items/4/attachments/0`|839675|Same type limit|Q / J / NB|
-|1419|`/items/5/attachments/0`|839862|Same type limit|Q / J / NB|
-|1422|`/items/6/attachments/0`|839906|Same type limit|Q / J / NB|
-|1422|`/items/6/attachments/1`|839905|Same type limit|Q / J / NB|
-|1050|`/items/7/attachments/0`|826531|Type not reproduced in accepted report|Q / J / NB|
-|1050|`/items/7/attachments/1`|826530|Same type limit|Q / J / NB|
-|1051|`/items/8/attachments/0`|826544|Same type limit|Q / J / NB|
-|1110|`/items/10/attachments/0`|829292|2909.png; filename evidence only|Q / J / NB|
-|1164|`/items/11/attachments/0`|832277|1.png; filename evidence only|Q / J / NB|
-|1165|`/items/12/attachments/0`|832288|2.png; filename evidence only|Q / J / NB|
-|1166|`/items/13/attachments/0`|832305|3.png; filename evidence only|Q / J / NB|
-|1167|`/items/14/attachments/0`|832324|4.png; filename evidence only|Q / J / NB|
-|1167|`/items/14/attachments/1`|832323|5.png; filename evidence only|Q / J / NB|
-|1054|`/items/15/attachments/0`|835960|MOV; video/quicktime|Q / J / NB|
-|1054|`/items/15/attachments/1`|835961|MP4; video/mp4|Q / J / NB|
+| Owner | S attachment pointer      | ID     | Accepted identity/type limit           | Path / later join / reason |
+| ----- | ------------------------- | ------ | -------------------------------------- | -------------------------- |
+| 1053  | `/items/0/attachments/0`  | 826713 | 404.png; image/png                     | Q / J / NB                 |
+| 1150  | `/items/1/attachments/0`  | 831194 | JSON response; application/json        | Q / J / NB                 |
+| 1150  | `/items/1/attachments/1`  | 831195 | Screenshot_4.png; image/png            | Q / J / NB                 |
+| 1411  | `/items/2/attachments/0`  | 839653 | Type not reproduced in accepted report | Q / J / NB                 |
+| 1412  | `/items/3/attachments/0`  | 839662 | Same type limit                        | Q / J / NB                 |
+| 1414  | `/items/4/attachments/0`  | 839675 | Same type limit                        | Q / J / NB                 |
+| 1419  | `/items/5/attachments/0`  | 839862 | Same type limit                        | Q / J / NB                 |
+| 1422  | `/items/6/attachments/0`  | 839906 | Same type limit                        | Q / J / NB                 |
+| 1422  | `/items/6/attachments/1`  | 839905 | Same type limit                        | Q / J / NB                 |
+| 1050  | `/items/7/attachments/0`  | 826531 | Type not reproduced in accepted report | Q / J / NB                 |
+| 1050  | `/items/7/attachments/1`  | 826530 | Same type limit                        | Q / J / NB                 |
+| 1051  | `/items/8/attachments/0`  | 826544 | Same type limit                        | Q / J / NB                 |
+| 1110  | `/items/10/attachments/0` | 829292 | 2909.png; filename evidence only       | Q / J / NB                 |
+| 1164  | `/items/11/attachments/0` | 832277 | 1.png; filename evidence only          | Q / J / NB                 |
+| 1165  | `/items/12/attachments/0` | 832288 | 2.png; filename evidence only          | Q / J / NB                 |
+| 1166  | `/items/13/attachments/0` | 832305 | 3.png; filename evidence only          | Q / J / NB                 |
+| 1167  | `/items/14/attachments/0` | 832324 | 4.png; filename evidence only          | Q / J / NB                 |
+| 1167  | `/items/14/attachments/1` | 832323 | 5.png; filename evidence only          | Q / J / NB                 |
+| 1054  | `/items/15/attachments/0` | 835960 | MOV; video/quicktime                   | Q / J / NB                 |
+| 1054  | `/items/15/attachments/1` | 835961 | MP4; video/mp4                         | Q / J / NB                 |
 
 **MOS1052:** `/items/9/attachments` is explicitly empty; it is not an omitted field or a twenty-first attachment.
 

@@ -11,10 +11,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "value",
-      "unit"
-    ],
+    "required": ["value", "unit"],
     "title": "DeltaResponse"
   }
 }

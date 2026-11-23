@@ -5,6 +5,7 @@
 **Decision: REVISE — one narrow mandatory correction to the proposed sufficiency criterion.**
 
 Aliases:
+
 - **C** = `openspec/changes/reconcile-control-center-backlog`
 - **A** = `C/audit`
 - **R** = `A/reports/REL-REMAINING-USER-SESSION-CONTRACTS.md`
@@ -17,8 +18,9 @@ Aliases:
 - **Exact references:** R:13–14 correctly reuse:
   - user **238347672 / MOS-944** → `A/sources/jira-details-MOS-774/r1/content.json#/items/5/description`;
   - session **241079770 / MOS-904** → `A/sources/jira-shell-details/r1/content.json#/items/4/description`.
-  
+
   These match `G1-JIRA-CONTRACT-COLLECTION-DELTA` report:26–42 and review:18–36. Historical **238329164** is not a replacement for **241079770**.
+
 - **Policy distinctions:** Approved `/me` identity does not substitute for business-user administration or membership/contact records. Approved frontend policy cannot establish unseen document content. The report explicitly preserves these distinctions.
 - **Safety boundaries:** Configuration-selected mock/real mode remains separate from credential destinations. Exact UI permissions do not grant backend object access, including for `*`. No role-name grants, transport ACL, synthetic permission403, own OIDC, global logout, role editor or automatic mutation replay is introduced. Demo fixtures remain credential-free and separate from business-user records.
 - **Acceptance lineage:** R:34 correctly preserves the original historical-auth **REVISE**, D-042’s parent-applied ASR-04 qualifier correction and parent acceptance. The separate access-role review remains **ACCEPT**.

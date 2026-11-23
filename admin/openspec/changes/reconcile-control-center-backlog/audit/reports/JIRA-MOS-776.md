@@ -13,8 +13,8 @@ Inventory only; supplemental `work-items/JIRA-INVENTORY-HANDOFF.md` supersedes t
 
 `$.results[11]` is `{ "key": "MOS-776", "type": "Q key result", "children": ["MOS-1145"] }` in the hierarchy packet. MOS-776 appears once as a module entry. Its one child is unique within that entry and occurs once across saved hierarchy child lists, at `$.results[11].children[0]`; no conflicting membership was observed. Cross-module checking was limited to key membership.
 
-| Member | Exact selected record | Type | Status | Jira updated timestamp | Coverage |
-| --- | --- | --- | --- | --- | --- |
+| Member   | Exact selected record                                    | Type             | Status         | Jira updated timestamp         | Coverage                                               |
+| -------- | -------------------------------------------------------- | ---------------- | -------------- | ------------------------------ | ------------------------------------------------------ |
 | MOS-1145 | `sources/jira-member-index/r1/content.json: $.items[77]` | Development task | Ready for test | `2026-10-09T17:28:57.640+0800` | One matching record; `subtasks: []` explicitly present |
 
 Selected summary at `$.items[77].summary`: `[B] Реализовать отключение и повторное включение навыка`.

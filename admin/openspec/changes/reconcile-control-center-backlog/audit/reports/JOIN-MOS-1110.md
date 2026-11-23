@@ -21,10 +21,10 @@
 
 Слово «фильтр» в описании не переносит задачу на фильтр реестра: шаги явно указывают **форму добавления**.
 
-| ID | Атомарное ожидание | Локатор | Наблюдаемое / неизвестное |
-|---|---|---|---|
-| R1 | В форме добавления пользователь раскрывает выбор «Тип поверхности». | `$.items[10].description`, шаги 1–2 | Такой Select присутствует в текущем коде. |
-| R2 | Раскрытый список не смещён относительно соответствующего поля. | Там же, ФР/ОР | Есть библиотечное позиционирование, но соответствие ОР геометрически не доказано. |
+| ID  | Атомарное ожидание                                                  | Локатор                             | Наблюдаемое / неизвестное                                                         |
+| --- | ------------------------------------------------------------------- | ----------------------------------- | --------------------------------------------------------------------------------- |
+| R1  | В форме добавления пользователь раскрывает выбор «Тип поверхности». | `$.items[10].description`, шаги 1–2 | Такой Select присутствует в текущем коде.                                         |
+| R2  | Раскрытый список не смещён относительно соответствующего поля.      | Там же, ФР/ОР                       | Есть библиотечное позиционирование, но соответствие ОР геометрически не доказано. |
 
 Контекст, не новые требования этого дефекта: `sources/wiki-245673187/r1/content.json`, `$.text`, раздел **«Вкладка: "1. Регистрация"», требования 3–4**: значение по умолчанию «портал», варианты «портал», «раздел портала», «мобильное приложение». Сохранена версия 18 страницы «Бизнес-анализ: Поверхности».
 
@@ -96,6 +96,7 @@ R2 относится к клиентскому позиционированию
 
 2. `openspec/changes/fix-surface-type-dropdown-alignment/specs/surface-registration/spec.md`  
    Добавить требование, например `Surface type dropdown remains anchored to its field`:
+
    > При раскрытии выбора «Тип поверхности» в форме добавления список SHALL сохранять привязку к соответствующему полю без несогласованного смещения.
 
    Сценарий: открыть форму → раскрыть выбор → список соответствует положению своего поля. Не закреплять без доказательств конкретные offsets, сторону раскрытия или запрет штатной коррекции у края viewport.
@@ -113,17 +114,17 @@ R2 относится к клиентскому позиционированию
 
 ## 6. SHA256 входов
 
-| Вход | SHA256 |
-|---|---|
-| `work-items/WAVE-D090-EIGHT.md` | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
-| `sources/jira-subtasks/r1/content.json` | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
-| `sources/jira-subtasks/r1/metadata.json` | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
-| `sources/wiki-245673187/r1/content.json` | `d539752b3e0f424d0a251426a490319b07d03f4ff8dfdcf3074a62ee53d34eaa` |
-| `sources/wiki-243776365/r1/content.json` | `2f659b5423fa7203dcd4f70743e59aabfb571452144394621091ff2cd58cab55` |
-| `coverage.json` | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
-| `openspec/specs/surface-registration/spec.md` | `31928d907bfff75eca61d2efe176879e3c7f4d3e0029dbe6bb97258b8d00f9a5` |
-| `app/features/surface-registration/ui/steps/surface-details-step.tsx` | `22d151070d49763e756e8f9bb4bde445b1d0fd448256a15d4be2468b30962953` |
-| `app/shared/ui/select.tsx` | `87858971de8d53f575fcea4c524c2dfd9009ff5ea0a31103f6ca9cfc90d12e04` |
+| Вход                                                                      | SHA256                                                             |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `work-items/WAVE-D090-EIGHT.md`                                           | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
+| `sources/jira-subtasks/r1/content.json`                                   | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
+| `sources/jira-subtasks/r1/metadata.json`                                  | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
+| `sources/wiki-245673187/r1/content.json`                                  | `d539752b3e0f424d0a251426a490319b07d03f4ff8dfdcf3074a62ee53d34eaa` |
+| `sources/wiki-243776365/r1/content.json`                                  | `2f659b5423fa7203dcd4f70743e59aabfb571452144394621091ff2cd58cab55` |
+| `coverage.json`                                                           | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
+| `openspec/specs/surface-registration/spec.md`                             | `31928d907bfff75eca61d2efe176879e3c7f4d3e0029dbe6bb97258b8d00f9a5` |
+| `app/features/surface-registration/ui/steps/surface-details-step.tsx`     | `22d151070d49763e756e8f9bb4bde445b1d0fd448256a15d4be2468b30962953` |
+| `app/shared/ui/select.tsx`                                                | `87858971de8d53f575fcea4c524c2dfd9009ff5ea0a31103f6ca9cfc90d12e04` |
 | `app/widgets/surface-registration/ui/tests/surface-registration.test.tsx` | `c50563fcaf2ce4ea6844a38c8805675922c3169a1ecc2ebdfc0d655ea4976c53` |
 
 SHA256 Jira content совпадает с сохранённой metadata. Большие wiki JSON изучались адресными извлечениями `$.text`/`$.bodyView`, а не как полный аудит страниц.

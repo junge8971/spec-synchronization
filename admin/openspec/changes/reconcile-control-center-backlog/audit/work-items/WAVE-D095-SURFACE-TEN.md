@@ -10,18 +10,18 @@ All paths below relative to audit unless project path specified. One read-only a
 
 ## Work items
 
-| Owner/item | Exact source pointer and unique seam | Runtime output |
-| --- | --- | --- |
-| JOIN-MOS-707 | items/0; historical surface page/table presentation and comment assertions versus current registry owner; attachment parity unavailable, no repeated server-filter audit | reports/JOIN-MOS-707.md |
-| JOIN-MOS-708 | items/1; historical search/filter/pagination/URL semantics versus current behavior/spec/tests; distinguish historical mock expectations from later server-driven owner910 | reports/JOIN-MOS-708.md |
-| JOIN-MOS-709 | items/2; multi-step registration shell and historical failure comment versus current form ownership; nested1110/1164–1167 already audited, don't claim them as full parent completion | reports/JOIN-MOS-709.md |
-| API-MOS-712 | items/3; contract preparation obligations mapped to saved wiki241082009, current local API/supplementary documentation and specs; bounded all-obligation matrix, distinguish documented from unavailable and backend execution | reports/API-MOS-712.md |
-| JOIN-MOS-901 | items/4; backend implementation DoD versus inspectable frontend/API/mock/test boundaries; storage/ACL/deployment unknown; TEST_PLAN824049 body uncollected, don't infer it from metadata or test comments | reports/JOIN-MOS-901.md |
-| JOIN-MOS-910 | items/5; actual registry endpoint/envelope mapper, filters/sort/pagination, type labels and stats null/zero versus code/tests and agreed spec | reports/JOIN-MOS-910.md |
-| JOIN-MOS-911 | items/6; prod skill/domain selection, parameter schema/defaults, unavailable-selection preservation/recheck versus implementation/assertions and existing spec | reports/JOIN-MOS-911.md |
-| JOIN-MOS-913 | items/7; overview/connection, unchanged server embed code, null/zero stats and error preservation; conflicting old generate-code comment is not permission for client generation | reports/JOIN-MOS-913.md |
-| JOIN-MOS-914 | items/8; status transitions/save-before-command/error recovery/archive/restore versus current policy/tests; preserve agreed surface MVP sandbox exclusion, report source tension not automatic activation | reports/JOIN-MOS-914.md |
-| JOIN-MOS-958 | items/9; registration transport/fields/server channel ID/domain occupancy boundary and explicit Hold/dependency versus current code/spec/tests; no new employee identity or occupancy API selected | reports/JOIN-MOS-958.md |
+| Owner/item   | Exact source pointer and unique seam                                                                                                                                                                                           | Runtime output          |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- |
+| JOIN-MOS-707 | items/0; historical surface page/table presentation and comment assertions versus current registry owner; attachment parity unavailable, no repeated server-filter audit                                                       | reports/JOIN-MOS-707.md |
+| JOIN-MOS-708 | items/1; historical search/filter/pagination/URL semantics versus current behavior/spec/tests; distinguish historical mock expectations from later server-driven owner910                                                      | reports/JOIN-MOS-708.md |
+| JOIN-MOS-709 | items/2; multi-step registration shell and historical failure comment versus current form ownership; nested1110/1164–1167 already audited, don't claim them as full parent completion                                          | reports/JOIN-MOS-709.md |
+| API-MOS-712  | items/3; contract preparation obligations mapped to saved wiki241082009, current local API/supplementary documentation and specs; bounded all-obligation matrix, distinguish documented from unavailable and backend execution | reports/API-MOS-712.md  |
+| JOIN-MOS-901 | items/4; backend implementation DoD versus inspectable frontend/API/mock/test boundaries; storage/ACL/deployment unknown; TEST_PLAN824049 body uncollected, don't infer it from metadata or test comments                      | reports/JOIN-MOS-901.md |
+| JOIN-MOS-910 | items/5; actual registry endpoint/envelope mapper, filters/sort/pagination, type labels and stats null/zero versus code/tests and agreed spec                                                                                  | reports/JOIN-MOS-910.md |
+| JOIN-MOS-911 | items/6; prod skill/domain selection, parameter schema/defaults, unavailable-selection preservation/recheck versus implementation/assertions and existing spec                                                                 | reports/JOIN-MOS-911.md |
+| JOIN-MOS-913 | items/7; overview/connection, unchanged server embed code, null/zero stats and error preservation; conflicting old generate-code comment is not permission for client generation                                               | reports/JOIN-MOS-913.md |
+| JOIN-MOS-914 | items/8; status transitions/save-before-command/error recovery/archive/restore versus current policy/tests; preserve agreed surface MVP sandbox exclusion, report source tension not automatic activation                      | reports/JOIN-MOS-914.md |
+| JOIN-MOS-958 | items/9; registration transport/fields/server channel ID/domain occupancy boundary and explicit Hold/dependency versus current code/spec/tests; no new employee identity or occupancy API selected                             | reports/JOIN-MOS-958.md |
 
 ## Integration and acceptance
 

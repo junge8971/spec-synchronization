@@ -19,16 +19,16 @@ No issues found.
 
 Manually recounted the actual table rows and classification cells in **H chunks 12–16, file lines 13–17**, cross-checking **T:234–295**:
 
-| Section | System | Informational | Total |
-|---|---:|---:|---:|
-| Обратная связь | 8 | 1 | 9 |
-| База знаний | 3 | 3 | 6 |
-| Шаблоны ответов | 1 | 3 | 4 |
-| A/B эксперименты | 3 | 1 | 4 |
-| API | 5 | 1 | 6 |
-| Состояние системы | 5 | 1 | 6 |
-| Справочники | 4 | 0 | 4 |
-| **Total** | **29** | **10** | **39** |
+| Section           | System | Informational |  Total |
+| ----------------- | -----: | ------------: | -----: |
+| Обратная связь    |      8 |             1 |      9 |
+| База знаний       |      3 |             3 |      6 |
+| Шаблоны ответов   |      1 |             3 |      4 |
+| A/B эксперименты  |      3 |             1 |      4 |
+| API               |      5 |             1 |      6 |
+| Состояние системы |      5 |             1 |      6 |
+| Справочники       |      4 |             0 |      4 |
+| **Total**         | **29** |        **10** | **39** |
 
 The template-owner entry is one complete `<tr>` in **H chunk 14, file line 15**. Its classification cell says **Информационный**; embedded `<br/>` elements explain the multiline text extraction and do not create additional rows.
 

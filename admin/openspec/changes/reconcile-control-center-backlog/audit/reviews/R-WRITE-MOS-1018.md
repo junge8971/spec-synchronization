@@ -18,12 +18,12 @@ Repository-relative target prefix: `openspec/changes/mos-1018-skill-phrase-confl
 
 ## Exact diff findings
 
-| Target/current lines | Before → after evidence and disposition |
-| --- | --- |
-| `proposal.md:25` | Sole changed line: blanket method/score absence → historical single-phrase method plus newly documented semantics. Normalization, safe disclosure, full-input binding and concrete send/revalidation remain blocked. Lines 26–27 and all intent/scope text unchanged. Accept. |
-| `design.md:3,13–15,24` | Replaces blanket absence and old undifferentiated gate; distinguishes publication facts from remaining acceptance decisions and transient preflight from persisted save checks and agreed-send validation. Adds unresolved wiki/status tension, without choosing precedence or transition policy. Accept. |
-| `tasks.md:5,11` | Only tasks 1.1 and 2.2 text changed. Integration prohibition at line 3, eight unchecked task IDs/states, and all other tasks preserved. The new freshness coverage stays within the approved boundary. Accept. |
-| `specs/skill-phrase-conflicts/spec.md:39–43` | Exactly one scenario inserted under existing freshness requirement. Removing this insertion reproduces the baseline byte-for-byte. No new requirement, count or presentation obligation. Accept. |
+| Target/current lines                         | Before → after evidence and disposition                                                                                                                                                                                                                                                                   |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `proposal.md:25`                             | Sole changed line: blanket method/score absence → historical single-phrase method plus newly documented semantics. Normalization, safe disclosure, full-input binding and concrete send/revalidation remain blocked. Lines 26–27 and all intent/scope text unchanged. Accept.                             |
+| `design.md:3,13–15,24`                       | Replaces blanket absence and old undifferentiated gate; distinguishes publication facts from remaining acceptance decisions and transient preflight from persisted save checks and agreed-send validation. Adds unresolved wiki/status tension, without choosing precedence or transition policy. Accept. |
+| `tasks.md:5,11`                              | Only tasks 1.1 and 2.2 text changed. Integration prohibition at line 3, eight unchecked task IDs/states, and all other tasks preserved. The new freshness coverage stays within the approved boundary. Accept.                                                                                            |
+| `specs/skill-phrase-conflicts/spec.md:39–43` | Exactly one scenario inserted under existing freshness requirement. Removing this insertion reproduces the baseline byte-for-byte. No new requirement, count or presentation obligation. Accept.                                                                                                          |
 
 The new `design.md:13` phrase “exact блокирует” is explicitly introduced as a published fact, corresponding to API exact/blocking classification. It does not select a UI send policy: lines 14, 17 and 24 retain the agreed-command gate; proposal line 26 and tasks lines 3, 5, 13 preserve it independently. The draft-to-checking exemption is recorded as source tension, not implemented or silently reconciled.
 
@@ -42,11 +42,11 @@ Let API base be `/api/control/api/skills/v1/skills/{skill_id}` in audit `sources
 
 Independently recomputed from bytes; every immutable copy matches `baseline.json`, and every current hash matches the writer report. Paths below are relative to the target prefix above.
 
-| Artifact | Verified immutable before | Verified current after |
-| --- | --- | --- |
-| `proposal.md` | `9afa3083fcead3b03c892d3fce3f7aeea2e0a802a4d1e4c470f4d3c2332215f5` | `8a5437a6850b21aa0d1b6343527b22f2c002cb87e14b5b2416a7b43daffd01df` |
-| `design.md` | `339d8a7a338c3a9937c8a252d2c340e188e5328a3c414bf9c2ad8325e6f87b0f` | `624af037030f75831ab0dc3068808b0659f007088a1441b2aac88c07d1624a0a` |
-| `tasks.md` | `ee02382ebeafe2f35b9f9b646e25934b1b4b17aac9b8f033a1063ae9d3fe63ef` | `fd18b43481483c2c42aeb08aeaf73b9f339d1d7b317eb725b954daf0ef1fb66a` |
+| Artifact                               | Verified immutable before                                          | Verified current after                                             |
+| -------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `proposal.md`                          | `9afa3083fcead3b03c892d3fce3f7aeea2e0a802a4d1e4c470f4d3c2332215f5` | `8a5437a6850b21aa0d1b6343527b22f2c002cb87e14b5b2416a7b43daffd01df` |
+| `design.md`                            | `339d8a7a338c3a9937c8a252d2c340e188e5328a3c414bf9c2ad8325e6f87b0f` | `624af037030f75831ab0dc3068808b0659f007088a1441b2aac88c07d1624a0a` |
+| `tasks.md`                             | `ee02382ebeafe2f35b9f9b646e25934b1b4b17aac9b8f033a1063ae9d3fe63ef` | `fd18b43481483c2c42aeb08aeaf73b9f339d1d7b317eb725b954daf0ef1fb66a` |
 | `specs/skill-phrase-conflicts/spec.md` | `499103ce10274ddf12eed84974757f5a169f21e17f55c8cf83e5a888ebc17b6c` | `479fc93a9e4133d32af81e763c686730395114641386a36d72ef510d8d355808` |
 
 Checkbox comparison independently passed for 1.1, 1.2, 2.1–2.4, 3.1, 3.2: all remain unchecked.

@@ -16,11 +16,12 @@ Primary evidence in `openspec/changes/reconcile-control-center-backlog/audit/sou
 - `/components/schemas/UpsertSkillIncidentRequest/properties/affected_percent/anyOf/0`
 
 Both contain:
+
 ```json
 {
   "anyOf": [
-    {"type": "number"},
-    {"type": "string", "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$"}
+    { "type": "number" },
+    { "type": "string", "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$" }
   ],
   "ge": 0,
   "le": 100
@@ -77,12 +78,12 @@ Primary-source inspection:
 
 All four source-content hashes were independently recomputed and matched metadata:
 
-| Source | SHA-256 |
-|---|---|
+| Source             | SHA-256                                                            |
+| ------------------ | ------------------------------------------------------------------ |
 | Jira monitoring r1 | `6dc8925cbbb1cfcd3a4179db720d38a72d9436926f7df3b73e612eb528c84c73` |
-| API live r1 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
-| Skills wiki r1 | `4920e62124826b90c86ae1d6ec520f49f52a4d381334c94867864c1f218c3ab2` |
-| Catalog wiki r2 | `710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47` |
+| API live r1        | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
+| Skills wiki r1     | `4920e62124826b90c86ae1d6ec520f49f52a4d381334c94867864c1f218c3ab2` |
+| Catalog wiki r2    | `710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47` |
 
 Capture timestamps match the report. API is OpenAPI 3.1.0/service 0.1.0; skills page is revision 17; catalog page is revision 6, distinct from body v1.0 and history v1.1 dated 14.09.2026. Both local contract hashes also match the report. None selects source precedence.
 

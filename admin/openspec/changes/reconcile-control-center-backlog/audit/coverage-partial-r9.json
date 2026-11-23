@@ -26,10 +26,7 @@
   "priorBlockerDisposition": {
     "browserCollection": "Recovered on user-requested retry; three existing direct members and two explicit root-linked wiki pages collected read-only. Historical r8 timeout receipt retained."
   },
-  "pendingAnalysis": [
-    "work-items/WIKI-DICTIONARY-DETAIL.md",
-    "work-items/WIKI-API-REGISTRY.md"
-  ],
+  "pendingAnalysis": ["work-items/WIKI-DICTIONARY-DETAIL.md", "work-items/WIKI-API-REGISTRY.md"],
   "limitations": [
     "Two wiki bodies saved with complete returned attachment indexes; four attachment bodies unread",
     "Wiki-derived text loses markup; exact body chunks retained and parent roundtrip checked",

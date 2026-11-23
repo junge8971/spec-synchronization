@@ -12,10 +12,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "dialog_count",
-      "source"
-    ],
+    "required": ["dialog_count", "source"],
     "title": "SampleResponse"
   }
 }

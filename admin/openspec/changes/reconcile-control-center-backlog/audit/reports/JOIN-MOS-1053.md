@@ -15,8 +15,8 @@ Read-only сверка конкретного MOS-1053, не всего MOS-624/
 - `A/sources/jira-member-index/r1/content.json:47–59`, `/items/5/key` = MOS-666, `/items/5/subtasks/0/key` = MOS-1053. Это вложенная задача, не дополнительный прямой член модуля.
 - `/items/0/attachments/0` (строки 16–22): 826713, `404.png`, image/png, 9096 bytes. Сохранены метаданные/URL, не изображение; адрес не посещался. `jira-subtasks/r1/metadata.json` явно ограничивает пакет: без скачивания вложений, comments/custom acceptance fields.
 
-| Атом | Expected из тела | Observed локально | Unknown |
-|---|---|---|---|
+| Атом        | Expected из тела                                                                   | Observed локально                                                                                                                        | Unknown                                                                                                                                              |
+| ----------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | MOS-1053-01 | Прямой переход по точному `/tsam-panel/skills` открывает раздел навыков вместо 404 | React Router SPA basename `/tsam-panel/`; `/skills` зарегистрирован и ведёт к SkillsPage; Nginx и локальный Express имеют index fallback | Ответ фактически развёрнутого `mobile-a-tech.mos.ru`, используемые ingress/config/build и состояние сессии; воспроизведение/устранение исходного 404 |
 
 Это один пользовательский исход с двумя техническими швами: выдача HTML сервером и выбор экрана Router. Заголовок во множественном числе не расширяет тело до требования проверить каждый раздел. Refresh — дополнительная гарантия текущего main, не отдельный явно описанный шаг MOS-1053. Скриншот не требуется для чтения доступного тела, но детали первоначального 404 по нему неизвестны.
@@ -50,21 +50,21 @@ Read-only сверка конкретного MOS-1053, не всего MOS-624/
 
 Вычислены локально Python hashlib без запуска приложения/тестов. SHA исходного body совпал с metadata.
 
-| Вход | SHA256 |
-|---|---|
-| `A/sources/jira-subtasks/r1/content.json` | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
-| `A/sources/jira-subtasks/r1/metadata.json` | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
-| `A/sources/jira-member-index/r1/content.json` | `dba6cffa66e0aef23e9ef34c4a52215a5c02d31e7da1dca87888e821198b8043` |
-| `A/coverage.json` | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
-| `openspec/specs/control-center-shell/spec.md` | `4274bde7ecdf7e18bdcf73cb1755886f3e61bc2cbea3728da0a382006dd0276f` |
+| Вход                                                                                                   | SHA256                                                             |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `A/sources/jira-subtasks/r1/content.json`                                                              | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
+| `A/sources/jira-subtasks/r1/metadata.json`                                                             | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
+| `A/sources/jira-member-index/r1/content.json`                                                          | `dba6cffa66e0aef23e9ef34c4a52215a5c02d31e7da1dca87888e821198b8043` |
+| `A/coverage.json`                                                                                      | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
+| `openspec/specs/control-center-shell/spec.md`                                                          | `4274bde7ecdf7e18bdcf73cb1755886f3e61bc2cbea3728da0a382006dd0276f` |
 | `openspec/changes/archive/2026-09-28-update-control-center-routing/specs/control-center-shell/spec.md` | `9d51ba0735a20bb12c80618f6ec5aad6eb73e401e133e60af3bb7d11d5808ee5` |
-| `react-router.config.ts` | `5612fb77145e37f599a5fa7194a3715f2cab135afadc93669778d18f0b2f07d5` |
-| `app/routes.ts` | `3b7d7a026d0f73baa121d33407f155cadf9a18ffe5f0a618ad74bc02481594c4` |
-| `.maki/nginx/nginx-frontend-prod.conf` | `a4375f659271f969128082a0304e235c50bc0594a656bb3c04a180228cfe6454` |
-| `docker-compose.prod.yml` | `af0a010301c71b8ef7b3b1fc8f39c1e10d51cc2720beb11607a30df58bf8ec9b` |
-| `scripts/serve-spa.mjs` | `f38b702764e49e37d6dee93f40462b6a1712ea3772d39fe762c13fbe3e4c3bfa` |
-| `scripts/serve-spa.test.mjs` | `27c8da089e6812226fac135f28bdfb98f17f4e12927ed7fb57dd7ae1da368468` |
-| `docs/api/contracts/openapi.json` | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
+| `react-router.config.ts`                                                                               | `5612fb77145e37f599a5fa7194a3715f2cab135afadc93669778d18f0b2f07d5` |
+| `app/routes.ts`                                                                                        | `3b7d7a026d0f73baa121d33407f155cadf9a18ffe5f0a618ad74bc02481594c4` |
+| `.maki/nginx/nginx-frontend-prod.conf`                                                                 | `a4375f659271f969128082a0304e235c50bc0594a656bb3c04a180228cfe6454` |
+| `docker-compose.prod.yml`                                                                              | `af0a010301c71b8ef7b3b1fc8f39c1e10d51cc2720beb11607a30df58bf8ec9b` |
+| `scripts/serve-spa.mjs`                                                                                | `f38b702764e49e37d6dee93f40462b6a1712ea3772d39fe762c13fbe3e4c3bfa` |
+| `scripts/serve-spa.test.mjs`                                                                           | `27c8da089e6812226fac135f28bdfb98f17f4e12927ed7fb57dd7ae1da368468` |
+| `docs/api/contracts/openapi.json`                                                                      | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
 
 ```acceptance-report
 {

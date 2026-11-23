@@ -4,12 +4,12 @@
 
 Inventory only; no business-semantic, scenario or implementation assessment. The supplemental `work-items/JIRA-INVENTORY-HANDOFF.md` supersedes the pending-detail dependency in `work-items/JIRA-MOS-1327.md`. All paths below are relative to the audit root; JSON locators use zero-based array indices.
 
-| Saved source | Retrieval timestamp | Exact relevant locator |
-| --- | --- | --- |
-| `sources/jira-hierarchy/r1/content.json` | `2026-10-16T11:08:08.629Z` | `$.results[21]`; collection caveats at `$.method`, `$.classification`, `$.pagination` |
-| `sources/jira-member-index/r1/content.json` | `2026-10-16T11:20:38.570Z` | `$.items[138]`, `$.items[139]` |
-| `sources/jira-subtasks/r1/content.json` | `2026-10-16T11:23:01.951Z` | `$.items[*].key`, `$.items[*].parent` checked for assigned keys |
-| `sources/jira-api-delta-scenarios/r1/content.json` | `2026-10-16T11:23:51.742Z` | `$.items[*].key` checked; no assigned member matches |
+| Saved source                                       | Retrieval timestamp        | Exact relevant locator                                                                |
+| -------------------------------------------------- | -------------------------- | ------------------------------------------------------------------------------------- |
+| `sources/jira-hierarchy/r1/content.json`           | `2026-10-16T11:08:08.629Z` | `$.results[21]`; collection caveats at `$.method`, `$.classification`, `$.pagination` |
+| `sources/jira-member-index/r1/content.json`        | `2026-10-16T11:20:38.570Z` | `$.items[138]`, `$.items[139]`                                                        |
+| `sources/jira-subtasks/r1/content.json`            | `2026-10-16T11:23:01.951Z` | `$.items[*].key`, `$.items[*].parent` checked for assigned keys                       |
+| `sources/jira-api-delta-scenarios/r1/content.json` | `2026-10-16T11:23:51.742Z` | `$.items[*].key` checked; no assigned member matches                                  |
 
 The three detail-packet `r1/metadata.json` files were also inspected (`$.retrievedAt`, `$.limitations`; member index additionally `$.fields`). Newer packets do not replace earlier snapshot provenance.
 
@@ -17,10 +17,10 @@ The three detail-packet `r1/metadata.json` files were also inspected (`$.retriev
 
 Hierarchy `$.results[21]` identifies MOS-1327 as **Q key result**, with exactly two observed child occurrences, both unique. Each key occurs only once across the hierarchy's saved child lists, under MOS-1327, and exactly once in the member index. No missing assigned index record, duplicate assigned key, or conflicting saved module membership was found.
 
-| Member | Hierarchy locator | Member-index locator | Observed type | Observed status | Issue updated timestamp | Nested references |
-| --- | --- | --- | --- | --- | --- | --- |
-| MOS-1321 — [B] Реализовать раздел "Справочники" | `$.results[21].children[0]` | `$.items[138]` | Development task | Hold | `2026-10-14T14:03:49.652+0800` | `$.items[138].subtasks = []` |
-| MOS-1399 — [B] Актуализировать справочники для справочников | `$.results[21].children[1]` | `$.items[139]` | Development task | Hold | `2026-10-15T19:28:04.537+0800` | `$.items[139].subtasks = []` |
+| Member                                                      | Hierarchy locator           | Member-index locator | Observed type    | Observed status | Issue updated timestamp        | Nested references            |
+| ----------------------------------------------------------- | --------------------------- | -------------------- | ---------------- | --------------- | ------------------------------ | ---------------------------- |
+| MOS-1321 — [B] Реализовать раздел "Справочники"             | `$.results[21].children[0]` | `$.items[138]`       | Development task | Hold            | `2026-10-14T14:03:49.652+0800` | `$.items[138].subtasks = []` |
+| MOS-1399 — [B] Актуализировать справочники для справочников | `$.results[21].children[1]` | `$.items[139]`       | Development task | Hold            | `2026-10-15T19:28:04.537+0800` | `$.items[139].subtasks = []` |
 
 Neither selected member record contains a `parent` field; the saved hierarchy, not an issue-detail parent object, supplies its module membership evidence. MOS-1327 itself has no issue record in the member-index, subtask or supplementary packet; only the hierarchy entry is evidenced here.
 
@@ -30,10 +30,10 @@ The assigned index records contain zero observed nested references. Checking the
 
 ## Field coverage and remaining collection
 
-| Member | Index presence | Full description | Attachments | Comments | Custom acceptance fields |
-| --- | --- | --- | --- | --- | --- |
-| MOS-1321 | Present once | Not collected | Not collected | Not collected | Not collected |
-| MOS-1399 | Present once | Not collected | Not collected | Not collected | Not collected |
+| Member   | Index presence | Full description | Attachments   | Comments      | Custom acceptance fields |
+| -------- | -------------- | ---------------- | ------------- | ------------- | ------------------------ |
+| MOS-1321 | Present once   | Not collected    | Not collected | Not collected | Not collected            |
+| MOS-1399 | Present once   | Not collected    | Not collected | Not collected | Not collected            |
 
 The actual selected records contain only `key`, `summary`, `type`, `status`, `updated`, and `subtasks`. The supplementary description packet has neither assigned key, so it adds no coverage. Missing fields are coverage gaps, not assertions of empty issue content and not blockers. Member-index metadata's historical “nested subtask details pending” note does not negate the available subtask packet checked above.
 

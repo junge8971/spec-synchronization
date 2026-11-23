@@ -22,11 +22,11 @@ No application code, demo implementation, routing implementation or shadcn analy
 
 Read-only Python hashing independently matched saved bytes against supplied digests and metadata:
 
-| Source | Bytes | SHA-256 |
-|---|---:|---|
-| jira-operations-details/r1 | 9,933 | `ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f` |
-| wiki-241092242/r1 | 68,316 | `e7b78965be979f2bd450b25881574cf7e8b94cf424be5d052bb2be9df1995158` |
-| api-live/r1 | 413,007 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
+| Source                     |   Bytes | SHA-256                                                            |
+| -------------------------- | ------: | ------------------------------------------------------------------ |
+| jira-operations-details/r1 |   9,933 | `ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f` |
+| wiki-241092242/r1          |  68,316 | `e7b78965be979f2bd450b25881574cf7e8b94cf424be5d052bb2be9df1995158` |
+| api-live/r1                | 413,007 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
 
 - Jira capture metadata: 2026-10-16T13:02:57.872Z, parent verified-origin GET. MOS-922 links exactly wiki page 241092242; **Backlog**, updated 2026-10-15T14:46:44.693+0800. MOS-754: **Review**, updated 2026-10-16T19:22:17.361+0800. Both selected records have zero comments and empty attachments. Workflow state is not acceptance or implementation. Custom fields/attachment bodies uncollected.
 - Wiki capture: HTTP 200, 2026-10-16T13:03:14.883Z, `https://wiki.mos-team.ru/rest/api/content/241092242?expand=body.view,version`; page revision **4**, modified 2026-09-25T16:59:13.813+08:00. Body says **contract v1.0**, history dated 10.09.2026, first version. Revision 4 is neither contract v4 nor approval. Attachment collection: 200, count 0, no next page. No inspected field establishes business-contract approval.
@@ -36,33 +36,33 @@ Read-only Python hashing independently matched saved bytes against supplied dige
 
 No code retrieved. Aliases: **J922** = Jira `/items/3/description`; **J754** = `/items/1/description`; **W** = wiki `/bodyView`, named section; **O** = saved OpenAPI. Candidate IDs are analysis labels, not approved tasks or requirements.
 
-| Candidate ID | Atomic candidate and source pointer | Coverage/disposition; owner |
-|---|---|---|
-| MOS922-C01 | Library entries for `assistant/module/skill/surface`. J922 sentence 1; J754 catalog bullet; W §§1.2, 2.1. | **Defer** dedicated product behavior pending ownership; MOS-922 FE and MOS-754 contract owner. Shell gate is not library coverage. |
-| MOS922-C02 | Show `full_stub_text`. J922 sentence 1; W §1.3. | **Defer** dedicated specification; required nullable O response field. |
-| MOS922-C03 | Show `substitute_response_text`. Same pointers. | **Defer**, same ownership/coverage distinction. |
-| MOS922-C04 | Show `warning_banner_text`. Same pointers. | **Defer**, same ownership/coverage distinction. |
-| MOS922-C05 | Inline save updates an **existing record**. J922 sentence 2; W §§2.2–2.3. | **Question/update candidate:** align GET/PUT contract first; no create/upsert/delete promise. |
-| MOS922-C06 | `is_applied=false` saves a draft. J922 sentence 3; W §2.3 rules. | **Question:** distinguish persisted draft from effective preview/previous live value; separate versions not modeled. |
-| MOS922-C07 | `is_applied=true` requests immediate application subject to maintenance. J922 sentence 3; W business rules, §2.3. | **Keep** source requirement, **defer** activation; saved flag is not proof of effective text. |
-| MOS922-C08 | Preview is server-effective output, not merely editor input. J922 sentence 4; W §2.4 purpose; O preview GET. | **Keep** server authority; **question** draft/unsaved-preview UX. No client priority engine. |
-| MOS922-C09 | Active maintenance overrides ordinary stub on affected targets. W business rules, §1.5. | **Keep** dependency; backend owns resolution; MOS-923 owns maintenance UI outside this report. |
-| MOS922-C10 | Windows resolve by greater `priority`, specificity `surface > skill > module > assistant`, later `updated_at`; completed window has no influence. W §1.5. Cancellation ceases influence: W §2.9 rule only. | **Keep** published explanation, not frontend computation/runtime proof; backend resolves applicability/ties. |
-| MOS922-C11 | Catalog filters `target_type`, `is_applied`, name `query`, `limit`, `offset`, with pagination. W §2.1; O catalog GET. | **Defer** UI detail choice; **keep** published query semantics. No sorting/target-directory API inferred. |
-| MOS922-C12 | Edit one/several/all texts; empty string forbidden. W §2.3 rules. | **Question/update candidate:** reconcile null/omission/empty/whitespace validation with O before relaxing constraints. |
-| MOS922-C13 | Preserve last-change metadata. W business rules “who/when/what”, §§1.3, 2.3; O settings/summary. | **Question:** `by.id`/`updated_at` cover who/when; no inspected stub delta/history field covers “what”. No invented audit endpoint. |
-| MOS922-C14 | Restricted collections; inaccessible target returns 404. W §§2.10–2.11. | **Keep** server scope; **question** permission mapping with auth owner. Wiki roles do not grant UI access. |
+| Candidate ID | Atomic candidate and source pointer                                                                                                                                                                        | Coverage/disposition; owner                                                                                                         |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| MOS922-C01   | Library entries for `assistant/module/skill/surface`. J922 sentence 1; J754 catalog bullet; W §§1.2, 2.1.                                                                                                  | **Defer** dedicated product behavior pending ownership; MOS-922 FE and MOS-754 contract owner. Shell gate is not library coverage.  |
+| MOS922-C02   | Show `full_stub_text`. J922 sentence 1; W §1.3.                                                                                                                                                            | **Defer** dedicated specification; required nullable O response field.                                                              |
+| MOS922-C03   | Show `substitute_response_text`. Same pointers.                                                                                                                                                            | **Defer**, same ownership/coverage distinction.                                                                                     |
+| MOS922-C04   | Show `warning_banner_text`. Same pointers.                                                                                                                                                                 | **Defer**, same ownership/coverage distinction.                                                                                     |
+| MOS922-C05   | Inline save updates an **existing record**. J922 sentence 2; W §§2.2–2.3.                                                                                                                                  | **Question/update candidate:** align GET/PUT contract first; no create/upsert/delete promise.                                       |
+| MOS922-C06   | `is_applied=false` saves a draft. J922 sentence 3; W §2.3 rules.                                                                                                                                           | **Question:** distinguish persisted draft from effective preview/previous live value; separate versions not modeled.                |
+| MOS922-C07   | `is_applied=true` requests immediate application subject to maintenance. J922 sentence 3; W business rules, §2.3.                                                                                          | **Keep** source requirement, **defer** activation; saved flag is not proof of effective text.                                       |
+| MOS922-C08   | Preview is server-effective output, not merely editor input. J922 sentence 4; W §2.4 purpose; O preview GET.                                                                                               | **Keep** server authority; **question** draft/unsaved-preview UX. No client priority engine.                                        |
+| MOS922-C09   | Active maintenance overrides ordinary stub on affected targets. W business rules, §1.5.                                                                                                                    | **Keep** dependency; backend owns resolution; MOS-923 owns maintenance UI outside this report.                                      |
+| MOS922-C10   | Windows resolve by greater `priority`, specificity `surface > skill > module > assistant`, later `updated_at`; completed window has no influence. W §1.5. Cancellation ceases influence: W §2.9 rule only. | **Keep** published explanation, not frontend computation/runtime proof; backend resolves applicability/ties.                        |
+| MOS922-C11   | Catalog filters `target_type`, `is_applied`, name `query`, `limit`, `offset`, with pagination. W §2.1; O catalog GET.                                                                                      | **Defer** UI detail choice; **keep** published query semantics. No sorting/target-directory API inferred.                           |
+| MOS922-C12   | Edit one/several/all texts; empty string forbidden. W §2.3 rules.                                                                                                                                          | **Question/update candidate:** reconcile null/omission/empty/whitespace validation with O before relaxing constraints.              |
+| MOS922-C13   | Preserve last-change metadata. W business rules “who/when/what”, §§1.3, 2.3; O settings/summary.                                                                                                           | **Question:** `by.id`/`updated_at` cover who/when; no inspected stub delta/history field covers “what”. No invented audit endpoint. |
+| MOS922-C14   | Restricted collections; inaccessible target returns 404. W §§2.10–2.11.                                                                                                                                    | **Keep** server scope; **question** permission mapping with auth owner. Wiki roles do not grant UI access.                          |
 
 ### Exact methods and field differences
 
 **W-base:** `/api/control/api/assistant-ops/v1`. **O-base:** `/api/control/api/maintenance/v1`. This prefix difference is unresolved, not a fallback/redirect instruction.
 
-| Operation | Wiki | O exact selector and success schema |
-|---|---|---|
-| Catalog | §2.1 `GET W-base/stubs/catalog` | `/paths/[O-base/stubs/catalog]/get`; 200 `TsamResponseSchema_StubCatalogResponse_`. |
-| Settings | §2.2 `GET W-base/stubs/{target_type}/{target_id}` | `/paths/[O-base/stubs/{target_type}/{target_id}]/get`; 200 `TsamResponseSchema_StubSettingsResponse_`. |
-| Existing-record save | §2.3 `PUT W-base/stubs/{target_type}/{target_id}` | Same O path `/put`; required body `UpdateStubSettingsRequest`; 200 `TsamResponseSchema_StubSettingsSummaryResponse_`. |
-| Effective preview | §2.4 `GET W-base/stubs/{target_type}/{target_id}/preview` | `/paths/[O-base/stubs/{target_type}/{target_id}/preview]/get`; 200 `TsamResponseSchema_StubPreviewCardResponse_`. Only path parameters, no unsaved draft body/sample-message query. |
+| Operation            | Wiki                                                      | O exact selector and success schema                                                                                                                                                 |
+| -------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Catalog              | §2.1 `GET W-base/stubs/catalog`                           | `/paths/[O-base/stubs/catalog]/get`; 200 `TsamResponseSchema_StubCatalogResponse_`.                                                                                                 |
+| Settings             | §2.2 `GET W-base/stubs/{target_type}/{target_id}`         | `/paths/[O-base/stubs/{target_type}/{target_id}]/get`; 200 `TsamResponseSchema_StubSettingsResponse_`.                                                                              |
+| Existing-record save | §2.3 `PUT W-base/stubs/{target_type}/{target_id}`         | Same O path `/put`; required body `UpdateStubSettingsRequest`; 200 `TsamResponseSchema_StubSettingsSummaryResponse_`.                                                               |
+| Effective preview    | §2.4 `GET W-base/stubs/{target_type}/{target_id}/preview` | `/paths/[O-base/stubs/{target_type}/{target_id}/preview]/get`; 200 `TsamResponseSchema_StubPreviewCardResponse_`. Only path parameters, no unsaved draft body/sample-message query. |
 
 Schema names below are exact O `/components/schemas/<name>` pointers:
 
@@ -83,15 +83,15 @@ Schema names below are exact O `/components/schemas/<name>` pointers:
 
 ## Architecture / owner and coverage mapping
 
-| Existing owner/boundary | Coverage found | Bounded disposition |
-|---|---|---|
+| Existing owner/boundary          | Coverage found                                                                                                                                                                                   | Bounded disposition                                                                                                                                                                                     |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | MOS-922 dedicated product change | No corresponding active proposal in fresh `openspec/changes/*/proposal.md` scan; LOCAL-001 main list and fresh main-spec scan identify shared gates, not dedicated library/editor specification. | **Question/defer:** parent/product owner assigns ownership outside audit. No existing MOS-922 proposal/design/spec/tasks packet discovered to revise. This is not implementation-completeness evidence. |
-| MOS-754 | Selected backend task plus published wiki/OpenAPI. | **Update candidates/questions:** prefix, update/null semantics, errors, preview and conflicts. No contract edits/API calls. |
-| `control-center-http` | Contract-aligned requests, errors/cancellation/no replay, both tokens; lines 102–109 explicitly prevent publication from activating screens. | **Keep** gates; any reconciliation needs owner review, not blanket replacement. |
-| `control-center-permissions` | Exact confirmed grants, wildcard-only unmapped UI, server scope, no transport ACL. | **Keep**; **question** approved view/edit/preview mapping, not role adoption. |
-| `control-center-shell` | Line 218 forbids unfinished operations content from simulating working business operations. | **Keep** until separately approved integration; no routing/menu change proposed. |
-| Archived auth change | Full session/recovery/security packet; tasks line 52 records user confirmation on 09.10.2026 and explicitly no agent real-backend testing. | **Keep** historical approval and original scope; do not recast it as runtime proof for stub operations. |
-| MOS-923 | Only necessary effective-preview priority/influence dependency used. | **Defer** maintenance form/lifecycle/scheduling audit to its separate analyst. |
+| MOS-754                          | Selected backend task plus published wiki/OpenAPI.                                                                                                                                               | **Update candidates/questions:** prefix, update/null semantics, errors, preview and conflicts. No contract edits/API calls.                                                                             |
+| `control-center-http`            | Contract-aligned requests, errors/cancellation/no replay, both tokens; lines 102–109 explicitly prevent publication from activating screens.                                                     | **Keep** gates; any reconciliation needs owner review, not blanket replacement.                                                                                                                         |
+| `control-center-permissions`     | Exact confirmed grants, wildcard-only unmapped UI, server scope, no transport ACL.                                                                                                               | **Keep**; **question** approved view/edit/preview mapping, not role adoption.                                                                                                                           |
+| `control-center-shell`           | Line 218 forbids unfinished operations content from simulating working business operations.                                                                                                      | **Keep** until separately approved integration; no routing/menu change proposed.                                                                                                                        |
+| Archived auth change             | Full session/recovery/security packet; tasks line 52 records user confirmation on 09.10.2026 and explicitly no agent real-backend testing.                                                       | **Keep** historical approval and original scope; do not recast it as runtime proof for stub operations.                                                                                                 |
+| MOS-923                          | Only necessary effective-preview priority/influence dependency used.                                                                                                                             | **Defer** maintenance form/lifecycle/scheduling audit to its separate analyst.                                                                                                                          |
 
 ### Narrow correction candidates / owner questions
 

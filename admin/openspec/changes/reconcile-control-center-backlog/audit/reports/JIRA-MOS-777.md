@@ -14,13 +14,13 @@ All paths below are relative to `openspec/changes/reconcile-control-center-backl
 
 Every row has exactly one hierarchy occurrence and exactly one member-index record. Hierarchy locators below are within `sources/jira-hierarchy/r1/content.json`; index locators are within `sources/jira-member-index/r1/content.json`. The type, status, update and summary values come from the corresponding record's `.type`, `.status`, `.updated` and `.summary` fields.
 
-| Member | Saved summary | Hierarchy locator | Index locator | Type | Status | Updated (verbatim) |
-|---|---|---|---|---|---|---|
-| MOS-885 | [B] Реализовать модуль "Отчеты" | `$.results[12].children[0]` | `$.items[78]` | Development task | Backlog | 2026-10-16T19:20:12.520+0800 |
-| MOS-916 | [FE][Отчёты] Показать шаблоны отчётов и запуск в конструкторе | `$.results[12].children[1]` | `$.items[79]` | Development task | Backlog | 2026-10-15T14:16:19.727+0800 |
-| MOS-919 | [FE][Отчёты] Подключить CSV-выгрузку из конструктора отчётов | `$.results[12].children[2]` | `$.items[80]` | Development task | Backlog | 2026-10-15T14:16:14.331+0800 |
-| MOS-1015 | [FE][Отчёты] Создать конструктор отчёта с расширенным отбором | `$.results[12].children[3]` | `$.items[81]` | Development task | Hold | 2026-10-09T15:04:04.263+0800 |
-| MOS-1016 | [FE][Отчёты] Сохранить отчёт как шаблон с расписанием | `$.results[12].children[4]` | `$.items[82]` | Development task | Backlog | 2026-10-09T15:04:07.048+0800 |
+| Member   | Saved summary                                                 | Hierarchy locator           | Index locator | Type             | Status  | Updated (verbatim)           |
+| -------- | ------------------------------------------------------------- | --------------------------- | ------------- | ---------------- | ------- | ---------------------------- |
+| MOS-885  | [B] Реализовать модуль "Отчеты"                               | `$.results[12].children[0]` | `$.items[78]` | Development task | Backlog | 2026-10-16T19:20:12.520+0800 |
+| MOS-916  | [FE][Отчёты] Показать шаблоны отчётов и запуск в конструкторе | `$.results[12].children[1]` | `$.items[79]` | Development task | Backlog | 2026-10-15T14:16:19.727+0800 |
+| MOS-919  | [FE][Отчёты] Подключить CSV-выгрузку из конструктора отчётов  | `$.results[12].children[2]` | `$.items[80]` | Development task | Backlog | 2026-10-15T14:16:14.331+0800 |
+| MOS-1015 | [FE][Отчёты] Создать конструктор отчёта с расширенным отбором | `$.results[12].children[3]` | `$.items[81]` | Development task | Hold    | 2026-10-09T15:04:04.263+0800 |
+| MOS-1016 | [FE][Отчёты] Сохранить отчёт как шаблон с расписанием         | `$.results[12].children[4]` | `$.items[82]` | Development task | Backlog | 2026-10-09T15:04:07.048+0800 |
 
 Identity-only comparison across `jira-hierarchy/r1/content.json:$.results[*].children[*]` found each assigned key exclusively at the locator above, with no duplicate or conflicting module membership. Within the assigned scope: five observed members, five unique keys, five index matches, zero missing index records, zero duplicate index matches and zero observed extra assigned-key records. Other modules' bodies and semantics were not assessed.
 

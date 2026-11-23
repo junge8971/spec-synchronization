@@ -17,11 +17,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "id",
-      "name",
-      "skills_count"
-    ],
+    "required": ["id", "name", "skills_count"],
     "title": "TeamDomainResponse"
   }
 }

@@ -29,9 +29,9 @@ Read D-052 authority at `A/decisions.md:3–5`. Listed both canonical r1 directo
 
 ## Verified evidence and classification
 
-| Saved page | Verified identity | Relevance classification |
-|---|---|---|
-| **223087110** | **Архитектура**, r1/page v2; version timestamp `2026-07-16T14:00:32.931+08:00`; retrieval `2026-10-19T14:24:36.132Z`; recorded HTTP 200. Canonical `content.json:2–9`, metadata `:2–7`. | Complete body contains one paragraph and one link, not architecture exposition or an admin-shell contract (`content.json:10`; readable chunk `:2`, text `:1`). Child applicability remains unknown. |
+| Saved page    | Verified identity                                                                                                                                                                                            | Relevance classification                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **223087110** | **Архитектура**, r1/page v2; version timestamp `2026-07-16T14:00:32.931+08:00`; retrieval `2026-10-19T14:24:36.132Z`; recorded HTTP 200. Canonical `content.json:2–9`, metadata `:2–7`.                      | Complete body contains one paragraph and one link, not architecture exposition or an admin-shell contract (`content.json:10`; readable chunk `:2`, text `:1`). Child applicability remains unknown.                                                                                                                                                                                                            |
 | **222659162** | **[Done] Задачи для старта проекта**, r1/page v2; version timestamp `2026-08-18T17:58:00.559+08:00`; retrieval `2026-10-19T14:24:36.290Z`; recorded HTTP 200. Canonical `content.json:2–9`, metadata `:2–7`. | Thirteen numbered setup sections. Chat/welcome/WebView screens and messaging widgets appear at readable text `:24–31`; Shadow DOM embedding, assistant initialization through script, and separate WebView build appear at `:46–62`, exact chunk 2 (`body-view-chunks.json:3`). This supports contextual widget implementation documentation, not established applicability to the Control Center admin shell. |
 
 Both canonical indexes explicitly record `status:200`, `start:0`, `limit:100`, `size:0`, `next:null`, `results:[]` (`content.json:12–19`); metadata summaries agree (`metadata.json:11–17`). This establishes the saved returned-index state only, not global absence of attachments, screenshots or other assets.
@@ -42,7 +42,7 @@ Both metadata files describe selected JSON envelopes with full decoded `bodyView
 
 - **Architecture child:** Displayed title **Структура backend-сервиса**, exact href:
   `/spaces/KR/pages/223099233/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0+backend-%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%D0%B0`
-  
+
   Verified in `wiki-223087110/r1/content.json:10` and readable `body-view-chunks.json:2`. Unvisited; no child authority inferred.
 
 - **Maki:** Actual href ends in `pageId=85767004`; displayed text ends in `pageId=8576700`. Verified in `wiki-222659162/r1/content.json:10`, readable chunk 3 (`body-view-chunks.json:4`), and text `:70`. Neither destination was visited or resolved.

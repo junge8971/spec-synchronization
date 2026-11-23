@@ -12,13 +12,13 @@ Inventory only; governed by `work-items/JIRA-MOS-651.md` and the supplemental `w
 
 `H` = `sources/jira-hierarchy/r1/content.json`; `I` = `sources/jira-member-index/r1/content.json`. All five records have type `Development task`. Multiplicity is hierarchy occurrences / index records. For **each** row, index presence is confirmed but full description, attachments, comments and custom acceptance fields are **not collected**, not confirmed empty. Each index record has `subtasks: []` and no `parent` field; membership comes from H, not an independently collected child-parent field.
 
-| Member | Saved summary | Status | Updated (verbatim) | Exact locators | Multiplicity | Nested evidence |
-|---|---|---|---|---|---|---|
-| MOS-927 | [FE][Авторизация и моки] Подключить MPMM-сессию и доступность UI по permissions | Ready for test | 2026-10-12T20:34:21.131+0800 | H#/results/1/children/0; I#/items/29 | 1 / 1 | Empty index subtasks; 0 saved subtask parent matches |
-| MOS-1009 | [B] Реализовать API проверки разрешения в МПММ | Ready for test | 2026-10-09T15:03:27.160+0800 | H#/results/1/children/1; I#/items/30 | 1 / 1 | Empty index subtasks; 0 saved subtask parent matches |
-| MOS-1024 | [B] Использование API проверки разрешений и профиля МПММ в ЦАМ | Testing | 2026-10-16T14:17:13.637+0800 | H#/results/1/children/2; I#/items/31 | 1 / 1 | Empty index subtasks; 0 saved subtask parent matches |
-| MOS-1029 | [B] Реализовать API получения профиля в МПММ | CLOSED | 2026-10-15T15:11:14.790+0800 | H#/results/1/children/3; I#/items/32 | 1 / 1 | Empty index subtasks; 0 saved subtask parent matches |
-| MOS-1034 | [B] Реализовать API получения информации о текущем пользователе в ЦАМ | Ready for test | 2026-10-09T15:05:31.528+0800 | H#/results/1/children/4; I#/items/33 | 1 / 1 | Empty index subtasks; 0 saved subtask parent matches |
+| Member   | Saved summary                                                                   | Status         | Updated (verbatim)           | Exact locators                       | Multiplicity | Nested evidence                                      |
+| -------- | ------------------------------------------------------------------------------- | -------------- | ---------------------------- | ------------------------------------ | ------------ | ---------------------------------------------------- |
+| MOS-927  | [FE][Авторизация и моки] Подключить MPMM-сессию и доступность UI по permissions | Ready for test | 2026-10-12T20:34:21.131+0800 | H#/results/1/children/0; I#/items/29 | 1 / 1        | Empty index subtasks; 0 saved subtask parent matches |
+| MOS-1009 | [B] Реализовать API проверки разрешения в МПММ                                  | Ready for test | 2026-10-09T15:03:27.160+0800 | H#/results/1/children/1; I#/items/30 | 1 / 1        | Empty index subtasks; 0 saved subtask parent matches |
+| MOS-1024 | [B] Использование API проверки разрешений и профиля МПММ в ЦАМ                  | Testing        | 2026-10-16T14:17:13.637+0800 | H#/results/1/children/2; I#/items/31 | 1 / 1        | Empty index subtasks; 0 saved subtask parent matches |
+| MOS-1029 | [B] Реализовать API получения профиля в МПММ                                    | CLOSED         | 2026-10-15T15:11:14.790+0800 | H#/results/1/children/3; I#/items/32 | 1 / 1        | Empty index subtasks; 0 saved subtask parent matches |
+| MOS-1034 | [B] Реализовать API получения информации о текущем пользователе в ЦАМ           | Ready for test | 2026-10-09T15:05:31.528+0800 | H#/results/1/children/4; I#/items/33 | 1 / 1        | Empty index subtasks; 0 saved subtask parent matches |
 
 ## Reconciliation and collection gaps
 

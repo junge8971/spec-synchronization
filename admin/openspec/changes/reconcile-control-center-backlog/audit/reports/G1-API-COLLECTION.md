@@ -8,31 +8,31 @@ All `A/` paths below expand to `openspec/changes/reconcile-control-center-backlo
 
 ## Exact acceptance assessment
 
-| Task 2.4 element | Evidence and result |
-|---|---|
-| Published snapshot saved | Satisfied locally: `A/sources/api-live/r1/content.json`, line 1. Parsed successfully; 413007 bytes; SHA-256 `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06`, matching metadata. Independently counted 94 paths, 128 HTTP operations, 382 schemas. |
+| Task 2.4 element                       | Evidence and result                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Published snapshot saved               | Satisfied locally: `A/sources/api-live/r1/content.json`, line 1. Parsed successfully; 413007 bytes; SHA-256 `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06`, matching metadata. Independently counted 94 paths, 128 HTTP operations, 382 schemas.                                                                                                                                                                                                  |
 | URL established from docs, not guessed | **Incomplete documentary provenance.** `A/sources/api-live/r1/metadata.json:4–7,17` names `https://nchat-a-tech.mos.ru/api/control/docs` and `https://nchat-a-tech.mos.ru/api/control/openapi.json`, asserting Swagger discovery. No saved Swagger HTML/configuration, visible-link extraction, or original discovery response was located. Repeated downstream attribution is not independent discovery evidence. This does not prove the collector guessed the URL. |
-| Retrieval metadata/time | Present: metadata lines 2–7,15–18 record source ID, revision, URLs, retrieval `2026-10-16T11:13:29.451Z`, method and capture limitations. Hash/bytes are independently checkable; retrieval itself is a collector assertion, not re-observed remotely in this run. |
-| Versions/hashes | Present: content line 1 `/info/version` = `0.1.0`, `/openapi` = `3.1.0`, `/info/title` = `TSAM Assistant Management Service`; version is retained in the content even though not duplicated in metadata. Metadata lines 8–14 retain digest, counts and null ETag/Last-Modified. No extra server version can be inferred; their documented unavailability is not itself a closure blocker. |
-| Available explanatory docs saved | **Partially evidenced, not absent.** See inventory below. No collection receipt establishes the Swagger-linked explanatory-document set or disposes of all relevant discovered candidates. OpenAPI has no `externalDocs` keys; that does not prove Swagger/wiki expose no additional documentation. |
-| No Try it out/business operations | Metadata line 18 expressly says no backend business operation invoked; capture method is documentation GET. Work-item restrictions and checkpoints are consistent. No independent historical browser trace was found; this is recorded collector attestation, not runtime certification. This run used no network/browser/business calls. |
+| Retrieval metadata/time                | Present: metadata lines 2–7,15–18 record source ID, revision, URLs, retrieval `2026-10-16T11:13:29.451Z`, method and capture limitations. Hash/bytes are independently checkable; retrieval itself is a collector assertion, not re-observed remotely in this run.                                                                                                                                                                                                    |
+| Versions/hashes                        | Present: content line 1 `/info/version` = `0.1.0`, `/openapi` = `3.1.0`, `/info/title` = `TSAM Assistant Management Service`; version is retained in the content even though not duplicated in metadata. Metadata lines 8–14 retain digest, counts and null ETag/Last-Modified. No extra server version can be inferred; their documented unavailability is not itself a closure blocker.                                                                             |
+| Available explanatory docs saved       | **Partially evidenced, not absent.** See inventory below. No collection receipt establishes the Swagger-linked explanatory-document set or disposes of all relevant discovered candidates. OpenAPI has no `externalDocs` keys; that does not prove Swagger/wiki expose no additional documentation.                                                                                                                                                                   |
+| No Try it out/business operations      | Metadata line 18 expressly says no backend business operation invoked; capture method is documentation GET. Work-item restrictions and checkpoints are consistent. No independent historical browser trace was found; this is recorded collector attestation, not runtime certification. This run used no network/browser/business calls.                                                                                                                             |
 
 ## Explanatory-document packets already retained
 
 These are existing evidence, not a claim that all are required by task 2.4 or that the set is exhaustive. JSON pointers `/title`, `/version`, `/bodyView` (or `/text`) identify content; matching `metadata.json` in each revision records provenance.
 
-| Exact content path | Retained material / revision |
-|---|---|
-| `A/sources/wiki-241082009/r2/content.json:1–49` | API-контракт управления поверхностями; page version 5 |
-| `A/sources/wiki-241097511/r2/content.json:1–49` | API-контракт реестра доменов и каталога навыков; version 6 |
-| `A/sources/wiki-241085439/r1/content.json:1–64` | API-контракт модуля диалогов; version 15 |
-| `A/sources/wiki-241085838/r1/content.json:1–64` | API-контракт модуля отчётов; version 3 |
-| `A/sources/wiki-241088180/r1/content.json:1–64` | API-контракт управления глобальными модулями ассистента; version 4 |
-| `A/sources/wiki-241092242/r1/content.json:1–64` | API-контракт управления заглушками, баннерами и техническими работами; version 4 |
-| `A/sources/wiki-241080062/r1/content.json:1` | Админка. Навыки; version 17 |
-| `A/sources/wiki-245673187/r1/content.json:1` | Бизнес-анализ: Поверхности; version 18 |
-| `A/sources/wiki-243776365/r1/content.json:1` | Бизнес-анализ: Диалоги; version 13 |
-| `A/sources/wiki-247734813/r1/content.json:1–135` | Раздел «Обратная связь»; version 11 |
+| Exact content path                               | Retained material / revision                                                     |
+| ------------------------------------------------ | -------------------------------------------------------------------------------- |
+| `A/sources/wiki-241082009/r2/content.json:1–49`  | API-контракт управления поверхностями; page version 5                            |
+| `A/sources/wiki-241097511/r2/content.json:1–49`  | API-контракт реестра доменов и каталога навыков; version 6                       |
+| `A/sources/wiki-241085439/r1/content.json:1–64`  | API-контракт модуля диалогов; version 15                                         |
+| `A/sources/wiki-241085838/r1/content.json:1–64`  | API-контракт модуля отчётов; version 3                                           |
+| `A/sources/wiki-241088180/r1/content.json:1–64`  | API-контракт управления глобальными модулями ассистента; version 4               |
+| `A/sources/wiki-241092242/r1/content.json:1–64`  | API-контракт управления заглушками, баннерами и техническими работами; version 4 |
+| `A/sources/wiki-241080062/r1/content.json:1`     | Админка. Навыки; version 17                                                      |
+| `A/sources/wiki-245673187/r1/content.json:1`     | Бизнес-анализ: Поверхности; version 18                                           |
+| `A/sources/wiki-243776365/r1/content.json:1`     | Бизнес-анализ: Диалоги; version 13                                               |
+| `A/sources/wiki-247734813/r1/content.json:1–135` | Раздел «Обратная связь»; version 11                                              |
 
 Additional explanatory evidence: `A/sources/jira-api-delta-scenarios/r1/` retains selected descriptions/attachment metadata; `A/sources/jira-lifecycle-details/r2/` and `A/sources/jira-attachment-833803/r1/` retain later lifecycle clarification/test-plan text. A test-plan document is not an executed test. `A/sources/jira-skill-switch-details/r1/metadata.json` explicitly records attachment 835759 body unread. This is an unresolved candidate, not proven unavailable or automatically a task 2.4 requirement.
 

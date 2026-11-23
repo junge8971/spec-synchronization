@@ -16,5 +16,9 @@
   },
   "checks": { "ownerStrict": 0, "allStrict": 0, "doctor": 0, "threeChangedProductFilesFormat": 0 },
   "uncheckedFeatureTasks": 5,
-  "limits": ["Global format remains unresolved; last full run399 files, not rerun for this one-sentence patch", "No runtime/API/build edits or tests; no browser/E2E tests", "Global11/28 and57P/5B/111U unchanged"]
+  "limits": [
+    "Global format remains unresolved; last full run399 files, not rerun for this one-sentence patch",
+    "No runtime/API/build edits or tests; no browser/E2E tests",
+    "Global11/28 and57P/5B/111U unchanged"
+  ]
 }

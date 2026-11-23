@@ -19,11 +19,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "version",
-      "is_default",
-      "widgets"
-    ],
+    "required": ["version", "is_default", "widgets"],
     "title": "BoardResponse"
   }
 }

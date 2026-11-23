@@ -1,14 +1,7 @@
 {
   "sourceId": "jira-reports-details",
   "retrievedAt": "2026-10-16T13:31:43.125Z",
-  "allowlist": [
-    "MOS-777",
-    "MOS-885",
-    "MOS-916",
-    "MOS-919",
-    "MOS-1015",
-    "MOS-1016"
-  ],
+  "allowlist": ["MOS-777", "MOS-885", "MOS-916", "MOS-919", "MOS-1015", "MOS-1016"],
   "items": [
     {
       "key": "MOS-777",

@@ -78,12 +78,12 @@ Exact API locators under `sources/api-live/r1/content.json`:
 
 Recomputed saved-byte hashes and sizes match all four metadata files:
 
-| Source | Bytes | SHA-256 |
-|---|---:|---|
-| Jira monitoring r1 | 44254 | `6dc8925cbbb1cfcd3a4179db720d38a72d9436926f7df3b73e612eb528c84c73` |
-| API r1 | 413007 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
-| Skills wiki r1 | 481595 | `4920e62124826b90c86ae1d6ec520f49f52a4d381334c94867864c1f218c3ab2` |
-| Catalog wiki r2 | 73058 | `710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47` |
+| Source             |  Bytes | SHA-256                                                            |
+| ------------------ | -----: | ------------------------------------------------------------------ |
+| Jira monitoring r1 |  44254 | `6dc8925cbbb1cfcd3a4179db720d38a72d9436926f7df3b73e612eb528c84c73` |
+| API r1             | 413007 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
+| Skills wiki r1     | 481595 | `4920e62124826b90c86ae1d6ec520f49f52a4d381334c94867864c1f218c3ab2` |
+| Catalog wiki r2    |  73058 | `710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47` |
 
 Capture timestamps respectively: `2026-10-16T13:48:06.559Z`, `2026-10-16T11:13:29.451Z`, `2026-10-16T11:48:21.710Z`, `2026-10-16T12:37:03.295Z`.
 

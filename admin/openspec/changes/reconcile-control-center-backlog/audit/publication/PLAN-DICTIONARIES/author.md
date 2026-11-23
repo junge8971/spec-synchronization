@@ -31,10 +31,10 @@ Primary source URL: https://wiki.mos-team.ru/spaces/KR/pages/247751846/ . Suppli
 
 Recomputed SHA-256:
 
-| Repository-relative source | SHA-256 |
-| --- | --- |
-| `openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-247751846/r2/readable.txt` | `002d6b34375939d9f8847350ef0cdf9ff6db8f151028f297da6750ba0d1c0957` |
-| `openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-247751846/r2/content.json` | `6f4a85bf911634a724e3411138c517fe3ce295d2036e09d573444dc9d6d04588` |
+| Repository-relative source                                                                                     | SHA-256                                                            |
+| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-247751846/r2/readable.txt`               | `002d6b34375939d9f8847350ef0cdf9ff6db8f151028f297da6750ba0d1c0957` |
+| `openspec/changes/reconcile-control-center-backlog/audit/sources/wiki-247751846/r2/content.json`               | `6f4a85bf911634a724e3411138c517fe3ce295d2036e09d573444dc9d6d04588` |
 | `openspec/changes/reconcile-control-center-backlog/audit/sources/local-dictionaries-prototype/r1/content.html` | `385f230467db6b8b2fdf26dbc08f9154ca7fd1651db037c6227eccc9fc8fa310` |
 
 ## Validation and artifact manifest

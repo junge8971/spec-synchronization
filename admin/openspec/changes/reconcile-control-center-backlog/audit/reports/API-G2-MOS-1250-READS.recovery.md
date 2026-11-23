@@ -22,29 +22,29 @@ Administrative `audit/decisions.md` was not rehashed or reread: D061 is an expre
 
 ### Recovery-confirmed pinned hashes
 
-| Input | SHA-256 — unchanged |
-|---|---|
+| Input                                                                                      | SHA-256 — unchanged                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
 | `openspec/changes/reconcile-control-center-backlog/audit/sources/api-live/r2/content.json` | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
-| `docs/api/contracts/openapi.json` | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
-| `docs/api/contracts/managed-resources.openapi.json` | `cc4cb5603b449f0d7a98224bfcfc1795f509ecc09a3155fdc87f8ff2b270c7cf` |
+| `docs/api/contracts/openapi.json`                                                          | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
+| `docs/api/contracts/managed-resources.openapi.json`                                        | `cc4cb5603b449f0d7a98224bfcfc1795f509ecc09a3155fdc87f8ff2b270c7cf` |
 
 ## Key Code / completeness against the assignment
 
 This is a document-completeness check, not a new independent API correctness review. All ranges below refer to the preserved report.
 
-| Assignment criterion | Existing evidence | Recovery disposition |
-|---|---|---|
-| Exactly three bounded reads; actual identity, method/path and JSON pointers | Lines 34–44 contain POST search, GET lookup template instantiated with `section=feedback`, GET metadata, operationIds and request/response pointers. | Present; no substitute operation invented. |
-| Reachable DTO fields, requiredness, nullable/default/bounds | Lines 46–100 cover query/filter/sort/paging, conditions as closure only, all response envelopes and nested survey/question/option/rules/catalog/metadata schemas. | Present. Required request body is distinguished from optional properties; explicit null differs from omission/default. |
-| Errors | Lines 102–104 cover ErrorItem, HTTPValidationError/ValidationError, declared 200/422 and bounded absence of other statuses; metadata has 200 only. | Present; not interpreted as proof that runtime errors cannot occur. |
-| Live/local differences and hashes | Lines 13–32 and 106–108, 140–150 record inputs, security normalization, three-operation equality excluding security, 24 reachable schemas equal. | Present; all substantive input byte hashes matched during recovery. Structural comparison itself was not rerun. |
-| REQ1250 IDs 4–23/35 | Lines 114–136 individually map every requested ID. | Complete requested ID coverage. |
-| Server contract versus UI constraints | Lines 110–138 distinguish request/response support from keyboard access, fallback labels, one-character suppression/applied state, offset reset, race protection and UI policy. | Present; no implementation inspection or inferred completion. |
-| Metadata presence versus required consumption | Lines 92–100 and mapping ID6 explicitly avoid requiring all metadata to drive the registry. | Present; no conditions/export scope expansion. |
-| Preserve approved security and pending ManagedResource mapping | Lines 106–108 and 145–148 preserve local AND, distinguish UI rights, retain MOS1249 mapping and reject a new wildcard blocker. | Present; D061 task wording does not change this wire evidence. |
-| Historical reports only contextual | Line 148 declines current acceptance reuse of API-OPS-001/API-SCHEMA-001/R-API-001/D022–023. | Present. |
-| Actual scope, unknowns, corrections/no-op, no runtime acceptance | Lines 5–7, 140–158 give contract no-op, narrow planning clarification and explicit unknowns/limits. | Present; no product-precedence decision. |
-| Governing inputs and D002/D060 | Lines 13–20, 32, 108 and 150 record their original use and boundaries. | Original analytical evidence retained; recovery did not redo governing review. |
+| Assignment criterion                                                        | Existing evidence                                                                                                                                                               | Recovery disposition                                                                                                   |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Exactly three bounded reads; actual identity, method/path and JSON pointers | Lines 34–44 contain POST search, GET lookup template instantiated with `section=feedback`, GET metadata, operationIds and request/response pointers.                            | Present; no substitute operation invented.                                                                             |
+| Reachable DTO fields, requiredness, nullable/default/bounds                 | Lines 46–100 cover query/filter/sort/paging, conditions as closure only, all response envelopes and nested survey/question/option/rules/catalog/metadata schemas.               | Present. Required request body is distinguished from optional properties; explicit null differs from omission/default. |
+| Errors                                                                      | Lines 102–104 cover ErrorItem, HTTPValidationError/ValidationError, declared 200/422 and bounded absence of other statuses; metadata has 200 only.                              | Present; not interpreted as proof that runtime errors cannot occur.                                                    |
+| Live/local differences and hashes                                           | Lines 13–32 and 106–108, 140–150 record inputs, security normalization, three-operation equality excluding security, 24 reachable schemas equal.                                | Present; all substantive input byte hashes matched during recovery. Structural comparison itself was not rerun.        |
+| REQ1250 IDs 4–23/35                                                         | Lines 114–136 individually map every requested ID.                                                                                                                              | Complete requested ID coverage.                                                                                        |
+| Server contract versus UI constraints                                       | Lines 110–138 distinguish request/response support from keyboard access, fallback labels, one-character suppression/applied state, offset reset, race protection and UI policy. | Present; no implementation inspection or inferred completion.                                                          |
+| Metadata presence versus required consumption                               | Lines 92–100 and mapping ID6 explicitly avoid requiring all metadata to drive the registry.                                                                                     | Present; no conditions/export scope expansion.                                                                         |
+| Preserve approved security and pending ManagedResource mapping              | Lines 106–108 and 145–148 preserve local AND, distinguish UI rights, retain MOS1249 mapping and reject a new wildcard blocker.                                                  | Present; D061 task wording does not change this wire evidence.                                                         |
+| Historical reports only contextual                                          | Line 148 declines current acceptance reuse of API-OPS-001/API-SCHEMA-001/R-API-001/D022–023.                                                                                    | Present.                                                                                                               |
+| Actual scope, unknowns, corrections/no-op, no runtime acceptance            | Lines 5–7, 140–158 give contract no-op, narrow planning clarification and explicit unknowns/limits.                                                                             | Present; no product-precedence decision.                                                                               |
+| Governing inputs and D002/D060                                              | Lines 13–20, 32, 108 and 150 record their original use and boundaries.                                                                                                          | Original analytical evidence retained; recovery did not redo governing review.                                         |
 
 ## Architecture — original conclusions, not new recovery findings
 

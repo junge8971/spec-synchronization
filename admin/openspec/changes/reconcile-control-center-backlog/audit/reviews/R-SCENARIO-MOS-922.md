@@ -21,17 +21,17 @@ Repository-relative paths; `A` means `openspec/changes/reconcile-control-center-
 
 No application code inspected. `J` = selected Jira description; `W` = wiki `/bodyView` section; `O` = saved OpenAPI selectors above.
 
-| Candidates | Independent verification |
-|---|---|
-| C01–C04 | J `/items/3/description` explicitly names four target types and three text fields. W §§1.2–1.3 agrees; O `MaintenanceTargetType`, `StubSettingsSummaryResponse` require corresponding enum and nullable text fields. Retain candidates; “Defer” is not sourced approval. |
-| C05 | J explicitly says inline editor saves an existing record. W §§2.2–2.3 and O settings GET/PUT support read/update, not a create/upsert/delete promise. |
-| C06–C07 | J and W §2.3 explicitly distinguish false=draft from true=immediate application subject to maintenance priority. Neither describes preservation/removal of previously live text when saving false, separate persisted live/draft versions, or activation success from the returned flag alone. |
-| C08 | J and W §2.4 require effective server-priority output. O preview GET has only target path parameters, no draft body/sample-message query. Local unsaved input cannot be represented as this server result. |
-| C09–C10 | W business rules and §1.5 publish active-window override, larger priority, specificity surface > skill > module > assistant, then later updated_at; completed windows do not influence output. §2.9 states canceled windows stop influencing output. Exact ties after all criteria and cross-target applicability remain questions, not a client algorithm. |
-| C11 | W §2.1/O catalog GET expose target_type, is_applied, query (target name), limit/offset and server pagination. O limit 1–100 default 20, offset >=0 default 0. No sort or target-directory operation established. |
-| C12 | W §2.3 permits one/several/all texts and forbids empty string. O UpdateStubSettingsRequest requires is_applied; texts optional/nullable with no string minimum. This documents a publication constraint gap, not backend acceptance of invalid input. |
-| C13 | W business rules say who/when/what; O summary has by.id/updated_at but no explicit change-delta/history field. Gap is in inspected representation, not proof backend lacks audit storage or that a new history endpoint is needed. |
-| C14 | W §2.11 restricts collections and specifies inaccessible-object 404. Role table is publication evidence, not approved frontend grants. Current permissions spec lines 25–38 and 79–91 retain wildcard-only unmapped UI and backend object authority. |
+| Candidates | Independent verification                                                                                                                                                                                                                                                                                                                                    |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C01–C04    | J `/items/3/description` explicitly names four target types and three text fields. W §§1.2–1.3 agrees; O `MaintenanceTargetType`, `StubSettingsSummaryResponse` require corresponding enum and nullable text fields. Retain candidates; “Defer” is not sourced approval.                                                                                    |
+| C05        | J explicitly says inline editor saves an existing record. W §§2.2–2.3 and O settings GET/PUT support read/update, not a create/upsert/delete promise.                                                                                                                                                                                                       |
+| C06–C07    | J and W §2.3 explicitly distinguish false=draft from true=immediate application subject to maintenance priority. Neither describes preservation/removal of previously live text when saving false, separate persisted live/draft versions, or activation success from the returned flag alone.                                                              |
+| C08        | J and W §2.4 require effective server-priority output. O preview GET has only target path parameters, no draft body/sample-message query. Local unsaved input cannot be represented as this server result.                                                                                                                                                  |
+| C09–C10    | W business rules and §1.5 publish active-window override, larger priority, specificity surface > skill > module > assistant, then later updated_at; completed windows do not influence output. §2.9 states canceled windows stop influencing output. Exact ties after all criteria and cross-target applicability remain questions, not a client algorithm. |
+| C11        | W §2.1/O catalog GET expose target_type, is_applied, query (target name), limit/offset and server pagination. O limit 1–100 default 20, offset >=0 default 0. No sort or target-directory operation established.                                                                                                                                            |
+| C12        | W §2.3 permits one/several/all texts and forbids empty string. O UpdateStubSettingsRequest requires is_applied; texts optional/nullable with no string minimum. This documents a publication constraint gap, not backend acceptance of invalid input.                                                                                                       |
+| C13        | W business rules say who/when/what; O summary has by.id/updated_at but no explicit change-delta/history field. Gap is in inspected representation, not proof backend lacks audit storage or that a new history endpoint is needed.                                                                                                                          |
+| C14        | W §2.11 restricts collections and specifies inaccessible-object 404. Role table is publication evidence, not approved frontend grants. Current permissions spec lines 25–38 and 79–91 retain wildcard-only unmapped UI and backend object authority.                                                                                                        |
 
 ### Confirmed material differences and preserved limits
 
@@ -62,11 +62,11 @@ Retain report questions to MOS-754/API and MOS-922/product owners: agreed prefix
 
 Fresh SHA-256 over saved content bytes matched metadata:
 
-| Source r1 | Bytes | SHA-256 |
-|---|---:|---|
-| jira-operations-details | 9933 | ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f |
-| wiki-241092242 | 68316 | e7b78965be979f2bd450b25881574cf7e8b94cf424be5d052bb2be9df1995158 |
-| api-live | 413007 | 549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06 |
+| Source r1               |  Bytes | SHA-256                                                          |
+| ----------------------- | -----: | ---------------------------------------------------------------- |
+| jira-operations-details |   9933 | ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f |
+| wiki-241092242          |  68316 | e7b78965be979f2bd450b25881574cf7e8b94cf424be5d052bb2be9df1995158 |
+| api-live                | 413007 | 549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06 |
 
 Jira MOS-754 Review/MOS-922 Backlog, respective updated timestamps 2026-10-16T19:22:17.361+0800 and 2026-10-15T14:46:44.693+0800, zero selected comments/attachments match. Wiki page revision 4 (2026-09-25T16:59:13.813+08:00) differs from body contract v1.0/history 10.09.2026. OpenAPI 3.1.0 differs from service 0.1.0 and capture r1. Capture timestamps/origins match report; collection provenance is metadata testimony, not a fresh fetch. No ETag/Last-Modified or business approval inferred.
 

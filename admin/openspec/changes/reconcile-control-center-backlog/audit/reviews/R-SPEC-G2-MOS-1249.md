@@ -9,6 +9,7 @@ HEAD independently verified: `bc0d9800f25a90989b9c73c76f91996f8300f1d3`. All 37 
 ## Files Retrieved
 
 Exact repository-relative bases below expand every listed path:
+
 - C = `openspec/changes/mos-1249-feedback-api`
 - G = `openspec/changes/reconcile-control-center-backlog`
 - A = `openspec/changes/reconcile-control-center-backlog/audit`
@@ -19,22 +20,22 @@ Exact repository-relative bases below expand every listed path:
 
 All reads used the read tool, not sed/cat. Full reads except explicitly selected ranges:
 
-| Files | Lines | Purpose |
-|---|---|---|
-| A/work-items/R-G2-SPEC1249-IMPL916.md; A/work-items/SPEC-G2-MOS-1249.md; A/reports/SPEC-G2-MOS-1249.md | 1–13; 1–11; 1–197 | Complete assignment and evaluated report; IMPL instructions read but not acted on |
-| G/proposal.md; G/design.md; G/tasks.md; G/specs/control-center-backlog-reconciliation/spec.md | 1–30; 1–133; 1–45; 1–108 | Governing authority and evidence/publication limits |
-| C/proposal.md; C/design.md; C/tasks.md; C/specs/feedback-api/spec.md | 1–32; 1–81; 1–14; 1–38 | Entire change, enumerated independently: one delta |
-| openspec/specs/control-center-api-integration/spec.md; openspec/specs/control-center-http/spec.md; openspec/specs/control-center-permissions/spec.md | 1–149; 1–138; 1–91 | Inherited contract/error/policy requirements |
-| H/proposal.md; H/design.md | 1–38; 1–171 | Full auth prerequisite |
-| H/specs/control-center-api-integration/spec.md; H/specs/control-center-http/spec.md; H/specs/control-center-mock-server/spec.md | 1–64; 1–71; 1–27 | Full auth deltas |
-| H/specs/control-center-permissions/spec.md; H/specs/control-center-shell/spec.md; H/specs/mpmm-session/spec.md | 1–89; 1–101; 1–138 | Full remaining auth deltas |
-| D/proposal.md; D/design.md | 1–28; 1–70 | Full demo prerequisite |
-| D/specs/control-center-mock-server/spec.md; D/specs/control-center-shell/spec.md; D/specs/local-session-demo/spec.md | 1–106; 1–55; 1–123 | All demo deltas, including fixed profiles |
-| U/proposal.md; U/design.md; U/specs/control-center-api-integration/spec.md; U/specs/control-center-mock-server/spec.md | 1–39; 1–120; 1–27; 1–184 | Explicit successor decisions, not timestamp inference |
-| P/proposal.md; P/design.md; P/tasks.md | 1–35; 1–75; 1–34 | Complete historical PUT/supplement/unavailable migration |
-| A/sources/jira-feedback/r1/content.json | selected 23–32; semantic scope only $.items[2], MOS-1249 | Description and seven acceptance criteria |
-| A/sources/jira-feedback/r1/metadata.json; A/reports/JIRA-MOS-1246.md; A/reviews/R-MOS-1250.md | 1–11; 1–53; 1–97 | Source limitations and existing dispositions, not repeated implementation audit |
-| A/decisions.md | selected 1–11 and 427–431 | D-060 and D-002 feedback disposition |
+| Files                                                                                                                                                | Lines                                                    | Purpose                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| A/work-items/R-G2-SPEC1249-IMPL916.md; A/work-items/SPEC-G2-MOS-1249.md; A/reports/SPEC-G2-MOS-1249.md                                               | 1–13; 1–11; 1–197                                        | Complete assignment and evaluated report; IMPL instructions read but not acted on |
+| G/proposal.md; G/design.md; G/tasks.md; G/specs/control-center-backlog-reconciliation/spec.md                                                        | 1–30; 1–133; 1–45; 1–108                                 | Governing authority and evidence/publication limits                               |
+| C/proposal.md; C/design.md; C/tasks.md; C/specs/feedback-api/spec.md                                                                                 | 1–32; 1–81; 1–14; 1–38                                   | Entire change, enumerated independently: one delta                                |
+| openspec/specs/control-center-api-integration/spec.md; openspec/specs/control-center-http/spec.md; openspec/specs/control-center-permissions/spec.md | 1–149; 1–138; 1–91                                       | Inherited contract/error/policy requirements                                      |
+| H/proposal.md; H/design.md                                                                                                                           | 1–38; 1–171                                              | Full auth prerequisite                                                            |
+| H/specs/control-center-api-integration/spec.md; H/specs/control-center-http/spec.md; H/specs/control-center-mock-server/spec.md                      | 1–64; 1–71; 1–27                                         | Full auth deltas                                                                  |
+| H/specs/control-center-permissions/spec.md; H/specs/control-center-shell/spec.md; H/specs/mpmm-session/spec.md                                       | 1–89; 1–101; 1–138                                       | Full remaining auth deltas                                                        |
+| D/proposal.md; D/design.md                                                                                                                           | 1–28; 1–70                                               | Full demo prerequisite                                                            |
+| D/specs/control-center-mock-server/spec.md; D/specs/control-center-shell/spec.md; D/specs/local-session-demo/spec.md                                 | 1–106; 1–55; 1–123                                       | All demo deltas, including fixed profiles                                         |
+| U/proposal.md; U/design.md; U/specs/control-center-api-integration/spec.md; U/specs/control-center-mock-server/spec.md                               | 1–39; 1–120; 1–27; 1–184                                 | Explicit successor decisions, not timestamp inference                             |
+| P/proposal.md; P/design.md; P/tasks.md                                                                                                               | 1–35; 1–75; 1–34                                         | Complete historical PUT/supplement/unavailable migration                          |
+| A/sources/jira-feedback/r1/content.json                                                                                                              | selected 23–32; semantic scope only $.items[2], MOS-1249 | Description and seven acceptance criteria                                         |
+| A/sources/jira-feedback/r1/metadata.json; A/reports/JIRA-MOS-1246.md; A/reviews/R-MOS-1250.md                                                        | 1–11; 1–53; 1–97                                         | Source limitations and existing dispositions, not repeated implementation audit   |
+| A/decisions.md                                                                                                                                       | selected 1–11 and 427–431                                | D-060 and D-002 feedback disposition                                              |
 
 Auth and demo proposal/design/all six and three delta specs respectively were fully read before policy interpretation. Their tasks were not read. Unrelated resource paragraphs in U were contextual only. No application, mocks, tests, raw contracts, HTML/PDF or external sources were inspected.
 
@@ -79,6 +80,7 @@ Exact GET lookup/metadata, no obsolete /feedback/catalogs, forbidden request fie
 ### Requirement/task mapping check
 
 All seven Jira criteria, both delta requirements, five scenarios and seven unchecked tasks have traceable planning coverage:
+
 - AC1/AC7 contract/client consistency → delta 7–14; tasks 1.1, 1.2, 2.2.
 - AC2 POST→GET/full-card PUT/payload omission → delta 9–14; task 1.2; PATCH mismatch explicitly retained above.
 - AC3 validation/errors/cancellation → delta 9,16–19; design 54; task 1.2 and shared HTTP behavior.

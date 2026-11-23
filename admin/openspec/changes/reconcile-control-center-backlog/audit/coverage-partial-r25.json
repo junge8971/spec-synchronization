@@ -3,8 +3,19 @@
   "supplements": "coverage-partial-r24.json",
   "complete": false,
   "globalProgress": "6/28",
-  "acceptedChains": [{"report": "reports/G1-ROOT-REGISTRY-FINAL-INCREMENT.md", "review": "reviews/R-G1-ROOT-REGISTRY-FINAL-INCREMENT.md", "verdict": "ACCEPT", "decision": "D-043", "limits": "Three legacy parses and four byte measurements parent-attributed; historical42/41/34 snapshot remains unchanged"}],
-  "sourceAdditions": ["sources/wiki-247734813-attachment-index/r1/content.json", "sources/wiki-247734813-attachment-index/r1/metadata.json"],
+  "acceptedChains": [
+    {
+      "report": "reports/G1-ROOT-REGISTRY-FINAL-INCREMENT.md",
+      "review": "reviews/R-G1-ROOT-REGISTRY-FINAL-INCREMENT.md",
+      "verdict": "ACCEPT",
+      "decision": "D-043",
+      "limits": "Three legacy parses and four byte measurements parent-attributed; historical42/41/34 snapshot remains unchanged"
+    }
+  ],
+  "sourceAdditions": [
+    "sources/wiki-247734813-attachment-index/r1/content.json",
+    "sources/wiki-247734813-attachment-index/r1/metadata.json"
+  ],
   "repair": {
     "pageId": "247734813",
     "retrievedAt": "2026-10-19T12:13:31.104Z",

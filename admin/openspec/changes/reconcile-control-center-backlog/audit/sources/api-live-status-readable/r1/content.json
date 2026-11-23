@@ -1,9 +1,7 @@
 {
   "operationPointer": "/paths/~1api~1control~1api~1skills~1v1~1skills~1{skill_id}~1status/post",
   "operation": {
-    "tags": [
-      "Skills"
-    ],
+    "tags": ["Skills"],
     "summary": "Change Skill Status",
     "description": "Перевести навык в другой статус жизненного цикла; продвижение требует пройденных проверок готовности.\n\nДопустимые переходы задаёт справочник переходов. Перед продвижением все пять проверок выполняются заново по\nтекущим данным, и переход отклоняется, если хотя бы одна из них блокирует.\n\n### Параметры запроса (Fields):\n- `skill_id` - идентификатор навыка в пути, UUID версии 7.\n- `Idempotency-Key` - заголовок с UUID запроса.\n- `status` - целевой статус.\n- `expected_version` - версия навыка, которую видел клиент.\n- `reason` - причина перехода, необязательная.\n\n### Ограничения:\n- Нужно разрешение `TSAM.Skill:change_status`; вход - заголовки `X-Admin-Token` и `X-Access-Token`.\n- Проверки нужны переходам вперёд по цепочке `checking -> training -> autotest -> sandbox -> review -> whitelist\n  -> prod`. Переход `draft -> checking` и возвраты `review -> draft`, `whitelist -> review` проверок не требуют\n  и результаты не пересчитывают.\n- Решает расчёт этого запроса, а не сохранённые результаты: отсутствие результата пройденной проверкой не\n  считается. Предупреждение `semantic_conflicts` переходу не мешает.\n- При отказе статус, версия и история статусов не меняются, а пересчитанные результаты сохраняются: карточка\n  навыка покажет их с новым `checked_at`.\n- Переход в `training` и в любой статус дальше по цепочке выполняется по очереди с изменениями фраз навыков и\n  ждёт своей очереди не дольше 10 секунд. Переходы в `draft`, `checking` и `disabled` очереди не ждут.\n- Ответ - карточка навыка с `checks`.\n\n### Возможные ошибки (Errors):\n- `409 (SKILL_CHECKS_BLOCKED)` - \"Переход недоступен: есть блокирующие проверки\". В `errors` - элемент на каждую\n  блокирующую проверку в порядке их вывода: `field` - `/checks/{check_type}`, `code` - `BLOCKED`, `message` -\n  причина и место исправления.\n- `422 (VALIDATION_ERROR)` - \"Запрос не прошёл валидацию\": переход не разрешён справочником, `/status` с причиной\n  `transition from ... to ... is not allowed`; \"Ошибка валидации запроса\": нет `Idempotency-Key`, `status` или\n  `expected_version` либо `status` неизвестен.\n- `400 (INVALID_ARGUMENT)` - \"Ошибка валидации запроса\": `skill_id` не является UUID версии 7.\n- `401 (FAILED)` - \"Требуется аутентификация.\": нет заголовка `X-Admin-Token` или `X-Access-Token` либо сессия\n  недействительна.\n- `403 (FAILED)` - \"Недостаточно прав для доступа к ресурсу.\": у сотрудника нет разрешения метода.\n- `503 (FAILED)` - \"Сервис авторизации временно недоступен.\" или \"Сервис аудита временно недоступен.\".\n- `404 (NOT_FOUND)` - \"Навык {skill_id} не найден\": навыка нет или он принадлежит команде вне области доступа.\n- `409 (VERSION_CONFLICT)` - \"Объект был изменён другим пользователем\": `expected_version` устарела.\n- `409 (PHRASE_REGISTRY_BUSY)` - \"Фразы навыков сейчас изменяет другой запрос. Повторите запрос позже\":\n  переход в `training` или дальше не дождался очереди за 10 секунд; ничего не сохранено, запрос можно\n  повторить.\n- `409 (IDEMPOTENCY_KEY_REUSED)` - ключ уже использован для другого запроса.",
     "operationId": "change_skill_status_api_control_api_skills_v1_skills__skill_id__status_post",
@@ -95,10 +93,7 @@
         }
       },
       "type": "object",
-      "required": [
-        "status",
-        "expected_version"
-      ],
+      "required": ["status", "expected_version"],
       "title": "ChangeSkillStatusRequest"
     },
     "#/components/schemas/ErrorItem": {
@@ -143,9 +138,7 @@
         }
       },
       "type": "object",
-      "required": [
-        "message"
-      ],
+      "required": ["message"],
       "title": "ErrorItem",
       "description": "Одна ошибка в поле errors."
     },
@@ -167,9 +160,7 @@
     },
     "#/components/schemas/SkillAuthType": {
       "type": "string",
-      "enum": [
-        "transport_token"
-      ],
+      "enum": ["transport_token"],
       "title": "SkillAuthType"
     },
     "#/components/schemas/SkillCheckResponse": {
@@ -202,34 +193,17 @@
         }
       },
       "type": "object",
-      "required": [
-        "check_type",
-        "status",
-        "blocking",
-        "message",
-        "checked_at"
-      ],
+      "required": ["check_type", "status", "blocking", "message", "checked_at"],
       "title": "SkillCheckResponse"
     },
     "#/components/schemas/SkillCheckStatus": {
       "type": "string",
-      "enum": [
-        "passed",
-        "failed",
-        "warning",
-        "blocked"
-      ],
+      "enum": ["passed", "failed", "warning", "blocked"],
       "title": "SkillCheckStatus"
     },
     "#/components/schemas/SkillCheckType": {
       "type": "string",
-      "enum": [
-        "anketa",
-        "phrases",
-        "exact_conflicts",
-        "semantic_conflicts",
-        "endpoint"
-      ],
+      "enum": ["anketa", "phrases", "exact_conflicts", "semantic_conflicts", "endpoint"],
       "title": "SkillCheckType",
       "description": "Порядок объявления - порядок вывода проверок."
     },
@@ -273,12 +247,7 @@
         }
       },
       "type": "object",
-      "required": [
-        "key",
-        "title",
-        "type",
-        "required"
-      ],
+      "required": ["key", "title", "type", "required"],
       "title": "SkillConnectionParameterSchema"
     },
     "#/components/schemas/SkillConnectionSchema": {
@@ -328,9 +297,7 @@
         }
       },
       "type": "object",
-      "required": [
-        "auth_required"
-      ],
+      "required": ["auth_required"],
       "title": "SkillConnectionSchema"
     },
     "#/components/schemas/SkillContactResponse": {
@@ -348,11 +315,7 @@
         }
       },
       "type": "object",
-      "required": [
-        "id",
-        "name",
-        "email"
-      ],
+      "required": ["id", "name", "email"],
       "title": "SkillContactResponse"
     },
     "#/components/schemas/SkillDomainResponse": {
@@ -368,21 +331,12 @@
         }
       },
       "type": "object",
-      "required": [
-        "id",
-        "name"
-      ],
+      "required": ["id", "name"],
       "title": "SkillDomainResponse"
     },
     "#/components/schemas/SkillEntityType": {
       "type": "string",
-      "enum": [
-        "string",
-        "number",
-        "date",
-        "enum",
-        "address"
-      ],
+      "enum": ["string", "number", "date", "enum", "address"],
       "title": "SkillEntityType"
     },
     "#/components/schemas/SkillIntentEntitySchema": {
@@ -419,10 +373,7 @@
         }
       },
       "type": "object",
-      "required": [
-        "name",
-        "type"
-      ],
+      "required": ["name", "type"],
       "title": "SkillIntentEntitySchema"
     },
     "#/components/schemas/SkillIntentResponse": {
@@ -478,22 +429,12 @@
         }
       },
       "type": "object",
-      "required": [
-        "id",
-        "name",
-        "description",
-        "phrases",
-        "entities",
-        "is_active",
-        "sort_order"
-      ],
+      "required": ["id", "name", "description", "phrases", "entities", "is_active", "sort_order"],
       "title": "SkillIntentResponse"
     },
     "#/components/schemas/SkillParameterType": {
       "type": "string",
-      "enum": [
-        "select"
-      ],
+      "enum": ["select"],
       "title": "SkillParameterType"
     },
     "#/components/schemas/SkillPhraseResponse": {
@@ -521,13 +462,7 @@
         }
       },
       "type": "object",
-      "required": [
-        "text",
-        "normalized",
-        "weight",
-        "source",
-        "created_at"
-      ],
+      "required": ["text", "normalized", "weight", "source", "created_at"],
       "title": "SkillPhraseResponse"
     },
     "#/components/schemas/SkillRelatedMaterialSchema": {
@@ -542,10 +477,7 @@
         }
       },
       "type": "object",
-      "required": [
-        "title",
-        "url"
-      ],
+      "required": ["title", "url"],
       "title": "SkillRelatedMaterialSchema"
     },
     "#/components/schemas/SkillStatus": {
@@ -576,10 +508,7 @@
         }
       },
       "type": "object",
-      "required": [
-        "id",
-        "name"
-      ],
+      "required": ["id", "name"],
       "title": "SkillTeamResponse"
     },
     "#/components/schemas/SkillUserNameResponse": {
@@ -605,11 +534,7 @@
         }
       },
       "type": "object",
-      "required": [
-        "family_name",
-        "name",
-        "middle_name"
-      ],
+      "required": ["family_name", "name", "middle_name"],
       "title": "SkillUserNameResponse"
     },
     "#/components/schemas/TsamResponseSchema_SkillResponse_": {
@@ -633,11 +558,7 @@
         }
       },
       "type": "object",
-      "required": [
-        "code",
-        "data",
-        "message"
-      ],
+      "required": ["code", "data", "message"],
       "title": "TsamResponseSchema[SkillResponse]"
     },
     "#/components/schemas/ValidationError": {
@@ -673,11 +594,7 @@
         }
       },
       "type": "object",
-      "required": [
-        "loc",
-        "msg",
-        "type"
-      ],
+      "required": ["loc", "msg", "type"],
       "title": "ValidationError"
     },
     "#/components/schemas/tsam__assistant_management__skills__endpoints__http__schemas__SkillResponse": {

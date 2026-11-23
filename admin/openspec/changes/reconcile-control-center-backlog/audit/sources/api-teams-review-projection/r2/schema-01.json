@@ -17,11 +17,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "user_id",
-      "membership_role",
-      "reason"
-    ],
+    "required": ["user_id", "membership_role", "reason"],
     "title": "AddTeamMemberRequest"
   }
 }

@@ -1,6 +1,7 @@
 # MOS-1403 — observed Jira inventory
 
 ## Sources and membership
+
 Paths below are relative to the audit root; JSON locators use zero-based indices. Applied `work-items/JIRA-INVENTORY-HANDOFF.md`, which supersedes the original pending-detail dependency.
 
 - `sources/jira-hierarchy/r1/content.json`, `$.results[25]`: MOS-1403, type **Q key result**, children exactly `["MOS-1386"]`. Snapshot `$.retrievedAt`: **2026-10-16T11:08:08.629Z**. One module entry; one child occurrence, one distinct assigned member, no duplicates. MOS-1386 occurs in no other hierarchy child array.
@@ -9,9 +10,9 @@ Paths below are relative to the audit root; JSON locators use zero-based indices
 
 ## Assigned member and field coverage
 
-| Member | Summary | Type | Status | Issue updated | Exact locator |
-|---|---|---|---|---|---|
-| MOS-1386 | [B] Реализовать раздел "API" | Development task | Hold | 2026-10-15T18:08:32.599+0800 | `sources/jira-member-index/r1/content.json#/items/145` |
+| Member   | Summary                      | Type             | Status | Issue updated                | Exact locator                                          |
+| -------- | ---------------------------- | ---------------- | ------ | ---------------------------- | ------------------------------------------------------ |
+| MOS-1386 | [B] Реализовать раздел "API" | Development task | Hold   | 2026-10-15T18:08:32.599+0800 | `sources/jira-member-index/r1/content.json#/items/145` |
 
 The record contains exactly `key`, `summary`, `type`, `status`, `updated`, and `subtasks`. `subtasks` is explicitly `[]`. No `parent`, full description, attachments, comments, or custom acceptance fields are present. The member-index metadata's requested `parent` field is not evidence that this individual record contains it. Membership under MOS-1403 is evidenced by hierarchy `#/results/25/children/0`, not an independently collected member parent field.
 

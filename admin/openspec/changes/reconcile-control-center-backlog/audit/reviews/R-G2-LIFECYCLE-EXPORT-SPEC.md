@@ -16,8 +16,8 @@ Shared reading was limited to `mos-1249-feedback-api/specs/feedback-api/spec.md:
 
 **Parent-verified, not independently computed:**
 
-| Candidate | SHA-256 |
-|---|---|
+| Candidate      | SHA-256                                                            |
+| -------------- | ------------------------------------------------------------------ |
 | `spec-1256.md` | `196b0b282fb81a6b367c2308af3ba95189394e29ba514bd05da6aac637b2be0c` |
 | `spec-1260.md` | `bb36155e95097c6b3dca5feeebf899056bb4c6dc2bc7d7ec56a009e6ab425814` |
 
@@ -29,15 +29,15 @@ Paths below are relative to `openspec/changes/`. `L` means `mos-1256-feedback-li
 
 **Correct:** The candidate accounts for all 36 accepted rows. Its sole mandatory clarification is supported.
 
-| Rows | Verified coverage |
-|---|---|
-| R01–R08 | `L/design.md:27`, `L/specs/feedback-lifecycle/spec.md:9–16`, `L/tasks.md:3–4`: lookup statuses, pause/resume, disabled versus soft deletion, confirmations and no restore. No transition matrix inferred. |
-| R09–R11 | Spec lines 9, 18–21 and task 1.1 preserve explicit save/cancel and input on failure. |
-| R12 | Partial: task 1.2 names separate pending and prevents double deletion; status pending re-entry is not expressly excluded. |
+| Rows    | Verified coverage                                                                                                                                                                                                     |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| R01–R08 | `L/design.md:27`, `L/specs/feedback-lifecycle/spec.md:9–16`, `L/tasks.md:3–4`: lookup statuses, pause/resume, disabled versus soft deletion, confirmations and no restore. No transition matrix inferred.             |
+| R09–R11 | Spec lines 9, 18–21 and task 1.1 preserve explicit save/cancel and input on failure.                                                                                                                                  |
+| R12     | Partial: task 1.2 names separate pending and prevents double deletion; status pending re-entry is not expressly excluded.                                                                                             |
 | R13–R18 | Design lines 27, 35, 42; spec lines 9–16; tasks 1.2/2.3; `F/specs/feedback-api/spec.md:9,21–24`: confirmed-result refresh, no automatic retries, unknown outcomes, occupied code and deletion-related 404 boundaries. |
-| R19–R24 | `L/design.md:31`, spec lines 11, 23–31 and task 1.1 cover both entry paths, cancellation, combined PUT, preliminary-save deduplication and unchanged disabled. |
-| R25–R26 | Design lines 35–37 incorporates `F/specs/feedback-api/spec.md:26–38`, including exact update/delete permissions and owner UI responsibility. |
-| R27–R36 | Tasks 1.1/1.2 and 2.1, corresponding scenarios, and shared error/unknown-outcome clauses provide the verification obligations. Separate tasks per assertion are unnecessary. |
+| R19–R24 | `L/design.md:31`, spec lines 11, 23–31 and task 1.1 cover both entry paths, cancellation, combined PUT, preliminary-save deduplication and unchanged disabled.                                                        |
+| R25–R26 | Design lines 35–37 incorporates `F/specs/feedback-api/spec.md:26–38`, including exact update/delete permissions and owner UI responsibility.                                                                          |
+| R27–R36 | Tasks 1.1/1.2 and 2.1, corresponding scenarios, and shared error/unknown-outcome clauses provide the verification obligations. Separate tasks per assertion are unnecessary.                                          |
 
 ### Correction disposition: status pending re-entry — APPROVE
 
@@ -55,15 +55,15 @@ The candidate appropriately treats local 409 wording as optional: shared error p
 
 **Correct:** All 42 Jira rows and eight prototype rows are accounted for. The principal scope and architecture mappings are sound.
 
-| Rows | Verified coverage |
-|---|---|
-| R01, R03–R11 | `E/specs/feedback-export/spec.md:9–21`, `E/design.md:29`, tasks 1.1/2.4: actual download, unique ordered fields, entire applied selection, saved-card-only export and dirty/new-card boundaries. |
-| R02 | Field selection is covered; metadata-derived labels are not expressly covered. |
-| R12–R22 | Spec line 11 and lines 23–26, design lines 29–31, tasks 1.1/1.2: server bytes, encoding/BOM/separator, backend escaping/formula protection, metadata limit and empty/limit/malformed responses. |
-| R23–R30 | Spec line 11, design lines 31–35 and task 1.2 collectively require safe header-derived filename, error handling without false download, session isolation and URL release. See correction dispositions below. |
-| R31–R32 | Design lines 35–37, 45 and linked shared permission clauses specify read plus export; release confirmation remains open. |
-| R33–R37 | Proposal lines 9, 14; design lines 13, 31; spec line 9 preserve all stage-one exclusions and reject dialog-specific header requirements. |
-| R38–R42 | Tasks 1.1/1.2, 2.1 and 2.4 cover the named unit/component/integration obligations without requiring one task per row. |
+| Rows         | Verified coverage                                                                                                                                                                                             |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| R01, R03–R11 | `E/specs/feedback-export/spec.md:9–21`, `E/design.md:29`, tasks 1.1/2.4: actual download, unique ordered fields, entire applied selection, saved-card-only export and dirty/new-card boundaries.              |
+| R02          | Field selection is covered; metadata-derived labels are not expressly covered.                                                                                                                                |
+| R12–R22      | Spec line 11 and lines 23–26, design lines 29–31, tasks 1.1/1.2: server bytes, encoding/BOM/separator, backend escaping/formula protection, metadata limit and empty/limit/malformed responses.               |
+| R23–R30      | Spec line 11, design lines 31–35 and task 1.2 collectively require safe header-derived filename, error handling without false download, session isolation and URL release. See correction dispositions below. |
+| R31–R32      | Design lines 35–37, 45 and linked shared permission clauses specify read plus export; release confirmation remains open.                                                                                      |
+| R33–R37      | Proposal lines 9, 14; design lines 13, 31; spec line 9 preserve all stage-one exclusions and reject dialog-specific header requirements.                                                                      |
+| R38–R42      | Tasks 1.1/1.2, 2.1 and 2.4 cover the named unit/component/integration obligations without requiring one task per row.                                                                                         |
 
 ### Correction disposition: metadata labels — APPROVE
 

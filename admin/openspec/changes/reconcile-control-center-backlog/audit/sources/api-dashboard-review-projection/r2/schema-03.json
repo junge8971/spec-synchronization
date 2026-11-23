@@ -28,14 +28,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "period",
-      "sample",
-      "scope",
-      "calculated_at",
-      "series_granularity",
-      "widgets"
-    ],
+    "required": ["period", "sample", "scope", "calculated_at", "series_granularity", "widgets"],
     "title": "DashboardResponse"
   }
 }

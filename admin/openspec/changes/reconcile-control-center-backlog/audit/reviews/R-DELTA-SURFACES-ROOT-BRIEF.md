@@ -27,17 +27,17 @@ Evidence: `audit/sources/wiki-241080065-readable/r1/content.txt:51,70` says «о
 
 `A` = `openspec/changes/reconcile-control-center-backlog/audit`; `B` = `A/sources/wiki-241080065-readable/r1/content.txt`, page v1 / capture r1.
 
-| Candidate | Result |
-|---|---|
-| **DSRB-01** | **Accept.** B44 supports columns, filters and search. Saved overview metrics are correctly separated from list behavior (`surface-overview-connection:56–78`). The uninspected list owner is not declared implemented, deficient or fully audited. |
+| Candidate   | Result                                                                                                                                                                                                                                                                                    |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **DSRB-01** | **Accept.** B44 supports columns, filters and search. Saved overview metrics are correctly separated from list behavior (`surface-overview-connection:56–78`). The uninspected list owner is not declared implemented, deficient or fully audited.                                        |
 | **DSRB-02** | **Revise wording only**, as above. B17–23/51/70 supports registration and conflict intent. Registration defaults, optional atomic creation, confirmed-ID read recovery, unknown-outcome replay prohibition and minimum production selection remain intact (`surface-registration:23–78`). |
-| **DSRB-03** | **Accept.** B24–30/46 supports appearance, content and action labels without transport enums, exact placeholders or a save contract. Accepted r2/review/D-002 resolves earlier publication gaps without activating the deferred editor. |
-| **DSRB-04** | **Accept.** B27/29/46 supports production selection and composition toggles, not global skill disable or web-domain availability. Existing empty-composition editing remains distinct from registration/publication minimums (`surface-skill-selection:85–145`). |
-| **DSRB-05** | **Accept.** B9–11/47–50/83–84 supports preview, connection, overview and history intent. Server-owned code, nullable data and deferred preview/history are preserved; insertion instructions do not establish deployment or availability. |
-| **DSRB-06** | **Accept.** B31–38/52–53/82–83 genuinely contains sandbox and greeting-gate contradictions. The report correctly retains them as historical evidence, not reopened blockers, status aliases or MVP prerequisites. |
-| **DSRB-07** | **Accept.** B39–41 explicitly states hidden assistant/placeholder effects. These remain unverified source claims, distinct from skill status, global disable, link reachability and token/code revocation. |
-| **DSRB-08** | **Accept.** B43–63/72–75 supports the MUST/phase tension and optional availability/copy/import detail. No schedule fulfillment, activation or missing-feature conclusion is inferred. |
-| **DSRB-09** | **Accept.** B17/64–71/77 supports historical access, audit and latency targets. No measurement, enforcement verification, permission mapping or new admin-session policy follows. |
+| **DSRB-03** | **Accept.** B24–30/46 supports appearance, content and action labels without transport enums, exact placeholders or a save contract. Accepted r2/review/D-002 resolves earlier publication gaps without activating the deferred editor.                                                   |
+| **DSRB-04** | **Accept.** B27/29/46 supports production selection and composition toggles, not global skill disable or web-domain availability. Existing empty-composition editing remains distinct from registration/publication minimums (`surface-skill-selection:85–145`).                          |
+| **DSRB-05** | **Accept.** B9–11/47–50/83–84 supports preview, connection, overview and history intent. Server-owned code, nullable data and deferred preview/history are preserved; insertion instructions do not establish deployment or availability.                                                 |
+| **DSRB-06** | **Accept.** B31–38/52–53/82–83 genuinely contains sandbox and greeting-gate contradictions. The report correctly retains them as historical evidence, not reopened blockers, status aliases or MVP prerequisites.                                                                         |
+| **DSRB-07** | **Accept.** B39–41 explicitly states hidden assistant/placeholder effects. These remain unverified source claims, distinct from skill status, global disable, link reachability and token/code revocation.                                                                                |
+| **DSRB-08** | **Accept.** B43–63/72–75 supports the MUST/phase tension and optional availability/copy/import detail. No schedule fulfillment, activation or missing-feature conclusion is inferred.                                                                                                     |
+| **DSRB-09** | **Accept.** B17/64–71/77 supports historical access, audit and latency targets. No measurement, enforcement verification, permission mapping or new admin-session policy follows.                                                                                                         |
 
 ## Preserved critical gates
 

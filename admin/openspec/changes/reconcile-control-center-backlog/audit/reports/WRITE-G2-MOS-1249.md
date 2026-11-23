@@ -16,12 +16,12 @@ HEAD: `bc0d9800f25a90989b9c73c76f91996f8300f1d3` (matched).
 Accepted report SHA-256: `9f2ae005c83fe0d71c1d2fac32573bf4ec84efa0185a1928036724657adacebd` (matched assignment).
 Review SHA-256: `1d7f593184e863c63a266862badb3435a0ab297e32fecdbbfb352f50388e87c7`.
 
-| Artifact | Active/baseline and candidate before | Candidate after |
-|---|---|---|
-| proposal.md | `5cc397bd1aab8722961df260fbc16216069816d3fe02d2a82eab09b9e41506ac` | unchanged |
-| design.md | `0b15bcebfea15e35aca35a90c835a00efd892bb9a962fc16401892ca6017d91d` | unchanged |
-| specs/feedback-api/spec.md | `a783836ee1f191457d5331e87e2befaf809740fe39125ab302457645b9a591a3` | unchanged |
-| tasks.md | `21dbfcf3e2d71406070ee374fbb77c76955928326297ec0ca97af4690a2354dd` | `c0b8d2a4337d3c92ec0998b958b7148ad9a0da295f496290c80a03b95160daa3` |
+| Artifact                   | Active/baseline and candidate before                               | Candidate after                                                    |
+| -------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| proposal.md                | `5cc397bd1aab8722961df260fbc16216069816d3fe02d2a82eab09b9e41506ac` | unchanged                                                          |
+| design.md                  | `0b15bcebfea15e35aca35a90c835a00efd892bb9a962fc16401892ca6017d91d` | unchanged                                                          |
+| specs/feedback-api/spec.md | `a783836ee1f191457d5331e87e2befaf809740fe39125ab302457645b9a591a3` | unchanged                                                          |
+| tasks.md                   | `21dbfcf3e2d71406070ee374fbb77c76955928326297ec0ca97af4690a2354dd` | `c0b8d2a4337d3c92ec0998b958b7148ad9a0da295f496290c80a03b95160daa3` |
 
 All four active/baseline hashes match the accepted report before and after editing. Metadata copies were identical. Historical source hashes remain untouched in design. Exact replacements changed only the three authorized lines; task acceptance, release gate, credentials/role-enforcement exclusions, production exclusion, profiles and unrelated CRUD prohibition remain intact.
 
@@ -34,20 +34,20 @@ Four-artifact coherence checked: revised tasks now follow design's explicit migr
 +++ candidate/tasks.md
 @@ -1,9 +1,9 @@
  ## 1. MOS-1249 — Подключить API опросников, справочных значений и метаданных
- 
+
 -- [ ] 1.1 Проверить актуальные CRUD/OpenAPI источники из design.md и их provenance в проекте; сохранить HTML/PDF источники. Использовать уже обновлённый aggregate и standalone managed-resources, сохранив старые пути и экспортное дополнение. Проверка: разрешение всех $ref, отсутствие потери старых операций, `yarn api:generate` и `yarn api:check`.
 +- [ ] 1.1 Проверить актуальные CRUD/OpenAPI источники из design.md и их provenance в проекте; сохранить HTML/PDF источники. Использовать актуальные aggregate и standalone managed-resources, сохранив опубликованные операции, включая экспорт диалогов, и нормализацию security AND двух заголовков; не восстанавливать заменённое опубликованным контрактом локальное экспортное дополнение. Проверка: разрешение всех $ref, отсутствие потери старых операций, `yarn api:generate` и `yarn api:check`.
  - [ ] 1.2 Добавить entities/feedback с публичным API, DTO/runtime schemas и клиентами CRUD, search, lookup, metadata; использовать существующий transport. Проверка: unit-тесты путей/тел, POST→GET, полной карточки PUT, 409/422 JSON Pointer, невалидного ответа, отмены и отсутствия автоматического replay.
  - [ ] 1.3 Подключить опубликованную UI-policy ManagedResource read/create/update/delete/export через существующие mappings, сохранив session owner/generation. Проверка: unit-тест матрицы read-only principal и запрещённых actions; server 403 и поздний ответ другой сессии; фактические маршруты/скрытие элементов проверяются в changes владельцев UI; request ACL не появляется.
 -- [ ] 1.4 Добавить контрактные feedback/lookup/metadata handlers и fixtures в существующий Express, без credentials/role enforcement и без production-включения. Проверка: mock HTTP-тест успешного создания/чтения и конфликтов; existing session profiles/fixed-error механизмы сохраняются.
 +- [ ] 1.4 Проверить и при необходимости дополнить существующие контрактные feedback/lookup/metadata handlers и fixtures в существующем Express, без credentials/role enforcement и без production-включения. Проверка: mock HTTP-тест успешного создания/чтения и конфликтов; existing session profiles/fixed-error механизмы сохраняются.
- 
+
  ## 2. Приёмка подзадачи
- 
+
 @@ -11,4 +11,4 @@
  - [ ] 2.2 Выполнить `yarn typecheck`, `yarn lint`, `yarn test`, `yarn format:check`; при изменении API-типов — `yarn api:check`, при изменении сборки — `yarn build`. Проверка: записать реальные результаты; environment failures не считать успехом.
  - [ ] 2.3 Перед выпуском проверить реальные CRUD/search/lookup/metadata, envelope ошибок/null, MPMM и глобальный scope. Проверка: конкретные результаты согласованных HTTP-проверок либо подтверждение владельца стенда без секретов. При отсутствии evidence gate оставить открытым.
- 
+
 -Актуальный источник уже включён в aggregate change `update-control-center-contracts-put`; проверять его согласованность, не возвращать старую выгрузку. При реализации feedback handlers удалить соответствующие операции из явного unavailable-перечня. Остальные CRUD-разделы не реализовывать в этой задаче.
 +Актуальный источник уже включён в aggregate change `update-control-center-api-contracts`; проверять его согласованность, не возвращать старую выгрузку. Проверить и переиспользовать существующие feedback handlers, добавляя только необходимые feedback-specific fixtures, валидацию и тесты; не восстанавливать прежний общий unavailable-перечень. Остальные CRUD-разделы не реализовывать в этой задаче.
 ```

@@ -18,11 +18,11 @@ Exact root abbreviations below expand literally: `C = openspec/changes/reconcile
 
 ## Key Code — clause/source/decision mappings
 
-| Candidate clause (baseline locator) | Exact evidence and disposition |
-|---|---|
+| Candidate clause (baseline locator)                                                                                                                                                         | Exact evidence and disposition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `O/design.md:29`, `O/specs/feedback-questions/spec.md:11`: any new choice, including changing an existing question, active-only; unchanged saved inactive type remains editable/reorderable | REQ ID27, with retained IDs25–26 (`A/reports/REQ-G2-MOS-1254.md:75–77`); primary locator `A/sources/jira-feedback/r1/content.json:57`, `/items/5/description`, AC5, as accepted in `A/reviews/R-REQ-G2-MOS-1254.md:25`. Corrected SPEC section “Inactive selection”; original review `A/reviews/R-SPEC-G2-MOS-1254.md:14`. Accepted API requirement-join Q25–29/Q06 cites `docs/api/contracts/crud-api.md:223–239` for new inactive vs unchanged saved references. D-065 and D-067 authorize this narrow clarification. |
-| New scenario after `O/specs/feedback-questions/spec.md:21`: parent-save nested 409 or 422 points to relevant question/option, preserves all draft input, parent retains submit ownership | REQ IDs32–33 (`A/reports/REQ-G2-MOS-1254.md:82–83`), primary Jira AC6 at the same source locator; original SPEC review `A/reviews/R-SPEC-G2-MOS-1254.md:7,15,20` requires behavior, not fixture/algorithm. Accepted API Q32–33 join cites CRUD1199–1280, with formal 422/envelope divergence; API review lines16–17 preserves that limit. D-065–067 support scenario without inventing wire grammar, option-specific server guarantees or Q1 policy. |
-| Existing tasks1.1 and2.1 verification (`O/tasks.md:3,8`) | ID27 verification and ID34 unit/component obligation (`A/reports/REQ-G2-MOS-1254.md:77,84`), constrained by IDs32–33 and original SPEC review lines7,14–15,20. D-067: minimum existing-task verification only, all five checkboxes remain unchecked. No new test family, fixture or mock task. |
+| New scenario after `O/specs/feedback-questions/spec.md:21`: parent-save nested 409 or 422 points to relevant question/option, preserves all draft input, parent retains submit ownership    | REQ IDs32–33 (`A/reports/REQ-G2-MOS-1254.md:82–83`), primary Jira AC6 at the same source locator; original SPEC review `A/reviews/R-SPEC-G2-MOS-1254.md:7,15,20` requires behavior, not fixture/algorithm. Accepted API Q32–33 join cites CRUD1199–1280, with formal 422/envelope divergence; API review lines16–17 preserves that limit. D-065–067 support scenario without inventing wire grammar, option-specific server guarantees or Q1 policy.                                                                    |
+| Existing tasks1.1 and2.1 verification (`O/tasks.md:3,8`)                                                                                                                                    | ID27 verification and ID34 unit/component obligation (`A/reports/REQ-G2-MOS-1254.md:77,84`), constrained by IDs32–33 and original SPEC review lines7,14–15,20. D-067: minimum existing-task verification only, all five checkboxes remain unchecked. No new test family, fixture or mock task.                                                                                                                                                                                                                          |
 
 D-066 resolves method authority to existing published PUT; this candidate leaves PUT untouched. UUID/FK rules already covered are not repeated. Opaque-options policy, cancel/undo, answer API, preview ownership, permissions and mock enforcement remain unchanged.
 
@@ -30,11 +30,11 @@ D-066 resolves method authority to existing published PUT; this candidate leaves
 
 Computed directly from current repository bytes; all three match the owner baselines recorded in the accepted evidence. Hashes are not source-freshness or deployment attestations.
 
-| Target | SHA-256 |
-|---|---|
-| `openspec/changes/mos-1254-feedback-questions/design.md` | `181f2800f8e8f359147ef9c9d3a6eb4f3d4daafa20324dd3b8e1cf0c23d54e10` |
+| Target                                                                          | SHA-256                                                            |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `openspec/changes/mos-1254-feedback-questions/design.md`                        | `181f2800f8e8f359147ef9c9d3a6eb4f3d4daafa20324dd3b8e1cf0c23d54e10` |
 | `openspec/changes/mos-1254-feedback-questions/specs/feedback-questions/spec.md` | `eeb2d92c74667f09a97d933390176b2771d39a1596a4f0c21cf0e23e39c9d27c` |
-| `openspec/changes/mos-1254-feedback-questions/tasks.md` | `2920f54aba3994e856679db78d4706c553e7a97be0c17d420643b7f3d72fba65` |
+| `openspec/changes/mos-1254-feedback-questions/tasks.md`                         | `2920f54aba3994e856679db78d4706c553e7a97be0c17d420643b7f3d72fba65` |
 
 ## Minimal unified diff
 
@@ -42,48 +42,48 @@ Computed directly from current repository bytes; all three match the owner basel
 --- a/openspec/changes/mos-1254-feedback-questions/design.md
 +++ b/openspec/changes/mos-1254-feedback-questions/design.md
 @@ -26,7 +26,7 @@
- 
+
  ### Implementation decisions
- 
+
 -До 100 вопросов и 100 вариантов на вопрос; title 1–500, option.text 1–255. Для tags минимум один вариант, другие типы не содержат вариантов. Смена типа с потерей вариантов требует явного подтверждения, перемещение сохраняет идентичность. Новые вопросы нельзя создавать с неактивным типом; существующие можно править/переставлять без смены типа. Неизвестный backend type отображается с предупреждением и сохраняется без подмены; интерактивный preview такого вопроса недоступен.
 +До 100 вопросов и 100 вариантов на вопрос; title 1–500, option.text 1–255. Для tags минимум один вариант, другие типы не содержат вариантов. Смена типа с потерей вариантов требует явного подтверждения, перемещение сохраняет идентичность. Любой новый выбор типа, включая смену типа существующего вопроса, ограничен активными типами; сохранённый неактивный тип допускает правку/перестановку вопроса без смены типа. Неизвестный backend type отображается с предупреждением и сохраняется без подмены; интерактивный preview такого вопроса недоступен.
- 
+
  PUT частичен только сверху: questions, surface_ids заменяются целиком; display_rules передаётся полным итоговым объектом. Existing question/option UUID сохраняются, новые ID генерирует backend, порядок задаётся массивом. Не отправлять sort_order, timestamps, FK, локальные ключи и ответное display_rules.id. Не отправлять пустой PUT. Явные null допустимы только для очищаемых nullable полей по бизнес-правилам; не считать все nullable из OpenAPI разрешёнными к очистке.
- 
+
 --- a/openspec/changes/mos-1254-feedback-questions/specs/feedback-questions/spec.md
 +++ b/openspec/changes/mos-1254-feedback-questions/specs/feedback-questions/spec.md
 @@ -8,7 +8,7 @@
- 
+
  Конструктор SHALL поддерживать stars, tags, text, boolean, scale, nps, emoji, изменение заголовка/типа/required, добавление, удаление и порядок вопросов/вариантов. Порядок SHALL изменяться перетаскиванием и доступными клавиатурными действиями. Лимиты SHALL быть 100 вопросов, 100 вариантов на вопрос, title 1–500, option.text 1–255. tags SHALL иметь минимум один вариант; остальные типы MUST NOT отправлять непустые options. Смена типа, удаляющая варианты, SHALL требовать подтверждения.
- 
+
 -PUT questions SHALL содержать полный итоговый массив с сохранёнными UUID существующих элементов и без ID новых. sort_order MUST NOT отправляться. Existing inactive type SHALL допускать изменение/перестановку без смены типа, новые вопросы с ним MUST NOT создаваться. Неизвестный type SHALL сохраняться без подмены и иметь явное ограничение preview.
 +PUT questions SHALL содержать полный итоговый массив с сохранёнными UUID существующих элементов и без ID новых. sort_order MUST NOT отправляться. Existing inactive type SHALL допускать изменение/перестановку без смены типа. Любой новый выбор типа, включая смену типа существующего вопроса, SHALL быть ограничен активными типами. Неизвестный type SHALL сохраняться без подмены и иметь явное ограничение preview.
- 
+
  #### Scenario: Reorder without identity loss
- 
+
 @@ -20,6 +20,11 @@
  - **WHEN** у вопроса tags удалён последний вариант
  - **THEN** сохранение не объявляется успешным, ошибка доступна рядом с вопросом и введённый текст остаётся
- 
+
 +#### Scenario: Nested errors on parent save
 +
 +- **WHEN** сохранение родительской карточки возвращает вложенную ошибку 409 или 422 для вопроса или варианта
 +- **THEN** ошибка SHALL отображаться у соответствующего вопроса или варианта, весь введённый draft SHALL сохраняться; отправка остаётся ответственностью родительского редактора
 +
  ### Requirement: Accessible questions interactions
- 
+
  Область этой задачи — вопросы, варианты и их перестановка — SHALL поддерживать клавиатуру, доступные названия/ошибки, предсказуемый фокус и узкую компоновку. Приёмка SHALL проверять собственные элементы; реализация и приёмка соседних UI-возможностей MUST NOT требоваться для закрытия этой задачи сверх явно указанных зависимостей интеграции. Недоступные API MUST NOT имитироваться успешными заглушками.
 --- a/openspec/changes/mos-1254-feedback-questions/tasks.md
 +++ b/openspec/changes/mos-1254-feedback-questions/tasks.md
 @@ -1,10 +1,10 @@
  ## 1. MOS-1254 — Реализовать конструктор вопросов и вариантов
- 
+
 -- [ ] 1.1 На foundation MOS-1251 (task 1.1) реализовать семь типов, title/required, добавление/удаление и варианты tags; контент не рендерить через HTML. Проверка: лимиты 100 вопросов/100 вариантов, 500/255 символов, пустые tags options, inactive/unknown type и подтверждение потери вариантов при смене типа.
 +- [ ] 1.1 На foundation MOS-1251 (task 1.1) реализовать семь типов, title/required, добавление/удаление и варианты tags; контент не рендерить через HTML. Проверка: лимиты 100 вопросов/100 вариантов, 500/255 символов, пустые tags options, inactive/unknown type, активность любого нового выбора типа (в том числе при смене типа существующего вопроса), правка/перестановка с сохранением неактивного типа и подтверждение потери вариантов при смене типа.
  - [ ] 1.2 Добавить drag-and-drop и клавиатурное перемещение, сериализацию полного массива с исходными ID и без ID новых/sort_order. Проверка: перестановка вопроса/варианта сохраняет идентичность, удаление отражается в payload, повторный GET воспроизводит порядок.
- 
+
  ## 2. Приёмка подзадачи
- 
+
 -- [ ] 2.1 Проверить FSD/public APIs, размещение declarations, доступность клавиатуры/ошибок/фокуса в затронутом UI и отсутствие небезопасного HTML/production mocks. Проверка: diff review и целевые unit/component-тесты, без browser/E2E.
 +- [ ] 2.1 Проверить FSD/public APIs, размещение declarations, доступность клавиатуры/ошибок/фокуса в затронутом UI и отсутствие небезопасного HTML/production mocks. Проверка: diff review и целевые unit/component-тесты, включая вложенные 409/422 при родительском сохранении: ошибка у соответствующего вопроса/варианта и сохранение всего введённого draft; без browser/E2E.
  - [ ] 2.2 Выполнить `yarn typecheck`, `yarn lint`, `yarn test`, `yarn format:check`; при изменении API-типов — `yarn api:check`, при изменении сборки — `yarn build`. Проверка: записать реальные результаты; environment failures не считать успехом.

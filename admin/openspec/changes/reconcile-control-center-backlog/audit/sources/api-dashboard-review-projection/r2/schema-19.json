@@ -2,11 +2,7 @@
   "pointer": "#/components/schemas/ScopeKind",
   "value": {
     "type": "string",
-    "enum": [
-      "all",
-      "team_skills",
-      "surface"
-    ],
+    "enum": ["all", "team_skills", "surface"],
     "title": "ScopeKind"
   }
 }

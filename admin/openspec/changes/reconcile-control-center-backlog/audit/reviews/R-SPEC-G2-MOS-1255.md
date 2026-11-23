@@ -32,19 +32,19 @@ Documented flow only: MOS-1251 foundation draft â†’ MOS-1254 questions/options â
 
 Whole-file SHA-256 recomputed locally; all owner, REQ/review and primary-source digests match the reviewed report. HEAD `bc0d9800f25a90989b9c73c76f91996f8300f1d3`; staged-path inspection empty.
 
-| Input | SHA-256 |
-|---|---|
-| `A/reports/SPEC-G2-MOS-1255.md` | `0487438ca9dfae7b512c996439095254bcbf9e3a1d9ec5ba83e5d3f5f70d36a6` |
-| `A/reports/REQ-G2-MOS-1255.md` | `61207d52e321907edca1799a165a3e26ead9ea9b372395cb7100ffe12e65a065` |
-| `A/reviews/R-REQ-G2-MOS-1255.md` | `c76592a768b0a70167499572b97e638e803beca1583866748554e1c441b9a554` |
-| `O/proposal.md` | `5dffd3459e0cd0958fcfedc239878faa4e06c5a1f08c55565bcce59b0268e0a1` |
-| `O/design.md` | `1d2766da0fa4246267b6a42e35e503788f668eda21b496504ac7e53b66085153` |
-| `O/tasks.md` | `311d06349f6bf1781845fe300af6cbb6df900c77120899a673a194c77583b12b` |
-| `O/specs/feedback-preview/spec.md` | `8917ec33bc3768a3a0616a95ecd6719894e4bc3f659c87779ce1cde17a132a51` |
-| `A/sources/jira-feedback/r1/content.json` | `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685` |
+| Input                                      | SHA-256                                                            |
+| ------------------------------------------ | ------------------------------------------------------------------ |
+| `A/reports/SPEC-G2-MOS-1255.md`            | `0487438ca9dfae7b512c996439095254bcbf9e3a1d9ec5ba83e5d3f5f70d36a6` |
+| `A/reports/REQ-G2-MOS-1255.md`             | `61207d52e321907edca1799a165a3e26ead9ea9b372395cb7100ffe12e65a065` |
+| `A/reviews/R-REQ-G2-MOS-1255.md`           | `c76592a768b0a70167499572b97e638e803beca1583866748554e1c441b9a554` |
+| `O/proposal.md`                            | `5dffd3459e0cd0958fcfedc239878faa4e06c5a1f08c55565bcce59b0268e0a1` |
+| `O/design.md`                              | `1d2766da0fa4246267b6a42e35e503788f668eda21b496504ac7e53b66085153` |
+| `O/tasks.md`                               | `311d06349f6bf1781845fe300af6cbb6df900c77120899a673a194c77583b12b` |
+| `O/specs/feedback-preview/spec.md`         | `8917ec33bc3768a3a0616a95ecd6719894e4bc3f659c87779ce1cde17a132a51` |
+| `A/sources/jira-feedback/r1/content.json`  | `890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685` |
 | `A/sources/wiki-247734813/r1/content.json` | `d47db6bfc15f5f4a881c777ec78892161ed6be000c6cdf1c5c61ab4c7030c7d7` |
-| `A/work-items/R-G2-FEEDBACK-SPEC-WAVE.md` | `1194ceddd98f926755ba5995273b6f9c7abba7aee5d7194fbe70782ac53abfc2` |
-| `A/work-items/G2-FEEDBACK-SPEC-WAVE.md` | `e48969c1d6c09998909c400db7cb138839cf384cb3d8e6595c9e1e4e35e6419e` |
+| `A/work-items/R-G2-FEEDBACK-SPEC-WAVE.md`  | `1194ceddd98f926755ba5995273b6f9c7abba7aee5d7194fbe70782ac53abfc2` |
+| `A/work-items/G2-FEEDBACK-SPEC-WAVE.md`    | `e48969c1d6c09998909c400db7cb138839cf384cb3d8e6595c9e1e4e35e6419e` |
 
 ## Start Here
 

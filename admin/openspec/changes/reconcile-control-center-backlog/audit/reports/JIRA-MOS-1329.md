@@ -4,22 +4,22 @@
 
 Inventory only, applying `work-items/JIRA-MOS-1329.md` and the superseding `work-items/JIRA-INVENTORY-HANDOFF.md`. Paths below are relative to the audit root; JSON array locators are zero-based.
 
-| Saved source | Retrieval timestamp | Exact relevant locator |
-| --- | --- | --- |
-| `sources/jira-hierarchy/r1/content.json` | `2026-10-16T11:08:08.629Z` | `$.results[23]`; caveats at `$.method`, `$.classification`, `$.pagination` |
-| `sources/jira-member-index/r1/content.json` | `2026-10-16T11:20:38.570Z` | `$.items[142]`, `$.items[143]` |
-| `sources/jira-member-index/r1/metadata.json` | `2026-10-16T11:20:38.570Z` | `$.fields`, `$.limitations` |
-| `sources/jira-subtasks/r1/content.json` | `2026-10-16T11:23:01.951Z` | `$.items[*].parent` (all 16 records checked for assigned-parent matches) |
-| `sources/jira-subtasks/r1/metadata.json` | `2026-10-16T11:23:01.951Z` | `$.limitations` |
+| Saved source                                 | Retrieval timestamp        | Exact relevant locator                                                     |
+| -------------------------------------------- | -------------------------- | -------------------------------------------------------------------------- |
+| `sources/jira-hierarchy/r1/content.json`     | `2026-10-16T11:08:08.629Z` | `$.results[23]`; caveats at `$.method`, `$.classification`, `$.pagination` |
+| `sources/jira-member-index/r1/content.json`  | `2026-10-16T11:20:38.570Z` | `$.items[142]`, `$.items[143]`                                             |
+| `sources/jira-member-index/r1/metadata.json` | `2026-10-16T11:20:38.570Z` | `$.fields`, `$.limitations`                                                |
+| `sources/jira-subtasks/r1/content.json`      | `2026-10-16T11:23:01.951Z` | `$.items[*].parent` (all 16 records checked for assigned-parent matches)   |
+| `sources/jira-subtasks/r1/metadata.json`     | `2026-10-16T11:23:01.951Z` | `$.limitations`                                                            |
 
 ## Observed membership and multiplicities
 
 `$.results[23]` records MOS-1329 as `Q key result`, with children `["MOS-1323", "MOS-1384"]`. The module entry occurs once. Both members occur once in its children, once across the saved hierarchy children, and once in the member index. No duplicate, missing assigned member, conflicting hierarchy membership, or additional module-associated record was observed. Other modules' index records are outside this inventory, not extras.
 
-| Member | Hierarchy locator | Index locator | Observed type | Observed status | Issue update timestamp |
-| --- | --- | --- | --- | --- | --- |
-| MOS-1323 | `$.results[23].children[0]` | `$.items[142]` | Development task | Hold | `2026-10-14T14:03:53.543+0800` |
-| MOS-1384 | `$.results[23].children[1]` | `$.items[143]` | Development task | Review | `2026-10-15T18:18:14.860+0800` |
+| Member   | Hierarchy locator           | Index locator  | Observed type    | Observed status | Issue update timestamp         |
+| -------- | --------------------------- | -------------- | ---------------- | --------------- | ------------------------------ |
+| MOS-1323 | `$.results[23].children[0]` | `$.items[142]` | Development task | Hold            | `2026-10-14T14:03:53.543+0800` |
+| MOS-1384 | `$.results[23].children[1]` | `$.items[143]` | Development task | Review          | `2026-10-15T18:18:14.860+0800` |
 
 Both index records contain `key`, `summary`, `type`, `status`, `updated`, and `subtasks`; neither contains a `parent` field. Their module membership is evidenced by the hierarchy, not an index parent link. MOS-1329 itself has no issue object in the inspected member-index or subtask packets; its hierarchy entry is not a full parent issue collection.
 

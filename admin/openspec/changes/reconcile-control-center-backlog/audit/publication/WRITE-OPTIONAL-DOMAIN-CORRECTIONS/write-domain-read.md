@@ -19,12 +19,12 @@ Source `openspec/specs/skill-domain-management/spec.md`, before and after: `b5f3
 
 All package output hashes (relative to the change root):
 
-| File | SHA256 |
-| --- | --- |
-| `.openspec.yaml` | `ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b` |
-| `proposal.md` | `d3f3e440314acbdf5e0871b0431422b790886e2db77b354de190d928218c970c` |
-| `design.md` | `8b62c36d86fb8c4fd86f6d8aa886d6067660349f8c68f796ae4287ac7b8e0d91` |
-| `tasks.md` | `5d00d6e69c1d754139b1e12bec759dede78c034c643f129f8a4bc12138f93404` |
+| File                                    | SHA256                                                             |
+| --------------------------------------- | ------------------------------------------------------------------ |
+| `.openspec.yaml`                        | `ff4326f8b42dcf8851877f4f3989c7fecb8f97d8154686d7d74b7281b70e6b9b` |
+| `proposal.md`                           | `d3f3e440314acbdf5e0871b0431422b790886e2db77b354de190d928218c970c` |
+| `design.md`                             | `8b62c36d86fb8c4fd86f6d8aa886d6067660349f8c68f796ae4287ac7b8e0d91` |
+| `tasks.md`                              | `5d00d6e69c1d754139b1e12bec759dede78c034c643f129f8a4bc12138f93404` |
 | `specs/skill-domain-management/spec.md` | `9cd7ec1d67bbd106d851f5cfd1bce5b4c6baf5af64c319622e32b181a8dd9f95` |
 
 ## Residual risks

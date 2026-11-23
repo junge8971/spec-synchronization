@@ -30,15 +30,16 @@ Repository-relative paths; complete textual reads unless marked selective. Ident
 
 HEAD matched `bc0d9800f25a90989b9c73c76f91996f8300f1d3`. Independently enumerated all three directories: exactly `.openspec.yaml`, `proposal.md`, `design.md`, `tasks.md`, `specs/feedback-api/spec.md`; no extra candidate files. SHA-256 of actual bytes:
 
-| File | Active = baseline | Candidate |
-|---|---|---|
-| proposal.md | `5cc397bd1aab8722961df260fbc16216069816d3fe02d2a82eab09b9e41506ac` | identical |
-| design.md | `0b15bcebfea15e35aca35a90c835a00efd892bb9a962fc16401892ca6017d91d` | identical |
-| specs/feedback-api/spec.md | `a783836ee1f191457d5331e87e2befaf809740fe39125ab302457645b9a591a3` | identical |
-| tasks.md | `21dbfcf3e2d71406070ee374fbb77c76955928326297ec0ca97af4690a2354dd` | `c0b8d2a4337d3c92ec0998b958b7148ad9a0da295f496290c80a03b95160daa3` |
-| .openspec.yaml | `1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9` | identical |
+| File                       | Active = baseline                                                  | Candidate                                                          |
+| -------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| proposal.md                | `5cc397bd1aab8722961df260fbc16216069816d3fe02d2a82eab09b9e41506ac` | identical                                                          |
+| design.md                  | `0b15bcebfea15e35aca35a90c835a00efd892bb9a962fc16401892ca6017d91d` | identical                                                          |
+| specs/feedback-api/spec.md | `a783836ee1f191457d5331e87e2befaf809740fe39125ab302457645b9a591a3` | identical                                                          |
+| tasks.md                   | `21dbfcf3e2d71406070ee374fbb77c76955928326297ec0ca97af4690a2354dd` | `c0b8d2a4337d3c92ec0998b958b7148ad9a0da295f496290c80a03b95160daa3` |
+| .openspec.yaml             | `1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9` | identical                                                          |
 
 All assigned target and accepted report/review hash expectations matched. Additional input fingerprints:
+
 - SPEC report: `9f2ae005c83fe0d71c1d2fac32573bf4ec84efa0185a1928036724657adacebd`.
 - Accepted SPEC review: `1d7f593184e863c63a266862badb3435a0ab297e32fecdbbfb352f50388e87c7`.
 - Evaluated writer report: `7d58e04c74bbbc419003e93abb74163c661d6e9ee142581e3bce800b962aa866`.

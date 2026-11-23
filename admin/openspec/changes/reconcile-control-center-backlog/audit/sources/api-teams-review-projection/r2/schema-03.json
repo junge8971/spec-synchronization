@@ -42,9 +42,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "message"
-    ],
+    "required": ["message"],
     "title": "ErrorItem",
     "description": "Одна ошибка в поле errors."
   }

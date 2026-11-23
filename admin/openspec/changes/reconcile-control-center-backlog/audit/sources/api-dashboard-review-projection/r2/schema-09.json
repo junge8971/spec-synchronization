@@ -35,13 +35,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "widget_id",
-      "type",
-      "title",
-      "subtitle",
-      "error"
-    ],
+    "required": ["widget_id", "type", "title", "subtitle", "error"],
     "title": "FailedWidgetResponse"
   }
 }

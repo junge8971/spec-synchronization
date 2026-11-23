@@ -58,13 +58,13 @@ Read-only JSON comparison inspected the module section of:
 
 Let `B=/api/control/api/assistant-modules/v1/modules`.
 
-| Operation | Current standalone versus merged | Current versus saved r1 operation |
-|---|---|---|
-| GET B | Equal | Only `security` differs |
-| GET B/summary | Equal | Only `security` differs |
-| GET B/preview | Equal | Only `security` differs |
-| POST B/{module_id}/disable | Equal | Only `security` differs |
-| POST B/{module_id}/enable | Equal | Only `security` differs |
+| Operation                  | Current standalone versus merged | Current versus saved r1 operation |
+| -------------------------- | -------------------------------- | --------------------------------- |
+| GET B                      | Equal                            | Only `security` differs           |
+| GET B/summary              | Equal                            | Only `security` differs           |
+| GET B/preview              | Equal                            | Only `security` differs           |
+| POST B/{module_id}/disable | Equal                            | Only `security` differs           |
+| POST B/{module_id}/enable  | Equal                            | Only `security` differs           |
 
 All **26 schemas present in the standalone module document** equal their corresponding schemas in both the current merged contract and saved r1 document.
 
@@ -107,16 +107,16 @@ This corroborates existing local wiring evidence. It does **not** establish depl
 
 ## Expected / observed / unknown
 
-| Expected from MOS-717 | Observed current evidence | Unknown / boundary |
-|---|---|---|
-| Contract for module list with state, eligibility, message and last change | `ModuleResponse` and GET B; supplemental document **Модуль и мутации**; list handler `:4–14` | Backend data completeness and accessible-object filtering |
-| Enable/disable contracts | Required request bodies reference `EnableModuleRequest` / `DisableModuleRequest`; both require expected_version | Business interpretation of “no additional input” does not remove concurrency input |
-| Nonempty disable user text and confirmation of consequences | Schema requires only expected_version; message defaults empty and confirmation false. Local handler stores empty text and requires confirmation only with nonempty impact text | Backend business validation; no inference that production permits weaker inputs |
-| Disable eligibility enforced | Handler `:53–57` rejects `disable_allowed=false`; tests `:225–235` assert protected-module conflict | Production enforcement; no name-based core/classifier policy inferred |
-| Changes reflected globally | One local collection drives list/summary/preview | Real propagation across surfaces, assistant responses and durable backend persistence |
-| Last-change information | Handler `:65–73` sets timestamp and fixed fixture actor; tests `:145–150` assert metadata | Actual authenticated actor provenance; fixture actor is not visitor identity |
-| Request/response/error documentation | Current docs and schema provide wire shapes; historical wiki examples remain prior accepted evidence | Approval/completeness of examples and business-error semantics are not established by local shape parity |
-| Rejected writes preserve state | Handler rejects before mutation; tests `:182–246` assert errors and unchanged collection/views | Concurrent backend transactions and deployed error envelopes |
+| Expected from MOS-717                                                     | Observed current evidence                                                                                                                                                      | Unknown / boundary                                                                                       |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| Contract for module list with state, eligibility, message and last change | `ModuleResponse` and GET B; supplemental document **Модуль и мутации**; list handler `:4–14`                                                                                   | Backend data completeness and accessible-object filtering                                                |
+| Enable/disable contracts                                                  | Required request bodies reference `EnableModuleRequest` / `DisableModuleRequest`; both require expected_version                                                                | Business interpretation of “no additional input” does not remove concurrency input                       |
+| Nonempty disable user text and confirmation of consequences               | Schema requires only expected_version; message defaults empty and confirmation false. Local handler stores empty text and requires confirmation only with nonempty impact text | Backend business validation; no inference that production permits weaker inputs                          |
+| Disable eligibility enforced                                              | Handler `:53–57` rejects `disable_allowed=false`; tests `:225–235` assert protected-module conflict                                                                            | Production enforcement; no name-based core/classifier policy inferred                                    |
+| Changes reflected globally                                                | One local collection drives list/summary/preview                                                                                                                               | Real propagation across surfaces, assistant responses and durable backend persistence                    |
+| Last-change information                                                   | Handler `:65–73` sets timestamp and fixed fixture actor; tests `:145–150` assert metadata                                                                                      | Actual authenticated actor provenance; fixture actor is not visitor identity                             |
+| Request/response/error documentation                                      | Current docs and schema provide wire shapes; historical wiki examples remain prior accepted evidence                                                                           | Approval/completeness of examples and business-error semantics are not established by local shape parity |
+| Rejected writes preserve state                                            | Handler rejects before mutation; tests `:182–246` assert errors and unchanged collection/views                                                                                 | Concurrent backend transactions and deployed error envelopes                                             |
 
 Normative local owner: `openspec/specs/control-center-mock-server/spec.md:138–191`. Its `:161` expressly owns the weaker local message/confirmation and repeated-transition conventions. Its `:193–219` owns merged/standalone consistency and security normalization.
 
@@ -135,38 +135,38 @@ These assertions validate the intended **local** model if executed successfully;
 
 ## Bounded candidate dispositions
 
-| Disposition | Candidate |
-|---|---|
-| **Keep** | MOS-717 remains analytically P. Preserve historical CLOSED/«Неактуально» attribution without treating it as backend delivery or current status. |
-| **Update** | Add exact current-contract evidence: all five standalone path objects equal merged equivalents; all 26 standalone schemas equal merged and saved r1 equivalents; operation differences from r1 are limited to the accepted security normalization. |
-| **Update** | Attach `docs/api/contracts/assistant-modules.md` as existing supplemental ownership explicitly documenting undeclared business semantics and mock/backend separation. Avoid a duplicate “missing documentation” task. |
-| **Question — existing** | What does «Неактуально» retire, and which approved module contract governs nonempty message, confirmation, transition/error and global-effect semantics? No policy selected here. |
-| **New task — none** | No new implementation plan, frontend audit, scheduler, auth model or backend-delivery claim is justified by this bounded evidence. |
-| **Publication — none** | Parent alone accepts and queues candidates. No register or publication artifact was modified. |
+| Disposition             | Candidate                                                                                                                                                                                                                                          |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Keep**                | MOS-717 remains analytically P. Preserve historical CLOSED/«Неактуально» attribution without treating it as backend delivery or current status.                                                                                                    |
+| **Update**              | Add exact current-contract evidence: all five standalone path objects equal merged equivalents; all 26 standalone schemas equal merged and saved r1 equivalents; operation differences from r1 are limited to the accepted security normalization. |
+| **Update**              | Attach `docs/api/contracts/assistant-modules.md` as existing supplemental ownership explicitly documenting undeclared business semantics and mock/backend separation. Avoid a duplicate “missing documentation” task.                              |
+| **Question — existing** | What does «Неактуально» retire, and which approved module contract governs nonempty message, confirmation, transition/error and global-effect semantics? No policy selected here.                                                                  |
+| **New task — none**     | No new implementation plan, frontend audit, scheduler, auth model or backend-delivery claim is justified by this bounded evidence.                                                                                                                 |
+| **Publication — none**  | Parent alone accepts and queues candidates. No register or publication artifact was modified.                                                                                                                                                      |
 
 ## Input fingerprints
 
 SHA-256 recomputed from local bytes:
 
-| Input | SHA-256 |
-|---|---|
-| `A/work-items/WAVE-D094-LOCAL-EIGHT.md` | `da5e3681c7b882ef8fc6a44a50e7dd8562068f43ac4a74c71a8f5b82e61fd0e0` |
-| `A/reports/SCENARIO-MOS-920.md` | `d1587adf7b366f8c03ac97197f978ca7fab114515d47fb9c80d32571ecfe9883` |
-| `A/reviews/R-SCENARIO-MOS-920.md` | `d1efb5f0b29510b6961d04185899c5b92532ff636ee24db3edf18824d8de11a9` |
-| `A/reports/IMPL-MOS-920.md` | `c998eae5e2c76d79393acf6b0668f2afcaaffdb1750ef82db361bf6ea2c9ce57` |
-| `A/reviews/R-D093-EIGHT.md` | `aee6c464b24662ed9e5396e382ca2e35a3add12ffe47a6c452178f847084e2bc` |
-| `A/decisions.md` | `dbf814a620a9ee1ff1435e912db50efb4672c3e40712f684855a14cc91df796e` |
-| Jira operations r1 `content.json` | `ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f` |
-| Jira operations r1 `metadata.json` | `73e55adae262fba4222f1a701fe3152b001503ff5c0b3c10988a65bc575bbf8e` |
-| Wiki 241088180 r1 `content.json` | `e1d5f5320e05d1e65354f2523341cab788adfacac8ac5acf6aaabf31003c18fc` |
-| API-live r1 `content.json` | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
-| `docs/api/contracts/assistant-modules.md` | `07390fd25dcba4be87387af11a60116a6709afcd559d9214908c2e1945fe4933` |
+| Input                                               | SHA-256                                                            |
+| --------------------------------------------------- | ------------------------------------------------------------------ |
+| `A/work-items/WAVE-D094-LOCAL-EIGHT.md`             | `da5e3681c7b882ef8fc6a44a50e7dd8562068f43ac4a74c71a8f5b82e61fd0e0` |
+| `A/reports/SCENARIO-MOS-920.md`                     | `d1587adf7b366f8c03ac97197f978ca7fab114515d47fb9c80d32571ecfe9883` |
+| `A/reviews/R-SCENARIO-MOS-920.md`                   | `d1efb5f0b29510b6961d04185899c5b92532ff636ee24db3edf18824d8de11a9` |
+| `A/reports/IMPL-MOS-920.md`                         | `c998eae5e2c76d79393acf6b0668f2afcaaffdb1750ef82db361bf6ea2c9ce57` |
+| `A/reviews/R-D093-EIGHT.md`                         | `aee6c464b24662ed9e5396e382ca2e35a3add12ffe47a6c452178f847084e2bc` |
+| `A/decisions.md`                                    | `dbf814a620a9ee1ff1435e912db50efb4672c3e40712f684855a14cc91df796e` |
+| Jira operations r1 `content.json`                   | `ecb2169e1a28ef91adcb0915cc1092443b03d2155e6cbc6545e82895ef8e140f` |
+| Jira operations r1 `metadata.json`                  | `73e55adae262fba4222f1a701fe3152b001503ff5c0b3c10988a65bc575bbf8e` |
+| Wiki 241088180 r1 `content.json`                    | `e1d5f5320e05d1e65354f2523341cab788adfacac8ac5acf6aaabf31003c18fc` |
+| API-live r1 `content.json`                          | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
+| `docs/api/contracts/assistant-modules.md`           | `07390fd25dcba4be87387af11a60116a6709afcd559d9214908c2e1945fe4933` |
 | `docs/api/contracts/assistant-modules.openapi.json` | `79b96aff9cd84c88c2aee843a5d3f87f83ee999c25ee6e3e361f4bcb7a708052` |
-| `docs/api/contracts/openapi.json` | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
-| `mocks/assistant-modules.mjs` | `0694eaff9bc872fc1fcd252d4fe76bbf7edd158c4495f78d402b311201f9ef23` |
-| `mocks/assistant-modules.test.mjs` | `10f817be8e813fa4a03b50fdbbe6e471d0c4cabd729c932e612c816f8cbf5242` |
-| `mocks/contract.mjs` | `ffca4d574568b6f81791279af6022a98077ac82f4e4ec90a672406261a383371` |
-| `mocks/app.mjs` | `b3dd41cc09a6aac9f6ffa023d4cd048fef75735926e1a8efa21b567c46d7efd0` |
+| `docs/api/contracts/openapi.json`                   | `c6e13858e1cfc2574c6830356ddfa0fc4dfbd38db43c4b19e0faab5ef9f432f7` |
+| `mocks/assistant-modules.mjs`                       | `0694eaff9bc872fc1fcd252d4fe76bbf7edd158c4495f78d402b311201f9ef23` |
+| `mocks/assistant-modules.test.mjs`                  | `10f817be8e813fa4a03b50fdbbe6e471d0c4cabd729c932e612c816f8cbf5242` |
+| `mocks/contract.mjs`                                | `ffca4d574568b6f81791279af6022a98077ac82f4e4ec90a672406261a383371` |
+| `mocks/app.mjs`                                     | `b3dd41cc09a6aac9f6ffa023d4cd048fef75735926e1a8efa21b567c46d7efd0` |
 
 Hashes identify bytes, not external freshness or deployment. Whole-file hashing does not claim whole-file semantic review beyond the stated seam.
 

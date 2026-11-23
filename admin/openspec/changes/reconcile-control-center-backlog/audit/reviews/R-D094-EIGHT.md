@@ -10,16 +10,16 @@ All eight members were already P: **zero new U→P**. Preserve **89P/1B/83U**, t
 
 `A` below denotes `openspec/changes/reconcile-control-center-backlog/audit`.
 
-| Report | Verdict | Candidate disposition |
-|---|---|---|
+| Report         | Verdict    | Candidate disposition                                                                                                                                                              |
+| -------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | API-MOS-717-r2 | **ACCEPT** | Attach structural comparison and existing supplemental-document ownership to existing candidates. Retain contract-status/«Неактуально» questions. No duplicate documentation task. |
-| API-MOS-754-r2 | **ACCEPT** | Attach contract/mock evidence to existing stub candidates. Keep effective preview, production update semantics and concurrency questions unresolved. |
-| IMPL-MOS-922 | **ACCEPT** | Retain placeholder-versus-contract/mock distinction. Merge overlapping stub evidence with API-MOS-754-r2 rather than publishing another evidence-only product item. |
-| IMPL-MOS-1146 | **ACCEPT** | Retain D-082 owner correction as already installed. Attach ordering and dictionary-provenance observations to existing incident candidates; no new owner or editor. |
-| IMPL-MOS-1397 | **ACCEPT** | Preserve skill-scoped source and conditional-write gates. Analytics comparison is a bounded exclusion, not a global-settings requirement. Existing owner-plan no-op stands. |
-| IMPL-MOS-1398 | **ACCEPT** | Retain responsibility API gate and existing read-only owner. Primary contact is not assignment integration. No replacement-write protocol or editor inferred. |
-| IMPL-MOS-1145 | **ACCEPT** | Attach static client/mock/test evidence to existing C/TP candidates. Preserve historical approval and exact mock/test-plan differences without automatic remediation. |
-| IMPL-MOS-1027 | **ACCEPT** | Retain mounted skill-card ownership and approved MVP. Impact/duration remain existing scope questions; no duplicate `/ops` toggle plan. |
+| API-MOS-754-r2 | **ACCEPT** | Attach contract/mock evidence to existing stub candidates. Keep effective preview, production update semantics and concurrency questions unresolved.                               |
+| IMPL-MOS-922   | **ACCEPT** | Retain placeholder-versus-contract/mock distinction. Merge overlapping stub evidence with API-MOS-754-r2 rather than publishing another evidence-only product item.                |
+| IMPL-MOS-1146  | **ACCEPT** | Retain D-082 owner correction as already installed. Attach ordering and dictionary-provenance observations to existing incident candidates; no new owner or editor.                |
+| IMPL-MOS-1397  | **ACCEPT** | Preserve skill-scoped source and conditional-write gates. Analytics comparison is a bounded exclusion, not a global-settings requirement. Existing owner-plan no-op stands.        |
+| IMPL-MOS-1398  | **ACCEPT** | Retain responsibility API gate and existing read-only owner. Primary contact is not assignment integration. No replacement-write protocol or editor inferred.                      |
+| IMPL-MOS-1145  | **ACCEPT** | Attach static client/mock/test evidence to existing C/TP candidates. Preserve historical approval and exact mock/test-plan differences without automatic remediation.              |
+| IMPL-MOS-1027  | **ACCEPT** | Retain mounted skill-card ownership and approved MVP. Impact/duration remain existing scope questions; no duplicate `/ops` toggle plan.                                            |
 
 ## Independent checks
 
@@ -129,15 +129,15 @@ The current toggle specification explicitly excludes durations and surface lists
 
 Selected pointers and saved statuses agree with the reports:
 
-| Source pointer | Saved status |
-|---|---|
-| Operations `/items/0` — MOS-717 | CLOSED |
-| Operations `/items/1` — MOS-754 | Review |
-| Operations `/items/3` — MOS-922 | Backlog |
-| Monitoring `/items/1` — MOS-1146 | Ready for test |
-| Monitoring `/items/2` — MOS-1397 | Development |
-| Monitoring `/items/3` — MOS-1398 | Backlog |
-| Skill-switch `/items/1` — MOS-1145 | Ready for test |
+| Source pointer                         | Saved status   |
+| -------------------------------------- | -------------- |
+| Operations `/items/0` — MOS-717        | CLOSED         |
+| Operations `/items/1` — MOS-754        | Review         |
+| Operations `/items/3` — MOS-922        | Backlog        |
+| Monitoring `/items/1` — MOS-1146       | Ready for test |
+| Monitoring `/items/2` — MOS-1397       | Development    |
+| Monitoring `/items/3` — MOS-1398       | Backlog        |
+| Skill-switch `/items/1` — MOS-1145     | Ready for test |
 | MOS-774 details `/items/15` — MOS-1027 | Ready for test |
 
 Historical captures remain:
@@ -155,16 +155,16 @@ No external freshness, deployment or historical visual equivalence follows.
 
 SHA-256 recomputed from installed report bytes:
 
-| Report | SHA-256 |
-|---|---|
+| Report            | SHA-256                                                            |
+| ----------------- | ------------------------------------------------------------------ |
 | API-MOS-717-r2.md | `8cd2474d492081224b9c725414b8ad9b4fd9e87c38986a945aded4384776790f` |
 | API-MOS-754-r2.md | `4a634051a5b17a2c1857527b942e6870cdb66855a7b7aa3ee7b8539ea8340fd5` |
-| IMPL-MOS-922.md | `8b25bb922707918369a10eab3cdb24d60a98a2b3cbe7da98714aac7aa94cdfd1` |
-| IMPL-MOS-1146.md | `b6b0f9bc4a20ed838dc4c3b5d1eaa532b7859abf88c952f9e82e9026e693dd3c` |
-| IMPL-MOS-1397.md | `29afc9909780a2ad6120891bd5deda1a93801a42c9667a836b4775064d0461c2` |
-| IMPL-MOS-1398.md | `87938e144bf2fbfdd9cc10c100f08ef5d46a5142c61af68b19adec8a81f85722` |
-| IMPL-MOS-1145.md | `cb930269eff20bf95c115efd832416c67f6d1d33f421d0777a99825e36fc23a5` |
-| IMPL-MOS-1027.md | `c51c6961f97eba26b5ec302e80720cb7af537859805ce051e28e3fd8ee27eff7` |
+| IMPL-MOS-922.md   | `8b25bb922707918369a10eab3cdb24d60a98a2b3cbe7da98714aac7aa94cdfd1` |
+| IMPL-MOS-1146.md  | `b6b0f9bc4a20ed838dc4c3b5d1eaa532b7859abf88c952f9e82e9026e693dd3c` |
+| IMPL-MOS-1397.md  | `29afc9909780a2ad6120891bd5deda1a93801a42c9667a836b4775064d0461c2` |
+| IMPL-MOS-1398.md  | `87938e144bf2fbfdd9cc10c100f08ef5d46a5142c61af68b19adec8a81f85722` |
+| IMPL-MOS-1145.md  | `cb930269eff20bf95c115efd832416c67f6d1d33f421d0777a99825e36fc23a5` |
+| IMPL-MOS-1027.md  | `c51c6961f97eba26b5ec302e80720cb7af537859805ce051e28e3fd8ee27eff7` |
 
 All **104 distinct input digest values** recorded across the reports were found in independently hashed current local files; none was unmatched. This value-level check is not an assertion that every alias/table occurrence underwent a separate path-resolution audit or every hashed file received complete semantic review.
 

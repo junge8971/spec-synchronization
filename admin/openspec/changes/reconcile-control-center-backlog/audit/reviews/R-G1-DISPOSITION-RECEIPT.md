@@ -17,12 +17,12 @@ No issues found.
 
 The receipt matches `C/tasks.md:12–15`, design §§1,4–5, the spec’s incomplete-enumeration requirement and D-057.
 
-| Criterion | Verified disposition |
-|---|---|
-| **2.3** | Pending E12/E13. Accepted exact root/Jira rows are incorporated rather than mistaken for exhaustive discovery. Access, relevance and ambiguity remain distinct. |
-| **2.4 acquisition/provenance** | Proposed ready-with-explicit-limits is supported by the accepted docs→r2 chain. This is a subcriterion recommendation, not task2.4 closure. |
-| **2.4 explanatory sufficiency** | Pending. Requirements/applicability, ownership and provenance are included alongside wire explanations, consistent with D-054/D-057. No mandatory fresh acquisition is established. |
-| **2.6** | Pending bounded inventory crosswalk and saved-body discovery-scope accounting. Content/metadata or justified absence/unknown reasons remain permitted; semantic completeness is not substituted for accounting. |
+| Criterion                       | Verified disposition                                                                                                                                                                                            |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **2.3**                         | Pending E12/E13. Accepted exact root/Jira rows are incorporated rather than mistaken for exhaustive discovery. Access, relevance and ambiguity remain distinct.                                                 |
+| **2.4 acquisition/provenance**  | Proposed ready-with-explicit-limits is supported by the accepted docs→r2 chain. This is a subcriterion recommendation, not task2.4 closure.                                                                     |
+| **2.4 explanatory sufficiency** | Pending. Requirements/applicability, ownership and provenance are included alongside wire explanations, consistent with D-054/D-057. No mandatory fresh acquisition is established.                             |
+| **2.6**                         | Pending bounded inventory crosswalk and saved-body discovery-scope accounting. Content/metadata or justified absence/unknown reasons remain permitted; semantic completeness is not substituted for accounting. |
 
 ### E12 — accepted inventory crosswalk
 
@@ -36,14 +36,14 @@ The nine-bundle table in `A/reports/G1-JIRA-DETAIL-DOCUMENT-EDGES.md:15–31` an
 
 Independently compared all six accepted inventory reports with the receipt:
 
-| Accepted report evidence | Verified source positions and IDs |
-|---|---|
-| `JIRA-MOS-624.md:48–59` | MOS1053, `/items/0/attachments/0`:826713 |
-| `JIRA-MOS-771.md:15–34` | MOS1150, `/items/1/attachments/0–1`:831194 JSON response;831195 PNG |
-| `JIRA-MOS-773.md:31–42` | MOS1411/1412/1414/1419/1422, `/items/2–6/attachments`:839653;839662;839675;839862;839906/839905 |
-| `JIRA-MOS-774.md:40–49` | MOS1050, `/items/7/attachments/0–1`:826531/826530; MOS1051, `/items/8/attachments/0`:826544; MOS1052, `/items/9/attachments`:explicitly empty |
-| `JIRA-MOS-783.md:49–63` | MOS1110/1164/1165/1166/1167, `/items/10–14/attachments`:829292;832277;832288;832305;832324/832323 |
-| `JIRA-MOS-784.md:28–35` | MOS1054, `/items/15/attachments/0–1`:835960 MOV/835961 MP4 |
+| Accepted report evidence | Verified source positions and IDs                                                                                                             |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `JIRA-MOS-624.md:48–59`  | MOS1053, `/items/0/attachments/0`:826713                                                                                                      |
+| `JIRA-MOS-771.md:15–34`  | MOS1150, `/items/1/attachments/0–1`:831194 JSON response;831195 PNG                                                                           |
+| `JIRA-MOS-773.md:31–42`  | MOS1411/1412/1414/1419/1422, `/items/2–6/attachments`:839653;839662;839675;839862;839906/839905                                               |
+| `JIRA-MOS-774.md:40–49`  | MOS1050, `/items/7/attachments/0–1`:826531/826530; MOS1051, `/items/8/attachments/0`:826544; MOS1052, `/items/9/attachments`:explicitly empty |
+| `JIRA-MOS-783.md:49–63`  | MOS1110/1164/1165/1166/1167, `/items/10–14/attachments`:829292;832277;832288;832305;832324/832323                                             |
+| `JIRA-MOS-784.md:28–35`  | MOS1054, `/items/15/attachments/0–1`:835960 MOV/835961 MP4                                                                                    |
 
 Pointers refer to `A/sources/jira-subtasks/r1/content.json` through the accepted reports; no primary subtask census was performed.
 

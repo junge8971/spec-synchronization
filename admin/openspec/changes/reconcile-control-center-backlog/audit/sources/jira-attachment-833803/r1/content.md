@@ -35,16 +35,16 @@ ORDER BY from_status, to_status;
 
 Статусы:
 
-| `code` | `display_name` | `sort_order` |
-| --- | --- | --- |
-| `draft` | Черновик | 10 |
-| `checking` | Проверка | 20 |
-| `training` | Обучение модели | 30 |
-| `autotest` | Автотесты | 40 |
-| `sandbox` | Песочница | 50 |
-| `review` | Ревью | 60 |
-| `whitelist` | Белые списки | 70 |
-| `prod` | Прод | 80 |
+| `code`      | `display_name`  | `sort_order` |
+| ----------- | --------------- | ------------ |
+| `draft`     | Черновик        | 10           |
+| `checking`  | Проверка        | 20           |
+| `training`  | Обучение модели | 30           |
+| `autotest`  | Автотесты       | 40           |
+| `sandbox`   | Песочница       | 50           |
+| `review`    | Ревью           | 60           |
+| `whitelist` | Белые списки    | 70           |
+| `prod`      | Прод            | 80           |
 
 Переходы:
 

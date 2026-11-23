@@ -17,21 +17,21 @@ No issues found.
 
 Read the complete target report and both assignments, complete D-046/D-047 reports and reviews, and `decisions.md:1–85`. Compared every target and carrying-reference row against those accepted ledgers—not primary Jira packets or a new membership census.
 
-| Exact ID | Accepted carrying references | Occurrences | Current checked disposition |
-|---|---|---:|---|
-| 241082009 | AD D(3); SK D(17); SB D(0); SH D(5) | 4 | r2, v5 retained |
-| 241097511 | SK D(5–17); SB D(0); SH D(5); MOS-909 `content.md:13–14` | 16 | r2, v6 retained |
-| 241085439 | SK D(16); RP D(4) | 2 | r1, v15 retained |
-| 241085838 | RP D(1–5) | 5 | r1, v3 retained |
-| 241088180 | OP `/items/0/comments/items/0/body`, comment1131251 | 1 | r1, v4 retained |
-| 241092242 | SK D(15); OP D(3,4) | 3 | r1, v4 retained |
-| 241080659 | SK D(5,17); SH D(5) | 3 | New r1, v5 retained |
-| 241095761 | SK D(13,16) | 2 | New r1, v8 retained |
-| 241077434 | SK D(17) | 1 | New r1, v2 retained |
-| 238347672 | SK D(5), MOS-944 | 1 | Scoped canonical gap |
-| 241079770 | SH D(4), MOS-904 | 1 | Scoped canonical gap |
-| 223087110 | SH D(0), MOS-624 Documentation cell | 1 | Scoped canonical gap; ambiguous identity/relevance |
-| 222659162 | SH D(0), same cell | 1 | Separate scoped canonical gap; ambiguous identity/relevance |
+| Exact ID  | Accepted carrying references                             | Occurrences | Current checked disposition                                 |
+| --------- | -------------------------------------------------------- | ----------: | ----------------------------------------------------------- |
+| 241082009 | AD D(3); SK D(17); SB D(0); SH D(5)                      |           4 | r2, v5 retained                                             |
+| 241097511 | SK D(5–17); SB D(0); SH D(5); MOS-909 `content.md:13–14` |          16 | r2, v6 retained                                             |
+| 241085439 | SK D(16); RP D(4)                                        |           2 | r1, v15 retained                                            |
+| 241085838 | RP D(1–5)                                                |           5 | r1, v3 retained                                             |
+| 241088180 | OP `/items/0/comments/items/0/body`, comment1131251      |           1 | r1, v4 retained                                             |
+| 241092242 | SK D(15); OP D(3,4)                                      |           3 | r1, v4 retained                                             |
+| 241080659 | SK D(5,17); SH D(5)                                      |           3 | New r1, v5 retained                                         |
+| 241095761 | SK D(13,16)                                              |           2 | New r1, v8 retained                                         |
+| 241077434 | SK D(17)                                                 |           1 | New r1, v2 retained                                         |
+| 238347672 | SK D(5), MOS-944                                         |           1 | Scoped canonical gap                                        |
+| 241079770 | SH D(4), MOS-904                                         |           1 | Scoped canonical gap                                        |
+| 223087110 | SH D(0), MOS-624 Documentation cell                      |           1 | Scoped canonical gap; ambiguous identity/relevance          |
+| 222659162 | SH D(0), same cell                                       |           1 | Separate scoped canonical gap; ambiguous identity/relevance |
 
 Aliases and `D(n)` retain the accepted reports’ exact source-path and description-pointer definitions.
 

@@ -12,6 +12,7 @@ No issues found.
 ### Actual read scope
 
 Read completely:
+
 - The assigned `WRITE-REVIEW-MOS-1258-POINTER.md`.
 - The external `pointer-candidate.md`, including its acceptance report.
 - All four current MOS-1258 owner artifacts: proposal, design, tasks and specification.

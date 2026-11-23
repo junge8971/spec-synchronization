@@ -22,6 +22,7 @@ Optional only: explicit endpoint spelling, dependency staging annotation, repeat
 ## Files Retrieved / actual read limits
 
 Complete reads:
+
 - `C/proposal.md:1–30`, `C/design.md:1–133`, `C/tasks.md:1–45`, `C/specs/control-center-backlog-reconciliation/spec.md:1–108`.
 - `A/work-items/G2-FEEDBACK-SPEC-WAVE.md:1–25`; `A/work-items/R-G2-FEEDBACK-SPEC-WAVE.md:1–21`. Other unit headings incidentally returned, not executed.
 - `A/reports/SPEC-G2-MOS-1254.md:1–158`, `A/reports/REQ-G2-MOS-1254.md:1–133`, `A/reviews/R-REQ-G2-MOS-1254.md:1–66`.
@@ -37,26 +38,26 @@ Start with owner design:29–43 and delta spec:9–21. Parent draft owns saving;
 
 Computed locally over full saved files (partial reads above remain partial). All corresponding hashes match the reviewed report; hashes certify bytes, not live freshness.
 
-| File | SHA-256 |
-|---|---|
-| A/reports/SPEC-G2-MOS-1254.md | 09a258d74f546ff12b1c886077473a3d20936b155f4b06b8a969274c4a8f302e |
-| A/reports/REQ-G2-MOS-1254.md | 764084c9fed0d395911e5ee57198d5a1dc125d667f9f54d98ed9491a11032f92 |
-| A/reviews/R-REQ-G2-MOS-1254.md | cd771780ba1b02e458088bbe5cdef5b1560649f26946b100b0c45dc69947db3d |
-| A/work-items/G2-FEEDBACK-SPEC-WAVE.md | e48969c1d6c09998909c400db7cb138839cf384cb3d8e6595c9e1e4e35e6419e |
-| A/work-items/R-G2-FEEDBACK-SPEC-WAVE.md | 1194ceddd98f926755ba5995273b6f9c7abba7aee5d7194fbe70782ac53abfc2 |
-| A/sources/jira-feedback/r1/content.json | 890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685 |
-| O/proposal.md | 87cfa93c0aee962cdc7371784a6e22f37c3d8413f1c9904f05c051112e196e41 |
-| O/design.md | 181f2800f8e8f359147ef9c9d3a6eb4f3d4daafa20324dd3b8e1cf0c23d54e10 |
-| O/tasks.md | 2920f54aba3994e856679db78d4706c553e7a97be0c17d420643b7f3d72fba65 |
-| O/specs/feedback-questions/spec.md | eeb2d92c74667f09a97d933390176b2771d39a1596a4f0c21cf0e23e39c9d27c |
-| O/.openspec.yaml | 1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9 |
-| C/proposal.md | 1a97715e2566329143febbb509e934a88b4ecc478628fac559da690fa59bd879 |
-| C/design.md | 632fe7775d650f2bf2d9b337d82e29058075966c3154571be8cffeeb8e690828 |
-| C/tasks.md | a60c535a26bf41d42930b1a33c3f2062ff2430e9eb6d51a66435fe93772c9f83 |
+| File                                                  | SHA-256                                                          |
+| ----------------------------------------------------- | ---------------------------------------------------------------- |
+| A/reports/SPEC-G2-MOS-1254.md                         | 09a258d74f546ff12b1c886077473a3d20936b155f4b06b8a969274c4a8f302e |
+| A/reports/REQ-G2-MOS-1254.md                          | 764084c9fed0d395911e5ee57198d5a1dc125d667f9f54d98ed9491a11032f92 |
+| A/reviews/R-REQ-G2-MOS-1254.md                        | cd771780ba1b02e458088bbe5cdef5b1560649f26946b100b0c45dc69947db3d |
+| A/work-items/G2-FEEDBACK-SPEC-WAVE.md                 | e48969c1d6c09998909c400db7cb138839cf384cb3d8e6595c9e1e4e35e6419e |
+| A/work-items/R-G2-FEEDBACK-SPEC-WAVE.md               | 1194ceddd98f926755ba5995273b6f9c7abba7aee5d7194fbe70782ac53abfc2 |
+| A/sources/jira-feedback/r1/content.json               | 890f70f0df89675433906751b98ee6c30df9130784550ff83d306a7dd316a685 |
+| O/proposal.md                                         | 87cfa93c0aee962cdc7371784a6e22f37c3d8413f1c9904f05c051112e196e41 |
+| O/design.md                                           | 181f2800f8e8f359147ef9c9d3a6eb4f3d4daafa20324dd3b8e1cf0c23d54e10 |
+| O/tasks.md                                            | 2920f54aba3994e856679db78d4706c553e7a97be0c17d420643b7f3d72fba65 |
+| O/specs/feedback-questions/spec.md                    | eeb2d92c74667f09a97d933390176b2771d39a1596a4f0c21cf0e23e39c9d27c |
+| O/.openspec.yaml                                      | 1dfdca412094f24473d8b842866201ec26f200b29b17064b03f1e4982c35a7b9 |
+| C/proposal.md                                         | 1a97715e2566329143febbb509e934a88b4ecc478628fac559da690fa59bd879 |
+| C/design.md                                           | 632fe7775d650f2bf2d9b337d82e29058075966c3154571be8cffeeb8e690828 |
+| C/tasks.md                                            | a60c535a26bf41d42930b1a33c3f2062ff2430e9eb6d51a66435fe93772c9f83 |
 | C/specs/control-center-backlog-reconciliation/spec.md | a4dbe5d2ca48741281d27b96eb0405edac04d071e37924ec18de7a60d6d23f36 |
-| E/design.md | dfd986336cf1b687206752fb8d436c162dd2c38e8ba87b807809c1b5fbd9c028 |
-| E/tasks.md | 67f76db911e4bd852d2dfa4d24d5bcd64e57aacb8693a586210c340c803f1906 |
-| E/specs/feedback-editor/spec.md | 03e584e4c9d6d1d99f9e0949949dce92b1fd1cc83a5378afaf67fe86ba4b31ee |
+| E/design.md                                           | dfd986336cf1b687206752fb8d436c162dd2c38e8ba87b807809c1b5fbd9c028 |
+| E/tasks.md                                            | 67f76db911e4bd852d2dfa4d24d5bcd64e57aacb8693a586210c340c803f1906 |
+| E/specs/feedback-editor/spec.md                       | 03e584e4c9d6d1d99f9e0949949dce92b1fd1cc83a5378afaf67fe86ba4b31ee |
 
 ```acceptance-report
 {

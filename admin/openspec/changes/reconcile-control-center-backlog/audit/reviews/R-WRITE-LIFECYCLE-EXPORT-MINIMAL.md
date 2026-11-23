@@ -2,10 +2,10 @@
 
 ## Verdicts
 
-| Exact candidate | Disposition | Merge verdict |
-|---|---|---|
-| `audit/publication/WRITE-LIFECYCLE-EXPORT/pending-candidate.md` | **ACCEPT** | OK for parent integration |
-| `audit/publication/WRITE-LIFECYCLE-EXPORT/labels-candidate.md` | **ACCEPT** | OK for parent integration |
+| Exact candidate                                                 | Disposition | Merge verdict             |
+| --------------------------------------------------------------- | ----------- | ------------------------- |
+| `audit/publication/WRITE-LIFECYCLE-EXPORT/pending-candidate.md` | **ACCEPT**  | OK for parent integration |
+| `audit/publication/WRITE-LIFECYCLE-EXPORT/labels-candidate.md`  | **ACCEPT**  | OK for parent integration |
 
 No issues found.
 

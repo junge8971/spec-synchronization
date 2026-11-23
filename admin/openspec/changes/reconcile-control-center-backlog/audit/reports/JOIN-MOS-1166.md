@@ -10,12 +10,12 @@
 
 Прочитано **тело**, а не только summary: `audit/sources/jira-subtasks/r1/content.json#/items/13`, строки 267–284: key MOS-1166, parent MOS-709, status Backlog, updated `2026-10-09T15:07:28.233+0800`. Подтверждение членства: `audit/sources/jira-member-index/r1/content.json#/items/118/subtasks/3`, строки 1027–1031.
 
-| Атом | Локатор | Expected |
-|---|---|---|
-| Условие | `/items/13/description`, «Предусловие» | В реестре есть навык с длинным описанием около 200 символов. Это пример для воспроизведения, не лимит данных. |
-| Место | Там же, шаг 1 | Добавление поверхности → «Сценарии». Не реестр навыков и не произвольная карточка. |
-| R1 | Там же, «ОР: Длинное описание навыка обрезается» | Визуальное обрезание длинного текста. Число строк, ellipsis и tooltip источником не определены. |
-| R2 | Там же, «ФР: … появляется горизонтальный скролл» | Устранение горизонтальной прокрутки, вызванной длинным описанием. Это вывод из прямо описанного негативного результата, а не отдельное требование API. |
+| Атом    | Локатор                                          | Expected                                                                                                                                               |
+| ------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Условие | `/items/13/description`, «Предусловие»           | В реестре есть навык с длинным описанием около 200 символов. Это пример для воспроизведения, не лимит данных.                                          |
+| Место   | Там же, шаг 1                                    | Добавление поверхности → «Сценарии». Не реестр навыков и не произвольная карточка.                                                                     |
+| R1      | Там же, «ОР: Длинное описание навыка обрезается» | Визуальное обрезание длинного текста. Число строк, ellipsis и tooltip источником не определены.                                                        |
+| R2      | Там же, «ФР: … появляется горизонтальный скролл» | Устранение горизонтальной прокрутки, вызванной длинным описанием. Это вывод из прямо описанного негативного результата, а не отдельное требование API. |
 
 Тело присутствует — gap отсутствующего requirement body нет. `/items/13/attachments/0` перечисляет `832305`, `3.png`, image/png, 120531 байт; тело изображения не сохранено согласно `jira-subtasks/r1/metadata.json#/limitations`. Поэтому точный прежний элемент и геометрия screenshot неизвестны. Комментарии/custom acceptance fields также не собраны. Указанный в description адрес контура не открывался.
 
@@ -42,13 +42,13 @@
 
 ## Observed: код и тесты
 
-| Доказательство | Наблюдение и граница вывода |
-|---|---|
-| `app/widgets/surface-registration/ui/surface-registration.tsx:16,68–73`; `app/features/surface-registration/ui/surface-registration-step-content.tsx:23–33` | Реальный шаг «Сценарии» получает общий SurfaceSkillSelectionEditor. Это прямая цепочка до текущего элемента, не вывод по названию модуля. |
-| `app/features/surface-skill-selection/ui/surface-skill-selection-editor.tsx:20–24,58–62`; `.../surface-skill-selection-editor/catalog-section.tsx:44–55` | Продовый каталог группируется и передаётся в группы; Card имеет `overflow-hidden`. Это защитный признак контейнера, но не доказательство обрезания конкретного текста или отсутствия скролла страницы. |
-| `app/features/surface-skill-selection/ui/surface-skill-selection-editor/skill-selection-item.tsx:14–34` | Grid использует `sm:grid-cols-[minmax(0,1fr)_minmax(280px,1fr)]`. Абзац purpose имеет только `text-sm text-muted-foreground sm:text-right`: нет локального truncate/line-clamp/overflow ограничения. `min-w-0` на строках 25–27 относится к имени, не абзацу purpose. |
-| Тот же файл `:18,29–34` | `aria-describedby` связывает переключатель с полным purpose. При будущем визуальном исправлении эту доступность нельзя потерять. |
-| `app/features/surface-skill-selection/ui/surface-skill-selection-editor.test.tsx`, describe SurfaceSkillSelectionEditor и helper skill в конце файла | Прочитанные тесты проверяют клавиатуру, mixed state, параметры, prod-фильтр и ошибки. Fixture purpose — короткое «Назначение». Отдельного случая примерно 200 символов, неразрывной строки или утверждения обрезания нет. |
+| Доказательство                                                                                                                                              | Наблюдение и граница вывода                                                                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `app/widgets/surface-registration/ui/surface-registration.tsx:16,68–73`; `app/features/surface-registration/ui/surface-registration-step-content.tsx:23–33` | Реальный шаг «Сценарии» получает общий SurfaceSkillSelectionEditor. Это прямая цепочка до текущего элемента, не вывод по названию модуля.                                                                                                                             |
+| `app/features/surface-skill-selection/ui/surface-skill-selection-editor.tsx:20–24,58–62`; `.../surface-skill-selection-editor/catalog-section.tsx:44–55`    | Продовый каталог группируется и передаётся в группы; Card имеет `overflow-hidden`. Это защитный признак контейнера, но не доказательство обрезания конкретного текста или отсутствия скролла страницы.                                                                |
+| `app/features/surface-skill-selection/ui/surface-skill-selection-editor/skill-selection-item.tsx:14–34`                                                     | Grid использует `sm:grid-cols-[minmax(0,1fr)_minmax(280px,1fr)]`. Абзац purpose имеет только `text-sm text-muted-foreground sm:text-right`: нет локального truncate/line-clamp/overflow ограничения. `min-w-0` на строках 25–27 относится к имени, не абзацу purpose. |
+| Тот же файл `:18,29–34`                                                                                                                                     | `aria-describedby` связывает переключатель с полным purpose. При будущем визуальном исправлении эту доступность нельзя потерять.                                                                                                                                      |
+| `app/features/surface-skill-selection/ui/surface-skill-selection-editor.test.tsx`, describe SurfaceSkillSelectionEditor и helper skill в конце файла        | Прочитанные тесты проверяют клавиатуру, mixed state, параметры, prod-фильтр и ошибки. Fixture purpose — короткое «Назначение». Отдельного случая примерно 200 символов, неразрывной строки или утверждения обрезания нет.                                             |
 
 **Observed:** отсутствует явное ограничение длинного текста именно в абзаце; существующий контейнер скрывает overflow. Это статический риск и пробел regression evidence, **не доказанный текущий горизонтальный скролл**. Текст с пробелами может переноситься; реальная геометрия зависит от ширины и содержимого.
 
@@ -67,25 +67,25 @@
 
 Хеши пересчитаны локально по байтам, не перенесены только из metadata.
 
-| Путь | SHA256 |
-|---|---|
-| `audit/work-items/WAVE-D090-EIGHT.md` | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
-| `audit/work-items/WAVE-D090-REVIEW-NEXT.md` | `fdf9ed7a57cc427bf9feb58639fe976fb2f76fb1bd9082c0f1626649cfdfcc72` |
-| `audit/sources/jira-subtasks/r1/content.json` | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
-| `audit/sources/jira-subtasks/r1/metadata.json` | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
-| `audit/sources/jira-member-index/r1/content.json` | `dba6cffa66e0aef23e9ef34c4a52215a5c02d31e7da1dca87888e821198b8043` |
-| `audit/sources/api-live/r2/content.json` | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
-| `audit/coverage.json` | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
-| `audit/reports/JIRA-MOS-783.md` | `4088bb978c718cee5104e570f42ab0b99191a4035f5f9752a80e098153b56354` |
-| `audit/reports/G2-JIRA-MEMBER-JOINS.md` | `dc9b199c2a9500b2ff1857de1feaec9282e8130fa1b78720f551913907618b44` |
-| `openspec/specs/surface-skill-selection/spec.md` | `e27eb8b354e4370da3519b5387cff5369a2f083e6c3be05f82d8631746c19ee0` |
-| `openspec/specs/surface-registration/spec.md` | `31928d907bfff75eca61d2efe176879e3c7f4d3e0029dbe6bb97258b8d00f9a5` |
+| Путь                                                                                                     | SHA256                                                             |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `audit/work-items/WAVE-D090-EIGHT.md`                                                                    | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
+| `audit/work-items/WAVE-D090-REVIEW-NEXT.md`                                                              | `fdf9ed7a57cc427bf9feb58639fe976fb2f76fb1bd9082c0f1626649cfdfcc72` |
+| `audit/sources/jira-subtasks/r1/content.json`                                                            | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
+| `audit/sources/jira-subtasks/r1/metadata.json`                                                           | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
+| `audit/sources/jira-member-index/r1/content.json`                                                        | `dba6cffa66e0aef23e9ef34c4a52215a5c02d31e7da1dca87888e821198b8043` |
+| `audit/sources/api-live/r2/content.json`                                                                 | `ab5527772e16273222bad8a5f4a35ffe1de4e612630e1111e2f5612db4996993` |
+| `audit/coverage.json`                                                                                    | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
+| `audit/reports/JIRA-MOS-783.md`                                                                          | `4088bb978c718cee5104e570f42ab0b99191a4035f5f9752a80e098153b56354` |
+| `audit/reports/G2-JIRA-MEMBER-JOINS.md`                                                                  | `dc9b199c2a9500b2ff1857de1feaec9282e8130fa1b78720f551913907618b44` |
+| `openspec/specs/surface-skill-selection/spec.md`                                                         | `e27eb8b354e4370da3519b5387cff5369a2f083e6c3be05f82d8631746c19ee0` |
+| `openspec/specs/surface-registration/spec.md`                                                            | `31928d907bfff75eca61d2efe176879e3c7f4d3e0029dbe6bb97258b8d00f9a5` |
 | `openspec/changes/archive/2026-10-02-mos-911-prod-skill-selection/specs/surface-skill-selection/spec.md` | `17ddca2bdb446f562c47bbe0af30807829a140addce6ff68241f547ae230e44a` |
-| `app/features/surface-skill-selection/ui/surface-skill-selection-editor/skill-selection-item.tsx` | `8651038c1d4bc340d8763db4ed45b607c27dcddaa6371a7a1c43187eaa7496af` |
-| `app/features/surface-skill-selection/ui/surface-skill-selection-editor.tsx` | `fd89c9208b2c8f6e144849c6dccd3541ea36d282ce9364f8563c0168365df6be` |
-| `app/features/surface-skill-selection/ui/surface-skill-selection-editor.test.tsx` | `223c5241a669d93aebdcc756b902e67b6969a24fa275eec0ca9b1645d3af7c9e` |
-| `app/entities/skill/api/skill-registry-client.ts` | `fe22d8076a52c22ea245853b2bbe3f7103a1f515776920a6ecf76b6a6fcd5969` |
-| `app/widgets/surface-registration/ui/surface-registration.tsx` | `30211e1b4a5534bb0292292fe0560045bb1cdf34e7f642daae4184754b7d089c` |
+| `app/features/surface-skill-selection/ui/surface-skill-selection-editor/skill-selection-item.tsx`        | `8651038c1d4bc340d8763db4ed45b607c27dcddaa6371a7a1c43187eaa7496af` |
+| `app/features/surface-skill-selection/ui/surface-skill-selection-editor.tsx`                             | `fd89c9208b2c8f6e144849c6dccd3541ea36d282ce9364f8563c0168365df6be` |
+| `app/features/surface-skill-selection/ui/surface-skill-selection-editor.test.tsx`                        | `223c5241a669d93aebdcc756b902e67b6969a24fa275eec0ca9b1645d3af7c9e` |
+| `app/entities/skill/api/skill-registry-client.ts`                                                        | `fe22d8076a52c22ea245853b2bbe3f7103a1f515776920a6ecf76b6a6fcd5969` |
+| `app/widgets/surface-registration/ui/surface-registration.tsx`                                           | `30211e1b4a5534bb0292292fe0560045bb1cdf34e7f642daae4184754b7d089c` |
 
 ```acceptance-report
 {

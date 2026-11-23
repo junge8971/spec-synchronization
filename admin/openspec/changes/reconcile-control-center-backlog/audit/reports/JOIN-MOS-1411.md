@@ -16,12 +16,12 @@ HEAD: `bc0d9800f25a90989b9c73c76f91996f8300f1d3`.
 - **W:** `audit/sources/wiki-243776365/r1/content.json`, `$.text` / `$.bodyView`: «Бизнес-анализ: Диалоги», version 13. Точные текстовые локаторы: `СПС-25`; `Сценарий 1. Сброс отбора`; `Отображение кнопки "Сбросить"` с условием наличия активного отбора.
 - **A:** `audit/sources/api-live/r1/content.json`, `$.paths["/api/control/api/dialogs/v1/dialogs/search"].post`.
 
-| ID | Expected — требование и источник | Observed — текущая реализация |
-|---|---|---|
-| R1 | При исходном состоянии без отбора кнопка скрыта. J `description`, ОР; W СПС-25 | **Не соответствует:** `app/pages/dialogs/ui/dialog-filters.tsx:82–94` безусловно рендерит Button. |
-| R2 | При активном поиске, периоде, поверхностях, навыках или условиях кнопка доступна в строке фильтров. J СПС-25; W блок «Отображение кнопки…» | Кнопка расположена в общей строке быстрых фильтров рядом с условиями. Доступна всегда, следовательно положительная ветвь есть, условность отсутствует. |
-| R3 | Один общий сброс снимает поиск, период, поверхности, навыки и условия. J СПС-25; W «Сценарий 1. Сброс отбора» | `dialog-filters.tsx:88–90` сбрасывает форму и применяет `initialDialogSelection`; `constants/dialogs.constants.ts:3–11`: `q:''`, `all_time`, пустые IDs, `condition_group:null`. |
-| R4 | После сброса, когда сбрасывать нечего, кнопка снова скрыта. J шаги 1–3 + ОР; W СПС-25 | **Не соответствует:** рендер не зависит от результата сброса. |
+| ID  | Expected — требование и источник                                                                                                           | Observed — текущая реализация                                                                                                                                                    |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| R1  | При исходном состоянии без отбора кнопка скрыта. J `description`, ОР; W СПС-25                                                             | **Не соответствует:** `app/pages/dialogs/ui/dialog-filters.tsx:82–94` безусловно рендерит Button.                                                                                |
+| R2  | При активном поиске, периоде, поверхностях, навыках или условиях кнопка доступна в строке фильтров. J СПС-25; W блок «Отображение кнопки…» | Кнопка расположена в общей строке быстрых фильтров рядом с условиями. Доступна всегда, следовательно положительная ветвь есть, условность отсутствует.                           |
+| R3  | Один общий сброс снимает поиск, период, поверхности, навыки и условия. J СПС-25; W «Сценарий 1. Сброс отбора»                              | `dialog-filters.tsx:88–90` сбрасывает форму и применяет `initialDialogSelection`; `constants/dialogs.constants.ts:3–11`: `q:''`, `all_time`, пустые IDs, `condition_group:null`. |
+| R4  | После сброса, когда сбрасывать нечего, кнопка снова скрыта. J шаги 1–3 + ОР; W СПС-25                                                      | **Не соответствует:** рендер не зависит от результата сброса.                                                                                                                    |
 
 Отдельное действующее локальное обязательство, не новое требование Jira: общий сброс должен очищать также неприменённые быстрые изменения. Оно закреплено в main spec и должно сохраниться при исправлении видимости.
 
@@ -104,26 +104,26 @@ HEAD: `bc0d9800f25a90989b9c73c76f91996f8300f1d3`.
 
 Хеши вычислены по локальным байтам; три content-хеша совпадают с соответствующими metadata.
 
-| Файл | SHA256 |
-|---|---|
-| `audit/work-items/WAVE-D090-EIGHT.md` | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
-| `audit/coverage.json` | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
-| `audit/sources/jira-subtasks/r1/content.json` | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
-| `audit/sources/jira-subtasks/r1/metadata.json` | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
-| `audit/sources/wiki-243776365/r1/content.json` | `2f659b5423fa7203dcd4f70743e59aabfb571452144394621091ff2cd58cab55` |
-| `audit/sources/wiki-243776365/r1/metadata.json` | `fc250c2633f28f6a8f408835145a59aa4cb8612606b40cb8bf79cf088ea256b8` |
-| `audit/sources/api-live/r1/content.json` | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
-| `audit/sources/api-live/r1/metadata.json` | `3d92a2024209edecf98eaa1095e40a565611c9eb6ccc4de312ed900165b9f8ff` |
-| `openspec/specs/dialog-registry/spec.md` | `ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83` |
-| `openspec/specs/dialog-selection-builder/spec.md` | `87d9ad1687832a1f1eb54a69b65d168cfe04a94fdc5bed1f95ea25983afc8ca6` |
+| Файл                                                                                                    | SHA256                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `audit/work-items/WAVE-D090-EIGHT.md`                                                                   | `98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b` |
+| `audit/coverage.json`                                                                                   | `e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b` |
+| `audit/sources/jira-subtasks/r1/content.json`                                                           | `c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e` |
+| `audit/sources/jira-subtasks/r1/metadata.json`                                                          | `d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20` |
+| `audit/sources/wiki-243776365/r1/content.json`                                                          | `2f659b5423fa7203dcd4f70743e59aabfb571452144394621091ff2cd58cab55` |
+| `audit/sources/wiki-243776365/r1/metadata.json`                                                         | `fc250c2633f28f6a8f408835145a59aa4cb8612606b40cb8bf79cf088ea256b8` |
+| `audit/sources/api-live/r1/content.json`                                                                | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
+| `audit/sources/api-live/r1/metadata.json`                                                               | `3d92a2024209edecf98eaa1095e40a565611c9eb6ccc4de312ed900165b9f8ff` |
+| `openspec/specs/dialog-registry/spec.md`                                                                | `ef9e52b7dba2ff4f0fa1dd1a9fa3d7cfaa78890277c376d70ed0301423bf6f83` |
+| `openspec/specs/dialog-selection-builder/spec.md`                                                       | `87d9ad1687832a1f1eb54a69b65d168cfe04a94fdc5bed1f95ea25983afc8ca6` |
 | `openspec/changes/archive/2026-10-16-fix-existing-scenarios-test-contour/specs/dialog-registry/spec.md` | `3590e25793853406e9b0fd6ff9c4c094d4c4f7f8cd52f0dd119c96527ad8ed24` |
-| `app/pages/dialogs/ui/dialog-filters.tsx` | `72d95c6383ec7ffc36a7fa638f8fc3b2fa562008bea94e0c9c0fd13d6fb0f66d` |
-| `app/pages/dialogs/ui/dialog-registry.tsx` | `5e487284416e43ae82a20fe43a20546bb327e44e8c8f0f95e77ba427b52aa801` |
-| `app/pages/dialogs/ui/dialogs-page.test.tsx` | `3dba3eb88505d29a2ed80dab6c301e0496007e85a26749d74b80a747824d2fec` |
-| `app/pages/dialogs/constants/dialogs.constants.ts` | `ff44d72901017a14b4271601c080fa98c7cbc51026a4fa4b896fc7ce4cf315f9` |
-| `app/entities/dialog/model/use-dialogs-query.ts` | `109de3d9131739c6aae881a59d3a43db7b46939fbc54cc9be4a05f6a3ff0d850` |
-| `app/entities/dialog/api/dialog-client.ts` | `cbcf7ab8deebf1dd6dc211042d3fb0e820a36bb99081e93596138e1a087484b1` |
-| `docs/api/contracts/dialogs.md` | `70ffb101d6e4dcb71c4a217d1d0e7b3aec444919404d65ff7d3a3aeb206dd84a` |
+| `app/pages/dialogs/ui/dialog-filters.tsx`                                                               | `72d95c6383ec7ffc36a7fa638f8fc3b2fa562008bea94e0c9c0fd13d6fb0f66d` |
+| `app/pages/dialogs/ui/dialog-registry.tsx`                                                              | `5e487284416e43ae82a20fe43a20546bb327e44e8c8f0f95e77ba427b52aa801` |
+| `app/pages/dialogs/ui/dialogs-page.test.tsx`                                                            | `3dba3eb88505d29a2ed80dab6c301e0496007e85a26749d74b80a747824d2fec` |
+| `app/pages/dialogs/constants/dialogs.constants.ts`                                                      | `ff44d72901017a14b4271601c080fa98c7cbc51026a4fa4b896fc7ce4cf315f9` |
+| `app/entities/dialog/model/use-dialogs-query.ts`                                                        | `109de3d9131739c6aae881a59d3a43db7b46939fbc54cc9be4a05f6a3ff0d850` |
+| `app/entities/dialog/api/dialog-client.ts`                                                              | `cbcf7ab8deebf1dd6dc211042d3fb0e820a36bb99081e93596138e1a087484b1` |
+| `docs/api/contracts/dialogs.md`                                                                         | `70ffb101d6e4dcb71c4a217d1d0e7b3aec444919404d65ff7d3a3aeb206dd84a` |
 
 ## Ограничения
 

@@ -28,71 +28,71 @@ Paths below are relative to `openspec/changes/reconcile-control-center-backlog/a
 
 **U/reused** = unchanged baseline uncollected state, exact canonical directory absence locally checked; access unknown. Need **BMA**: body/extraction, provenance metadata, attachment index. **B/reused** = baseline packet retained without new semantic audit. **Δ** = addition since baseline. **I=n** = returned indexed count, exhausted saved pagination, not attachment-body review coverage.
 
-| P/i | Exact ID | Baseline title | Current capture / disposition | Current gap or limit |
-|---|---|---|---|---|
-| 0 | 241082618 | Декомпозиция | Δ r1/v3, I=0; D032 PLANNING mixed subset | Classification, not full reconciliation |
-| 1 | 245670575 | Декомпозиция задач: диалоги | U/reused | BMA |
-| 2 | 241085260 | Системный анализ | Δ r1/v2, I=0; D032 PLANNING container | Links are not contracts/traversal authority |
-| 3 | 241085256 | API | Δ r1/v2, I=0; D032 PLANNING container | Distinct from 247747363; children not thereby captured |
-| 4 | 238347066 | /skills - Каталог навыков | U/reused; D032 next batch | BMA; transport blocked, no page failure |
-| 5 | 238352321 | /skills/{id} - Карточка навыка, описание | U/reused; D032 next batch | BMA; transport blocked, no page failure |
-| 6 | 241074633 | /skills/{id}/monitoring - Мониторинг навыка | U/reused; D032 next batch | BMA; transport blocked, no page failure |
-| 7 | 241080643 | /dialogs - Список диалогов | U/reused | BMA |
-| 8 | 241083649 | /dialogs/{id} - Карточка диалога | U/reused | BMA |
-| 9 | 238350232 | /reports и /reports?tab=builder - Шаблон и конструктор отчётов | U/reused | BMA |
-| 10 | 241102892 | RBAC - Роли, ресурсы и разрешения | U/reused | BMA; no auth implementation approval |
-| 11 | 241092173 | Группы данных | Δ r1/v17, I=8; D032 DATA mixed ownership/context subset | Eight attachment bodies unread |
-| 12 | 241076726 | Модель данных | Δ r1/v20, I=2; D032 DATA mixed substantive body-model subset | Two files unread; embedded ERDs saved, not fully interpreted |
-| 13 | 245678373 | Ролевая модель МПММ | Δ r1/v1, I=1; D032 MPMM direct historical proposal | PNG unread; no grants/editor approval |
-| 14 | 241077052 | Бизнес-анализ: Админка | Δ r1/v3, I=2; image-only structural extraction, r7 | Two images unread; not empty requirements or accepted overview semantics |
-| 15 | 243776365 | Бизнес-анализ: Диалоги | B/reused r1/v13, I=0 | No snapshot BMA gap; no new semantic acceptance |
-| 16 | 241080062 | Админка. Навыки | B/reused r1/v17, I=1 | SVG 245672060 uncollected/unread; readable derivative not new page |
-| 17 | 245673187 | Бизнес-анализ: Поверхности | B/reused r1/v18, I=0 | No snapshot BMA gap; no new semantic acceptance |
-| 18 | 247734813 | Раздел Обратная связь | B/reused r1/v11, flattened text+links | Index absent; structural body conditional; known prototype pending |
-| 19 | 247737907 | Раздел База знаний | U/reused | BMA; no optional activation |
-| 20 | 247747489 | Раздел Состояние системы (рубильники) | U/reused | BMA |
-| 21 | 247744768 | Раздел Шаблоны ответов | U/reused | BMA |
-| 22 | 247751846 | Раздел Справочники | Δ r1/v10, I=2; D027/028 corrected WD accepted | Two prototype texts saved; D029 selected findings only |
-| 23 | 247747363 | Раздел API | Δ r1/v7, I=2; D027 WAR accepted | Two prototype texts saved; D029 selected API findings only |
-| 24 | 247742436 | Раздел А/В Тестирование | U/reused | BMA; no optional activation |
-| 25 | 250794931 | Фильтрация списков | U/reused | BMA |
-| 26 | 241085263 | Черновые документы/заметки | Δ r1/v4, I=0; D032 DATA container | Twelve child labels do not establish coverage |
-| 27 | 241080088 | Админка. Состояние системы | U/reused | BMA; distinct from 247747489 |
-| 28 | 247728705 | Бизнес-анализ: Команды | U/reused | BMA |
-| 29 | 241080065 | Админка. Поверхности | U/reused | BMA; not substituted by 245673187 |
-| 30 | 241080071 | Админка. Диалоги | U/reused | BMA; not substituted by 243776365 |
-| 31 | 241080068 | Админка. Песочница | U/reused | BMA |
-| 32 | 241080082 | Админка. Отчеты | U/reused | BMA; distinct from 238350232 |
-| 33 | 241080100 | Админка. Команды и доступ | U/reused | BMA |
-| 34 | 241080097 | Админка. Заглушки | U/reused | BMA |
-| 35 | 241080080 | Админка. Дашборд | U/reused | BMA |
-| 36 | 238329164 | Бизнес-анализ: Аутентификация и сеанс | U/reused | BMA; approved auth boundary retained |
-| 37 | 238333356 | Бизнес-анализ: Роли и права | U/reused | BMA; no new role model |
-| 38 | 238324852 | Ассессмент навыков | Δ r1/v8, I=0; D032 MPMM direct operational proposal | Not checking/review activation; unfinished flows |
-| 39 | 243761671 | Аналитическая справка по существующей админке МПММ | Δ r1/v3, I=0; D032 MPMM mixed historical subset | Historical estimates not verified runtime; links not covered |
-| 40 | 243765248 | Бизнес-анализ. МПММ | Δ r1/v8, I=7; D032 MPMM mixed integration/historical subset | Seven PNGs unread; approved contracts first |
-| 41 | 250781168 | Журнал вопросов - для админки ЦАМ | Δ r1/v8, I=0; D024/025 all five data rows dispositioned | Documentary routing only; downstream owner/implementation gaps |
+| P/i | Exact ID  | Baseline title                                                 | Current capture / disposition                                | Current gap or limit                                                     |
+| --- | --------- | -------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| 0   | 241082618 | Декомпозиция                                                   | Δ r1/v3, I=0; D032 PLANNING mixed subset                     | Classification, not full reconciliation                                  |
+| 1   | 245670575 | Декомпозиция задач: диалоги                                    | U/reused                                                     | BMA                                                                      |
+| 2   | 241085260 | Системный анализ                                               | Δ r1/v2, I=0; D032 PLANNING container                        | Links are not contracts/traversal authority                              |
+| 3   | 241085256 | API                                                            | Δ r1/v2, I=0; D032 PLANNING container                        | Distinct from 247747363; children not thereby captured                   |
+| 4   | 238347066 | /skills - Каталог навыков                                      | U/reused; D032 next batch                                    | BMA; transport blocked, no page failure                                  |
+| 5   | 238352321 | /skills/{id} - Карточка навыка, описание                       | U/reused; D032 next batch                                    | BMA; transport blocked, no page failure                                  |
+| 6   | 241074633 | /skills/{id}/monitoring - Мониторинг навыка                    | U/reused; D032 next batch                                    | BMA; transport blocked, no page failure                                  |
+| 7   | 241080643 | /dialogs - Список диалогов                                     | U/reused                                                     | BMA                                                                      |
+| 8   | 241083649 | /dialogs/{id} - Карточка диалога                               | U/reused                                                     | BMA                                                                      |
+| 9   | 238350232 | /reports и /reports?tab=builder - Шаблон и конструктор отчётов | U/reused                                                     | BMA                                                                      |
+| 10  | 241102892 | RBAC - Роли, ресурсы и разрешения                              | U/reused                                                     | BMA; no auth implementation approval                                     |
+| 11  | 241092173 | Группы данных                                                  | Δ r1/v17, I=8; D032 DATA mixed ownership/context subset      | Eight attachment bodies unread                                           |
+| 12  | 241076726 | Модель данных                                                  | Δ r1/v20, I=2; D032 DATA mixed substantive body-model subset | Two files unread; embedded ERDs saved, not fully interpreted             |
+| 13  | 245678373 | Ролевая модель МПММ                                            | Δ r1/v1, I=1; D032 MPMM direct historical proposal           | PNG unread; no grants/editor approval                                    |
+| 14  | 241077052 | Бизнес-анализ: Админка                                         | Δ r1/v3, I=2; image-only structural extraction, r7           | Two images unread; not empty requirements or accepted overview semantics |
+| 15  | 243776365 | Бизнес-анализ: Диалоги                                         | B/reused r1/v13, I=0                                         | No snapshot BMA gap; no new semantic acceptance                          |
+| 16  | 241080062 | Админка. Навыки                                                | B/reused r1/v17, I=1                                         | SVG 245672060 uncollected/unread; readable derivative not new page       |
+| 17  | 245673187 | Бизнес-анализ: Поверхности                                     | B/reused r1/v18, I=0                                         | No snapshot BMA gap; no new semantic acceptance                          |
+| 18  | 247734813 | Раздел Обратная связь                                          | B/reused r1/v11, flattened text+links                        | Index absent; structural body conditional; known prototype pending       |
+| 19  | 247737907 | Раздел База знаний                                             | U/reused                                                     | BMA; no optional activation                                              |
+| 20  | 247747489 | Раздел Состояние системы (рубильники)                          | U/reused                                                     | BMA                                                                      |
+| 21  | 247744768 | Раздел Шаблоны ответов                                         | U/reused                                                     | BMA                                                                      |
+| 22  | 247751846 | Раздел Справочники                                             | Δ r1/v10, I=2; D027/028 corrected WD accepted                | Two prototype texts saved; D029 selected findings only                   |
+| 23  | 247747363 | Раздел API                                                     | Δ r1/v7, I=2; D027 WAR accepted                              | Two prototype texts saved; D029 selected API findings only               |
+| 24  | 247742436 | Раздел А/В Тестирование                                        | U/reused                                                     | BMA; no optional activation                                              |
+| 25  | 250794931 | Фильтрация списков                                             | U/reused                                                     | BMA                                                                      |
+| 26  | 241085263 | Черновые документы/заметки                                     | Δ r1/v4, I=0; D032 DATA container                            | Twelve child labels do not establish coverage                            |
+| 27  | 241080088 | Админка. Состояние системы                                     | U/reused                                                     | BMA; distinct from 247747489                                             |
+| 28  | 247728705 | Бизнес-анализ: Команды                                         | U/reused                                                     | BMA                                                                      |
+| 29  | 241080065 | Админка. Поверхности                                           | U/reused                                                     | BMA; not substituted by 245673187                                        |
+| 30  | 241080071 | Админка. Диалоги                                               | U/reused                                                     | BMA; not substituted by 243776365                                        |
+| 31  | 241080068 | Админка. Песочница                                             | U/reused                                                     | BMA                                                                      |
+| 32  | 241080082 | Админка. Отчеты                                                | U/reused                                                     | BMA; distinct from 238350232                                             |
+| 33  | 241080100 | Админка. Команды и доступ                                      | U/reused                                                     | BMA                                                                      |
+| 34  | 241080097 | Админка. Заглушки                                              | U/reused                                                     | BMA                                                                      |
+| 35  | 241080080 | Админка. Дашборд                                               | U/reused                                                     | BMA                                                                      |
+| 36  | 238329164 | Бизнес-анализ: Аутентификация и сеанс                          | U/reused                                                     | BMA; approved auth boundary retained                                     |
+| 37  | 238333356 | Бизнес-анализ: Роли и права                                    | U/reused                                                     | BMA; no new role model                                                   |
+| 38  | 238324852 | Ассессмент навыков                                             | Δ r1/v8, I=0; D032 MPMM direct operational proposal          | Not checking/review activation; unfinished flows                         |
+| 39  | 243761671 | Аналитическая справка по существующей админке МПММ             | Δ r1/v3, I=0; D032 MPMM mixed historical subset              | Historical estimates not verified runtime; links not covered             |
+| 40  | 243765248 | Бизнес-анализ. МПММ                                            | Δ r1/v8, I=7; D032 MPMM mixed integration/historical subset  | Seven PNGs unread; approved contracts first                              |
+| 41  | 250781168 | Журнал вопросов - для админки ЦАМ                              | Δ r1/v8, I=0; D024/025 all five data rows dispositioned      | Documentary routing only; downstream owner/implementation gaps           |
 
 ## Changed-entry provenance and accepted dispositions
 
 All fourteen retrieval dates below are **2026-10-19 UTC**; matching content files exist. Ten D031 and two dictionary/API packets save full `bodyView` strings and separate returned indexes. Journal saves `bodyView`/`bodyStorage`, with index in metadata. Overview saves selected `content.md`, not original HTML.
 
-| ID | Exact metadata path | Retrieval time; wiki version | Disposition |
-|---|---|---|---|
-| 241082618 | `sources/wiki-241082618/r1/metadata.json` | 09:36:51.968Z; v3 | PLANNING/D032 |
-| 241085260 | `sources/wiki-241085260/r1/metadata.json` | 09:36:52.127Z; v2 | PLANNING/D032 |
-| 241085256 | `sources/wiki-241085256/r1/metadata.json` | 09:36:52.261Z; v2 | PLANNING/D032 |
-| 241092173 | `sources/wiki-241092173/r1/metadata.json` | 09:37:05.459Z; v17 | DATA/D032 |
-| 241076726 | `sources/wiki-241076726/r1/metadata.json` | 09:37:07.198Z; v20 | DATA/D032 |
-| 241085263 | `sources/wiki-241085263/r1/metadata.json` | 09:37:07.403Z; v4 | DATA/D032 |
-| 245678373 | `sources/wiki-245678373/r1/metadata.json` | 09:37:20.568Z; v1 | MPMM/D032 |
-| 238324852 | `sources/wiki-238324852/r1/metadata.json` | 09:37:20.708Z; v8 | MPMM/D032 |
-| 243761671 | `sources/wiki-243761671/r1/metadata.json` | 09:37:21.097Z; v3 | MPMM/D032 |
-| 243765248 | `sources/wiki-243765248/r1/metadata.json` | 09:37:21.481Z; v8 | MPMM/D032 |
-| 241077052 | `sources/wiki-241077052/r1/metadata.json` | 08:24:09.633Z; v3 | r7 sourceAdditions; capture, not image review |
-| 250781168 | `sources/wiki-250781168/r1/metadata.json` | 08:24:54.988Z; v8 | D024/025; r7/r8 |
-| 247751846 | `sources/wiki-247751846/r1/metadata.json` | 09:01:10.646Z; v10 | D027/028; r9/r10; D029 attachments |
-| 247747363 | `sources/wiki-247747363/r1/metadata.json` | 09:01:11.011Z; v7 | D027; r9/r10; D029 attachments |
+| ID        | Exact metadata path                       | Retrieval time; wiki version | Disposition                                   |
+| --------- | ----------------------------------------- | ---------------------------- | --------------------------------------------- |
+| 241082618 | `sources/wiki-241082618/r1/metadata.json` | 09:36:51.968Z; v3            | PLANNING/D032                                 |
+| 241085260 | `sources/wiki-241085260/r1/metadata.json` | 09:36:52.127Z; v2            | PLANNING/D032                                 |
+| 241085256 | `sources/wiki-241085256/r1/metadata.json` | 09:36:52.261Z; v2            | PLANNING/D032                                 |
+| 241092173 | `sources/wiki-241092173/r1/metadata.json` | 09:37:05.459Z; v17           | DATA/D032                                     |
+| 241076726 | `sources/wiki-241076726/r1/metadata.json` | 09:37:07.198Z; v20           | DATA/D032                                     |
+| 241085263 | `sources/wiki-241085263/r1/metadata.json` | 09:37:07.403Z; v4            | DATA/D032                                     |
+| 245678373 | `sources/wiki-245678373/r1/metadata.json` | 09:37:20.568Z; v1            | MPMM/D032                                     |
+| 238324852 | `sources/wiki-238324852/r1/metadata.json` | 09:37:20.708Z; v8            | MPMM/D032                                     |
+| 243761671 | `sources/wiki-243761671/r1/metadata.json` | 09:37:21.097Z; v3            | MPMM/D032                                     |
+| 243765248 | `sources/wiki-243765248/r1/metadata.json` | 09:37:21.481Z; v8            | MPMM/D032                                     |
+| 241077052 | `sources/wiki-241077052/r1/metadata.json` | 08:24:09.633Z; v3            | r7 sourceAdditions; capture, not image review |
+| 250781168 | `sources/wiki-250781168/r1/metadata.json` | 08:24:54.988Z; v8            | D024/025; r7/r8                               |
+| 247751846 | `sources/wiki-247751846/r1/metadata.json` | 09:01:10.646Z; v10           | D027/028; r9/r10; D029 attachments            |
+| 247747363 | `sources/wiki-247747363/r1/metadata.json` | 09:01:11.011Z; v7            | D027; r9/r10; D029 attachments                |
 
 Exact accepted artifact chains:
 
@@ -111,17 +111,17 @@ D022 accepted root r2 separately from r1. `sources/wiki-238324523/r2/metadata.js
 
 The 17 indexed captured root children contain **25 returned entries**: four saved prototype texts and **21 unread bodies** (18 D031, two overview, one skills SVG). This is a subtotal over known indexes, not the whole root/global attachment population: feedback lacks an index and 24 pages lack packets. Feedback's prototype is a separate pending discovery edge, not an exhaustive attachment inventory.
 
-| Parent | Exact indexed attachment IDs | Body/review state |
-|---|---|---|
-| 241092173 | 241105744, 241105743, 243764790, 243764789, 243764775, 243764773, 243764772, 243764759 | Eight unread: previews/mxfile/drafts not interpreted from names |
-| 241076726 | 241078199, 241078198 | Two unread ERD files; embedded page SVG/viewer payload not equivalent to full ERD review |
-| 245678373 | 245678191 | PNG unread; role prose substantive independently |
-| 243765248 | 245678564, 245678561, 245678560, 245678554, 245678553, 245678547, 245678536 | Seven PNGs unread |
-| 241077052 | 241080074, 241080073 | Two PNGs unread; first observed in body; not proof of absent requirements |
-| 241080062 | 245672060 | SVG uncollected/unread; baseline retained |
-| 247751846 | 250805153 v1, 247751845 v1 | Saved inert decoded text; D029 ADP01–10 selected findings |
-| 247747363 | 250800526 v2, 247747361 v1 | Saved inert decoded text; D029 AAP01–11 selected API findings |
-| 247734813 | No index; prototype at `content.json#/links/0/href` | Prototype body pending; no complete index/table assurance |
+| Parent    | Exact indexed attachment IDs                                                           | Body/review state                                                                        |
+| --------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| 241092173 | 241105744, 241105743, 243764790, 243764789, 243764775, 243764773, 243764772, 243764759 | Eight unread: previews/mxfile/drafts not interpreted from names                          |
+| 241076726 | 241078199, 241078198                                                                   | Two unread ERD files; embedded page SVG/viewer payload not equivalent to full ERD review |
+| 245678373 | 245678191                                                                              | PNG unread; role prose substantive independently                                         |
+| 243765248 | 245678564, 245678561, 245678560, 245678554, 245678553, 245678547, 245678536            | Seven PNGs unread                                                                        |
+| 241077052 | 241080074, 241080073                                                                   | Two PNGs unread; first observed in body; not proof of absent requirements                |
+| 241080062 | 245672060                                                                              | SVG uncollected/unread; baseline retained                                                |
+| 247751846 | 250805153 v1, 247751845 v1                                                             | Saved inert decoded text; D029 ADP01–10 selected findings                                |
+| 247747363 | 250800526 v2, 247747361 v1                                                             | Saved inert decoded text; D029 AAP01–11 selected API findings                            |
+| 247734813 | No index; prototype at `content.json#/links/0/href`                                    | Prototype body pending; no complete index/table assurance                                |
 
 Four prototype packets: `sources/wiki-attachment-ID/r1/{metadata.json,content.txt}` for the explicit IDs above. HTTP200 times respectively 09:15:21.883Z, 09:15:21.941Z, 09:15:22.006Z, 09:15:22.071Z on 2026-10-19. Browser-decoded UTF-8 text, not independently verified original wire bytes. Metadata's “analysis pending” is historical after D029.
 
@@ -142,18 +142,18 @@ Transport remains blocked **for this run**. This is a resume queue, not alternat
 
 Each batch requests BMA only: body/extraction, actual provenance/version metadata and returned attachment index, with explicit zero/pagination or actual failure. Max four pages. Index permission is not attachment download permission. Remaining direct-root authority is retained by the work item and D030/D032, not new auth/feature implementation scope.
 
-| Batch | Exact IDs | Root r2 links.txt lines | Existing gap |
-|---|---|---|---|
-| Skills first | 238347066, 238352321, 241074633 | 5, 6, 7 | D032 explicit next batch; all three canonical directories locally absent |
-| Dialogs | 245670575, 241080643, 241083649, 241080071 | 2, 8, 9, 31 | Four BMA gaps |
-| Auth/access | 241102892, 238329164, 238333356, 241080100 | 11, 37, 38, 34 | Documentary only, no auth model/editor approval |
-| Optional | 247737907, 247742436 | 20, 25 | BMA, no activation |
-| Reports | 238350232, 241080082 | 10, 33 | Distinct IDs |
-| System state | 247747489, 241080088 | 21, 28 | Distinct IDs |
-| Templates/stubs | 247744768, 241080097 | 22, 35 | Baseline batch minus captured dictionary 247751846 |
-| Teams/surfaces | 247728705, 241080065 | 29, 30 | BMA |
-| Admin tools | 250794931, 241080068, 241080080 | 26, 32, 36 | Baseline batch minus captured API 247747363 |
-| Separate feedback repair | 247734813 | 19 | Index; structural body only if table-sensitive need; retain r1 |
+| Batch                    | Exact IDs                                  | Root r2 links.txt lines | Existing gap                                                             |
+| ------------------------ | ------------------------------------------ | ----------------------- | ------------------------------------------------------------------------ |
+| Skills first             | 238347066, 238352321, 241074633            | 5, 6, 7                 | D032 explicit next batch; all three canonical directories locally absent |
+| Dialogs                  | 245670575, 241080643, 241083649, 241080071 | 2, 8, 9, 31             | Four BMA gaps                                                            |
+| Auth/access              | 241102892, 238329164, 238333356, 241080100 | 11, 37, 38, 34          | Documentary only, no auth model/editor approval                          |
+| Optional                 | 247737907, 247742436                       | 20, 25                  | BMA, no activation                                                       |
+| Reports                  | 238350232, 241080082                       | 10, 33                  | Distinct IDs                                                             |
+| System state             | 247747489, 241080088                       | 21, 28                  | Distinct IDs                                                             |
+| Templates/stubs          | 247744768, 241080097                       | 22, 35                  | Baseline batch minus captured dictionary 247751846                       |
+| Teams/surfaces           | 247728705, 241080065                       | 29, 30                  | BMA                                                                      |
+| Admin tools              | 250794931, 241080068, 241080080            | 26, 32, 36              | Baseline batch minus captured API 247747363                              |
+| Separate feedback repair | 247734813                                  | 19                      | Index; structural body only if table-sensitive need; retain r1           |
 
 Nine missing-page batches cover all 24 absent IDs once each. They are existing direct-root batches reduced by captures, not new traversal from D031 containers. No duplicate root provenance, journal, overview, dictionary/API or held-page capture is proposed. Similar titles never substitute for exact IDs.
 

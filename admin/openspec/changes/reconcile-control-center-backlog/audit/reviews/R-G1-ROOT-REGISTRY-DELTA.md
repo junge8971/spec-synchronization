@@ -17,16 +17,16 @@ Paths below are relative to `openspec/changes/reconcile-control-center-backlog/a
 
 Compared the complete target report and original work-item with the accepted baseline, root r1 ID records and r2 hrefs. This reused established membership rather than conducting a new census.
 
-| Check | Result |
-|---|---|
-| Ledger identity | All 42 ordered IDs and baseline labels match `sources/wiki-238324523/r1/content.json:8–49`; href locators match `r2/links.txt:1–42`. |
-| Baseline captures | Four: 243776365, 241080062, 245673187, 247734813. |
-| Additions | Ten D031 pages plus 241077052, 250781168, 247751846 and 247747363: **14**. |
+| Check                      | Result                                                                                                                                                                            |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ledger identity            | All 42 ordered IDs and baseline labels match `sources/wiki-238324523/r1/content.json:8–49`; href locators match `r2/links.txt:1–42`.                                              |
+| Baseline captures          | Four: 243776365, 241080062, 245673187, 247734813.                                                                                                                                 |
+| Additions                  | Ten D031 pages plus 241077052, 250781168, 247751846 and 247747363: **14**.                                                                                                        |
 | Current canonical coverage | **4 + 14 = 18** captured; **42 − 18 = 24** absent. Canonical files were present for the captured IDs; all 24 missing IDs were absent from the inspected source-directory listing. |
-| Returned indexes | **18 − feedback = 17**. Fourteen additions have exhausted returned indexes; three unchanged baseline indexes are reused from accepted baseline evidence. |
-| Known indexed entries | **8 + 2 + 1 + 7 + 2 + 1 + 2 + 2 = 25**. |
-| Saved attachment bodies | Four inert prototype texts, with matching parent IDs and versions **1/1/2/1**. |
-| Unread indexed bodies | **18 D031 + 2 overview + 1 skills SVG = 21**; **4 + 21 = 25**. |
+| Returned indexes           | **18 − feedback = 17**. Fourteen additions have exhausted returned indexes; three unchanged baseline indexes are reused from accepted baseline evidence.                          |
+| Known indexed entries      | **8 + 2 + 1 + 7 + 2 + 1 + 2 + 2 = 25**.                                                                                                                                           |
+| Saved attachment bodies    | Four inert prototype texts, with matching parent IDs and versions **1/1/2/1**.                                                                                                    |
+| Unread indexed bodies      | **18 D031 + 2 overview + 1 skills SVG = 21**; **4 + 21 = 25**.                                                                                                                    |
 
 All fourteen changed metadata files were read directly. Their IDs, retrieval timestamps, external versions and content filenames match the report’s provenance table. All ten D031 records also match `collection-D031-held-pages.json`.
 
@@ -47,17 +47,17 @@ The feedback prototype at `sources/wiki-247734813/r1/content.json:12` remains a 
 
 Independently compared each batch with the missing ledger rows and saved root href positions.
 
-| Batch | Exact IDs | Root r2 href lines |
-|---|---|---|
-| Skills | 238347066, 238352321, 241074633 | 5, 6, 7 |
-| Dialogs | 245670575, 241080643, 241083649, 241080071 | 2, 8, 9, 31 |
-| Auth/access | 241102892, 238329164, 238333356, 241080100 | 11, 37, 38, 34 |
-| Optional | 247737907, 247742436 | 20, 25 |
-| Reports | 238350232, 241080082 | 10, 33 |
-| System state | 247747489, 241080088 | 21, 28 |
-| Templates/stubs | 247744768, 241080097 | 22, 35 |
-| Teams/surfaces | 247728705, 241080065 | 29, 30 |
-| Admin tools | 250794931, 241080068, 241080080 | 26, 32, 36 |
+| Batch           | Exact IDs                                  | Root r2 href lines |
+| --------------- | ------------------------------------------ | ------------------ |
+| Skills          | 238347066, 238352321, 241074633            | 5, 6, 7            |
+| Dialogs         | 245670575, 241080643, 241083649, 241080071 | 2, 8, 9, 31        |
+| Auth/access     | 241102892, 238329164, 238333356, 241080100 | 11, 37, 38, 34     |
+| Optional        | 247737907, 247742436                       | 20, 25             |
+| Reports         | 238350232, 241080082                       | 10, 33             |
+| System state    | 247747489, 241080088                       | 21, 28             |
+| Templates/stubs | 247744768, 241080097                       | 22, 35             |
+| Teams/surfaces  | 247728705, 241080065                       | 29, 30             |
+| Admin tools     | 250794931, 241080068, 241080080            | 26, 32, 36         |
 
 **3 + 4 + 4 + 2 + 2 + 2 + 2 + 2 + 3 = 24**, with no duplicate or already captured ID. Each batch contains at most four pages.
 

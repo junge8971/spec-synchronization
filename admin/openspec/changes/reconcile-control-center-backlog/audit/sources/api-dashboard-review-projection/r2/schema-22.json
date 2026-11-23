@@ -20,10 +20,7 @@
       }
     },
     "type": "object",
-    "required": [
-      "date",
-      "value"
-    ],
+    "required": ["date", "value"],
     "title": "SeriesPointResponse"
   }
 }

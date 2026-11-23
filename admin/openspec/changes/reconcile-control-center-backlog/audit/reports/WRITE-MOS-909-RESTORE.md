@@ -14,28 +14,28 @@ No application/test edits, main-spec/archive edits, auth/models/API/transport/mo
 
 Target directory was absent at preflight; every artifact baseline is **absent**, not an empty-file digest. Metadata is native scaffold output. The report itself is the sole additional authorized output; its self-hash is intentionally not embedded.
 
-| Path | Before | After SHA-256 |
-|---|---|---|
-| `openspec/changes/mos-909-restore-approved-lifecycle-actions/.openspec.yaml` | absent | `b552ab6519df8f66b705724100f565c5cd842bc9389aeaa177da9cec3d02a685` |
-| `openspec/changes/mos-909-restore-approved-lifecycle-actions/design.md` | absent | `ce5c459eee2c491e70c773e24f5ef5530734faf26730bf0c6ca2e2413224e49b` |
-| `openspec/changes/mos-909-restore-approved-lifecycle-actions/proposal.md` | absent | `03df2244a11422a244b860bf0d29d424174603b4f0669c012e14f12d6043f30d` |
+| Path                                                                                        | Before | After SHA-256                                                      |
+| ------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------ |
+| `openspec/changes/mos-909-restore-approved-lifecycle-actions/.openspec.yaml`                | absent | `b552ab6519df8f66b705724100f565c5cd842bc9389aeaa177da9cec3d02a685` |
+| `openspec/changes/mos-909-restore-approved-lifecycle-actions/design.md`                     | absent | `ce5c459eee2c491e70c773e24f5ef5530734faf26730bf0c6ca2e2413224e49b` |
+| `openspec/changes/mos-909-restore-approved-lifecycle-actions/proposal.md`                   | absent | `03df2244a11422a244b860bf0d29d424174603b4f0669c012e14f12d6043f30d` |
 | `openspec/changes/mos-909-restore-approved-lifecycle-actions/specs/skill-lifecycle/spec.md` | absent | `d75265e70aef97dce00dd6b044bcf13011f508d134830b1e927f0ac526a95ed0` |
-| `openspec/changes/mos-909-restore-approved-lifecycle-actions/tasks.md` | absent | `d64b2c25d0aef7d7a9b7f48717a4bf2ba5a1a49dc08eb4d1ae3f1a9f0b6f6172` |
+| `openspec/changes/mos-909-restore-approved-lifecycle-actions/tasks.md`                      | absent | `d64b2c25d0aef7d7a9b7f48717a4bf2ba5a1a49dc08eb4d1ae3f1a9f0b6f6172` |
 
 ## Source freshness
 
 The first three anchors were computed before scaffold and rechecked after all artifacts, matching the assignment exactly. Remaining hashes match the corrected IMPL report. No material source change was found; source inspection remained read-only.
 
-| Source | SHA-256 |
-|---|---|
+| Source                                                                | SHA-256                                                            |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | `app/features/skill-lifecycle/constants/skill-lifecycle.constants.ts` | `d6de7f6bf778308a900e8f99cbe983380019202c18de44803180375313fe4e3e` |
-| `app/widgets/skill-details/ui/skill-lifecycle.test.tsx` | `32f12cc726f767880c4bb4e34d640c580abe942a5570e295ef4b31e6158a7645` |
-| `openspec/specs/skill-lifecycle/spec.md` | `0d568a12a535816dae50fe6831d8a8b1232d360a5ea0649a5526b9e43bfbf30c` |
-| `app/features/skill-lifecycle/model/use-skill-lifecycle.ts` | `8c5a90a1d39522a4d30138677c19da82b1d70577419bc0cf688f5aa8c509ae0d` |
-| `app/features/skill-lifecycle/handlers/skill-lifecycle-handlers.ts` | `acc50ac92ab552659cb8710aa37a46098145607240791b437c357bb4cd2e71e0` |
-| `app/features/skill-lifecycle/ui/skill-lifecycle.tsx` | `fe99d1cdc3960e1d5246e147dff47bb7a1129fac74351a7797cd32040c1933e7` |
-| `app/entities/skill/api/skill-details-client.ts` | `de83617451674b4906697a3270c037ae7ff15b3abc0db710c76b3611cb9fd5f6` |
-| `app/entities/skill/model/use-change-skill-status-mutation.ts` | `3a08a27c6a404b824d2a077ba9ef4af5040eb940c17b86f03c991147df0ae10b` |
+| `app/widgets/skill-details/ui/skill-lifecycle.test.tsx`               | `32f12cc726f767880c4bb4e34d640c580abe942a5570e295ef4b31e6158a7645` |
+| `openspec/specs/skill-lifecycle/spec.md`                              | `0d568a12a535816dae50fe6831d8a8b1232d360a5ea0649a5526b9e43bfbf30c` |
+| `app/features/skill-lifecycle/model/use-skill-lifecycle.ts`           | `8c5a90a1d39522a4d30138677c19da82b1d70577419bc0cf688f5aa8c509ae0d` |
+| `app/features/skill-lifecycle/handlers/skill-lifecycle-handlers.ts`   | `acc50ac92ab552659cb8710aa37a46098145607240791b437c357bb4cd2e71e0` |
+| `app/features/skill-lifecycle/ui/skill-lifecycle.tsx`                 | `fe99d1cdc3960e1d5246e147dff47bb7a1129fac74351a7797cd32040c1933e7` |
+| `app/entities/skill/api/skill-details-client.ts`                      | `de83617451674b4906697a3270c037ae7ff15b3abc0db710c76b3611cb9fd5f6` |
+| `app/entities/skill/model/use-change-skill-status-mutation.ts`        | `3a08a27c6a404b824d2a077ba9ef4af5040eb940c17b86f03c991147df0ae10b` |
 
 ## Commands and results
 

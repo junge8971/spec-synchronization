@@ -23,11 +23,13 @@ Accepted R02 requires columns and labels from metadata export_fields. The correc
 ## Exact old/new text (replacement span within line 9)
 
 Old:
+
 ```text
 минимум одно уникальное поле обязательно. Вложенные данные
 ```
 
 New:
+
 ```text
 минимум одно уникальное поле обязательно. Подписи колонок SHALL браться из metadata export_fields. Вложенные данные
 ```

@@ -4,30 +4,32 @@
 
 Inventory only, under `work-items/JIRA-MOS-780.md` and the superseding `work-items/JIRA-INVENTORY-HANDOFF.md`. Paths below are relative to the audit root; JSON locators are zero-based. No business-semantic or implementation assessment performed.
 
-| Saved source | Retrieval timestamp | Exact locator / use |
-| --- | --- | --- |
-| `sources/jira-hierarchy/r1/content.json` | `2026-10-16T11:08:08.629Z` | `$.results[14]`: assigned module; `$.retrievedAt`, `$.method`, `$.classification`, `$.pagination`: provenance and caveats |
-| `sources/jira-member-index/r1/content.json` | `2026-10-16T11:20:38.570Z` | `$.items[89]`: sole assigned member; `$.retrievedAt` |
-| `sources/jira-member-index/r1/metadata.json` | `2026-10-16T11:20:38.570Z` | `$.fields`, `$.limitations`, `$.method`: selected-field collection, not full issue detail |
-| `sources/jira-subtasks/r1/content.json` | `2026-10-16T11:23:01.951Z` | `$.items[*].parent` and `$.items[*].key`: structural reconciliation against assigned keys; `$.retrievedAt` |
-| `sources/jira-subtasks/r1/metadata.json` | `2026-10-16T11:23:01.951Z` | `$.limitations`: attachments enumerated only, comments/custom acceptance fields not collected |
+| Saved source                                 | Retrieval timestamp        | Exact locator / use                                                                                                       |
+| -------------------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `sources/jira-hierarchy/r1/content.json`     | `2026-10-16T11:08:08.629Z` | `$.results[14]`: assigned module; `$.retrievedAt`, `$.method`, `$.classification`, `$.pagination`: provenance and caveats |
+| `sources/jira-member-index/r1/content.json`  | `2026-10-16T11:20:38.570Z` | `$.items[89]`: sole assigned member; `$.retrievedAt`                                                                      |
+| `sources/jira-member-index/r1/metadata.json` | `2026-10-16T11:20:38.570Z` | `$.fields`, `$.limitations`, `$.method`: selected-field collection, not full issue detail                                 |
+| `sources/jira-subtasks/r1/content.json`      | `2026-10-16T11:23:01.951Z` | `$.items[*].parent` and `$.items[*].key`: structural reconciliation against assigned keys; `$.retrievedAt`                |
+| `sources/jira-subtasks/r1/metadata.json`     | `2026-10-16T11:23:01.951Z` | `$.limitations`: attachments enumerated only, comments/custom acceptance fields not collected                             |
 
 ## Observed module and member
 
 `jira-hierarchy/r1/content.json:$.results[14]` has `key: "MOS-780"`, `type: "Q key result"`, and `children: ["MOS-713"]`. This is not a literal Epic. The saved module entry contains no summary, status, updated timestamp, description, attachments, comments, custom acceptance fields, or `subtasks` field. Its `children` array is present and nonempty.
 
-| Member | Summary | Type | Status | Issue updated | Exact identity and membership locators |
-| --- | --- | --- | --- | --- | --- |
+| Member  | Summary                                                                         | Type             | Status | Issue updated                  | Exact identity and membership locators                                                                                                                                           |
+| ------- | ------------------------------------------------------------------------------- | ---------------- | ------ | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | MOS-713 | [B] Подготовить контракты шаблонов отчётов, конструктора, выгрузок и расписания | Development task | Review | `2026-10-09T15:06:30.638+0800` | `sources/jira-hierarchy/r1/content.json:$.results[14].children[0]`; `sources/jira-member-index/r1/content.json:$.items[89]` (`.key`, `.summary`, `.type`, `.status`, `.updated`) |
 
 ### Coverage and nesting
 
 At `sources/jira-member-index/r1/content.json:$.items[89]`:
+
 - `subtasks` is explicitly present as `[]`; zero nested keys are advertised in this snapshot.
 - `parent` is absent, not an empty object or array. The MOS-780 → MOS-713 link is established by the hierarchy packet, not a member-index parent field.
 - `description`, `attachments`, `comments`, and custom acceptance fields are absent. Full-description, attachment, comment, and custom acceptance coverage is unavailable, not empty or proven unnecessary.
 
 Structural reconciliation of actual saved packets:
+
 - MOS-780 occurs once as a hierarchy module, at `$.results[14]`.
 - Its one child occurrence is one distinct key: MOS-713. Checking only membership keys across hierarchy entries found MOS-713 only at `$.results[14].children[0]`; no duplicate/cross-module assignment observed.
 - MOS-713 occurs exactly once in member-index `$.items[*].key`, at index 89. Missing assigned index keys: none. Duplicate assigned index keys: none.

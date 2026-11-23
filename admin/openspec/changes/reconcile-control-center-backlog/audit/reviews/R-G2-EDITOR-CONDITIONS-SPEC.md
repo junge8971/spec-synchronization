@@ -4,12 +4,12 @@
 
 **Accept the no-op disposition.** E01–E10 are covered collectively by the owner artifacts:
 
-| Mapping | Verified owner evidence |
-|---|---|
+| Mapping | Verified owner evidence                                                                            |
+| ------- | -------------------------------------------------------------------------------------------------- |
 | E01–E02 | `mos-1251-feedback-editor/specs/feedback-editor/spec.md:9–11`; `design.md:29–35`; `tasks.md:3,6–7` |
-| E03–E04 | `specs/feedback-editor/spec.md:20–47`; `design.md:37`; `tasks.md:4` |
-| E05–E07 | `specs/feedback-editor/spec.md:51–70`; `design.md:33–41,47–51`; `tasks.md:5–7,13` |
-| E08–E10 | `specs/feedback-editor/spec.md:11–28,55–89`; `design.md:35,45–55`; `tasks.md:5–7,11` |
+| E03–E04 | `specs/feedback-editor/spec.md:20–47`; `design.md:37`; `tasks.md:4`                                |
+| E05–E07 | `specs/feedback-editor/spec.md:51–70`; `design.md:33–41,47–51`; `tasks.md:5–7,13`                  |
+| E08–E10 | `specs/feedback-editor/spec.md:11–28,55–89`; `design.md:35,45–55`; `tasks.md:5–7,11`               |
 
 Paths above are relative to `openspec/changes/`. No material citation or coverage correction identified. Preserve PUT, explicit null/default distinctions, Q1 unselected, and foundation → questions/labels → final composition acceptance. General component/error coverage does not require another task per requirement.
 
@@ -30,6 +30,7 @@ Inactive-code verification and preservation are distributed across `tasks.md:3` 
 Accepted requirement `audit/reports/REQ-G2-MOS-1258.md:31` requires a 422 JSON Pointer error **at the affected condition**, retaining input.
 
 The incorporated API foundation already covers:
+
 - Preservation of status/code/message and all nested pointers: `mos-1249-feedback-api/specs/feedback-api/spec.md:9,18–19`.
 - A condition-value pointer example: `mos-1249-feedback-api/design.md:54`.
 - Shared 409/422 pointer verification: `mos-1249-feedback-api/tasks.md:4`.

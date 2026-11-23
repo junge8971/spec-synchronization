@@ -11,10 +11,10 @@
 
 ## Атомарное требование и сверка
 
-| Атом / locator | Expected из тела | Observed в текущем репозитории | Unknown |
-| --- | --- | --- | --- |
-| R1 — `/items/1/description`, запрос и ОР | `GET /api/control/api/assistant-modules/v1/modules?limit=20&offset=0`: при шести найденных модулях `data.items` содержит все 6 | API содержит этот GET и массив `ModuleListResponse.items`. Mock передаёт весь отфильтрованный массив в `page`, а тот возвращает `slice(0,20)`; при входных 6 элементах статически получается 6 | Реальный ответ backend, состав шести модулей и исправление исходного дефекта не доступны |
-| R2 — тот же locator, ФР/ОР | `pagination.total_items=6` не должен сочетаться с единственным элементом первой страницы при limit=20 | `mocks/list.mjs:3–15`: items и total_items вычисляются из одного массива; total_items — размер всей выборки. Тест `mocks/assistant-modules.test.mjs:34–91` проверяет все 3 seed-модуля с total_items=3, отдельную страницу и выход за конец | Нет прочитанного точного теста с шестью модулями; существующий тест не исполнялся. Схема сама по себе не запрещает расхождение длины items и total_items |
+| Атом / locator                           | Expected из тела                                                                                                               | Observed в текущем репозитории                                                                                                                                                                                                              | Unknown                                                                                                                                                  |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| R1 — `/items/1/description`, запрос и ОР | `GET /api/control/api/assistant-modules/v1/modules?limit=20&offset=0`: при шести найденных модулях `data.items` содержит все 6 | API содержит этот GET и массив `ModuleListResponse.items`. Mock передаёт весь отфильтрованный массив в `page`, а тот возвращает `slice(0,20)`; при входных 6 элементах статически получается 6                                              | Реальный ответ backend, состав шести модулей и исправление исходного дефекта не доступны                                                                 |
+| R2 — тот же locator, ФР/ОР               | `pagination.total_items=6` не должен сочетаться с единственным элементом первой страницы при limit=20                          | `mocks/list.mjs:3–15`: items и total_items вычисляются из одного массива; total_items — размер всей выборки. Тест `mocks/assistant-modules.test.mjs:34–91` проверяет все 3 seed-модуля с total_items=3, отдельную страницу и выход за конец | Нет прочитанного точного теста с шестью модулями; существующий тест не исполнялся. Схема сама по себе не запрещает расхождение длины items и total_items |
 
 R1/R2 — две проверяемые стороны одного дефекта, не два новых feature scope. Нельзя обобщать ОР до `items.length === total_items` на всех страницах: это верно здесь из-за offset=0 и limit=20 > 6.
 
@@ -40,22 +40,22 @@ R1/R2 — две проверяемые стороны одного дефект
 
 Хэши вычислены локально по байтам, не взяты на веру из metadata.
 
-| Файл | SHA256 |
-| --- | --- |
-| audit/work-items/WAVE-D090-REVIEW-NEXT.md | fdf9ed7a57cc427bf9feb58639fe976fb2f76fb1bd9082c0f1626649cfdfcc72 |
-| audit/work-items/WAVE-D090-EIGHT.md | 98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b |
-| audit/sources/jira-subtasks/r1/content.json | c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e |
-| audit/sources/jira-subtasks/r1/metadata.json | d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20 |
-| audit/sources/jira-member-index/r1/content.json | dba6cffa66e0aef23e9ef34c4a52215a5c02d31e7da1dca87888e821198b8043 |
-| audit/coverage.json | e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b |
-| audit/reports/JIRA-MOS-771.md | 1b911c0bd65d28ccdf03bc8efe10a8a6bfe58cf23d6aef9c7a1e91f3f3aba899 |
-| openspec/specs/control-center-mock-server/spec.md | 54cd451a911c13129fbf8be64b06f920a837d4c816255f6ee6f5ee65f4406588 |
+| Файл                                                                                                           | SHA256                                                           |
+| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| audit/work-items/WAVE-D090-REVIEW-NEXT.md                                                                      | fdf9ed7a57cc427bf9feb58639fe976fb2f76fb1bd9082c0f1626649cfdfcc72 |
+| audit/work-items/WAVE-D090-EIGHT.md                                                                            | 98e63a056d15acd94e6bcf2fa78065bc5ea4ebf9ddc2bcf13cfaf2b3900f871b |
+| audit/sources/jira-subtasks/r1/content.json                                                                    | c4c86b024d8e0ef30bd5234eb13ee2a9a85d4fa29eeb9cb2a37c024d75d3652e |
+| audit/sources/jira-subtasks/r1/metadata.json                                                                   | d9c0f1c289e6f2d675b5cc07994956fa039e846919b08726d637f027279cfe20 |
+| audit/sources/jira-member-index/r1/content.json                                                                | dba6cffa66e0aef23e9ef34c4a52215a5c02d31e7da1dca87888e821198b8043 |
+| audit/coverage.json                                                                                            | e93adb588725fb39b55f278270ad33e4d7e9da8ac73ee4620d4c0293740d791b |
+| audit/reports/JIRA-MOS-771.md                                                                                  | 1b911c0bd65d28ccdf03bc8efe10a8a6bfe58cf23d6aef9c7a1e91f3f3aba899 |
+| openspec/specs/control-center-mock-server/spec.md                                                              | 54cd451a911c13129fbf8be64b06f920a837d4c816255f6ee6f5ee65f4406588 |
 | openspec/changes/archive/2026-09-28-update-assistant-modules-contract/specs/control-center-mock-server/spec.md | 53b521df7c1621fc12bca39d35f6490de9ff39078003b7e3e7a18a1ed629a6cb |
-| docs/api/contracts/assistant-modules.openapi.json | 79b96aff9cd84c88c2aee843a5d3f87f83ee999c25ee6e3e361f4bcb7a708052 |
-| docs/api/contracts/assistant-modules.md | 07390fd25dcba4be87387af11a60116a6709afcd559d9214908c2e1945fe4933 |
-| mocks/assistant-modules.mjs | 0694eaff9bc872fc1fcd252d4fe76bbf7edd158c4495f78d402b311201f9ef23 |
-| mocks/list.mjs | e1af394687dd92e656f0e0def06e3206a9eb217a43a5f366e6d410d622a34b7c |
-| mocks/assistant-modules.test.mjs | 10f817be8e813fa4a03b50fdbbe6e471d0c4cabd729c932e612c816f8cbf5242 |
+| docs/api/contracts/assistant-modules.openapi.json                                                              | 79b96aff9cd84c88c2aee843a5d3f87f83ee999c25ee6e3e361f4bcb7a708052 |
+| docs/api/contracts/assistant-modules.md                                                                        | 07390fd25dcba4be87387af11a60116a6709afcd559d9214908c2e1945fe4933 |
+| mocks/assistant-modules.mjs                                                                                    | 0694eaff9bc872fc1fcd252d4fe76bbf7edd158c4495f78d402b311201f9ef23 |
+| mocks/list.mjs                                                                                                 | e1af394687dd92e656f0e0def06e3206a9eb217a43a5f366e6d410d622a34b7c |
+| mocks/assistant-modules.test.mjs                                                                               | 10f817be8e813fa4a03b50fdbbe6e471d0c4cabd729c932e612c816f8cbf5242 |
 
 ```acceptance-report
 {

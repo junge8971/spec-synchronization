@@ -24,11 +24,11 @@ All paths are repository-relative. Serialized evidence is located by JSON pointe
 
 No application code was inspected. Independent SHA-256 recomputation matched saved metadata:
 
-| Capture | SHA-256 |
-|---|---|
+| Capture                 | SHA-256                                                            |
+| ----------------------- | ------------------------------------------------------------------ |
 | jira-reports-details/r1 | `c69d3aeaef6121d67440c61f06a0c8cb6b3c8ad605c7cfcec0653e7f7e5f234c` |
-| wiki-241085838/r1 | `797051024d296c8233d998d15894eaf35b6c6a02980fa37670430d0ae5da2d74` |
-| api-live/r1 | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
+| wiki-241085838/r1       | `797051024d296c8233d998d15894eaf35b6c6a02980fa37670430d0ae5da2d74` |
+| api-live/r1             | `549f70b756ee1c29982b176b75faa8a665f9083956bae96dcfbae85e3d3dff06` |
 
 Wiki content and metadata agree on version 3, dated 2026-09-09T17:12:02.625+08:00; body identifies contract v1.0 dated 08.09.2026. The saved live capture has no report path/schema name; exact `report-preview`, `report-export`, `field_codes`, and `ReportParameters` strings are absent. No newer revision was assumed or fetched.
 

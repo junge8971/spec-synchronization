@@ -4,13 +4,13 @@
 
 Inventory only, governed by `work-items/JIRA-MOS-768.md` and mandatory `work-items/JIRA-INVENTORY-HANDOFF.md`; the latter supersedes the pending-detail dependency. All paths below are relative to the audit root. Locators use zero-based JSON Pointers.
 
-| Saved packet | Collection timestamp (`/retrievedAt`) | Relevant locators |
-| --- | --- | --- |
-| `sources/jira-hierarchy/r1/content.json` | `2026-10-16T11:08:08.629Z` | `/results/3`, `/method`, `/classification`, `/pagination`, `/parentEvidence` |
-| `sources/jira-member-index/r1/content.json` | `2026-10-16T11:20:38.570Z` | `/items/38`–`/items/41`, `/scope` |
-| `sources/jira-member-index/r1/metadata.json` | `2026-10-16T11:20:38.570Z` | `/fields`, `/limitations`, `/method` |
-| `sources/jira-subtasks/r1/content.json` | `2026-10-16T11:23:01.951Z` | `/items` (checked keys and string-valued `parent` fields for assigned-key matches), `/scope` |
-| `sources/jira-subtasks/r1/metadata.json` | `2026-10-16T11:23:01.951Z` | `/limitations`, `/method`, `/redactions` |
+| Saved packet                                 | Collection timestamp (`/retrievedAt`) | Relevant locators                                                                            |
+| -------------------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `sources/jira-hierarchy/r1/content.json`     | `2026-10-16T11:08:08.629Z`            | `/results/3`, `/method`, `/classification`, `/pagination`, `/parentEvidence`                 |
+| `sources/jira-member-index/r1/content.json`  | `2026-10-16T11:20:38.570Z`            | `/items/38`–`/items/41`, `/scope`                                                            |
+| `sources/jira-member-index/r1/metadata.json` | `2026-10-16T11:20:38.570Z`            | `/fields`, `/limitations`, `/method`                                                         |
+| `sources/jira-subtasks/r1/content.json`      | `2026-10-16T11:23:01.951Z`            | `/items` (checked keys and string-valued `parent` fields for assigned-key matches), `/scope` |
+| `sources/jira-subtasks/r1/metadata.json`     | `2026-10-16T11:23:01.951Z`            | `/limitations`, `/method`, `/redactions`                                                     |
 
 MOS-768 appears once as a module entry, at hierarchy `/results/3`; observed type is **Q key result**, not literal Epic. Its four observed children are enumerated below. No MOS-768 issue object appears in either selected issue packet; its status, updated time and full issue fields are not established by this inventory. The hierarchy's `/parentEvidence` is a reference, not an independently inspected parent issue object here.
 
@@ -18,12 +18,12 @@ MOS-768 appears once as a module entry, at hierarchy `/results/3`; observed type
 
 `H` = hierarchy content; `I` = member-index content, at the paths above. Each row has one hierarchy occurrence and one index record; exact identity/status/update fields are under the listed index pointer (`/key`, `/summary`, `/type`, `/status`, `/updated`).
 
-| Member | Observed summary | Type | Status | Issue updated time | Exact membership / index locators |
-| --- | --- | --- | --- | --- | --- |
-| MOS-836 | [B] Реализовать модуль "Команды" | Development task | Ready for test | `2026-10-09T15:07:10.322+0800` | H `/results/3/children/0`; I `/items/38` |
-| MOS-931 | [B] Реализовать получение списка пользователей ЦАМ | Development task | Ready for test | `2026-10-09T15:05:35.272+0800` | H `/results/3/children/1`; I `/items/39` |
-| MOS-1032 | [FE][Команды] Создать список и обзор команд | Development task | Backlog | `2026-10-09T15:05:45.747+0800` | H `/results/3/children/2`; I `/items/40` |
-| MOS-1033 | [FE][Команды] Создать команду и управлять её составом | Development task | Backlog | `2026-10-09T15:05:23.793+0800` | H `/results/3/children/3`; I `/items/41` |
+| Member   | Observed summary                                      | Type             | Status         | Issue updated time             | Exact membership / index locators        |
+| -------- | ----------------------------------------------------- | ---------------- | -------------- | ------------------------------ | ---------------------------------------- |
+| MOS-836  | [B] Реализовать модуль "Команды"                      | Development task | Ready for test | `2026-10-09T15:07:10.322+0800` | H `/results/3/children/0`; I `/items/38` |
+| MOS-931  | [B] Реализовать получение списка пользователей ЦАМ    | Development task | Ready for test | `2026-10-09T15:05:35.272+0800` | H `/results/3/children/1`; I `/items/39` |
+| MOS-1032 | [FE][Команды] Создать список и обзор команд           | Development task | Backlog        | `2026-10-09T15:05:45.747+0800` | H `/results/3/children/2`; I `/items/40` |
+| MOS-1033 | [FE][Команды] Создать команду и управлять её составом | Development task | Backlog        | `2026-10-09T15:05:23.793+0800` | H `/results/3/children/3`; I `/items/41` |
 
 MOS-931's saved summary has a trailing space, omitted only in the display above.
 
@@ -34,10 +34,10 @@ MOS-931's saved summary has a trailing space, omitted only in the display above.
 
 ## Nested links and per-member field coverage
 
-| Member | Saved nested observation | Subtask-packet reconciliation | Full-field coverage |
-| --- | --- | --- | --- |
-| MOS-836 | I `/items/38/subtasks` = `[]` | No record with `parent = "MOS-836"`; no self-key record | Index present; description, attachments, comments and custom acceptance fields absent |
-| MOS-931 | I `/items/39/subtasks` = `[]` | No record with `parent = "MOS-931"`; no self-key record | Index present; description, attachments, comments and custom acceptance fields absent |
+| Member   | Saved nested observation      | Subtask-packet reconciliation                            | Full-field coverage                                                                   |
+| -------- | ----------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| MOS-836  | I `/items/38/subtasks` = `[]` | No record with `parent = "MOS-836"`; no self-key record  | Index present; description, attachments, comments and custom acceptance fields absent |
+| MOS-931  | I `/items/39/subtasks` = `[]` | No record with `parent = "MOS-931"`; no self-key record  | Index present; description, attachments, comments and custom acceptance fields absent |
 | MOS-1032 | I `/items/40/subtasks` = `[]` | No record with `parent = "MOS-1032"`; no self-key record | Index present; description, attachments, comments and custom acceptance fields absent |
 | MOS-1033 | I `/items/41/subtasks` = `[]` | No record with `parent = "MOS-1033"`; no self-key record | Index present; description, attachments, comments and custom acceptance fields absent |
 

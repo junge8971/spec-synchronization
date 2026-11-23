@@ -24,10 +24,10 @@ Paths are repository-relative. Let `A = openspec/changes/reconcile-control-cente
 
 Independently computed SHA-256 over local file bytes:
 
-| New evidence | Bytes | SHA-256 | Comparison |
-| --- | ---: | --- | --- |
-| `A/sources/wiki-241097511/r2/content.json` | 73058 | `710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47` | Matches work item and metadata |
-| `A/sources/wiki-241097511/r2/attachments.json` | 372 | `dce4311f74a29968dec10bca60a9caa34892ddc093647a099efe9a893d121812` | Matches metadata |
+| New evidence                                   | Bytes | SHA-256                                                            | Comparison                     |
+| ---------------------------------------------- | ----: | ------------------------------------------------------------------ | ------------------------------ |
+| `A/sources/wiki-241097511/r2/content.json`     | 73058 | `710e56e84b2d228d705dfe9b7fce1d8a0c38a0dbcce17b2ff9cf5b1240cc5f47` | Matches work item and metadata |
+| `A/sources/wiki-241097511/r2/attachments.json` |   372 | `dce4311f74a29968dec10bca60a9caa34892ddc093647a099efe9a893d121812` | Matches metadata               |
 
 Content and metadata agree on source ID `wiki-241097511`, HTTP 200, URL `https://wiki.mos-team.ru/rest/api/content/241097511?expand=body.view,version`, capture `2026-10-16T12:37:03.295Z`, and page `$.version.number = 6` (revision timestamp `2026-10-13T17:56:19.256+08:00`). Title: **API-контракт реестра доменов и каталога навыков**. Metadata records parent same-origin collection; local verification establishes saved-record consistency, not independent remote authenticity or deployment.
 
@@ -41,15 +41,15 @@ Direct membership is established by saved MOS-1018 `$.items[7].description`, und
 
 All new-source headings below are within `A/sources/wiki-241097511/r2/content.json`, `$.bodyView`.
 
-| Exact heading/pointer | New source says | MOS-1018 impact |
-| --- | --- | --- |
-| “Общая информация”; “1. Цель задачи” | Catalog viewing, creation and card modification; protection against duplicate execution/concurrent writes. | Scope is catalog CRUD, not phrase-conflict commands. |
-| “1.3 Модель навыка” → “Поля навыка”; “2.6 Получить карточку навыка” | Skill object includes integer `version`; card returns that model. | This document does not specify intents, persisted conflict readiness/checks or a phrase-check result. Its omission does not negate the saved API's checks. |
-| “2.8 Изменить карточку навыка” → “Изменяемые поля” | Card PATCH fields and `expected_version`, returning incremented version. | No phrase-set editing or send/status command is defined here. Do not substitute card PATCH for PUT intents or agreed send. |
-| “2.9 Обработка конкурентных и повторных команд” → “Версия объекта” | PATCH requires matching `expected_version`; successful changes increment version; mismatch gives 409 `VERSION_CONFLICT`. | Optimistic locking is not a certificate that all current unsaved phrases were checked, nor a binding of preflight output to those phrases. |
-| Same heading → “Идемпотентность” | Key binds method, URI and body in current-user context; same-key/same-body repeats return original status/body; changed body rejects. | Duplicate suppression does not establish current-input certification, persisted readiness or fresh validation on send. |
-| “2.5 Получить список навыков”; “2.6 Получить карточку навыка”; “2.8 Изменить карточку навыка” | Visibility/access checks are delegated to a separate authorization contract. | No approval of cross-team conflict-name disclosure, and no reason to remove neutral fallback or fetch hidden details. |
-| “2.10 Формат ошибок”; “4. Открытые вопросы” | Generic format/business-validation errors; catalog questions. | No phrase normalization boundary examples, exact/semantic handling, phrase-specific blocking error or send-revalidation policy. Generic 422 is not proof of these rules. |
+| Exact heading/pointer                                                                         | New source says                                                                                                                       | MOS-1018 impact                                                                                                                                                          |
+| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| “Общая информация”; “1. Цель задачи”                                                          | Catalog viewing, creation and card modification; protection against duplicate execution/concurrent writes.                            | Scope is catalog CRUD, not phrase-conflict commands.                                                                                                                     |
+| “1.3 Модель навыка” → “Поля навыка”; “2.6 Получить карточку навыка”                           | Skill object includes integer `version`; card returns that model.                                                                     | This document does not specify intents, persisted conflict readiness/checks or a phrase-check result. Its omission does not negate the saved API's checks.               |
+| “2.8 Изменить карточку навыка” → “Изменяемые поля”                                            | Card PATCH fields and `expected_version`, returning incremented version.                                                              | No phrase-set editing or send/status command is defined here. Do not substitute card PATCH for PUT intents or agreed send.                                               |
+| “2.9 Обработка конкурентных и повторных команд” → “Версия объекта”                            | PATCH requires matching `expected_version`; successful changes increment version; mismatch gives 409 `VERSION_CONFLICT`.              | Optimistic locking is not a certificate that all current unsaved phrases were checked, nor a binding of preflight output to those phrases.                               |
+| Same heading → “Идемпотентность”                                                              | Key binds method, URI and body in current-user context; same-key/same-body repeats return original status/body; changed body rejects. | Duplicate suppression does not establish current-input certification, persisted readiness or fresh validation on send.                                                   |
+| “2.5 Получить список навыков”; “2.6 Получить карточку навыка”; “2.8 Изменить карточку навыка” | Visibility/access checks are delegated to a separate authorization contract.                                                          | No approval of cross-team conflict-name disclosure, and no reason to remove neutral fallback or fetch hidden details.                                                    |
+| “2.10 Формат ошибок”; “4. Открытые вопросы”                                                   | Generic format/business-validation errors; catalog questions.                                                                         | No phrase normalization boundary examples, exact/semantic handling, phrase-specific blocking error or send-revalidation policy. Generic 422 is not proof of these rules. |
 
 Full inert body reading found no phrase-conflict/preflight, whole-input result-binding, persisted readiness-recalculation or server-on-send rule. This is **absence in this catalog document**, not absence across all evidence. Catalog uniqueness proposals are not phrase normalization rules; no unrelated domain or token decision is derived.
 

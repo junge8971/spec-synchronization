@@ -2,11 +2,11 @@
 
 ## Verdicts
 
-| Package | Verdict | Mandatory findings / exact patch |
-| --- | --- | --- |
-| fix-knowledge-base-export-limit-feedback | **ACCEPT** | None; no patch required. |
-| clarify-ab-testing-sample-size | **ACCEPT** | None; no patch required. |
-| fix-skill-domain-zone-read-compatibility | **ACCEPT** | None; no patch required. |
+| Package                                  | Verdict    | Mandatory findings / exact patch |
+| ---------------------------------------- | ---------- | -------------------------------- |
+| fix-knowledge-base-export-limit-feedback | **ACCEPT** | None; no patch required.         |
+| clarify-ab-testing-sample-size           | **ACCEPT** | None; no patch required.         |
+| fix-skill-domain-zone-read-compatibility | **ACCEPT** | None; no patch required.         |
 
 Planning-package acceptance only. Parent alone integrates accepted new directories; no implementation, runtime, deployed behavior, archive or feature acceptance follows.
 

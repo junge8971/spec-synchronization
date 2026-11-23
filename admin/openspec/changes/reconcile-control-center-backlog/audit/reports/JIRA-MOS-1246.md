@@ -18,20 +18,20 @@ All paths are repository-relative:
 
 MOS-1246 is **Q key result**, not a literal Epic. All 11 members are **Development task**. Membership comes from H, not from the standard `parent` field.
 
-| Key | Inventory label | Saved status | Saved `updated` (verbatim) | D lines |
-|---|---|---|---|---|
-| MOS-1246 | Module “Обратная связь” | Backlog | `2026-10-09T15:03:47.673+0800` | 5–13 |
-| MOS-1231 | Backend feedback section | Hold | `2026-10-13T14:28:07.591+0800` | 14–22 |
-| MOS-1249 | FE API, lookup values and metadata | Ready for test | `2026-10-16T18:44:03.867+0800` | 23–31 |
-| MOS-1250 | FE survey registry and basic filtering | Development | `2026-10-16T18:44:42.569+0800` | 32–40 |
-| MOS-1251 | FE survey card and display rules | Backlog | `2026-10-12T21:10:48.642+0800` | 41–49 |
-| MOS-1254 | FE question and option builder | Backlog | `2026-10-12T20:49:05.464+0800` | 50–58 |
-| MOS-1255 | FE interactive questionnaire preview | Backlog | `2026-10-12T20:49:12.702+0800` | 59–67 |
-| MOS-1256 | FE survey status changes and deletion | Backlog | `2026-10-12T21:13:38.503+0800` | 68–76 |
-| MOS-1257 | FE tags, segments and operator groups | Backlog | `2026-10-12T20:49:41.953+0800` | 77–85 |
-| MOS-1258 | FE advanced selection conditions | Backlog | `2026-10-12T21:16:28.873+0800` | 86–94 |
-| MOS-1259 | FE server-side saved filters | Backlog | `2026-10-12T20:50:17.071+0800` | 95–103 |
-| MOS-1260 | FE registry/card CSV export | Backlog | `2026-10-12T20:50:27.969+0800` | 104–112 |
+| Key      | Inventory label                        | Saved status   | Saved `updated` (verbatim)     | D lines |
+| -------- | -------------------------------------- | -------------- | ------------------------------ | ------- |
+| MOS-1246 | Module “Обратная связь”                | Backlog        | `2026-10-09T15:03:47.673+0800` | 5–13    |
+| MOS-1231 | Backend feedback section               | Hold           | `2026-10-13T14:28:07.591+0800` | 14–22   |
+| MOS-1249 | FE API, lookup values and metadata     | Ready for test | `2026-10-16T18:44:03.867+0800` | 23–31   |
+| MOS-1250 | FE survey registry and basic filtering | Development    | `2026-10-16T18:44:42.569+0800` | 32–40   |
+| MOS-1251 | FE survey card and display rules       | Backlog        | `2026-10-12T21:10:48.642+0800` | 41–49   |
+| MOS-1254 | FE question and option builder         | Backlog        | `2026-10-12T20:49:05.464+0800` | 50–58   |
+| MOS-1255 | FE interactive questionnaire preview   | Backlog        | `2026-10-12T20:49:12.702+0800` | 59–67   |
+| MOS-1256 | FE survey status changes and deletion  | Backlog        | `2026-10-12T21:13:38.503+0800` | 68–76   |
+| MOS-1257 | FE tags, segments and operator groups  | Backlog        | `2026-10-12T20:49:41.953+0800` | 77–85   |
+| MOS-1258 | FE advanced selection conditions       | Backlog        | `2026-10-12T21:16:28.873+0800` | 86–94   |
+| MOS-1259 | FE server-side saved filters           | Backlog        | `2026-10-12T20:50:17.071+0800` | 95–103  |
+| MOS-1260 | FE registry/card CSV export            | Backlog        | `2026-10-12T20:50:27.969+0800` | 104–112 |
 
 Member status totals: **8 Backlog, 1 Hold, 1 Ready for test, 1 Development**. Module status: Backlog.
 

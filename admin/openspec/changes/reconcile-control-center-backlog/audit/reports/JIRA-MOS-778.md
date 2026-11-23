@@ -14,11 +14,11 @@ The supplementary description allowlist (MOS-1245/MOS-1306/MOS-1237/MOS-959) has
 
 Each hierarchy locator below is within `sources/jira-hierarchy/r1/content.json`; each index locator is within `sources/jira-member-index/r1/content.json`. Type/status/update values are the `.type`, `.status`, and `.updated` fields of the cited index object, not assertions of completion.
 
-| Key | Hierarchy locator | Index locator | Type | Status | Updated (verbatim) |
-|---|---|---|---|---|---|
-| MOS-734 | `$.results[13].children[0]` | `$.items[83]` | Development task | Review | 2026-10-09T15:04:35.974+0800 |
-| MOS-818 | `$.results[13].children[1]` | `$.items[84]` | Development task | Testing | 2026-10-09T15:03:46.554+0800 |
-| MOS-915 | `$.results[13].children[2]` | `$.items[85]` | Development task | Backlog | 2026-10-15T14:47:06.054+0800 |
+| Key      | Hierarchy locator           | Index locator | Type             | Status  | Updated (verbatim)           |
+| -------- | --------------------------- | ------------- | ---------------- | ------- | ---------------------------- |
+| MOS-734  | `$.results[13].children[0]` | `$.items[83]` | Development task | Review  | 2026-10-09T15:04:35.974+0800 |
+| MOS-818  | `$.results[13].children[1]` | `$.items[84]` | Development task | Testing | 2026-10-09T15:03:46.554+0800 |
+| MOS-915  | `$.results[13].children[2]` | `$.items[85]` | Development task | Backlog | 2026-10-15T14:47:06.054+0800 |
 | MOS-1011 | `$.results[13].children[3]` | `$.items[86]` | Development task | Backlog | 2026-10-09T15:03:37.175+0800 |
 | MOS-1012 | `$.results[13].children[4]` | `$.items[87]` | Development task | Backlog | 2026-10-09T15:03:41.168+0800 |
 | MOS-1013 | `$.results[13].children[5]` | `$.items[88]` | Development task | Backlog | 2026-10-09T15:03:44.322+0800 |
